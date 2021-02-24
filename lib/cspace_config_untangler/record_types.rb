@@ -85,7 +85,7 @@ module CspaceConfigUntangler
     end
 
     def batch_mappings
-      mappings = remove_mappings(self.mappings)
+      mappings = remove_unimportable_fields_from(self.mappings)
       mappings = faux_require_mappings(mappings)
       mappings = faux_require_profile_specific_mappings(mappings)
       mappings
@@ -157,7 +157,7 @@ module CspaceConfigUntangler
     end
     
     # get rid of mappings for fields we do not want to import via the batch import tool
-    def remove_mappings(mappings)
+    def remove_unimportable_fields_from(mappings)
       instructions = {
         'collectionobject' => %w[computedCurrentLocation],
         'media' => %w[mediaFileURI]

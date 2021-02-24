@@ -76,17 +76,35 @@ module CspaceConfigUntangler
       rts = options[:rectypes].split(',').map(&:strip)
       get_profiles.each do |profile|
         puts "Writing mappers for #{profile}..."
-        norm_name = profile.sub(/_.*/, '')
         p = CCU::Profile.new(profile: profile, rectypes: rts, structured_date_treatment: :collapse)
-        dir_path = options[:subdirs] == 'y' ? "#{options[:outputdir]}/#{norm_name}" : options[:outputdir]
+        dir_path = options[:subdirs] == 'y' ? "#{options[:outputdir]}/#{p.norm_name}" : options[:outputdir]
         FileUtils.mkdir_p(dir_path)
         p.rectypes.each do |rt|
           puts "  ...#{rt.name}"
           CspaceConfigUntangler::RecordMapper::RecordMapperWrapper.new(profile: p,
-                                            rectype: rt,
-                                            base_path: dir_path
-                                 ).mappers.each do |mapper|
-            mapper[:mapper].to_json(output: mapper[:path])
+                                                                       rectype: rt,
+                                                                       base_path: dir_path
+                                                                      ).mappers.each do |mapper|
+            mapper[:mapper].to_json(data: mapper[:mapper].hash, output: mapper[:path])
+          end
+        end
+        p.special_rectypes.each do |rt|
+          case rt
+          when 'objecthierarchy'
+            puts '  ...objecthierarchy'
+            path = "#{dir_path}/#{p.name}-objecthierarchy.json"
+            oh = CCU::ObjectHierarchy.new(profile: p)
+            oh.to_json(data: oh.mapper, output: path)
+          when 'authorityhierarchy'
+            puts '  ...authorityhierarchy'
+            path = "#{dir_path}/#{p.name}-authorityhierarchy.json"
+            ah = CCU::AuthorityHierarchy.new(profile: p)
+            ah.to_json(data: ah.mapper, output: path)
+          when 'relationship'
+            puts '  ...nonhierarchicalrelationship'
+            path = "#{dir_path}/#{p.name}-nonhierarchicalrelationship.json"
+            nhr = CCU::NonHierarchicalRelationship.new(profile: p)
+            nhr.to_json(data: nhr.mapper, output: path)
           end
         end
       end
@@ -118,6 +136,21 @@ module CspaceConfigUntangler
         FileUtils.mkdir_p(dir_path)
         p.rectypes.each do |rt|
           puts "  ...#{rt.name}"
+          types = options[:type] == 'both' ? %w[displayname refname] : [options[:type]]
+          types.each do |type|
+            path = type == 'refname' ? "#{dir_path}/refname" : dir_path
+            FileUtils.mkdir_p(path) if type == 'refname'
+            CsvTemplate.new(profile: p, rectype: rt, type: type).write(path)
+          end
+        end
+        p.special_rectypes.each do |rt|
+          puts "  ...#{rt}"
+          classlkup = {
+            'objecthierarchy'=>CCU::ObjectHierarchy,
+            'authorityhierarchy'=>CCU::AuthorityHierarchy,
+            'relationship'=>CCU::NonHierarchicalRelationship
+          }
+          rt = classlkup[rt].new(profile: p)
           types = options[:type] == 'both' ? %w[displayname refname] : [options[:type]]
           types.each do |type|
             path = type == 'refname' ? "#{dir_path}/refname" : dir_path

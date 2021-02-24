@@ -154,6 +154,7 @@ module CspaceConfigUntangler
     
     class RecordMapping
       ::RecordMapping = CspaceConfigUntangler::RecordMapper::RecordMapping
+      include JsonWritable
       attr_reader :hash, :mappings
 
       # profile = CCU::Profile
@@ -169,12 +170,6 @@ module CspaceConfigUntangler
         append_subtype if @subtype
       end
 
-      # output = string = path to output json file
-      def to_json(output: "data/mappers/#{@profile.name}-#{@rectype.name}.json")
-        File.open(output, 'w') do |f|
-          f.write(JSON.pretty_generate(@hash))
-        end
-      end
       
       private
 
