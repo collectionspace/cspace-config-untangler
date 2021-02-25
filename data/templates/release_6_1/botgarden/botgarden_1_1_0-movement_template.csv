@@ -1,7 +1,0 @@
-"Before importing CSV, delete initial column and rows above the CSVHEADER row","","","","","","","","","",""
-REQUIRED,n,n,n,n,n,n,n,n,n,n
-DATA TYPE,date,string,string,string,string,string,string,string,string,integer
-REPEATABLE FIELD?,n,n,n,n,n,n,n,n,n,n
-IN REPEATING FIELD GROUP?,n/a,n/a,n/a,n/a,n/a,n/a,n/a,n/a,n/a,n/a
-VALUE SOURCE,"",vocabulary: reasonformove,locationauthorities/location,orgauthorities/organization,personauthorities/person,"","No, Yes",vocabulary: labelsize,vocabulary: labelstandtype,""
-CSVHEADER,locationDate,reasonForMove,currentLocationLocation,currentLocationOrganization,movementContact,movementNote,labelRequested,labelSize,labelStandType,labelCount

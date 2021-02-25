@@ -1,7 +1,0 @@
-"Before importing CSV, delete initial column and rows above the CSVHEADER row","","","","","","","","","","","","","","","","","","","","","","","","","","","",""
-REQUIRED,y,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n
-DATA TYPE,string,string,integer,structured date group,string,string,string,integer,string,boolean,boolean,string,string,string,boolean,string,structured date group,string,integer,string,string,string,string,string,string,string,date,string
-REPEATABLE FIELD?,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n
-IN REPEATING FIELD GROUP?,n/a,n/a,n/a,n/a,n/a,n/a,y,y,y,n/a,n/a,n/a,n/a,n/a,n/a,n/a,y,y,y,y,y,y,y,y,y,y,n/a,n/a
-VALUE SOURCE,"",vocabulary: proptype,"","",vocabulary: propreason,"",vocabulary: scarstrat,"",vocabulary: durationunit,"","",vocabulary: cuttingtype,vocabulary: propHormones,"","",vocabulary: propPlantType,"",vocabulary: propActivityType,"",conceptauthorities/concept,vocabulary: potsize,locationauthorities/location,vocabulary: propConditions,vocabulary: propChemicals,"","","",""
-CSVHEADER,propNumber,propType,numStarted,propDate,propReason,propComments,scarStrat,duration,durationUnit,extraSeeds,spores,cuttingType,hormone,concentration,wounded,plantType,activityDate,activityType,propCount,medium,potSize,nurseryLocation,conditions,chemicalApplied,activityConcentration,activityComments,germinationDate,successRate

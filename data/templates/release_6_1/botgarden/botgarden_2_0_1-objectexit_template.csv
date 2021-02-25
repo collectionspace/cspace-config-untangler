@@ -1,0 +1,8 @@
+"Before importing CSV, delete initial column and rows above the CSVHEADER row","","","","","","","","","",""
+REQUIRED,y,n,n,n,n,n,n,n,n,n
+DATA TYPE,string,structured date group,string,string,string,string,string,integer,string,string
+REPEATABLE FIELD?,n,n,n,n,y,n,n,n,n,n
+REPEATING FIELD GROUP,"","","","","","","","","",""
+VALUE SOURCE TYPE,na,na,authority,authority,optionlist,authority,optionlist,na,na,na
+VALUE SOURCE,"","",person/local,organization/local,"courier, inperson, post",organization/local,"deaccession, disposal, returnofloan","","",""
+CSVHEADER,exitNumber,exitDateGroup,currentOwnerPerson,currentOwnerOrganization,exitMethod,depositor,exitReason,count,exitNote,packingNote
