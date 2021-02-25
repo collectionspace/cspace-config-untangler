@@ -60,18 +60,30 @@ module CspaceConfigUntangler
       end
 
       def has_profile_basename
-        return false if @mapper['config']['profile_basename'].blank?
-        true
+        if @mapper['config']['profile_basename'].blank?
+          @errors << 'Profile lacks config/profile_basename'
+          false
+        else
+          true
+        end
       end
       
       def has_recordtype
-        return false if @mapper['config']['recordtype'].blank?
-        true
+        if @mapper['config']['recordtype'].blank?
+          @errors << 'Profile lacks config/recordtype'
+          false
+        else
+          true
+        end
       end
       
       def has_version
-        return false if @mapper['config']['version'].blank?
-        true
+        if @mapper['config']['version'].blank?
+          @errors << 'Profile lacks config/version'
+          false
+        else
+          true
+        end
       end
       
       def has_ns_uris
@@ -200,7 +212,7 @@ module CspaceConfigUntangler
         @hash[:config] = {}
         @hash[:config][:profile_basename] = @profile.basename
         @hash[:config][:version] = @profile.version
-        @hash[:config][:rectype] = @rectype.name
+        @hash[:config][:recordtype] = @rectype.name
         @hash[:config][:document_name] = @config.dig('recordTypes', @rectype.name, 'serviceConfig', 'documentName')
         @hash[:config][:service_name] = @config.dig('recordTypes', @rectype.name, 'serviceConfig', 'serviceName')
         @hash[:config][:service_path] = @config.dig('recordTypes', @rectype.name, 'serviceConfig', 'servicePath')
