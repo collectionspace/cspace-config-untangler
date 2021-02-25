@@ -54,6 +54,7 @@ module CspaceConfigUntangler
   autoload :ProfileComparison, 'cspace_config_untangler/profile_comparison'
   autoload :Extension, 'cspace_config_untangler/extensions'
   autoload :Extensions, 'cspace_config_untangler/extensions'
+  autoload :ManifestEntry, 'cspace_config_untangler/manifest_entry'
   autoload :RecordTypes, 'cspace_config_untangler/record_types'
   autoload :RecordType, 'cspace_config_untangler/record_types'
   autoload :SiteConfig, 'cspace_config_untangler/site_config'

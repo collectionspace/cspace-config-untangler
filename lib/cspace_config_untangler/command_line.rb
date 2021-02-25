@@ -155,6 +155,16 @@ module CspaceConfigUntangler
 
     desc 'manifest', 'Writes JSON manifest of RecordMappers, as used by cspace-batch-import'
     long_desc <<-LONGDESC
+Usage:
+\x5  ccu mappers manifest
+
+Options:
+\x5  -i, [--inputdir=INPUTDIR]    # Path to directory containing RecordMapper JSON files. Specify the path relative to #{CCU::MAPPER_DIR}
+\x5  -o, [--output=OUTPUT]        # Path to output file
+\x5                               # Default: /Users/kristina/code/cspace-config-untangler/data/mappers.json
+\x5  -r, [--recursive=RECURSIVE]  # y/n. Whether to traverse the inputdir recursively
+\x5                               # Default: y
+
 Includes mappers in the given directory (recursively, as an option).
 
 The manifest is used by cspace-batch-import.
@@ -168,7 +178,13 @@ LONGDESC
     option :recursive, desc: 'y/n. Whether to traverse the inputdir recursively', default: 'y', aliases: '-r'
     def manifest
       indir = "#{CCU::MAPPER_DIR}/#{options[:inputdir]}"
-      puts indir
+      unless Dir.exist?(indir)
+        puts "Directory does not exist: #{indir}"
+        exit
+      end
+      mapper_paths = Dir.glob("#{indir}/**/*.json")
+      entries = mapper_paths.map{ |path| CCU::ManifestEntry.new(path: path) }
+      puts entries.map(&:filename)
     end
 
     desc 'write', 'Writes JSON serializations of RecordMappers for the given rectype(s) for the given profiles.'
