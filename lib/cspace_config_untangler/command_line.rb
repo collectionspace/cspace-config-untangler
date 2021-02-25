@@ -164,7 +164,7 @@ Options:
 \x5  -r, [--recursive=RECURSIVE]  # y/n. Whether to traverse the inputdir recursively
 \x5                               # Default: y
 
-Includes mappers in the given directory (recursively, as an option).
+Includes valid mappers in the given directory (recursively, as an option). Invalid mappers are excluded
 
 The manifest is used by cspace-batch-import.
 
@@ -182,8 +182,11 @@ LONGDESC
         exit
       end
       mapper_paths = Dir.glob("#{indir}/**/*.json")
-      entries = mapper_paths.map{ |path| CCU::ManifestEntry.new(path: path) }
-      puts entries.map(&:filename)
+      h = { 'mappers' => mapper_paths.map{ |path| CCU::ManifestEntry.new(path: path) }.map(&:to_h).compact }
+
+      File.open(options[:output], "w") do |f|
+        f.write(JSON.pretty_generate(h))
+      end
     end
 
     desc 'write', 'Writes JSON serializations of RecordMappers for the given rectype(s) for the given profiles.'
@@ -210,17 +213,17 @@ LONGDESC
           case rt
           when 'objecthierarchy'
             puts '  ...objecthierarchy'
-            path = "#{dir_path}/#{p.name}-objecthierarchy.json"
+            path = "#{dir_path}/#{p.name}_objecthierarchy.json"
             oh = CCU::ObjectHierarchy.new(profile: p)
             oh.to_json(data: oh.mapper, output: path)
           when 'authorityhierarchy'
             puts '  ...authorityhierarchy'
-            path = "#{dir_path}/#{p.name}-authorityhierarchy.json"
+            path = "#{dir_path}/#{p.name}_authorityhierarchy.json"
             ah = CCU::AuthorityHierarchy.new(profile: p)
             ah.to_json(data: ah.mapper, output: path)
           when 'relationship'
             puts '  ...nonhierarchicalrelationship'
-            path = "#{dir_path}/#{p.name}-nonhierarchicalrelationship.json"
+            path = "#{dir_path}/#{p.name}_nonhierarchicalrelationship.json"
             nhr = CCU::NonHierarchicalRelationship.new(profile: p)
             nhr.to_json(data: nhr.mapper, output: path)
           end
@@ -390,19 +393,7 @@ LONGDESC
   
   class CommandLine < Thor
     include CliHelpers
-    # def initialize(*args)
-    #   super(*args)
-    # end
-
-    metahelp = <<-METAHELP
-Commands followed by SUBCOMMAND are groupings of more specific subcommands. To see all the commands for profiles, do:
-    >$ exe/ccu profiles
-or
-    >$ exe/ccu profiles help
-    METAHELP
-
-    puts "\n#{metahelp}\n\n"
-
+    
     desc 'debug SUBCOMMAND', 'Commands useful for digging into why CCU is producing its results'
     subcommand 'debug', DebugCli
 
