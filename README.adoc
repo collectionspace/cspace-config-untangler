@@ -14,7 +14,9 @@ For a given profile, matches each form_field to its corresponding field_def and 
 _Note: there may be field_defs in a profile which do not match any form_fields. Field objects are not created/reported for these, because if a field has not been made available for viewing/editing in a form, it is not considered included in the profile._
 
 == JSON config source files
-Since there is no way to programmatically grab the JSON config, this currently requires you to manually download the JSON config files from the following links. The JSON files should be saved with the as `{profilename}.json` in the `data/configs` directory:
+Since there is no way to programmatically grab the JSON config, this currently requires you to manually download the JSON config files from the following links. The JSON files should be saved as `{profilename}.json` in the `data/configs` directory.
+
+IMPORTANT: You must follow the config naming conventions specified below in order for the Untangler to properly identify profile name and version!
 
 -  https://core.collectionspace.org/cspace/core/config
 -  https://anthro.collectionspace.org/cspace/anthro/config
@@ -40,6 +42,26 @@ And for the latest dev versions of profiles:
 
 
 Set `CCU.const_set('MAINPROFILE')` value in `lib/cspace_config_untangler.rb`.
+
+=== Config (and resulting mapper/template) naming conventions
+
+Config file name must contain the profile name and profile version.
+
+Use `_` to separate sections of the name. I.e. profile name and version should be separated by `_`
+
+Use `-` to separate words/numbers within a section.
+
+Examples:
+
+`anthro_4-1-2.json`
+
+`my-custom-config_2-0.json`
+
+This allows the Untangler to split the config file name on `_` and unambiguously determine profile name vs. profile version.
+
+Output files follow the same convention, adding the recordtype section:
+
+`anthro_4-1-2_concept-associated.json`
 
 == Setup
 
