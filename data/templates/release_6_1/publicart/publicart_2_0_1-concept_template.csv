@@ -2,6 +2,7 @@
 REQUIRED,y,n,n,n,n,n,n,n,n,n,n,n,n,n,n
 DATA TYPE,string,string,string,string,string,string,string,string,boolean,string,string,string,string,string,string
 REPEATABLE FIELD?,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n
-IN REPEATING FIELD GROUP?,y,y,y,y,y,y,y,y,y,y,y,y,y,y,n/a
-VALUE SOURCE,"","","","accepted, provisional, rejected, under review","alternate descriptor, descriptor, used for term",vocabulary: concepttermflag,"both, current, historical, unknown",vocabulary: languages,"",citationauthorities/citation,citationauthorities/worldcat,"","","",""
+REPEATING FIELD GROUP,conceptTermGroupList < conceptTermGroup,conceptTermGroupList < conceptTermGroup,conceptTermGroupList < conceptTermGroup,conceptTermGroupList < conceptTermGroup,conceptTermGroupList < conceptTermGroup,conceptTermGroupList < conceptTermGroup,conceptTermGroupList < conceptTermGroup,conceptTermGroupList < conceptTermGroup,conceptTermGroupList < conceptTermGroup,conceptTermGroupList < conceptTermGroup,conceptTermGroupList < conceptTermGroup,conceptTermGroupList < conceptTermGroup,conceptTermGroupList < conceptTermGroup,conceptTermGroupList < conceptTermGroup,""
+VALUE SOURCE TYPE,na,na,na,optionlist,optionlist,vocabulary,optionlist,vocabulary,na,authority,authority,na,na,na,na
+VALUE SOURCE,"","","","accepted, provisional, rejected, under review","alternate descriptor, descriptor, used for term",concepttermflag,"both, current, historical, unknown",languages,"",citation/local,citation/worldcat,"","","",""
 CSVHEADER,termDisplayName,termName,termQualifier,termStatus,termType,termFlag,historicalStatus,termLanguage,termPrefForLang,termSourceLocal,termSourceWorldcat,termSourceDetail,termSourceID,termSourceNote,scopeNote

@@ -2,6 +2,7 @@
 REQUIRED,y,n,n,n,n,n,n,n,n
 DATA TYPE,string,string,float,date,date,string,string,string,string
 REPEATABLE FIELD?,n,n,n,n,n,n,n,n,n
-IN REPEATING FIELD GROUP?,n/a,y,y,n/a,n/a,n/a,n/a,n/a,n/a
-VALUE SOURCE,"",vocabulary: currency,"","","",personauthorities/person,orgauthorities/organization,"Current Value, Original Value, Replacement Value",""
+REPEATING FIELD GROUP,"",valueAmountsList < valueAmounts,valueAmountsList < valueAmounts,"","","","","",""
+VALUE SOURCE TYPE,na,vocabulary,na,na,na,authority,authority,optionlist,na
+VALUE SOURCE,"",currency,"","","",person/local,organization/local,"Current Value, Original Value, Replacement Value",""
 CSVHEADER,valuationcontrolRefNumber,valueCurrency,valueAmount,valueDate,valueRenewalDate,valueSourcePerson,valueSourceOrganization,valueType,valueNote

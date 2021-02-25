@@ -2,6 +2,7 @@
 REQUIRED,y,n,n,n,n,n,n,n,n
 DATA TYPE,string,string,string,string,string,string,date,date,string
 REPEATABLE FIELD?,n,n,n,n,n,n,n,n,n
-IN REPEATING FIELD GROUP?,n/a,n/a,n/a,n/a,n/a,n/a,n/a,n/a,n/a
-VALUE SOURCE,"",vocabulary: program,personauthorities/person,personauthorities/person_shared,orgauthorities/organization,orgauthorities/organization_shared,"","",""
+REPEATING FIELD GROUP,"","","","","","","","",""
+VALUE SOURCE TYPE,na,vocabulary,authority,authority,authority,authority,na,na,na
+VALUE SOURCE,"",program,person/local,person/shared,organization/local,organization/shared,"","",""
 CSVHEADER,title,responsibleDepartment,ownerPersonLocal,ownerPersonShared,ownerOrganizationLocal,ownerOrganizationShared,groupEarliestSingleDate,groupLatestDate,scopeNote

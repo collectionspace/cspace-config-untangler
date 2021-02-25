@@ -2,6 +2,7 @@
 REQUIRED,y,y,y,y,y,y,y,n,n,n,n,n,n,n,n,n,n
 DATA TYPE,string,string,string,string,string,string,string,string,string,date,string,string,date,date,string,string,string
 REPEATABLE FIELD?,n,n,n,n,n,n,n,n,n,n,n,y,n,n,n,n,n
-IN REPEATING FIELD GROUP?,n/a,n/a,n/a,n/a,n/a,n/a,n/a,n/a,n/a,n/a,n/a,n,n/a,n/a,n/a,n/a,n/a
-VALUE SOURCE,"",locationauthorities/location,locationauthorities/offsite_sla,orgauthorities/organization,orgauthorities/organization_shared,placeauthorities/place,placeauthorities/place_shared,"dangerous, suitable, temporary, unsuitable","","","conservation, exhibition, inventory, loan, newstoragelocation, photography, research","forklift, handcarried, trolley","","",personauthorities/person,personauthorities/person_shared,""
+REPEATING FIELD GROUP,"","","","","","","","","","","","","","","","",""
+VALUE SOURCE TYPE,na,authority,authority,authority,authority,authority,authority,optionlist,na,na,optionlist,optionlist,na,na,authority,authority,na
+VALUE SOURCE,"",location/local,location/offsite,organization/local,organization/shared,place/local,place/shared,"dangerous, suitable, temporary, unsuitable","","","conservation, exhibition, inventory, loan, newstoragelocation, photography, research","forklift, handcarried, trolley","","",person/local,person/shared,""
 CSVHEADER,movementReferenceNumber,currentLocationLocationLocal,currentLocationLocationOffsite,currentLocationOrganizationLocal,currentLocationOrganizationShared,currentLocationPlaceLocal,currentLocationPlaceShared,currentLocationFitness,currentLocationNote,locationDate,reasonForMove,movementMethod,plannedRemovalDate,removalDate,movementContactLocal,movementContactShared,movementNote

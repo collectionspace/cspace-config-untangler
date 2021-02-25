@@ -2,6 +2,7 @@
 REQUIRED,y,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n
 DATA TYPE,string,string,string,string,string,string,string,string,string,string,string,string,string,string,date,string,date,date,date
 REPEATABLE FIELD?,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n
-IN REPEATING FIELD GROUP?,n/a,n/a,n/a,n/a,n/a,n/a,n/a,n/a,n/a,n/a,y,y,y,y,y,y,n/a,n/a,n/a
-VALUE SOURCE,"",personauthorities/person,personauthorities/person_shared,"","analysis, conservationotherrequestedservices, exhibition, longtermcollectionsmanagementandstorage, photography, research, scientificorexhibitpreparation",personauthorities/person,personauthorities/person_shared,orgauthorities/organization,orgauthorities/organization_shared,"",vocabulary: deaccessionapprovalgroup,personauthorities/person,personauthorities/person_shared,vocabulary: loanoutstatus,"","","","",""
+REPEATING FIELD GROUP,"","","","","","","","","","",loanStatusGroupList < loanStatusGroup,loanStatusGroupList < loanStatusGroup,loanStatusGroupList < loanStatusGroup,loanStatusGroupList < loanStatusGroup,loanStatusGroupList < loanStatusGroup,loanStatusGroupList < loanStatusGroup,"","",""
+VALUE SOURCE TYPE,na,authority,authority,na,optionlist,authority,authority,authority,authority,na,vocabulary,authority,authority,vocabulary,na,na,na,na,na
+VALUE SOURCE,"",person/local,person/shared,"","analysis, conservationotherrequestedservices, exhibition, longtermcollectionsmanagementandstorage, photography, research, scientificorexhibitpreparation",person/local,person/shared,organization/local,organization/shared,"",deaccessionapprovalgroup,person/local,person/shared,loanoutstatus,"","","","",""
 CSVHEADER,loanOutNumber,lendersAuthorizerLocal,lendersAuthorizerShared,specialConditionsOfLoan,loanPurpose,borrowerPersonLocal,borrowerPersonShared,borrowerOrganizationLocal,borrowerOrganizationShared,loanOutNote,loanGroup,loanIndividualLocal,loanIndividualShared,loanStatus,loanStatusDate,loanStatusNote,loanOutDate,loanReturnDate,loanRenewalApplicationDate

@@ -2,6 +2,7 @@
 REQUIRED,y,n,n,n,n,n,n,n,n,n,n,n,n,n,n
 DATA TYPE,string,structured date group,string,date,structured date group,string,string,string,string,string,string,string,string,string,string
 REPEATABLE FIELD?,n,n,n,n,y,n,y,y,y,y,n,n,n,n,y
-IN REPEATING FIELD GROUP?,n/a,n/a,n/a,n/a,n,n/a,n,n,n,n,n/a,n/a,n/a,n/a,n
-VALUE SOURCE,"","",personauthorities/person,"","","exchange, gift, purchase, transfer, treasure",personauthorities/person,personauthorities/person_shared,orgauthorities/organization,orgauthorities/organization_shared,"","","","",""
+REPEATING FIELD GROUP,"","","","","","","","","","","","","","",""
+VALUE SOURCE TYPE,na,na,authority,na,na,optionlist,authority,authority,authority,authority,na,na,na,na,na
+VALUE SOURCE,"","",person/local,"","","exchange, gift, purchase, transfer, treasure",person/local,person/shared,organization/local,organization/shared,"","","","",""
 CSVHEADER,acquisitionReferenceNumber,accessionDateGroup,acquisitionAuthorizer,acquisitionAuthorizerDate,acquisitionDateGroup,acquisitionMethod,acquisitionSourcePersonLocal,acquisitionSourcePersonShared,acquisitionSourceOrganizationLocal,acquisitionSourceOrganizationShared,creditLine,acquisitionReason,acquisitionNote,acquisitionProvisos,fieldCollectionEventName
