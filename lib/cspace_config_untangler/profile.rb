@@ -24,10 +24,6 @@ module CspaceConfigUntangler
       get_form_fields
     end
 
-    def norm_name
-      @name.sub(/_.*/, '')
-    end
-
     def extensions_for(rectype)
       exts = {}
       @extensions.map{ |e| CCU::Extension.new(self, e) }.each{ |ext|
@@ -65,8 +61,12 @@ module CspaceConfigUntangler
       return h
     end
 
-    def versionless_name
-      @name.sub(/_.*$/, '')
+    def basename
+      @name.split('_')[0]
+    end
+
+    def version
+      @name.split('_')[1]      
     end
 
     def special_rectypes

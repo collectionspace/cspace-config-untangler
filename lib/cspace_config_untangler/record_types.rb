@@ -143,7 +143,7 @@ module CspaceConfigUntangler
           'objectexit' => 'exitNumber'
         }
       }
-      profile = @profile.versionless_name
+      profile = @profile.basename
       return mappings unless instructions.key?(profile)
       return mappings unless instructions[profile].key?(@name)
 
