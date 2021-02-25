@@ -6,7 +6,7 @@ RSpec.describe CCU::Template::CsvTemplate do
   end
   context 'anthro profile' do
     before(:all) do
-      @anthro_profile = CCU::Profile.new(profile: 'anthro_4_1_0', rectypes: %w[collectionobject movement],
+      @anthro_profile = CCU::Profile.new(profile: 'anthro_4-1-0', rectypes: %w[collectionobject movement],
                                         structured_date_treatment: :collapse)
     end
     context 'object record type' do

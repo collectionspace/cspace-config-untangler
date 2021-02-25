@@ -7,7 +7,7 @@ RSpec.describe CCU::RecordMapper do
 
   context 'botgarden' do
     before(:all) do
-      @profile = CCU::Profile.new(profile: 'botgarden_2_0_1',
+      @profile = CCU::Profile.new(profile: 'botgarden_2-0-1',
                                   rectypes: ['loanout'],
                                   structured_date_treatment: :collapse)
     end
@@ -32,7 +32,7 @@ RSpec.describe CCU::RecordMapper do
 
   context 'anthro' do
     before(:all) do
-      @anthro_profile = CCU::Profile.new(profile: 'anthro_4_1_0',
+      @anthro_profile = CCU::Profile.new(profile: 'anthro_4-1-0',
                                          rectypes: ['collectionobject', 'claim',
                                                     'osteology', 'place', 'taxon'],
                                          structured_date_treatment: :collapse)
