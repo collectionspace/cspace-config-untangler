@@ -24,7 +24,7 @@ module CspaceConfigUntangler
     
     def config
       {
-        profile_basename: @profile.norm_name,
+        profile_basename: @profile.basename,
         document_name: 'relations',
         service_name: 'Relations',
         service_path: 'relations',

@@ -46,9 +46,8 @@ module CspaceConfigUntangler
       
       get_profiles.each do |profile|
         puts "Writing templates for #{profile}..."
-        norm_name = profile.sub(/_.*/, '')
         p = CCU::Profile.new(profile: profile, rectypes: rts, structured_date_treatment: :collapse)
-        dir_path = options[:subdirs] == 'y' ? "#{options[:outputdir]}/#{norm_name}" : options[:outputdir]
+        dir_path = options[:subdirs] == 'y' ? "#{options[:outputdir]}/#{p.basename}" : options[:outputdir]
         FileUtils.mkdir_p(dir_path)
         p.rectypes.each do |rt|
           puts "  ...#{rt.name}"
@@ -196,7 +195,7 @@ LONGDESC
       get_profiles.each do |profile|
         puts "Writing mappers for #{profile}..."
         p = CCU::Profile.new(profile: profile, rectypes: rts, structured_date_treatment: :collapse)
-        dir_path = options[:subdirs] == 'y' ? "#{options[:outputdir]}/#{p.norm_name}" : options[:outputdir]
+        dir_path = options[:subdirs] == 'y' ? "#{options[:outputdir]}/#{p.basename}" : options[:outputdir]
         FileUtils.mkdir_p(dir_path)
         p.rectypes.each do |rt|
           puts "  ...#{rt.name}"

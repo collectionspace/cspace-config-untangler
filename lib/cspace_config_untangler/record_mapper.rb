@@ -5,7 +5,7 @@ module CspaceConfigUntangler
     RecordMapper = CspaceConfigUntangler::RecordMapper
 
     class Validator
-      attr_reader :path, :mapper, :valid, :errors, :validated
+      attr_reader :path, :valid, :errors, :validated
       def initialize(path)
         @path = path
         @valid = false
@@ -23,13 +23,15 @@ module CspaceConfigUntangler
         @validated = true
         return if @mapper.nil?
         results = [
-        main_keys_present,
-        has_ns_uris,
-        has_id_field,
-        has_field_mapping_namespaces,
-        term_source_types_ok
-      ]
-
+          main_keys_present,
+          has_profile_basename,
+          has_recordtype,
+          has_version,
+          has_ns_uris,
+          has_id_field,
+          has_field_mapping_namespaces,
+          term_source_types_ok
+        ]
         @valid = true if results.uniq == [true]
       end
 
@@ -45,18 +47,56 @@ module CspaceConfigUntangler
 
       private
 
-      def term_source_types_ok
-        mappings = @mapper.dig('mappings')
-        if mappings.blank?
-          @errors << 'No field mappings specified'
+      def main_keys_present
+        expected = %w[config docstructure mappings]
+        keys = @mapper.keys
+        diff = expected - keys
+        if diff.empty?
+          true
+        else
+          diff.each{ |key| @errors << "Missing top-level key: #{key}" }
+          false
+        end
+      end
+
+      def has_profile_basename
+        return false if @mapper['config']['profile_basename'].blank?
+        true
+      end
+      
+      def has_recordtype
+        return false if @mapper['config']['recordtype'].blank?
+        true
+      end
+      
+      def has_version
+        return false if @mapper['config']['version'].blank?
+        true
+      end
+      
+      def has_ns_uris
+        ns_hash = @mapper.dig('config', 'ns_uri')
+        if ns_hash.nil?
+          @errors << 'No namespace hash in config'
           return false
         end
-        not_ok = mappings.select{ |mapping| mapping['source_type'].start_with?('invalid source type') }
-        if not_ok.empty?
+
+        null_uris = ns_hash.select{ |ns, uri| uri.nil? }
+        if null_uris.empty?
           return true
         else
-          not_ok.each{ |mapping| @errors << "Source type for #{mapping['fieldname']} is not an option_list, vocabulary, or authority." }
+          null_uris.keys.each{ |ns| @errors << "No namespace URI extracted for #{ns}" }
           return false
+        end
+      end
+
+      def has_id_field
+        id_field = @mapper.dig('config', 'identifier_field')
+        if id_field.blank?
+          @errors << 'No identifier field specified in config'
+          return false
+        else
+          return true
         end
       end
 
@@ -76,41 +116,18 @@ module CspaceConfigUntangler
         end
       end
 
-      def has_id_field
-        id_field = @mapper.dig('config', 'identifier_field')
-        if id_field.blank?
-          @errors << 'No identifier field specified in config'
-          return false
-        else
-          return true
-        end
-      end
-
-      def has_ns_uris
-        ns_hash = @mapper.dig('config', 'ns_uri')
-        if ns_hash.nil?
-          @errors << 'No namespace hash in config'
+      def term_source_types_ok
+        mappings = @mapper.dig('mappings')
+        if mappings.blank?
+          @errors << 'No field mappings specified'
           return false
         end
-
-        null_uris = ns_hash.select{ |ns, uri| uri.nil? }
-        if null_uris.empty?
+        not_ok = mappings.select{ |mapping| mapping['source_type'].start_with?('invalid source type') }
+        if not_ok.empty?
           return true
         else
-          null_uris.keys.each{ |ns| @errors << "No namespace URI extracted for #{ns}" }
+          not_ok.each{ |mapping| @errors << "Source type for #{mapping['fieldname']} is not an option_list, vocabulary, or authority." }
           return false
-        end
-      end
-
-      def main_keys_present
-        expected = %w[config docstructure mappings]
-        keys = @mapper.keys
-        diff = expected - keys
-        if diff.empty?
-          true
-        else
-          diff.each{ |key| @errors << "Missing top-level key: #{key}" }
-          false
         end
       end
     end
@@ -141,12 +158,12 @@ module CspaceConfigUntangler
         if subtype
           {
             mapper: RecordMapping.new(profile: @profile, rectype: @rectype, subtype: subtype),
-            path: "#{@base_path}/#{@profile.name}-#{@rectype.name}-#{subtype[:name].downcase.gsub(' ', '_')}.json"
+            path: "#{@base_path}/#{@profile.name}_#{@rectype.name}-#{subtype[:name].downcase.gsub(' ', '-')}.json"
           }
         else
           {
             mapper: RecordMapping.new(profile: @profile, rectype: @rectype),
-            path: "#{@base_path}/#{@profile.name}-#{@rectype.name}.json"
+            path: "#{@base_path}/#{@profile.name}_#{@rectype.name}.json"
           }
         end
       end
@@ -181,7 +198,9 @@ module CspaceConfigUntangler
 
       def build_hash
         @hash[:config] = {}
-        @hash[:config][:profile_basename] = @config.dig('basename').sub('/cspace/', '')
+        @hash[:config][:profile_basename] = @profile.basename
+        @hash[:config][:version] = @profile.version
+        @hash[:config][:rectype] = @rectype.name
         @hash[:config][:document_name] = @config.dig('recordTypes', @rectype.name, 'serviceConfig', 'documentName')
         @hash[:config][:service_name] = @config.dig('recordTypes', @rectype.name, 'serviceConfig', 'serviceName')
         @hash[:config][:service_path] = @config.dig('recordTypes', @rectype.name, 'serviceConfig', 'servicePath')
