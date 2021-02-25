@@ -141,4 +141,21 @@ RSpec.describe CCU::Profile do
       end
     end
   end
-end #RSpec
+
+  context 'filename dependent' do
+    before(:all) do
+      CCU.const_set('CONFIGDIR', 'spec/fixtures/files/6_1')
+      @profile = CCU::Profile.new(profile: 'anthro_4-1-0')
+    end
+    describe '#basename' do
+      it 'returns anthro' do
+        expect(@profile.basename).to eq('anthro')
+      end
+    end
+    describe '#version' do
+      it 'returns version' do
+        expect(@profile.version).to eq('4-1-0')
+      end
+    end
+  end
+end
