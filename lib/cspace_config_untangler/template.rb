@@ -27,8 +27,8 @@ module CspaceConfigUntangler
       end
 
       def write(dir)
-        stubname = "#{@profile.name}-#{@rectype.name}"
-        filename = @type == 'refname' ? "#{stubname}_refnames_template.csv" : "#{stubname}_template.csv"
+        stubname = "#{@profile.name}_#{@rectype.name}"
+        filename = @type == 'refname' ? "#{stubname}-refnames-template.csv" : "#{stubname}-template.csv"
         path = "#{File.expand_path(dir)}/#{filename}"
         CSV.open(path, 'wb') do |csv|
           @csvdata.each{ |r| csv << r }
