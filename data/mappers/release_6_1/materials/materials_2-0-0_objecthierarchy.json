@@ -11,7 +11,7 @@
     "ns_uri": {
       "relations_common": "http://collectionspace.org/services/relation"
     },
-    "identifier_field": "csid",
+    "identifier_field": "subjectCsid",
     "search_field": "objectNumber"
   },
   "docstructure": {
@@ -52,26 +52,6 @@
       ],
       "datacolumn": "narrower_object_number",
       "required": "y"
-    },
-    {
-      "fieldname": "subjectDocumentType",
-      "transforms": {
-      },
-      "source_type": "na",
-      "source_name": null,
-      "namespace": "relations_common",
-      "xpath": [
-
-      ],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "n",
-      "opt_list_values": [
-
-      ],
-      "datacolumn": "subjectdocumenttype",
-      "required": "y",
-      "to_template": false
     },
     {
       "fieldname": "relationshipType",
@@ -138,26 +118,6 @@
       ],
       "datacolumn": "broader_object_number",
       "required": "y"
-    },
-    {
-      "fieldname": "objectDocumentType",
-      "transforms": {
-      },
-      "source_type": "na",
-      "source_name": null,
-      "namespace": "relations_common",
-      "xpath": [
-
-      ],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "n",
-      "opt_list_values": [
-
-      ],
-      "datacolumn": "objectdocumenttype",
-      "required": "y",
-      "to_template": false
     }
   ]
 }

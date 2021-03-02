@@ -35,7 +35,7 @@ module CspaceConfigUntangler
         ns_uri: {
           relations_common: 'http://collectionspace.org/services/relation'
         },
-        identifier_field: 'csid',
+        identifier_field: 'subjectCsid',
         search_field: 'term'
       }
     end
@@ -44,10 +44,8 @@ module CspaceConfigUntangler
       {
         relations_common: {
           subjectCsid: {},
-          #subjectDocumentType: {},
           relationshipType: {},
           objectCsid: {},
-          #objectDocumentType: {}
         }
       }
     end
@@ -66,7 +64,7 @@ module CspaceConfigUntangler
           in_repeating_group: 'n',
           opt_list_values: @profile.object_and_procedures,
           datacolumn: 'item1_type',
-          required: 'y'
+          required: 'y in template'
         },
         {
           fieldname: 'subjectCsid',
@@ -109,7 +107,7 @@ module CspaceConfigUntangler
           in_repeating_group: 'n',
           opt_list_values: @profile.object_and_procedures,
           datacolumn: 'item2_type',
-          required: 'y'
+          required: 'y in template'
         },
         {
           fieldname: 'objectCsid',

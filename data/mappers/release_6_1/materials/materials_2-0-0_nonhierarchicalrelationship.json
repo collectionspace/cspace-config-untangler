@@ -11,7 +11,7 @@
     "ns_uri": {
       "relations_common": "http://collectionspace.org/services/relation"
     },
-    "identifier_field": "csid",
+    "identifier_field": "subjectCsid",
     "search_field": "term"
   },
   "docstructure": {
@@ -50,7 +50,7 @@
         "uoc"
       ],
       "datacolumn": "item1_type",
-      "required": "y"
+      "required": "y in template"
     },
     {
       "fieldname": "subjectCsid",
@@ -119,7 +119,7 @@
         "uoc"
       ],
       "datacolumn": "item2_type",
-      "required": "y"
+      "required": "y in template"
     },
     {
       "fieldname": "objectCsid",

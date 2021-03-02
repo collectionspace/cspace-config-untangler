@@ -11,7 +11,7 @@
     "ns_uri": {
       "relations_common": "http://collectionspace.org/services/relation"
     },
-    "identifier_field": "csid",
+    "identifier_field": "subjectCsid",
     "search_field": "term"
   },
   "docstructure": {
@@ -48,7 +48,7 @@
         "workauthorities"
       ],
       "datacolumn": "term_type",
-      "required": "y"
+      "required": "y in template"
     },
     {
       "fieldname": "termSubType",
@@ -83,7 +83,7 @@
         "worldcat"
       ],
       "datacolumn": "term_subtype",
-      "required": "y"
+      "required": "y in template"
     },
     {
       "fieldname": "subjectCsid",

@@ -39,7 +39,7 @@ module CspaceConfigUntangler
         ns_uri: {
           relations_common: 'http://collectionspace.org/services/relation'
         },
-        identifier_field: 'csid',
+        identifier_field: 'subjectCsid',
         search_field: 'objectNumber'
       }
     end
@@ -72,21 +72,6 @@ module CspaceConfigUntangler
           opt_list_values: [],
           datacolumn: 'narrower_object_number',
           required: 'y'
-        },
-        {
-          fieldname: 'subjectDocumentType',
-          transforms: {},
-          source_type: 'na',
-          source_name: nil,
-          namespace: 'relations_common',
-          xpath: [],
-          data_type: 'string',
-          repeats: 'n',
-          in_repeating_group: 'n',
-          opt_list_values: [],
-          datacolumn: 'subjectdocumenttype',
-          required: 'y',
-          to_template: false
         },
         {
           fieldname: 'relationshipType',
@@ -130,21 +115,6 @@ module CspaceConfigUntangler
           opt_list_values: [],
           datacolumn: 'broader_object_number',
           required: 'y'
-        },
-        {
-          fieldname: 'objectDocumentType',
-          transforms: {},
-          source_type: 'na',
-          source_name: nil,
-          namespace: 'relations_common',
-          xpath: [],
-          data_type: 'string',
-          repeats: 'n',
-          in_repeating_group: 'n',
-          opt_list_values: [],
-          datacolumn: 'objectdocumenttype',
-          required: 'y',
-          to_template: false
         }
       ]
     end

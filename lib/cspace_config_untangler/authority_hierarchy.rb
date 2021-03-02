@@ -35,7 +35,7 @@ module CspaceConfigUntangler
         ns_uri: {
           relations_common: 'http://collectionspace.org/services/relation'
         },
-        identifier_field: 'csid',
+        identifier_field: 'subjectCsid',
         search_field: 'term'
       }
     end
@@ -66,7 +66,7 @@ module CspaceConfigUntangler
           in_repeating_group: 'n',
           opt_list_values: @profile.authority_types,
           datacolumn: 'term_type',
-          required: 'y'
+          required: 'y in template'
         },
         {
           fieldname: 'termSubType',
@@ -80,8 +80,9 @@ module CspaceConfigUntangler
           in_repeating_group: 'n',
           opt_list_values: @profile.authority_subtypes,
           datacolumn: 'term_subtype',
-          required: 'y'
-        },{
+          required: 'y in template'
+        },
+        {
           fieldname: 'subjectCsid',
           transforms: { special: [:term_to_csid] },
           source_type: 'na',
@@ -95,21 +96,6 @@ module CspaceConfigUntangler
           datacolumn: 'narrower_term',
           required: 'y'
           },
-        # {
-        #   fieldname: 'subjectDocumentType',
-        #   transforms: {},
-        #   source_type: 'na',
-        #   source_name: nil,
-        #   namespace: 'relations_common',
-        #   xpath: [],
-        #   data_type: 'string',
-        #   repeats: 'n',
-        #   in_repeating_group: 'n',
-        #   opt_list_values: [],
-        #   datacolumn: 'subjectdocumenttype',
-        #   required: 'y',
-        #   to_template: false
-        # },
         {
           fieldname: 'relationshipType',
           transforms: {},
@@ -139,21 +125,6 @@ module CspaceConfigUntangler
           datacolumn: 'broader_term',
           required: 'y'
         },
-        # {
-        #   fieldname: 'objectDocumentType',
-        #   transforms: {},
-        #   source_type: 'na',
-        #   source_name: nil,
-        #   namespace: 'relations_common',
-        #   xpath: [],
-        #   data_type: 'string',
-        #   repeats: 'n',
-        #   in_repeating_group: 'n',
-        #   opt_list_values: [],
-        #   datacolumn: 'objectdocumenttype',
-        #   required: 'y',
-        #   to_template: false
-        # }
       ]
     end
   end

@@ -38,7 +38,7 @@ module CspaceConfigUntangler
       private
 
       def build_template
-        requiredfields = @mappings.select{ |m| m[:required] == 'y' }
+        requiredfields = @mappings.select{ |m| m[:required].start_with?('y') }
         otherfields = @mappings.select{ |m| m[:required] == 'n' }
         instruct = ['Before importing CSV, delete initial column and rows above the CSVHEADER row']
         required = ['REQUIRED']
@@ -52,7 +52,7 @@ module CspaceConfigUntangler
         [requiredfields, otherfields].each do |fieldmappings|
           fieldmappings.each do |mapping|
             instruct << ''
-            required << mapping[:required]
+            required << mapping[:required].sub(' in template', '')
             datatype << mapping[:data_type]
             repeats << mapping[:repeats]
             mapping[:in_repeating_group].start_with?('n') ? group << '' : group << mapping[:xpath].join(' < ')
