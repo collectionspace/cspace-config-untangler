@@ -12,8 +12,8 @@
       "movements_common": "http://collectionspace.org/services/movement",
       "movements_lhmc": "http://collectionspace.org/services/movement/domain/lhmc"
     },
-    "identifier_field": null,
-    "search_field": null
+    "identifier_field": "movementReferenceNumber",
+    "search_field": "movementReferenceNumber"
   },
   "docstructure": {
     "movements_common": {

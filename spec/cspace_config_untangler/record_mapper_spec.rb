@@ -5,13 +5,13 @@ RSpec.describe CCU::RecordMapper do
     CCU.const_set('CONFIGDIR', 'spec/fixtures/files/6_1')
   end
 
-  context 'botgarden' do
+  context 'when botgarden profile' do
     before(:all) do
       @profile = CCU::Profile.new(profile: 'botgarden_2-0-1',
-                                  rectypes: ['loanout'],
+                                  rectypes: %w[loanout pottag],
                                   structured_date_treatment: :collapse)
     end
-    context 'loanout' do
+    context 'when loanout rectype' do
       before(:all) do
         @loanout = @profile.rectypes.select{ |rt| rt.name == 'loanout' }.first
         @mapper = RecordMapping.new(profile: @profile, rectype: @loanout)
@@ -24,6 +24,49 @@ RSpec.describe CCU::RecordMapper do
           end
           it "hash[:config][:identifier_field'] = 'loanOutNumber'" do
             expect(@config[:identifier_field]).to eq('loanOutNumber')
+          end
+        end
+      end
+    end
+
+    context 'when pottag rectype' do
+      before(:all) do
+        @pottag = @profile.rectypes.select{ |rt| rt.name == 'pottag' }.first
+        @mapper = RecordMapping.new(profile: @profile, rectype: @pottag)
+        @config = @mapper.hash[:config]
+      end
+      describe RecordMapping do
+        describe '#hash[:config]' do
+          it "hash[:config][:service_type'] = 'procedure'" do
+            expect(@config[:service_type]).to eq('procedure')
+          end
+          it "hash[:config][:identifier_field'] = 'potTagNumber'" do
+            expect(@config[:identifier_field]).to eq('potTagNumber')
+          end
+        end
+      end
+    end
+  end
+
+  context 'when fcart profile' do
+    before(:all) do
+      @profile = CCU::Profile.new(profile: 'fcart_3-0-1',
+                                  rectypes: ['movement'],
+                                  structured_date_treatment: :collapse)
+    end
+    context 'when movement rectype' do
+      before(:all) do
+        @movement = @profile.rectypes.select{ |rt| rt.name == 'movement' }.first
+        @mapper = RecordMapping.new(profile: @profile, rectype: @movement)
+        @config = @mapper.hash[:config]
+      end
+      describe RecordMapping do
+        describe '#hash[:config]' do
+          it "hash[:config][:service_type'] = 'procedure'" do
+            expect(@config[:service_type]).to eq('procedure')
+          end
+          it "hash[:config][:identifier_field'] = 'movementReferenceNumber'" do
+            expect(@config[:identifier_field]).to eq('movementReferenceNumber')
           end
         end
       end

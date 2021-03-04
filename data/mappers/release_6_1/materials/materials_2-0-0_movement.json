@@ -11,8 +11,8 @@
     "ns_uri": {
       "movements_common": "http://collectionspace.org/services/movement"
     },
-    "identifier_field": null,
-    "search_field": null
+    "identifier_field": "movementReferenceNumber",
+    "search_field": "movementReferenceNumber"
   },
   "docstructure": {
     "movements_common": {

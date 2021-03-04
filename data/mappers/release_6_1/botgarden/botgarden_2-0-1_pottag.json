@@ -11,8 +11,8 @@
     "ns_uri": {
       "pottags_common": "http://collectionspace.org/services/pottag"
     },
-    "identifier_field": null,
-    "search_field": null
+    "identifier_field": "potTagNumber",
+    "search_field": "potTagNumber"
   },
   "docstructure": {
     "pottags_common": {

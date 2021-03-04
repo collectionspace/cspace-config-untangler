@@ -98,12 +98,16 @@ module CspaceConfigUntangler
       when 'authority'
         id_field = 'shortIdentifier'
       when 'procedure'
-        mapping = batch_mappings.select{ |m| m.required == 'y' }
-        if mapping.length == 1
-          id_field = mapping.first.fieldname
-        elsif mapping.length > 1
+        required_mappings = batch_mappings.select{ |m| m.required == 'y' }
+        case required_mappings.length
+        when 0
+          id_field = 'potTagNumber' if @name == 'pottag'
+        when 1
+          id_field = required_mappings.first.fieldname
+        else
           # osteology has 3 required fields, but only the ID is suitable for use here
           id_field = 'InventoryID' if @name == 'osteology'
+          id_field = 'movementReferenceNumber' if @name == 'movement'
         end
       end
       id_field

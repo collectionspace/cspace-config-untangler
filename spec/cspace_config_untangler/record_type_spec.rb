@@ -48,9 +48,18 @@ RSpec.describe CCU::RecordType do
         expect(result).to eq([[], []])
       end
     end
-
   end
 
+  describe '.id_field' do
+    context 'when anthro profile' do
+      context 'when movement rectype' do
+        it 'returns movementReferenceNumber' do
+          expect(@anthro_movement.id_field).to eq('movementReferenceNumber')
+        end
+      end
+    end
+  end
+  
   describe '.panels' do
     it 'returns array' do
       expect(@anthro_co.panels).to be_instance_of(Array)
@@ -76,16 +85,16 @@ RSpec.describe CCU::RecordType do
 
   describe '.forms' do
     it 'returns hash' do
-        expect(@anthro_co.forms).to be_instance_of(Hash)
-      end
-      it 'hash keys are the form names' do
-        a = %w[default inventory photo].sort
-        expect(@anthro_co.forms.keys.sort).to eq(a)
-      end
-      
-      it 'hash values are CCU::Form objects' do
-        expect(@anthro_co.forms['default']).to be_instance_of(CCU::Form)
-      end
+      expect(@anthro_co.forms).to be_instance_of(Hash)
+    end
+    it 'hash keys are the form names' do
+      a = %w[default inventory photo].sort
+      expect(@anthro_co.forms.keys.sort).to eq(a)
+    end
+    
+    it 'hash values are CCU::Form objects' do
+      expect(@anthro_co.forms['default']).to be_instance_of(CCU::Form)
+    end
   end
 
   describe '.mappings' do
@@ -115,11 +124,11 @@ RSpec.describe CCU::RecordType do
           end
         end
       end
-      context 'movement recordtype' do
+      context 'when movement recordtype' do
         before(:all) do
           @mappings = @anthro_movement.mappings
         end
-        context 'fieldname = movementReferenceNumber' do
+        context 'with fieldname = movementReferenceNumber' do
           it 'is not required' do
             result = @mappings.select{ |m| m.fieldname == 'movementReferenceNumber' }.map{ |m| m.required }.sort
             expect(result).to eq(%w[n])
