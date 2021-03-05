@@ -258,34 +258,62 @@ module CspaceConfigUntangler
     # mapper_config = Hash of mapper
     class NamespaceUris
       ::NamespaceUris = CspaceConfigUntangler::RecordMapper::NamespaceUris
-      attr_reader :hash
+
+      WEIRD_NS_LOOKUP = {
+        'ns2:collectionobjects_variablemedia' => 'http://collectionspace.org/services/collectionobject/domain/collectionobject',
+        'ns2:collectionobjects_fineart' => 'http://collectionspace.org/services/collectionobject/domain/collectionobject',
+        'ns2:concepts_fineart' => 'http://collectionspace.org/services/concept/domain/fineart',
+        'ns2:conditionchecks_variablemedia' => 'http://collectionspace.org/services/conditioncheck/domain/variablemedia',
+        'ns2:acquisitions_commission' => 'http://collectionspace.org/services/acquisition/domain/commission',
+        'ns2:propagations_common' => 'http://collectionspace.org/services/propagation',
+        'ns2:osteology_anthropology' => 'http://collectionspace.org/services/osteology/domain/anthropology'
+      }
       def initialize(profile_config:, rectype:, mapper_config:)
         @config = profile_config
         @rectype = rectype
         @mconfig = mapper_config
-        @hash = {}
+      end
+
+      def hash
+        hash = {}
         @config.dig('recordTypes', @rectype, 'fields', 'document').keys
           .select{ |k| k.start_with?('ns2') }
           .reject{ |k| k == 'ns2:collectionspace_core' || k == 'ns2:account_permission' }
-          .each do |ns|
-            objname = @mconfig[:object_name].downcase unless @mconfig[:service_type] == 'authority'
-            if ns == 'ns2:contacts_common'
-              uri = "http://collectionspace.org/services/contact"
-            elsif ns == "ns2:#{@mconfig[:document_name]}_common"
-              if @mconfig[:service_type] == 'authority'
-                uri = @config.dig('recordTypes', @rectype, 'fields', 'document', ns, 'csid', '[config]',
-                                  'extensionParentConfig', 'service', 'ns')
-              else
-                uri = "http://collectionspace.org/services/#{objname}"
-              end
-            elsif ns == "ns2:#{@mconfig[:document_name]}_#{@mconfig[:profile_basename]}"
-              uri = "http://collectionspace.org/services/#{objname}/domain/#{@mconfig[:profile_basename]}"
-            else
-              ext = ns.sub("ns2:#{@mconfig[:document_name]}_", '').sub('_extension', '')
-              uri = @config.dig('extensions', ext, objname, 'fields', ns, '[config]', 'service', 'ns')
-            end
-            @hash[ns.sub('ns2:', '')] = uri
+          .each{ |ns| hash[ns.sub('ns2:', '')] = uri(ns) }
+        hash
+      end
+
+      private
+
+      def authority_ns_uri(ns)
+        @config.dig('recordTypes', @rectype, 'fields', 'document', ns, 'csid', '[config]',
+                    'extensionParentConfig', 'service', 'ns')
+      end
+
+      def extension_ns_uri(ns)
+        ext = ns.sub("ns2:#{@mconfig[:document_name]}_", '').sub('_extension', '')
+        @config.dig('extensions', ext, object_name, 'fields', ns, '[config]', 'service', 'ns')
+      end
+
+      def object_name
+        @mconfig[:object_name].downcase unless @mconfig[:service_type] == 'authority'
+      end
+
+      def uri(ns)
+        case ns
+        when 'ns2:contacts_common'
+          "http://collectionspace.org/services/contact"
+        when "ns2:#{@mconfig[:document_name]}_common"
+          if @mconfig[:service_type] == 'authority'
+            authority_ns_uri(ns)
+          else
+            "http://collectionspace.org/services/#{object_name}"
           end
+        when "ns2:#{@mconfig[:document_name]}_#{@mconfig[:profile_basename]}"
+          "http://collectionspace.org/services/#{object_name}/domain/#{@mconfig[:profile_basename]}"
+        else
+          WEIRD_NS_LOOKUP.keys.include?(ns) ? WEIRD_NS_LOOKUP[ns] : extension_ns_uri(ns)
+        end
       end
     end
   end
