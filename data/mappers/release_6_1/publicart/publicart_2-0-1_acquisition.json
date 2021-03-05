@@ -11,7 +11,7 @@
     "ns_uri": {
       "acquisitions_common": "http://collectionspace.org/services/acquisition",
       "acquisitions_publicart": "http://collectionspace.org/services/acquisition/domain/publicart",
-      "acquisitions_commission": null
+      "acquisitions_commission": "http://collectionspace.org/services/acquisition/domain/commission"
     },
     "identifier_field": "acquisitionReferenceNumber",
     "search_field": "acquisitionReferenceNumber"

@@ -10,7 +10,7 @@
     "object_name": "Conceptitem",
     "ns_uri": {
       "concepts_common": "http://collectionspace.org/services/concept",
-      "concepts_fineart": null
+      "concepts_fineart": "http://collectionspace.org/services/concept/domain/fineart"
     },
     "identifier_field": "shortIdentifier",
     "search_field": "conceptTermGroupList/0/termDisplayName",

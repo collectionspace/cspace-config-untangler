@@ -10,7 +10,7 @@
     "object_name": "Osteology",
     "ns_uri": {
       "osteology_common": "http://collectionspace.org/services/osteology",
-      "osteology_anthropology": null
+      "osteology_anthropology": "http://collectionspace.org/services/osteology/domain/anthropology"
     },
     "identifier_field": "InventoryID",
     "search_field": "InventoryID"

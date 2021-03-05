@@ -38,6 +38,13 @@
     {
       "profile": "anthro",
       "version": "4-1-2",
+      "type": "movement",
+      "enabled": true,
+      "url": "https://raw.githubusercontent.com/collectionspace/cspace-config-untangler/main/data/mappers/release_6_1/anthro/anthro_4-1-2_movement.json"
+    },
+    {
+      "profile": "anthro",
+      "version": "4-1-2",
       "type": "exhibition",
       "enabled": true,
       "url": "https://raw.githubusercontent.com/collectionspace/cspace-config-untangler/main/data/mappers/release_6_1/anthro/anthro_4-1-2_exhibition.json"
@@ -206,6 +213,13 @@
     {
       "profile": "anthro",
       "version": "4-1-2",
+      "type": "osteology",
+      "enabled": true,
+      "url": "https://raw.githubusercontent.com/collectionspace/cspace-config-untangler/main/data/mappers/release_6_1/anthro/anthro_4-1-2_osteology.json"
+    },
+    {
+      "profile": "anthro",
+      "version": "4-1-2",
       "type": "organization-local",
       "enabled": true,
       "url": "https://raw.githubusercontent.com/collectionspace/cspace-config-untangler/main/data/mappers/release_6_1/anthro/anthro_4-1-2_organization-local.json"
@@ -290,6 +304,13 @@
     {
       "profile": "fcart",
       "version": "3-0-1",
+      "type": "concept-associated",
+      "enabled": true,
+      "url": "https://raw.githubusercontent.com/collectionspace/cspace-config-untangler/main/data/mappers/release_6_1/fcart/fcart_3-0-1_concept-associated.json"
+    },
+    {
+      "profile": "fcart",
+      "version": "3-0-1",
       "type": "place-local",
       "enabled": true,
       "url": "https://raw.githubusercontent.com/collectionspace/cspace-config-untangler/main/data/mappers/release_6_1/fcart/fcart_3-0-1_place-local.json"
@@ -332,6 +353,20 @@
     {
       "profile": "fcart",
       "version": "3-0-1",
+      "type": "concept-occasion",
+      "enabled": true,
+      "url": "https://raw.githubusercontent.com/collectionspace/cspace-config-untangler/main/data/mappers/release_6_1/fcart/fcart_3-0-1_concept-occasion.json"
+    },
+    {
+      "profile": "fcart",
+      "version": "3-0-1",
+      "type": "concept-nomenclature",
+      "enabled": true,
+      "url": "https://raw.githubusercontent.com/collectionspace/cspace-config-untangler/main/data/mappers/release_6_1/fcart/fcart_3-0-1_concept-nomenclature.json"
+    },
+    {
+      "profile": "fcart",
+      "version": "3-0-1",
       "type": "exhibition",
       "enabled": true,
       "url": "https://raw.githubusercontent.com/collectionspace/cspace-config-untangler/main/data/mappers/release_6_1/fcart/fcart_3-0-1_exhibition.json"
@@ -367,9 +402,23 @@
     {
       "profile": "fcart",
       "version": "3-0-1",
+      "type": "collectionobject",
+      "enabled": true,
+      "url": "https://raw.githubusercontent.com/collectionspace/cspace-config-untangler/main/data/mappers/release_6_1/fcart/fcart_3-0-1_collectionobject.json"
+    },
+    {
+      "profile": "fcart",
+      "version": "3-0-1",
       "type": "citation-worldcat",
       "enabled": true,
       "url": "https://raw.githubusercontent.com/collectionspace/cspace-config-untangler/main/data/mappers/release_6_1/fcart/fcart_3-0-1_citation-worldcat.json"
+    },
+    {
+      "profile": "fcart",
+      "version": "3-0-1",
+      "type": "movement",
+      "enabled": true,
+      "url": "https://raw.githubusercontent.com/collectionspace/cspace-config-untangler/main/data/mappers/release_6_1/fcart/fcart_3-0-1_movement.json"
     },
     {
       "profile": "fcart",
@@ -423,9 +472,30 @@
     {
       "profile": "fcart",
       "version": "3-0-1",
+      "type": "conditioncheck",
+      "enabled": true,
+      "url": "https://raw.githubusercontent.com/collectionspace/cspace-config-untangler/main/data/mappers/release_6_1/fcart/fcart_3-0-1_conditioncheck.json"
+    },
+    {
+      "profile": "fcart",
+      "version": "3-0-1",
+      "type": "concept-ethnographic-culture",
+      "enabled": true,
+      "url": "https://raw.githubusercontent.com/collectionspace/cspace-config-untangler/main/data/mappers/release_6_1/fcart/fcart_3-0-1_concept-ethnographic-culture.json"
+    },
+    {
+      "profile": "fcart",
+      "version": "3-0-1",
       "type": "citation-local",
       "enabled": true,
       "url": "https://raw.githubusercontent.com/collectionspace/cspace-config-untangler/main/data/mappers/release_6_1/fcart/fcart_3-0-1_citation-local.json"
+    },
+    {
+      "profile": "fcart",
+      "version": "3-0-1",
+      "type": "concept-activity",
+      "enabled": true,
+      "url": "https://raw.githubusercontent.com/collectionspace/cspace-config-untangler/main/data/mappers/release_6_1/fcart/fcart_3-0-1_concept-activity.json"
     },
     {
       "profile": "fcart",
@@ -451,9 +521,23 @@
     {
       "profile": "fcart",
       "version": "3-0-1",
+      "type": "concept-material",
+      "enabled": true,
+      "url": "https://raw.githubusercontent.com/collectionspace/cspace-config-untangler/main/data/mappers/release_6_1/fcart/fcart_3-0-1_concept-material.json"
+    },
+    {
+      "profile": "fcart",
+      "version": "3-0-1",
       "type": "intake",
       "enabled": true,
       "url": "https://raw.githubusercontent.com/collectionspace/cspace-config-untangler/main/data/mappers/release_6_1/fcart/fcart_3-0-1_intake.json"
+    },
+    {
+      "profile": "materials",
+      "version": "2-0-0",
+      "type": "movement",
+      "enabled": true,
+      "url": "https://raw.githubusercontent.com/collectionspace/cspace-config-untangler/main/data/mappers/release_6_1/materials/materials_2-0-0_movement.json"
     },
     {
       "profile": "materials",
@@ -759,6 +843,13 @@
     {
       "profile": "core",
       "version": "6-1-0",
+      "type": "movement",
+      "enabled": true,
+      "url": "https://raw.githubusercontent.com/collectionspace/cspace-config-untangler/main/data/mappers/release_6_1/core/core_6-1-0_movement.json"
+    },
+    {
+      "profile": "core",
+      "version": "6-1-0",
       "type": "nonhierarchicalrelationship",
       "enabled": true,
       "url": "https://raw.githubusercontent.com/collectionspace/cspace-config-untangler/main/data/mappers/release_6_1/core/core_6-1-0_nonhierarchicalrelationship.json"
@@ -948,6 +1039,13 @@
     {
       "profile": "publicart",
       "version": "2-0-1",
+      "type": "acquisition",
+      "enabled": true,
+      "url": "https://raw.githubusercontent.com/collectionspace/cspace-config-untangler/main/data/mappers/release_6_1/publicart/publicart_2-0-1_acquisition.json"
+    },
+    {
+      "profile": "publicart",
+      "version": "2-0-1",
       "type": "intake",
       "enabled": true,
       "url": "https://raw.githubusercontent.com/collectionspace/cspace-config-untangler/main/data/mappers/release_6_1/publicart/publicart_2-0-1_intake.json"
@@ -1098,6 +1196,13 @@
       "type": "objecthierarchy",
       "enabled": true,
       "url": "https://raw.githubusercontent.com/collectionspace/cspace-config-untangler/main/data/mappers/release_6_1/publicart/publicart_2-0-1_objecthierarchy.json"
+    },
+    {
+      "profile": "publicart",
+      "version": "2-0-1",
+      "type": "movement",
+      "enabled": true,
+      "url": "https://raw.githubusercontent.com/collectionspace/cspace-config-untangler/main/data/mappers/release_6_1/publicart/publicart_2-0-1_movement.json"
     },
     {
       "profile": "botgarden",
@@ -1270,6 +1375,13 @@
     {
       "profile": "botgarden",
       "version": "2-0-1",
+      "type": "pottag",
+      "enabled": true,
+      "url": "https://raw.githubusercontent.com/collectionspace/cspace-config-untangler/main/data/mappers/release_6_1/botgarden/botgarden_2-0-1_pottag.json"
+    },
+    {
+      "profile": "botgarden",
+      "version": "2-0-1",
       "type": "citation-local",
       "enabled": true,
       "url": "https://raw.githubusercontent.com/collectionspace/cspace-config-untangler/main/data/mappers/release_6_1/botgarden/botgarden_2-0-1_citation-local.json"
@@ -1322,6 +1434,13 @@
       "type": "conditioncheck",
       "enabled": true,
       "url": "https://raw.githubusercontent.com/collectionspace/cspace-config-untangler/main/data/mappers/release_6_1/botgarden/botgarden_2-0-1_conditioncheck.json"
+    },
+    {
+      "profile": "botgarden",
+      "version": "2-0-1",
+      "type": "propagation",
+      "enabled": true,
+      "url": "https://raw.githubusercontent.com/collectionspace/cspace-config-untangler/main/data/mappers/release_6_1/botgarden/botgarden_2-0-1_propagation.json"
     },
     {
       "profile": "botgarden",
@@ -1392,6 +1511,13 @@
       "type": "work-local",
       "enabled": true,
       "url": "https://raw.githubusercontent.com/collectionspace/cspace-config-untangler/main/data/mappers/release_6_1/lhmc/lhmc_3-1-1_work-local.json"
+    },
+    {
+      "profile": "lhmc",
+      "version": "3-1-1",
+      "type": "movement",
+      "enabled": true,
+      "url": "https://raw.githubusercontent.com/collectionspace/cspace-config-untangler/main/data/mappers/release_6_1/lhmc/lhmc_3-1-1_movement.json"
     },
     {
       "profile": "lhmc",
@@ -1623,6 +1749,13 @@
       "type": "loanin",
       "enabled": true,
       "url": "https://raw.githubusercontent.com/collectionspace/cspace-config-untangler/main/data/mappers/release_6_1/bonsai/bonsai_4-1-1_loanin.json"
+    },
+    {
+      "profile": "bonsai",
+      "version": "4-1-1",
+      "type": "movement",
+      "enabled": true,
+      "url": "https://raw.githubusercontent.com/collectionspace/cspace-config-untangler/main/data/mappers/release_6_1/bonsai/bonsai_4-1-1_movement.json"
     },
     {
       "profile": "bonsai",
@@ -1973,6 +2106,13 @@
       "type": "taxon-local",
       "enabled": true,
       "url": "https://raw.githubusercontent.com/collectionspace/cspace-config-untangler/main/data/mappers/release_6_1/herbarium/herbarium_1-1-1_taxon-local.json"
+    },
+    {
+      "profile": "herbarium",
+      "version": "1-1-1",
+      "type": "movement",
+      "enabled": true,
+      "url": "https://raw.githubusercontent.com/collectionspace/cspace-config-untangler/main/data/mappers/release_6_1/herbarium/herbarium_1-1-1_movement.json"
     },
     {
       "profile": "herbarium",

@@ -10,8 +10,8 @@
     "object_name": "CollectionObject",
     "ns_uri": {
       "collectionobjects_common": "http://collectionspace.org/services/collectionobject",
-      "collectionobjects_variablemedia": null,
-      "collectionobjects_fineart": null,
+      "collectionobjects_variablemedia": "http://collectionspace.org/services/collectionobject/domain/collectionobject",
+      "collectionobjects_fineart": "http://collectionspace.org/services/collectionobject/domain/collectionobject",
       "collectionobjects_annotation": "http://collectionspace.org/services/collectionobject/domain/annotation"
     },
     "identifier_field": "objectNumber",

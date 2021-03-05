@@ -10,7 +10,7 @@
     "object_name": "Conditioncheck",
     "ns_uri": {
       "conditionchecks_common": "http://collectionspace.org/services/conditioncheck",
-      "conditionchecks_variablemedia": null
+      "conditionchecks_variablemedia": "http://collectionspace.org/services/conditioncheck/domain/variablemedia"
     },
     "identifier_field": "conditionCheckRefNumber",
     "search_field": "conditionCheckRefNumber"
