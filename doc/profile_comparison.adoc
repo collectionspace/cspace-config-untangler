@@ -31,6 +31,8 @@ same: 1258 <5>
 === The CSV output
 Each row describes an occurrence of a field in a profile.
 
+It is recommended you sort or filter on the `diff_info` column to get the details of differences between the profiles.
+
 ==== CSV columns
 fid:: Field occurrence ID generated just for this spreadsheet. Mainly used for internal purposes and can be ignored for most uses.footnote:[Some fields, like structured date fields or parts of addresses, are defined once in an extension and can be used multiple times in one record. If multiple occurrences of said field type are defined within the same namespace of a record type, the same field definition ID may occur multiple times in a record. Put another way this is not a **true** unique id for _occurrences_ of fields, but it has served its purpose for the internal needs it serves.]
 profile:: Which profile the field info is from, including version of the profile.footnote:[Some profiles have existed longer and/or have had more changes than others, so the version numbers of the current profiles do not all match.]
