@@ -26,6 +26,7 @@ same: 1258 <5>
 <2> Number of fields that are in anthro but not fcart
 <3> Number of fields with differences in value source. This can mean a field is controlled by an authority, vocabulary, or static option list in one profile and is a free text field in the other. Or, it might indicate the field is controlled by different authorities in the two profiles
 <4> UI path refers to the "outline" of sections/labels indicating where a field is placed in the default form/record view. A difference here may mean that a field has been moved into a different section (i.e. `ui_info_group`) in one profile, or that the some of the labels of sections, field groupings, or fields are different between the two profiles, or both of these.
+<5> Number of fields defined identically in both profiles.
 
 === The CSV output
 Each row describes an occurrence of a field in a profile.
