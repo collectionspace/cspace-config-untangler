@@ -1,0 +1,52 @@
+= Profile comparison
+
+== How-to
+
+In base directory of this repository, run the command:
+
+ ccu profiles compare -p anthro_5-0-0,fcart_4-0-0 -o ~/data/my_output_directory
+
+TIP:: You may need to do `exe/ccu` depending on your setup.
+
+TIP:: See all the available profiles by running `ccu profiles all`
+
+== Interpreting the output
+=== Summary printed to screen
+For the command I ran above, which compares the version of the anthro profile that shipped with CS 7.0 with the version of the fcart (fine & contemporary art) profile that shipped with CS 7.0, I get:
+
+[source]
+----
+not in anthro_5-0-0: 128 <1>
+not in fcart_4-0-0: 427 <2>
+source differences: 17 <3>
+ui path differences: 25 <4>
+same: 1258 <5>
+----
+<1> Number of fields that are in fcart but not anthro
+<2> Number of fields that are in anthro but not fcart
+<3> Number of fields with differences in value source. This can mean a field is controlled by an authority, vocabulary, or static option list in one profile and is a free text field in the other. Or, it might indicate the field is controlled by different authorities in the two profiles
+<4> UI path refers to the "outline" of sections/labels indicating where a field is placed in the default form/record view. A difference here may mean that a field has been moved into a different section (i.e. `ui_info_group`) in one profile, or that the some of the labels of sections, field groupings, or fields are different between the two profiles, or both of these.
+
+=== The CSV output
+Each row describes an occurrence of a field in a profile.
+
+==== CSV columns
+fid:: Field occurrence ID generated just for this spreadsheet. Mainly used for internal purposes and can be ignored for most uses.footnote:[Some fields, like structured date fields or parts of addresses, are defined once in an extension and can be used multiple times in one record. If multiple occurrences of said field type are defined within the same namespace of a record type, the same field definition ID may occur multiple times in a record. Put another way this is not a **true** unique id for _occurrences_ of fields, but it has served its purpose for the internal needs it serves.]
+profile:: Which profile the field info is from, including version of the profile.footnote:[Some profiles have existed longer and/or have had more changes than others, so the version numbers of the current profiles do not all match.]
+record_type:: Record type in which the described field occurs
+namespace:: Mainly used for internal purposes and can be ignored for most uses.footnote:[Batch data operations are typically done via the CollectionSpace Services API, which accepts and returns XML payloads. Fields are organized within namespaces within these XML records.]
+namespace_for_id:: Mainly used for internal purposes and can be ignored for most uses.footnote:[If field is defined by an extension, this should indicate the extension's namespace and not the namespace of where the field is defined in a given record.]
+field_id:: Field definition ID. Mainly used for internal purposes and can be ignored for most uses.footnote:[Allows you to see that all occurrences of `dateDisplayDate` have the same field definition, etc.]
+ui_info_group:: Label of the top level/main section of the default record form in which the field appears. If empty, field does not appear in the default record form.
+ui_path:: Label(s) of the field groupings and headings within a main info group in the default record form, if applicable. If blank, field is a direct child of the info group.
+ui_field_label:: Label for the field itself in the default record form.
+xml_path:: Representation of the xpath hierarchy within the `namespace` where the field is stored in the XML expression.
+xml_field_name:: With the `namespace` and `xml_path` values, indicates where the field data is stored in the XML expression.
+data_type:: Indicates underlying data storage type, not any UI-based input or validation constraints
+required:: Whether the field is required in a record
+repeats:: Whether field may have multiple values
+group_repeats:: If field is part of a group, whether multiple occurrences of the whole group can be entered.
+data_source:: If present, indicates how the values entered into the field are controlled: authority footnote:[Terms managed via authority records], vocabulary footnote:[Terms managed via Tools > Term Lists], option list.footnote:[Terms defined in profile. Can be customized in individual site config]
+option_list_values:: The default terms defined for the specified option list in that profile
+diff_info:: If blank, fields are defined the same in the two profiles. If populated, indicates the difference for that field between the two profiles. Only one category is given. Source differences, since they affect the underlying data, trump UI path/field display differences. That is, if a field is controlled by authority in one profile, and free text in the other, *and* the two fields are labeled differently, this only indicates `source differences`.
+
