@@ -1,0 +1,3 @@
+`collectionspace_migration_tools` identifies authorities by checking record mapper names for `-`.
+
+If a procedure name containing a hyphen is ever introduced, you will need to figure out how to handle it, so it doesn't get treated as an authority in the migration tooling.
