@@ -35,6 +35,7 @@ module CspaceConfigUntangler
     'fcart' => '3-0-1',
     'herbarium' => '1-1-1',
     'lhmc' => '3-1-1',
+    'hku' => '3-0-1',
     'materials' => '2-0-0',
     'ohc' => '1-0-4',
     'omca' => '6-1-0',
