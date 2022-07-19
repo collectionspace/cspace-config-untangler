@@ -5,4 +5,4 @@ REPEATABLE FIELD?,n,n,n,n,n,n,n,n,n
 REPEATING FIELD GROUP,"",valueAmountsList < valueAmounts,valueAmountsList < valueAmounts,"","","","","",""
 VALUE SOURCE TYPE,na,vocabulary,na,na,na,authority,authority,optionlist,na
 VALUE SOURCE,"",currency,"","","",person/local,organization/local,"Current Value, Original Value, Replacement Value",""
-CSVHEADER,valuationcontrolRefNumber,valueCurrency,valueAmount,valueDate,valueRenewalDate,valueSourcePersonLocal,valueSourceOrganizationLocal,valueType,valueNote
+CSVHEADER,valuationcontrolRefNumber,valueCurrency,valueAmount,valueDate,valueRenewalDate,valueSourcePerson,valueSourceOrganization,valueType,valueNote
