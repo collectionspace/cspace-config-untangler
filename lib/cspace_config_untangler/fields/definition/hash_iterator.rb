@@ -8,7 +8,7 @@ module CspaceConfigUntangler
   module Fields
     module Definition
       class HashIterator
-        
+
         # @param config [CCU::Fields::Definition::Config]
         def initialize(config, called_from)
           @config = config
@@ -23,11 +23,11 @@ module CspaceConfigUntangler
         def clean_config_hash
           old_hash = @config.hash.dup
           return if old_hash.length == 1
-          
+
           cleaned_hash = old_hash.reject{ |key, _| key == '[config]' }
           @config.update_field_hash(cleaned_hash)
         end
-        
+
         def namespace
           @config.namespace.literal
         end
@@ -37,10 +37,13 @@ module CspaceConfigUntangler
           return unless type
 
           config = @config.derive_child(name: name, field_hash: data, parent: @caller)
-          FieldFilter.call(config) if type == :field || type == :structured_date
-          Grouping.new(config) if type == :group
+          if type == :field || type == :structured_date
+            FieldFilter.call(config)
+          elsif type == :group
+            Grouping.new(config)
+          end
         end
-        
+
         def parse_fields
           @config.hash.each{ |name, data| parse_field(name, data) }
         end
