@@ -40,8 +40,9 @@ module CspaceConfigUntangler
       private
 
       def authority_ns_uri(ns)
-        @config.dig('recordTypes', @rectype, 'fields', 'document', ns, 'csid', '[config]',
-                    'extensionParentConfig', 'service', 'ns')
+        @config.dig('recordTypes', @rectype, 'fields', 'document', ns,
+                             'csid', '[config]', 'extensionParentConfig',
+                             'service', 'ns')
       end
 
       def extension_ns_uri(ns)

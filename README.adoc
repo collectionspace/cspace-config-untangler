@@ -15,7 +15,7 @@ endif::[]
 toc::[]
 
 == Conceptual overview
-Reads JSON config file output by CollectionSpace application. 
+Reads JSON config file output by CollectionSpace application.
 
 Gets field definitions (`field_defs`), including repeatability, data type, value source, XML field name and parents, etc.
 
@@ -37,7 +37,7 @@ _Note: there may be field_defs in a profile which do not match any form_fields. 
 * `cd` into cloned directory
 * `bundle/install`
 * Download your configs into the appropriate `data/configs` directory or directories
-* Configure your settings https://github.com/collectionspace/cspace-config-untangler/blob/master/lib/cspace_config_untangler.rb[in `lib/cspace_config_untangler.rb`]. 
+* Configure your settings https://github.com/collectionspace/cspace-config-untangler/blob/master/lib/cspace_config_untangler.rb[in `lib/cspace_config_untangler.rb`].
 
 === Optional: add the `exe` directory to your PATH
 
@@ -77,7 +77,7 @@ IMPORTANT: This tool can only be used confidently with configs from CollectionSp
 
 * For 5.2 configs, data source values are not consistently supplied for structured date fields. This is because configuration of the structured date fields was not written out to the JSON config in a standard way until 6.0.
 * The 6.1 release further refined the JSON config output allowing the full functionality of this tool
-* Does not currently report on fields in the `ns2:collectionspace_core` namespace 
+* Does not currently report on fields in the `ns2:collectionspace_core` namespace
 * Does not currently report on fields in the `rel:relations-common-list` namespace because the way this data is defined in the config is very different from the rest
 * `contact` and `blob` get reported/treated as extensions within the tool, rather than sub-records
 * Does not support fields in custom namespaces added to `contact` or `blob`
@@ -118,7 +118,7 @@ And for the latest dev versions of profiles:
 -  https://publicart.dev.collectionspace.org/cspace/publicart/config
 -  https://materials.dev.collectionspace.org/cspace/materials/config
 -  https://herbarium.dev.collectionspace.org/cspace/herbarium/config
--  https://botgarden.dev.collectionspace.org/cspace/botgarden/config 
+-  https://botgarden.dev.collectionspace.org/cspace/botgarden/config
 -  https://bonsai.dev.collectionspace.org/cspace/bonsai/config
 
 
