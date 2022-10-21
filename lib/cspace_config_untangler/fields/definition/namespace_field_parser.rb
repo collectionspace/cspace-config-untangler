@@ -18,7 +18,8 @@ module CspaceConfigUntangler
 
         
         def subrecord_config_hash(subrec_type, ns)
-          @config.profile_config['recordTypes'][subrec_type]['fields']['document'][ns]
+          @config.profile_config.dig('recordTypes', subrec_type, 'fields',
+                                     'document', ns)
         end
         
         def update_subrecord_field_hash
