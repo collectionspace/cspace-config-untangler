@@ -57,11 +57,11 @@ LONGDESC
         opts.each{ |key, val| puts "  #{key}: #{val}" }
         puts "  dev: #{options[:dev]}"
         builder = options[:dev] ? CCU::ManifestDev.new(**opts) : CCU::Manifest.new(**opts)
-        builder.build      
+        builder.build
       end
 
       desc 'write', 'Writes JSON serializations of RecordMappers for the given rectype(s) for the given profiles.'
-      option :rectypes, desc: 'Comma-delimited (no spaces) list of record types to write mappers for. If blank, will process all record types in profile', default: '', aliases: '-r' 
+      option :rectypes, desc: 'Comma-delimited (no spaces) list of record types to write mappers for. If blank, will process all record types in profile', default: '', aliases: '-r'
       option :outputdir, desc: 'Path to output directory. File name will be: profile-rectype.json', default: 'data/mappers', aliases: '-o'
       option :subdirs, desc: 'y/n. Whether to organize into subdirectories within given output directory by normalized profile name. Normalized profile name is the profile with version info/underscores removed.', default: 'n', aliases: '-s'
       def write
@@ -73,10 +73,10 @@ LONGDESC
           FileUtils.mkdir_p(dir_path)
           p.rectypes.each do |rt|
             puts "  ...#{rt.name}"
-            CspaceConfigUntangler::RecordMapper::RecordMapperWrapper.new(profile: p,
-                                                                         rectype: rt,
-                                                                         base_path: dir_path
-                                                                        ).mappers.each do |mapper|
+            CspaceConfigUntangler::RecordMapper::Wrapper.new(profile: p,
+                                                             rectype: rt,
+                                                             base_path: dir_path
+                                                            ).mappers.each do |mapper|
               mapper[:mapper].to_json(data: mapper[:mapper].hash, output: mapper[:path])
             end
           end
