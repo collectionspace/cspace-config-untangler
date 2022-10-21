@@ -291,20 +291,4 @@ module CspaceConfigUntangler
       return "ns2:#{docname}_common"
     end
   end
-
-  class RecordTypes
-    attr_reader :list
-    attr_reader :profiles
-
-    # profiles = array of profile name strings
-    def initialize(profiles)
-      @profiles = profiles
-      all = {}
-      @profiles.each{ |p|
-        CCU::Profile.new(p).recordtypes.each{ |rectype| all[rectype] = '' }
-      }
-      @list = all.keys.sort
-    end
-  end
-
 end
