@@ -20,8 +20,11 @@ module CspaceConfigUntangler
     end
 
     def fields(profile_obj)
-      sdfields = profile_obj.messages.keys.select{ |e| e['structuredDate'] }.map{ |e| e.sub('field.', '') }
-      return sdfields.map{ |sdf| CCU::StructuredDateField.new(profile_obj, self, sdf) }
+      profile_obj.messages
+        .keys
+        .select{ |e| e['structuredDate'] }
+        .map{ |e| e.sub('field.', '') }
+        .map{ |sdf| CCU::StructuredDateField.new(profile_obj, self, sdf) }
     end
 
     private
@@ -35,6 +38,5 @@ module CspaceConfigUntangler
         return 'n'
       end
     end
-    
-  end #class
-end #module
+  end
+end
