@@ -40,8 +40,9 @@ module CspaceConfigUntangler
       private
 
       def authority_ns_uri(ns)
-        @config.dig('recordTypes', @rectype, 'fields', 'document', ns, 'csid', '[config]',
-                    'extensionParentConfig', 'service', 'ns')
+        @config.dig('recordTypes', @rectype, 'fields', 'document', ns,
+                             'csid', '[config]', 'extensionParentConfig',
+                             'service', 'ns')
       end
 
       def extension_ns_uri(ns)
@@ -66,10 +67,14 @@ module CspaceConfigUntangler
         when "ns2:#{@mconfig[:document_name]}_#{@mconfig[:profile_basename]}"
           "http://collectionspace.org/services/#{object_name}/domain/#{@mconfig[:profile_basename]}"
         else
+          result = @config.dig('recordTypes', @rectype, 'fields', 'document', ns,
+                      '[config]', 'service', 'ns')
+
+          return result if result
+
           WEIRD_NS_LOOKUP.keys.include?(ns) ? WEIRD_NS_LOOKUP[ns] : extension_ns_uri(ns)
         end
       end
     end
   end
 end
-

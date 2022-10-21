@@ -78,7 +78,7 @@ module CspaceConfigUntangler
       # ensure unique datacolumn values for templates and mapper
       mappings.each do |mapping|
         next if mapping.xpath.nil?
-        
+
         if checkhash.key?(mapping.datacolumn)
           add = mapping.xpath.empty? ? mapping.namespace.split('_').last : mapping.xpath.last
           mapping.datacolumn = "#{add}_#{mapping.datacolumn}"
@@ -138,7 +138,7 @@ module CspaceConfigUntangler
         puts "#{profile.name} - #{name} - #{mapping.fieldname}"
       end
     end
-    
+
     private
 
 
@@ -156,7 +156,7 @@ module CspaceConfigUntangler
       mapping.required = 'y' unless mapping.nil?
       mappings
     end
-    
+
     def faux_require_profile_specific_mappings(mappings)
       instructions = {
         'botgarden' => {
@@ -187,7 +187,7 @@ module CspaceConfigUntangler
         .uniq
         .sort
     end
-    
+
     # get rid of mappings for fields we do not want to import via the batch import tool
     def remove_unimportable_fields_from(mappings, context)
       constant_instructions = {
@@ -216,7 +216,7 @@ module CspaceConfigUntangler
       #   deal with at present
       mappings.reject{ |mapping| mapping.data_type.nil? && mapping.xpath.nil? }
     end
-    
+
     def get_subtypes
       result = []
       vocabs = @config.dig('vocabularies')
@@ -229,7 +229,7 @@ module CspaceConfigUntangler
       end
       result
     end
-    
+
     def media_uri_field
       field_hash = {
         name: 'mediaFileURI',
@@ -267,31 +267,31 @@ module CspaceConfigUntangler
         return {}
       end
     end
-    
+
     def get_panels
       if @config.dig('messages', 'panel')
         arr = []
-        
+
         @config['messages']['panel'].keys.each{ |panelname|
           arr << panelname
-          
+
           msgs = @profile.messages
           id = @config['messages']['panel'][panelname]['id']
           label = @config['messages']['panel'][panelname]['defaultMessage']
-          msgs[id] = {'name' => label, 'fullName' => label} 
+          msgs[id] = {'name' => label, 'fullName' => label}
         }
         return arr
       else
         return []
       end
     end
-    
+
     def get_namespace
       docname = @config['serviceConfig']['documentName']
       return "ns2:#{docname}_common"
     end
   end
-  
+
   class RecordTypes
     attr_reader :list
     attr_reader :profiles

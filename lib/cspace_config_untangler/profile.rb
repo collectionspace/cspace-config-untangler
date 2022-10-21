@@ -6,7 +6,7 @@ module CspaceConfigUntangler
   class Profile
     include CCU::ColumnNameStylable
     attr_reader :name, :config, :authorities, :rectypes, :rectypes_all, :extensions, :vocabularies, :panels, :form_fields, :field_defs, :messages, :structured_date_treatment
-    
+
     def initialize(profile:, rectypes: [], structured_date_treatment: :explode)
       @name = profile
       @config = JSON.parse(File.read("#{CCU.configdir}/#{@name}.json"))
@@ -28,7 +28,7 @@ module CspaceConfigUntangler
     def column_style
       column_name_style(basename, version)
     end
-    
+
     def extensions_for(rectype)
       exts = {}
       @extensions.map{ |e| CCU::Extension.new(self, e) }.each{ |ext|
@@ -71,7 +71,7 @@ module CspaceConfigUntangler
     end
 
     def version
-      @name.split('_')[1]      
+      @name.split('_')[1]
     end
 
     def special_rectypes
@@ -95,7 +95,7 @@ module CspaceConfigUntangler
       ast = @rectypes_all.select{ |rt| @config['recordTypes'][rt]['serviceConfig']['serviceType'] == 'authority' }
         .map{ |rt| @config['recordTypes'][rt]['vocabularies'] }
         .map{ |vocabhash| vocabhash.map{ |vocab, h| h['serviceConfig']['servicePath'] } }
-        .flatten      
+        .flatten
         .reject{ |e| e == '_ALL_' }
         .map{ |refname| refname.match(/\((.*)\)/)[1] }
         .uniq
@@ -112,7 +112,7 @@ module CspaceConfigUntangler
     def option_lists
       @option_lists ||= get_option_lists
     end
-    
+
     private
 
     def get_field_defs
@@ -147,7 +147,7 @@ module CspaceConfigUntangler
       panels << CCU::RecordType.new(self, 'contact').panels if @extensions.include?('contact')
       return panels.flatten.sort
     end
-    
+
     def get_vocabularies
       @rectypes.map(&:vocabularies).flatten.uniq.sort
     end
@@ -175,7 +175,7 @@ module CspaceConfigUntangler
     def apply_field_override(id, value)
       type = id.split('.').last
       rev_id = id.sub(".#{type}", '')
-      
+
       if @messages.has_key?(rev_id)
         @messages[rev_id][type] = value
       else
@@ -186,11 +186,11 @@ module CspaceConfigUntangler
     def apply_panel_override(id, value)
       @messages[id] = {'name' => value, 'fullName' => value}
     end
-    
+
     def get_rectypes(rectypes)
-      remove = %w[account all authrole authority batch batchinvocation blob contact export
-                  idgenerator object procedure relation report reportinvocation
-                  structureddates vocabulary]
+      remove = %w[account all audit authrole authority batch batchinvocation
+                  blob contact export idgenerator object procedure relation
+                  report reportinvocation structureddates vocabulary]
       @rectypes_all = @config['recordTypes'].keys - remove
 
       # if no rectypes are given, process all of them
@@ -199,7 +199,7 @@ module CspaceConfigUntangler
       @rectypes = @rectypes.select{ |rt| @rectypes_all.include?(rt) }
       @rectypes = @rectypes.map{ |rt| CCU::RecordType.new(self, rt) }
     end
-    
+
     def get_extensions
       remove = %w[core authItem]
       ext = @config['extensions'].keys - remove
@@ -213,7 +213,7 @@ module CspaceConfigUntangler
         c = @config['recordTypes'][rt]
         if c.dig('serviceConfig', 'serviceType') == 'authority'
           c['vocabularies'].keys.reject{ |e| e == 'all' }.each{ |subtype|
-            authorities << "#{rt}/#{subtype}" 
+            authorities << "#{rt}/#{subtype}"
           }
         else
           next
@@ -221,7 +221,7 @@ module CspaceConfigUntangler
       }
       return authorities.sort
     end
-    
+
     def rectypes_include_authorities
       @rectypes.select{ |rt| rt.service_type == 'authority' }.empty? ? false : true
     end
@@ -233,7 +233,7 @@ module CspaceConfigUntangler
     def get_option_lists
       list_config = @config.dig('optionLists')
       return [] unless list_config
-      
+
       CCU::OptionLists.new(@config['optionLists'])
     end
   end

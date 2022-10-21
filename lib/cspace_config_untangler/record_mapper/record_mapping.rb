@@ -18,14 +18,14 @@ module CspaceConfigUntangler
         append_subtype if @subtype
       end
 
-      
+
       private
 
       def append_subtype
         @hash[:config][:authority_type] = @hash[:config][:service_path]
         @hash[:config][:authority_subtype] = @subtype[:subtype]
       end
-      
+
 
       def build_hash
         @hash[:config] = {}
@@ -47,7 +47,7 @@ module CspaceConfigUntangler
         create_hierarchy
         @hash[:mappings] = @mappings.map{ |m| m.to_h }
       end
-      
+
       def create_hierarchy
         # top level keys are the namespaces
         @mappings.each do |m|
@@ -55,8 +55,8 @@ module CspaceConfigUntangler
         end
 
         @mappings.each do |m|
-          next if m.data_type.nil? && m.xpath.nil? 
-          
+          next if m.data_type.nil? && m.xpath.nil?
+
           levels = m.xpath.clone
           done = []
           while levels.size > 0 do
