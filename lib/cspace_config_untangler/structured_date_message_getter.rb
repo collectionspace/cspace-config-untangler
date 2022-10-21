@@ -12,8 +12,10 @@ module CspaceConfigUntangler
     def set_messages
       @fields.each{ |field|
         id = "field.ext.structuredDate.#{field}"
-        name = @config.dig(field, '[config]', 'messages', 'fullName', 'defaultMessage')
-        fullName = @config.dig(field, '[config]', 'messages', 'fullName', 'defaultMessage')
+        name = @config.dig(field, '[config]', 'messages', 'fullName',
+                           'defaultMessage')
+        fullName = @config.dig(field, '[config]', 'messages', 'fullName',
+                               'defaultMessage')
         fullName = fix_labels(field) if fullName.nil?
         @profile.messages[id] = {'name' => name, 'fullName' => fullName}
       }
@@ -35,7 +37,7 @@ module CspaceConfigUntangler
         return 'Earliest/Single month'
       when 'dateEarliestSingleQualifier'
         return 'Earliest/Single qualifier'
-      when 'dateEarliestSingleQualifierValue'          
+      when 'dateEarliestSingleQualifierValue'
         return 'Earliest/Single value'
       when 'dateEarliestSingleYear'
         return 'Earliest/Single year'
@@ -47,15 +49,15 @@ module CspaceConfigUntangler
         return 'Latest month'
       when 'dateLatestQualifier'
         return 'Latest qualifier'
-      when 'dateLatestQualifierValue'          
+      when 'dateLatestQualifierValue'
         return 'Latest value'
       when 'dateLatestYear'
         return 'Latest year'
       when 'dateLatestScalarValue'
-        return 'Latest scalar value'        
+        return 'Latest scalar value'
       when 'scalarValuesComputed'
-        return 'Scalar values computed?'        
+        return 'Scalar values computed?'
       end
-    end    
-  end #class  
+    end
+  end #class
 end #module
