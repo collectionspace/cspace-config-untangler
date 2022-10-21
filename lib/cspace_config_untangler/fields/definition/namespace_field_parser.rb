@@ -24,8 +24,11 @@ module CspaceConfigUntangler
         
         def update_subrecord_field_hash
           ns = @config.namespace.literal
-          @config.update_field_hash(subrecord_config_hash('contact', ns)) if ns.start_with?('ns2:contacts_')
-          @config.update_field_hash(subrecord_config_hash('blob', ns)) if ns == ('ns2:blobs_common')
+          if ns.start_with?('ns2:contacts_')
+            @config.update_field_hash(subrecord_config_hash('contact', ns))
+          elsif ns == ('ns2:blobs_common')
+            @config.update_field_hash(subrecord_config_hash('blob', ns))
+          end
         end
         
         # # fdp = FieldDefinitionParser
