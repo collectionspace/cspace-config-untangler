@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    cspace_config_untangler (1.9.10)
+    cspace_config_untangler (1.10.0)
       dry-configurable (~> 0.12)
       facets (~> 3.1.0)
       http (~> 4.4.1)
@@ -18,11 +18,12 @@ GEM
     diff-lcs (1.5.0)
     domain_name (0.5.20190701)
       unf (>= 0.0.5, < 1.0.0)
-    dry-configurable (0.15.0)
-      concurrent-ruby (~> 1.0)
+    dry-configurable (0.16.1)
       dry-core (~> 0.6)
-    dry-core (0.7.1)
+      zeitwerk (~> 2.6)
+    dry-core (0.9.1)
       concurrent-ruby (~> 1.0)
+      zeitwerk (~> 2.6)
     facets (3.1.0)
     ffi (1.15.5)
     ffi-compiler (1.0.1)
@@ -39,9 +40,7 @@ GEM
     http-parser (1.2.3)
       ffi-compiler (>= 1.0, < 2.0)
     method_source (1.0.0)
-    mini_portile2 (2.8.0)
-    nokogiri (1.13.9)
-      mini_portile2 (~> 2.8.0)
+    nokogiri (1.13.9-x86_64-darwin)
       racc (~> 1.4)
     pry (0.13.1)
       coderay (~> 1.1)
@@ -66,6 +65,7 @@ GEM
     unf (0.1.4)
       unf_ext
     unf_ext (0.0.8)
+    zeitwerk (2.6.1)
 
 PLATFORMS
   ruby
