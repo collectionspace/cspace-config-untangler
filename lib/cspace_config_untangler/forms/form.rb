@@ -4,7 +4,7 @@ module CspaceConfigUntangler
   module Forms
     class Form
       ::CCU::Form = CspaceConfigUntangler::Forms::Form
-      attr_reader :rectype, :name, :config, :fields
+      attr_reader :rectype, :name, :fields
 
       def initialize(rectypeobj, formname)
         @rectype = rectypeobj
@@ -20,6 +20,8 @@ module CspaceConfigUntangler
       end
 
       private
+
+      attr_reader :config
 
       def get_config
         return @rectype.config['forms'][@name]['template']['props']
