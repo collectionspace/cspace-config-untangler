@@ -181,8 +181,8 @@
       "fieldname": "currentOwner",
       "transforms": {
       },
-      "source_type": "authority",
-      "source_name": "person/local; organization/local",
+      "source_type": "refname",
+      "source_name": "person/local",
       "namespace": "objectexit_common",
       "xpath": [
 
@@ -246,8 +246,8 @@
       "fieldname": "depositor",
       "transforms": {
       },
-      "source_type": "authority",
-      "source_name": "person/local; organization/local",
+      "source_type": "refname",
+      "source_name": "person/local",
       "namespace": "objectexit_common",
       "xpath": [
 
@@ -345,7 +345,7 @@
       "fieldname": "deaccessionAuthorizer",
       "transforms": {
       },
-      "source_type": "authority",
+      "source_type": "refname",
       "source_name": "person/local",
       "namespace": "objectexit_common",
       "xpath": [
@@ -404,7 +404,7 @@
       "fieldname": "deaccessionApprovalGroup",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "deaccessionapprovalgroup",
       "namespace": "objectexit_common",
       "xpath": [
@@ -448,7 +448,7 @@
       "fieldname": "deaccessionApprovalIndividual",
       "transforms": {
       },
-      "source_type": "authority",
+      "source_type": "refname",
       "source_name": "person/local",
       "namespace": "objectexit_common",
       "xpath": [
@@ -489,7 +489,7 @@
       "fieldname": "deaccessionApprovalStatus",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "deaccessionapprovalstatus",
       "namespace": "objectexit_common",
       "xpath": [
@@ -607,7 +607,7 @@
       "fieldname": "disposalMethod",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "disposalmethod",
       "namespace": "objectexit_common",
       "xpath": [
@@ -691,8 +691,8 @@
       "fieldname": "disposalProposedRecipient",
       "transforms": {
       },
-      "source_type": "authority",
-      "source_name": "person/local; organization/local",
+      "source_type": "refname",
+      "source_name": "person/local",
       "namespace": "objectexit_common",
       "xpath": [
 
@@ -756,8 +756,8 @@
       "fieldname": "disposalRecipient",
       "transforms": {
       },
-      "source_type": "authority",
-      "source_name": "person/local; organization/local",
+      "source_type": "refname",
+      "source_name": "person/local",
       "namespace": "objectexit_common",
       "xpath": [
 
@@ -795,7 +795,7 @@
       "fieldname": "disposalCurrency",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "currency",
       "namespace": "objectexit_common",
       "xpath": [
@@ -853,7 +853,7 @@
       "fieldname": "groupDisposalCurrency",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "currency",
       "namespace": "objectexit_common",
       "xpath": [

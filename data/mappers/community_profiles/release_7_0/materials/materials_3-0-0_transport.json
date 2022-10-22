@@ -129,29 +129,6 @@
       "fieldname": "transporter",
       "transforms": {
         "authority": [
-          "personauthorities",
-          "person_shared"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "person/shared",
-      "namespace": "transports_common",
-      "xpath": [
-
-      ],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "n/a",
-      "opt_list_values": [
-
-      ],
-      "datacolumn": "transporterPersonShared",
-      "required": "n"
-    },
-    {
-      "fieldname": "transporter",
-      "transforms": {
-        "authority": [
           "orgauthorities",
           "organization"
         ]
@@ -174,32 +151,9 @@
     {
       "fieldname": "transporter",
       "transforms": {
-        "authority": [
-          "orgauthorities",
-          "organization_shared"
-        ]
       },
-      "source_type": "authority",
-      "source_name": "organization/shared",
-      "namespace": "transports_common",
-      "xpath": [
-
-      ],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "n/a",
-      "opt_list_values": [
-
-      ],
-      "datacolumn": "transporterOrganizationShared",
-      "required": "n"
-    },
-    {
-      "fieldname": "transporter",
-      "transforms": {
-      },
-      "source_type": "authority",
-      "source_name": "person/local; person/shared; organization/local; organization/shared",
+      "source_type": "refname",
+      "source_name": "person/local",
       "namespace": "transports_common",
       "xpath": [
 
@@ -233,38 +187,15 @@
       "opt_list_values": [
 
       ],
-      "datacolumn": "transporterContactPersonLocal",
-      "required": "n"
-    },
-    {
-      "fieldname": "transporterContact",
-      "transforms": {
-        "authority": [
-          "personauthorities",
-          "person_shared"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "person/shared",
-      "namespace": "transports_common",
-      "xpath": [
-
-      ],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "n/a",
-      "opt_list_values": [
-
-      ],
-      "datacolumn": "transporterContactPersonShared",
+      "datacolumn": "transporterContact",
       "required": "n"
     },
     {
       "fieldname": "transporterContact",
       "transforms": {
       },
-      "source_type": "authority",
-      "source_name": "person/local; person/shared",
+      "source_type": "refname",
+      "source_name": "person/local",
       "namespace": "transports_common",
       "xpath": [
 
@@ -317,38 +248,15 @@
       "opt_list_values": [
 
       ],
-      "datacolumn": "transportAuthorizerPersonLocal",
-      "required": "n"
-    },
-    {
-      "fieldname": "transportAuthorizer",
-      "transforms": {
-        "authority": [
-          "personauthorities",
-          "person_shared"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "person/shared",
-      "namespace": "transports_common",
-      "xpath": [
-
-      ],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "n/a",
-      "opt_list_values": [
-
-      ],
-      "datacolumn": "transportAuthorizerPersonShared",
+      "datacolumn": "transportAuthorizer",
       "required": "n"
     },
     {
       "fieldname": "transportAuthorizer",
       "transforms": {
       },
-      "source_type": "authority",
-      "source_name": "person/local; person/shared",
+      "source_type": "refname",
+      "source_name": "person/local",
       "namespace": "transports_common",
       "xpath": [
 
@@ -448,29 +356,6 @@
       "fieldname": "departurePoint",
       "transforms": {
         "authority": [
-          "orgauthorities",
-          "organization_shared"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "organization/shared",
-      "namespace": "transports_common",
-      "xpath": [
-
-      ],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "n/a",
-      "opt_list_values": [
-
-      ],
-      "datacolumn": "departurePointOrganizationShared",
-      "required": "n"
-    },
-    {
-      "fieldname": "departurePoint",
-      "transforms": {
-        "authority": [
           "placeauthorities",
           "place"
         ]
@@ -494,8 +379,8 @@
       "fieldname": "departurePoint",
       "transforms": {
       },
-      "source_type": "authority",
-      "source_name": "organization/local; organization/shared; place/local",
+      "source_type": "refname",
+      "source_name": "organization/local",
       "namespace": "transports_common",
       "xpath": [
 
@@ -574,29 +459,6 @@
       "fieldname": "destination",
       "transforms": {
         "authority": [
-          "personauthorities",
-          "person_shared"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "person/shared",
-      "namespace": "transports_common",
-      "xpath": [
-
-      ],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "n/a",
-      "opt_list_values": [
-
-      ],
-      "datacolumn": "destinationPersonShared",
-      "required": "n"
-    },
-    {
-      "fieldname": "destination",
-      "transforms": {
-        "authority": [
           "orgauthorities",
           "organization"
         ]
@@ -619,32 +481,9 @@
     {
       "fieldname": "destination",
       "transforms": {
-        "authority": [
-          "orgauthorities",
-          "organization_shared"
-        ]
       },
-      "source_type": "authority",
-      "source_name": "organization/shared",
-      "namespace": "transports_common",
-      "xpath": [
-
-      ],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "n/a",
-      "opt_list_values": [
-
-      ],
-      "datacolumn": "destinationOrganizationShared",
-      "required": "n"
-    },
-    {
-      "fieldname": "destination",
-      "transforms": {
-      },
-      "source_type": "authority",
-      "source_name": "person/local; person/shared; organization/local; organization/shared",
+      "source_type": "refname",
+      "source_name": "person/local",
       "namespace": "transports_common",
       "xpath": [
 
@@ -724,30 +563,6 @@
       "fieldname": "courier",
       "transforms": {
         "authority": [
-          "personauthorities",
-          "person_shared"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "person/shared",
-      "namespace": "transports_common",
-      "xpath": [
-        "courierGroupList",
-        "courierGroup"
-      ],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [
-
-      ],
-      "datacolumn": "courierPersonShared",
-      "required": "n"
-    },
-    {
-      "fieldname": "courier",
-      "transforms": {
-        "authority": [
           "orgauthorities",
           "organization"
         ]
@@ -771,33 +586,9 @@
     {
       "fieldname": "courier",
       "transforms": {
-        "authority": [
-          "orgauthorities",
-          "organization_shared"
-        ]
       },
-      "source_type": "authority",
-      "source_name": "organization/shared",
-      "namespace": "transports_common",
-      "xpath": [
-        "courierGroupList",
-        "courierGroup"
-      ],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [
-
-      ],
-      "datacolumn": "courierOrganizationShared",
-      "required": "n"
-    },
-    {
-      "fieldname": "courier",
-      "transforms": {
-      },
-      "source_type": "authority",
-      "source_name": "person/local; person/shared; organization/local; organization/shared",
+      "source_type": "refname",
+      "source_name": "person/local",
       "namespace": "transports_common",
       "xpath": [
         "courierGroupList",
@@ -875,7 +666,7 @@
       "fieldname": "transportCostType",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "transportcosttype",
       "namespace": "transports_common",
       "xpath": [
@@ -914,7 +705,7 @@
       "fieldname": "transportCostResponsibleParty",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "transportresponsibleparty",
       "namespace": "transports_common",
       "xpath": [
@@ -953,7 +744,7 @@
       "fieldname": "insuranceCostResponsibleParty",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "transportresponsibleparty",
       "namespace": "transports_common",
       "xpath": [
@@ -992,7 +783,7 @@
       "fieldname": "finalShippingCostCurrency",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "currency",
       "namespace": "transports_common",
       "xpath": [
@@ -1053,29 +844,6 @@
       "fieldname": "customsBroker",
       "transforms": {
         "authority": [
-          "personauthorities",
-          "person_shared"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "person/shared",
-      "namespace": "transports_common",
-      "xpath": [
-
-      ],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "n/a",
-      "opt_list_values": [
-
-      ],
-      "datacolumn": "customsBrokerPersonShared",
-      "required": "n"
-    },
-    {
-      "fieldname": "customsBroker",
-      "transforms": {
-        "authority": [
           "orgauthorities",
           "organization"
         ]
@@ -1098,32 +866,9 @@
     {
       "fieldname": "customsBroker",
       "transforms": {
-        "authority": [
-          "orgauthorities",
-          "organization_shared"
-        ]
       },
-      "source_type": "authority",
-      "source_name": "organization/shared",
-      "namespace": "transports_common",
-      "xpath": [
-
-      ],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "n/a",
-      "opt_list_values": [
-
-      ],
-      "datacolumn": "customsBrokerOrganizationShared",
-      "required": "n"
-    },
-    {
-      "fieldname": "customsBroker",
-      "transforms": {
-      },
-      "source_type": "authority",
-      "source_name": "person/local; person/shared; organization/local; organization/shared",
+      "source_type": "refname",
+      "source_name": "person/local",
       "namespace": "transports_common",
       "xpath": [
 
@@ -1157,38 +902,15 @@
       "opt_list_values": [
 
       ],
-      "datacolumn": "customsBrokerContactPersonLocal",
-      "required": "n"
-    },
-    {
-      "fieldname": "customsBrokerContact",
-      "transforms": {
-        "authority": [
-          "personauthorities",
-          "person_shared"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "person/shared",
-      "namespace": "transports_common",
-      "xpath": [
-
-      ],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "n/a",
-      "opt_list_values": [
-
-      ],
-      "datacolumn": "customsBrokerContactPersonShared",
+      "datacolumn": "customsBrokerContact",
       "required": "n"
     },
     {
       "fieldname": "customsBrokerContact",
       "transforms": {
       },
-      "source_type": "authority",
-      "source_name": "person/local; person/shared",
+      "source_type": "refname",
+      "source_name": "person/local",
       "namespace": "transports_common",
       "xpath": [
 
@@ -1226,7 +948,7 @@
       "fieldname": "customsDeclaredValueCurrency",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "currency",
       "namespace": "transports_common",
       "xpath": [
@@ -1284,7 +1006,7 @@
       "fieldname": "customsFeeCurrency",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "currency",
       "namespace": "transports_common",
       "xpath": [
@@ -1362,7 +1084,7 @@
       "fieldname": "additionalCostsType",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "transportadditionalcosttype",
       "namespace": "transports_common",
       "xpath": [
@@ -1403,7 +1125,7 @@
       "fieldname": "additionalCostsCurrency",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "currency",
       "namespace": "transports_common",
       "xpath": [
@@ -1467,30 +1189,6 @@
       "fieldname": "shippingQuoteProvider",
       "transforms": {
         "authority": [
-          "personauthorities",
-          "person_shared"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "person/shared",
-      "namespace": "transports_common",
-      "xpath": [
-        "shippingQuoteGroupList",
-        "shippingQuoteGroup"
-      ],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [
-
-      ],
-      "datacolumn": "shippingQuoteProviderPersonShared",
-      "required": "n"
-    },
-    {
-      "fieldname": "shippingQuoteProvider",
-      "transforms": {
-        "authority": [
           "orgauthorities",
           "organization"
         ]
@@ -1514,33 +1212,9 @@
     {
       "fieldname": "shippingQuoteProvider",
       "transforms": {
-        "authority": [
-          "orgauthorities",
-          "organization_shared"
-        ]
       },
-      "source_type": "authority",
-      "source_name": "organization/shared",
-      "namespace": "transports_common",
-      "xpath": [
-        "shippingQuoteGroupList",
-        "shippingQuoteGroup"
-      ],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [
-
-      ],
-      "datacolumn": "shippingQuoteProviderOrganizationShared",
-      "required": "n"
-    },
-    {
-      "fieldname": "shippingQuoteProvider",
-      "transforms": {
-      },
-      "source_type": "authority",
-      "source_name": "person/local; person/shared; organization/local; organization/shared",
+      "source_type": "refname",
+      "source_name": "person/local",
       "namespace": "transports_common",
       "xpath": [
         "shippingQuoteGroupList",
@@ -1580,7 +1254,7 @@
       "fieldname": "shippingQuoteCurrency",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "currency",
       "namespace": "transports_common",
       "xpath": [

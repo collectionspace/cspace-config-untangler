@@ -96,7 +96,7 @@
       "fieldname": "loanGroup",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "deaccessionapprovalgroup",
       "namespace": "loansin_common",
       "xpath": [
@@ -140,7 +140,7 @@
       "fieldname": "loanIndividual",
       "transforms": {
       },
-      "source_type": "authority",
+      "source_type": "refname",
       "source_name": "person/local",
       "namespace": "loansin_common",
       "xpath": [
@@ -181,7 +181,7 @@
       "fieldname": "loanStatus",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "loanoutstatus",
       "namespace": "loansin_common",
       "xpath": [
@@ -289,8 +289,8 @@
       "fieldname": "lender",
       "transforms": {
       },
-      "source_type": "authority",
-      "source_name": "person/local; organization/local",
+      "source_type": "refname",
+      "source_name": "person/local",
       "namespace": "loansin_common",
       "xpath": [
         "lenderGroupList",
@@ -333,7 +333,7 @@
       "fieldname": "lendersContact",
       "transforms": {
       },
-      "source_type": "authority",
+      "source_type": "refname",
       "source_name": "person/local",
       "namespace": "loansin_common",
       "xpath": [
@@ -377,7 +377,7 @@
       "fieldname": "lendersAuthorizer",
       "transforms": {
       },
-      "source_type": "authority",
+      "source_type": "refname",
       "source_name": "person/local",
       "namespace": "loansin_common",
       "xpath": [
@@ -440,7 +440,7 @@
       "fieldname": "borrowersContact",
       "transforms": {
       },
-      "source_type": "authority",
+      "source_type": "refname",
       "source_name": "person/local",
       "namespace": "loansin_common",
       "xpath": [
@@ -482,7 +482,7 @@
       "fieldname": "borrowersAuthorizer",
       "transforms": {
       },
-      "source_type": "authority",
+      "source_type": "refname",
       "source_name": "person/local",
       "namespace": "loansin_common",
       "xpath": [

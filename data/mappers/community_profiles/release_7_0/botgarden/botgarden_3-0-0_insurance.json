@@ -70,7 +70,7 @@
       "fieldname": "insuranceIndemnityType",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "insurancetype",
       "namespace": "insurances_common",
       "xpath": [
@@ -181,8 +181,8 @@
       "fieldname": "insurerIndemnifier",
       "transforms": {
       },
-      "source_type": "authority",
-      "source_name": "person/local; person/ulan; organization/local; organization/ulan",
+      "source_type": "refname",
+      "source_name": "person/local",
       "namespace": "insurances_common",
       "xpath": [
 
@@ -239,7 +239,7 @@
       "fieldname": "insuranceIndemnityCurrency",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "currency",
       "namespace": "insurances_common",
       "xpath": [
@@ -297,7 +297,7 @@
       "fieldname": "minimumLiabilityCurrency",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "currency",
       "namespace": "insurances_common",
       "xpath": [
@@ -358,7 +358,7 @@
       "fieldname": "insuranceIndemnityAuthorizer",
       "transforms": {
       },
-      "source_type": "authority",
+      "source_type": "refname",
       "source_name": "person/local",
       "namespace": "insurances_common",
       "xpath": [
@@ -417,7 +417,7 @@
       "fieldname": "insuranceIndemnityStatus",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "insurancestatus",
       "namespace": "insurances_common",
       "xpath": [
@@ -592,8 +592,8 @@
       "fieldname": "insuranceIndemnityQuoteProvider",
       "transforms": {
       },
-      "source_type": "authority",
-      "source_name": "person/local; person/ulan; organization/local; organization/ulan",
+      "source_type": "refname",
+      "source_name": "person/local",
       "namespace": "insurances_common",
       "xpath": [
         "quoteProviderGroupList",
@@ -633,7 +633,7 @@
       "fieldname": "insuranceIndemnityQuoteCurrency",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "currency",
       "namespace": "insurances_common",
       "xpath": [

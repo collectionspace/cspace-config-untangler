@@ -176,7 +176,7 @@
       "fieldname": "termFlag",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "locationtermflag",
       "namespace": "locations_common",
       "xpath": [
@@ -217,7 +217,7 @@
       "fieldname": "termLanguage",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "languages",
       "namespace": "locations_common",
       "xpath": [
@@ -308,8 +308,8 @@
       "fieldname": "termSource",
       "transforms": {
       },
-      "source_type": "authority",
-      "source_name": "citation/local; citation/worldcat",
+      "source_type": "refname",
+      "source_name": "citation/local",
       "namespace": "locations_common",
       "xpath": [
         "locTermGroupList",
@@ -408,7 +408,7 @@
       "fieldname": "locationType",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "locationtype",
       "namespace": "locations_common",
       "xpath": [
@@ -562,39 +562,15 @@
       "opt_list_values": [
 
       ],
-      "datacolumn": "addressMunicipalityPlaceLocal",
-      "required": "n"
-    },
-    {
-      "fieldname": "addressMunicipality",
-      "transforms": {
-        "authority": [
-          "placeauthorities",
-          "place_shared"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "place/shared",
-      "namespace": "locations_publicart",
-      "xpath": [
-        "addrGroupList",
-        "addrGroup"
-      ],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [
-
-      ],
-      "datacolumn": "addressMunicipalityPlaceShared",
+      "datacolumn": "addressMunicipality",
       "required": "n"
     },
     {
       "fieldname": "addressMunicipality",
       "transforms": {
       },
-      "source_type": "authority",
-      "source_name": "place/local; place/shared",
+      "source_type": "refname",
+      "source_name": "place/local",
       "namespace": "locations_publicart",
       "xpath": [
         "addrGroupList",
@@ -630,39 +606,15 @@
       "opt_list_values": [
 
       ],
-      "datacolumn": "addressCountyPlaceLocal",
-      "required": "n"
-    },
-    {
-      "fieldname": "addressCounty",
-      "transforms": {
-        "authority": [
-          "placeauthorities",
-          "place_shared"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "place/shared",
-      "namespace": "locations_publicart",
-      "xpath": [
-        "addrGroupList",
-        "addrGroup"
-      ],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [
-
-      ],
-      "datacolumn": "addressCountyPlaceShared",
+      "datacolumn": "addressCounty",
       "required": "n"
     },
     {
       "fieldname": "addressCounty",
       "transforms": {
       },
-      "source_type": "authority",
-      "source_name": "place/local; place/shared",
+      "source_type": "refname",
+      "source_name": "place/local",
       "namespace": "locations_publicart",
       "xpath": [
         "addrGroupList",
@@ -698,39 +650,15 @@
       "opt_list_values": [
 
       ],
-      "datacolumn": "addressStateOrProvincePlaceLocal",
-      "required": "n"
-    },
-    {
-      "fieldname": "addressStateOrProvince",
-      "transforms": {
-        "authority": [
-          "placeauthorities",
-          "place_shared"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "place/shared",
-      "namespace": "locations_publicart",
-      "xpath": [
-        "addrGroupList",
-        "addrGroup"
-      ],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [
-
-      ],
-      "datacolumn": "addressStateOrProvincePlaceShared",
+      "datacolumn": "addressStateOrProvince",
       "required": "n"
     },
     {
       "fieldname": "addressStateOrProvince",
       "transforms": {
       },
-      "source_type": "authority",
-      "source_name": "place/local; place/shared",
+      "source_type": "refname",
+      "source_name": "place/local",
       "namespace": "locations_publicart",
       "xpath": [
         "addrGroupList",
@@ -786,39 +714,15 @@
       "opt_list_values": [
 
       ],
-      "datacolumn": "addressCountryPlaceLocal",
-      "required": "n"
-    },
-    {
-      "fieldname": "addressCountry",
-      "transforms": {
-        "authority": [
-          "placeauthorities",
-          "place_shared"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "place/shared",
-      "namespace": "locations_publicart",
-      "xpath": [
-        "addrGroupList",
-        "addrGroup"
-      ],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [
-
-      ],
-      "datacolumn": "addressCountryPlaceShared",
+      "datacolumn": "addressCountry",
       "required": "n"
     },
     {
       "fieldname": "addressCountry",
       "transforms": {
       },
-      "source_type": "authority",
-      "source_name": "place/local; place/shared",
+      "source_type": "refname",
+      "source_name": "place/local",
       "namespace": "locations_publicart",
       "xpath": [
         "addrGroupList",
@@ -858,7 +762,7 @@
       "fieldname": "addressType",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "addresstype",
       "namespace": "locations_publicart",
       "xpath": [

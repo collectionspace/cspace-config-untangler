@@ -70,7 +70,7 @@
       "fieldname": "propType",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "proptype",
       "namespace": "propagation_common",
       "xpath": [
@@ -147,7 +147,7 @@
       "fieldname": "propReason",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "propreason",
       "namespace": "propagation_common",
       "xpath": [
@@ -206,7 +206,7 @@
       "fieldname": "scarStrat",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "scarstrat",
       "namespace": "propagation_common",
       "xpath": [
@@ -267,7 +267,7 @@
       "fieldname": "durationUnit",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "durationunit",
       "namespace": "propagation_common",
       "xpath": [
@@ -351,7 +351,7 @@
       "fieldname": "cuttingType",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "cuttingtype",
       "namespace": "propagation_common",
       "xpath": [
@@ -390,7 +390,7 @@
       "fieldname": "hormone",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "propHormones",
       "namespace": "propagation_common",
       "xpath": [
@@ -470,7 +470,7 @@
       "fieldname": "plantType",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "propPlantType",
       "namespace": "propagation_common",
       "xpath": [
@@ -530,7 +530,7 @@
       "fieldname": "activityType",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "propActivityType",
       "namespace": "propagation_common",
       "xpath": [
@@ -594,7 +594,7 @@
       "fieldname": "medium",
       "transforms": {
       },
-      "source_type": "authority",
+      "source_type": "refname",
       "source_name": "concept/associated",
       "namespace": "propagation_common",
       "xpath": [
@@ -635,7 +635,7 @@
       "fieldname": "potSize",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "potsize",
       "namespace": "propagation_common",
       "xpath": [
@@ -679,7 +679,7 @@
       "fieldname": "nurseryLocation",
       "transforms": {
       },
-      "source_type": "authority",
+      "source_type": "refname",
       "source_name": "location/local",
       "namespace": "propagation_common",
       "xpath": [
@@ -720,7 +720,7 @@
       "fieldname": "conditions",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "propConditions",
       "namespace": "propagation_common",
       "xpath": [
@@ -761,7 +761,7 @@
       "fieldname": "chemicalApplied",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "propChemicals",
       "namespace": "propagation_common",
       "xpath": [

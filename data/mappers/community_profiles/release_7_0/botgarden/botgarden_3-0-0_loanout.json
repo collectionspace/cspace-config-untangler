@@ -54,7 +54,7 @@
       "fieldname": "collector",
       "transforms": {
       },
-      "source_type": "authority",
+      "source_type": "refname",
       "source_name": "person/local",
       "namespace": "loansout_botgarden",
       "xpath": [
@@ -264,7 +264,7 @@
       "fieldname": "gardenLocation",
       "transforms": {
       },
-      "source_type": "authority",
+      "source_type": "refname",
       "source_name": "location/local",
       "namespace": "loansout_botgarden",
       "xpath": [
@@ -382,7 +382,7 @@
       "fieldname": "borrower",
       "transforms": {
       },
-      "source_type": "authority",
+      "source_type": "refname",
       "source_name": "organization/local",
       "namespace": "loansout_common",
       "xpath": [
@@ -462,7 +462,7 @@
       "fieldname": "lendersAuthorizer",
       "transforms": {
       },
-      "source_type": "authority",
+      "source_type": "refname",
       "source_name": "person/local",
       "namespace": "loansout_common",
       "xpath": [

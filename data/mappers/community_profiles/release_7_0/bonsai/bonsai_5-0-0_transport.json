@@ -152,8 +152,8 @@
       "fieldname": "transporter",
       "transforms": {
       },
-      "source_type": "authority",
-      "source_name": "person/local; organization/local",
+      "source_type": "refname",
+      "source_name": "person/local",
       "namespace": "transports_common",
       "xpath": [
 
@@ -194,7 +194,7 @@
       "fieldname": "transporterContact",
       "transforms": {
       },
-      "source_type": "authority",
+      "source_type": "refname",
       "source_name": "person/local",
       "namespace": "transports_common",
       "xpath": [
@@ -255,7 +255,7 @@
       "fieldname": "transportAuthorizer",
       "transforms": {
       },
-      "source_type": "authority",
+      "source_type": "refname",
       "source_name": "person/local",
       "namespace": "transports_common",
       "xpath": [
@@ -379,8 +379,8 @@
       "fieldname": "departurePoint",
       "transforms": {
       },
-      "source_type": "authority",
-      "source_name": "organization/local; place/local",
+      "source_type": "refname",
+      "source_name": "organization/local",
       "namespace": "transports_common",
       "xpath": [
 
@@ -482,8 +482,8 @@
       "fieldname": "destination",
       "transforms": {
       },
-      "source_type": "authority",
-      "source_name": "person/local; organization/local",
+      "source_type": "refname",
+      "source_name": "person/local",
       "namespace": "transports_common",
       "xpath": [
 
@@ -587,8 +587,8 @@
       "fieldname": "courier",
       "transforms": {
       },
-      "source_type": "authority",
-      "source_name": "person/local; organization/local",
+      "source_type": "refname",
+      "source_name": "person/local",
       "namespace": "transports_common",
       "xpath": [
         "courierGroupList",
@@ -666,7 +666,7 @@
       "fieldname": "transportCostType",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "transportcosttype",
       "namespace": "transports_common",
       "xpath": [
@@ -705,7 +705,7 @@
       "fieldname": "transportCostResponsibleParty",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "transportresponsibleparty",
       "namespace": "transports_common",
       "xpath": [
@@ -744,7 +744,7 @@
       "fieldname": "insuranceCostResponsibleParty",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "transportresponsibleparty",
       "namespace": "transports_common",
       "xpath": [
@@ -783,7 +783,7 @@
       "fieldname": "finalShippingCostCurrency",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "currency",
       "namespace": "transports_common",
       "xpath": [
@@ -867,8 +867,8 @@
       "fieldname": "customsBroker",
       "transforms": {
       },
-      "source_type": "authority",
-      "source_name": "person/local; organization/local",
+      "source_type": "refname",
+      "source_name": "person/local",
       "namespace": "transports_common",
       "xpath": [
 
@@ -909,7 +909,7 @@
       "fieldname": "customsBrokerContact",
       "transforms": {
       },
-      "source_type": "authority",
+      "source_type": "refname",
       "source_name": "person/local",
       "namespace": "transports_common",
       "xpath": [
@@ -948,7 +948,7 @@
       "fieldname": "customsDeclaredValueCurrency",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "currency",
       "namespace": "transports_common",
       "xpath": [
@@ -1006,7 +1006,7 @@
       "fieldname": "customsFeeCurrency",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "currency",
       "namespace": "transports_common",
       "xpath": [
@@ -1084,7 +1084,7 @@
       "fieldname": "additionalCostsType",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "transportadditionalcosttype",
       "namespace": "transports_common",
       "xpath": [
@@ -1125,7 +1125,7 @@
       "fieldname": "additionalCostsCurrency",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "currency",
       "namespace": "transports_common",
       "xpath": [
@@ -1213,8 +1213,8 @@
       "fieldname": "shippingQuoteProvider",
       "transforms": {
       },
-      "source_type": "authority",
-      "source_name": "person/local; organization/local",
+      "source_type": "refname",
+      "source_name": "person/local",
       "namespace": "transports_common",
       "xpath": [
         "shippingQuoteGroupList",
@@ -1254,7 +1254,7 @@
       "fieldname": "shippingQuoteCurrency",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "currency",
       "namespace": "transports_common",
       "xpath": [

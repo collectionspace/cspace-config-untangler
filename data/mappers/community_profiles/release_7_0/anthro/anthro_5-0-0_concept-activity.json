@@ -199,7 +199,7 @@
       "fieldname": "termFlag",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "concepttermflag",
       "namespace": "concepts_common",
       "xpath": [
@@ -263,7 +263,7 @@
       "fieldname": "termLanguage",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "languages",
       "namespace": "concepts_common",
       "xpath": [
@@ -354,8 +354,8 @@
       "fieldname": "termSource",
       "transforms": {
       },
-      "source_type": "authority",
-      "source_name": "citation/local; citation/worldcat",
+      "source_type": "refname",
+      "source_name": "citation/local",
       "namespace": "concepts_common",
       "xpath": [
         "conceptTermGroupList",
@@ -454,7 +454,7 @@
       "fieldname": "conceptRecordType",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "concepttype",
       "namespace": "concepts_common",
       "xpath": [

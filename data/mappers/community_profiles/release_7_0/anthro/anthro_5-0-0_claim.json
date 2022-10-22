@@ -212,8 +212,8 @@
       "fieldname": "claimFiledBy",
       "transforms": {
       },
-      "source_type": "authority",
-      "source_name": "person/local; organization/local",
+      "source_type": "refname",
+      "source_name": "person/local",
       "namespace": "claims_common",
       "xpath": [
         "claimantGroupList",
@@ -280,8 +280,8 @@
       "fieldname": "claimFiledOnBehalfOf",
       "transforms": {
       },
-      "source_type": "authority",
-      "source_name": "person/local; organization/local",
+      "source_type": "refname",
+      "source_name": "person/local",
       "namespace": "claims_common",
       "xpath": [
         "claimantGroupList",
@@ -340,7 +340,7 @@
       "fieldname": "nagpraClaimType",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "nagpraclaimtype",
       "namespace": "claims_nagpra",
       "xpath": [
@@ -442,7 +442,7 @@
       "fieldname": "nagpraClaimSiteName",
       "transforms": {
       },
-      "source_type": "authority",
+      "source_type": "refname",
       "source_name": "place/local",
       "namespace": "claims_nagpra",
       "xpath": [
@@ -506,7 +506,7 @@
       "fieldname": "nagpraClaimGroupName",
       "transforms": {
       },
-      "source_type": "authority",
+      "source_type": "refname",
       "source_name": "concept/ethculture",
       "namespace": "claims_nagpra",
       "xpath": [

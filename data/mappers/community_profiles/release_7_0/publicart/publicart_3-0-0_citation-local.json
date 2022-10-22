@@ -119,7 +119,7 @@
       "fieldname": "termType",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "citationtermtype",
       "namespace": "citations_common",
       "xpath": [
@@ -160,7 +160,7 @@
       "fieldname": "termFlag",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "citationtermflag",
       "namespace": "citations_common",
       "xpath": [
@@ -201,7 +201,7 @@
       "fieldname": "termLanguage",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "languages",
       "namespace": "citations_common",
       "xpath": [
@@ -412,8 +412,8 @@
       "fieldname": "termSource",
       "transforms": {
       },
-      "source_type": "authority",
-      "source_name": "citation/local; citation/worldcat",
+      "source_type": "refname",
+      "source_name": "citation/local",
       "namespace": "citations_common",
       "xpath": [
         "citationTermGroupList",
@@ -516,7 +516,7 @@
       "fieldname": "publisher",
       "transforms": {
       },
-      "source_type": "authority",
+      "source_type": "refname",
       "source_name": "organization/local",
       "namespace": "citations_common",
       "xpath": [
@@ -560,7 +560,7 @@
       "fieldname": "publicationPlace",
       "transforms": {
       },
-      "source_type": "authority",
+      "source_type": "refname",
       "source_name": "place/local",
       "namespace": "citations_common",
       "xpath": [
@@ -688,8 +688,8 @@
       "fieldname": "agent",
       "transforms": {
       },
-      "source_type": "authority",
-      "source_name": "person/local; organization/local",
+      "source_type": "refname",
+      "source_name": "person/local",
       "namespace": "citations_common",
       "xpath": [
         "citationAgentInfoGroupList",
@@ -729,7 +729,7 @@
       "fieldname": "role",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "agentinfotype",
       "namespace": "citations_common",
       "xpath": [
@@ -829,7 +829,7 @@
       "fieldname": "type",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "resourceidtype",
       "namespace": "citations_common",
       "xpath": [
@@ -893,7 +893,7 @@
       "fieldname": "relatedTerm",
       "transforms": {
       },
-      "source_type": "authority",
+      "source_type": "refname",
       "source_name": "concept/material",
       "namespace": "citations_common",
       "xpath": [
@@ -934,7 +934,7 @@
       "fieldname": "relationType",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "relationtypetype",
       "namespace": "citations_common",
       "xpath": [

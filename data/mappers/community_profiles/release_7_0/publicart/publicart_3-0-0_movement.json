@@ -113,29 +113,6 @@
       "fieldname": "currentLocation",
       "transforms": {
         "authority": [
-          "orgauthorities",
-          "organization_shared"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "organization/shared",
-      "namespace": "movements_common",
-      "xpath": [
-
-      ],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "n/a",
-      "opt_list_values": [
-
-      ],
-      "datacolumn": "currentLocationOrganizationShared",
-      "required": "y"
-    },
-    {
-      "fieldname": "currentLocation",
-      "transforms": {
-        "authority": [
           "placeauthorities",
           "place"
         ]
@@ -158,32 +135,9 @@
     {
       "fieldname": "currentLocation",
       "transforms": {
-        "authority": [
-          "placeauthorities",
-          "place_shared"
-        ]
       },
-      "source_type": "authority",
-      "source_name": "place/shared",
-      "namespace": "movements_common",
-      "xpath": [
-
-      ],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "n/a",
-      "opt_list_values": [
-
-      ],
-      "datacolumn": "currentLocationPlaceShared",
-      "required": "y"
-    },
-    {
-      "fieldname": "currentLocation",
-      "transforms": {
-      },
-      "source_type": "authority",
-      "source_name": "location/local; location/offsite; organization/local; organization/shared; place/local; place/shared",
+      "source_type": "refname",
+      "source_name": "location/local",
       "namespace": "movements_common",
       "xpath": [
 
@@ -361,38 +315,15 @@
       "opt_list_values": [
 
       ],
-      "datacolumn": "movementContactPersonLocal",
-      "required": "n"
-    },
-    {
-      "fieldname": "movementContact",
-      "transforms": {
-        "authority": [
-          "personauthorities",
-          "person_shared"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "person/shared",
-      "namespace": "movements_common",
-      "xpath": [
-
-      ],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "n/a",
-      "opt_list_values": [
-
-      ],
-      "datacolumn": "movementContactPersonShared",
+      "datacolumn": "movementContact",
       "required": "n"
     },
     {
       "fieldname": "movementContact",
       "transforms": {
       },
-      "source_type": "authority",
-      "source_name": "person/local; person/shared",
+      "source_type": "refname",
+      "source_name": "person/local",
       "namespace": "movements_common",
       "xpath": [
 

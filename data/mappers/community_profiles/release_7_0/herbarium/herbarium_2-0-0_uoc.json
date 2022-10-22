@@ -92,7 +92,7 @@
       "fieldname": "method",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "uocmethods",
       "namespace": "uoc_common",
       "xpath": [
@@ -131,7 +131,7 @@
       "fieldname": "collectionType",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "uoccollectiontypes",
       "namespace": "uoc_common",
       "xpath": [
@@ -170,7 +170,7 @@
       "fieldname": "projectId",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "uocprojectid",
       "namespace": "uoc_common",
       "xpath": [
@@ -209,7 +209,7 @@
       "fieldname": "subcollection",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "uocsubcollections",
       "namespace": "uoc_common",
       "xpath": [
@@ -248,7 +248,7 @@
       "fieldname": "materialType",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "uocmaterialtypes",
       "namespace": "uoc_common",
       "xpath": [
@@ -315,8 +315,8 @@
       "fieldname": "user",
       "transforms": {
       },
-      "source_type": "authority",
-      "source_name": "person/local; organization/local",
+      "source_type": "refname",
+      "source_name": "person/local",
       "namespace": "uoc_common",
       "xpath": [
         "userGroupList",
@@ -356,7 +356,7 @@
       "fieldname": "userUocRole",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "uocuserroles",
       "namespace": "uoc_common",
       "xpath": [
@@ -400,7 +400,7 @@
       "fieldname": "userInstitution",
       "transforms": {
       },
-      "source_type": "authority",
+      "source_type": "refname",
       "source_name": "organization/local",
       "namespace": "uoc_common",
       "xpath": [
@@ -441,7 +441,7 @@
       "fieldname": "userInstitutionRole",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "uocusertypes",
       "namespace": "uoc_common",
       "xpath": [
@@ -541,7 +541,7 @@
       "fieldname": "occasion",
       "transforms": {
       },
-      "source_type": "authority",
+      "source_type": "refname",
       "source_name": "concept/occasion",
       "namespace": "uoc_common",
       "xpath": [
@@ -627,8 +627,8 @@
       "fieldname": "authorizedBy",
       "transforms": {
       },
-      "source_type": "authority",
-      "source_name": "person/local; organization/local",
+      "source_type": "refname",
+      "source_name": "person/local",
       "namespace": "uoc_common",
       "xpath": [
         "authorizationGroupList",
@@ -688,7 +688,7 @@
       "fieldname": "authorizationStatus",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "uocauthorizationstatuses",
       "namespace": "uoc_common",
       "xpath": [
@@ -895,8 +895,8 @@
       "fieldname": "staffName",
       "transforms": {
       },
-      "source_type": "authority",
-      "source_name": "person/local; organization/local",
+      "source_type": "refname",
+      "source_name": "person/local",
       "namespace": "uoc_common",
       "xpath": [
         "staffGroupList",
@@ -936,7 +936,7 @@
       "fieldname": "staffRole",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "uocstaffroles",
       "namespace": "uoc_common",
       "xpath": [
@@ -1065,8 +1065,8 @@
       "fieldname": "location",
       "transforms": {
       },
-      "source_type": "authority",
-      "source_name": "organization/local; place/local; location/local",
+      "source_type": "refname",
+      "source_name": "organization/local",
       "namespace": "uoc_common",
       "xpath": [
         "locationList"
@@ -1105,7 +1105,7 @@
       "fieldname": "feeCurrency",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "currency",
       "namespace": "uoc_common",
       "xpath": [

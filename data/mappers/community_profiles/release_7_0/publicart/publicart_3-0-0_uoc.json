@@ -92,7 +92,7 @@
       "fieldname": "method",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "uocmethods",
       "namespace": "uoc_common",
       "xpath": [
@@ -131,7 +131,7 @@
       "fieldname": "collectionType",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "uoccollectiontypes",
       "namespace": "uoc_common",
       "xpath": [
@@ -170,7 +170,7 @@
       "fieldname": "projectId",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "uocprojectid",
       "namespace": "uoc_common",
       "xpath": [
@@ -209,7 +209,7 @@
       "fieldname": "subcollection",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "uocsubcollections",
       "namespace": "uoc_common",
       "xpath": [
@@ -248,7 +248,7 @@
       "fieldname": "materialType",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "uocmaterialtypes",
       "namespace": "uoc_common",
       "xpath": [
@@ -291,30 +291,6 @@
       "fieldname": "user",
       "transforms": {
         "authority": [
-          "personauthorities",
-          "person_shared"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "person/shared",
-      "namespace": "uoc_common",
-      "xpath": [
-        "userGroupList",
-        "userGroup"
-      ],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [
-
-      ],
-      "datacolumn": "userPersonShared",
-      "required": "n"
-    },
-    {
-      "fieldname": "user",
-      "transforms": {
-        "authority": [
           "orgauthorities",
           "organization"
         ]
@@ -338,33 +314,9 @@
     {
       "fieldname": "user",
       "transforms": {
-        "authority": [
-          "orgauthorities",
-          "organization_shared"
-        ]
       },
-      "source_type": "authority",
-      "source_name": "organization/shared",
-      "namespace": "uoc_common",
-      "xpath": [
-        "userGroupList",
-        "userGroup"
-      ],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [
-
-      ],
-      "datacolumn": "userOrganizationShared",
-      "required": "n"
-    },
-    {
-      "fieldname": "user",
-      "transforms": {
-      },
-      "source_type": "authority",
-      "source_name": "person/local; person/shared; organization/local; organization/shared",
+      "source_type": "refname",
+      "source_name": "person/local",
       "namespace": "uoc_common",
       "xpath": [
         "userGroupList",
@@ -404,7 +356,7 @@
       "fieldname": "userUocRole",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "uocuserroles",
       "namespace": "uoc_common",
       "xpath": [
@@ -441,39 +393,15 @@
       "opt_list_values": [
 
       ],
-      "datacolumn": "userInstitutionOrganizationLocal",
-      "required": "n"
-    },
-    {
-      "fieldname": "userInstitution",
-      "transforms": {
-        "authority": [
-          "orgauthorities",
-          "organization_shared"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "organization/shared",
-      "namespace": "uoc_common",
-      "xpath": [
-        "userGroupList",
-        "userGroup"
-      ],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [
-
-      ],
-      "datacolumn": "userInstitutionOrganizationShared",
+      "datacolumn": "userInstitution",
       "required": "n"
     },
     {
       "fieldname": "userInstitution",
       "transforms": {
       },
-      "source_type": "authority",
-      "source_name": "organization/local; organization/shared",
+      "source_type": "refname",
+      "source_name": "organization/local",
       "namespace": "uoc_common",
       "xpath": [
         "userGroupList",
@@ -513,7 +441,7 @@
       "fieldname": "userInstitutionRole",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "uocusertypes",
       "namespace": "uoc_common",
       "xpath": [
@@ -613,7 +541,7 @@
       "fieldname": "occasion",
       "transforms": {
       },
-      "source_type": "authority",
+      "source_type": "refname",
       "source_name": "concept/occasion",
       "namespace": "uoc_common",
       "xpath": [
@@ -675,30 +603,6 @@
       "fieldname": "authorizedBy",
       "transforms": {
         "authority": [
-          "personauthorities",
-          "person_shared"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "person/shared",
-      "namespace": "uoc_common",
-      "xpath": [
-        "authorizationGroupList",
-        "authorizationGroup"
-      ],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [
-
-      ],
-      "datacolumn": "authorizedByPersonShared",
-      "required": "n"
-    },
-    {
-      "fieldname": "authorizedBy",
-      "transforms": {
-        "authority": [
           "orgauthorities",
           "organization"
         ]
@@ -722,33 +626,9 @@
     {
       "fieldname": "authorizedBy",
       "transforms": {
-        "authority": [
-          "orgauthorities",
-          "organization_shared"
-        ]
       },
-      "source_type": "authority",
-      "source_name": "organization/shared",
-      "namespace": "uoc_common",
-      "xpath": [
-        "authorizationGroupList",
-        "authorizationGroup"
-      ],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [
-
-      ],
-      "datacolumn": "authorizedByOrganizationShared",
-      "required": "n"
-    },
-    {
-      "fieldname": "authorizedBy",
-      "transforms": {
-      },
-      "source_type": "authority",
-      "source_name": "person/local; person/shared; organization/local; organization/shared",
+      "source_type": "refname",
+      "source_name": "person/local",
       "namespace": "uoc_common",
       "xpath": [
         "authorizationGroupList",
@@ -808,7 +688,7 @@
       "fieldname": "authorizationStatus",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "uocauthorizationstatuses",
       "namespace": "uoc_common",
       "xpath": [
@@ -991,30 +871,6 @@
       "fieldname": "staffName",
       "transforms": {
         "authority": [
-          "personauthorities",
-          "person_shared"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "person/shared",
-      "namespace": "uoc_common",
-      "xpath": [
-        "staffGroupList",
-        "staffGroup"
-      ],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [
-
-      ],
-      "datacolumn": "staffNamePersonShared",
-      "required": "n"
-    },
-    {
-      "fieldname": "staffName",
-      "transforms": {
-        "authority": [
           "orgauthorities",
           "organization"
         ]
@@ -1038,33 +894,9 @@
     {
       "fieldname": "staffName",
       "transforms": {
-        "authority": [
-          "orgauthorities",
-          "organization_shared"
-        ]
       },
-      "source_type": "authority",
-      "source_name": "organization/shared",
-      "namespace": "uoc_common",
-      "xpath": [
-        "staffGroupList",
-        "staffGroup"
-      ],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [
-
-      ],
-      "datacolumn": "staffNameOrganizationShared",
-      "required": "n"
-    },
-    {
-      "fieldname": "staffName",
-      "transforms": {
-      },
-      "source_type": "authority",
-      "source_name": "person/local; person/shared; organization/local; organization/shared",
+      "source_type": "refname",
+      "source_name": "person/local",
       "namespace": "uoc_common",
       "xpath": [
         "staffGroupList",
@@ -1104,7 +936,7 @@
       "fieldname": "staffRole",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "uocstaffroles",
       "namespace": "uoc_common",
       "xpath": [
@@ -1187,29 +1019,6 @@
       "fieldname": "location",
       "transforms": {
         "authority": [
-          "orgauthorities",
-          "organization_shared"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "organization/shared",
-      "namespace": "uoc_common",
-      "xpath": [
-        "locationList"
-      ],
-      "data_type": "string",
-      "repeats": "y",
-      "in_repeating_group": "n",
-      "opt_list_values": [
-
-      ],
-      "datacolumn": "locationOrganizationShared",
-      "required": "n"
-    },
-    {
-      "fieldname": "location",
-      "transforms": {
-        "authority": [
           "placeauthorities",
           "place"
         ]
@@ -1227,29 +1036,6 @@
 
       ],
       "datacolumn": "locationPlaceLocal",
-      "required": "n"
-    },
-    {
-      "fieldname": "location",
-      "transforms": {
-        "authority": [
-          "placeauthorities",
-          "place_shared"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "place/shared",
-      "namespace": "uoc_common",
-      "xpath": [
-        "locationList"
-      ],
-      "data_type": "string",
-      "repeats": "y",
-      "in_repeating_group": "n",
-      "opt_list_values": [
-
-      ],
-      "datacolumn": "locationPlaceShared",
       "required": "n"
     },
     {
@@ -1279,8 +1065,8 @@
       "fieldname": "location",
       "transforms": {
       },
-      "source_type": "authority",
-      "source_name": "organization/local; organization/shared; place/local; place/shared; location/local",
+      "source_type": "refname",
+      "source_name": "organization/local",
       "namespace": "uoc_common",
       "xpath": [
         "locationList"
@@ -1319,7 +1105,7 @@
       "fieldname": "feeCurrency",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "currency",
       "namespace": "uoc_common",
       "xpath": [

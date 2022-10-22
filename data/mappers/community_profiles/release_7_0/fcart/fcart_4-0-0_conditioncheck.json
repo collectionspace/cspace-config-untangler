@@ -185,8 +185,8 @@
       "fieldname": "conditionChecker",
       "transforms": {
       },
-      "source_type": "authority",
-      "source_name": "person/local; organization/local",
+      "source_type": "refname",
+      "source_name": "person/local",
       "namespace": "conditionchecks_common",
       "xpath": [
 
@@ -865,7 +865,7 @@
       "fieldname": "technicalChange",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "technicalchange",
       "namespace": "conditionchecks_variablemedia",
       "xpath": [
@@ -906,7 +906,7 @@
       "fieldname": "technicalChangeReason",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "technicalchangereason",
       "namespace": "conditionchecks_variablemedia",
       "xpath": [
@@ -987,7 +987,7 @@
       "fieldname": "previousSupport",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "conditionsupport",
       "namespace": "conditionchecks_variablemedia",
       "xpath": [
@@ -1028,7 +1028,7 @@
       "fieldname": "newSupport",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "conditionsupport",
       "namespace": "conditionchecks_variablemedia",
       "xpath": [

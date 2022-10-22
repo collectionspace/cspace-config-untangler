@@ -165,8 +165,8 @@
       "fieldname": "receivedBy",
       "transforms": {
       },
-      "source_type": "authority",
-      "source_name": "person/local; person/ulan; organization/local",
+      "source_type": "refname",
+      "source_name": "person/local",
       "namespace": "intakes_lhmc",
       "xpath": [
 
@@ -226,7 +226,7 @@
       "fieldname": "entryMethod",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "entrymethod",
       "namespace": "intakes_common",
       "xpath": [
@@ -310,8 +310,8 @@
       "fieldname": "currentOwner",
       "transforms": {
       },
-      "source_type": "authority",
-      "source_name": "person/local; organization/local",
+      "source_type": "refname",
+      "source_name": "person/local",
       "namespace": "intakes_common",
       "xpath": [
         "currentOwners"
@@ -377,8 +377,8 @@
       "fieldname": "depositor",
       "transforms": {
       },
-      "source_type": "authority",
-      "source_name": "person/local; organization/local",
+      "source_type": "refname",
+      "source_name": "person/local",
       "namespace": "intakes_common",
       "xpath": [
         "depositorGroupList",
@@ -437,7 +437,7 @@
       "fieldname": "intakeStatus",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "intakestatus",
       "namespace": "intakes_lhmc",
       "xpath": [
@@ -477,7 +477,7 @@
       "fieldname": "approvalGroup",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "deaccessionapprovalgroup",
       "namespace": "intakes_common",
       "xpath": [
@@ -521,7 +521,7 @@
       "fieldname": "approvalIndividual",
       "transforms": {
       },
-      "source_type": "authority",
+      "source_type": "refname",
       "source_name": "person/local",
       "namespace": "intakes_common",
       "xpath": [
@@ -562,7 +562,7 @@
       "fieldname": "approvalStatus",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "deaccessionapprovalstatus",
       "namespace": "intakes_common",
       "xpath": [
@@ -706,8 +706,8 @@
       "fieldname": "valuer",
       "transforms": {
       },
-      "source_type": "authority",
-      "source_name": "person/local; organization/local",
+      "source_type": "refname",
+      "source_name": "person/local",
       "namespace": "intakes_common",
       "xpath": [
 
@@ -771,8 +771,8 @@
       "fieldname": "insurer",
       "transforms": {
       },
-      "source_type": "authority",
-      "source_name": "person/local; organization/local",
+      "source_type": "refname",
+      "source_name": "person/local",
       "namespace": "intakes_common",
       "xpath": [
         "insurers"
@@ -849,7 +849,7 @@
       "fieldname": "premiumCurrency",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "currency",
       "namespace": "intakes_lhmc",
       "xpath": [
@@ -949,7 +949,7 @@
       "fieldname": "insuredValueCurrency",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "currency",
       "namespace": "intakes_lhmc",
       "xpath": [
@@ -1085,8 +1085,8 @@
       "fieldname": "currentLocation",
       "transforms": {
       },
-      "source_type": "authority",
-      "source_name": "location/local; location/offsite; organization/local; place/local",
+      "source_type": "refname",
+      "source_name": "location/local",
       "namespace": "intakes_common",
       "xpath": [
         "currentLocationGroupList",
@@ -1126,7 +1126,7 @@
       "fieldname": "currentLocationFitness",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "conditionfitness",
       "namespace": "intakes_common",
       "xpath": [
@@ -1231,8 +1231,8 @@
       "fieldname": "inventoriedBy",
       "transforms": {
       },
-      "source_type": "authority",
-      "source_name": "person/local; person/ulan",
+      "source_type": "refname",
+      "source_name": "person/local",
       "namespace": "intakes_lhmc",
       "xpath": [
 
@@ -1270,7 +1270,7 @@
       "fieldname": "conditionCheckMethod",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "conditioncheckmethod",
       "namespace": "intakes_common",
       "xpath": [
@@ -1309,7 +1309,7 @@
       "fieldname": "conditionCheckReason",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "conditioncheckreason",
       "namespace": "intakes_common",
       "xpath": [
@@ -1374,8 +1374,8 @@
       "fieldname": "conditionCheckerOrAssessor",
       "transforms": {
       },
-      "source_type": "authority",
-      "source_name": "person/local; organization/local",
+      "source_type": "refname",
+      "source_name": "person/local",
       "namespace": "intakes_common",
       "xpath": [
         "conditionCheckersOrAssessors"
@@ -1451,7 +1451,7 @@
       "fieldname": "intakeCondition",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "condition",
       "namespace": "intakes_lhmc",
       "xpath": [
