@@ -151,29 +151,6 @@
       "fieldname": "conditionChecker",
       "transforms": {
         "authority": [
-          "personauthorities",
-          "person_shared"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "person/shared",
-      "namespace": "conditionchecks_common",
-      "xpath": [
-
-      ],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "n/a",
-      "opt_list_values": [
-
-      ],
-      "datacolumn": "conditionCheckerPersonShared",
-      "required": "n"
-    },
-    {
-      "fieldname": "conditionChecker",
-      "transforms": {
-        "authority": [
           "orgauthorities",
           "organization"
         ]
@@ -196,32 +173,9 @@
     {
       "fieldname": "conditionChecker",
       "transforms": {
-        "authority": [
-          "orgauthorities",
-          "organization_shared"
-        ]
       },
-      "source_type": "authority",
-      "source_name": "organization/shared",
-      "namespace": "conditionchecks_common",
-      "xpath": [
-
-      ],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "n/a",
-      "opt_list_values": [
-
-      ],
-      "datacolumn": "conditionCheckerOrganizationShared",
-      "required": "n"
-    },
-    {
-      "fieldname": "conditionChecker",
-      "transforms": {
-      },
-      "source_type": "authority",
-      "source_name": "person/local; person/shared; organization/local; organization/shared",
+      "source_type": "refname",
+      "source_name": "person/local",
       "namespace": "conditionchecks_common",
       "xpath": [
 

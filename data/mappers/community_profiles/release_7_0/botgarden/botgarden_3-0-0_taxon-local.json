@@ -175,7 +175,7 @@
       "fieldname": "termFlag",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "taxontermflag",
       "namespace": "taxon_common",
       "xpath": [
@@ -239,7 +239,7 @@
       "fieldname": "termLanguage",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "languages",
       "namespace": "taxon_common",
       "xpath": [
@@ -330,8 +330,8 @@
       "fieldname": "termSource",
       "transforms": {
       },
-      "source_type": "authority",
-      "source_name": "citation/local; citation/worldcat",
+      "source_type": "refname",
+      "source_name": "citation/local",
       "namespace": "taxon_common",
       "xpath": [
         "taxonTermGroupList",
@@ -506,8 +506,8 @@
       "fieldname": "taxonAuthor",
       "transforms": {
       },
-      "source_type": "authority",
-      "source_name": "person/local; organization/local",
+      "source_type": "refname",
+      "source_name": "person/local",
       "namespace": "taxon_common",
       "xpath": [
         "taxonAuthorGroupList",
@@ -634,8 +634,8 @@
       "fieldname": "taxonCitation",
       "transforms": {
       },
-      "source_type": "authority",
-      "source_name": "citation/local; citation/worldcat",
+      "source_type": "refname",
+      "source_name": "citation/local",
       "namespace": "taxon_common",
       "xpath": [
         "taxonCitationList"
@@ -713,7 +713,7 @@
       "fieldname": "commonNameLanguage",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "languages",
       "namespace": "taxon_common",
       "xpath": [
@@ -757,7 +757,7 @@
       "fieldname": "commonNameSource",
       "transforms": {
       },
-      "source_type": "authority",
+      "source_type": "refname",
       "source_name": "citation/local",
       "namespace": "taxon_common",
       "xpath": [

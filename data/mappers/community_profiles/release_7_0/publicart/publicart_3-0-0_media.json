@@ -173,29 +173,6 @@
       "fieldname": "contributor",
       "transforms": {
         "authority": [
-          "personauthorities",
-          "person_shared"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "person/shared",
-      "namespace": "media_common",
-      "xpath": [
-
-      ],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "n/a",
-      "opt_list_values": [
-
-      ],
-      "datacolumn": "contributorPersonShared",
-      "required": "n"
-    },
-    {
-      "fieldname": "contributor",
-      "transforms": {
-        "authority": [
           "orgauthorities",
           "organization"
         ]
@@ -218,32 +195,9 @@
     {
       "fieldname": "contributor",
       "transforms": {
-        "authority": [
-          "orgauthorities",
-          "organization_shared"
-        ]
       },
-      "source_type": "authority",
-      "source_name": "organization/shared",
-      "namespace": "media_common",
-      "xpath": [
-
-      ],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "n/a",
-      "opt_list_values": [
-
-      ],
-      "datacolumn": "contributorOrganizationShared",
-      "required": "n"
-    },
-    {
-      "fieldname": "contributor",
-      "transforms": {
-      },
-      "source_type": "authority",
-      "source_name": "person/local; person/shared; organization/local; organization/shared",
+      "source_type": "refname",
+      "source_name": "person/local",
       "namespace": "media_common",
       "xpath": [
 
@@ -284,29 +238,6 @@
       "fieldname": "creator",
       "transforms": {
         "authority": [
-          "personauthorities",
-          "person_shared"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "person/shared",
-      "namespace": "media_common",
-      "xpath": [
-
-      ],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "n/a",
-      "opt_list_values": [
-
-      ],
-      "datacolumn": "creatorPersonShared",
-      "required": "n"
-    },
-    {
-      "fieldname": "creator",
-      "transforms": {
-        "authority": [
           "orgauthorities",
           "organization"
         ]
@@ -329,32 +260,9 @@
     {
       "fieldname": "creator",
       "transforms": {
-        "authority": [
-          "orgauthorities",
-          "organization_shared"
-        ]
       },
-      "source_type": "authority",
-      "source_name": "organization/shared",
-      "namespace": "media_common",
-      "xpath": [
-
-      ],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "n/a",
-      "opt_list_values": [
-
-      ],
-      "datacolumn": "creatorOrganizationShared",
-      "required": "n"
-    },
-    {
-      "fieldname": "creator",
-      "transforms": {
-      },
-      "source_type": "authority",
-      "source_name": "person/local; person/shared; organization/local; organization/shared",
+      "source_type": "refname",
+      "source_name": "person/local",
       "namespace": "media_common",
       "xpath": [
 
@@ -434,7 +342,7 @@
       "fieldname": "publishTo",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "publishto",
       "namespace": "media_publicart",
       "xpath": [
@@ -514,29 +422,6 @@
       "fieldname": "publicartRightsHolder",
       "transforms": {
         "authority": [
-          "personauthorities",
-          "person_shared"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "person/shared",
-      "namespace": "media_publicart",
-      "xpath": [
-        "publicartRightsHolders"
-      ],
-      "data_type": "string",
-      "repeats": "y",
-      "in_repeating_group": "n",
-      "opt_list_values": [
-
-      ],
-      "datacolumn": "publicartRightsHolderPersonShared",
-      "required": "n"
-    },
-    {
-      "fieldname": "publicartRightsHolder",
-      "transforms": {
-        "authority": [
           "orgauthorities",
           "organization"
         ]
@@ -559,32 +444,9 @@
     {
       "fieldname": "publicartRightsHolder",
       "transforms": {
-        "authority": [
-          "orgauthorities",
-          "organization_shared"
-        ]
       },
-      "source_type": "authority",
-      "source_name": "organization/shared",
-      "namespace": "media_publicart",
-      "xpath": [
-        "publicartRightsHolders"
-      ],
-      "data_type": "string",
-      "repeats": "y",
-      "in_repeating_group": "n",
-      "opt_list_values": [
-
-      ],
-      "datacolumn": "publicartRightsHolderOrganizationShared",
-      "required": "n"
-    },
-    {
-      "fieldname": "publicartRightsHolder",
-      "transforms": {
-      },
-      "source_type": "authority",
-      "source_name": "person/local; person/shared; organization/local; organization/shared",
+      "source_type": "refname",
+      "source_name": "person/local",
       "namespace": "media_publicart",
       "xpath": [
         "publicartRightsHolders"

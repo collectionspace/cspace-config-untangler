@@ -115,8 +115,8 @@
       "fieldname": "normalLocation",
       "transforms": {
       },
-      "source_type": "authority",
-      "source_name": "location/local; location/offsite; organization/local",
+      "source_type": "refname",
+      "source_name": "location/local",
       "namespace": "movements_common",
       "xpath": [
 
@@ -203,8 +203,8 @@
       "fieldname": "currentLocation",
       "transforms": {
       },
-      "source_type": "authority",
-      "source_name": "location/local; location/offsite; organization/local",
+      "source_type": "refname",
+      "source_name": "location/local",
       "namespace": "movements_common",
       "xpath": [
 
@@ -389,7 +389,7 @@
       "fieldname": "movementContact",
       "transforms": {
       },
-      "source_type": "authority",
+      "source_type": "refname",
       "source_name": "person/local",
       "namespace": "movements_common",
       "xpath": [
@@ -532,7 +532,7 @@
       "fieldname": "inventoryContact",
       "transforms": {
       },
-      "source_type": "authority",
+      "source_type": "refname",
       "source_name": "person/local",
       "namespace": "movements_common",
       "xpath": [

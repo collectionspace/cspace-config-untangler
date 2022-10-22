@@ -70,7 +70,7 @@
       "fieldname": "insuranceIndemnityType",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "insurancetype",
       "namespace": "insurances_common",
       "xpath": [
@@ -112,29 +112,6 @@
       "fieldname": "insurerIndemnifier",
       "transforms": {
         "authority": [
-          "personauthorities",
-          "person_shared"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "person/shared",
-      "namespace": "insurances_common",
-      "xpath": [
-
-      ],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "n/a",
-      "opt_list_values": [
-
-      ],
-      "datacolumn": "insurerIndemnifierPersonShared",
-      "required": "n"
-    },
-    {
-      "fieldname": "insurerIndemnifier",
-      "transforms": {
-        "authority": [
           "orgauthorities",
           "organization"
         ]
@@ -157,32 +134,9 @@
     {
       "fieldname": "insurerIndemnifier",
       "transforms": {
-        "authority": [
-          "orgauthorities",
-          "organization_shared"
-        ]
       },
-      "source_type": "authority",
-      "source_name": "organization/shared",
-      "namespace": "insurances_common",
-      "xpath": [
-
-      ],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "n/a",
-      "opt_list_values": [
-
-      ],
-      "datacolumn": "insurerIndemnifierOrganizationShared",
-      "required": "n"
-    },
-    {
-      "fieldname": "insurerIndemnifier",
-      "transforms": {
-      },
-      "source_type": "authority",
-      "source_name": "person/local; person/shared; organization/local; organization/shared",
+      "source_type": "refname",
+      "source_name": "person/local",
       "namespace": "insurances_common",
       "xpath": [
 
@@ -239,7 +193,7 @@
       "fieldname": "insuranceIndemnityCurrency",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "currency",
       "namespace": "insurances_common",
       "xpath": [
@@ -297,7 +251,7 @@
       "fieldname": "minimumLiabilityCurrency",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "currency",
       "namespace": "insurances_common",
       "xpath": [
@@ -351,14 +305,37 @@
       "opt_list_values": [
 
       ],
-      "datacolumn": "insuranceIndemnityAuthorizer",
+      "datacolumn": "insuranceIndemnityAuthorizerPersonLocal",
+      "required": "n"
+    },
+    {
+      "fieldname": "insuranceIndemnityAuthorizer",
+      "transforms": {
+        "authority": [
+          "personauthorities",
+          "person_shared"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "person/shared/person/ulan",
+      "namespace": "insurances_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "insuranceIndemnityAuthorizerPersonShared",
       "required": "n"
     },
     {
       "fieldname": "insuranceIndemnityAuthorizer",
       "transforms": {
       },
-      "source_type": "authority",
+      "source_type": "refname",
       "source_name": "person/local",
       "namespace": "insurances_common",
       "xpath": [
@@ -417,7 +394,7 @@
       "fieldname": "insuranceIndemnityStatus",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "insurancestatus",
       "namespace": "insurances_common",
       "xpath": [
@@ -520,30 +497,6 @@
       "fieldname": "insuranceIndemnityQuoteProvider",
       "transforms": {
         "authority": [
-          "personauthorities",
-          "person_shared"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "person/shared",
-      "namespace": "insurances_common",
-      "xpath": [
-        "quoteProviderGroupList",
-        "quoteProviderGroup"
-      ],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [
-
-      ],
-      "datacolumn": "insuranceIndemnityQuoteProviderPersonShared",
-      "required": "n"
-    },
-    {
-      "fieldname": "insuranceIndemnityQuoteProvider",
-      "transforms": {
-        "authority": [
           "orgauthorities",
           "organization"
         ]
@@ -567,33 +520,9 @@
     {
       "fieldname": "insuranceIndemnityQuoteProvider",
       "transforms": {
-        "authority": [
-          "orgauthorities",
-          "organization_shared"
-        ]
       },
-      "source_type": "authority",
-      "source_name": "organization/shared",
-      "namespace": "insurances_common",
-      "xpath": [
-        "quoteProviderGroupList",
-        "quoteProviderGroup"
-      ],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [
-
-      ],
-      "datacolumn": "insuranceIndemnityQuoteProviderOrganizationShared",
-      "required": "n"
-    },
-    {
-      "fieldname": "insuranceIndemnityQuoteProvider",
-      "transforms": {
-      },
-      "source_type": "authority",
-      "source_name": "person/local; person/shared; organization/local; organization/shared",
+      "source_type": "refname",
+      "source_name": "person/local",
       "namespace": "insurances_common",
       "xpath": [
         "quoteProviderGroupList",
@@ -633,7 +562,7 @@
       "fieldname": "insuranceIndemnityQuoteCurrency",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "currency",
       "namespace": "insurances_common",
       "xpath": [

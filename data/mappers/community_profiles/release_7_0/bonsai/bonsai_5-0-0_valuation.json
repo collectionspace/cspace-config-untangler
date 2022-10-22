@@ -67,7 +67,7 @@
       "fieldname": "valueCurrency",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "currency",
       "namespace": "valuationcontrols_common",
       "xpath": [
@@ -191,8 +191,8 @@
       "fieldname": "valueSource",
       "transforms": {
       },
-      "source_type": "authority",
-      "source_name": "person/local; organization/local",
+      "source_type": "refname",
+      "source_name": "person/local",
       "namespace": "valuationcontrols_common",
       "xpath": [
 

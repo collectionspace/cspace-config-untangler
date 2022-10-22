@@ -103,7 +103,7 @@
       "fieldname": "publishTo",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "publishto",
       "namespace": "media_common",
       "xpath": [
@@ -353,8 +353,8 @@
       "fieldname": "measuredBy",
       "transforms": {
       },
-      "source_type": "authority",
-      "source_name": "person/local; organization/local",
+      "source_type": "refname",
+      "source_name": "person/local",
       "namespace": "media_common",
       "xpath": [
         "measuredPartGroupList",
@@ -565,8 +565,8 @@
       "fieldname": "contributor",
       "transforms": {
       },
-      "source_type": "authority",
-      "source_name": "person/local; organization/local",
+      "source_type": "refname",
+      "source_name": "person/local",
       "namespace": "media_common",
       "xpath": [
 
@@ -630,8 +630,8 @@
       "fieldname": "creator",
       "transforms": {
       },
-      "source_type": "authority",
-      "source_name": "person/local; organization/local",
+      "source_type": "refname",
+      "source_name": "person/local",
       "namespace": "media_common",
       "xpath": [
 
@@ -669,7 +669,7 @@
       "fieldname": "language",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "languages",
       "namespace": "media_common",
       "xpath": [
@@ -734,8 +734,8 @@
       "fieldname": "publisher",
       "transforms": {
       },
-      "source_type": "authority",
-      "source_name": "person/local; organization/local",
+      "source_type": "refname",
+      "source_name": "person/local",
       "namespace": "media_common",
       "xpath": [
 
@@ -936,8 +936,8 @@
       "fieldname": "rightsHolder",
       "transforms": {
       },
-      "source_type": "authority",
-      "source_name": "person/local; organization/local",
+      "source_type": "refname",
+      "source_name": "person/local",
       "namespace": "media_common",
       "xpath": [
 

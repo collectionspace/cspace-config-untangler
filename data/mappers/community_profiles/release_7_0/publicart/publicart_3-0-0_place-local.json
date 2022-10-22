@@ -188,7 +188,7 @@
       "fieldname": "termFlag",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "placetermflag",
       "namespace": "places_common",
       "xpath": [
@@ -251,7 +251,7 @@
       "fieldname": "termLanguage",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "languages",
       "namespace": "places_common",
       "xpath": [
@@ -402,8 +402,8 @@
       "fieldname": "termSource",
       "transforms": {
       },
-      "source_type": "authority",
-      "source_name": "citation/local; citation/worldcat",
+      "source_type": "refname",
+      "source_name": "citation/local",
       "namespace": "places_common",
       "xpath": [
         "placeTermGroupList",
@@ -502,7 +502,7 @@
       "fieldname": "placementType",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "placementtypes",
       "namespace": "places_publicart",
       "xpath": [
@@ -541,7 +541,7 @@
       "fieldname": "publicArtPlaceType",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "placetypes",
       "namespace": "places_publicart",
       "xpath": [
@@ -605,30 +605,6 @@
       "fieldname": "owner",
       "transforms": {
         "authority": [
-          "personauthorities",
-          "person_shared"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "person/shared",
-      "namespace": "places_publicart",
-      "xpath": [
-        "publicartPlaceOwnerGroupList",
-        "publicartPlaceOwnerGroup"
-      ],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [
-
-      ],
-      "datacolumn": "ownerPersonShared",
-      "required": "n"
-    },
-    {
-      "fieldname": "owner",
-      "transforms": {
-        "authority": [
           "orgauthorities",
           "organization"
         ]
@@ -652,33 +628,9 @@
     {
       "fieldname": "owner",
       "transforms": {
-        "authority": [
-          "orgauthorities",
-          "organization_shared"
-        ]
       },
-      "source_type": "authority",
-      "source_name": "organization/shared",
-      "namespace": "places_publicart",
-      "xpath": [
-        "publicartPlaceOwnerGroupList",
-        "publicartPlaceOwnerGroup"
-      ],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [
-
-      ],
-      "datacolumn": "ownerOrganizationShared",
-      "required": "n"
-    },
-    {
-      "fieldname": "owner",
-      "transforms": {
-      },
-      "source_type": "authority",
-      "source_name": "person/local; person/shared; organization/local; organization/shared",
+      "source_type": "refname",
+      "source_name": "person/local",
       "namespace": "places_publicart",
       "xpath": [
         "publicartPlaceOwnerGroupList",
@@ -834,39 +786,15 @@
       "opt_list_values": [
 
       ],
-      "datacolumn": "addressMunicipalityPlaceLocal",
-      "required": "n"
-    },
-    {
-      "fieldname": "addressMunicipality",
-      "transforms": {
-        "authority": [
-          "placeauthorities",
-          "place_shared"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "place/shared",
-      "namespace": "places_common",
-      "xpath": [
-        "addrGroupList",
-        "addrGroup"
-      ],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [
-
-      ],
-      "datacolumn": "addressMunicipalityPlaceShared",
+      "datacolumn": "addressMunicipality",
       "required": "n"
     },
     {
       "fieldname": "addressMunicipality",
       "transforms": {
       },
-      "source_type": "authority",
-      "source_name": "place/local; place/shared",
+      "source_type": "refname",
+      "source_name": "place/local",
       "namespace": "places_common",
       "xpath": [
         "addrGroupList",
@@ -902,39 +830,15 @@
       "opt_list_values": [
 
       ],
-      "datacolumn": "addressCountyPlaceLocal",
-      "required": "n"
-    },
-    {
-      "fieldname": "addressCounty",
-      "transforms": {
-        "authority": [
-          "placeauthorities",
-          "place_shared"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "place/shared",
-      "namespace": "places_common",
-      "xpath": [
-        "addrGroupList",
-        "addrGroup"
-      ],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [
-
-      ],
-      "datacolumn": "addressCountyPlaceShared",
+      "datacolumn": "addressCounty",
       "required": "n"
     },
     {
       "fieldname": "addressCounty",
       "transforms": {
       },
-      "source_type": "authority",
-      "source_name": "place/local; place/shared",
+      "source_type": "refname",
+      "source_name": "place/local",
       "namespace": "places_common",
       "xpath": [
         "addrGroupList",
@@ -970,39 +874,15 @@
       "opt_list_values": [
 
       ],
-      "datacolumn": "addressStateOrProvincePlaceLocal",
-      "required": "n"
-    },
-    {
-      "fieldname": "addressStateOrProvince",
-      "transforms": {
-        "authority": [
-          "placeauthorities",
-          "place_shared"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "place/shared",
-      "namespace": "places_common",
-      "xpath": [
-        "addrGroupList",
-        "addrGroup"
-      ],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [
-
-      ],
-      "datacolumn": "addressStateOrProvincePlaceShared",
+      "datacolumn": "addressStateOrProvince",
       "required": "n"
     },
     {
       "fieldname": "addressStateOrProvince",
       "transforms": {
       },
-      "source_type": "authority",
-      "source_name": "place/local; place/shared",
+      "source_type": "refname",
+      "source_name": "place/local",
       "namespace": "places_common",
       "xpath": [
         "addrGroupList",
@@ -1058,39 +938,15 @@
       "opt_list_values": [
 
       ],
-      "datacolumn": "addressCountryPlaceLocal",
-      "required": "n"
-    },
-    {
-      "fieldname": "addressCountry",
-      "transforms": {
-        "authority": [
-          "placeauthorities",
-          "place_shared"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "place/shared",
-      "namespace": "places_common",
-      "xpath": [
-        "addrGroupList",
-        "addrGroup"
-      ],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [
-
-      ],
-      "datacolumn": "addressCountryPlaceShared",
+      "datacolumn": "addressCountry",
       "required": "n"
     },
     {
       "fieldname": "addressCountry",
       "transforms": {
       },
-      "source_type": "authority",
-      "source_name": "place/local; place/shared",
+      "source_type": "refname",
+      "source_name": "place/local",
       "namespace": "places_common",
       "xpath": [
         "addrGroupList",
@@ -1130,7 +986,7 @@
       "fieldname": "addressType",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "addresstype",
       "namespace": "places_common",
       "xpath": [
@@ -1357,30 +1213,6 @@
       "fieldname": "geoReferencedBy",
       "transforms": {
         "authority": [
-          "personauthorities",
-          "person_shared"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "person/shared",
-      "namespace": "places_common",
-      "xpath": [
-        "placeGeoRefGroupList",
-        "placeGeoRefGroup"
-      ],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [
-
-      ],
-      "datacolumn": "geoReferencedByPersonShared",
-      "required": "n"
-    },
-    {
-      "fieldname": "geoReferencedBy",
-      "transforms": {
-        "authority": [
           "orgauthorities",
           "organization"
         ]
@@ -1404,33 +1236,9 @@
     {
       "fieldname": "geoReferencedBy",
       "transforms": {
-        "authority": [
-          "orgauthorities",
-          "organization_shared"
-        ]
       },
-      "source_type": "authority",
-      "source_name": "organization/shared",
-      "namespace": "places_common",
-      "xpath": [
-        "placeGeoRefGroupList",
-        "placeGeoRefGroup"
-      ],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [
-
-      ],
-      "datacolumn": "geoReferencedByOrganizationShared",
-      "required": "n"
-    },
-    {
-      "fieldname": "geoReferencedBy",
-      "transforms": {
-      },
-      "source_type": "authority",
-      "source_name": "person/local; person/shared; organization/local; organization/shared",
+      "source_type": "refname",
+      "source_name": "person/local",
       "namespace": "places_common",
       "xpath": [
         "placeGeoRefGroupList",

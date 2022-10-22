@@ -282,7 +282,7 @@
       "fieldname": "namedCollection",
       "transforms": {
       },
-      "source_type": "authority",
+      "source_type": "refname",
       "source_name": "work/local",
       "namespace": "collectionobjects_common",
       "xpath": [
@@ -325,7 +325,7 @@
       "fieldname": "determinationTaxon",
       "transforms": {
       },
-      "source_type": "authority",
+      "source_type": "refname",
       "source_name": "taxon/local",
       "namespace": "collectionobjects_naturalhistory_extension",
       "xpath": [
@@ -366,7 +366,7 @@
       "fieldname": "determinationQualifier",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "taxonqualifier",
       "namespace": "collectionobjects_naturalhistory_extension",
       "xpath": [
@@ -410,7 +410,7 @@
       "fieldname": "determinationBy",
       "transforms": {
       },
-      "source_type": "authority",
+      "source_type": "refname",
       "source_name": "person/local",
       "namespace": "collectionobjects_naturalhistory_extension",
       "xpath": [
@@ -474,7 +474,7 @@
       "fieldname": "determinationInstitution",
       "transforms": {
       },
-      "source_type": "authority",
+      "source_type": "refname",
       "source_name": "organization/local",
       "namespace": "collectionobjects_naturalhistory_extension",
       "xpath": [
@@ -515,7 +515,7 @@
       "fieldname": "determinationKind",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "taxonkind",
       "namespace": "collectionobjects_naturalhistory_extension",
       "xpath": [
@@ -636,7 +636,7 @@
       "fieldname": "localNameLanguage",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "languages",
       "namespace": "collectionobjects_herbarium",
       "xpath": [
@@ -704,8 +704,8 @@
       "fieldname": "herbHybridParent",
       "transforms": {
       },
-      "source_type": "authority",
-      "source_name": "taxon/local; taxon/common",
+      "source_type": "refname",
+      "source_name": "taxon/local",
       "namespace": "collectionobjects_herbarium",
       "xpath": [
         "herbHybridParentGroupList",
@@ -745,7 +745,7 @@
       "fieldname": "herbHybridParentQualifier",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "hybridparentqualifier",
       "namespace": "collectionobjects_herbarium",
       "xpath": [
@@ -807,7 +807,7 @@
       "fieldname": "labelHeader",
       "transforms": {
       },
-      "source_type": "authority",
+      "source_type": "refname",
       "source_name": "concept/labeltext",
       "namespace": "collectionobjects_herbarium",
       "xpath": [
@@ -849,7 +849,7 @@
       "fieldname": "labelFooter",
       "transforms": {
       },
-      "source_type": "authority",
+      "source_type": "refname",
       "source_name": "concept/labeltext",
       "namespace": "collectionobjects_herbarium",
       "xpath": [
@@ -945,7 +945,7 @@
       "fieldname": "publishTo",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "publishto",
       "namespace": "collectionobjects_common",
       "xpath": [
@@ -1047,7 +1047,7 @@
       "fieldname": "inventoryStatus",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "inventorystatus",
       "namespace": "collectionobjects_common",
       "xpath": [
@@ -1087,7 +1087,7 @@
       "fieldname": "annotationType",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "annotationtype",
       "namespace": "collectionobjects_annotation",
       "xpath": [
@@ -1171,7 +1171,7 @@
       "fieldname": "annotationAuthor",
       "transforms": {
       },
-      "source_type": "authority",
+      "source_type": "refname",
       "source_name": "person/local",
       "namespace": "collectionobjects_annotation",
       "xpath": [
@@ -1212,7 +1212,7 @@
       "fieldname": "herbTypeSpecimenKind",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "typespecimenkind",
       "namespace": "collectionobjects_herbarium",
       "xpath": [
@@ -1256,7 +1256,7 @@
       "fieldname": "herbTypeSpecimenAssertionBy",
       "transforms": {
       },
-      "source_type": "authority",
+      "source_type": "refname",
       "source_name": "organization/local",
       "namespace": "collectionobjects_herbarium",
       "xpath": [
@@ -1364,8 +1364,8 @@
       "fieldname": "herbTypeSpecimenBasionym",
       "transforms": {
       },
-      "source_type": "authority",
-      "source_name": "taxon/local; taxon/common",
+      "source_type": "refname",
+      "source_name": "taxon/local",
       "namespace": "collectionobjects_herbarium",
       "xpath": [
         "herbTypeSpecimenGroupList",
@@ -1444,7 +1444,7 @@
       "fieldname": "phase",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "botanicalphase",
       "namespace": "collectionobjects_common",
       "xpath": [
@@ -1483,7 +1483,7 @@
       "fieldname": "form",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "herbariumform",
       "namespace": "collectionobjects_common",
       "xpath": [
@@ -1685,7 +1685,7 @@
       "fieldname": "assocConcept",
       "transforms": {
       },
-      "source_type": "authority",
+      "source_type": "refname",
       "source_name": "concept/associated",
       "namespace": "collectionobjects_common",
       "xpath": [
@@ -1829,7 +1829,7 @@
       "fieldname": "assocOrganization",
       "transforms": {
       },
-      "source_type": "authority",
+      "source_type": "refname",
       "source_name": "organization/local",
       "namespace": "collectionobjects_common",
       "xpath": [
@@ -1973,7 +1973,7 @@
       "fieldname": "assocPerson",
       "transforms": {
       },
-      "source_type": "authority",
+      "source_type": "refname",
       "source_name": "person/local",
       "namespace": "collectionobjects_common",
       "xpath": [
@@ -2154,7 +2154,7 @@
       "fieldname": "assocEventOrganization",
       "transforms": {
       },
-      "source_type": "authority",
+      "source_type": "refname",
       "source_name": "organization/local",
       "namespace": "collectionobjects_common",
       "xpath": [
@@ -2215,7 +2215,7 @@
       "fieldname": "assocEventPerson",
       "transforms": {
       },
-      "source_type": "authority",
+      "source_type": "refname",
       "source_name": "person/local",
       "namespace": "collectionobjects_common",
       "xpath": [
@@ -2437,8 +2437,8 @@
       "fieldname": "owner",
       "transforms": {
       },
-      "source_type": "authority",
-      "source_name": "person/local; organization/local",
+      "source_type": "refname",
+      "source_name": "person/local",
       "namespace": "collectionobjects_common",
       "xpath": [
         "owners"
@@ -2599,7 +2599,7 @@
       "fieldname": "ownershipExchangePriceCurrency",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "currency",
       "namespace": "collectionobjects_common",
       "xpath": [
@@ -2685,8 +2685,8 @@
       "fieldname": "reference",
       "transforms": {
       },
-      "source_type": "authority",
-      "source_name": "citation/local; citation/worldcat",
+      "source_type": "refname",
+      "source_name": "citation/local",
       "namespace": "collectionobjects_common",
       "xpath": [
         "referenceGroupList",
@@ -2790,8 +2790,8 @@
       "fieldname": "fieldCollector",
       "transforms": {
       },
-      "source_type": "authority",
-      "source_name": "person/local; organization/local",
+      "source_type": "refname",
+      "source_name": "person/local",
       "namespace": "collectionobjects_common",
       "xpath": [
         "fieldCollectors"
@@ -2848,7 +2848,7 @@
       "fieldname": "fieldCollectionMethod",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "collectionmethod",
       "namespace": "collectionobjects_common",
       "xpath": [
@@ -2934,8 +2934,8 @@
       "fieldname": "herbAssocTaxon",
       "transforms": {
       },
-      "source_type": "authority",
-      "source_name": "taxon/local; taxon/common",
+      "source_type": "refname",
+      "source_name": "taxon/local",
       "namespace": "collectionobjects_herbarium",
       "xpath": [
         "herbAssociatedTaxaGroupList",
@@ -2995,7 +2995,7 @@
       "fieldname": "herbAssocTaxonInteraction",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "assoctaxoninteraction",
       "namespace": "collectionobjects_herbarium",
       "xpath": [
@@ -3059,7 +3059,7 @@
       "fieldname": "herbCollectionPlace",
       "transforms": {
       },
-      "source_type": "authority",
+      "source_type": "refname",
       "source_name": "place/local",
       "namespace": "collectionobjects_herbarium",
       "xpath": [
@@ -3120,7 +3120,7 @@
       "fieldname": "titleLanguage",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "languages",
       "namespace": "collectionobjects_common",
       "xpath": [
@@ -3210,7 +3210,7 @@
       "fieldname": "titleTranslationLanguage",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "languages",
       "namespace": "collectionobjects_common",
       "xpath": [
@@ -3360,7 +3360,7 @@
       "fieldname": "objectNameLanguage",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "languages",
       "namespace": "collectionobjects_common",
       "xpath": [
@@ -3533,8 +3533,8 @@
       "fieldname": "measuredBy",
       "transforms": {
       },
-      "source_type": "authority",
-      "source_name": "person/local; organization/local",
+      "source_type": "refname",
+      "source_name": "person/local",
       "namespace": "collectionobjects_common",
       "xpath": [
         "measuredPartGroupList",
@@ -3742,7 +3742,7 @@
       "fieldname": "objectProductionPerson",
       "transforms": {
       },
-      "source_type": "authority",
+      "source_type": "refname",
       "source_name": "person/local",
       "namespace": "collectionobjects_common",
       "xpath": [
@@ -3806,7 +3806,7 @@
       "fieldname": "objectProductionOrganization",
       "transforms": {
       },
-      "source_type": "authority",
+      "source_type": "refname",
       "source_name": "organization/local",
       "namespace": "collectionobjects_common",
       "xpath": [
@@ -4189,7 +4189,7 @@
       "fieldname": "contentLanguage",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "languages",
       "namespace": "collectionobjects_common",
       "xpath": [
@@ -4273,8 +4273,8 @@
       "fieldname": "contentConcept",
       "transforms": {
       },
-      "source_type": "authority",
-      "source_name": "concept/associated; concept/material",
+      "source_type": "refname",
+      "source_name": "concept/associated",
       "namespace": "collectionobjects_common",
       "xpath": [
         "contentConcepts"
@@ -4447,8 +4447,8 @@
       "fieldname": "contentPerson",
       "transforms": {
       },
-      "source_type": "authority",
-      "source_name": "person/local; person/ulan",
+      "source_type": "refname",
+      "source_name": "person/local",
       "namespace": "collectionobjects_common",
       "xpath": [
         "contentPersons"
@@ -4556,8 +4556,8 @@
       "fieldname": "contentOrganization",
       "transforms": {
       },
-      "source_type": "authority",
-      "source_name": "organization/local; organization/ulan",
+      "source_type": "refname",
+      "source_name": "organization/local",
       "namespace": "collectionobjects_common",
       "xpath": [
         "contentOrganizations"

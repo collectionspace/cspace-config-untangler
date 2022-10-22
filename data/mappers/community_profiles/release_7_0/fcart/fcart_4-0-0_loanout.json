@@ -94,7 +94,7 @@
       "fieldname": "lendersAuthorizer",
       "transforms": {
       },
-      "source_type": "authority",
+      "source_type": "refname",
       "source_name": "person/local",
       "namespace": "loansout_common",
       "xpath": [
@@ -136,7 +136,7 @@
       "fieldname": "lendersContact",
       "transforms": {
       },
-      "source_type": "authority",
+      "source_type": "refname",
       "source_name": "person/local",
       "namespace": "loansout_common",
       "xpath": [
@@ -220,8 +220,8 @@
       "fieldname": "borrower",
       "transforms": {
       },
-      "source_type": "authority",
-      "source_name": "person/local; organization/local",
+      "source_type": "refname",
+      "source_name": "person/local",
       "namespace": "loansout_common",
       "xpath": [
 
@@ -262,7 +262,7 @@
       "fieldname": "borrowersContact",
       "transforms": {
       },
-      "source_type": "authority",
+      "source_type": "refname",
       "source_name": "person/local",
       "namespace": "loansout_common",
       "xpath": [
@@ -304,7 +304,7 @@
       "fieldname": "borrowersAuthorizer",
       "transforms": {
       },
-      "source_type": "authority",
+      "source_type": "refname",
       "source_name": "person/local",
       "namespace": "loansout_common",
       "xpath": [
@@ -401,7 +401,7 @@
       "fieldname": "loanGroup",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "deaccessionapprovalgroup",
       "namespace": "loansout_common",
       "xpath": [
@@ -445,7 +445,7 @@
       "fieldname": "loanIndividual",
       "transforms": {
       },
-      "source_type": "authority",
+      "source_type": "refname",
       "source_name": "person/local",
       "namespace": "loansout_common",
       "xpath": [
@@ -486,7 +486,7 @@
       "fieldname": "loanStatus",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "loanoutstatus",
       "namespace": "loansout_common",
       "xpath": [

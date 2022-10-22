@@ -65,7 +65,7 @@
       "fieldname": "family",
       "transforms": {
       },
-      "source_type": "authority",
+      "source_type": "refname",
       "source_name": "taxon/local",
       "namespace": "pottags_common",
       "xpath": [
@@ -145,7 +145,7 @@
       "fieldname": "taxonName",
       "transforms": {
       },
-      "source_type": "authority",
+      "source_type": "refname",
       "source_name": "taxon/local",
       "namespace": "pottags_common",
       "xpath": [

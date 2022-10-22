@@ -62,38 +62,15 @@
       "opt_list_values": [
 
       ],
-      "datacolumn": "lendersAuthorizerPersonLocal",
-      "required": "n"
-    },
-    {
-      "fieldname": "lendersAuthorizer",
-      "transforms": {
-        "authority": [
-          "personauthorities",
-          "person_shared"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "person/shared",
-      "namespace": "loansout_common",
-      "xpath": [
-
-      ],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "n/a",
-      "opt_list_values": [
-
-      ],
-      "datacolumn": "lendersAuthorizerPersonShared",
+      "datacolumn": "lendersAuthorizer",
       "required": "n"
     },
     {
       "fieldname": "lendersAuthorizer",
       "transforms": {
       },
-      "source_type": "authority",
-      "source_name": "person/local; person/shared",
+      "source_type": "refname",
+      "source_name": "person/local",
       "namespace": "loansout_common",
       "xpath": [
 
@@ -178,29 +155,6 @@
       "fieldname": "borrower",
       "transforms": {
         "authority": [
-          "personauthorities",
-          "person_shared"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "person/shared",
-      "namespace": "loansout_common",
-      "xpath": [
-
-      ],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "n/a",
-      "opt_list_values": [
-
-      ],
-      "datacolumn": "borrowerPersonShared",
-      "required": "n"
-    },
-    {
-      "fieldname": "borrower",
-      "transforms": {
-        "authority": [
           "orgauthorities",
           "organization"
         ]
@@ -223,32 +177,9 @@
     {
       "fieldname": "borrower",
       "transforms": {
-        "authority": [
-          "orgauthorities",
-          "organization_shared"
-        ]
       },
-      "source_type": "authority",
-      "source_name": "organization/shared",
-      "namespace": "loansout_common",
-      "xpath": [
-
-      ],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "n/a",
-      "opt_list_values": [
-
-      ],
-      "datacolumn": "borrowerOrganizationShared",
-      "required": "n"
-    },
-    {
-      "fieldname": "borrower",
-      "transforms": {
-      },
-      "source_type": "authority",
-      "source_name": "person/local; person/shared; organization/local; organization/shared",
+      "source_type": "refname",
+      "source_name": "person/local",
       "namespace": "loansout_common",
       "xpath": [
 
@@ -306,7 +237,7 @@
       "fieldname": "loanGroup",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "deaccessionapprovalgroup",
       "namespace": "loansout_common",
       "xpath": [
@@ -343,39 +274,15 @@
       "opt_list_values": [
 
       ],
-      "datacolumn": "loanIndividualPersonLocal",
-      "required": "n"
-    },
-    {
-      "fieldname": "loanIndividual",
-      "transforms": {
-        "authority": [
-          "personauthorities",
-          "person_shared"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "person/shared",
-      "namespace": "loansout_common",
-      "xpath": [
-        "loanStatusGroupList",
-        "loanStatusGroup"
-      ],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [
-
-      ],
-      "datacolumn": "loanIndividualPersonShared",
+      "datacolumn": "loanIndividual",
       "required": "n"
     },
     {
       "fieldname": "loanIndividual",
       "transforms": {
       },
-      "source_type": "authority",
-      "source_name": "person/local; person/shared",
+      "source_type": "refname",
+      "source_name": "person/local",
       "namespace": "loansout_common",
       "xpath": [
         "loanStatusGroupList",
@@ -415,7 +322,7 @@
       "fieldname": "loanStatus",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "loanoutstatus",
       "namespace": "loansout_common",
       "xpath": [

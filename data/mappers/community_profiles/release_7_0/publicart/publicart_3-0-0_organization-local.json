@@ -199,7 +199,7 @@
       "fieldname": "termFlag",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "orgtermflag",
       "namespace": "organizations_common",
       "xpath": [
@@ -240,7 +240,7 @@
       "fieldname": "termLanguage",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "languages",
       "namespace": "organizations_common",
       "xpath": [
@@ -371,8 +371,8 @@
       "fieldname": "termSource",
       "transforms": {
       },
-      "source_type": "authority",
-      "source_name": "citation/local; citation/worldcat",
+      "source_type": "refname",
+      "source_name": "citation/local",
       "namespace": "organizations_common",
       "xpath": [
         "orgTermGroupList",
@@ -471,7 +471,7 @@
       "fieldname": "organizationRecordType",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "organizationtype",
       "namespace": "organizations_common",
       "xpath": [
@@ -510,7 +510,7 @@
       "fieldname": "placementType",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "placementtypes",
       "namespace": "organizations_publicart",
       "xpath": [
@@ -564,38 +564,15 @@
       "opt_list_values": [
 
       ],
-      "datacolumn": "foundingPlacePlaceLocal",
-      "required": "n"
-    },
-    {
-      "fieldname": "foundingPlace",
-      "transforms": {
-        "authority": [
-          "placeauthorities",
-          "place_shared"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "place/shared",
-      "namespace": "organizations_common",
-      "xpath": [
-
-      ],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "n/a",
-      "opt_list_values": [
-
-      ],
-      "datacolumn": "foundingPlacePlaceShared",
+      "datacolumn": "foundingPlace",
       "required": "n"
     },
     {
       "fieldname": "foundingPlace",
       "transforms": {
       },
-      "source_type": "authority",
-      "source_name": "place/local; place/shared",
+      "source_type": "refname",
+      "source_name": "place/local",
       "namespace": "organizations_common",
       "xpath": [
 
@@ -648,38 +625,15 @@
       "opt_list_values": [
 
       ],
-      "datacolumn": "currentPlacePlaceLocal",
-      "required": "n"
-    },
-    {
-      "fieldname": "currentPlace",
-      "transforms": {
-        "authority": [
-          "placeauthorities",
-          "place_shared"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "place/shared",
-      "namespace": "organizations_publicart",
-      "xpath": [
-
-      ],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "n/a",
-      "opt_list_values": [
-
-      ],
-      "datacolumn": "currentPlacePlaceShared",
+      "datacolumn": "currentPlace",
       "required": "n"
     },
     {
       "fieldname": "currentPlace",
       "transforms": {
       },
-      "source_type": "authority",
-      "source_name": "place/local; place/shared",
+      "source_type": "refname",
+      "source_name": "place/local",
       "namespace": "organizations_publicart",
       "xpath": [
 
@@ -757,7 +711,7 @@
       "fieldname": "socialMediaHandleType",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "socialmediatype",
       "namespace": "organizations_publicart",
       "xpath": [

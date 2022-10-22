@@ -81,7 +81,7 @@
       "fieldname": "type",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "exhibitiontype",
       "namespace": "exhibitions_common",
       "xpath": [
@@ -143,30 +143,6 @@
       "fieldname": "exhibitionSupport",
       "transforms": {
         "authority": [
-          "personauthorities",
-          "person_shared"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "person/shared",
-      "namespace": "exhibitions_publicart",
-      "xpath": [
-        "exhibitionSupportGroupList",
-        "exhibitionSupportGroup"
-      ],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [
-
-      ],
-      "datacolumn": "exhibitionSupportPersonShared",
-      "required": "n"
-    },
-    {
-      "fieldname": "exhibitionSupport",
-      "transforms": {
-        "authority": [
           "orgauthorities",
           "organization"
         ]
@@ -190,33 +166,9 @@
     {
       "fieldname": "exhibitionSupport",
       "transforms": {
-        "authority": [
-          "orgauthorities",
-          "organization_shared"
-        ]
       },
-      "source_type": "authority",
-      "source_name": "organization/shared",
-      "namespace": "exhibitions_publicart",
-      "xpath": [
-        "exhibitionSupportGroupList",
-        "exhibitionSupportGroup"
-      ],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [
-
-      ],
-      "datacolumn": "exhibitionSupportOrganizationShared",
-      "required": "n"
-    },
-    {
-      "fieldname": "exhibitionSupport",
-      "transforms": {
-      },
-      "source_type": "authority",
-      "source_name": "person/local; person/shared; organization/local; organization/shared",
+      "source_type": "refname",
+      "source_name": "person/local",
       "namespace": "exhibitions_publicart",
       "xpath": [
         "exhibitionSupportGroupList",
@@ -278,29 +230,6 @@
       "fieldname": "organizer",
       "transforms": {
         "authority": [
-          "personauthorities",
-          "person_shared"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "person/shared",
-      "namespace": "exhibitions_common",
-      "xpath": [
-        "organizers"
-      ],
-      "data_type": "string",
-      "repeats": "y",
-      "in_repeating_group": "n",
-      "opt_list_values": [
-
-      ],
-      "datacolumn": "organizerPersonShared",
-      "required": "n"
-    },
-    {
-      "fieldname": "organizer",
-      "transforms": {
-        "authority": [
           "orgauthorities",
           "organization"
         ]
@@ -323,32 +252,9 @@
     {
       "fieldname": "organizer",
       "transforms": {
-        "authority": [
-          "orgauthorities",
-          "organization_shared"
-        ]
       },
-      "source_type": "authority",
-      "source_name": "organization/shared",
-      "namespace": "exhibitions_common",
-      "xpath": [
-        "organizers"
-      ],
-      "data_type": "string",
-      "repeats": "y",
-      "in_repeating_group": "n",
-      "opt_list_values": [
-
-      ],
-      "datacolumn": "organizerOrganizationShared",
-      "required": "n"
-    },
-    {
-      "fieldname": "organizer",
-      "transforms": {
-      },
-      "source_type": "authority",
-      "source_name": "person/local; person/shared; organization/local; organization/shared",
+      "source_type": "refname",
+      "source_name": "person/local",
       "namespace": "exhibitions_common",
       "xpath": [
         "organizers"
@@ -386,7 +292,7 @@
       "fieldname": "publishTo",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "publishto",
       "namespace": "exhibitions_common",
       "xpath": [
@@ -423,30 +329,6 @@
 
       ],
       "datacolumn": "venueOrganizationLocal",
-      "required": "n"
-    },
-    {
-      "fieldname": "venue",
-      "transforms": {
-        "authority": [
-          "orgauthorities",
-          "organization_shared"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "organization/shared",
-      "namespace": "exhibitions_common",
-      "xpath": [
-        "venueGroupList",
-        "venueGroup"
-      ],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [
-
-      ],
-      "datacolumn": "venueOrganizationShared",
       "required": "n"
     },
     {
@@ -524,33 +406,9 @@
     {
       "fieldname": "venue",
       "transforms": {
-        "authority": [
-          "placeauthorities",
-          "place_shared"
-        ]
       },
-      "source_type": "authority",
-      "source_name": "place/shared",
-      "namespace": "exhibitions_common",
-      "xpath": [
-        "venueGroupList",
-        "venueGroup"
-      ],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [
-
-      ],
-      "datacolumn": "venuePlaceShared",
-      "required": "n"
-    },
-    {
-      "fieldname": "venue",
-      "transforms": {
-      },
-      "source_type": "authority",
-      "source_name": "organization/local; organization/shared; location/local; location/offsite; place/local; place/shared",
+      "source_type": "refname",
+      "source_name": "organization/local",
       "namespace": "exhibitions_common",
       "xpath": [
         "venueGroupList",

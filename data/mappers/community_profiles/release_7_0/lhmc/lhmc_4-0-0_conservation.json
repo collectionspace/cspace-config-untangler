@@ -81,7 +81,7 @@
       "fieldname": "status",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "conservationstatus",
       "namespace": "conservation_common",
       "xpath": [
@@ -141,7 +141,7 @@
       "fieldname": "treatmentPurpose",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "treatmentpurpose",
       "namespace": "conservation_common",
       "xpath": [
@@ -206,8 +206,8 @@
       "fieldname": "conservator",
       "transforms": {
       },
-      "source_type": "authority",
-      "source_name": "person/local; organization/local",
+      "source_type": "refname",
+      "source_name": "person/local",
       "namespace": "conservation_common",
       "xpath": [
         "conservators"
@@ -273,8 +273,8 @@
       "fieldname": "otherParty",
       "transforms": {
       },
-      "source_type": "authority",
-      "source_name": "person/local; organization/local",
+      "source_type": "refname",
+      "source_name": "person/local",
       "namespace": "conservation_common",
       "xpath": [
         "otherPartyGroupList",
@@ -314,7 +314,7 @@
       "fieldname": "otherPartyRole",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "otherpartyrole",
       "namespace": "conservation_common",
       "xpath": [
@@ -378,7 +378,7 @@
       "fieldname": "examinationStaff",
       "transforms": {
       },
-      "source_type": "authority",
+      "source_type": "refname",
       "source_name": "person/local",
       "namespace": "conservation_common",
       "xpath": [
@@ -419,7 +419,7 @@
       "fieldname": "examinationPhase",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "examinationphase",
       "namespace": "conservation_common",
       "xpath": [
@@ -540,7 +540,7 @@
       "fieldname": "approvedBy",
       "transforms": {
       },
-      "source_type": "authority",
+      "source_type": "refname",
       "source_name": "person/local",
       "namespace": "conservation_common",
       "xpath": [
@@ -677,7 +677,7 @@
       "fieldname": "researcher",
       "transforms": {
       },
-      "source_type": "authority",
+      "source_type": "refname",
       "source_name": "person/local",
       "namespace": "conservation_common",
       "xpath": [
@@ -779,7 +779,7 @@
       "fieldname": "sampleBy",
       "transforms": {
       },
-      "source_type": "authority",
+      "source_type": "refname",
       "source_name": "person/local",
       "namespace": "conservation_common",
       "xpath": [

@@ -169,7 +169,7 @@
       "fieldname": "termFlag",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "locationtermflag",
       "namespace": "locations_common",
       "xpath": [
@@ -210,7 +210,7 @@
       "fieldname": "termLanguage",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "languages",
       "namespace": "locations_common",
       "xpath": [
@@ -301,8 +301,8 @@
       "fieldname": "termSource",
       "transforms": {
       },
-      "source_type": "authority",
-      "source_name": "citation/local; citation/worldcat",
+      "source_type": "refname",
+      "source_name": "citation/local",
       "namespace": "locations_common",
       "xpath": [
         "locTermGroupList",
@@ -401,7 +401,7 @@
       "fieldname": "locationType",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "locationtype",
       "namespace": "locations_common",
       "xpath": [

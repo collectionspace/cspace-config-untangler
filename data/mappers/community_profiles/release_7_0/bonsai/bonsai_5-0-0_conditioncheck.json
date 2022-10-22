@@ -127,8 +127,8 @@
       "fieldname": "conditionChecker",
       "transforms": {
       },
-      "source_type": "authority",
-      "source_name": "person/local; organization/local",
+      "source_type": "refname",
+      "source_name": "person/local",
       "namespace": "conditionchecks_common",
       "xpath": [
 

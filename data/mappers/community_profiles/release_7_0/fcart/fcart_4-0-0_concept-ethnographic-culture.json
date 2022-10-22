@@ -198,7 +198,7 @@
       "fieldname": "termFlag",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "concepttermflag",
       "namespace": "concepts_common",
       "xpath": [
@@ -262,7 +262,7 @@
       "fieldname": "termLanguage",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "languages",
       "namespace": "concepts_common",
       "xpath": [
@@ -353,8 +353,8 @@
       "fieldname": "termSource",
       "transforms": {
       },
-      "source_type": "authority",
-      "source_name": "citation/local; citation/worldcat",
+      "source_type": "refname",
+      "source_name": "citation/local",
       "namespace": "concepts_common",
       "xpath": [
         "conceptTermGroupList",
@@ -453,7 +453,7 @@
       "fieldname": "conceptRecordType",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "conceptrecordtype",
       "namespace": "concepts_common",
       "xpath": [
@@ -673,7 +673,7 @@
       "fieldname": "relatedConcept",
       "transforms": {
       },
-      "source_type": "authority",
+      "source_type": "refname",
       "source_name": "concept/associated",
       "namespace": "concepts_fineart",
       "xpath": [
@@ -714,7 +714,7 @@
       "fieldname": "conceptRelationType",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "conceptrelationtype",
       "namespace": "concepts_fineart",
       "xpath": [

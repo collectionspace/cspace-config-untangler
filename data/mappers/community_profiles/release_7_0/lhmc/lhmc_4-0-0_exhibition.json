@@ -103,7 +103,7 @@
       "fieldname": "type",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "exhibitiontype",
       "namespace": "exhibitions_common",
       "xpath": [
@@ -233,8 +233,8 @@
       "fieldname": "sponsor",
       "transforms": {
       },
-      "source_type": "authority",
-      "source_name": "person/local; person/ulan; organization/local; organization/ulan",
+      "source_type": "refname",
+      "source_name": "person/local",
       "namespace": "exhibitions_common",
       "xpath": [
         "sponsors"
@@ -344,8 +344,8 @@
       "fieldname": "organizer",
       "transforms": {
       },
-      "source_type": "authority",
-      "source_name": "person/local; person/ulan; organization/local; organization/ulan",
+      "source_type": "refname",
+      "source_name": "person/local",
       "namespace": "exhibitions_common",
       "xpath": [
         "organizers"
@@ -383,7 +383,7 @@
       "fieldname": "publishTo",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "publishto",
       "namespace": "exhibitions_common",
       "xpath": [
@@ -546,8 +546,8 @@
       "fieldname": "venue",
       "transforms": {
       },
-      "source_type": "authority",
-      "source_name": "organization/local; organization/ulan; location/local; location/offsite; place/local; place/tgn",
+      "source_type": "refname",
+      "source_name": "organization/local",
       "namespace": "exhibitions_common",
       "xpath": [
         "venueGroupList",
@@ -790,8 +790,8 @@
       "fieldname": "exhibitionPerson",
       "transforms": {
       },
-      "source_type": "authority",
-      "source_name": "person/local; person/ulan; organization/local; organization/ulan",
+      "source_type": "refname",
+      "source_name": "person/local",
       "namespace": "exhibitions_common",
       "xpath": [
         "workingGroupList",
@@ -835,7 +835,7 @@
       "fieldname": "exhibitionPersonRole",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "exhibitionpersonrole",
       "namespace": "exhibitions_common",
       "xpath": [
@@ -1080,8 +1080,8 @@
       "fieldname": "exhibitionReference",
       "transforms": {
       },
-      "source_type": "authority",
-      "source_name": "citation/local; citation/worldcat",
+      "source_type": "refname",
+      "source_name": "citation/local",
       "namespace": "exhibitions_common",
       "xpath": [
         "exhibitionReferenceGroupList",
@@ -1121,7 +1121,7 @@
       "fieldname": "exhibitionReferenceType",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "exhibitionreferencetype",
       "namespace": "exhibitions_common",
       "xpath": [
@@ -1262,7 +1262,7 @@
       "fieldname": "exhibitionStatus",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "exhibitionstatus",
       "namespace": "exhibitions_common",
       "xpath": [

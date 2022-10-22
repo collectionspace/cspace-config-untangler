@@ -112,32 +112,9 @@
     {
       "fieldname": "currentLocation",
       "transforms": {
-        "authority": [
-          "orgauthorities",
-          "organization_shared"
-        ]
       },
-      "source_type": "authority",
-      "source_name": "organization/shared",
-      "namespace": "movements_common",
-      "xpath": [
-
-      ],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "n/a",
-      "opt_list_values": [
-
-      ],
-      "datacolumn": "currentLocationOrganizationShared",
-      "required": "y"
-    },
-    {
-      "fieldname": "currentLocation",
-      "transforms": {
-      },
-      "source_type": "authority",
-      "source_name": "location/local; location/offsite; organization/local; organization/shared",
+      "source_type": "refname",
+      "source_name": "location/local",
       "namespace": "movements_common",
       "xpath": [
 
@@ -223,32 +200,9 @@
     {
       "fieldname": "normalLocation",
       "transforms": {
-        "authority": [
-          "orgauthorities",
-          "organization_shared"
-        ]
       },
-      "source_type": "authority",
-      "source_name": "organization/shared",
-      "namespace": "movements_common",
-      "xpath": [
-
-      ],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "n/a",
-      "opt_list_values": [
-
-      ],
-      "datacolumn": "normalLocationOrganizationShared",
-      "required": "n"
-    },
-    {
-      "fieldname": "normalLocation",
-      "transforms": {
-      },
-      "source_type": "authority",
-      "source_name": "location/local; location/offsite; organization/local; organization/shared",
+      "source_type": "refname",
+      "source_name": "location/local",
       "namespace": "movements_common",
       "xpath": [
 
@@ -364,38 +318,15 @@
       "opt_list_values": [
 
       ],
-      "datacolumn": "movementContactPersonLocal",
-      "required": "n"
-    },
-    {
-      "fieldname": "movementContact",
-      "transforms": {
-        "authority": [
-          "personauthorities",
-          "person_shared"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "person/shared",
-      "namespace": "movements_common",
-      "xpath": [
-
-      ],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "n/a",
-      "opt_list_values": [
-
-      ],
-      "datacolumn": "movementContactPersonShared",
+      "datacolumn": "movementContact",
       "required": "n"
     },
     {
       "fieldname": "movementContact",
       "transforms": {
       },
-      "source_type": "authority",
-      "source_name": "person/local; person/shared",
+      "source_type": "refname",
+      "source_name": "person/local",
       "namespace": "movements_common",
       "xpath": [
 
@@ -530,38 +461,15 @@
       "opt_list_values": [
 
       ],
-      "datacolumn": "inventoryContactPersonLocal",
-      "required": "n"
-    },
-    {
-      "fieldname": "inventoryContact",
-      "transforms": {
-        "authority": [
-          "personauthorities",
-          "person_shared"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "person/shared",
-      "namespace": "movements_common",
-      "xpath": [
-        "inventoryContactList"
-      ],
-      "data_type": "string",
-      "repeats": "y",
-      "in_repeating_group": "n",
-      "opt_list_values": [
-
-      ],
-      "datacolumn": "inventoryContactPersonShared",
+      "datacolumn": "inventoryContact",
       "required": "n"
     },
     {
       "fieldname": "inventoryContact",
       "transforms": {
       },
-      "source_type": "authority",
-      "source_name": "person/local; person/shared",
+      "source_type": "refname",
+      "source_name": "person/local",
       "namespace": "movements_common",
       "xpath": [
         "inventoryContactList"

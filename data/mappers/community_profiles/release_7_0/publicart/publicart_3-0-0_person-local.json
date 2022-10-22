@@ -175,7 +175,7 @@
       "fieldname": "termType",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "persontermtype",
       "namespace": "persons_common",
       "xpath": [
@@ -216,7 +216,7 @@
       "fieldname": "termFlag",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "persontermflag",
       "namespace": "persons_common",
       "xpath": [
@@ -257,7 +257,7 @@
       "fieldname": "termLanguage",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "languages",
       "namespace": "persons_common",
       "xpath": [
@@ -517,8 +517,8 @@
       "fieldname": "termSource",
       "transforms": {
       },
-      "source_type": "authority",
-      "source_name": "citation/local; citation/worldcat",
+      "source_type": "refname",
+      "source_name": "citation/local",
       "namespace": "persons_common",
       "xpath": [
         "personTermGroupList",
@@ -689,38 +689,15 @@
       "opt_list_values": [
 
       ],
-      "datacolumn": "organizationOrganizationLocal",
-      "required": "n"
-    },
-    {
-      "fieldname": "organization",
-      "transforms": {
-        "authority": [
-          "orgauthorities",
-          "organization_shared"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "organization/shared",
-      "namespace": "persons_publicart",
-      "xpath": [
-        "organizations"
-      ],
-      "data_type": "string",
-      "repeats": "y",
-      "in_repeating_group": "n",
-      "opt_list_values": [
-
-      ],
-      "datacolumn": "organizationOrganizationShared",
+      "datacolumn": "organization",
       "required": "n"
     },
     {
       "fieldname": "organization",
       "transforms": {
       },
-      "source_type": "authority",
-      "source_name": "organization/local; organization/shared",
+      "source_type": "refname",
+      "source_name": "organization/local",
       "namespace": "persons_publicart",
       "xpath": [
         "organizations"
@@ -779,7 +756,7 @@
       "fieldname": "socialMediaHandleType",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "socialmediatype",
       "namespace": "persons_publicart",
       "xpath": [

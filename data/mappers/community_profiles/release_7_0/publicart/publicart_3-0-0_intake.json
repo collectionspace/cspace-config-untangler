@@ -125,7 +125,7 @@
       "fieldname": "entryMethod",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "entrymethod",
       "namespace": "intakes_common",
       "xpath": [
@@ -186,29 +186,6 @@
       "fieldname": "currentOwner",
       "transforms": {
         "authority": [
-          "personauthorities",
-          "person_shared"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "person/shared",
-      "namespace": "intakes_common",
-      "xpath": [
-        "currentOwners"
-      ],
-      "data_type": "string",
-      "repeats": "y",
-      "in_repeating_group": "n",
-      "opt_list_values": [
-
-      ],
-      "datacolumn": "currentOwnerPersonShared",
-      "required": "n"
-    },
-    {
-      "fieldname": "currentOwner",
-      "transforms": {
-        "authority": [
           "orgauthorities",
           "organization"
         ]
@@ -231,32 +208,9 @@
     {
       "fieldname": "currentOwner",
       "transforms": {
-        "authority": [
-          "orgauthorities",
-          "organization_shared"
-        ]
       },
-      "source_type": "authority",
-      "source_name": "organization/shared",
-      "namespace": "intakes_common",
-      "xpath": [
-        "currentOwners"
-      ],
-      "data_type": "string",
-      "repeats": "y",
-      "in_repeating_group": "n",
-      "opt_list_values": [
-
-      ],
-      "datacolumn": "currentOwnerOrganizationShared",
-      "required": "n"
-    },
-    {
-      "fieldname": "currentOwner",
-      "transforms": {
-      },
-      "source_type": "authority",
-      "source_name": "person/local; person/shared; organization/local; organization/shared",
+      "source_type": "refname",
+      "source_name": "person/local",
       "namespace": "intakes_common",
       "xpath": [
         "currentOwners"
@@ -298,30 +252,6 @@
       "fieldname": "depositor",
       "transforms": {
         "authority": [
-          "personauthorities",
-          "person_shared"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "person/shared",
-      "namespace": "intakes_common",
-      "xpath": [
-        "depositorGroupList",
-        "depositorGroup"
-      ],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [
-
-      ],
-      "datacolumn": "depositorPersonShared",
-      "required": "n"
-    },
-    {
-      "fieldname": "depositor",
-      "transforms": {
-        "authority": [
           "orgauthorities",
           "organization"
         ]
@@ -345,33 +275,9 @@
     {
       "fieldname": "depositor",
       "transforms": {
-        "authority": [
-          "orgauthorities",
-          "organization_shared"
-        ]
       },
-      "source_type": "authority",
-      "source_name": "organization/shared",
-      "namespace": "intakes_common",
-      "xpath": [
-        "depositorGroupList",
-        "depositorGroup"
-      ],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [
-
-      ],
-      "datacolumn": "depositorOrganizationShared",
-      "required": "n"
-    },
-    {
-      "fieldname": "depositor",
-      "transforms": {
-      },
-      "source_type": "authority",
-      "source_name": "person/local; person/shared; organization/local; organization/shared",
+      "source_type": "refname",
+      "source_name": "person/local",
       "namespace": "intakes_common",
       "xpath": [
         "depositorGroupList",
@@ -431,7 +337,7 @@
       "fieldname": "approvalGroup",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "deaccessionapprovalgroup",
       "namespace": "intakes_common",
       "xpath": [
@@ -468,39 +374,15 @@
       "opt_list_values": [
 
       ],
-      "datacolumn": "approvalIndividualPersonLocal",
-      "required": "n"
-    },
-    {
-      "fieldname": "approvalIndividual",
-      "transforms": {
-        "authority": [
-          "personauthorities",
-          "person_shared"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "person/shared",
-      "namespace": "intakes_common",
-      "xpath": [
-        "approvalGroupList",
-        "approvalGroup"
-      ],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [
-
-      ],
-      "datacolumn": "approvalIndividualPersonShared",
+      "datacolumn": "approvalIndividual",
       "required": "n"
     },
     {
       "fieldname": "approvalIndividual",
       "transforms": {
       },
-      "source_type": "authority",
-      "source_name": "person/local; person/shared",
+      "source_type": "refname",
+      "source_name": "person/local",
       "namespace": "intakes_common",
       "xpath": [
         "approvalGroupList",
@@ -540,7 +422,7 @@
       "fieldname": "approvalStatus",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "deaccessionapprovalstatus",
       "namespace": "intakes_common",
       "xpath": [
@@ -710,30 +592,6 @@
       "fieldname": "currentLocation",
       "transforms": {
         "authority": [
-          "orgauthorities",
-          "organization_shared"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "organization/shared",
-      "namespace": "intakes_common",
-      "xpath": [
-        "currentLocationGroupList",
-        "currentLocationGroup"
-      ],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [
-
-      ],
-      "datacolumn": "currentLocationOrganizationShared",
-      "required": "n"
-    },
-    {
-      "fieldname": "currentLocation",
-      "transforms": {
-        "authority": [
           "placeauthorities",
           "place"
         ]
@@ -757,33 +615,9 @@
     {
       "fieldname": "currentLocation",
       "transforms": {
-        "authority": [
-          "placeauthorities",
-          "place_shared"
-        ]
       },
-      "source_type": "authority",
-      "source_name": "place/shared",
-      "namespace": "intakes_common",
-      "xpath": [
-        "currentLocationGroupList",
-        "currentLocationGroup"
-      ],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [
-
-      ],
-      "datacolumn": "currentLocationPlaceShared",
-      "required": "n"
-    },
-    {
-      "fieldname": "currentLocation",
-      "transforms": {
-      },
-      "source_type": "authority",
-      "source_name": "location/local; location/offsite; organization/local; organization/shared; place/local; place/shared",
+      "source_type": "refname",
+      "source_name": "location/local",
       "namespace": "intakes_common",
       "xpath": [
         "currentLocationGroupList",
@@ -823,7 +657,7 @@
       "fieldname": "currentLocationFitness",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "conditionfitness",
       "namespace": "intakes_common",
       "xpath": [
@@ -951,29 +785,6 @@
       "fieldname": "normalLocation",
       "transforms": {
         "authority": [
-          "orgauthorities",
-          "organization_shared"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "organization/shared",
-      "namespace": "intakes_common",
-      "xpath": [
-
-      ],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "n/a",
-      "opt_list_values": [
-
-      ],
-      "datacolumn": "normalLocationOrganizationShared",
-      "required": "n"
-    },
-    {
-      "fieldname": "normalLocation",
-      "transforms": {
-        "authority": [
           "placeauthorities",
           "place"
         ]
@@ -996,32 +807,9 @@
     {
       "fieldname": "normalLocation",
       "transforms": {
-        "authority": [
-          "placeauthorities",
-          "place_shared"
-        ]
       },
-      "source_type": "authority",
-      "source_name": "place/shared",
-      "namespace": "intakes_common",
-      "xpath": [
-
-      ],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "n/a",
-      "opt_list_values": [
-
-      ],
-      "datacolumn": "normalLocationPlaceShared",
-      "required": "n"
-    },
-    {
-      "fieldname": "normalLocation",
-      "transforms": {
-      },
-      "source_type": "authority",
-      "source_name": "location/local; location/offsite; organization/local; organization/shared; place/local; place/shared",
+      "source_type": "refname",
+      "source_name": "location/local",
       "namespace": "intakes_common",
       "xpath": [
 
@@ -1059,7 +847,7 @@
       "fieldname": "conditionCheckMethod",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "conditioncheckmethod",
       "namespace": "intakes_common",
       "xpath": [
@@ -1098,7 +886,7 @@
       "fieldname": "conditionCheckReason",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "conditioncheckreason",
       "namespace": "intakes_common",
       "xpath": [
@@ -1140,29 +928,6 @@
       "fieldname": "conditionCheckerOrAssessor",
       "transforms": {
         "authority": [
-          "personauthorities",
-          "person_shared"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "person/shared",
-      "namespace": "intakes_common",
-      "xpath": [
-        "conditionCheckersOrAssessors"
-      ],
-      "data_type": "string",
-      "repeats": "y",
-      "in_repeating_group": "n",
-      "opt_list_values": [
-
-      ],
-      "datacolumn": "conditionCheckerOrAssessorPersonShared",
-      "required": "n"
-    },
-    {
-      "fieldname": "conditionCheckerOrAssessor",
-      "transforms": {
-        "authority": [
           "orgauthorities",
           "organization"
         ]
@@ -1185,32 +950,9 @@
     {
       "fieldname": "conditionCheckerOrAssessor",
       "transforms": {
-        "authority": [
-          "orgauthorities",
-          "organization_shared"
-        ]
       },
-      "source_type": "authority",
-      "source_name": "organization/shared",
-      "namespace": "intakes_common",
-      "xpath": [
-        "conditionCheckersOrAssessors"
-      ],
-      "data_type": "string",
-      "repeats": "y",
-      "in_repeating_group": "n",
-      "opt_list_values": [
-
-      ],
-      "datacolumn": "conditionCheckerOrAssessorOrganizationShared",
-      "required": "n"
-    },
-    {
-      "fieldname": "conditionCheckerOrAssessor",
-      "transforms": {
-      },
-      "source_type": "authority",
-      "source_name": "person/local; person/shared; organization/local; organization/shared",
+      "source_type": "refname",
+      "source_name": "person/local",
       "namespace": "intakes_common",
       "xpath": [
         "conditionCheckersOrAssessors"

@@ -163,7 +163,7 @@
       "fieldname": "osteoAgeEstimateAnalyst",
       "transforms": {
       },
-      "source_type": "authority",
+      "source_type": "refname",
       "source_name": "person/local",
       "namespace": "osteology_common",
       "xpath": [
@@ -274,7 +274,7 @@
       "fieldname": "sexDeterminationAnalyst",
       "transforms": {
       },
-      "source_type": "authority",
+      "source_type": "refname",
       "source_name": "person/local",
       "namespace": "osteology_common",
       "xpath": [
@@ -334,7 +334,7 @@
       "fieldname": "completeness",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "osteocompleteness",
       "namespace": "osteology_common",
       "xpath": [
@@ -414,7 +414,7 @@
       "fieldname": "dentitionScore",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "dentitionscore",
       "namespace": "osteology_common",
       "xpath": [
@@ -472,7 +472,7 @@
       "fieldname": "mortuaryTreatment",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "mortuarytreatment",
       "namespace": "osteology_common",
       "xpath": [
@@ -533,7 +533,7 @@
       "fieldname": "behrensmeyerSingleLower",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "behrensmeyer",
       "namespace": "osteology_common",
       "xpath": [
@@ -575,7 +575,7 @@
       "fieldname": "behrensmeyerUpper",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "behrensmeyer",
       "namespace": "osteology_common",
       "xpath": [
@@ -677,7 +677,7 @@
       "fieldname": "inventoryAnalyst",
       "transforms": {
       },
-      "source_type": "authority",
+      "source_type": "refname",
       "source_name": "person/local",
       "namespace": "osteology_common",
       "xpath": [
@@ -871,7 +871,7 @@
       "fieldname": "cranialDeformationCategory",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "cranialdeformationcategory",
       "namespace": "osteology_anthropology",
       "xpath": [
@@ -1012,7 +1012,7 @@
       "fieldname": "trepanationTechnique",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "trepanationtechnique",
       "namespace": "osteology_anthropology",
       "xpath": [
@@ -1053,7 +1053,7 @@
       "fieldname": "trepanationHealing",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "trepanationhealing",
       "namespace": "osteology_anthropology",
       "xpath": [
@@ -1094,7 +1094,7 @@
       "fieldname": "trepanationCertainty",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "trepanationcertainty",
       "namespace": "osteology_anthropology",
       "xpath": [

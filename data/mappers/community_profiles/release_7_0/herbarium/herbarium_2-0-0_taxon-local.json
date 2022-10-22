@@ -182,7 +182,7 @@
       "fieldname": "termFlag",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "taxontermflag",
       "namespace": "taxon_common",
       "xpath": [
@@ -246,7 +246,7 @@
       "fieldname": "termLanguage",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "languages",
       "namespace": "taxon_common",
       "xpath": [
@@ -337,8 +337,8 @@
       "fieldname": "termSource",
       "transforms": {
       },
-      "source_type": "authority",
-      "source_name": "citation/local; citation/worldcat",
+      "source_type": "refname",
+      "source_name": "citation/local",
       "namespace": "taxon_common",
       "xpath": [
         "taxonTermGroupList",
@@ -464,7 +464,7 @@
       "fieldname": "taxonMajorGroup",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "taxonmajorgroup",
       "namespace": "taxon_herbarium",
       "xpath": [
@@ -529,8 +529,8 @@
       "fieldname": "taxonFamily",
       "transforms": {
       },
-      "source_type": "authority",
-      "source_name": "taxon/local; taxon/common",
+      "source_type": "refname",
+      "source_name": "taxon/local",
       "namespace": "taxon_herbarium",
       "xpath": [
 
@@ -596,8 +596,8 @@
       "fieldname": "taxonAuthor",
       "transforms": {
       },
-      "source_type": "authority",
-      "source_name": "person/local; organization/local",
+      "source_type": "refname",
+      "source_name": "person/local",
       "namespace": "taxon_common",
       "xpath": [
         "taxonAuthorGroupList",
@@ -724,8 +724,8 @@
       "fieldname": "taxonCitation",
       "transforms": {
       },
-      "source_type": "authority",
-      "source_name": "citation/local; citation/worldcat",
+      "source_type": "refname",
+      "source_name": "citation/local",
       "namespace": "taxon_common",
       "xpath": [
         "taxonCitationList"
@@ -789,8 +789,8 @@
       "fieldname": "taxonBasionym",
       "transforms": {
       },
-      "source_type": "authority",
-      "source_name": "taxon/local; taxon/common",
+      "source_type": "refname",
+      "source_name": "taxon/local",
       "namespace": "taxon_herbarium",
       "xpath": [
 
@@ -868,7 +868,7 @@
       "fieldname": "commonNameLanguage",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "languages",
       "namespace": "taxon_common",
       "xpath": [
@@ -912,7 +912,7 @@
       "fieldname": "commonNameSource",
       "transforms": {
       },
-      "source_type": "authority",
+      "source_type": "refname",
       "source_name": "citation/local",
       "namespace": "taxon_common",
       "xpath": [
@@ -1000,8 +1000,8 @@
       "fieldname": "relatedTerm",
       "transforms": {
       },
-      "source_type": "authority",
-      "source_name": "taxon/local; taxon/common",
+      "source_type": "refname",
+      "source_name": "taxon/local",
       "namespace": "taxon_herbarium",
       "xpath": [
         "relatedTermGroupList",
@@ -1041,7 +1041,7 @@
       "fieldname": "relatedTermType",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "taxonrelatedtermtype",
       "namespace": "taxon_herbarium",
       "xpath": [

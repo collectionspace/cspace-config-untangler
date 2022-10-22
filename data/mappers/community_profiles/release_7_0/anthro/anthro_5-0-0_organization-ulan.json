@@ -200,7 +200,7 @@
       "fieldname": "termFlag",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "orgtermflag",
       "namespace": "organizations_common",
       "xpath": [
@@ -241,7 +241,7 @@
       "fieldname": "termLanguage",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "languages",
       "namespace": "organizations_common",
       "xpath": [
@@ -372,8 +372,8 @@
       "fieldname": "termSource",
       "transforms": {
       },
-      "source_type": "authority",
-      "source_name": "citation/local; citation/worldcat",
+      "source_type": "refname",
+      "source_name": "citation/local",
       "namespace": "organizations_common",
       "xpath": [
         "orgTermGroupList",
@@ -472,7 +472,7 @@
       "fieldname": "organizationRecordType",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "organizationtype",
       "namespace": "organizations_common",
       "xpath": [
@@ -629,7 +629,7 @@
       "fieldname": "contactName",
       "transforms": {
       },
-      "source_type": "authority",
+      "source_type": "refname",
       "source_name": "person/local",
       "namespace": "organizations_common",
       "xpath": [
@@ -670,7 +670,7 @@
       "fieldname": "contactRole",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "contactrole",
       "namespace": "organizations_common",
       "xpath": [
@@ -751,7 +751,7 @@
       "fieldname": "contactStatus",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "contactstatus",
       "namespace": "organizations_common",
       "xpath": [

@@ -181,8 +181,8 @@
       "fieldname": "conditionChecker",
       "transforms": {
       },
-      "source_type": "authority",
-      "source_name": "person/local; organization/local",
+      "source_type": "refname",
+      "source_name": "person/local",
       "namespace": "conditionchecks_common",
       "xpath": [
 
@@ -464,7 +464,7 @@
       "fieldname": "conditionLHMC",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "condition",
       "namespace": "conditionchecks_lhmc",
       "xpath": [
@@ -505,7 +505,7 @@
       "fieldname": "conditionFacetLHMC",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "conditionfacet",
       "namespace": "conditionchecks_lhmc",
       "xpath": [
@@ -604,7 +604,7 @@
       "fieldname": "maintenanceCycle",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "maintenancecycle",
       "namespace": "conditionchecks_lhmc",
       "xpath": [

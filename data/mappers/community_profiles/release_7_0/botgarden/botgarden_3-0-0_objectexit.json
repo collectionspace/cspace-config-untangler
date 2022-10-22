@@ -112,8 +112,8 @@
       "fieldname": "currentOwner",
       "transforms": {
       },
-      "source_type": "authority",
-      "source_name": "person/local; organization/local",
+      "source_type": "refname",
+      "source_name": "person/local",
       "namespace": "objectexit_common",
       "xpath": [
 
@@ -175,7 +175,7 @@
       "fieldname": "depositor",
       "transforms": {
       },
-      "source_type": "authority",
+      "source_type": "refname",
       "source_name": "organization/local",
       "namespace": "objectexit_common",
       "xpath": [

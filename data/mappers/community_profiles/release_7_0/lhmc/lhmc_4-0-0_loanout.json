@@ -97,7 +97,7 @@
       "fieldname": "lendersAuthorizer",
       "transforms": {
       },
-      "source_type": "authority",
+      "source_type": "refname",
       "source_name": "person/local",
       "namespace": "loansout_common",
       "xpath": [
@@ -139,7 +139,7 @@
       "fieldname": "lendersContact",
       "transforms": {
       },
-      "source_type": "authority",
+      "source_type": "refname",
       "source_name": "person/local",
       "namespace": "loansout_common",
       "xpath": [
@@ -223,8 +223,8 @@
       "fieldname": "borrower",
       "transforms": {
       },
-      "source_type": "authority",
-      "source_name": "person/local; organization/local",
+      "source_type": "refname",
+      "source_name": "person/local",
       "namespace": "loansout_common",
       "xpath": [
 
@@ -265,7 +265,7 @@
       "fieldname": "borrowersContact",
       "transforms": {
       },
-      "source_type": "authority",
+      "source_type": "refname",
       "source_name": "person/local",
       "namespace": "loansout_common",
       "xpath": [
@@ -307,7 +307,7 @@
       "fieldname": "borrowersAuthorizer",
       "transforms": {
       },
-      "source_type": "authority",
+      "source_type": "refname",
       "source_name": "person/local",
       "namespace": "loansout_common",
       "xpath": [
@@ -404,7 +404,7 @@
       "fieldname": "loanoutStatusLHMC",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "loanoutstatus",
       "namespace": "loansout_lhmc",
       "xpath": [
@@ -536,8 +536,8 @@
       "fieldname": "loanoutStatusAuthorizerLHMC",
       "transforms": {
       },
-      "source_type": "authority",
-      "source_name": "person/local; person/ulan; organization/local",
+      "source_type": "refname",
+      "source_name": "person/local",
       "namespace": "loansout_lhmc",
       "xpath": [
         "loanoutStatusLHMCGroupList",

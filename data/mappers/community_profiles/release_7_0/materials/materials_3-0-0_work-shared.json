@@ -176,7 +176,7 @@
       "fieldname": "termFlag",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "worktermflag",
       "namespace": "works_common",
       "xpath": [
@@ -217,7 +217,7 @@
       "fieldname": "termLanguage",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "languages",
       "namespace": "works_common",
       "xpath": [
@@ -277,39 +277,15 @@
       "opt_list_values": [
 
       ],
-      "datacolumn": "termSourceCitationLocal",
-      "required": "n"
-    },
-    {
-      "fieldname": "termSource",
-      "transforms": {
-        "authority": [
-          "citationauthorities",
-          "citation_shared"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "citation/shared",
-      "namespace": "works_common",
-      "xpath": [
-        "workTermGroupList",
-        "workTermGroup"
-      ],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [
-
-      ],
-      "datacolumn": "termSourceCitationShared",
+      "datacolumn": "termSource",
       "required": "n"
     },
     {
       "fieldname": "termSource",
       "transforms": {
       },
-      "source_type": "authority",
-      "source_name": "citation/local; citation/shared",
+      "source_type": "refname",
+      "source_name": "citation/local",
       "namespace": "works_common",
       "xpath": [
         "workTermGroupList",
@@ -408,7 +384,7 @@
       "fieldname": "workType",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "worktype",
       "namespace": "works_common",
       "xpath": [
@@ -489,30 +465,6 @@
       "fieldname": "creator",
       "transforms": {
         "authority": [
-          "personauthorities",
-          "person_shared"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "person/shared",
-      "namespace": "works_common",
-      "xpath": [
-        "creatorGroupList",
-        "creatorGroup"
-      ],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [
-
-      ],
-      "datacolumn": "creatorPersonShared",
-      "required": "n"
-    },
-    {
-      "fieldname": "creator",
-      "transforms": {
-        "authority": [
           "orgauthorities",
           "organization"
         ]
@@ -536,33 +488,9 @@
     {
       "fieldname": "creator",
       "transforms": {
-        "authority": [
-          "orgauthorities",
-          "organization_shared"
-        ]
       },
-      "source_type": "authority",
-      "source_name": "organization/shared",
-      "namespace": "works_common",
-      "xpath": [
-        "creatorGroupList",
-        "creatorGroup"
-      ],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [
-
-      ],
-      "datacolumn": "creatorOrganizationShared",
-      "required": "n"
-    },
-    {
-      "fieldname": "creator",
-      "transforms": {
-      },
-      "source_type": "authority",
-      "source_name": "person/local; person/shared; organization/local; organization/shared",
+      "source_type": "refname",
+      "source_name": "person/local",
       "namespace": "works_common",
       "xpath": [
         "creatorGroupList",
@@ -602,7 +530,7 @@
       "fieldname": "creatorType",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "workcreatortype",
       "namespace": "works_common",
       "xpath": [
@@ -646,30 +574,6 @@
       "fieldname": "publisher",
       "transforms": {
         "authority": [
-          "personauthorities",
-          "person_shared"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "person/shared",
-      "namespace": "works_common",
-      "xpath": [
-        "publisherGroupList",
-        "publisherGroup"
-      ],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [
-
-      ],
-      "datacolumn": "publisherPersonShared",
-      "required": "n"
-    },
-    {
-      "fieldname": "publisher",
-      "transforms": {
-        "authority": [
           "orgauthorities",
           "organization"
         ]
@@ -693,33 +597,9 @@
     {
       "fieldname": "publisher",
       "transforms": {
-        "authority": [
-          "orgauthorities",
-          "organization_shared"
-        ]
       },
-      "source_type": "authority",
-      "source_name": "organization/shared",
-      "namespace": "works_common",
-      "xpath": [
-        "publisherGroupList",
-        "publisherGroup"
-      ],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [
-
-      ],
-      "datacolumn": "publisherOrganizationShared",
-      "required": "n"
-    },
-    {
-      "fieldname": "publisher",
-      "transforms": {
-      },
-      "source_type": "authority",
-      "source_name": "person/local; person/shared; organization/local; organization/shared",
+      "source_type": "refname",
+      "source_name": "person/local",
       "namespace": "works_common",
       "xpath": [
         "publisherGroupList",
@@ -759,7 +639,7 @@
       "fieldname": "publisherType",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "workpublishertype",
       "namespace": "works_common",
       "xpath": [
@@ -843,7 +723,7 @@
       "fieldname": "addressMunicipality",
       "transforms": {
       },
-      "source_type": "authority",
+      "source_type": "refname",
       "source_name": "place/local",
       "namespace": "works_common",
       "xpath": [
@@ -887,7 +767,7 @@
       "fieldname": "addressStateOrProvince",
       "transforms": {
       },
-      "source_type": "authority",
+      "source_type": "refname",
       "source_name": "place/local",
       "namespace": "works_common",
       "xpath": [
@@ -951,7 +831,7 @@
       "fieldname": "addressCountry",
       "transforms": {
       },
-      "source_type": "authority",
+      "source_type": "refname",
       "source_name": "place/local",
       "namespace": "works_common",
       "xpath": [
@@ -992,7 +872,7 @@
       "fieldname": "addressType",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "addresstype",
       "namespace": "works_common",
       "xpath": [

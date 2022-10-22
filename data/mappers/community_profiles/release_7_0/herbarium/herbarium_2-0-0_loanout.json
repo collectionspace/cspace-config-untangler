@@ -118,7 +118,7 @@
       "fieldname": "lendersAuthorizer",
       "transforms": {
       },
-      "source_type": "authority",
+      "source_type": "refname",
       "source_name": "person/local",
       "namespace": "loansout_common",
       "xpath": [
@@ -160,7 +160,7 @@
       "fieldname": "lendersContact",
       "transforms": {
       },
-      "source_type": "authority",
+      "source_type": "refname",
       "source_name": "person/local",
       "namespace": "loansout_common",
       "xpath": [
@@ -244,8 +244,8 @@
       "fieldname": "borrower",
       "transforms": {
       },
-      "source_type": "authority",
-      "source_name": "person/local; organization/local",
+      "source_type": "refname",
+      "source_name": "person/local",
       "namespace": "loansout_common",
       "xpath": [
 
@@ -286,7 +286,7 @@
       "fieldname": "borrowersContact",
       "transforms": {
       },
-      "source_type": "authority",
+      "source_type": "refname",
       "source_name": "person/local",
       "namespace": "loansout_common",
       "xpath": [
@@ -328,7 +328,7 @@
       "fieldname": "borrowersAuthorizer",
       "transforms": {
       },
-      "source_type": "authority",
+      "source_type": "refname",
       "source_name": "person/local",
       "namespace": "loansout_common",
       "xpath": [
@@ -424,7 +424,7 @@
       "fieldname": "majorGroup",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "majortaxongroup",
       "namespace": "loansout_herbarium",
       "xpath": [
@@ -508,8 +508,8 @@
       "fieldname": "taxonomy",
       "transforms": {
       },
-      "source_type": "authority",
-      "source_name": "taxon/local; taxon/common",
+      "source_type": "refname",
+      "source_name": "taxon/local",
       "namespace": "loansout_herbarium",
       "xpath": [
         "taxonomyList"
@@ -547,7 +547,7 @@
       "fieldname": "objKind",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "objectkind",
       "namespace": "loansout_herbarium",
       "xpath": [
@@ -587,7 +587,7 @@
       "fieldname": "loanGroup",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "deaccessionapprovalgroup",
       "namespace": "loansout_common",
       "xpath": [
@@ -631,7 +631,7 @@
       "fieldname": "loanIndividual",
       "transforms": {
       },
-      "source_type": "authority",
+      "source_type": "refname",
       "source_name": "person/local",
       "namespace": "loansout_common",
       "xpath": [
@@ -672,7 +672,7 @@
       "fieldname": "loanStatus",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "loanoutstatus",
       "namespace": "loansout_common",
       "xpath": [
@@ -790,7 +790,7 @@
       "fieldname": "transportMethod",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "transportmethod",
       "namespace": "loansout_herbarium",
       "xpath": [
@@ -1068,7 +1068,7 @@
       "fieldname": "returnDetermination",
       "transforms": {
       },
-      "source_type": "authority",
+      "source_type": "refname",
       "source_name": "taxon/local",
       "namespace": "loansout_naturalhistory_extension",
       "xpath": [
@@ -1152,7 +1152,7 @@
       "fieldname": "transferOrg",
       "transforms": {
       },
-      "source_type": "authority",
+      "source_type": "refname",
       "source_name": "organization/local",
       "namespace": "loansout_naturalhistory_extension",
       "xpath": [
@@ -1196,7 +1196,7 @@
       "fieldname": "transferPerson",
       "transforms": {
       },
-      "source_type": "authority",
+      "source_type": "refname",
       "source_name": "person/local",
       "namespace": "loansout_naturalhistory_extension",
       "xpath": [
@@ -1240,7 +1240,7 @@
       "fieldname": "transferDirector",
       "transforms": {
       },
-      "source_type": "authority",
+      "source_type": "refname",
       "source_name": "person/local",
       "namespace": "loansout_naturalhistory_extension",
       "xpath": [

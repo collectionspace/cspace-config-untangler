@@ -181,7 +181,7 @@
       "fieldname": "termFlag",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "placetermflag",
       "namespace": "places_common",
       "xpath": [
@@ -244,7 +244,7 @@
       "fieldname": "termLanguage",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "languages",
       "namespace": "places_common",
       "xpath": [
@@ -395,8 +395,8 @@
       "fieldname": "termSource",
       "transforms": {
       },
-      "source_type": "authority",
-      "source_name": "citation/local; citation/worldcat",
+      "source_type": "refname",
+      "source_name": "citation/local",
       "namespace": "places_common",
       "xpath": [
         "placeTermGroupList",
@@ -594,8 +594,8 @@
       "fieldname": "owner",
       "transforms": {
       },
-      "source_type": "authority",
-      "source_name": "person/local; organization/local",
+      "source_type": "refname",
+      "source_name": "person/local",
       "namespace": "places_common",
       "xpath": [
         "placeOwnerGroupList",
@@ -761,8 +761,8 @@
       "fieldname": "addressMunicipality",
       "transforms": {
       },
-      "source_type": "authority",
-      "source_name": "place/local; place/tgn",
+      "source_type": "refname",
+      "source_name": "place/local",
       "namespace": "places_common",
       "xpath": [
         "addrGroupList",
@@ -829,8 +829,8 @@
       "fieldname": "addressStateOrProvince",
       "transforms": {
       },
-      "source_type": "authority",
-      "source_name": "place/local; place/tgn",
+      "source_type": "refname",
+      "source_name": "place/local",
       "namespace": "places_common",
       "xpath": [
         "addrGroupList",
@@ -917,8 +917,8 @@
       "fieldname": "addressCountry",
       "transforms": {
       },
-      "source_type": "authority",
-      "source_name": "place/local; place/tgn",
+      "source_type": "refname",
+      "source_name": "place/local",
       "namespace": "places_common",
       "xpath": [
         "addrGroupList",
@@ -958,7 +958,7 @@
       "fieldname": "addressType",
       "transforms": {
       },
-      "source_type": "vocabulary",
+      "source_type": "refname",
       "source_name": "addresstype",
       "namespace": "places_common",
       "xpath": [
@@ -1550,8 +1550,8 @@
       "fieldname": "geoReferencedBy",
       "transforms": {
       },
-      "source_type": "authority",
-      "source_name": "person/local; organization/local",
+      "source_type": "refname",
+      "source_name": "person/local",
       "namespace": "places_common",
       "xpath": [
         "placeGeoRefGroupList",
