@@ -30,6 +30,7 @@ These changes are merged into the `main` branch, but have not been released. Aft
 === Changed
 
 === Bugfixes
+* Disabled forms no longer contribute their fields to a record type's field list. (PR#103)
 
 === Deleted
 
