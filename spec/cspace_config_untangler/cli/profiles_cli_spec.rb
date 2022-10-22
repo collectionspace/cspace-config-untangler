@@ -28,10 +28,10 @@ RSpec.describe CCU::Cli::ProfilesCli do
       let(:msg) do
         <<~MSG
         not in core_7-0-0: 89
-        not in bonsai_5-0-0: 34
+        not in bonsai_5-0-0: 77
         source differences: 3
         ui path differences: 0
-        same: 1343
+        same: 1300
 
         Wrote detailed report to: #{outfile}
         MSG
