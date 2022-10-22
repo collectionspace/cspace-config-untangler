@@ -247,7 +247,9 @@ module CspaceConfigUntangler
     def get_forms
       if @config.dig('forms') && @name != 'blob'
         h = {}
-        @config['forms'].keys.reject{ |e| e == 'mini' }.each{ |e| h[e] = CCU::Form.new(self, e) }
+        @config['forms'].keys
+          .reject{ |e| e == 'mini' }
+          .each{ |e| h[e] = CCU::Form.new(self, e) }
         return h
       else
         return {}
