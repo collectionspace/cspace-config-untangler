@@ -34,6 +34,18 @@ module CspaceConfigUntangler
         disabled
       end
 
+      def id
+        "#{rectype.profile.name} #{rectype.name} #{name}"
+      end
+
+      def to_s
+        "<##{self.class}:#{self.object_id.to_s(8)}\n"\
+          "  id: #{id}\n"\
+          "  disabled?: #{disabled?.inspect}\n"\
+          "  fields: #{fields.length}>"
+      end
+      alias :inspect :to_s
+
       private
 
       attr_reader :config
