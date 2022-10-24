@@ -1,5 +1,6 @@
 require_relative 'cli/debug_cli'
 require_relative 'cli/fields_cli'
+require_relative 'cli/forms_cli'
 require_relative 'cli/helpers'
 require_relative 'cli/mappers_cli'
 require_relative 'cli/profiles_cli'
@@ -7,7 +8,7 @@ require_relative 'cli/rectypes_cli'
 require_relative 'cli/templates_cli'
 
 module CspaceConfigUntangler
-  module Cli  
+  module Cli
     class CommandLine < Thor
       include CCU::Cli::Helpers
       def self.exit_on_failure?
@@ -19,6 +20,9 @@ module CspaceConfigUntangler
 
       desc 'fields SUBCOMMAND', 'Info/reports on fields in specified profiles/rectypes'
       subcommand 'fields', CCU::Cli::FieldsCli
+
+      desc 'forms SUBCOMMAND', 'Info/reports on forms in specified profiles/rectypes'
+      subcommand 'forms', CCU::Cli::FormsCli
 
       desc 'mappers SUBCOMMAND', 'Produce or work with JSON RecordMappers, as used by cspace-batch-import'
       subcommand 'mappers', CCU::Cli::MappersCli
