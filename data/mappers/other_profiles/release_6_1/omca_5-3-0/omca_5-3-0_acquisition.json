@@ -1,0 +1,538 @@
+{
+  "config": {
+    "profile_basename": "omca",
+    "version": "6-1-0",
+    "recordtype": "acquisition",
+    "document_name": "acquisitions",
+    "service_name": "Acquisition",
+    "service_path": "acquisitions",
+    "service_type": "procedure",
+    "object_name": "Acquisition",
+    "ns_uri": {
+      "acquisitions_common": "http://collectionspace.org/services/acquisition",
+      "acquisitions_omca": "http://collectionspace.org/services/acquisition/domain/omca"
+    },
+    "identifier_field": "acquisitionReferenceNumber",
+    "search_field": "acquisitionReferenceNumber"
+  },
+  "docstructure": {
+    "acquisitions_common": {
+      "acquisitionSources": {
+      },
+      "acquisitionFundingList": {
+        "acquisitionFunding": {
+        }
+      }
+    },
+    "acquisitions_omca": {
+      "acquisitionContactGroupList": {
+        "acquisitionContactGroup": {
+        }
+      }
+    }
+  },
+  "mappings": [
+    {
+      "fieldname": "acquisitionReferenceNumber",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "acquisitions_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "acquisitionReferenceNumber",
+      "required": "y"
+    },
+    {
+      "fieldname": "accessionDescription",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "acquisitions_omca",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "accessionDescription",
+      "required": "n"
+    },
+    {
+      "fieldname": "accessionDateGroup",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "acquisitions_common",
+      "xpath": [
+
+      ],
+      "data_type": "structured date group",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "accessionDateGroup",
+      "required": "n"
+    },
+    {
+      "fieldname": "acquisitionMethod",
+      "transforms": {
+        "vocabulary": "acquisitionmethod"
+      },
+      "source_type": "vocabulary",
+      "source_name": "acquisitionmethod",
+      "namespace": "acquisitions_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "acquisitionMethod",
+      "required": "n"
+    },
+    {
+      "fieldname": "acquisitionMethod",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "acquisitionmethod",
+      "namespace": "acquisitions_common",
+      "xpath": [
+
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "acquisitionMethodRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "acquisitionSource",
+      "transforms": {
+        "authority": [
+          "personauthorities",
+          "person"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "person/local",
+      "namespace": "acquisitions_common",
+      "xpath": [
+        "acquisitionSources"
+      ],
+      "data_type": "string",
+      "repeats": "y",
+      "in_repeating_group": "n",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "acquisitionSourcePerson",
+      "required": "n"
+    },
+    {
+      "fieldname": "acquisitionSource",
+      "transforms": {
+        "authority": [
+          "orgauthorities",
+          "organization"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "organization/local",
+      "namespace": "acquisitions_common",
+      "xpath": [
+        "acquisitionSources"
+      ],
+      "data_type": "string",
+      "repeats": "y",
+      "in_repeating_group": "n",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "acquisitionSourceOrganization",
+      "required": "n"
+    },
+    {
+      "fieldname": "acquisitionSource",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "person/local",
+      "namespace": "acquisitions_common",
+      "xpath": [
+        "acquisitionSources"
+      ],
+      "data_type": "csrefname",
+      "repeats": "y",
+      "in_repeating_group": "n",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "acquisitionSourceRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "contactRole",
+      "transforms": {
+        "vocabulary": "contactrole"
+      },
+      "source_type": "vocabulary",
+      "source_name": "contactrole",
+      "namespace": "acquisitions_omca",
+      "xpath": [
+        "acquisitionContactGroupList",
+        "acquisitionContactGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "contactRole",
+      "required": "n"
+    },
+    {
+      "fieldname": "contactRole",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "contactrole",
+      "namespace": "acquisitions_omca",
+      "xpath": [
+        "acquisitionContactGroupList",
+        "acquisitionContactGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "contactRoleRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "sourceContactNote",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "acquisitions_omca",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "sourceContactNote",
+      "required": "n"
+    },
+    {
+      "fieldname": "acquisitionReason",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "acquisitions_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "acquisitionReason",
+      "required": "n"
+    },
+    {
+      "fieldname": "acquisitionNote",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "acquisitions_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "acquisitionNote",
+      "required": "n"
+    },
+    {
+      "fieldname": "acquisitionProvisos",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "acquisitions_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "acquisitionProvisos",
+      "required": "n"
+    },
+    {
+      "fieldname": "acquisitionAuthorizer",
+      "transforms": {
+        "authority": [
+          "personauthorities",
+          "person"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "person/local",
+      "namespace": "acquisitions_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "acquisitionAuthorizer",
+      "required": "n"
+    },
+    {
+      "fieldname": "acquisitionAuthorizer",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "person/local",
+      "namespace": "acquisitions_common",
+      "xpath": [
+
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "acquisitionAuthorizerRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "acquisitionAuthorizerDate",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "acquisitions_common",
+      "xpath": [
+
+      ],
+      "data_type": "date",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "acquisitionAuthorizerDate",
+      "required": "n"
+    },
+    {
+      "fieldname": "acquisitionFundingCurrency",
+      "transforms": {
+        "vocabulary": "currency"
+      },
+      "source_type": "vocabulary",
+      "source_name": "currency",
+      "namespace": "acquisitions_common",
+      "xpath": [
+        "acquisitionFundingList",
+        "acquisitionFunding"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "acquisitionFundingCurrency",
+      "required": "n"
+    },
+    {
+      "fieldname": "acquisitionFundingCurrency",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "currency",
+      "namespace": "acquisitions_common",
+      "xpath": [
+        "acquisitionFundingList",
+        "acquisitionFunding"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "acquisitionFundingCurrencyRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "acquisitionFundingValue",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "acquisitions_common",
+      "xpath": [
+        "acquisitionFundingList",
+        "acquisitionFunding"
+      ],
+      "data_type": "float",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "acquisitionFundingValue",
+      "required": "n"
+    },
+    {
+      "fieldname": "acquisitionFundingSource",
+      "transforms": {
+        "vocabulary": "fundsource"
+      },
+      "source_type": "vocabulary",
+      "source_name": "fundsource",
+      "namespace": "acquisitions_common",
+      "xpath": [
+        "acquisitionFundingList",
+        "acquisitionFunding"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "acquisitionFundingSource",
+      "required": "n"
+    },
+    {
+      "fieldname": "acquisitionFundingSource",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "fundsource",
+      "namespace": "acquisitions_common",
+      "xpath": [
+        "acquisitionFundingList",
+        "acquisitionFunding"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "acquisitionFundingSourceRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "acquisitionFundingSourceProvisos",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "acquisitions_common",
+      "xpath": [
+        "acquisitionFundingList",
+        "acquisitionFunding"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "acquisitionFundingSourceProvisos",
+      "required": "n"
+    },
+    {
+      "fieldname": "creditLine",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "acquisitions_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "creditLine",
+      "required": "n"
+    },
+    {
+      "fieldname": "anonymous",
+      "transforms": {
+        "special": [
+          "boolean"
+        ]
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "acquisitions_omca",
+      "xpath": [
+
+      ],
+      "data_type": "boolean",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "anonymous",
+      "required": "n"
+    }
+  ]
+}

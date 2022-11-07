@@ -1,0 +1,1416 @@
+{
+  "config": {
+    "profile_basename": "omca",
+    "version": "6-1-0",
+    "recordtype": "claim",
+    "document_name": "claims",
+    "service_name": "Claim",
+    "service_path": "claims",
+    "service_type": "procedure",
+    "object_name": "Claim",
+    "ns_uri": {
+      "claims_common": "http://collectionspace.org/services/claim",
+      "claims_omca": "http://collectionspace.org/services/claim/domain/omca"
+    },
+    "identifier_field": "claimNumber",
+    "search_field": "claimNumber"
+  },
+  "docstructure": {
+    "claims_common": {
+      "altClaimNamesGroupList": {
+        "altClaimNamesGroup": {
+        }
+      },
+      "claimTypes": {
+      },
+      "claimFiledDatesGroupList": {
+        "claimFiledDatesGroup": {
+        }
+      },
+      "claimNotes": {
+      },
+      "sitesInvolvedGroupList": {
+        "sitesInvolvedGroup": {
+        }
+      },
+      "culturalGroupsInvolvedGroupList": {
+        "culturalGroupsInvolvedGroup": {
+        }
+      },
+      "initialResponseDatesGroupList": {
+        "initialResponseDatesGroup": {
+        }
+      },
+      "sentNAGPRACommitteeDatesGroupList": {
+        "sentNAGPRACommitteeDatesGroup": {
+        }
+      },
+      "recommendationsNAGPRACommitteeGroupList": {
+        "recommendationsNAGPRACommitteeGroup": {
+        }
+      },
+      "sentNationalNAGPRADatesGroupList": {
+        "sentNationalNAGPRADatesGroup": {
+        }
+      },
+      "responsesNationalNAGPRAGroupList": {
+        "responsesNationalNAGPRAGroup": {
+        }
+      },
+      "publicationsNationalNAGPRAGroupList": {
+        "publicationsNationalNAGPRAGroup": {
+        }
+      },
+      "nationalNAGPRA30DayNoticesGroupList": {
+        "nationalNAGPRA30DayNoticesGroup": {
+        }
+      },
+      "transferDatesGroupList": {
+        "transferDatesGroup": {
+        }
+      }
+    },
+    "claims_omca": {
+      "claimClaimantOMCAGroupList": {
+        "claimClaimantOMCAGroup": {
+        }
+      },
+      "requestsGroupList": {
+        "requestsGroup": {
+        }
+      },
+      "notesOnRequest": {
+      },
+      "deaccessionResearchCompleteGroupList": {
+        "deaccessionResearchCompleteGroup": {
+        }
+      },
+      "sentCollectionsCommitteeGroupList": {
+        "sentCollectionsCommitteeGroup": {
+        }
+      },
+      "recommendationCollectionsCommitteeGroupList": {
+        "recommendationCollectionsCommitteeGroup": {
+        }
+      },
+      "sentExecutiveTeamGroupList": {
+        "sentExecutiveTeamGroup": {
+        }
+      },
+      "recommendationExecutiveTeamGroupList": {
+        "recommendationExecutiveTeamGroup": {
+        }
+      },
+      "sentOMCABoardGroupList": {
+        "sentOMCABoardGroup": {
+        }
+      },
+      "recommendationOMCABoardGroupList": {
+        "recommendationOMCABoardGroup": {
+        }
+      },
+      "claimantNotifiedClaimStatusGroupList": {
+        "claimantNotifiedClaimStatusGroup": {
+        }
+      },
+      "claimProcessNotes": {
+      }
+    }
+  },
+  "mappings": [
+    {
+      "fieldname": "claimNumber",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "claims_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "claimNumber",
+      "required": "y"
+    },
+    {
+      "fieldname": "filedByOMCA",
+      "transforms": {
+        "authority": [
+          "personauthorities",
+          "person"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "person/local",
+      "namespace": "claims_omca",
+      "xpath": [
+        "claimClaimantOMCAGroupList",
+        "claimClaimantOMCAGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "filedByOMCAPerson",
+      "required": "n"
+    },
+    {
+      "fieldname": "filedByOMCA",
+      "transforms": {
+        "authority": [
+          "orgauthorities",
+          "organization"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "organization/local",
+      "namespace": "claims_omca",
+      "xpath": [
+        "claimClaimantOMCAGroupList",
+        "claimClaimantOMCAGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "filedByOMCAOrganization",
+      "required": "n"
+    },
+    {
+      "fieldname": "filedByOMCA",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "person/local",
+      "namespace": "claims_omca",
+      "xpath": [
+        "claimClaimantOMCAGroupList",
+        "claimClaimantOMCAGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "filedByOMCARefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "filedOnBehalfOfOMCA",
+      "transforms": {
+        "authority": [
+          "personauthorities",
+          "person"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "person/local",
+      "namespace": "claims_omca",
+      "xpath": [
+        "claimClaimantOMCAGroupList",
+        "claimClaimantOMCAGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "filedOnBehalfOfOMCAPerson",
+      "required": "n"
+    },
+    {
+      "fieldname": "filedOnBehalfOfOMCA",
+      "transforms": {
+        "authority": [
+          "orgauthorities",
+          "organization"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "organization/local",
+      "namespace": "claims_omca",
+      "xpath": [
+        "claimClaimantOMCAGroupList",
+        "claimClaimantOMCAGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "filedOnBehalfOfOMCAOrganization",
+      "required": "n"
+    },
+    {
+      "fieldname": "filedOnBehalfOfOMCA",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "person/local",
+      "namespace": "claims_omca",
+      "xpath": [
+        "claimClaimantOMCAGroupList",
+        "claimClaimantOMCAGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "filedOnBehalfOfOMCARefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "federallyRecognizedOMCA",
+      "transforms": {
+        "vocabulary": "federallyrecognized"
+      },
+      "source_type": "vocabulary",
+      "source_name": "federallyrecognized",
+      "namespace": "claims_omca",
+      "xpath": [
+        "claimClaimantOMCAGroupList",
+        "claimClaimantOMCAGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "federallyRecognizedOMCA",
+      "required": "n"
+    },
+    {
+      "fieldname": "federallyRecognizedOMCA",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "federallyrecognized",
+      "namespace": "claims_omca",
+      "xpath": [
+        "claimClaimantOMCAGroupList",
+        "claimClaimantOMCAGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "federallyRecognizedOMCARefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "claimantNoteOMCA",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "claims_omca",
+      "xpath": [
+        "claimClaimantOMCAGroupList",
+        "claimClaimantOMCAGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "claimantNoteOMCA",
+      "required": "n"
+    },
+    {
+      "fieldname": "transactionType",
+      "transforms": {
+        "vocabulary": "transactiontype"
+      },
+      "source_type": "vocabulary",
+      "source_name": "transactiontype",
+      "namespace": "claims_omca",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "transactionType",
+      "required": "n"
+    },
+    {
+      "fieldname": "transactionType",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "transactiontype",
+      "namespace": "claims_omca",
+      "xpath": [
+
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "transactionTypeRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "detailsOfRequest",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "claims_omca",
+      "xpath": [
+        "requestsGroupList",
+        "requestsGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "detailsOfRequest",
+      "required": "n"
+    },
+    {
+      "fieldname": "dateOfRequest",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "claims_omca",
+      "xpath": [
+        "requestsGroupList",
+        "requestsGroup"
+      ],
+      "data_type": "date",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "dateOfRequest",
+      "required": "n"
+    },
+    {
+      "fieldname": "dateFulfilled",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "claims_omca",
+      "xpath": [
+        "requestsGroupList",
+        "requestsGroup"
+      ],
+      "data_type": "date",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "dateFulfilled",
+      "required": "n"
+    },
+    {
+      "fieldname": "noteOnRequest",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "claims_omca",
+      "xpath": [
+        "notesOnRequest"
+      ],
+      "data_type": "string",
+      "repeats": "y",
+      "in_repeating_group": "n",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "noteOnRequest",
+      "required": "n"
+    },
+    {
+      "fieldname": "claimNumberOMCA",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "claims_omca",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "claimNumberOMCA",
+      "required": "n"
+    },
+    {
+      "fieldname": "altClaimName",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "claims_common",
+      "xpath": [
+        "altClaimNamesGroupList",
+        "altClaimNamesGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "altClaimName",
+      "required": "n"
+    },
+    {
+      "fieldname": "altClaimNote",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "claims_common",
+      "xpath": [
+        "altClaimNamesGroupList",
+        "altClaimNamesGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "altClaimNote",
+      "required": "n"
+    },
+    {
+      "fieldname": "claimType",
+      "transforms": {
+        "vocabulary": "claimtype"
+      },
+      "source_type": "vocabulary",
+      "source_name": "claimtype",
+      "namespace": "claims_common",
+      "xpath": [
+        "claimTypes"
+      ],
+      "data_type": "string",
+      "repeats": "y",
+      "in_repeating_group": "n",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "claimType",
+      "required": "n"
+    },
+    {
+      "fieldname": "claimType",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "claimtype",
+      "namespace": "claims_common",
+      "xpath": [
+        "claimTypes"
+      ],
+      "data_type": "csrefname",
+      "repeats": "y",
+      "in_repeating_group": "n",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "claimTypeRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "claimName",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "claims_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "claimName",
+      "required": "n"
+    },
+    {
+      "fieldname": "claimFiledDate",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "claims_common",
+      "xpath": [
+        "claimFiledDatesGroupList",
+        "claimFiledDatesGroup"
+      ],
+      "data_type": "date",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "claimFiledDate",
+      "required": "n"
+    },
+    {
+      "fieldname": "claimFiledNote",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "claims_common",
+      "xpath": [
+        "claimFiledDatesGroupList",
+        "claimFiledDatesGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "claimFiledNote",
+      "required": "n"
+    },
+    {
+      "fieldname": "claimNote",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "claims_common",
+      "xpath": [
+        "claimNotes"
+      ],
+      "data_type": "string",
+      "repeats": "y",
+      "in_repeating_group": "n",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "claimNote",
+      "required": "n"
+    },
+    {
+      "fieldname": "siteOrPlaceName",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "claims_common",
+      "xpath": [
+        "sitesInvolvedGroupList",
+        "sitesInvolvedGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "siteOrPlaceName",
+      "required": "n"
+    },
+    {
+      "fieldname": "siteOrPlaceNote",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "claims_common",
+      "xpath": [
+        "sitesInvolvedGroupList",
+        "sitesInvolvedGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "siteOrPlaceNote",
+      "required": "n"
+    },
+    {
+      "fieldname": "culturalGroupName",
+      "transforms": {
+        "authority": [
+          "orgauthorities",
+          "organization"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "organization/local",
+      "namespace": "claims_common",
+      "xpath": [
+        "culturalGroupsInvolvedGroupList",
+        "culturalGroupsInvolvedGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "culturalGroupName",
+      "required": "n"
+    },
+    {
+      "fieldname": "culturalGroupName",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "organization/local",
+      "namespace": "claims_common",
+      "xpath": [
+        "culturalGroupsInvolvedGroupList",
+        "culturalGroupsInvolvedGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "culturalGroupNameRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "culturalGroupNote",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "claims_common",
+      "xpath": [
+        "culturalGroupsInvolvedGroupList",
+        "culturalGroupsInvolvedGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "culturalGroupNote",
+      "required": "n"
+    },
+    {
+      "fieldname": "initialResponseDate",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "claims_common",
+      "xpath": [
+        "initialResponseDatesGroupList",
+        "initialResponseDatesGroup"
+      ],
+      "data_type": "date",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "initialResponseDate",
+      "required": "n"
+    },
+    {
+      "fieldname": "initialResponseDateNote",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "claims_common",
+      "xpath": [
+        "initialResponseDatesGroupList",
+        "initialResponseDatesGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "initialResponseDateNote",
+      "required": "n"
+    },
+    {
+      "fieldname": "sentNAGPRACommitteeDate",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "claims_common",
+      "xpath": [
+        "sentNAGPRACommitteeDatesGroupList",
+        "sentNAGPRACommitteeDatesGroup"
+      ],
+      "data_type": "date",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "sentNAGPRACommitteeDate",
+      "required": "n"
+    },
+    {
+      "fieldname": "sentNAGPRACommitteeNote",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "claims_common",
+      "xpath": [
+        "sentNAGPRACommitteeDatesGroupList",
+        "sentNAGPRACommitteeDatesGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "sentNAGPRACommitteeNote",
+      "required": "n"
+    },
+    {
+      "fieldname": "recommendationNAGPRACommitteeDate",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "claims_common",
+      "xpath": [
+        "recommendationsNAGPRACommitteeGroupList",
+        "recommendationsNAGPRACommitteeGroup"
+      ],
+      "data_type": "date",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "recommendationNAGPRACommitteeDate",
+      "required": "n"
+    },
+    {
+      "fieldname": "recommendationNAGPRACommitteeNote",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "claims_common",
+      "xpath": [
+        "recommendationsNAGPRACommitteeGroupList",
+        "recommendationsNAGPRACommitteeGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "recommendationNAGPRACommitteeNote",
+      "required": "n"
+    },
+    {
+      "fieldname": "deaccessionResearchCompleteDate",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "claims_omca",
+      "xpath": [
+        "deaccessionResearchCompleteGroupList",
+        "deaccessionResearchCompleteGroup"
+      ],
+      "data_type": "date",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "deaccessionResearchCompleteDate",
+      "required": "n"
+    },
+    {
+      "fieldname": "deaccessionResearchCompleteNote",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "claims_omca",
+      "xpath": [
+        "deaccessionResearchCompleteGroupList",
+        "deaccessionResearchCompleteGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "deaccessionResearchCompleteNote",
+      "required": "n"
+    },
+    {
+      "fieldname": "sentCollectionsCommitteeDate",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "claims_omca",
+      "xpath": [
+        "sentCollectionsCommitteeGroupList",
+        "sentCollectionsCommitteeGroup"
+      ],
+      "data_type": "date",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "sentCollectionsCommitteeDate",
+      "required": "n"
+    },
+    {
+      "fieldname": "sentCollectionsCommitteeNote",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "claims_omca",
+      "xpath": [
+        "sentCollectionsCommitteeGroupList",
+        "sentCollectionsCommitteeGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "sentCollectionsCommitteeNote",
+      "required": "n"
+    },
+    {
+      "fieldname": "recommendationCollectionsCommitteeDate",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "claims_omca",
+      "xpath": [
+        "recommendationCollectionsCommitteeGroupList",
+        "recommendationCollectionsCommitteeGroup"
+      ],
+      "data_type": "date",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "recommendationCollectionsCommitteeDate",
+      "required": "n"
+    },
+    {
+      "fieldname": "recommendationCollectionsCommitteeRecommendation",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "claims_omca",
+      "xpath": [
+        "recommendationCollectionsCommitteeGroupList",
+        "recommendationCollectionsCommitteeGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "recommendationCollectionsCommitteeRecommendation",
+      "required": "n"
+    },
+    {
+      "fieldname": "sentExecutiveTeamDate",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "claims_omca",
+      "xpath": [
+        "sentExecutiveTeamGroupList",
+        "sentExecutiveTeamGroup"
+      ],
+      "data_type": "date",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "sentExecutiveTeamDate",
+      "required": "n"
+    },
+    {
+      "fieldname": "sentExecutiveTeamNote",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "claims_omca",
+      "xpath": [
+        "sentExecutiveTeamGroupList",
+        "sentExecutiveTeamGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "sentExecutiveTeamNote",
+      "required": "n"
+    },
+    {
+      "fieldname": "recommendationExecutiveTeamDate",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "claims_omca",
+      "xpath": [
+        "recommendationExecutiveTeamGroupList",
+        "recommendationExecutiveTeamGroup"
+      ],
+      "data_type": "date",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "recommendationExecutiveTeamDate",
+      "required": "n"
+    },
+    {
+      "fieldname": "recommendationExecutiveTeamRecommendation",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "claims_omca",
+      "xpath": [
+        "recommendationExecutiveTeamGroupList",
+        "recommendationExecutiveTeamGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "recommendationExecutiveTeamRecommendation",
+      "required": "n"
+    },
+    {
+      "fieldname": "sentOMCABoardDate",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "claims_omca",
+      "xpath": [
+        "sentOMCABoardGroupList",
+        "sentOMCABoardGroup"
+      ],
+      "data_type": "date",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "sentOMCABoardDate",
+      "required": "n"
+    },
+    {
+      "fieldname": "sentOMCABoardNote",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "claims_omca",
+      "xpath": [
+        "sentOMCABoardGroupList",
+        "sentOMCABoardGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "sentOMCABoardNote",
+      "required": "n"
+    },
+    {
+      "fieldname": "recommendationOMCABoardDate",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "claims_omca",
+      "xpath": [
+        "recommendationOMCABoardGroupList",
+        "recommendationOMCABoardGroup"
+      ],
+      "data_type": "date",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "recommendationOMCABoardDate",
+      "required": "n"
+    },
+    {
+      "fieldname": "recommendationOMCABoardRecommendation",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "claims_omca",
+      "xpath": [
+        "recommendationOMCABoardGroupList",
+        "recommendationOMCABoardGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "recommendationOMCABoardRecommendation",
+      "required": "n"
+    },
+    {
+      "fieldname": "sentNationalNAGPRADate",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "claims_common",
+      "xpath": [
+        "sentNationalNAGPRADatesGroupList",
+        "sentNationalNAGPRADatesGroup"
+      ],
+      "data_type": "date",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "sentNationalNAGPRADate",
+      "required": "n"
+    },
+    {
+      "fieldname": "sentNationalNAGPRANote",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "claims_common",
+      "xpath": [
+        "sentNationalNAGPRADatesGroupList",
+        "sentNationalNAGPRADatesGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "sentNationalNAGPRANote",
+      "required": "n"
+    },
+    {
+      "fieldname": "responseNationalNAGPRADate",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "claims_common",
+      "xpath": [
+        "responsesNationalNAGPRAGroupList",
+        "responsesNationalNAGPRAGroup"
+      ],
+      "data_type": "date",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "responseNationalNAGPRADate",
+      "required": "n"
+    },
+    {
+      "fieldname": "responseNationalNAGPRANote",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "claims_common",
+      "xpath": [
+        "responsesNationalNAGPRAGroupList",
+        "responsesNationalNAGPRAGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "responseNationalNAGPRANote",
+      "required": "n"
+    },
+    {
+      "fieldname": "publicationNationalNAGPRADate",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "claims_common",
+      "xpath": [
+        "publicationsNationalNAGPRAGroupList",
+        "publicationsNationalNAGPRAGroup"
+      ],
+      "data_type": "date",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "publicationNationalNAGPRADate",
+      "required": "n"
+    },
+    {
+      "fieldname": "publicationNationalNAGPRANote",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "claims_common",
+      "xpath": [
+        "publicationsNationalNAGPRAGroupList",
+        "publicationsNationalNAGPRAGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "publicationNationalNAGPRANote",
+      "required": "n"
+    },
+    {
+      "fieldname": "nationalNAGPRA30DayNoticeDate",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "claims_common",
+      "xpath": [
+        "nationalNAGPRA30DayNoticesGroupList",
+        "nationalNAGPRA30DayNoticesGroup"
+      ],
+      "data_type": "date",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "nationalNAGPRA30DayNoticeDate",
+      "required": "n"
+    },
+    {
+      "fieldname": "nationalNAGPRA30DayNoticeType",
+      "transforms": {
+      },
+      "source_type": "optionlist",
+      "source_name": "nagpraNoticeDateTypes",
+      "namespace": "claims_common",
+      "xpath": [
+        "nationalNAGPRA30DayNoticesGroupList",
+        "nationalNAGPRA30DayNoticesGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+        "period-begins",
+        "period-ends"
+      ],
+      "datacolumn": "nationalNAGPRA30DayNoticeType",
+      "required": "n"
+    },
+    {
+      "fieldname": "nationalNAGPRA30DayNoticeNote",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "claims_common",
+      "xpath": [
+        "nationalNAGPRA30DayNoticesGroupList",
+        "nationalNAGPRA30DayNoticesGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "nationalNAGPRA30DayNoticeNote",
+      "required": "n"
+    },
+    {
+      "fieldname": "claimantNotifiedClaimStatusDate",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "claims_omca",
+      "xpath": [
+        "claimantNotifiedClaimStatusGroupList",
+        "claimantNotifiedClaimStatusGroup"
+      ],
+      "data_type": "date",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "claimantNotifiedClaimStatusDate",
+      "required": "n"
+    },
+    {
+      "fieldname": "claimantNotifiedClaimStatusNote",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "claims_omca",
+      "xpath": [
+        "claimantNotifiedClaimStatusGroupList",
+        "claimantNotifiedClaimStatusGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "claimantNotifiedClaimStatusNote",
+      "required": "n"
+    },
+    {
+      "fieldname": "transferDate",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "claims_common",
+      "xpath": [
+        "transferDatesGroupList",
+        "transferDatesGroup"
+      ],
+      "data_type": "date",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "transferDate",
+      "required": "n"
+    },
+    {
+      "fieldname": "transferNote",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "claims_common",
+      "xpath": [
+        "transferDatesGroupList",
+        "transferDatesGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "transferNote",
+      "required": "n"
+    },
+    {
+      "fieldname": "claimProcessNote",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "claims_omca",
+      "xpath": [
+        "claimProcessNotes"
+      ],
+      "data_type": "string",
+      "repeats": "y",
+      "in_repeating_group": "n",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "claimProcessNote",
+      "required": "n"
+    }
+  ]
+}

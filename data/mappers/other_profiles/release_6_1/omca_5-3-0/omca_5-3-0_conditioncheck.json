@@ -1,0 +1,798 @@
+{
+  "config": {
+    "profile_basename": "omca",
+    "version": "6-1-0",
+    "recordtype": "conditioncheck",
+    "document_name": "conditionchecks",
+    "service_name": "Conditionchecks",
+    "service_path": "conditionchecks",
+    "service_type": "procedure",
+    "object_name": "Conditioncheck",
+    "ns_uri": {
+      "conditionchecks_common": "http://collectionspace.org/services/conditioncheck",
+      "conditionchecks_omca": "http://collectionspace.org/services/conditioncheck/domain/omca"
+    },
+    "identifier_field": "conditionCheckRefNumber",
+    "search_field": "conditionCheckRefNumber"
+  },
+  "docstructure": {
+    "conditionchecks_common": {
+      "envConditionNoteGroupList": {
+        "envConditionNoteGroup": {
+        }
+      },
+      "hazardGroupList": {
+        "hazardGroup": {
+        }
+      }
+    },
+    "conditionchecks_omca": {
+      "assessmentRequestGroupList": {
+        "assessmentRequestGroup": {
+        }
+      },
+      "omcaConditionCheckMethods": {
+      }
+    }
+  },
+  "mappings": [
+    {
+      "fieldname": "conditionCheckRefNumber",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "conditionchecks_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "conditionCheckRefNumber",
+      "required": "y"
+    },
+    {
+      "fieldname": "conditionChecker",
+      "transforms": {
+        "authority": [
+          "personauthorities",
+          "person"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "person/local",
+      "namespace": "conditionchecks_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "conditionCheckerPerson",
+      "required": "n"
+    },
+    {
+      "fieldname": "conditionChecker",
+      "transforms": {
+        "authority": [
+          "orgauthorities",
+          "organization"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "organization/local",
+      "namespace": "conditionchecks_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "conditionCheckerOrganization",
+      "required": "n"
+    },
+    {
+      "fieldname": "conditionChecker",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "person/local",
+      "namespace": "conditionchecks_common",
+      "xpath": [
+
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "conditionCheckerRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "assessmentRequestedBy",
+      "transforms": {
+        "authority": [
+          "personauthorities",
+          "person"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "person/local",
+      "namespace": "conditionchecks_omca",
+      "xpath": [
+        "assessmentRequestGroupList",
+        "assessmentRequestGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "assessmentRequestedBy",
+      "required": "n"
+    },
+    {
+      "fieldname": "assessmentRequestedBy",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "person/local",
+      "namespace": "conditionchecks_omca",
+      "xpath": [
+        "assessmentRequestGroupList",
+        "assessmentRequestGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "assessmentRequestedByRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "assessmentRequestRole",
+      "transforms": {
+        "vocabulary": "assessmentrequestrole"
+      },
+      "source_type": "vocabulary",
+      "source_name": "assessmentrequestrole",
+      "namespace": "conditionchecks_omca",
+      "xpath": [
+        "assessmentRequestGroupList",
+        "assessmentRequestGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "assessmentRequestRole",
+      "required": "n"
+    },
+    {
+      "fieldname": "assessmentRequestRole",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "assessmentrequestrole",
+      "namespace": "conditionchecks_omca",
+      "xpath": [
+        "assessmentRequestGroupList",
+        "assessmentRequestGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "assessmentRequestRoleRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "assessmentRequestDateRequested",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "conditionchecks_omca",
+      "xpath": [
+        "assessmentRequestGroupList",
+        "assessmentRequestGroup"
+      ],
+      "data_type": "date",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "assessmentRequestDateRequested",
+      "required": "n"
+    },
+    {
+      "fieldname": "assessmentRequestDateRequired",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "conditionchecks_omca",
+      "xpath": [
+        "assessmentRequestGroupList",
+        "assessmentRequestGroup"
+      ],
+      "data_type": "date",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "assessmentRequestDateRequired",
+      "required": "n"
+    },
+    {
+      "fieldname": "conditionCheckReason",
+      "transforms": {
+        "vocabulary": "conditionCheckReason"
+      },
+      "source_type": "vocabulary",
+      "source_name": "conditionCheckReason",
+      "namespace": "conditionchecks_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "conditionCheckReason",
+      "required": "n"
+    },
+    {
+      "fieldname": "conditionCheckReason",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "conditionCheckReason",
+      "namespace": "conditionchecks_common",
+      "xpath": [
+
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "conditionCheckReasonRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "omcaConditionCheckMethod",
+      "transforms": {
+        "vocabulary": "omcaConditionCheckMethod"
+      },
+      "source_type": "vocabulary",
+      "source_name": "omcaConditionCheckMethod",
+      "namespace": "conditionchecks_omca",
+      "xpath": [
+        "omcaConditionCheckMethods"
+      ],
+      "data_type": "string",
+      "repeats": "y",
+      "in_repeating_group": "n",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "omcaConditionCheckMethod",
+      "required": "n"
+    },
+    {
+      "fieldname": "omcaConditionCheckMethod",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "omcaConditionCheckMethod",
+      "namespace": "conditionchecks_omca",
+      "xpath": [
+        "omcaConditionCheckMethods"
+      ],
+      "data_type": "csrefname",
+      "repeats": "y",
+      "in_repeating_group": "n",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "omcaConditionCheckMethodRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "condition",
+      "transforms": {
+        "vocabulary": "condition"
+      },
+      "source_type": "vocabulary",
+      "source_name": "condition",
+      "namespace": "conditionchecks_omca",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "condition",
+      "required": "n"
+    },
+    {
+      "fieldname": "condition",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "condition",
+      "namespace": "conditionchecks_omca",
+      "xpath": [
+
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "conditionRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "conditionDate",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "conditionchecks_omca",
+      "xpath": [
+
+      ],
+      "data_type": "date",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "conditionDate",
+      "required": "n"
+    },
+    {
+      "fieldname": "conditionNote",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "conditionchecks_omca",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "conditionNote",
+      "required": "n"
+    },
+    {
+      "fieldname": "envConditionNote",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "conditionchecks_common",
+      "xpath": [
+        "envConditionNoteGroupList",
+        "envConditionNoteGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "envConditionNote",
+      "required": "n"
+    },
+    {
+      "fieldname": "envConditionNoteDate",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "conditionchecks_common",
+      "xpath": [
+        "envConditionNoteGroupList",
+        "envConditionNoteGroup"
+      ],
+      "data_type": "date",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "envConditionNoteDate",
+      "required": "n"
+    },
+    {
+      "fieldname": "conditionCheckNote",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "conditionchecks_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "conditionCheckNote",
+      "required": "n"
+    },
+    {
+      "fieldname": "okForExhibitLoanAccession",
+      "transforms": {
+        "special": [
+          "boolean"
+        ]
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "conditionchecks_omca",
+      "xpath": [
+
+      ],
+      "data_type": "boolean",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "okForExhibitLoanAccession",
+      "required": "n"
+    },
+    {
+      "fieldname": "needsTreatment",
+      "transforms": {
+        "vocabulary": "needstreatment"
+      },
+      "source_type": "vocabulary",
+      "source_name": "needstreatment",
+      "namespace": "conditionchecks_omca",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "needsTreatment",
+      "required": "n"
+    },
+    {
+      "fieldname": "needsTreatment",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "needstreatment",
+      "namespace": "conditionchecks_omca",
+      "xpath": [
+
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "needsTreatmentRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "displayRecommendations",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "conditionchecks_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "displayRecommendations",
+      "required": "n"
+    },
+    {
+      "fieldname": "handlingRecommendations",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "conditionchecks_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "handlingRecommendations",
+      "required": "n"
+    },
+    {
+      "fieldname": "packingRecommendations",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "conditionchecks_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "packingRecommendations",
+      "required": "n"
+    },
+    {
+      "fieldname": "tempRequirement",
+      "transforms": {
+        "vocabulary": "temperaturelevel"
+      },
+      "source_type": "vocabulary",
+      "source_name": "temperaturelevel",
+      "namespace": "conditionchecks_omca",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "tempRequirement",
+      "required": "n"
+    },
+    {
+      "fieldname": "tempRequirement",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "temperaturelevel",
+      "namespace": "conditionchecks_omca",
+      "xpath": [
+
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "tempRequirementRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "humidityRequirement",
+      "transforms": {
+        "vocabulary": "humiditylevel"
+      },
+      "source_type": "vocabulary",
+      "source_name": "humiditylevel",
+      "namespace": "conditionchecks_omca",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "humidityRequirement",
+      "required": "n"
+    },
+    {
+      "fieldname": "humidityRequirement",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "humiditylevel",
+      "namespace": "conditionchecks_omca",
+      "xpath": [
+
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "humidityRequirementRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "lightRequirement",
+      "transforms": {
+        "vocabulary": "lightlevel"
+      },
+      "source_type": "vocabulary",
+      "source_name": "lightlevel",
+      "namespace": "conditionchecks_omca",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "lightRequirement",
+      "required": "n"
+    },
+    {
+      "fieldname": "lightRequirement",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "lightlevel",
+      "namespace": "conditionchecks_omca",
+      "xpath": [
+
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "lightRequirementRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "storageRequirements",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "conditionchecks_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "storageRequirements",
+      "required": "n"
+    },
+    {
+      "fieldname": "hazard",
+      "transforms": {
+        "vocabulary": "hazard"
+      },
+      "source_type": "vocabulary",
+      "source_name": "hazard",
+      "namespace": "conditionchecks_common",
+      "xpath": [
+        "hazardGroupList",
+        "hazardGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "hazard",
+      "required": "n"
+    },
+    {
+      "fieldname": "hazard",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "hazard",
+      "namespace": "conditionchecks_common",
+      "xpath": [
+        "hazardGroupList",
+        "hazardGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "hazardRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "hazardDate",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "conditionchecks_common",
+      "xpath": [
+        "hazardGroupList",
+        "hazardGroup"
+      ],
+      "data_type": "date",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "hazardDate",
+      "required": "n"
+    },
+    {
+      "fieldname": "hazardNote",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "conditionchecks_common",
+      "xpath": [
+        "hazardGroupList",
+        "hazardGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "hazardNote",
+      "required": "n"
+    }
+  ]
+}
