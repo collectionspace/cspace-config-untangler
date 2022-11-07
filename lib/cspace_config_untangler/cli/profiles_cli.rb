@@ -6,7 +6,7 @@ module CspaceConfigUntangler
       include CCU::Cli::Helpers
       desc 'all', 'Print the names of all known profiles to screen'
       def all
-        say([CCU.main_profile, CCU.profiles].flatten.uniq.sort.join("\n"))
+        say([CCU.main_profile, CCU.profiles].compact.flatten.uniq.sort.join("\n"))
       end
 
       desc 'check', 'Prints to screen the names of profiles that will be processed'
@@ -34,7 +34,7 @@ LONGDESC
       option :output, desc: 'Path to directory in which to output file. Name of the file is hardcoded, using the names of the profiles.', default: CCU::datadir, aliases: '-o'
       def compare
         profiles = get_profiles
-        
+
         if profiles.length > 2
           say('Can only compare two profiles at a time')
         elsif profiles.length == 1

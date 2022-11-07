@@ -1,0 +1,293 @@
+{
+  "config": {
+    "profile_basename": "omca",
+    "version": "6-1-0",
+    "recordtype": "objectexit",
+    "document_name": "objectexit",
+    "service_name": "ObjectExit",
+    "service_path": "objectexit",
+    "service_type": "procedure",
+    "object_name": "ObjectExit",
+    "ns_uri": {
+      "objectexit_common": "http://collectionspace.org/services/objectexit",
+      "objectexit_omca": "http://collectionspace.org/services/objectexit/domain/omca"
+    },
+    "identifier_field": "exitNumber",
+    "search_field": "exitNumber"
+  },
+  "docstructure": {
+    "objectexit_common": {
+      "exitMethods": {
+      }
+    },
+    "objectexit_omca": {
+      "exitStatusGroupList": {
+        "exitStatusGroup": {
+        }
+      }
+    }
+  },
+  "mappings": [
+    {
+      "fieldname": "exitNumber",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "objectexit_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "exitNumber",
+      "required": "y"
+    },
+    {
+      "fieldname": "exitDateGroup",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "objectexit_common",
+      "xpath": [
+
+      ],
+      "data_type": "structured date group",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "exitDateGroup",
+      "required": "n"
+    },
+    {
+      "fieldname": "depositor",
+      "transforms": {
+        "authority": [
+          "personauthorities",
+          "person"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "person/local",
+      "namespace": "objectexit_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "depositorPerson",
+      "required": "n"
+    },
+    {
+      "fieldname": "depositor",
+      "transforms": {
+        "authority": [
+          "orgauthorities",
+          "organization"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "organization/local",
+      "namespace": "objectexit_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "depositorOrganization",
+      "required": "n"
+    },
+    {
+      "fieldname": "depositor",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "person/local",
+      "namespace": "objectexit_common",
+      "xpath": [
+
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "depositorRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "exitStatus",
+      "transforms": {
+        "vocabulary": "exitstatus"
+      },
+      "source_type": "vocabulary",
+      "source_name": "exitstatus",
+      "namespace": "objectexit_omca",
+      "xpath": [
+        "exitStatusGroupList",
+        "exitStatusGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "exitStatus",
+      "required": "n"
+    },
+    {
+      "fieldname": "exitStatus",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "exitstatus",
+      "namespace": "objectexit_omca",
+      "xpath": [
+        "exitStatusGroupList",
+        "exitStatusGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "exitStatusRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "exitStatusDate",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "objectexit_omca",
+      "xpath": [
+        "exitStatusGroupList",
+        "exitStatusGroup"
+      ],
+      "data_type": "date",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "exitStatusDate",
+      "required": "n"
+    },
+    {
+      "fieldname": "exitMethod",
+      "transforms": {
+        "vocabulary": "exitmethod"
+      },
+      "source_type": "vocabulary",
+      "source_name": "exitmethod",
+      "namespace": "objectexit_common",
+      "xpath": [
+        "exitMethods"
+      ],
+      "data_type": "string",
+      "repeats": "y",
+      "in_repeating_group": "n",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "exitMethod",
+      "required": "n"
+    },
+    {
+      "fieldname": "exitMethod",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "exitmethod",
+      "namespace": "objectexit_common",
+      "xpath": [
+        "exitMethods"
+      ],
+      "data_type": "csrefname",
+      "repeats": "y",
+      "in_repeating_group": "n",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "exitMethodRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "exitReason",
+      "transforms": {
+        "vocabulary": "exitreason"
+      },
+      "source_type": "vocabulary",
+      "source_name": "exitreason",
+      "namespace": "objectexit_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "exitReason",
+      "required": "n"
+    },
+    {
+      "fieldname": "exitReason",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "exitreason",
+      "namespace": "objectexit_common",
+      "xpath": [
+
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "exitReasonRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "exitNote",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "objectexit_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "exitNote",
+      "required": "n"
+    }
+  ]
+}

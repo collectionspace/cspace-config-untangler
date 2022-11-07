@@ -1,0 +1,153 @@
+{
+  "config": {
+    "profile_basename": "omca",
+    "version": "6-1-0",
+    "recordtype": "authorityhierarchy",
+    "document_name": "relations",
+    "service_name": "Relations",
+    "service_path": "relations",
+    "service_type": "relation",
+    "object_name": "Authority Hierarchy Relation",
+    "ns_uri": {
+      "relations_common": "http://collectionspace.org/services/relation"
+    },
+    "identifier_field": "subjectCsid",
+    "search_field": "term"
+  },
+  "docstructure": {
+    "relations_common": {
+      "subjectCsid": {
+      },
+      "relationshipType": {
+      },
+      "objectCsid": {
+      }
+    }
+  },
+  "mappings": [
+    {
+      "fieldname": "termType",
+      "transforms": {
+      },
+      "source_type": "optionlist",
+      "source_name": "fakeProfileAuthorityTypes",
+      "namespace": "relations_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n",
+      "opt_list_values": [
+        "citationauthorities",
+        "conceptauthorities",
+        "locationauthorities",
+        "orgauthorities",
+        "personauthorities",
+        "placeauthorities",
+        "taxonomyauthority"
+      ],
+      "datacolumn": "term_type",
+      "required": "y in template"
+    },
+    {
+      "fieldname": "termSubType",
+      "transforms": {
+      },
+      "source_type": "optionlist",
+      "source_name": "fakeProfileAuthoritySubtypes",
+      "namespace": "relations_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n",
+      "opt_list_values": [
+        "activity",
+        "citation",
+        "common_ta",
+        "concept",
+        "location",
+        "material_ca",
+        "nomenclature",
+        "occasion",
+        "offsite_sla",
+        "organization",
+        "person",
+        "place",
+        "taxon",
+        "tgn_place",
+        "ulan_oa",
+        "ulan_pa",
+        "worldcat"
+      ],
+      "datacolumn": "term_subtype",
+      "required": "y in template"
+    },
+    {
+      "fieldname": "subjectCsid",
+      "transforms": {
+        "special": [
+          "term_to_csid"
+        ]
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "relations_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "narrower_term",
+      "required": "y"
+    },
+    {
+      "fieldname": "relationshipType",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "relations_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "relationshiptype",
+      "required": "y",
+      "to_template": false
+    },
+    {
+      "fieldname": "objectCsid",
+      "transforms": {
+        "special": [
+          "term_to_csid"
+        ]
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "relations_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "broader_term",
+      "required": "y"
+    }
+  ]
+}

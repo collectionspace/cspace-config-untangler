@@ -1,0 +1,8 @@
+"Before importing CSV, delete initial column and rows above the CSVHEADER row","","","",""
+REQUIRED,y,y,y,y
+DATA TYPE,string,string,string,string
+REPEATABLE FIELD?,n,n,n,n
+REPEATING FIELD GROUP,"","","",""
+VALUE SOURCE TYPE,optionlist,na,optionlist,na
+VALUE SOURCE,"acquisitions, claims, collectionobjects, conditionchecks, conservation, exhibitions, groups, intakes, loansin, loansout, media, movements, objectexit, restrictedmedia, valuationcontrols","","acquisitions, claims, collectionobjects, conditionchecks, conservation, exhibitions, groups, intakes, loansin, loansout, media, movements, objectexit, restrictedmedia, valuationcontrols",""
+CSVHEADER,item1_type,item1_id,item2_type,item2_id
