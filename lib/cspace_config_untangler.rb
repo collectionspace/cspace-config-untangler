@@ -48,7 +48,7 @@ module CspaceConfigUntangler
   def logger
     @logger ||= Logger.new('log.log')
   end
-  
+
   def app_dir
     File.realpath(File.join(File.dirname(__FILE__), '..'))
   end
@@ -71,6 +71,37 @@ module CspaceConfigUntangler
     default: default_mapper_uri_base,
     reader: true
 
+
+  # @param release [String]
+  # @param mode [:collapsed, :expanded]
+  def allfields_path(release:, mode: :collapsed)
+    unless %i[collapsed expanded].any?(mode)
+      fail(ArgumentError, 'mode must be :collaped or :expanded')
+    end
+    unless /^\d+(_\d+){1,2}$/.match?(release)
+      fail(ArgumentError, 'release must follow pattern: #_# or #_#_#')
+    end
+
+    name = "all_fields_#{release}_dates_#{mode}.csv"
+    File.join(
+      data_reference_dir(release: release),
+      name
+    )
+  end
+
+  def data_reference_dir(release:)
+    unless /^\d+(_\d+){1,2}$/.match?(release)
+      fail(ArgumentError, 'release must follow pattern: #_# or #_#_#')
+    end
+
+    File.join(
+      app_dir,
+      'data',
+      'reference',
+      release
+    )
+  end
+
   def profiles
     Dir.new(CCU.configdir).children
     .reject{ |e| e['readable'] }
@@ -85,7 +116,7 @@ module CspaceConfigUntangler
       .map{ |filename| filename.to_s.delete_suffix(filename.extname) }
       .first
   end
-  
+
   def safe_copy(hash)
     Marshal.load(Marshal.dump(hash))
   end
