@@ -5,6 +5,7 @@ require_relative 'cli/helpers'
 require_relative 'cli/mappers_cli'
 require_relative 'cli/profiles_cli'
 require_relative 'cli/rectypes_cli'
+require_relative 'cli/reports_cli'
 require_relative 'cli/templates_cli'
 
 module CspaceConfigUntangler
@@ -32,6 +33,9 @@ module CspaceConfigUntangler
 
       desc 'rectypes SUBCOMMAND', 'Work with record types'
       subcommand 'rectypes', CCU::Cli::RecTypesCli
+
+      desc 'reports SUBCOMMAND', 'Generate reports'
+      subcommand 'reports', CCU::Cli::ReportsCli
 
       desc 'templates SUBCOMMAND', 'Generate CSV templates for preparing data for cspace-batch-import'
       subcommand 'templates', CCU::Cli::TemplatesCli
