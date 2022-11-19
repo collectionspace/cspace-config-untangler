@@ -75,30 +75,24 @@ module CspaceConfigUntangler
   # @param release [String]
   # @param mode [:collapsed, :expanded]
   def allfields_path(release:, mode: :collapsed)
-    unless %i[collapsed expanded].any?(mode)
-      fail(ArgumentError, 'mode must be :collaped or :expanded')
-    end
-    unless /^\d+(_\d+){1,2}$/.match?(release)
-      fail(ArgumentError, 'release must follow pattern: #_# or #_#_#')
-    end
+    vmode = CCU::Validate.date_mode(mode)
+    vrelease = CCU::Validate.release(release)
 
-    name = "all_fields_#{release}_dates_#{mode}.csv"
+    name = "all_fields_#{vrelease}_dates_#{vmode}.csv"
     File.join(
-      data_reference_dir(release: release),
+      data_reference_dir(release: vrelease),
       name
     )
   end
 
   def data_reference_dir(release:)
-    unless /^\d+(_\d+){1,2}$/.match?(release)
-      fail(ArgumentError, 'release must follow pattern: #_# or #_#_#')
-    end
+    vrelease = CCU::Validate.release(release)
 
     File.join(
       app_dir,
       'data',
       'reference',
-      release
+      vrelease
     )
   end
 
