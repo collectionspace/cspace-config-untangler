@@ -1,0 +1,571 @@
+{
+  "config": {
+    "profile_basename": "core",
+    "version": "7-1-0",
+    "recordtype": "movement",
+    "document_name": "movements",
+    "service_name": "Movements",
+    "service_path": "movements",
+    "service_type": "procedure",
+    "object_name": "Movement",
+    "ns_uri": {
+      "movements_common": "http://collectionspace.org/services/movement"
+    },
+    "identifier_field": "movementReferenceNumber",
+    "search_field": "movementReferenceNumber"
+  },
+  "docstructure": {
+    "movements_common": {
+      "movementMethods": {
+      },
+      "inventoryContactList": {
+      }
+    }
+  },
+  "mappings": [
+    {
+      "fieldname": "movementReferenceNumber",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "movements_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "movementReferenceNumber",
+      "required": "y"
+    },
+    {
+      "fieldname": "normalLocation",
+      "transforms": {
+        "authority": [
+          "locationauthorities",
+          "location"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "location/local",
+      "namespace": "movements_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "normalLocationLocationLocal",
+      "required": "n"
+    },
+    {
+      "fieldname": "normalLocation",
+      "transforms": {
+        "authority": [
+          "locationauthorities",
+          "offsite_sla"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "location/offsite",
+      "namespace": "movements_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "normalLocationLocationOffsite",
+      "required": "n"
+    },
+    {
+      "fieldname": "normalLocation",
+      "transforms": {
+        "authority": [
+          "orgauthorities",
+          "organization"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "organization/local",
+      "namespace": "movements_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "normalLocationOrganizationLocal",
+      "required": "n"
+    },
+    {
+      "fieldname": "normalLocation",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "location/local",
+      "namespace": "movements_common",
+      "xpath": [
+
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "normalLocationRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "currentLocation",
+      "transforms": {
+        "authority": [
+          "locationauthorities",
+          "location"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "location/local",
+      "namespace": "movements_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "currentLocationLocationLocal",
+      "required": "y"
+    },
+    {
+      "fieldname": "currentLocation",
+      "transforms": {
+        "authority": [
+          "locationauthorities",
+          "offsite_sla"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "location/offsite",
+      "namespace": "movements_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "currentLocationLocationOffsite",
+      "required": "y"
+    },
+    {
+      "fieldname": "currentLocation",
+      "transforms": {
+        "authority": [
+          "orgauthorities",
+          "organization"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "organization/local",
+      "namespace": "movements_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "currentLocationOrganizationLocal",
+      "required": "y"
+    },
+    {
+      "fieldname": "currentLocation",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "location/local",
+      "namespace": "movements_common",
+      "xpath": [
+
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "currentLocationRefname",
+      "required": "y"
+    },
+    {
+      "fieldname": "currentLocationFitness",
+      "transforms": {
+      },
+      "source_type": "optionlist",
+      "source_name": "locationFitnesses",
+      "namespace": "movements_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+        "dangerous",
+        "suitable",
+        "temporary",
+        "unsuitable"
+      ],
+      "datacolumn": "currentLocationFitness",
+      "required": "n"
+    },
+    {
+      "fieldname": "currentLocationNote",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "movements_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "currentLocationNote",
+      "required": "n"
+    },
+    {
+      "fieldname": "locationDate",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "movements_common",
+      "xpath": [
+
+      ],
+      "data_type": "date",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "locationDate",
+      "required": "n"
+    },
+    {
+      "fieldname": "reasonForMove",
+      "transforms": {
+      },
+      "source_type": "optionlist",
+      "source_name": "moveReasons",
+      "namespace": "movements_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+        "collections-facility-move",
+        "conservation",
+        "exhibition",
+        "inventory",
+        "loan",
+        "newstoragelocation",
+        "photography",
+        "research"
+      ],
+      "datacolumn": "reasonForMove",
+      "required": "n"
+    },
+    {
+      "fieldname": "movementMethod",
+      "transforms": {
+      },
+      "source_type": "optionlist",
+      "source_name": "moveMethods",
+      "namespace": "movements_common",
+      "xpath": [
+        "movementMethods"
+      ],
+      "data_type": "string",
+      "repeats": "y",
+      "in_repeating_group": "n",
+      "opt_list_values": [
+        "forklift",
+        "handcarried",
+        "trolley"
+      ],
+      "datacolumn": "movementMethod",
+      "required": "n"
+    },
+    {
+      "fieldname": "plannedRemovalDate",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "movements_common",
+      "xpath": [
+
+      ],
+      "data_type": "date",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "plannedRemovalDate",
+      "required": "n"
+    },
+    {
+      "fieldname": "removalDate",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "movements_common",
+      "xpath": [
+
+      ],
+      "data_type": "date",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "removalDate",
+      "required": "n"
+    },
+    {
+      "fieldname": "movementContact",
+      "transforms": {
+        "authority": [
+          "personauthorities",
+          "person"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "person/local",
+      "namespace": "movements_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "movementContact",
+      "required": "n"
+    },
+    {
+      "fieldname": "movementContact",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "person/local",
+      "namespace": "movements_common",
+      "xpath": [
+
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "movementContactRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "movementNote",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "movements_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "movementNote",
+      "required": "n"
+    },
+    {
+      "fieldname": "inventoryActionRequired",
+      "transforms": {
+      },
+      "source_type": "optionlist",
+      "source_name": "invActions",
+      "namespace": "movements_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+        "conservation",
+        "preservation",
+        "re-housing"
+      ],
+      "datacolumn": "inventoryActionRequired",
+      "required": "n"
+    },
+    {
+      "fieldname": "frequencyForInventory",
+      "transforms": {
+      },
+      "source_type": "optionlist",
+      "source_name": "invFreqs",
+      "namespace": "movements_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+        "annually",
+        "daily",
+        "monthly",
+        "semi-annually",
+        "weekly"
+      ],
+      "datacolumn": "frequencyForInventory",
+      "required": "n"
+    },
+    {
+      "fieldname": "inventoryDate",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "movements_common",
+      "xpath": [
+
+      ],
+      "data_type": "date",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "inventoryDate",
+      "required": "n"
+    },
+    {
+      "fieldname": "nextInventoryDate",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "movements_common",
+      "xpath": [
+
+      ],
+      "data_type": "date",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "nextInventoryDate",
+      "required": "n"
+    },
+    {
+      "fieldname": "inventoryContact",
+      "transforms": {
+        "authority": [
+          "personauthorities",
+          "person"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "person/local",
+      "namespace": "movements_common",
+      "xpath": [
+        "inventoryContactList"
+      ],
+      "data_type": "string",
+      "repeats": "y",
+      "in_repeating_group": "n",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "inventoryContact",
+      "required": "n"
+    },
+    {
+      "fieldname": "inventoryContact",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "person/local",
+      "namespace": "movements_common",
+      "xpath": [
+        "inventoryContactList"
+      ],
+      "data_type": "csrefname",
+      "repeats": "y",
+      "in_repeating_group": "n",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "inventoryContactRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "inventoryNote",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "movements_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "inventoryNote",
+      "required": "n"
+    }
+  ]
+}

@@ -1,0 +1,797 @@
+{
+  "config": {
+    "profile_basename": "botgarden",
+    "version": "3-0-2",
+    "recordtype": "taxon",
+    "document_name": "taxon",
+    "service_name": "Taxon",
+    "service_path": "taxonomyauthority",
+    "service_type": "authority",
+    "object_name": "Taxon",
+    "ns_uri": {
+      "taxon_common": "http://collectionspace.org/services/taxonomy"
+    },
+    "identifier_field": "shortIdentifier",
+    "search_field": "taxonTermGroupList/0/termDisplayName",
+    "authority_subtypes": [
+      {
+        "name": "Local",
+        "subtype": "taxon"
+      },
+      {
+        "name": "Common",
+        "subtype": "common_ta"
+      }
+    ],
+    "authority_type": "taxonomyauthority",
+    "authority_subtype": "taxon"
+  },
+  "docstructure": {
+    "taxon_common": {
+      "taxonTermGroupList": {
+        "taxonTermGroup": {
+        }
+      },
+      "taxonAuthorGroupList": {
+        "taxonAuthorGroup": {
+        }
+      },
+      "taxonCitationList": {
+      },
+      "commonNameGroupList": {
+        "commonNameGroup": {
+        }
+      }
+    }
+  },
+  "mappings": [
+    {
+      "fieldname": "termDisplayName",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "taxon_common",
+      "xpath": [
+        "taxonTermGroupList",
+        "taxonTermGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "termDisplayName",
+      "required": "y"
+    },
+    {
+      "fieldname": "termFormattedDisplayName",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "taxon_common",
+      "xpath": [
+        "taxonTermGroupList",
+        "taxonTermGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "termFormattedDisplayName",
+      "required": "n"
+    },
+    {
+      "fieldname": "termQualifier",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "taxon_common",
+      "xpath": [
+        "taxonTermGroupList",
+        "taxonTermGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "termQualifier",
+      "required": "n"
+    },
+    {
+      "fieldname": "termStatus",
+      "transforms": {
+      },
+      "source_type": "optionlist",
+      "source_name": "taxonTermStatuses",
+      "namespace": "taxon_common",
+      "xpath": [
+        "taxonTermGroupList",
+        "taxonTermGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+        "accepted",
+        "provisional",
+        "rejected",
+        "under review"
+      ],
+      "datacolumn": "termStatus",
+      "required": "n"
+    },
+    {
+      "fieldname": "termType",
+      "transforms": {
+      },
+      "source_type": "optionlist",
+      "source_name": "taxonTermTypes",
+      "namespace": "taxon_common",
+      "xpath": [
+        "taxonTermGroupList",
+        "taxonTermGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+        "alternate descriptor",
+        "descriptor",
+        "used for term"
+      ],
+      "datacolumn": "termType",
+      "required": "n"
+    },
+    {
+      "fieldname": "termFlag",
+      "transforms": {
+        "vocabulary": "taxontermflag"
+      },
+      "source_type": "vocabulary",
+      "source_name": "taxontermflag",
+      "namespace": "taxon_common",
+      "xpath": [
+        "taxonTermGroupList",
+        "taxonTermGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "termFlag",
+      "required": "n"
+    },
+    {
+      "fieldname": "termFlag",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "taxontermflag",
+      "namespace": "taxon_common",
+      "xpath": [
+        "taxonTermGroupList",
+        "taxonTermGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "termFlagRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "taxonomicStatus",
+      "transforms": {
+      },
+      "source_type": "optionlist",
+      "source_name": "taxonomicStatuses",
+      "namespace": "taxon_common",
+      "xpath": [
+        "taxonTermGroupList",
+        "taxonTermGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+        "accepted",
+        "invalid",
+        "misapplied name",
+        "valid"
+      ],
+      "datacolumn": "taxonomicStatus",
+      "required": "n"
+    },
+    {
+      "fieldname": "termLanguage",
+      "transforms": {
+        "vocabulary": "languages"
+      },
+      "source_type": "vocabulary",
+      "source_name": "languages",
+      "namespace": "taxon_common",
+      "xpath": [
+        "taxonTermGroupList",
+        "taxonTermGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "termLanguage",
+      "required": "n"
+    },
+    {
+      "fieldname": "termLanguage",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "languages",
+      "namespace": "taxon_common",
+      "xpath": [
+        "taxonTermGroupList",
+        "taxonTermGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "termLanguageRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "termPrefForLang",
+      "transforms": {
+        "special": [
+          "boolean"
+        ]
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "taxon_common",
+      "xpath": [
+        "taxonTermGroupList",
+        "taxonTermGroup"
+      ],
+      "data_type": "boolean",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "termPrefForLang",
+      "required": "n"
+    },
+    {
+      "fieldname": "termSource",
+      "transforms": {
+        "authority": [
+          "citationauthorities",
+          "citation"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "citation/local",
+      "namespace": "taxon_common",
+      "xpath": [
+        "taxonTermGroupList",
+        "taxonTermGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "termSourceCitationLocal",
+      "required": "n"
+    },
+    {
+      "fieldname": "termSource",
+      "transforms": {
+        "authority": [
+          "citationauthorities",
+          "worldcat"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "citation/worldcat",
+      "namespace": "taxon_common",
+      "xpath": [
+        "taxonTermGroupList",
+        "taxonTermGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "termSourceCitationWorldcat",
+      "required": "n"
+    },
+    {
+      "fieldname": "termSource",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "citation/local",
+      "namespace": "taxon_common",
+      "xpath": [
+        "taxonTermGroupList",
+        "taxonTermGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "termSourceRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "termSourceDetail",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "taxon_common",
+      "xpath": [
+        "taxonTermGroupList",
+        "taxonTermGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "termSourceDetail",
+      "required": "n"
+    },
+    {
+      "fieldname": "termSourceID",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "taxon_common",
+      "xpath": [
+        "taxonTermGroupList",
+        "taxonTermGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "termSourceID",
+      "required": "n"
+    },
+    {
+      "fieldname": "termSourceNote",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "taxon_common",
+      "xpath": [
+        "taxonTermGroupList",
+        "taxonTermGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "termSourceNote",
+      "required": "n"
+    },
+    {
+      "fieldname": "taxonRank",
+      "transforms": {
+      },
+      "source_type": "optionlist",
+      "source_name": "taxonRanks",
+      "namespace": "taxon_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+        "class",
+        "division",
+        "domain",
+        "family",
+        "genus",
+        "kingdom",
+        "order",
+        "phylum",
+        "species"
+      ],
+      "datacolumn": "taxonRank",
+      "required": "n"
+    },
+    {
+      "fieldname": "taxonCurrency",
+      "transforms": {
+      },
+      "source_type": "optionlist",
+      "source_name": "taxonCurrencies",
+      "namespace": "taxon_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+        "archaic",
+        "current",
+        "obsolete"
+      ],
+      "datacolumn": "taxonCurrency",
+      "required": "n"
+    },
+    {
+      "fieldname": "taxonAuthor",
+      "transforms": {
+        "authority": [
+          "personauthorities",
+          "person"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "person/local",
+      "namespace": "taxon_common",
+      "xpath": [
+        "taxonAuthorGroupList",
+        "taxonAuthorGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "taxonAuthorPersonLocal",
+      "required": "n"
+    },
+    {
+      "fieldname": "taxonAuthor",
+      "transforms": {
+        "authority": [
+          "orgauthorities",
+          "organization"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "organization/local",
+      "namespace": "taxon_common",
+      "xpath": [
+        "taxonAuthorGroupList",
+        "taxonAuthorGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "taxonAuthorOrganizationLocal",
+      "required": "n"
+    },
+    {
+      "fieldname": "taxonAuthor",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "person/local",
+      "namespace": "taxon_common",
+      "xpath": [
+        "taxonAuthorGroupList",
+        "taxonAuthorGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "taxonAuthorRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "taxonAuthorType",
+      "transforms": {
+      },
+      "source_type": "optionlist",
+      "source_name": "taxonAuthorTypes",
+      "namespace": "taxon_common",
+      "xpath": [
+        "taxonAuthorGroupList",
+        "taxonAuthorGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+        "ascribed",
+        "parenthetical"
+      ],
+      "datacolumn": "taxonAuthorType",
+      "required": "n"
+    },
+    {
+      "fieldname": "taxonYear",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "taxon_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "taxonYear",
+      "required": "n"
+    },
+    {
+      "fieldname": "taxonIsNamedHybrid",
+      "transforms": {
+        "special": [
+          "boolean"
+        ]
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "taxon_common",
+      "xpath": [
+
+      ],
+      "data_type": "boolean",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "taxonIsNamedHybrid",
+      "required": "n"
+    },
+    {
+      "fieldname": "taxonCitation",
+      "transforms": {
+        "authority": [
+          "citationauthorities",
+          "citation"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "citation/local",
+      "namespace": "taxon_common",
+      "xpath": [
+        "taxonCitationList"
+      ],
+      "data_type": "string",
+      "repeats": "y",
+      "in_repeating_group": "n",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "taxonCitationCitationLocal",
+      "required": "n"
+    },
+    {
+      "fieldname": "taxonCitation",
+      "transforms": {
+        "authority": [
+          "citationauthorities",
+          "worldcat"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "citation/worldcat",
+      "namespace": "taxon_common",
+      "xpath": [
+        "taxonCitationList"
+      ],
+      "data_type": "string",
+      "repeats": "y",
+      "in_repeating_group": "n",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "taxonCitationCitationWorldcat",
+      "required": "n"
+    },
+    {
+      "fieldname": "taxonCitation",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "citation/local",
+      "namespace": "taxon_common",
+      "xpath": [
+        "taxonCitationList"
+      ],
+      "data_type": "csrefname",
+      "repeats": "y",
+      "in_repeating_group": "n",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "taxonCitationRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "taxonNote",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "taxon_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "taxonNote",
+      "required": "n"
+    },
+    {
+      "fieldname": "commonName",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "taxon_common",
+      "xpath": [
+        "commonNameGroupList",
+        "commonNameGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "commonName",
+      "required": "n"
+    },
+    {
+      "fieldname": "commonNameLanguage",
+      "transforms": {
+        "vocabulary": "languages"
+      },
+      "source_type": "vocabulary",
+      "source_name": "languages",
+      "namespace": "taxon_common",
+      "xpath": [
+        "commonNameGroupList",
+        "commonNameGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "commonNameLanguage",
+      "required": "n"
+    },
+    {
+      "fieldname": "commonNameLanguage",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "languages",
+      "namespace": "taxon_common",
+      "xpath": [
+        "commonNameGroupList",
+        "commonNameGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "commonNameLanguageRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "commonNameSource",
+      "transforms": {
+        "authority": [
+          "citationauthorities",
+          "citation"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "citation/local",
+      "namespace": "taxon_common",
+      "xpath": [
+        "commonNameGroupList",
+        "commonNameGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "commonNameSource",
+      "required": "n"
+    },
+    {
+      "fieldname": "commonNameSource",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "citation/local",
+      "namespace": "taxon_common",
+      "xpath": [
+        "commonNameGroupList",
+        "commonNameGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "commonNameSourceRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "commonNameSourceDetail",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "taxon_common",
+      "xpath": [
+        "commonNameGroupList",
+        "commonNameGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "commonNameSourceDetail",
+      "required": "n"
+    }
+  ]
+}
