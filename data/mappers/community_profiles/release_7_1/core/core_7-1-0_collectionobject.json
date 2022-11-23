@@ -1,0 +1,7804 @@
+{
+  "config": {
+    "profile_basename": "core",
+    "version": "7-1-0",
+    "recordtype": "collectionobject",
+    "document_name": "collectionobjects",
+    "service_name": "CollectionObjects",
+    "service_path": "collectionobjects",
+    "service_type": "object",
+    "object_name": "CollectionObject",
+    "ns_uri": {
+      "collectionobjects_annotation": "http://collectionspace.org/services/collectionobject/domain/annotation",
+      "collectionobjects_common": "http://collectionspace.org/services/collectionobject"
+    },
+    "identifier_field": "objectNumber",
+    "search_field": "objectNumber"
+  },
+  "docstructure": {
+    "collectionobjects_common": {
+      "otherNumberList": {
+        "otherNumber": {
+        }
+      },
+      "responsibleDepartments": {
+      },
+      "namedCollections": {
+      },
+      "publishToList": {
+      },
+      "inventoryStatusList": {
+      },
+      "briefDescriptions": {
+      },
+      "comments": {
+      },
+      "titleGroupList": {
+        "titleGroup": {
+          "titleTranslationSubGroupList": {
+            "titleTranslationSubGroup": {
+            }
+          }
+        }
+      },
+      "objectNameList": {
+        "objectNameGroup": {
+        }
+      },
+      "objectStatusList": {
+      },
+      "forms": {
+      },
+      "styles": {
+      },
+      "colors": {
+      },
+      "materialGroupList": {
+        "materialGroup": {
+        }
+      },
+      "objectComponentGroupList": {
+        "objectComponentGroup": {
+        }
+      },
+      "technicalAttributeGroupList": {
+        "technicalAttributeGroup": {
+        }
+      },
+      "measuredPartGroupList": {
+        "measuredPartGroup": {
+          "dimensionSubGroupList": {
+            "dimensionSubGroup": {
+            }
+          }
+        }
+      },
+      "contentLanguages": {
+      },
+      "contentActivities": {
+      },
+      "contentConcepts": {
+      },
+      "contentPositions": {
+      },
+      "contentObjectGroupList": {
+        "contentObjectGroup": {
+        }
+      },
+      "contentPeoples": {
+      },
+      "contentPersons": {
+      },
+      "contentPlaces": {
+      },
+      "contentScripts": {
+      },
+      "contentOrganizations": {
+      },
+      "contentEventNameGroupList": {
+        "contentEventNameGroup": {
+        }
+      },
+      "contentOtherGroupList": {
+        "contentOtherGroup": {
+        }
+      },
+      "textualInscriptionGroupList": {
+        "textualInscriptionGroup": {
+        }
+      },
+      "nonTextualInscriptionGroupList": {
+        "nonTextualInscriptionGroup": {
+        }
+      },
+      "objectProductionDateGroupList": {
+      },
+      "techniqueGroupList": {
+        "techniqueGroup": {
+        }
+      },
+      "objectProductionPlaceGroupList": {
+        "objectProductionPlaceGroup": {
+        }
+      },
+      "objectProductionReasons": {
+      },
+      "objectProductionPeopleGroupList": {
+        "objectProductionPeopleGroup": {
+        }
+      },
+      "objectProductionPersonGroupList": {
+        "objectProductionPersonGroup": {
+        }
+      },
+      "objectProductionOrganizationGroupList": {
+        "objectProductionOrganizationGroup": {
+        }
+      },
+      "assocActivityGroupList": {
+        "assocActivityGroup": {
+        }
+      },
+      "assocObjectGroupList": {
+        "assocObjectGroup": {
+        }
+      },
+      "assocConceptGroupList": {
+        "assocConceptGroup": {
+        }
+      },
+      "assocCulturalContextGroupList": {
+        "assocCulturalContextGroup": {
+        }
+      },
+      "assocOrganizationGroupList": {
+        "assocOrganizationGroup": {
+        }
+      },
+      "assocPeopleGroupList": {
+        "assocPeopleGroup": {
+        }
+      },
+      "assocPersonGroupList": {
+        "assocPersonGroup": {
+        }
+      },
+      "assocPlaceGroupList": {
+        "assocPlaceGroup": {
+        }
+      },
+      "assocEventOrganizations": {
+      },
+      "assocEventPeoples": {
+      },
+      "assocEventPersons": {
+      },
+      "assocEventPlaces": {
+      },
+      "assocDateGroupList": {
+        "assocDateGroup": {
+        }
+      },
+      "usageGroupList": {
+        "usageGroup": {
+        }
+      },
+      "owners": {
+      },
+      "ownershipDateGroupList": {
+      },
+      "ownersReferences": {
+      },
+      "viewersReferences": {
+      },
+      "referenceGroupList": {
+        "referenceGroup": {
+        }
+      },
+      "fieldCollectionMethods": {
+      },
+      "fieldCollectionSources": {
+      },
+      "fieldCollectors": {
+      },
+      "fieldColEventNames": {
+      },
+      "rightsGroupList": {
+        "rightsGroup": {
+          "rightHolderGroupList": {
+            "rightHolderGroup": {
+            }
+          }
+        }
+      },
+      "rightsInGroupList": {
+        "rightsInGroup": {
+          "rightInTypes": {
+          },
+          "rightInRestrictions": {
+          }
+        }
+      },
+      "objectSignificanceGroupList": {
+        "objectSignificanceGroup": {
+        }
+      },
+      "credentialGroupList": {
+        "credentialGroup": {
+        }
+      },
+      "distributedLedgerGroupList": {
+        "distributedLedgerGroup": {
+        }
+      },
+      "ledgerGroupList": {
+        "ledgerGroup": {
+        }
+      },
+      "checksumGroupList": {
+        "checksumGroup": {
+        }
+      },
+      "avFormatGroupList": {
+        "avFormatGroup": {
+        }
+      },
+      "avChannelGroupList": {
+        "avChannelGroup": {
+        }
+      },
+      "fileCodecGroupList": {
+        "fileCodecGroup": {
+        }
+      },
+      "aspectRatioGroupList": {
+        "aspectRatioGroup": {
+        }
+      },
+      "colorSpaceGroupList": {
+        "colorSpaceGroup": {
+        }
+      },
+      "avTechnicalAttributeGroupList": {
+        "avTechnicalAttributeGroup": {
+        }
+      },
+      "programmingLanguageGroupList": {
+        "programmingLanguageGroup": {
+        }
+      },
+      "utilizedSoftwareGroupList": {
+        "utilizedSoftwareGroup": {
+        }
+      },
+      "intendedOperatingSystemGroupList": {
+        "intendedOperatingSystemGroup": {
+        }
+      },
+      "softwareLibraries": {
+      },
+      "codeCompilers": {
+      },
+      "networkConnectionGroupList": {
+        "networkConnectionGroup": {
+        }
+      },
+      "intendedBrowserGroupList": {
+        "intendedBrowserGroup": {
+        }
+      },
+      "domainGroupList": {
+        "domainGroup": {
+        }
+      },
+      "applicationInteractionGroupList": {
+        "applicationInteractionGroup": {
+        }
+      },
+      "softwareTechnicalAttributeGroupList": {
+        "softwareTechnicalAttributeGroup": {
+        }
+      },
+      "apiUrls": {
+      }
+    },
+    "collectionobjects_annotation": {
+      "annotationGroupList": {
+        "annotationGroup": {
+        }
+      }
+    }
+  },
+  "mappings": [
+    {
+      "fieldname": "objectNumber",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "collectionobjects_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "objectNumber",
+      "required": "y"
+    },
+    {
+      "fieldname": "numberOfObjects",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "collectionobjects_common",
+      "xpath": [
+
+      ],
+      "data_type": "integer",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "numberOfObjects",
+      "required": "n"
+    },
+    {
+      "fieldname": "numberValue",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "otherNumberList",
+        "otherNumber"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "numberValue",
+      "required": "n"
+    },
+    {
+      "fieldname": "numberType",
+      "transforms": {
+      },
+      "source_type": "optionlist",
+      "source_name": "numberTypes",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "otherNumberList",
+        "otherNumber"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+        "associated uuid",
+        "barcode",
+        "lender",
+        "obsolete",
+        "previous",
+        "serial",
+        "unknown"
+      ],
+      "datacolumn": "numberType",
+      "required": "n"
+    },
+    {
+      "fieldname": "responsibleDepartment",
+      "transforms": {
+      },
+      "source_type": "optionlist",
+      "source_name": "departments",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "responsibleDepartments"
+      ],
+      "data_type": "string",
+      "repeats": "y",
+      "in_repeating_group": "n",
+      "opt_list_values": [
+        "antiquities",
+        "architecture-design",
+        "decorative-arts",
+        "ethnography",
+        "herpetology",
+        "media-performance-art",
+        "paintings-sculpture",
+        "paleobotany",
+        "photographs",
+        "prints-drawings"
+      ],
+      "datacolumn": "responsibleDepartment",
+      "required": "n"
+    },
+    {
+      "fieldname": "collection",
+      "transforms": {
+      },
+      "source_type": "optionlist",
+      "source_name": "collections",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+        "library-collection",
+        "permanent-collection",
+        "study-collection",
+        "teaching-collection"
+      ],
+      "datacolumn": "collection",
+      "required": "n"
+    },
+    {
+      "fieldname": "namedCollection",
+      "transforms": {
+        "authority": [
+          "workauthorities",
+          "work"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "work/local",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "namedCollections"
+      ],
+      "data_type": "string",
+      "repeats": "y",
+      "in_repeating_group": "n",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "namedCollection",
+      "required": "n"
+    },
+    {
+      "fieldname": "namedCollection",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "work/local",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "namedCollections"
+      ],
+      "data_type": "csrefname",
+      "repeats": "y",
+      "in_repeating_group": "n",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "namedCollectionRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "recordStatus",
+      "transforms": {
+      },
+      "source_type": "optionlist",
+      "source_name": "recordStatuses",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+        "approved",
+        "in-process",
+        "new",
+        "temporary"
+      ],
+      "datacolumn": "recordStatus",
+      "required": "n"
+    },
+    {
+      "fieldname": "publishTo",
+      "transforms": {
+        "vocabulary": "publishto"
+      },
+      "source_type": "vocabulary",
+      "source_name": "publishto",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "publishToList"
+      ],
+      "data_type": "string",
+      "repeats": "y",
+      "in_repeating_group": "n",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "publishTo",
+      "required": "n"
+    },
+    {
+      "fieldname": "publishTo",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "publishto",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "publishToList"
+      ],
+      "data_type": "csrefname",
+      "repeats": "y",
+      "in_repeating_group": "n",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "publishToRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "inventoryStatus",
+      "transforms": {
+        "vocabulary": "inventorystatus"
+      },
+      "source_type": "vocabulary",
+      "source_name": "inventorystatus",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "inventoryStatusList"
+      ],
+      "data_type": "string",
+      "repeats": "y",
+      "in_repeating_group": "n",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "inventoryStatus",
+      "required": "n"
+    },
+    {
+      "fieldname": "inventoryStatus",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "inventorystatus",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "inventoryStatusList"
+      ],
+      "data_type": "csrefname",
+      "repeats": "y",
+      "in_repeating_group": "n",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "inventoryStatusRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "briefDescription",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "briefDescriptions"
+      ],
+      "data_type": "string",
+      "repeats": "y",
+      "in_repeating_group": "n",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "briefDescription",
+      "required": "n"
+    },
+    {
+      "fieldname": "distinguishingFeatures",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "collectionobjects_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "distinguishingFeatures",
+      "required": "n"
+    },
+    {
+      "fieldname": "comment",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "comments"
+      ],
+      "data_type": "string",
+      "repeats": "y",
+      "in_repeating_group": "n",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "comment",
+      "required": "n"
+    },
+    {
+      "fieldname": "annotationType",
+      "transforms": {
+        "vocabulary": "annotationtype"
+      },
+      "source_type": "vocabulary",
+      "source_name": "annotationtype",
+      "namespace": "collectionobjects_annotation",
+      "xpath": [
+        "annotationGroupList",
+        "annotationGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "annotationType",
+      "required": "n"
+    },
+    {
+      "fieldname": "annotationType",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "annotationtype",
+      "namespace": "collectionobjects_annotation",
+      "xpath": [
+        "annotationGroupList",
+        "annotationGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "annotationTypeRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "annotationNote",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "collectionobjects_annotation",
+      "xpath": [
+        "annotationGroupList",
+        "annotationGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "annotationNote",
+      "required": "n"
+    },
+    {
+      "fieldname": "annotationDate",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "collectionobjects_annotation",
+      "xpath": [
+        "annotationGroupList",
+        "annotationGroup"
+      ],
+      "data_type": "date",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "annotationDate",
+      "required": "n"
+    },
+    {
+      "fieldname": "annotationAuthor",
+      "transforms": {
+        "authority": [
+          "personauthorities",
+          "person"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "person/local",
+      "namespace": "collectionobjects_annotation",
+      "xpath": [
+        "annotationGroupList",
+        "annotationGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "annotationAuthor",
+      "required": "n"
+    },
+    {
+      "fieldname": "annotationAuthor",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "person/local",
+      "namespace": "collectionobjects_annotation",
+      "xpath": [
+        "annotationGroupList",
+        "annotationGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "annotationAuthorRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "title",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "titleGroupList",
+        "titleGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "title",
+      "required": "n"
+    },
+    {
+      "fieldname": "titleLanguage",
+      "transforms": {
+        "vocabulary": "languages"
+      },
+      "source_type": "vocabulary",
+      "source_name": "languages",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "titleGroupList",
+        "titleGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "titleLanguage",
+      "required": "n"
+    },
+    {
+      "fieldname": "titleLanguage",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "languages",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "titleGroupList",
+        "titleGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "titleLanguageRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "titleType",
+      "transforms": {
+      },
+      "source_type": "optionlist",
+      "source_name": "titleTypes",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "titleGroupList",
+        "titleGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+        "assigned-by-artist",
+        "collection",
+        "generic",
+        "popular",
+        "series",
+        "trade"
+      ],
+      "datacolumn": "titleType",
+      "required": "n"
+    },
+    {
+      "fieldname": "titleTranslation",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "titleGroupList",
+        "titleGroup",
+        "titleTranslationSubGroupList",
+        "titleTranslationSubGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "titleTranslation",
+      "required": "n"
+    },
+    {
+      "fieldname": "titleTranslationLanguage",
+      "transforms": {
+        "vocabulary": "languages"
+      },
+      "source_type": "vocabulary",
+      "source_name": "languages",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "titleGroupList",
+        "titleGroup",
+        "titleTranslationSubGroupList",
+        "titleTranslationSubGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "titleTranslationLanguage",
+      "required": "n"
+    },
+    {
+      "fieldname": "titleTranslationLanguage",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "languages",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "titleGroupList",
+        "titleGroup",
+        "titleTranslationSubGroupList",
+        "titleTranslationSubGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "titleTranslationLanguageRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "objectName",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "objectNameList",
+        "objectNameGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "objectName",
+      "required": "n"
+    },
+    {
+      "fieldname": "objectNameCurrency",
+      "transforms": {
+      },
+      "source_type": "optionlist",
+      "source_name": "nameCurrencies",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "objectNameList",
+        "objectNameGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+        "archaic",
+        "current"
+      ],
+      "datacolumn": "objectNameCurrency",
+      "required": "n"
+    },
+    {
+      "fieldname": "objectNameLevel",
+      "transforms": {
+      },
+      "source_type": "optionlist",
+      "source_name": "nameLevels",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "objectNameList",
+        "objectNameGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+        "group",
+        "subgroup"
+      ],
+      "datacolumn": "objectNameLevel",
+      "required": "n"
+    },
+    {
+      "fieldname": "objectNameSystem",
+      "transforms": {
+      },
+      "source_type": "optionlist",
+      "source_name": "nameSystems",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "objectNameList",
+        "objectNameGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+        "art-and-architecture-thesaurus",
+        "nomenclature"
+      ],
+      "datacolumn": "objectNameSystem",
+      "required": "n"
+    },
+    {
+      "fieldname": "objectNameType",
+      "transforms": {
+      },
+      "source_type": "optionlist",
+      "source_name": "nameTypes",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "objectNameList",
+        "objectNameGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+        "classified",
+        "denomination",
+        "simple",
+        "taxonomic",
+        "typological"
+      ],
+      "datacolumn": "objectNameType",
+      "required": "n"
+    },
+    {
+      "fieldname": "objectNameLanguage",
+      "transforms": {
+        "vocabulary": "languages"
+      },
+      "source_type": "vocabulary",
+      "source_name": "languages",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "objectNameList",
+        "objectNameGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "objectNameLanguage",
+      "required": "n"
+    },
+    {
+      "fieldname": "objectNameLanguage",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "languages",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "objectNameList",
+        "objectNameGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "objectNameLanguageRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "objectNameNote",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "objectNameList",
+        "objectNameGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "objectNameNote",
+      "required": "n"
+    },
+    {
+      "fieldname": "copyNumber",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "collectionobjects_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "copyNumber",
+      "required": "n"
+    },
+    {
+      "fieldname": "objectStatus",
+      "transforms": {
+      },
+      "source_type": "optionlist",
+      "source_name": "objectStatuses",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "objectStatusList"
+      ],
+      "data_type": "string",
+      "repeats": "y",
+      "in_repeating_group": "n",
+      "opt_list_values": [
+        "copy",
+        "forgery",
+        "holotype",
+        "paralectotype",
+        "paratype",
+        "type"
+      ],
+      "datacolumn": "objectStatus",
+      "required": "n"
+    },
+    {
+      "fieldname": "sex",
+      "transforms": {
+      },
+      "source_type": "optionlist",
+      "source_name": "sexes",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+        "female",
+        "male"
+      ],
+      "datacolumn": "sex",
+      "required": "n"
+    },
+    {
+      "fieldname": "phase",
+      "transforms": {
+      },
+      "source_type": "optionlist",
+      "source_name": "phases",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+        "adult",
+        "imago",
+        "larva",
+        "nymph",
+        "pupa"
+      ],
+      "datacolumn": "phase",
+      "required": "n"
+    },
+    {
+      "fieldname": "form",
+      "transforms": {
+      },
+      "source_type": "optionlist",
+      "source_name": "forms",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "forms"
+      ],
+      "data_type": "string",
+      "repeats": "y",
+      "in_repeating_group": "n",
+      "opt_list_values": [
+        "dry",
+        "pinned",
+        "thin-section",
+        "wet"
+      ],
+      "datacolumn": "form",
+      "required": "n"
+    },
+    {
+      "fieldname": "editionNumber",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "collectionobjects_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "editionNumber",
+      "required": "n"
+    },
+    {
+      "fieldname": "ageQualifier",
+      "transforms": {
+        "vocabulary": "agequalifier"
+      },
+      "source_type": "vocabulary",
+      "source_name": "agequalifier",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "ageQualifier",
+      "required": "n"
+    },
+    {
+      "fieldname": "ageQualifier",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "agequalifier",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "ageQualifierRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "age",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "collectionobjects_common",
+      "xpath": [
+
+      ],
+      "data_type": "integer",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "age",
+      "required": "n"
+    },
+    {
+      "fieldname": "ageUnit",
+      "transforms": {
+      },
+      "source_type": "optionlist",
+      "source_name": "ageUnits",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+        "days",
+        "months",
+        "weeks",
+        "years"
+      ],
+      "datacolumn": "ageUnit",
+      "required": "n"
+    },
+    {
+      "fieldname": "style",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "styles"
+      ],
+      "data_type": "string",
+      "repeats": "y",
+      "in_repeating_group": "n",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "style",
+      "required": "n"
+    },
+    {
+      "fieldname": "color",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "colors"
+      ],
+      "data_type": "string",
+      "repeats": "y",
+      "in_repeating_group": "n",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "color",
+      "required": "n"
+    },
+    {
+      "fieldname": "material",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "materialGroupList",
+        "materialGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "material",
+      "required": "n"
+    },
+    {
+      "fieldname": "materialComponent",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "materialGroupList",
+        "materialGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "materialComponent",
+      "required": "n"
+    },
+    {
+      "fieldname": "materialComponentNote",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "materialGroupList",
+        "materialGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "materialComponentNote",
+      "required": "n"
+    },
+    {
+      "fieldname": "materialName",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "materialGroupList",
+        "materialGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "materialName",
+      "required": "n"
+    },
+    {
+      "fieldname": "materialSource",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "materialGroupList",
+        "materialGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "materialSource",
+      "required": "n"
+    },
+    {
+      "fieldname": "physicalDescription",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "collectionobjects_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "physicalDescription",
+      "required": "n"
+    },
+    {
+      "fieldname": "objectComponentName",
+      "transforms": {
+      },
+      "source_type": "optionlist",
+      "source_name": "objectComponentNames",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "objectComponentGroupList",
+        "objectComponentGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+        "blade",
+        "buttonhole",
+        "handle",
+        "sleeve"
+      ],
+      "datacolumn": "objectComponentName",
+      "required": "n"
+    },
+    {
+      "fieldname": "objectComponentInformation",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "objectComponentGroupList",
+        "objectComponentGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "objectComponentInformation",
+      "required": "n"
+    },
+    {
+      "fieldname": "technicalAttribute",
+      "transforms": {
+      },
+      "source_type": "optionlist",
+      "source_name": "technicalAttributes",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "technicalAttributeGroupList",
+        "technicalAttributeGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+        "magnetic-tape-type",
+        "record-speed"
+      ],
+      "datacolumn": "technicalAttribute",
+      "required": "n"
+    },
+    {
+      "fieldname": "technicalAttributeMeasurement",
+      "transforms": {
+      },
+      "source_type": "optionlist",
+      "source_name": "technicalAttributeMeasurements",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "technicalAttributeGroupList",
+        "technicalAttributeGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+        "78",
+        "metal"
+      ],
+      "datacolumn": "technicalAttributeMeasurement",
+      "required": "n"
+    },
+    {
+      "fieldname": "technicalAttributeMeasurementUnit",
+      "transforms": {
+      },
+      "source_type": "optionlist",
+      "source_name": "technicalAttributeMeasurementUnits",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "technicalAttributeGroupList",
+        "technicalAttributeGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+        "rpm"
+      ],
+      "datacolumn": "technicalAttributeMeasurementUnit",
+      "required": "n"
+    },
+    {
+      "fieldname": "measuredPart",
+      "transforms": {
+      },
+      "source_type": "optionlist",
+      "source_name": "measuredParts",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "measuredPartGroupList",
+        "measuredPartGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+        "base",
+        "frame",
+        "framed",
+        "image-size",
+        "mount",
+        "paper-size",
+        "plate-size",
+        "unframed"
+      ],
+      "datacolumn": "measuredPart",
+      "required": "n"
+    },
+    {
+      "fieldname": "dimensionSummary",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "measuredPartGroupList",
+        "measuredPartGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "dimensionSummary",
+      "required": "n"
+    },
+    {
+      "fieldname": "dimension",
+      "transforms": {
+      },
+      "source_type": "optionlist",
+      "source_name": "dimensions",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "measuredPartGroupList",
+        "measuredPartGroup",
+        "dimensionSubGroupList",
+        "dimensionSubGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+        "area",
+        "base",
+        "circumference",
+        "count",
+        "depth",
+        "diameter",
+        "height",
+        "intended duration",
+        "length",
+        "running-time",
+        "screen resolution",
+        "target",
+        "volume",
+        "weight",
+        "width"
+      ],
+      "datacolumn": "dimension",
+      "required": "n"
+    },
+    {
+      "fieldname": "measuredBy",
+      "transforms": {
+        "authority": [
+          "personauthorities",
+          "person"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "person/local",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "measuredPartGroupList",
+        "measuredPartGroup",
+        "dimensionSubGroupList",
+        "dimensionSubGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "measuredByPersonLocal",
+      "required": "n"
+    },
+    {
+      "fieldname": "measuredBy",
+      "transforms": {
+        "authority": [
+          "orgauthorities",
+          "organization"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "organization/local",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "measuredPartGroupList",
+        "measuredPartGroup",
+        "dimensionSubGroupList",
+        "dimensionSubGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "measuredByOrganizationLocal",
+      "required": "n"
+    },
+    {
+      "fieldname": "measuredBy",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "person/local",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "measuredPartGroupList",
+        "measuredPartGroup",
+        "dimensionSubGroupList",
+        "dimensionSubGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "measuredByRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "measurementMethod",
+      "transforms": {
+      },
+      "source_type": "optionlist",
+      "source_name": "measurementMethods",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "measuredPartGroupList",
+        "measuredPartGroup",
+        "dimensionSubGroupList",
+        "dimensionSubGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+        "balance_beam_scale",
+        "electronic_distance_measurement",
+        "goniometer",
+        "hydraulic_or_pneumatic_scale",
+        "measuring_tape_cloth",
+        "measuring_tape_metal",
+        "microscopy_reticule",
+        "odometer",
+        "optical_range_finder",
+        "osteometric_board",
+        "pacing_pedometer",
+        "protractor",
+        "ruler",
+        "sliding_calipers",
+        "spreading_calipers",
+        "spring_scale",
+        "stadia_transit",
+        "standard_mesh_screen",
+        "taping_chaining",
+        "theodolite_total_station"
+      ],
+      "datacolumn": "measurementMethod",
+      "required": "n"
+    },
+    {
+      "fieldname": "value",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "measuredPartGroupList",
+        "measuredPartGroup",
+        "dimensionSubGroupList",
+        "dimensionSubGroup"
+      ],
+      "data_type": "float",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "value",
+      "required": "n"
+    },
+    {
+      "fieldname": "measurementUnit",
+      "transforms": {
+      },
+      "source_type": "optionlist",
+      "source_name": "measurementUnits",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "measuredPartGroupList",
+        "measuredPartGroup",
+        "dimensionSubGroupList",
+        "dimensionSubGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+        "carats",
+        "centimeters",
+        "cubic-centimeters",
+        "dpi",
+        "feet",
+        "hours",
+        "inches",
+        "kilograms",
+        "liters",
+        "meters",
+        "millimeters",
+        "milliseconds",
+        "minutes",
+        "ounces",
+        "pixels",
+        "pounds",
+        "ppi",
+        "seconds",
+        "square-feet",
+        "stories",
+        "tons"
+      ],
+      "datacolumn": "measurementUnit",
+      "required": "n"
+    },
+    {
+      "fieldname": "valueQualifier",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "measuredPartGroupList",
+        "measuredPartGroup",
+        "dimensionSubGroupList",
+        "dimensionSubGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "valueQualifier",
+      "required": "n"
+    },
+    {
+      "fieldname": "valueDate",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "measuredPartGroupList",
+        "measuredPartGroup",
+        "dimensionSubGroupList",
+        "dimensionSubGroup"
+      ],
+      "data_type": "date",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "valueDate",
+      "required": "n"
+    },
+    {
+      "fieldname": "measuredPartNote",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "measuredPartGroupList",
+        "measuredPartGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "measuredPartNote",
+      "required": "n"
+    },
+    {
+      "fieldname": "contentDescription",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "collectionobjects_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "contentDescription",
+      "required": "n"
+    },
+    {
+      "fieldname": "contentLanguage",
+      "transforms": {
+        "vocabulary": "languages"
+      },
+      "source_type": "vocabulary",
+      "source_name": "languages",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "contentLanguages"
+      ],
+      "data_type": "string",
+      "repeats": "y",
+      "in_repeating_group": "n",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "contentLanguage",
+      "required": "n"
+    },
+    {
+      "fieldname": "contentLanguage",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "languages",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "contentLanguages"
+      ],
+      "data_type": "csrefname",
+      "repeats": "y",
+      "in_repeating_group": "n",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "contentLanguageRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "contentActivity",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "contentActivities"
+      ],
+      "data_type": "string",
+      "repeats": "y",
+      "in_repeating_group": "n",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "contentActivity",
+      "required": "n"
+    },
+    {
+      "fieldname": "contentConcept",
+      "transforms": {
+        "authority": [
+          "conceptauthorities",
+          "concept"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "concept/associated",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "contentConcepts"
+      ],
+      "data_type": "string",
+      "repeats": "y",
+      "in_repeating_group": "n",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "contentConceptConceptAssociated",
+      "required": "n"
+    },
+    {
+      "fieldname": "contentConcept",
+      "transforms": {
+        "authority": [
+          "conceptauthorities",
+          "material_ca"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "concept/material",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "contentConcepts"
+      ],
+      "data_type": "string",
+      "repeats": "y",
+      "in_repeating_group": "n",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "contentConceptConceptMaterial",
+      "required": "n"
+    },
+    {
+      "fieldname": "contentConcept",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "concept/associated",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "contentConcepts"
+      ],
+      "data_type": "csrefname",
+      "repeats": "y",
+      "in_repeating_group": "n",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "contentConceptRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "contentDateGroup",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "collectionobjects_common",
+      "xpath": [
+
+      ],
+      "data_type": "structured date group",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "contentDateGroup",
+      "required": "n"
+    },
+    {
+      "fieldname": "contentPosition",
+      "transforms": {
+      },
+      "source_type": "optionlist",
+      "source_name": "positions",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "contentPositions"
+      ],
+      "data_type": "string",
+      "repeats": "y",
+      "in_repeating_group": "n",
+      "opt_list_values": [
+        "back",
+        "base",
+        "bottom",
+        "front",
+        "inside",
+        "left",
+        "outside",
+        "recto",
+        "right",
+        "rim",
+        "top",
+        "verso"
+      ],
+      "datacolumn": "contentPosition",
+      "required": "n"
+    },
+    {
+      "fieldname": "contentObject",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "contentObjectGroupList",
+        "contentObjectGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "contentObject",
+      "required": "n"
+    },
+    {
+      "fieldname": "contentObjectType",
+      "transforms": {
+      },
+      "source_type": "optionlist",
+      "source_name": "contentObjectTypes",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "contentObjectGroupList",
+        "contentObjectGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+        "food",
+        "furniture"
+      ],
+      "datacolumn": "contentObjectType",
+      "required": "n"
+    },
+    {
+      "fieldname": "contentPeople",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "contentPeoples"
+      ],
+      "data_type": "string",
+      "repeats": "y",
+      "in_repeating_group": "n",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "contentPeople",
+      "required": "n"
+    },
+    {
+      "fieldname": "contentPerson",
+      "transforms": {
+        "authority": [
+          "personauthorities",
+          "person"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "person/local",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "contentPersons"
+      ],
+      "data_type": "string",
+      "repeats": "y",
+      "in_repeating_group": "n",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "contentPersonPersonLocal",
+      "required": "n"
+    },
+    {
+      "fieldname": "contentPerson",
+      "transforms": {
+        "authority": [
+          "personauthorities",
+          "ulan_pa"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "person/ulan",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "contentPersons"
+      ],
+      "data_type": "string",
+      "repeats": "y",
+      "in_repeating_group": "n",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "contentPersonPersonUlan",
+      "required": "n"
+    },
+    {
+      "fieldname": "contentPerson",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "person/local",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "contentPersons"
+      ],
+      "data_type": "csrefname",
+      "repeats": "y",
+      "in_repeating_group": "n",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "contentPersonRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "contentPlace",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "contentPlaces"
+      ],
+      "data_type": "string",
+      "repeats": "y",
+      "in_repeating_group": "n",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "contentPlace",
+      "required": "n"
+    },
+    {
+      "fieldname": "contentScript",
+      "transforms": {
+      },
+      "source_type": "optionlist",
+      "source_name": "scripts",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "contentScripts"
+      ],
+      "data_type": "string",
+      "repeats": "y",
+      "in_repeating_group": "n",
+      "opt_list_values": [
+        "carolingian-miniscule",
+        "gothic-script",
+        "palmer-method",
+        "roman-cursive",
+        "rustic-capitals",
+        "spencerian-method",
+        "square-capitals"
+      ],
+      "datacolumn": "contentScript",
+      "required": "n"
+    },
+    {
+      "fieldname": "contentOrganization",
+      "transforms": {
+        "authority": [
+          "orgauthorities",
+          "organization"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "organization/local",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "contentOrganizations"
+      ],
+      "data_type": "string",
+      "repeats": "y",
+      "in_repeating_group": "n",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "contentOrganizationOrganizationLocal",
+      "required": "n"
+    },
+    {
+      "fieldname": "contentOrganization",
+      "transforms": {
+        "authority": [
+          "orgauthorities",
+          "ulan_oa"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "organization/ulan",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "contentOrganizations"
+      ],
+      "data_type": "string",
+      "repeats": "y",
+      "in_repeating_group": "n",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "contentOrganizationOrganizationUlan",
+      "required": "n"
+    },
+    {
+      "fieldname": "contentOrganization",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "organization/local",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "contentOrganizations"
+      ],
+      "data_type": "csrefname",
+      "repeats": "y",
+      "in_repeating_group": "n",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "contentOrganizationRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "contentEventName",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "contentEventNameGroupList",
+        "contentEventNameGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "contentEventName",
+      "required": "n"
+    },
+    {
+      "fieldname": "contentEventNameType",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "contentEventNameGroupList",
+        "contentEventNameGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "contentEventNameType",
+      "required": "n"
+    },
+    {
+      "fieldname": "contentOther",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "contentOtherGroupList",
+        "contentOtherGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "contentOther",
+      "required": "n"
+    },
+    {
+      "fieldname": "contentOtherType",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "contentOtherGroupList",
+        "contentOtherGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "contentOtherType",
+      "required": "n"
+    },
+    {
+      "fieldname": "contentNote",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "collectionobjects_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "contentNote",
+      "required": "n"
+    },
+    {
+      "fieldname": "inscriptionContent",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "textualInscriptionGroupList",
+        "textualInscriptionGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "inscriptionContent",
+      "required": "n"
+    },
+    {
+      "fieldname": "inscriptionContentInscriber",
+      "transforms": {
+        "authority": [
+          "personauthorities",
+          "person"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "person/local",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "textualInscriptionGroupList",
+        "textualInscriptionGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "inscriptionContentInscriberPersonLocal",
+      "required": "n"
+    },
+    {
+      "fieldname": "inscriptionContentInscriber",
+      "transforms": {
+        "authority": [
+          "orgauthorities",
+          "organization"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "organization/local",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "textualInscriptionGroupList",
+        "textualInscriptionGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "inscriptionContentInscriberOrganizationLocal",
+      "required": "n"
+    },
+    {
+      "fieldname": "inscriptionContentInscriber",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "person/local",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "textualInscriptionGroupList",
+        "textualInscriptionGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "inscriptionContentInscriberRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "inscriptionContentLanguage",
+      "transforms": {
+        "vocabulary": "languages"
+      },
+      "source_type": "vocabulary",
+      "source_name": "languages",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "textualInscriptionGroupList",
+        "textualInscriptionGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "inscriptionContentLanguage",
+      "required": "n"
+    },
+    {
+      "fieldname": "inscriptionContentLanguage",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "languages",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "textualInscriptionGroupList",
+        "textualInscriptionGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "inscriptionContentLanguageRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "inscriptionContentDateGroup",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "textualInscriptionGroupList",
+        "textualInscriptionGroup"
+      ],
+      "data_type": "structured date group",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "inscriptionContentDateGroup",
+      "required": "n"
+    },
+    {
+      "fieldname": "inscriptionContentPosition",
+      "transforms": {
+      },
+      "source_type": "optionlist",
+      "source_name": "positions",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "textualInscriptionGroupList",
+        "textualInscriptionGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+        "back",
+        "base",
+        "bottom",
+        "front",
+        "inside",
+        "left",
+        "outside",
+        "recto",
+        "right",
+        "rim",
+        "top",
+        "verso"
+      ],
+      "datacolumn": "inscriptionContentPosition",
+      "required": "n"
+    },
+    {
+      "fieldname": "inscriptionContentScript",
+      "transforms": {
+      },
+      "source_type": "optionlist",
+      "source_name": "scripts",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "textualInscriptionGroupList",
+        "textualInscriptionGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+        "carolingian-miniscule",
+        "gothic-script",
+        "palmer-method",
+        "roman-cursive",
+        "rustic-capitals",
+        "spencerian-method",
+        "square-capitals"
+      ],
+      "datacolumn": "inscriptionContentScript",
+      "required": "n"
+    },
+    {
+      "fieldname": "inscriptionContentType",
+      "transforms": {
+      },
+      "source_type": "optionlist",
+      "source_name": "inscriptionTypes",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "textualInscriptionGroupList",
+        "textualInscriptionGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+        "brand",
+        "credits",
+        "decoration",
+        "estate-stamp",
+        "graffiti",
+        "label",
+        "maker's-mark",
+        "plaque",
+        "signage"
+      ],
+      "datacolumn": "inscriptionContentType",
+      "required": "n"
+    },
+    {
+      "fieldname": "inscriptionContentMethod",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "textualInscriptionGroupList",
+        "textualInscriptionGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "inscriptionContentMethod",
+      "required": "n"
+    },
+    {
+      "fieldname": "inscriptionContentInterpretation",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "textualInscriptionGroupList",
+        "textualInscriptionGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "inscriptionContentInterpretation",
+      "required": "n"
+    },
+    {
+      "fieldname": "inscriptionContentTranslation",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "textualInscriptionGroupList",
+        "textualInscriptionGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "inscriptionContentTranslation",
+      "required": "n"
+    },
+    {
+      "fieldname": "inscriptionContentTransliteration",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "textualInscriptionGroupList",
+        "textualInscriptionGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "inscriptionContentTransliteration",
+      "required": "n"
+    },
+    {
+      "fieldname": "inscriptionDescription",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "nonTextualInscriptionGroupList",
+        "nonTextualInscriptionGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "inscriptionDescription",
+      "required": "n"
+    },
+    {
+      "fieldname": "inscriptionDescriptionInscriber",
+      "transforms": {
+        "authority": [
+          "personauthorities",
+          "person"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "person/local",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "nonTextualInscriptionGroupList",
+        "nonTextualInscriptionGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "inscriptionDescriptionInscriberPersonLocal",
+      "required": "n"
+    },
+    {
+      "fieldname": "inscriptionDescriptionInscriber",
+      "transforms": {
+        "authority": [
+          "orgauthorities",
+          "organization"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "organization/local",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "nonTextualInscriptionGroupList",
+        "nonTextualInscriptionGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "inscriptionDescriptionInscriberOrganizationLocal",
+      "required": "n"
+    },
+    {
+      "fieldname": "inscriptionDescriptionInscriber",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "person/local",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "nonTextualInscriptionGroupList",
+        "nonTextualInscriptionGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "inscriptionDescriptionInscriberRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "inscriptionDescriptionDateGroup",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "nonTextualInscriptionGroupList",
+        "nonTextualInscriptionGroup"
+      ],
+      "data_type": "structured date group",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "inscriptionDescriptionDateGroup",
+      "required": "n"
+    },
+    {
+      "fieldname": "inscriptionDescriptionPosition",
+      "transforms": {
+      },
+      "source_type": "optionlist",
+      "source_name": "positions",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "nonTextualInscriptionGroupList",
+        "nonTextualInscriptionGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+        "back",
+        "base",
+        "bottom",
+        "front",
+        "inside",
+        "left",
+        "outside",
+        "recto",
+        "right",
+        "rim",
+        "top",
+        "verso"
+      ],
+      "datacolumn": "inscriptionDescriptionPosition",
+      "required": "n"
+    },
+    {
+      "fieldname": "inscriptionDescriptionType",
+      "transforms": {
+      },
+      "source_type": "optionlist",
+      "source_name": "inscriptionTypes",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "nonTextualInscriptionGroupList",
+        "nonTextualInscriptionGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+        "brand",
+        "credits",
+        "decoration",
+        "estate-stamp",
+        "graffiti",
+        "label",
+        "maker's-mark",
+        "plaque",
+        "signage"
+      ],
+      "datacolumn": "inscriptionDescriptionType",
+      "required": "n"
+    },
+    {
+      "fieldname": "inscriptionDescriptionMethod",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "nonTextualInscriptionGroupList",
+        "nonTextualInscriptionGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "inscriptionDescriptionMethod",
+      "required": "n"
+    },
+    {
+      "fieldname": "inscriptionDescriptionInterpretation",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "nonTextualInscriptionGroupList",
+        "nonTextualInscriptionGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "inscriptionDescriptionInterpretation",
+      "required": "n"
+    },
+    {
+      "fieldname": "objectProductionDateGroup",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "objectProductionDateGroupList"
+      ],
+      "data_type": "structured date group",
+      "repeats": "y",
+      "in_repeating_group": "n",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "objectProductionDateGroup",
+      "required": "n"
+    },
+    {
+      "fieldname": "technique",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "techniqueGroupList",
+        "techniqueGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "technique",
+      "required": "n"
+    },
+    {
+      "fieldname": "techniqueType",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "techniqueGroupList",
+        "techniqueGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "techniqueType",
+      "required": "n"
+    },
+    {
+      "fieldname": "objectProductionPlace",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "objectProductionPlaceGroupList",
+        "objectProductionPlaceGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "objectProductionPlace",
+      "required": "n"
+    },
+    {
+      "fieldname": "objectProductionPlaceRole",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "objectProductionPlaceGroupList",
+        "objectProductionPlaceGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "objectProductionPlaceRole",
+      "required": "n"
+    },
+    {
+      "fieldname": "objectProductionReason",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "objectProductionReasons"
+      ],
+      "data_type": "string",
+      "repeats": "y",
+      "in_repeating_group": "n",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "objectProductionReason",
+      "required": "n"
+    },
+    {
+      "fieldname": "objectProductionPeople",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "objectProductionPeopleGroupList",
+        "objectProductionPeopleGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "objectProductionPeople",
+      "required": "n"
+    },
+    {
+      "fieldname": "objectProductionPeopleRole",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "objectProductionPeopleGroupList",
+        "objectProductionPeopleGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "objectProductionPeopleRole",
+      "required": "n"
+    },
+    {
+      "fieldname": "objectProductionPerson",
+      "transforms": {
+        "authority": [
+          "personauthorities",
+          "person"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "person/local",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "objectProductionPersonGroupList",
+        "objectProductionPersonGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "objectProductionPerson",
+      "required": "n"
+    },
+    {
+      "fieldname": "objectProductionPerson",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "person/local",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "objectProductionPersonGroupList",
+        "objectProductionPersonGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "objectProductionPersonRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "objectProductionPersonRole",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "objectProductionPersonGroupList",
+        "objectProductionPersonGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "objectProductionPersonRole",
+      "required": "n"
+    },
+    {
+      "fieldname": "objectProductionOrganization",
+      "transforms": {
+        "authority": [
+          "orgauthorities",
+          "organization"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "organization/local",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "objectProductionOrganizationGroupList",
+        "objectProductionOrganizationGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "objectProductionOrganization",
+      "required": "n"
+    },
+    {
+      "fieldname": "objectProductionOrganization",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "organization/local",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "objectProductionOrganizationGroupList",
+        "objectProductionOrganizationGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "objectProductionOrganizationRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "objectProductionOrganizationRole",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "objectProductionOrganizationGroupList",
+        "objectProductionOrganizationGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "objectProductionOrganizationRole",
+      "required": "n"
+    },
+    {
+      "fieldname": "objectProductionNote",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "collectionobjects_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "objectProductionNote",
+      "required": "n"
+    },
+    {
+      "fieldname": "assocActivity",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "assocActivityGroupList",
+        "assocActivityGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "assocActivity",
+      "required": "n"
+    },
+    {
+      "fieldname": "assocActivityType",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "assocActivityGroupList",
+        "assocActivityGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "assocActivityType",
+      "required": "n"
+    },
+    {
+      "fieldname": "assocActivityNote",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "assocActivityGroupList",
+        "assocActivityGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "assocActivityNote",
+      "required": "n"
+    },
+    {
+      "fieldname": "assocObject",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "assocObjectGroupList",
+        "assocObjectGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "assocObject",
+      "required": "n"
+    },
+    {
+      "fieldname": "assocObjectType",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "assocObjectGroupList",
+        "assocObjectGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "assocObjectType",
+      "required": "n"
+    },
+    {
+      "fieldname": "assocObjectNote",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "assocObjectGroupList",
+        "assocObjectGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "assocObjectNote",
+      "required": "n"
+    },
+    {
+      "fieldname": "assocConcept",
+      "transforms": {
+        "authority": [
+          "conceptauthorities",
+          "concept"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "concept/associated",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "assocConceptGroupList",
+        "assocConceptGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "assocConcept",
+      "required": "n"
+    },
+    {
+      "fieldname": "assocConcept",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "concept/associated",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "assocConceptGroupList",
+        "assocConceptGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "assocConceptRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "assocConceptType",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "assocConceptGroupList",
+        "assocConceptGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "assocConceptType",
+      "required": "n"
+    },
+    {
+      "fieldname": "assocConceptNote",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "assocConceptGroupList",
+        "assocConceptGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "assocConceptNote",
+      "required": "n"
+    },
+    {
+      "fieldname": "assocCulturalContext",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "assocCulturalContextGroupList",
+        "assocCulturalContextGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "assocCulturalContext",
+      "required": "n"
+    },
+    {
+      "fieldname": "assocCulturalContextType",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "assocCulturalContextGroupList",
+        "assocCulturalContextGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "assocCulturalContextType",
+      "required": "n"
+    },
+    {
+      "fieldname": "assocCulturalContextNote",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "assocCulturalContextGroupList",
+        "assocCulturalContextGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "assocCulturalContextNote",
+      "required": "n"
+    },
+    {
+      "fieldname": "assocOrganization",
+      "transforms": {
+        "authority": [
+          "orgauthorities",
+          "organization"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "organization/local",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "assocOrganizationGroupList",
+        "assocOrganizationGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "assocOrganization",
+      "required": "n"
+    },
+    {
+      "fieldname": "assocOrganization",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "organization/local",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "assocOrganizationGroupList",
+        "assocOrganizationGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "assocOrganizationRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "assocOrganizationType",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "assocOrganizationGroupList",
+        "assocOrganizationGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "assocOrganizationType",
+      "required": "n"
+    },
+    {
+      "fieldname": "assocOrganizationNote",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "assocOrganizationGroupList",
+        "assocOrganizationGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "assocOrganizationNote",
+      "required": "n"
+    },
+    {
+      "fieldname": "assocPeople",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "assocPeopleGroupList",
+        "assocPeopleGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "assocPeople",
+      "required": "n"
+    },
+    {
+      "fieldname": "assocPeopleType",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "assocPeopleGroupList",
+        "assocPeopleGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "assocPeopleType",
+      "required": "n"
+    },
+    {
+      "fieldname": "assocPeopleNote",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "assocPeopleGroupList",
+        "assocPeopleGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "assocPeopleNote",
+      "required": "n"
+    },
+    {
+      "fieldname": "assocPerson",
+      "transforms": {
+        "authority": [
+          "personauthorities",
+          "person"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "person/local",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "assocPersonGroupList",
+        "assocPersonGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "assocPerson",
+      "required": "n"
+    },
+    {
+      "fieldname": "assocPerson",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "person/local",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "assocPersonGroupList",
+        "assocPersonGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "assocPersonRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "assocPersonType",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "assocPersonGroupList",
+        "assocPersonGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "assocPersonType",
+      "required": "n"
+    },
+    {
+      "fieldname": "assocPersonNote",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "assocPersonGroupList",
+        "assocPersonGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "assocPersonNote",
+      "required": "n"
+    },
+    {
+      "fieldname": "assocPlace",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "assocPlaceGroupList",
+        "assocPlaceGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "assocPlace",
+      "required": "n"
+    },
+    {
+      "fieldname": "assocPlaceType",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "assocPlaceGroupList",
+        "assocPlaceGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "assocPlaceType",
+      "required": "n"
+    },
+    {
+      "fieldname": "assocPlaceNote",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "assocPlaceGroupList",
+        "assocPlaceGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "assocPlaceNote",
+      "required": "n"
+    },
+    {
+      "fieldname": "assocEventName",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "collectionobjects_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "assocEventName",
+      "required": "n"
+    },
+    {
+      "fieldname": "assocEventNameType",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "collectionobjects_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "assocEventNameType",
+      "required": "n"
+    },
+    {
+      "fieldname": "assocEventOrganization",
+      "transforms": {
+        "authority": [
+          "orgauthorities",
+          "organization"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "organization/local",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "assocEventOrganizations"
+      ],
+      "data_type": "string",
+      "repeats": "y",
+      "in_repeating_group": "n",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "assocEventOrganization",
+      "required": "n"
+    },
+    {
+      "fieldname": "assocEventOrganization",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "organization/local",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "assocEventOrganizations"
+      ],
+      "data_type": "csrefname",
+      "repeats": "y",
+      "in_repeating_group": "n",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "assocEventOrganizationRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "assocEventPeople",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "assocEventPeoples"
+      ],
+      "data_type": "string",
+      "repeats": "y",
+      "in_repeating_group": "n",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "assocEventPeople",
+      "required": "n"
+    },
+    {
+      "fieldname": "assocEventPerson",
+      "transforms": {
+        "authority": [
+          "personauthorities",
+          "person"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "person/local",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "assocEventPersons"
+      ],
+      "data_type": "string",
+      "repeats": "y",
+      "in_repeating_group": "n",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "assocEventPerson",
+      "required": "n"
+    },
+    {
+      "fieldname": "assocEventPerson",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "person/local",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "assocEventPersons"
+      ],
+      "data_type": "csrefname",
+      "repeats": "y",
+      "in_repeating_group": "n",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "assocEventPersonRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "assocEventPlace",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "assocEventPlaces"
+      ],
+      "data_type": "string",
+      "repeats": "y",
+      "in_repeating_group": "n",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "assocEventPlace",
+      "required": "n"
+    },
+    {
+      "fieldname": "assocEventNote",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "collectionobjects_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "assocEventNote",
+      "required": "n"
+    },
+    {
+      "fieldname": "assocStructuredDateGroup",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "assocDateGroupList",
+        "assocDateGroup"
+      ],
+      "data_type": "structured date group",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "assocStructuredDateGroup",
+      "required": "n"
+    },
+    {
+      "fieldname": "assocDateType",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "assocDateGroupList",
+        "assocDateGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "assocDateType",
+      "required": "n"
+    },
+    {
+      "fieldname": "assocDateNote",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "assocDateGroupList",
+        "assocDateGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "assocDateNote",
+      "required": "n"
+    },
+    {
+      "fieldname": "objectHistoryNote",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "collectionobjects_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "objectHistoryNote",
+      "required": "n"
+    },
+    {
+      "fieldname": "usage",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "usageGroupList",
+        "usageGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "usage",
+      "required": "n"
+    },
+    {
+      "fieldname": "usageNote",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "usageGroupList",
+        "usageGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "usageNote",
+      "required": "n"
+    },
+    {
+      "fieldname": "owner",
+      "transforms": {
+        "authority": [
+          "personauthorities",
+          "person"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "person/local",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "owners"
+      ],
+      "data_type": "string",
+      "repeats": "y",
+      "in_repeating_group": "n",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "ownerPersonLocal",
+      "required": "n"
+    },
+    {
+      "fieldname": "owner",
+      "transforms": {
+        "authority": [
+          "orgauthorities",
+          "organization"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "organization/local",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "owners"
+      ],
+      "data_type": "string",
+      "repeats": "y",
+      "in_repeating_group": "n",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "ownerOrganizationLocal",
+      "required": "n"
+    },
+    {
+      "fieldname": "owner",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "person/local",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "owners"
+      ],
+      "data_type": "csrefname",
+      "repeats": "y",
+      "in_repeating_group": "n",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "ownerRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "ownershipDateGroup",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "ownershipDateGroupList"
+      ],
+      "data_type": "structured date group",
+      "repeats": "y",
+      "in_repeating_group": "n",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "ownershipDateGroup",
+      "required": "n"
+    },
+    {
+      "fieldname": "ownershipAccess",
+      "transforms": {
+      },
+      "source_type": "optionlist",
+      "source_name": "ownershipAccessLevels",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+        "limited",
+        "open",
+        "restricted"
+      ],
+      "datacolumn": "ownershipAccess",
+      "required": "n"
+    },
+    {
+      "fieldname": "ownershipCategory",
+      "transforms": {
+      },
+      "source_type": "optionlist",
+      "source_name": "ownershipCategories",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+        "company",
+        "private",
+        "public"
+      ],
+      "datacolumn": "ownershipCategory",
+      "required": "n"
+    },
+    {
+      "fieldname": "ownershipPlace",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "collectionobjects_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "ownershipPlace",
+      "required": "n"
+    },
+    {
+      "fieldname": "ownershipExchangeMethod",
+      "transforms": {
+      },
+      "source_type": "optionlist",
+      "source_name": "ownershipExchangeMethods",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+        "bequest",
+        "exchange",
+        "gift",
+        "purchase",
+        "transfer",
+        "treasure"
+      ],
+      "datacolumn": "ownershipExchangeMethod",
+      "required": "n"
+    },
+    {
+      "fieldname": "ownershipExchangeNote",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "collectionobjects_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "ownershipExchangeNote",
+      "required": "n"
+    },
+    {
+      "fieldname": "ownershipExchangePriceCurrency",
+      "transforms": {
+        "vocabulary": "currency"
+      },
+      "source_type": "vocabulary",
+      "source_name": "currency",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "ownershipExchangePriceCurrency",
+      "required": "n"
+    },
+    {
+      "fieldname": "ownershipExchangePriceCurrency",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "currency",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "ownershipExchangePriceCurrencyRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "ownershipExchangePriceValue",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "collectionobjects_common",
+      "xpath": [
+
+      ],
+      "data_type": "float",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "ownershipExchangePriceValue",
+      "required": "n"
+    },
+    {
+      "fieldname": "ownersPersonalExperience",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "collectionobjects_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "ownersPersonalExperience",
+      "required": "n"
+    },
+    {
+      "fieldname": "ownersPersonalResponse",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "collectionobjects_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "ownersPersonalResponse",
+      "required": "n"
+    },
+    {
+      "fieldname": "ownersReference",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "ownersReferences"
+      ],
+      "data_type": "string",
+      "repeats": "y",
+      "in_repeating_group": "n",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "ownersReference",
+      "required": "n"
+    },
+    {
+      "fieldname": "ownersContributionNote",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "collectionobjects_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "ownersContributionNote",
+      "required": "n"
+    },
+    {
+      "fieldname": "viewersRole",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "collectionobjects_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "viewersRole",
+      "required": "n"
+    },
+    {
+      "fieldname": "viewersPersonalExperience",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "collectionobjects_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "viewersPersonalExperience",
+      "required": "n"
+    },
+    {
+      "fieldname": "viewersPersonalResponse",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "collectionobjects_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "viewersPersonalResponse",
+      "required": "n"
+    },
+    {
+      "fieldname": "viewersReference",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "viewersReferences"
+      ],
+      "data_type": "string",
+      "repeats": "y",
+      "in_repeating_group": "n",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "viewersReference",
+      "required": "n"
+    },
+    {
+      "fieldname": "viewersContributionNote",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "collectionobjects_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "viewersContributionNote",
+      "required": "n"
+    },
+    {
+      "fieldname": "reference",
+      "transforms": {
+        "authority": [
+          "citationauthorities",
+          "citation"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "citation/local",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "referenceGroupList",
+        "referenceGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "referenceCitationLocal",
+      "required": "n"
+    },
+    {
+      "fieldname": "reference",
+      "transforms": {
+        "authority": [
+          "citationauthorities",
+          "worldcat"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "citation/worldcat",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "referenceGroupList",
+        "referenceGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "referenceCitationWorldcat",
+      "required": "n"
+    },
+    {
+      "fieldname": "reference",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "citation/local",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "referenceGroupList",
+        "referenceGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "referenceRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "referenceNote",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "referenceGroupList",
+        "referenceGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "referenceNote",
+      "required": "n"
+    },
+    {
+      "fieldname": "fieldCollectionDateGroup",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "collectionobjects_common",
+      "xpath": [
+
+      ],
+      "data_type": "structured date group",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "fieldCollectionDateGroup",
+      "required": "n"
+    },
+    {
+      "fieldname": "fieldCollectionMethod",
+      "transforms": {
+        "vocabulary": "collectionmethod"
+      },
+      "source_type": "vocabulary",
+      "source_name": "collectionmethod",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "fieldCollectionMethods"
+      ],
+      "data_type": "string",
+      "repeats": "y",
+      "in_repeating_group": "n",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "fieldCollectionMethod",
+      "required": "n"
+    },
+    {
+      "fieldname": "fieldCollectionMethod",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "collectionmethod",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "fieldCollectionMethods"
+      ],
+      "data_type": "csrefname",
+      "repeats": "y",
+      "in_repeating_group": "n",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "fieldCollectionMethodRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "fieldCollectionPlace",
+      "transforms": {
+        "authority": [
+          "placeauthorities",
+          "place"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "place/local",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "fieldCollectionPlacePlaceLocal",
+      "required": "n"
+    },
+    {
+      "fieldname": "fieldCollectionPlace",
+      "transforms": {
+        "authority": [
+          "placeauthorities",
+          "tgn_place"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "place/tgn",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "fieldCollectionPlacePlaceTgn",
+      "required": "n"
+    },
+    {
+      "fieldname": "fieldCollectionPlace",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "place/local",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "fieldCollectionPlaceRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "fieldCollectionSource",
+      "transforms": {
+        "authority": [
+          "personauthorities",
+          "person"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "person/local",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "fieldCollectionSources"
+      ],
+      "data_type": "string",
+      "repeats": "y",
+      "in_repeating_group": "n",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "fieldCollectionSource",
+      "required": "n"
+    },
+    {
+      "fieldname": "fieldCollectionSource",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "person/local",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "fieldCollectionSources"
+      ],
+      "data_type": "csrefname",
+      "repeats": "y",
+      "in_repeating_group": "n",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "fieldCollectionSourceRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "fieldCollector",
+      "transforms": {
+        "authority": [
+          "personauthorities",
+          "person"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "person/local",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "fieldCollectors"
+      ],
+      "data_type": "string",
+      "repeats": "y",
+      "in_repeating_group": "n",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "fieldCollectorPersonLocal",
+      "required": "n"
+    },
+    {
+      "fieldname": "fieldCollector",
+      "transforms": {
+        "authority": [
+          "orgauthorities",
+          "organization"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "organization/local",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "fieldCollectors"
+      ],
+      "data_type": "string",
+      "repeats": "y",
+      "in_repeating_group": "n",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "fieldCollectorOrganizationLocal",
+      "required": "n"
+    },
+    {
+      "fieldname": "fieldCollector",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "person/local",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "fieldCollectors"
+      ],
+      "data_type": "csrefname",
+      "repeats": "y",
+      "in_repeating_group": "n",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "fieldCollectorRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "fieldCollectionNumber",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "collectionobjects_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "fieldCollectionNumber",
+      "required": "n"
+    },
+    {
+      "fieldname": "fieldColEventName",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "fieldColEventNames"
+      ],
+      "data_type": "string",
+      "repeats": "y",
+      "in_repeating_group": "n",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "fieldColEventName",
+      "required": "n"
+    },
+    {
+      "fieldname": "fieldCollectionFeature",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "collectionobjects_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "fieldCollectionFeature",
+      "required": "n"
+    },
+    {
+      "fieldname": "fieldCollectionNote",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "collectionobjects_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "fieldCollectionNote",
+      "required": "n"
+    },
+    {
+      "fieldname": "rightType",
+      "transforms": {
+        "vocabulary": "rightstype"
+      },
+      "source_type": "vocabulary",
+      "source_name": "rightstype",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "rightsGroupList",
+        "rightsGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "rightType",
+      "required": "n"
+    },
+    {
+      "fieldname": "rightType",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "rightstype",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "rightsGroupList",
+        "rightsGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "rightTypeRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "rightBeginDate",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "rightsGroupList",
+        "rightsGroup"
+      ],
+      "data_type": "date",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "rightBeginDate",
+      "required": "n"
+    },
+    {
+      "fieldname": "rightEndDate",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "rightsGroupList",
+        "rightsGroup"
+      ],
+      "data_type": "date",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "rightEndDate",
+      "required": "n"
+    },
+    {
+      "fieldname": "rightHolder",
+      "transforms": {
+        "authority": [
+          "orgauthorities",
+          "organization"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "organization/local",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "rightsGroupList",
+        "rightsGroup",
+        "rightHolderGroupList",
+        "rightHolderGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "rightHolderOrganizationLocal",
+      "required": "n"
+    },
+    {
+      "fieldname": "rightHolder",
+      "transforms": {
+        "authority": [
+          "personauthorities",
+          "person"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "person/local",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "rightsGroupList",
+        "rightsGroup",
+        "rightHolderGroupList",
+        "rightHolderGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "rightHolderPersonLocal",
+      "required": "n"
+    },
+    {
+      "fieldname": "rightHolder",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "organization/local",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "rightsGroupList",
+        "rightsGroup",
+        "rightHolderGroupList",
+        "rightHolderGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "rightHolderRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "rightHolderContact",
+      "transforms": {
+        "authority": [
+          "orgauthorities",
+          "organization"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "organization/local",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "rightsGroupList",
+        "rightsGroup",
+        "rightHolderGroupList",
+        "rightHolderGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "rightHolderContactOrganizationLocal",
+      "required": "n"
+    },
+    {
+      "fieldname": "rightHolderContact",
+      "transforms": {
+        "authority": [
+          "personauthorities",
+          "person"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "person/local",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "rightsGroupList",
+        "rightsGroup",
+        "rightHolderGroupList",
+        "rightHolderGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "rightHolderContactPersonLocal",
+      "required": "n"
+    },
+    {
+      "fieldname": "rightHolderContact",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "organization/local",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "rightsGroupList",
+        "rightsGroup",
+        "rightHolderGroupList",
+        "rightHolderGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "rightHolderContactRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "rightJurisdiction",
+      "transforms": {
+      },
+      "source_type": "optionlist",
+      "source_name": "addressCountries",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "rightsGroupList",
+        "rightsGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+        "AD",
+        "AE",
+        "AF",
+        "AG",
+        "AI",
+        "AL",
+        "AM",
+        "AO",
+        "AQ",
+        "AR",
+        "AS",
+        "AT",
+        "AU",
+        "AW",
+        "AX",
+        "AZ",
+        "BA",
+        "BB",
+        "BD",
+        "BE",
+        "BF",
+        "BG",
+        "BH",
+        "BI",
+        "BJ",
+        "BL",
+        "BM",
+        "BN",
+        "BO",
+        "BQ",
+        "BR",
+        "BS",
+        "BT",
+        "BV",
+        "BW",
+        "BY",
+        "BZ",
+        "CA",
+        "CC",
+        "CD",
+        "CF",
+        "CG",
+        "CH",
+        "CI",
+        "CK",
+        "CL",
+        "CM",
+        "CN",
+        "CO",
+        "CR",
+        "CU",
+        "CV",
+        "CW",
+        "CX",
+        "CY",
+        "CZ",
+        "DE",
+        "DJ",
+        "DK",
+        "DM",
+        "DO",
+        "DZ",
+        "EC",
+        "EE",
+        "EG",
+        "EH",
+        "ER",
+        "ES",
+        "ET",
+        "FI",
+        "FJ",
+        "FK",
+        "FM",
+        "FO",
+        "FR",
+        "GA",
+        "GB",
+        "GD",
+        "GE",
+        "GF",
+        "GG",
+        "GH",
+        "GI",
+        "GL",
+        "GM",
+        "GN",
+        "GP",
+        "GQ",
+        "GR",
+        "GS",
+        "GT",
+        "GU",
+        "GW",
+        "GY",
+        "HK",
+        "HM",
+        "HN",
+        "HR",
+        "HT",
+        "HU",
+        "ID",
+        "IE",
+        "IL",
+        "IM",
+        "IN",
+        "IO",
+        "IQ",
+        "IR",
+        "IS",
+        "IT",
+        "JE",
+        "JM",
+        "JO",
+        "JP",
+        "KE",
+        "KG",
+        "KH",
+        "KI",
+        "KM",
+        "KN",
+        "KP",
+        "KR",
+        "KW",
+        "KY",
+        "KZ",
+        "LA",
+        "LB",
+        "LC",
+        "LI",
+        "LK",
+        "LR",
+        "LS",
+        "LT",
+        "LU",
+        "LV",
+        "LY",
+        "MA",
+        "MC",
+        "MD",
+        "ME",
+        "MF",
+        "MG",
+        "MH",
+        "MK",
+        "ML",
+        "MM",
+        "MN",
+        "MO",
+        "MP",
+        "MQ",
+        "MR",
+        "MS",
+        "MT",
+        "MU",
+        "MV",
+        "MW",
+        "MX",
+        "MY",
+        "MZ",
+        "NA",
+        "NC",
+        "NE",
+        "NF",
+        "NG",
+        "NI",
+        "NL",
+        "NO",
+        "NP",
+        "NR",
+        "NU",
+        "NZ",
+        "OM",
+        "PA",
+        "PE",
+        "PF",
+        "PG",
+        "PH",
+        "PK",
+        "PL",
+        "PM",
+        "PN",
+        "PR",
+        "PS",
+        "PT",
+        "PW",
+        "PY",
+        "QA",
+        "RE",
+        "RO",
+        "RS",
+        "RU",
+        "RW",
+        "SA",
+        "SB",
+        "SC",
+        "SD",
+        "SE",
+        "SG",
+        "SH",
+        "SI",
+        "SJ",
+        "SK",
+        "SL",
+        "SM",
+        "SN",
+        "SO",
+        "SR",
+        "SS",
+        "ST",
+        "SV",
+        "SX",
+        "SY",
+        "SZ",
+        "TC",
+        "TD",
+        "TF",
+        "TG",
+        "TH",
+        "TJ",
+        "TK",
+        "TL",
+        "TM",
+        "TN",
+        "TO",
+        "TR",
+        "TT",
+        "TV",
+        "TW",
+        "TZ",
+        "UA",
+        "UG",
+        "UM",
+        "US",
+        "UY",
+        "UZ",
+        "VA",
+        "VC",
+        "VE",
+        "VG",
+        "VI",
+        "VN",
+        "VU",
+        "WF",
+        "WS",
+        "YE",
+        "YT",
+        "ZA",
+        "ZM",
+        "ZW"
+      ],
+      "datacolumn": "rightJurisdiction",
+      "required": "n"
+    },
+    {
+      "fieldname": "standardizedRightStatement",
+      "transforms": {
+        "vocabulary": "standardizedrightstatement"
+      },
+      "source_type": "vocabulary",
+      "source_name": "standardizedrightstatement",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "rightsGroupList",
+        "rightsGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "standardizedRightStatement",
+      "required": "n"
+    },
+    {
+      "fieldname": "standardizedRightStatement",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "standardizedrightstatement",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "rightsGroupList",
+        "rightsGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "standardizedRightStatementRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "rightStatement",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "rightsGroupList",
+        "rightsGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "rightStatement",
+      "required": "n"
+    },
+    {
+      "fieldname": "rightNote",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "rightsGroupList",
+        "rightsGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "rightNote",
+      "required": "n"
+    },
+    {
+      "fieldname": "rightInType",
+      "transforms": {
+        "vocabulary": "rightsin"
+      },
+      "source_type": "vocabulary",
+      "source_name": "rightsin",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "rightsInGroupList",
+        "rightsInGroup",
+        "rightInTypes"
+      ],
+      "data_type": "string",
+      "repeats": "y",
+      "in_repeating_group": "as part of larger repeating group",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "rightInType",
+      "required": "n"
+    },
+    {
+      "fieldname": "rightInType",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "rightsin",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "rightsInGroupList",
+        "rightsInGroup",
+        "rightInTypes"
+      ],
+      "data_type": "csrefname",
+      "repeats": "y",
+      "in_repeating_group": "as part of larger repeating group",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "rightInTypeRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "rightInBeginDate",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "rightsInGroupList",
+        "rightsInGroup"
+      ],
+      "data_type": "date",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "rightInBeginDate",
+      "required": "n"
+    },
+    {
+      "fieldname": "rightInEndDate",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "rightsInGroupList",
+        "rightsInGroup"
+      ],
+      "data_type": "date",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "rightInEndDate",
+      "required": "n"
+    },
+    {
+      "fieldname": "agreementSent",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "rightsInGroupList",
+        "rightsInGroup"
+      ],
+      "data_type": "date",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "agreementSent",
+      "required": "n"
+    },
+    {
+      "fieldname": "agreementReceived",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "rightsInGroupList",
+        "rightsInGroup"
+      ],
+      "data_type": "date",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "agreementReceived",
+      "required": "n"
+    },
+    {
+      "fieldname": "agreementSigned",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "rightsInGroupList",
+        "rightsInGroup"
+      ],
+      "data_type": "date",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "agreementSigned",
+      "required": "n"
+    },
+    {
+      "fieldname": "rightInRestriction",
+      "transforms": {
+        "vocabulary": "rightsinrestriction"
+      },
+      "source_type": "vocabulary",
+      "source_name": "rightsinrestriction",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "rightsInGroupList",
+        "rightsInGroup",
+        "rightInRestrictions"
+      ],
+      "data_type": "string",
+      "repeats": "y",
+      "in_repeating_group": "as part of larger repeating group",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "rightInRestriction",
+      "required": "n"
+    },
+    {
+      "fieldname": "rightInRestriction",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "rightsinrestriction",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "rightsInGroupList",
+        "rightsInGroup",
+        "rightInRestrictions"
+      ],
+      "data_type": "csrefname",
+      "repeats": "y",
+      "in_repeating_group": "as part of larger repeating group",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "rightInRestrictionRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "rightReproductionStatement",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "rightsInGroupList",
+        "rightsInGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "rightReproductionStatement",
+      "required": "n"
+    },
+    {
+      "fieldname": "rightInNote",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "rightsInGroupList",
+        "rightsInGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "rightInNote",
+      "required": "n"
+    },
+    {
+      "fieldname": "assignedSignificance",
+      "transforms": {
+        "vocabulary": "assignedsignificance"
+      },
+      "source_type": "vocabulary",
+      "source_name": "assignedsignificance",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "objectSignificanceGroupList",
+        "objectSignificanceGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "assignedSignificance",
+      "required": "n"
+    },
+    {
+      "fieldname": "assignedSignificance",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "assignedsignificance",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "objectSignificanceGroupList",
+        "objectSignificanceGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "assignedSignificanceRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "significanceAssignedBy",
+      "transforms": {
+        "vocabulary": "significanceassignedby"
+      },
+      "source_type": "vocabulary",
+      "source_name": "significanceassignedby",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "objectSignificanceGroupList",
+        "objectSignificanceGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "significanceAssignedBy",
+      "required": "n"
+    },
+    {
+      "fieldname": "significanceAssignedBy",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "significanceassignedby",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "objectSignificanceGroupList",
+        "objectSignificanceGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "significanceAssignedByRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "significanceAssignedDate",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "objectSignificanceGroupList",
+        "objectSignificanceGroup"
+      ],
+      "data_type": "date",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "significanceAssignedDate",
+      "required": "n"
+    },
+    {
+      "fieldname": "significanceAssignedContact",
+      "transforms": {
+        "authority": [
+          "personauthorities",
+          "person"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "person/local",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "objectSignificanceGroupList",
+        "objectSignificanceGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "significanceAssignedContactPersonLocal",
+      "required": "n"
+    },
+    {
+      "fieldname": "significanceAssignedContact",
+      "transforms": {
+        "authority": [
+          "personauthorities",
+          "ulan_pa"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "person/ulan",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "objectSignificanceGroupList",
+        "objectSignificanceGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "significanceAssignedContactPersonUlan",
+      "required": "n"
+    },
+    {
+      "fieldname": "significanceAssignedContact",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "person/local",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "objectSignificanceGroupList",
+        "objectSignificanceGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "significanceAssignedContactRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "objectSuppliedBy",
+      "transforms": {
+        "authority": [
+          "personauthorities",
+          "person"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "person/local",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "objectSuppliedByPersonLocal",
+      "required": "n"
+    },
+    {
+      "fieldname": "objectSuppliedBy",
+      "transforms": {
+        "authority": [
+          "personauthorities",
+          "ulan_pa"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "person/ulan",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "objectSuppliedByPersonUlan",
+      "required": "n"
+    },
+    {
+      "fieldname": "objectSuppliedBy",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "person/local",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "objectSuppliedByRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "variableMediaComponentStatus",
+      "transforms": {
+        "vocabulary": "vmcomponentstatus"
+      },
+      "source_type": "vocabulary",
+      "source_name": "vmcomponentstatus",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "variableMediaComponentStatus",
+      "required": "n"
+    },
+    {
+      "fieldname": "variableMediaComponentStatus",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "vmcomponentstatus",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "variableMediaComponentStatusRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "credentialType",
+      "transforms": {
+        "vocabulary": "credentialtype"
+      },
+      "source_type": "vocabulary",
+      "source_name": "credentialtype",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "credentialGroupList",
+        "credentialGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "credentialType",
+      "required": "n"
+    },
+    {
+      "fieldname": "credentialType",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "credentialtype",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "credentialGroupList",
+        "credentialGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "credentialTypeRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "credentialRequiredForUse",
+      "transforms": {
+      },
+      "source_type": "optionlist",
+      "source_name": "yesNoValues",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "credentialGroupList",
+        "credentialGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+        "no",
+        "yes"
+      ],
+      "datacolumn": "credentialRequiredForUse",
+      "required": "n"
+    },
+    {
+      "fieldname": "credentialLocation",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "credentialGroupList",
+        "credentialGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "credentialLocation",
+      "required": "n"
+    },
+    {
+      "fieldname": "distributedStorageLedger",
+      "transforms": {
+        "vocabulary": "distributedledgertype"
+      },
+      "source_type": "vocabulary",
+      "source_name": "distributedledgertype",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "distributedLedgerGroupList",
+        "distributedLedgerGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "distributedStorageLedger",
+      "required": "n"
+    },
+    {
+      "fieldname": "distributedStorageLedger",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "distributedledgertype",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "distributedLedgerGroupList",
+        "distributedLedgerGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "distributedStorageLedgerRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "distributedLedgerParentIdentifier",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "distributedLedgerGroupList",
+        "distributedLedgerGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "distributedLedgerParentIdentifier",
+      "required": "n"
+    },
+    {
+      "fieldname": "distributedLedgerObjectIdentifier",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "distributedLedgerGroupList",
+        "distributedLedgerGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "distributedLedgerObjectIdentifier",
+      "required": "n"
+    },
+    {
+      "fieldname": "ledger",
+      "transforms": {
+        "vocabulary": "ledgertype"
+      },
+      "source_type": "vocabulary",
+      "source_name": "ledgertype",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "ledgerGroupList",
+        "ledgerGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "ledger",
+      "required": "n"
+    },
+    {
+      "fieldname": "ledger",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "ledgertype",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "ledgerGroupList",
+        "ledgerGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "ledgerRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "ledgerContractAddress",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "ledgerGroupList",
+        "ledgerGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "ledgerContractAddress",
+      "required": "n"
+    },
+    {
+      "fieldname": "ledgerTokenID",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "ledgerGroupList",
+        "ledgerGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "ledgerTokenID",
+      "required": "n"
+    },
+    {
+      "fieldname": "checksumValue",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "checksumGroupList",
+        "checksumGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "checksumValue",
+      "required": "n"
+    },
+    {
+      "fieldname": "checksumType",
+      "transforms": {
+        "vocabulary": "checksumtypes"
+      },
+      "source_type": "vocabulary",
+      "source_name": "checksumtypes",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "checksumGroupList",
+        "checksumGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "checksumType",
+      "required": "n"
+    },
+    {
+      "fieldname": "checksumType",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "checksumtypes",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "checksumGroupList",
+        "checksumGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "checksumTypeRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "checksumDate",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "checksumGroupList",
+        "checksumGroup"
+      ],
+      "data_type": "date",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "checksumDate",
+      "required": "n"
+    },
+    {
+      "fieldname": "intendedBehavior",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "collectionobjects_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "intendedBehavior",
+      "required": "n"
+    },
+    {
+      "fieldname": "formatType",
+      "transforms": {
+        "vocabulary": "formattypenames"
+      },
+      "source_type": "vocabulary",
+      "source_name": "formattypenames",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "avFormatGroupList",
+        "avFormatGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "formatType",
+      "required": "n"
+    },
+    {
+      "fieldname": "formatType",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "formattypenames",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "avFormatGroupList",
+        "avFormatGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "formatTypeRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "format",
+      "transforms": {
+        "vocabulary": "formats"
+      },
+      "source_type": "vocabulary",
+      "source_name": "formats",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "avFormatGroupList",
+        "avFormatGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "format",
+      "required": "n"
+    },
+    {
+      "fieldname": "format",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "formats",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "avFormatGroupList",
+        "avFormatGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "formatRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "numberOfChannels",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "avChannelGroupList",
+        "avChannelGroup"
+      ],
+      "data_type": "integer",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "numberOfChannels",
+      "required": "n"
+    },
+    {
+      "fieldname": "channelType",
+      "transforms": {
+        "vocabulary": "formattypenames"
+      },
+      "source_type": "vocabulary",
+      "source_name": "formattypenames",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "avChannelGroupList",
+        "avChannelGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "channelType",
+      "required": "n"
+    },
+    {
+      "fieldname": "channelType",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "formattypenames",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "avChannelGroupList",
+        "avChannelGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "channelTypeRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "channelLayout",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "collectionobjects_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "channelLayout",
+      "required": "n"
+    },
+    {
+      "fieldname": "fileCodec",
+      "transforms": {
+        "vocabulary": "filecodecs"
+      },
+      "source_type": "vocabulary",
+      "source_name": "filecodecs",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "fileCodecGroupList",
+        "fileCodecGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "fileCodec",
+      "required": "n"
+    },
+    {
+      "fieldname": "fileCodec",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "filecodecs",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "fileCodecGroupList",
+        "fileCodecGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "fileCodecRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "compressionStandard",
+      "transforms": {
+        "vocabulary": "compressionstandards"
+      },
+      "source_type": "vocabulary",
+      "source_name": "compressionstandards",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "fileCodecGroupList",
+        "fileCodecGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "compressionStandard",
+      "required": "n"
+    },
+    {
+      "fieldname": "compressionStandard",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "compressionstandards",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "fileCodecGroupList",
+        "fileCodecGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "compressionStandardRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "fileContainer",
+      "transforms": {
+        "vocabulary": "filecontainers"
+      },
+      "source_type": "vocabulary",
+      "source_name": "filecontainers",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "fileCodecGroupList",
+        "fileCodecGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "fileContainer",
+      "required": "n"
+    },
+    {
+      "fieldname": "fileContainer",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "filecontainers",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "fileCodecGroupList",
+        "fileCodecGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "fileContainerRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "audioType",
+      "transforms": {
+        "vocabulary": "audiotypes"
+      },
+      "source_type": "vocabulary",
+      "source_name": "audiotypes",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "audioType",
+      "required": "n"
+    },
+    {
+      "fieldname": "audioType",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "audiotypes",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "audioTypeRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "audioPreferences",
+      "transforms": {
+        "vocabulary": "audiopreferences"
+      },
+      "source_type": "vocabulary",
+      "source_name": "audiopreferences",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "audioPreferences",
+      "required": "n"
+    },
+    {
+      "fieldname": "audioPreferences",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "audiopreferences",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "audioPreferencesRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "chromaSubsampling",
+      "transforms": {
+        "vocabulary": "chromasubsampling"
+      },
+      "source_type": "vocabulary",
+      "source_name": "chromasubsampling",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "chromaSubsampling",
+      "required": "n"
+    },
+    {
+      "fieldname": "chromaSubsampling",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "chromasubsampling",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "chromaSubsamplingRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "aspectRatio",
+      "transforms": {
+        "vocabulary": "aspectratios"
+      },
+      "source_type": "vocabulary",
+      "source_name": "aspectratios",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "aspectRatioGroupList",
+        "aspectRatioGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "aspectRatio",
+      "required": "n"
+    },
+    {
+      "fieldname": "aspectRatio",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "aspectratios",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "aspectRatioGroupList",
+        "aspectRatioGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "aspectRatioRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "aspectRatioType",
+      "transforms": {
+        "vocabulary": "aspectratiotypes"
+      },
+      "source_type": "vocabulary",
+      "source_name": "aspectratiotypes",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "aspectRatioGroupList",
+        "aspectRatioGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "aspectRatioType",
+      "required": "n"
+    },
+    {
+      "fieldname": "aspectRatioType",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "aspectratiotypes",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "aspectRatioGroupList",
+        "aspectRatioGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "aspectRatioTypeRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "colorSpace",
+      "transforms": {
+        "vocabulary": "colorspaces"
+      },
+      "source_type": "vocabulary",
+      "source_name": "colorspaces",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "colorSpaceGroupList",
+        "colorSpaceGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "colorSpace",
+      "required": "n"
+    },
+    {
+      "fieldname": "colorSpace",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "colorspaces",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "colorSpaceGroupList",
+        "colorSpaceGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "colorSpaceRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "colorType",
+      "transforms": {
+        "vocabulary": "colortypes"
+      },
+      "source_type": "vocabulary",
+      "source_name": "colortypes",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "colorSpaceGroupList",
+        "colorSpaceGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "colorType",
+      "required": "n"
+    },
+    {
+      "fieldname": "colorType",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "colortypes",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "colorSpaceGroupList",
+        "colorSpaceGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "colorTypeRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "avTechnicalAttribute",
+      "transforms": {
+        "vocabulary": "avattributes"
+      },
+      "source_type": "vocabulary",
+      "source_name": "avattributes",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "avTechnicalAttributeGroupList",
+        "avTechnicalAttributeGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "avTechnicalAttribute",
+      "required": "n"
+    },
+    {
+      "fieldname": "avTechnicalAttribute",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "avattributes",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "avTechnicalAttributeGroupList",
+        "avTechnicalAttributeGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "avTechnicalAttributeRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "avTechnicalAttributeLowValue",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "avTechnicalAttributeGroupList",
+        "avTechnicalAttributeGroup"
+      ],
+      "data_type": "integer",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "avTechnicalAttributeLowValue",
+      "required": "n"
+    },
+    {
+      "fieldname": "avTechnicalAttributeHighValue",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "avTechnicalAttributeGroupList",
+        "avTechnicalAttributeGroup"
+      ],
+      "data_type": "integer",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "avTechnicalAttributeHighValue",
+      "required": "n"
+    },
+    {
+      "fieldname": "avTechnicalAttributeUnit",
+      "transforms": {
+        "vocabulary": "avattributeunits"
+      },
+      "source_type": "vocabulary",
+      "source_name": "avattributeunits",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "avTechnicalAttributeGroupList",
+        "avTechnicalAttributeGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "avTechnicalAttributeUnit",
+      "required": "n"
+    },
+    {
+      "fieldname": "avTechnicalAttributeUnit",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "avattributeunits",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "avTechnicalAttributeGroupList",
+        "avTechnicalAttributeGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "avTechnicalAttributeUnitRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "avSpecificationNote",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "collectionobjects_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "avSpecificationNote",
+      "required": "n"
+    },
+    {
+      "fieldname": "programmingLanguageName",
+      "transforms": {
+        "vocabulary": "programminglanguage"
+      },
+      "source_type": "vocabulary",
+      "source_name": "programminglanguage",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "programmingLanguageGroupList",
+        "programmingLanguageGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "programmingLanguageName",
+      "required": "n"
+    },
+    {
+      "fieldname": "programmingLanguageName",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "programminglanguage",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "programmingLanguageGroupList",
+        "programmingLanguageGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "programmingLanguageNameRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "programmingLanguageVersion",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "programmingLanguageGroupList",
+        "programmingLanguageGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "programmingLanguageVersion",
+      "required": "n"
+    },
+    {
+      "fieldname": "software",
+      "transforms": {
+        "vocabulary": "utilizedsoftware"
+      },
+      "source_type": "vocabulary",
+      "source_name": "utilizedsoftware",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "utilizedSoftwareGroupList",
+        "utilizedSoftwareGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "software",
+      "required": "n"
+    },
+    {
+      "fieldname": "software",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "utilizedsoftware",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "utilizedSoftwareGroupList",
+        "utilizedSoftwareGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "softwareRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "softwareVersion",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "utilizedSoftwareGroupList",
+        "utilizedSoftwareGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "softwareVersion",
+      "required": "n"
+    },
+    {
+      "fieldname": "intendedOperatingSystem",
+      "transforms": {
+        "vocabulary": "operatingsystems"
+      },
+      "source_type": "vocabulary",
+      "source_name": "operatingsystems",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "intendedOperatingSystemGroupList",
+        "intendedOperatingSystemGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "intendedOperatingSystem",
+      "required": "n"
+    },
+    {
+      "fieldname": "intendedOperatingSystem",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "operatingsystems",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "intendedOperatingSystemGroupList",
+        "intendedOperatingSystemGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "intendedOperatingSystemRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "intendedOperatingSystemVersion",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "intendedOperatingSystemGroupList",
+        "intendedOperatingSystemGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "intendedOperatingSystemVersion",
+      "required": "n"
+    },
+    {
+      "fieldname": "softwareLibrary",
+      "transforms": {
+        "vocabulary": "softwarelibraries"
+      },
+      "source_type": "vocabulary",
+      "source_name": "softwarelibraries",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "softwareLibraries"
+      ],
+      "data_type": "string",
+      "repeats": "y",
+      "in_repeating_group": "n",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "softwareLibrary",
+      "required": "n"
+    },
+    {
+      "fieldname": "softwareLibrary",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "softwarelibraries",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "softwareLibraries"
+      ],
+      "data_type": "csrefname",
+      "repeats": "y",
+      "in_repeating_group": "n",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "softwareLibraryRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "codeCompiler",
+      "transforms": {
+        "vocabulary": "compilers"
+      },
+      "source_type": "vocabulary",
+      "source_name": "compilers",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "codeCompilers"
+      ],
+      "data_type": "string",
+      "repeats": "y",
+      "in_repeating_group": "n",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "codeCompiler",
+      "required": "n"
+    },
+    {
+      "fieldname": "codeCompiler",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "compilers",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "codeCompilers"
+      ],
+      "data_type": "csrefname",
+      "repeats": "y",
+      "in_repeating_group": "n",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "codeCompilerRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "networkConnectionRequired",
+      "transforms": {
+      },
+      "source_type": "optionlist",
+      "source_name": "yesNoValues",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "networkConnectionGroupList",
+        "networkConnectionGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+        "no",
+        "yes"
+      ],
+      "datacolumn": "networkConnectionRequired",
+      "required": "n"
+    },
+    {
+      "fieldname": "networkConnectionType",
+      "transforms": {
+        "vocabulary": "connectiontype"
+      },
+      "source_type": "vocabulary",
+      "source_name": "connectiontype",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "networkConnectionGroupList",
+        "networkConnectionGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "networkConnectionType",
+      "required": "n"
+    },
+    {
+      "fieldname": "networkConnectionType",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "connectiontype",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "networkConnectionGroupList",
+        "networkConnectionGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "networkConnectionTypeRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "intendedBrowser",
+      "transforms": {
+        "vocabulary": "webbrowsers"
+      },
+      "source_type": "vocabulary",
+      "source_name": "webbrowsers",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "intendedBrowserGroupList",
+        "intendedBrowserGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "intendedBrowser",
+      "required": "n"
+    },
+    {
+      "fieldname": "intendedBrowser",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "webbrowsers",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "intendedBrowserGroupList",
+        "intendedBrowserGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "intendedBrowserRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "intendedBrowserVersion",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "intendedBrowserGroupList",
+        "intendedBrowserGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "intendedBrowserVersion",
+      "required": "n"
+    },
+    {
+      "fieldname": "domainName",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "domainGroupList",
+        "domainGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "domainName",
+      "required": "n"
+    },
+    {
+      "fieldname": "domainHost",
+      "transforms": {
+        "authority": [
+          "orgauthorities",
+          "organization"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "organization/local",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "domainGroupList",
+        "domainGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "domainHost",
+      "required": "n"
+    },
+    {
+      "fieldname": "domainHost",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "organization/local",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "domainGroupList",
+        "domainGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "domainHostRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "domainType",
+      "transforms": {
+        "vocabulary": "domaintype"
+      },
+      "source_type": "vocabulary",
+      "source_name": "domaintype",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "domainGroupList",
+        "domainGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "domainType",
+      "required": "n"
+    },
+    {
+      "fieldname": "domainType",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "domaintype",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "domainGroupList",
+        "domainGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "domainTypeRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "domainVersion",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "domainGroupList",
+        "domainGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "domainVersion",
+      "required": "n"
+    },
+    {
+      "fieldname": "domainOwner",
+      "transforms": {
+        "authority": [
+          "orgauthorities",
+          "organization"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "organization/local",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "domainGroupList",
+        "domainGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "domainOwner",
+      "required": "n"
+    },
+    {
+      "fieldname": "domainOwner",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "organization/local",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "domainGroupList",
+        "domainGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "domainOwnerRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "applicationInteractionRequired",
+      "transforms": {
+      },
+      "source_type": "optionlist",
+      "source_name": "yesNoValues",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "applicationInteractionGroupList",
+        "applicationInteractionGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+        "no",
+        "yes"
+      ],
+      "datacolumn": "applicationInteractionRequired",
+      "required": "n"
+    },
+    {
+      "fieldname": "applicationRequired",
+      "transforms": {
+        "vocabulary": "requiredapplication"
+      },
+      "source_type": "vocabulary",
+      "source_name": "requiredapplication",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "applicationInteractionGroupList",
+        "applicationInteractionGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "applicationRequired",
+      "required": "n"
+    },
+    {
+      "fieldname": "applicationRequired",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "requiredapplication",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "applicationInteractionGroupList",
+        "applicationInteractionGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "applicationRequiredRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "applicationRequiredFor",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "applicationInteractionGroupList",
+        "applicationInteractionGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "applicationRequiredFor",
+      "required": "n"
+    },
+    {
+      "fieldname": "softwareTechnicalAttribute",
+      "transforms": {
+        "vocabulary": "softwareattributes"
+      },
+      "source_type": "vocabulary",
+      "source_name": "softwareattributes",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "softwareTechnicalAttributeGroupList",
+        "softwareTechnicalAttributeGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "softwareTechnicalAttribute",
+      "required": "n"
+    },
+    {
+      "fieldname": "softwareTechnicalAttribute",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "softwareattributes",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "softwareTechnicalAttributeGroupList",
+        "softwareTechnicalAttributeGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "softwareTechnicalAttributeRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "softwareTechnicalAttributeLowValue",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "softwareTechnicalAttributeGroupList",
+        "softwareTechnicalAttributeGroup"
+      ],
+      "data_type": "integer",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "softwareTechnicalAttributeLowValue",
+      "required": "n"
+    },
+    {
+      "fieldname": "softwareTechnicalAttributeHighValue",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "softwareTechnicalAttributeGroupList",
+        "softwareTechnicalAttributeGroup"
+      ],
+      "data_type": "integer",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "softwareTechnicalAttributeHighValue",
+      "required": "n"
+    },
+    {
+      "fieldname": "softwareTechnicalAttributeUnit",
+      "transforms": {
+        "vocabulary": "softwareattributeunits"
+      },
+      "source_type": "vocabulary",
+      "source_name": "softwareattributeunits",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "softwareTechnicalAttributeGroupList",
+        "softwareTechnicalAttributeGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "softwareTechnicalAttributeUnit",
+      "required": "n"
+    },
+    {
+      "fieldname": "softwareTechnicalAttributeUnit",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "softwareattributeunits",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "softwareTechnicalAttributeGroupList",
+        "softwareTechnicalAttributeGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "softwareTechnicalAttributeUnitRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "apiUrl",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "apiUrls"
+      ],
+      "data_type": "string",
+      "repeats": "y",
+      "in_repeating_group": "n",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "apiUrl",
+      "required": "n"
+    }
+  ]
+}

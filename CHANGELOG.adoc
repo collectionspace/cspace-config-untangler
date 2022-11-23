@@ -26,19 +26,29 @@ These changes are merged into the `main` branch, but have not been released. Aft
 === Breaking
 
 === Added
-* `ccu forms disabled` command (PR#104)
 
 === Changed
 
 === Bugfixes
-* CLI: `-p all` flag no longer errors if no profile in configs directory matches main profile (PR#106)
-* Disabled forms no longer contribute their fields to a record type's field list. (PR#103)
 
 === Deleted
 
 === Deprecated/Will break in a future version
 
 == Releases
+
+=== 1.11.0 - 2022-11-22
+==== Bugfixes
+* CLI: `-p all` flag no longer errors if no profile in configs directory matches main profile (PR#106)
+* Disabled forms no longer contribute their fields to a record type's field list. (PR#103)
+
+==== Added
+* Configs and mappers for 7.1 release
+* `ccu reports ref` command to generate reference documents for a given release
+* `ccu forms disabled` command (PR#104)
+
+==== Changed
+* Reorganizes reference documents (all fields CSVs, etc.) into `data/reference` directory, organized by release
 
 === 1.10.0 - 2022-10-21
 

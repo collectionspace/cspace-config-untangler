@@ -48,7 +48,7 @@ module CspaceConfigUntangler
   def logger
     @logger ||= Logger.new('log.log')
   end
-  
+
   def app_dir
     File.realpath(File.join(File.dirname(__FILE__), '..'))
   end
@@ -71,6 +71,31 @@ module CspaceConfigUntangler
     default: default_mapper_uri_base,
     reader: true
 
+
+  # @param release [String]
+  # @param mode [:collapsed, :expanded]
+  def allfields_path(release:, mode: :collapsed)
+    vmode = CCU::Validate.date_mode(mode)
+    vrelease = CCU::Validate.release(release)
+
+    name = "all_fields_#{vrelease}_dates_#{vmode}.csv"
+    File.join(
+      data_reference_dir(release: vrelease),
+      name
+    )
+  end
+
+  def data_reference_dir(release:)
+    vrelease = CCU::Validate.release(release)
+
+    File.join(
+      app_dir,
+      'data',
+      'reference',
+      vrelease
+    )
+  end
+
   def profiles
     Dir.new(CCU.configdir).children
     .reject{ |e| e['readable'] }
@@ -85,7 +110,7 @@ module CspaceConfigUntangler
       .map{ |filename| filename.to_s.delete_suffix(filename.extname) }
       .first
   end
-  
+
   def safe_copy(hash)
     Marshal.load(Marshal.dump(hash))
   end
