@@ -39,6 +39,7 @@ These changes are merged into the `main` branch, but have not been released. Aft
 
 === 1.11.0 - 2022-11-22
 ==== Bugfixes
+* CLI: `-p all` flag no longer errors if no profile in configs directory matches main profile (PR#106)
 * Disabled forms no longer contribute their fields to a record type's field list. (PR#103)
 
 ==== Added

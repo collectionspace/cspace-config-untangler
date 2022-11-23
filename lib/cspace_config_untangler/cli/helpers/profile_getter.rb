@@ -5,7 +5,7 @@ module CspaceConfigUntangler
         def self.call(opt_profiles)
           return [CCU.main_profile] unless opt_profiles
           return [CCU.main_profile] if opt_profiles.empty?
-          
+
           return self.all_profiles if opt_profiles == 'all'
 
           profiles = opt_profiles.split(',').map(&:strip)
@@ -15,7 +15,7 @@ module CspaceConfigUntangler
         private
 
         def self.all_profiles
-          [CCU.main_profile, CCU.profiles].flatten.uniq
+          [CCU.main_profile, CCU.profiles].compact.flatten.uniq
         end
 
         def self.get(profiles)
