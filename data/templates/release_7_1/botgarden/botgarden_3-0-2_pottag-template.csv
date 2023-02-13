@@ -1,0 +1,8 @@
+"Before importing CSV, delete initial column and rows above the CSVHEADER row","","","","","","","",""
+REQUIRED,n,n,n,n,n,n,n,n
+DATA TYPE,string,string,string,string,string,integer,string,string
+REPEATABLE FIELD?,n,n,n,n,n,n,n,n
+REPEATING FIELD GROUP,"","","","","","","",""
+VALUE SOURCE TYPE,na,authority,na,na,authority,na,optionlist,na
+VALUE SOURCE,"",taxon/local,"","",taxon/local,"","no, yes",""
+CSVHEADER,potTagNumber,family,commonName,locale,taxonName,numberOfLabels,printLabels,labelData

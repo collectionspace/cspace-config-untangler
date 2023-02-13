@@ -1,0 +1,8 @@
+"Before importing CSV, delete initial column and rows above the CSVHEADER row","","","","","","","","","","","","","","","","","","","","","","",""
+REQUIRED,y,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n
+DATA TYPE,string,string,string,string,string,string,string,string,date,string,string,string,string,string,string,string,structured date group,string,string,string,string,string,string
+REPEATABLE FIELD?,n,n,n,n,n,n,n,n,n,n,n,n,n,n,y,y,y,n,y,y,n,n,n
+REPEATING FIELD GROUP,"","","","","","",checksumGroupList < checksumGroup,checksumGroupList < checksumGroup,checksumGroupList < checksumGroup,"","","","","","","","","","","","","",""
+VALUE SOURCE TYPE,na,na,na,na,na,na,na,vocabulary,na,authority,authority,authority,authority,na,optionlist,vocabulary,na,na,authority,authority,na,na,na
+VALUE SOURCE,"","","","","","","",checksumtypes,"",person/local,organization/local,person/local,organization/local,"","dataset, document, moving_image, sound, still_image",publishto,"","",person/local,organization/local,"","",""
+CSVHEADER,identificationNumber,title,name,mimeType,length,externalUrl,checksumValue,checksumType,checksumDate,contributorPersonLocal,contributorOrganizationLocal,creatorPersonLocal,creatorOrganizationLocal,copyrightStatement,type,publishTo,dateGroup,source,publicartRightsHolderPersonLocal,publicartRightsHolderOrganizationLocal,description,altText,mediaFileURI
