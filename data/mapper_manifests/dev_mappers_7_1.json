@@ -1,0 +1,68 @@
+{
+  "mappers": [
+    {
+      "profile": "anthro",
+      "version": "6-0-5",
+      "type": "collectionobject",
+      "digest": "4bc7ae8dffedc2eae7595c3462151e755b10c9fb71f3dd5524fd97d663634873",
+      "enabled": true,
+      "url": "https://raw.githubusercontent.com/collectionspace/cspace-config-untangler/main/data/mappers/community_profiles/release_7_1/anthro/anthro_6-0-5_collectionobject.json"
+    },
+    {
+      "profile": "anthro",
+      "version": "6-0-5",
+      "type": "concept-associated",
+      "digest": "6d54bb9d799a7b0d4b5cb19b74df44d95300e497e9d4c45dc7c2fae3724e622f",
+      "enabled": true,
+      "url": "https://raw.githubusercontent.com/collectionspace/cspace-config-untangler/main/data/mappers/community_profiles/release_7_1/anthro/anthro_6-0-5_concept-associated.json"
+    },
+    {
+      "profile": "core",
+      "version": "7-1-0",
+      "type": "collectionobject",
+      "digest": "152c55252ed17c5c43fb424b3adfa7f653fd5c41752506729d20df3ec01c9882",
+      "enabled": true,
+      "url": "https://raw.githubusercontent.com/collectionspace/cspace-config-untangler/main/data/mappers/community_profiles/release_7_1/core/core_7-1-0_collectionobject.json"
+    },
+    {
+      "profile": "core",
+      "version": "7-1-0",
+      "type": "concept-associated",
+      "digest": "83e167b7a25b6278a739fdb7d296c525c98df969bbff3651907059b59c404240",
+      "enabled": true,
+      "url": "https://raw.githubusercontent.com/collectionspace/cspace-config-untangler/main/data/mappers/community_profiles/release_7_1/core/core_7-1-0_concept-associated.json"
+    },
+    {
+      "profile": "core",
+      "version": "7-1-0",
+      "type": "nonhierarchicalrelationship",
+      "digest": "bc799d09c49ec53b57785c35061e113c45cd7088a84c3607538d33bc4d9cf7ac",
+      "enabled": true,
+      "url": "https://raw.githubusercontent.com/collectionspace/cspace-config-untangler/main/data/mappers/community_profiles/release_7_1/core/core_7-1-0_nonhierarchicalrelationship.json"
+    },
+    {
+      "profile": "core",
+      "version": "7-1-0",
+      "type": "objecthierarchy",
+      "digest": "847174dceeb8ad063f3f3f35924a101b754d5f76a92824a46c5009b285675fd9",
+      "enabled": true,
+      "url": "https://raw.githubusercontent.com/collectionspace/cspace-config-untangler/main/data/mappers/community_profiles/release_7_1/core/core_7-1-0_objecthierarchy.json"
+    },
+    {
+      "profile": "fcart",
+      "version": "5-0-3",
+      "type": "collectionobject",
+      "digest": "06c2797cb560a3917d8f9d361ae3c17eb0f46d3a5bfe0e920a1c65a9f8ea8499",
+      "enabled": true,
+      "url": "https://raw.githubusercontent.com/collectionspace/cspace-config-untangler/main/data/mappers/community_profiles/release_7_1/fcart/fcart_5-0-3_collectionobject.json"
+    },
+    {
+      "profile": "fcart",
+      "version": "5-0-3",
+      "type": "concept-associated",
+      "digest": "35b92b2df4cc590e80e32a95b8fe4e4114816e737ad4dfb6a99689dbee171c1c",
+      "enabled": true,
+      "url": "https://raw.githubusercontent.com/collectionspace/cspace-config-untangler/main/data/mappers/community_profiles/release_7_1/fcart/fcart_5-0-3_concept-associated.json"
+    }
+  ]
+}
