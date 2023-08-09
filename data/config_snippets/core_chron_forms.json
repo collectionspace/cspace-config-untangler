@@ -1,0 +1,851 @@
+{
+    "forms": {
+        "default": {
+            "messages": {
+                "name": {
+                    "id": "form.chronology.default.name",
+                    "defaultMessage": "Standard Template"
+                }
+            },
+            "template": {
+                "key": null,
+                "ref": null,
+                "props": {
+                    "name": "document",
+                    "children": [
+                        {
+                            "key": null,
+                            "ref": null,
+                            "props": {
+                                "name": "info",
+                                "collapsible": true,
+                                "children": [
+                                    {
+                                        "key": null,
+                                        "ref": null,
+                                        "props": {
+                                            "name": "chronologyTermGroupList",
+                                            "children": {
+                                                "key": null,
+                                                "ref": null,
+                                                "props": {
+                                                    "name": "chronologyTermGroup",
+                                                    "children": {
+                                                        "key": null,
+                                                        "ref": null,
+                                                        "props": {
+                                                            "children": [
+                                                                {
+                                                                    "key": null,
+                                                                    "ref": null,
+                                                                    "props": {
+                                                                        "children": [
+                                                                            {
+                                                                                "key": null,
+                                                                                "ref": null,
+                                                                                "props": {"name": "termDisplayName"},
+                                                                                "_owner": null
+                                                                            },
+                                                                            {
+                                                                                "key": null,
+                                                                                "ref": null,
+                                                                                "props": {"name": "termName"},
+                                                                                "_owner": null
+                                                                            },
+                                                                            {
+                                                                                "key": null,
+                                                                                "ref": null,
+                                                                                "props": {"name": "termQualifier"},
+                                                                                "_owner": null
+                                                                            },
+                                                                            {
+                                                                                "key": null,
+                                                                                "ref": null,
+                                                                                "props": {"name": "termStatus"},
+                                                                                "_owner": null
+                                                                            }
+                                                                        ]
+                                                                    },
+                                                                    "_owner": null
+                                                                },
+                                                                {
+                                                                    "key": null,
+                                                                    "ref": null,
+                                                                    "props": {
+                                                                        "children": [
+                                                                            {
+                                                                                "key": null,
+                                                                                "ref": null,
+                                                                                "props": {"name": "termType"},
+                                                                                "_owner": null
+                                                                            },
+                                                                            {
+                                                                                "key": null,
+                                                                                "ref": null,
+                                                                                "props": {"name": "termFlag"},
+                                                                                "_owner": null
+                                                                            },
+                                                                            {
+                                                                                "key": null,
+                                                                                "ref": null,
+                                                                                "props": {"name": "historicalStatus"},
+                                                                                "_owner": null
+                                                                            },
+                                                                            {
+                                                                                "key": null,
+                                                                                "ref": null,
+                                                                                "props": {"name": "termLanguage"},
+                                                                                "_owner": null
+                                                                            },
+                                                                            {
+                                                                                "key": null,
+                                                                                "ref": null,
+                                                                                "props": {"name": "termPrefForLang"},
+                                                                                "_owner": null
+                                                                            }
+                                                                        ]
+                                                                    },
+                                                                    "_owner": null
+                                                                },
+                                                                {
+                                                                    "key": null,
+                                                                    "ref": null,
+                                                                    "props": {
+                                                                        "name": "termSource",
+                                                                        "children": [
+                                                                            {
+                                                                                "key": null,
+                                                                                "ref": null,
+                                                                                "props": {"name": "termSource"},
+                                                                                "_owner": null
+                                                                            },
+                                                                            {
+                                                                                "key": null,
+                                                                                "ref": null,
+                                                                                "props": {"name": "termSourceDetail"},
+                                                                                "_owner": null
+                                                                            },
+                                                                            {
+                                                                                "key": null,
+                                                                                "ref": null,
+                                                                                "props": {"name": "termSourceID"},
+                                                                                "_owner": null
+                                                                            },
+                                                                            {
+                                                                                "key": null,
+                                                                                "ref": null,
+                                                                                "props": {"name": "termSourceNote"},
+                                                                                "_owner": null
+                                                                            }
+                                                                        ]
+                                                                    },
+                                                                    "_owner": null
+                                                                }
+                                                            ]
+                                                        },
+                                                        "_owner": null
+                                                    }
+                                                },
+                                                "_owner": null
+                                            }
+                                        },
+                                        "_owner": null
+                                    },
+                                    {
+                                        "key": null,
+                                        "ref": null,
+                                        "props": {
+                                            "children": [
+                                                {
+                                                    "key": null,
+                                                    "ref": null,
+                                                    "props": {
+                                                        "children": [
+                                                            {
+                                                                "key": null,
+                                                                "ref": null,
+                                                                "props": {"name": "chronologyDateStructuredDateGroup"},
+                                                                "_owner": null
+                                                            },
+                                                            {
+                                                                "key": null,
+                                                                "ref": null,
+                                                                "props": {"name": "chronologyType"},
+                                                                "_owner": null
+                                                            },
+                                                            {
+                                                                "key": null,
+                                                                "ref": null,
+                                                                "props": {
+                                                                    "name": "chronologyPlaces",
+                                                                    "children": {
+                                                                        "key": null,
+                                                                        "ref": null,
+                                                                        "props": {"name": "chronologyPlace"},
+                                                                        "_owner": null
+                                                                    }
+                                                                },
+                                                                "_owner": null
+                                                            }
+                                                        ]
+                                                    },
+                                                    "_owner": null
+                                                },
+                                                {
+                                                    "key": null,
+                                                    "ref": null,
+                                                    "props": {
+                                                        "children": [
+                                                            {
+                                                                "key": null,
+                                                                "ref": null,
+                                                                "props": {"name": "chronologyDescription"},
+                                                                "_owner": null
+                                                            },
+                                                            {
+                                                                "key": null,
+                                                                "ref": null,
+                                                                "props": {"name": "chronologyNote"},
+                                                                "_owner": null
+                                                            }
+                                                        ]
+                                                    },
+                                                    "_owner": null
+                                                }
+                                            ]
+                                        },
+                                        "_owner": null
+                                    },
+                                    {
+                                        "key": null,
+                                        "ref": null,
+                                        "props": {
+                                            "name": "identifierGroupList",
+                                            "children": {
+                                                "key": null,
+                                                "ref": null,
+                                                "props": {
+                                                    "name": "identifierGroup",
+                                                    "children": [
+                                                        {
+                                                            "key": null,
+                                                            "ref": null,
+                                                            "props": {"name": "identifierValue"},
+                                                            "_owner": null
+                                                        },
+                                                        {
+                                                            "key": null,
+                                                            "ref": null,
+                                                            "props": {"name": "identifierCitation"},
+                                                            "_owner": null
+                                                        },
+                                                        {
+                                                            "key": null,
+                                                            "ref": null,
+                                                            "props": {"name": "identifierDate"},
+                                                            "_owner": null
+                                                        }
+                                                    ]
+                                                },
+                                                "_owner": null
+                                            }
+                                        },
+                                        "_owner": null
+                                    }
+                                ]
+                            },
+                            "_owner": null
+                        },
+                        {
+                            "key": null,
+                            "ref": null,
+                            "props": {
+                                "name": "associated",
+                                "collapsible": true,
+                                "collapsed": true,
+                                "children": {
+                                    "key": null,
+                                    "ref": null,
+                                    "props": {
+                                        "children": [
+                                            {
+                                                "key": null,
+                                                "ref": null,
+                                                "props": {
+                                                    "name": "personGroupList",
+                                                    "children": {
+                                                        "key": null,
+                                                        "ref": null,
+                                                        "props": {
+                                                            "name": "personGroup",
+                                                            "children": {
+                                                                "key": null,
+                                                                "ref": null,
+                                                                "props": {
+                                                                    "children": {
+                                                                        "key": null,
+                                                                        "ref": null,
+                                                                        "props": {
+                                                                            "children": [
+                                                                                {
+                                                                                    "key": null,
+                                                                                    "ref": null,
+                                                                                    "props": {"name": "person"},
+                                                                                    "_owner": null
+                                                                                },
+                                                                                {
+                                                                                    "key": null,
+                                                                                    "ref": null,
+                                                                                    "props": {"name": "personType"},
+                                                                                    "_owner": null
+                                                                                },
+                                                                                {
+                                                                                    "key": null,
+                                                                                    "ref": null,
+                                                                                    "props": {"name": "personStructuredDateGroup"},
+                                                                                    "_owner": null
+                                                                                },
+                                                                                {
+                                                                                    "key": null,
+                                                                                    "ref": null,
+                                                                                    "props": {
+                                                                                        "name": "personCitations",
+                                                                                        "children": {
+                                                                                            "key": null,
+                                                                                            "ref": null,
+                                                                                            "props": {"name": "personCitation"},
+                                                                                            "_owner": null
+                                                                                        }
+                                                                                    },
+                                                                                    "_owner": null
+                                                                                },
+                                                                                {
+                                                                                    "key": null,
+                                                                                    "ref": null,
+                                                                                    "props": {"name": "personNote"},
+                                                                                    "_owner": null
+                                                                                }
+                                                                            ]
+                                                                        },
+                                                                        "_owner": null
+                                                                    }
+                                                                },
+                                                                "_owner": null
+                                                            }
+                                                        },
+                                                        "_owner": null
+                                                    }
+                                                },
+                                                "_owner": null
+                                            },
+                                            {
+                                                "key": null,
+                                                "ref": null,
+                                                "props": {
+                                                    "name": "peopleGroupList",
+                                                    "children": {
+                                                        "key": null,
+                                                        "ref": null,
+                                                        "props": {
+                                                            "name": "peopleGroup",
+                                                            "children": {
+                                                                "key": null,
+                                                                "ref": null,
+                                                                "props": {
+                                                                    "children": {
+                                                                        "key": null,
+                                                                        "ref": null,
+                                                                        "props": {
+                                                                            "children": [
+                                                                                {
+                                                                                    "key": null,
+                                                                                    "ref": null,
+                                                                                    "props": {"name": "people"},
+                                                                                    "_owner": null
+                                                                                },
+                                                                                {
+                                                                                    "key": null,
+                                                                                    "ref": null,
+                                                                                    "props": {"name": "peopleType"},
+                                                                                    "_owner": null
+                                                                                },
+                                                                                {
+                                                                                    "key": null,
+                                                                                    "ref": null,
+                                                                                    "props": {"name": "peopleStructuredDateGroup"},
+                                                                                    "_owner": null
+                                                                                },
+                                                                                {
+                                                                                    "key": null,
+                                                                                    "ref": null,
+                                                                                    "props": {
+                                                                                        "name": "peopleCitations",
+                                                                                        "children": {
+                                                                                            "key": null,
+                                                                                            "ref": null,
+                                                                                            "props": {"name": "peopleCitation"},
+                                                                                            "_owner": null
+                                                                                        }
+                                                                                    },
+                                                                                    "_owner": null
+                                                                                },
+                                                                                {
+                                                                                    "key": null,
+                                                                                    "ref": null,
+                                                                                    "props": {"name": "peopleNote"},
+                                                                                    "_owner": null
+                                                                                }
+                                                                            ]
+                                                                        },
+                                                                        "_owner": null
+                                                                    }
+                                                                },
+                                                                "_owner": null
+                                                            }
+                                                        },
+                                                        "_owner": null
+                                                    }
+                                                },
+                                                "_owner": null
+                                            },
+                                            {
+                                                "key": null,
+                                                "ref": null,
+                                                "props": {
+                                                    "name": "organizationGroupList",
+                                                    "children": {
+                                                        "key": null,
+                                                        "ref": null,
+                                                        "props": {
+                                                            "name": "organizationGroup",
+                                                            "children": {
+                                                                "key": null,
+                                                                "ref": null,
+                                                                "props": {
+                                                                    "children": {
+                                                                        "key": null,
+                                                                        "ref": null,
+                                                                        "props": {
+                                                                            "children": [
+                                                                                {
+                                                                                    "key": null,
+                                                                                    "ref": null,
+                                                                                    "props": {"name": "organization"},
+                                                                                    "_owner": null
+                                                                                },
+                                                                                {
+                                                                                    "key": null,
+                                                                                    "ref": null,
+                                                                                    "props": {"name": "organizationType"},
+                                                                                    "_owner": null
+                                                                                },
+                                                                                {
+                                                                                    "key": null,
+                                                                                    "ref": null,
+                                                                                    "props": {"name": "organizationStructuredDateGroup"},
+                                                                                    "_owner": null
+                                                                                },
+                                                                                {
+                                                                                    "key": null,
+                                                                                    "ref": null,
+                                                                                    "props": {
+                                                                                        "name": "organizationCitations",
+                                                                                        "children": {
+                                                                                            "key": null,
+                                                                                            "ref": null,
+                                                                                            "props": {"name": "organizationCitation"},
+                                                                                            "_owner": null
+                                                                                        }
+                                                                                    },
+                                                                                    "_owner": null
+                                                                                },
+                                                                                {
+                                                                                    "key": null,
+                                                                                    "ref": null,
+                                                                                    "props": {"name": "organizationNote"},
+                                                                                    "_owner": null
+                                                                                }
+                                                                            ]
+                                                                        },
+                                                                        "_owner": null
+                                                                    }
+                                                                },
+                                                                "_owner": null
+                                                            }
+                                                        },
+                                                        "_owner": null
+                                                    }
+                                                },
+                                                "_owner": null
+                                            },
+                                            {
+                                                "key": null,
+                                                "ref": null,
+                                                "props": {
+                                                    "name": "conceptGroupList",
+                                                    "children": {
+                                                        "key": null,
+                                                        "ref": null,
+                                                        "props": {
+                                                            "name": "conceptGroup",
+                                                            "children": {
+                                                                "key": null,
+                                                                "ref": null,
+                                                                "props": {
+                                                                    "children": {
+                                                                        "key": null,
+                                                                        "ref": null,
+                                                                        "props": {
+                                                                            "children": [
+                                                                                {
+                                                                                    "key": null,
+                                                                                    "ref": null,
+                                                                                    "props": {"name": "concept"},
+                                                                                    "_owner": null
+                                                                                },
+                                                                                {
+                                                                                    "key": null,
+                                                                                    "ref": null,
+                                                                                    "props": {"name": "conceptType"},
+                                                                                    "_owner": null
+                                                                                },
+                                                                                {
+                                                                                    "key": null,
+                                                                                    "ref": null,
+                                                                                    "props": {"name": "conceptStructuredDateGroup"},
+                                                                                    "_owner": null
+                                                                                },
+                                                                                {
+                                                                                    "key": null,
+                                                                                    "ref": null,
+                                                                                    "props": {
+                                                                                        "name": "conceptCitations",
+                                                                                        "children": {
+                                                                                            "key": null,
+                                                                                            "ref": null,
+                                                                                            "props": {"name": "conceptCitation"},
+                                                                                            "_owner": null
+                                                                                        }
+                                                                                    },
+                                                                                    "_owner": null
+                                                                                },
+                                                                                {
+                                                                                    "key": null,
+                                                                                    "ref": null,
+                                                                                    "props": {"name": "conceptNote"},
+                                                                                    "_owner": null
+                                                                                }
+                                                                            ]
+                                                                        },
+                                                                        "_owner": null
+                                                                    }
+                                                                },
+                                                                "_owner": null
+                                                            }
+                                                        },
+                                                        "_owner": null
+                                                    }
+                                                },
+                                                "_owner": null
+                                            },
+                                            {
+                                                "key": null,
+                                                "ref": null,
+                                                "props": {
+                                                    "name": "placeGroupList",
+                                                    "children": {
+                                                        "key": null,
+                                                        "ref": null,
+                                                        "props": {
+                                                            "name": "placeGroup",
+                                                            "children": {
+                                                                "key": null,
+                                                                "ref": null,
+                                                                "props": {
+                                                                    "children": {
+                                                                        "key": null,
+                                                                        "ref": null,
+                                                                        "props": {
+                                                                            "children": [
+                                                                                {
+                                                                                    "key": null,
+                                                                                    "ref": null,
+                                                                                    "props": {"name": "place"},
+                                                                                    "_owner": null
+                                                                                },
+                                                                                {
+                                                                                    "key": null,
+                                                                                    "ref": null,
+                                                                                    "props": {"name": "placeType"},
+                                                                                    "_owner": null
+                                                                                },
+                                                                                {
+                                                                                    "key": null,
+                                                                                    "ref": null,
+                                                                                    "props": {"name": "placeStructuredDateGroup"},
+                                                                                    "_owner": null
+                                                                                },
+                                                                                {
+                                                                                    "key": null,
+                                                                                    "ref": null,
+                                                                                    "props": {
+                                                                                        "name": "placeCitations",
+                                                                                        "children": {
+                                                                                            "key": null,
+                                                                                            "ref": null,
+                                                                                            "props": {"name": "placeCitation"},
+                                                                                            "_owner": null
+                                                                                        }
+                                                                                    },
+                                                                                    "_owner": null
+                                                                                },
+                                                                                {
+                                                                                    "key": null,
+                                                                                    "ref": null,
+                                                                                    "props": {"name": "placeNote"},
+                                                                                    "_owner": null
+                                                                                }
+                                                                            ]
+                                                                        },
+                                                                        "_owner": null
+                                                                    }
+                                                                },
+                                                                "_owner": null
+                                                            }
+                                                        },
+                                                        "_owner": null
+                                                    }
+                                                },
+                                                "_owner": null
+                                            },
+                                            {
+                                                "key": null,
+                                                "ref": null,
+                                                "props": {
+                                                    "name": "relatedPeriodGroupList",
+                                                    "children": {
+                                                        "key": null,
+                                                        "ref": null,
+                                                        "props": {
+                                                            "name": "relatedPeriodGroup",
+                                                            "children": {
+                                                                "key": null,
+                                                                "ref": null,
+                                                                "props": {
+                                                                    "children": {
+                                                                        "key": null,
+                                                                        "ref": null,
+                                                                        "props": {
+                                                                            "children": [
+                                                                                {
+                                                                                    "key": null,
+                                                                                    "ref": null,
+                                                                                    "props": {"name": "relatedPeriod"},
+                                                                                    "_owner": null
+                                                                                },
+                                                                                {
+                                                                                    "key": null,
+                                                                                    "ref": null,
+                                                                                    "props": {"name": "relatedPeriodType"},
+                                                                                    "_owner": null
+                                                                                },
+                                                                                {
+                                                                                    "key": null,
+                                                                                    "ref": null,
+                                                                                    "props": {"name": "relatedPeriodStructuredDateGroup"},
+                                                                                    "_owner": null
+                                                                                },
+                                                                                {
+                                                                                    "key": null,
+                                                                                    "ref": null,
+                                                                                    "props": {
+                                                                                        "name": "relatedPeriodCitations",
+                                                                                        "children": {
+                                                                                            "key": null,
+                                                                                            "ref": null,
+                                                                                            "props": {"name": "relatedPeriodCitation"},
+                                                                                            "_owner": null
+                                                                                        }
+                                                                                    },
+                                                                                    "_owner": null
+                                                                                },
+                                                                                {
+                                                                                    "key": null,
+                                                                                    "ref": null,
+                                                                                    "props": {"name": "relatedPeriodNote"},
+                                                                                    "_owner": null
+                                                                                }
+                                                                            ]
+                                                                        },
+                                                                        "_owner": null
+                                                                    }
+                                                                },
+                                                                "_owner": null
+                                                            }
+                                                        },
+                                                        "_owner": null
+                                                    }
+                                                },
+                                                "_owner": null
+                                            }
+                                        ]
+                                    },
+                                    "_owner": null
+                                }
+                            },
+                            "_owner": null
+                        },
+                        {
+                            "key": null,
+                            "ref": null,
+                            "props": {
+                                "name": "altdate",
+                                "collapsible": true,
+                                "collapsed": true,
+                                "children": {
+                                    "key": null,
+                                    "ref": null,
+                                    "props": {
+                                        "name": "otherDateGroupList",
+                                        "children": {
+                                            "key": null,
+                                            "ref": null,
+                                            "props": {
+                                                "name": "otherDateGroup",
+                                                "children": {
+                                                    "key": null,
+                                                    "ref": null,
+                                                    "props": {
+                                                        "children": {
+                                                            "key": null,
+                                                            "ref": null,
+                                                            "props": {
+                                                                "children": [
+                                                                    {
+                                                                        "key": null,
+                                                                        "ref": null,
+                                                                        "props": {
+                                                                            "children": [
+                                                                                {
+                                                                                    "key": null,
+                                                                                    "ref": null,
+                                                                                    "props": {"name": "otherDateStructuredDateGroup"},
+                                                                                    "_owner": null
+                                                                                },
+                                                                                {
+                                                                                    "key": null,
+                                                                                    "ref": null,
+                                                                                    "props": {
+                                                                                        "name": "otherDatePlaces",
+                                                                                        "children": {
+                                                                                            "key": null,
+                                                                                            "ref": null,
+                                                                                            "props": {"name": "otherDatePlace"},
+                                                                                            "_owner": null
+                                                                                        }
+                                                                                    },
+                                                                                    "_owner": null
+                                                                                }
+                                                                            ]
+                                                                        },
+                                                                        "_owner": null
+                                                                    },
+                                                                    {
+                                                                        "key": null,
+                                                                        "ref": null,
+                                                                        "props": {
+                                                                            "children": [
+                                                                                {
+                                                                                    "key": null,
+                                                                                    "ref": null,
+                                                                                    "props": {
+                                                                                        "name": "otherDateCitations",
+                                                                                        "children": {
+                                                                                            "key": null,
+                                                                                            "ref": null,
+                                                                                            "props": {"name": "otherDateCitation"},
+                                                                                            "_owner": null
+                                                                                        }
+                                                                                    },
+                                                                                    "_owner": null
+                                                                                },
+                                                                                {
+                                                                                    "key": null,
+                                                                                    "ref": null,
+                                                                                    "props": {"name": "otherDateNote"},
+                                                                                    "_owner": null
+                                                                                }
+                                                                            ]
+                                                                        },
+                                                                        "_owner": null
+                                                                    }
+                                                                ]
+                                                            },
+                                                            "_owner": null
+                                                        }
+                                                    },
+                                                    "_owner": null
+                                                }
+                                            },
+                                            "_owner": null
+                                        }
+                                    },
+                                    "_owner": null
+                                }
+                            },
+                            "_owner": null
+                        },
+                        {
+                            "key": null,
+                            "ref": null,
+                            "props": {
+                                "name": "hierarchy",
+                                "collapsible": true,
+                                "collapsed": true,
+                                "children": {
+                                    "key": null,
+                                    "ref": null,
+                                    "props": {
+                                        "name": "relation-list-item",
+                                        "subpath": "rel:relations-common-list"
+                                    },
+                                    "_owner": null
+                                }
+                            },
+                            "_owner": null
+                        }
+                    ]
+                },
+                "_owner": null
+            }
+        },
+        "mini": {
+            "disabled": true,
+            "messages": {
+                "name": {
+                    "id": "form.chronology.mini.name",
+                    "defaultMessage": "Mini Template"
+                }
+            },
+            "template": {
+                "key": null,
+                "ref": null,
+                "props": {
+                    "name": "document",
+                    "children": {
+                        "key": null,
+                        "ref": null,
+                        "props": {
+                            "name": "relation-list-item",
+                            "subpath": "rel:relations-common-list",
+                            "showChildren": false,
+                            "showSiblings": false
+                        },
+                        "_owner": null
+                    }
+                },
+                "_owner": null
+            }
+        }
+    }
+}

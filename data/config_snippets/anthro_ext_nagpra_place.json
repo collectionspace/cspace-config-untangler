@@ -1,0 +1,713 @@
+{
+    "extensions": {
+        "nagpra": {
+            "place": {
+                "messages": {
+                    "panel": {
+                        "assertionInfo": {
+                            "id": "panel.place.assertionInfo",
+                            "defaultMessage": "Assertion Information"
+                        },
+                        "assertions": {
+                            "id": "panel.place.assertions",
+                            "defaultMessage": "Cultural Affiliation Lines of Evidence"
+                        },
+                        "background": {
+                            "id": "panel.place.background",
+                            "defaultMessage": "Background Research and Additional Information"
+                        },
+                        "consultedDocs": {
+                            "id": "panel.place.consultedDocs",
+                            "defaultMessage": "Documents Consulted for Cultural Affiliation Research"
+                        }
+                    }
+                },
+                "fields": {
+                    "ns2:places_nagpra": {
+                        "[config]": {
+                            "service": {"ns": "http://collectionspace.org/services/place/domain/nagpra"}
+                        },
+                        "basicInfoList": {
+                            "[config]": {
+                                "view": {"type": "CompoundInput"}
+                            },
+                            "basicInfo": {
+                                "[config]": {
+                                    "messages": {
+                                        "name": {
+                                            "id": "field.places_nagpra.basicInfo.name",
+                                            "defaultMessage": "Basic information"
+                                        }
+                                    },
+                                    "view": {
+                                        "type": "TextInput",
+                                        "props": {"multiline": true}
+                                    }
+                                }
+                            }
+                        },
+                        "nagpraHistoryList": {
+                            "[config]": {
+                                "view": {"type": "CompoundInput"}
+                            },
+                            "nagpraHistory": {
+                                "[config]": {
+                                    "messages": {
+                                        "name": {
+                                            "id": "field.places_nagpra.nagpraHistory.name",
+                                            "defaultMessage": "NAGPRA inventory history"
+                                        }
+                                    },
+                                    "view": {
+                                        "type": "TextInput",
+                                        "props": {"multiline": true}
+                                    }
+                                }
+                            }
+                        },
+                        "backgroundSummaryList": {
+                            "[config]": {
+                                "view": {"type": "CompoundInput"}
+                            },
+                            "backgroundSummary": {
+                                "[config]": {
+                                    "messages": {
+                                        "name": {
+                                            "id": "field.places_nagpra.backgroundSummary.name",
+                                            "defaultMessage": "Background and records summary"
+                                        }
+                                    },
+                                    "view": {
+                                        "type": "TextInput",
+                                        "props": {"multiline": true}
+                                    }
+                                }
+                            }
+                        },
+                        "landOwnershipInfoList": {
+                            "[config]": {
+                                "view": {"type": "CompoundInput"}
+                            },
+                            "landOwnershipInfo": {
+                                "[config]": {
+                                    "messages": {
+                                        "name": {
+                                            "id": "field.places_nagpra.landOwnershipInfo.name",
+                                            "defaultMessage": "Land ownership information"
+                                        }
+                                    },
+                                    "view": {
+                                        "type": "TextInput",
+                                        "props": {"multiline": true}
+                                    }
+                                }
+                            }
+                        },
+                        "assertionGroupList": {
+                            "[config]": {
+                                "view": {"type": "CompoundInput"}
+                            },
+                            "assertionGroup": {
+                                "[config]": {
+                                    "repeating": true,
+                                    "view": {"type": "CompoundInput"}
+                                },
+                                "assertionName": {
+                                    "[config]": {
+                                        "messages": {
+                                            "name": {
+                                                "id": "field.places_nagpra.assertionName.name",
+                                                "defaultMessage": "Assertion name"
+                                            }
+                                        },
+                                        "view": {
+                                            "type": "TermPickerInput",
+                                            "props": {"source": "nagpraassertionnames"}
+                                        }
+                                    }
+                                },
+                                "assertionDescription": {
+                                    "[config]": {
+                                        "messages": {
+                                            "name": {
+                                                "id": "field.places_nagpra.assertionDescription.name",
+                                                "defaultMessage": "Assertion description"
+                                            }
+                                        },
+                                        "view": {
+                                            "type": "TextInput",
+                                            "props": {"multiline": true}
+                                        }
+                                    }
+                                },
+                                "assertionSourceGroupList": {
+                                    "[config]": {
+                                        "view": {"type": "CompoundInput"}
+                                    },
+                                    "assertionSourceGroup": {
+                                        "[config]": {
+                                            "messages": {
+                                                "name": {
+                                                    "id": "field.places_nagpra.assertionSourceGroup.name",
+                                                    "defaultMessage": "Assertion source"
+                                                }
+                                            },
+                                            "repeating": true,
+                                            "view": {
+                                                "type": "CompoundInput",
+                                                "props": {"tabular": true}
+                                            }
+                                        },
+                                        "assertionSourceBy": {
+                                            "[config]": {
+                                                "messages": {
+                                                    "name": {
+                                                        "id": "field.places_nagpra.assertionSourceBy.name",
+                                                        "defaultMessage": "By"
+                                                    },
+                                                    "fullName": {
+                                                        "id": "field.places_nagpra.assertionSourceBy.fullName",
+                                                        "defaultMessage": "Assertion by"
+                                                    }
+                                                },
+                                                "view": {
+                                                    "type": "AutocompleteInput",
+                                                    "props": {"source": "person/local,person/shared,person/ulan,organization/local,organization/shared,organization/ulan"}
+                                                }
+                                            }
+                                        },
+                                        "assertionSourceDate": {
+                                            "[config]": {
+                                                "dataType": "DATA_TYPE_DATE",
+                                                "messages": {
+                                                    "fullName": {
+                                                        "id": "field.places_nagpra.assertionSourceDate.fullName",
+                                                        "defaultMessage": "Assertion source date"
+                                                    },
+                                                    "name": {
+                                                        "id": "field.places_nagpra.assertionSourceDate.name",
+                                                        "defaultMessage": "Date"
+                                                    }
+                                                },
+                                                "view": {"type": "DateInput"}
+                                            }
+                                        },
+                                        "assertionSourceNote": {
+                                            "[config]": {
+                                                "messages": {
+                                                    "fullName": {
+                                                        "id": "field.places_nagpra.assertionSourceNote.fullName",
+                                                        "defaultMessage": "Assertion source note"
+                                                    },
+                                                    "name": {
+                                                        "id": "field.places_nagpra.assertionSourceNote.name",
+                                                        "defaultMessage": "Note"
+                                                    }
+                                                },
+                                                "view": {"type": "TextInput"}
+                                            }
+                                        }
+                                    }
+                                },
+                                "assertionRelatedRecords": {
+                                    "[config]": {
+                                        "messages": {
+                                            "name": {
+                                                "id": "field.places_nagpra.assertionRelatedRecords.name",
+                                                "defaultMessage": "Museum records"
+                                            }
+                                        },
+                                        "view": {
+                                            "type": "TextInput",
+                                            "props": {"multiline": true}
+                                        }
+                                    }
+                                },
+                                "assertionReferenceGroupList": {
+                                    "[config]": {
+                                        "view": {"type": "CompoundInput"}
+                                    },
+                                    "assertionReferenceGroup": {
+                                        "[config]": {
+                                            "messages": {
+                                                "name": {
+                                                    "id": "field.places_nagpra.assertionReferenceGroup.name",
+                                                    "defaultMessage": "Reference"
+                                                }
+                                            },
+                                            "repeating": true,
+                                            "view": {
+                                                "type": "CompoundInput",
+                                                "props": {"tabular": true}
+                                            }
+                                        },
+                                        "assertionReference": {
+                                            "[config]": {
+                                                "messages": {
+                                                    "fullName": {
+                                                        "id": "field.places_nagpra.assertionReference.fullName",
+                                                        "defaultMessage": "Assertion reference name"
+                                                    },
+                                                    "name": {
+                                                        "id": "field.places_nagpra.assertionReference.name",
+                                                        "defaultMessage": "Name"
+                                                    }
+                                                },
+                                                "view": {
+                                                    "type": "AutocompleteInput",
+                                                    "props": {"source": "citation/local,citation/worldcat"}
+                                                }
+                                            }
+                                        },
+                                        "assertionReferenceNote": {
+                                            "[config]": {
+                                                "messages": {
+                                                    "fullName": {
+                                                        "id": "field.places_nagpra.assertionReferenceNote.fullName",
+                                                        "defaultMessage": "Assertion refence note"
+                                                    },
+                                                    "name": {
+                                                        "id": "field.places_nagpra.assertionReferenceNote.name",
+                                                        "defaultMessage": "Note"
+                                                    }
+                                                },
+                                                "view": {"type": "TextInput"}
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "museumRecordsList": {
+                            "[config]": {
+                                "view": {"type": "CompoundInput"}
+                            },
+                            "museumRecords": {
+                                "[config]": {
+                                    "messages": {
+                                        "name": {
+                                            "id": "field.places_nagpra.museumRecordsList.name",
+                                            "defaultMessage": "Museum records"
+                                        }
+                                    },
+                                    "view": {
+                                        "type": "TextInput",
+                                        "props": {"multiline": true}
+                                    }
+                                }
+                            }
+                        },
+                        "manuscriptGroupList": {
+                            "[config]": {
+                                "view": {"type": "CompoundInput"}
+                            },
+                            "manuscriptGroup": {
+                                "[config]": {
+                                    "messages": {
+                                        "name": {
+                                            "id": "field.places_nagpra.manuscriptGroup.name",
+                                            "defaultMessage": "Unpublished manuscript"
+                                        }
+                                    },
+                                    "repeating": true,
+                                    "view": {
+                                        "type": "CompoundInput",
+                                        "props": {"tabular": true}
+                                    }
+                                },
+                                "manuscriptReferences": {
+                                    "[config]": {
+                                        "messages": {
+                                            "fullName": {
+                                                "id": "field.places_nagpra.manuscriptReferences.fullName",
+                                                "defaultMessage": "Unpublished manuscript reference"
+                                            },
+                                            "name": {
+                                                "id": "field.places_nagpra.manuscriptReferences.name",
+                                                "defaultMessage": "Reference"
+                                            }
+                                        },
+                                        "view": {
+                                            "type": "AutocompleteInput",
+                                            "props": {"source": "citation/local,"}
+                                        }
+                                    }
+                                },
+                                "manuscriptNote": {
+                                    "[config]": {
+                                        "messages": {
+                                            "fullName": {
+                                                "id": "field.places_nagpra.manuscriptNote.fullName",
+                                                "defaultMessage": "Unpublished manuscript note"
+                                            },
+                                            "name": {
+                                                "id": "field.places_nagpra.manuscriptNote.name",
+                                                "defaultMessage": "Note"
+                                            }
+                                        },
+                                        "view": {"type": "TextInput"}
+                                    }
+                                }
+                            }
+                        },
+                        "reportRefGroupList": {
+                            "[config]": {
+                                "view": {"type": "CompoundInput"}
+                            },
+                            "reportRefGroup": {
+                                "[config]": {
+                                    "messages": {
+                                        "name": {
+                                            "id": "field.places_nagpra.reportRefGroup.name",
+                                            "defaultMessage": "Published report"
+                                        }
+                                    },
+                                    "repeating": true,
+                                    "view": {
+                                        "type": "CompoundInput",
+                                        "props": {"tabular": true}
+                                    }
+                                },
+                                "reportReferences": {
+                                    "[config]": {
+                                        "messages": {
+                                            "fullName": {
+                                                "id": "field.places_nagpra.reportReferences.fullName",
+                                                "defaultMessage": "Published report reference"
+                                            },
+                                            "name": {
+                                                "id": "field.places_nagpra.reportReferences.name",
+                                                "defaultMessage": "Reference"
+                                            }
+                                        },
+                                        "view": {
+                                            "type": "AutocompleteInput",
+                                            "props": {"source": "citation/local"}
+                                        }
+                                    }
+                                },
+                                "reportNote": {
+                                    "[config]": {
+                                        "messages": {
+                                            "fullName": {
+                                                "id": "field.places_nagpra.reportNote.fullName",
+                                                "defaultMessage": "Published report note"
+                                            },
+                                            "name": {
+                                                "id": "field.places_nagpra.reportNote.name",
+                                                "defaultMessage": "Note"
+                                            }
+                                        },
+                                        "view": {"type": "TextInput"}
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "form": {
+                    "type": "div",
+                    "key": null,
+                    "ref": null,
+                    "props": {
+                        "children": [
+                            {
+                                "key": null,
+                                "ref": null,
+                                "props": {
+                                    "name": "background",
+                                    "collapsible": true,
+                                    "collapsed": true,
+                                    "children": [
+                                        {
+                                            "key": null,
+                                            "ref": null,
+                                            "props": {
+                                                "name": "basicInfoList",
+                                                "subpath": "ns2:places_nagpra",
+                                                "children": {
+                                                    "key": null,
+                                                    "ref": null,
+                                                    "props": {"name": "basicInfo"},
+                                                    "_owner": null
+                                                }
+                                            },
+                                            "_owner": null
+                                        },
+                                        {
+                                            "key": null,
+                                            "ref": null,
+                                            "props": {
+                                                "name": "nagpraHistoryList",
+                                                "subpath": "ns2:places_nagpra",
+                                                "children": {
+                                                    "key": null,
+                                                    "ref": null,
+                                                    "props": {"name": "nagpraHistory"},
+                                                    "_owner": null
+                                                }
+                                            },
+                                            "_owner": null
+                                        },
+                                        {
+                                            "key": null,
+                                            "ref": null,
+                                            "props": {
+                                                "name": "backgroundSummaryList",
+                                                "subpath": "ns2:places_nagpra",
+                                                "children": {
+                                                    "key": null,
+                                                    "ref": null,
+                                                    "props": {"name": "backgroundSummary"},
+                                                    "_owner": null
+                                                }
+                                            },
+                                            "_owner": null
+                                        },
+                                        {
+                                            "key": null,
+                                            "ref": null,
+                                            "props": {
+                                                "name": "landOwnershipInfoList",
+                                                "subpath": "ns2:places_nagpra",
+                                                "children": {
+                                                    "key": null,
+                                                    "ref": null,
+                                                    "props": {"name": "landOwnershipInfo"},
+                                                    "_owner": null
+                                                }
+                                            },
+                                            "_owner": null
+                                        }
+                                    ]
+                                },
+                                "_owner": null
+                            },
+                            {
+                                "key": null,
+                                "ref": null,
+                                "props": {
+                                    "name": "assertions",
+                                    "collapsible": true,
+                                    "collapsed": true,
+                                    "children": {
+                                        "key": null,
+                                        "ref": null,
+                                        "props": {
+                                            "name": "assertionGroupList",
+                                            "subpath": "ns2:places_nagpra",
+                                            "children": {
+                                                "key": null,
+                                                "ref": null,
+                                                "props": {
+                                                    "name": "assertionGroup",
+                                                    "children": {
+                                                        "key": null,
+                                                        "ref": null,
+                                                        "props": {
+                                                            "children": [
+                                                                {
+                                                                    "key": null,
+                                                                    "ref": null,
+                                                                    "props": {"name": "assertionName"},
+                                                                    "_owner": null
+                                                                },
+                                                                {
+                                                                    "key": null,
+                                                                    "ref": null,
+                                                                    "props": {"name": "assertionDescription"},
+                                                                    "_owner": null
+                                                                },
+                                                                {
+                                                                    "key": null,
+                                                                    "ref": null,
+                                                                    "props": {
+                                                                        "name": "assertionInfo",
+                                                                        "collapsible": true,
+                                                                        "children": [
+                                                                            {
+                                                                                "key": null,
+                                                                                "ref": null,
+                                                                                "props": {
+                                                                                    "name": "assertionSourceGroupList",
+                                                                                    "children": {
+                                                                                        "key": null,
+                                                                                        "ref": null,
+                                                                                        "props": {
+                                                                                            "name": "assertionSourceGroup",
+                                                                                            "children": [
+                                                                                                {
+                                                                                                    "key": null,
+                                                                                                    "ref": null,
+                                                                                                    "props": {"name": "assertionSourceBy"},
+                                                                                                    "_owner": null
+                                                                                                },
+                                                                                                {
+                                                                                                    "key": null,
+                                                                                                    "ref": null,
+                                                                                                    "props": {"name": "assertionSourceDate"},
+                                                                                                    "_owner": null
+                                                                                                },
+                                                                                                {
+                                                                                                    "key": null,
+                                                                                                    "ref": null,
+                                                                                                    "props": {"name": "assertionSourceNote"},
+                                                                                                    "_owner": null
+                                                                                                }
+                                                                                            ]
+                                                                                        },
+                                                                                        "_owner": null
+                                                                                    }
+                                                                                },
+                                                                                "_owner": null
+                                                                            },
+                                                                            {
+                                                                                "key": null,
+                                                                                "ref": null,
+                                                                                "props": {"name": "assertionRelatedRecords"},
+                                                                                "_owner": null
+                                                                            },
+                                                                            {
+                                                                                "key": null,
+                                                                                "ref": null,
+                                                                                "props": {
+                                                                                    "name": "assertionReferenceGroupList",
+                                                                                    "children": {
+                                                                                        "key": null,
+                                                                                        "ref": null,
+                                                                                        "props": {
+                                                                                            "name": "assertionReferenceGroup",
+                                                                                            "children": [
+                                                                                                {
+                                                                                                    "key": null,
+                                                                                                    "ref": null,
+                                                                                                    "props": {"name": "assertionReference"},
+                                                                                                    "_owner": null
+                                                                                                },
+                                                                                                {
+                                                                                                    "key": null,
+                                                                                                    "ref": null,
+                                                                                                    "props": {"name": "assertionReferenceNote"},
+                                                                                                    "_owner": null
+                                                                                                }
+                                                                                            ]
+                                                                                        },
+                                                                                        "_owner": null
+                                                                                    }
+                                                                                },
+                                                                                "_owner": null
+                                                                            }
+                                                                        ]
+                                                                    },
+                                                                    "_owner": null
+                                                                }
+                                                            ]
+                                                        },
+                                                        "_owner": null
+                                                    }
+                                                },
+                                                "_owner": null
+                                            }
+                                        },
+                                        "_owner": null
+                                    }
+                                },
+                                "_owner": null
+                            },
+                            {
+                                "key": null,
+                                "ref": null,
+                                "props": {
+                                    "name": "consultedDocs",
+                                    "collapsible": true,
+                                    "collapsed": true,
+                                    "children": [
+                                        {
+                                            "key": null,
+                                            "ref": null,
+                                            "props": {
+                                                "name": "museumRecordsList",
+                                                "subpath": "ns2:places_nagpra",
+                                                "children": {
+                                                    "key": null,
+                                                    "ref": null,
+                                                    "props": {"name": "museumRecords"},
+                                                    "_owner": null
+                                                }
+                                            },
+                                            "_owner": null
+                                        },
+                                        {
+                                            "key": null,
+                                            "ref": null,
+                                            "props": {
+                                                "name": "manuscriptGroupList",
+                                                "subpath": "ns2:places_nagpra",
+                                                "children": {
+                                                    "key": null,
+                                                    "ref": null,
+                                                    "props": {
+                                                        "name": "manuscriptGroup",
+                                                        "children": [
+                                                            {
+                                                                "key": null,
+                                                                "ref": null,
+                                                                "props": {"name": "manuscriptReferences"},
+                                                                "_owner": null
+                                                            },
+                                                            {
+                                                                "key": null,
+                                                                "ref": null,
+                                                                "props": {"name": "manuscriptNote"},
+                                                                "_owner": null
+                                                            }
+                                                        ]
+                                                    },
+                                                    "_owner": null
+                                                }
+                                            },
+                                            "_owner": null
+                                        },
+                                        {
+                                            "key": null,
+                                            "ref": null,
+                                            "props": {
+                                                "name": "reportRefGroupList",
+                                                "subpath": "ns2:places_nagpra",
+                                                "children": {
+                                                    "key": null,
+                                                    "ref": null,
+                                                    "props": {
+                                                        "name": "reportRefGroup",
+                                                        "children": [
+                                                            {
+                                                                "key": null,
+                                                                "ref": null,
+                                                                "props": {"name": "reportReferences"},
+                                                                "_owner": null
+                                                            },
+                                                            {
+                                                                "key": null,
+                                                                "ref": null,
+                                                                "props": {"name": "reportNote"},
+                                                                "_owner": null
+                                                            }
+                                                        ]
+                                                    },
+                                                    "_owner": null
+                                                }
+                                            },
+                                            "_owner": null
+                                        }
+                                    ]
+                                },
+                                "_owner": null
+                            }
+                        ]
+                    },
+                    "_owner": null
+                }
+            }
+        }
+    }
+}
