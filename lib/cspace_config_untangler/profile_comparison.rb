@@ -14,7 +14,7 @@ module CspaceConfigUntangler
       fields = diffed_fields
       headers = fields.first.csv_header
       headers << 'diff info'
-      
+
       CSV.open(@output, 'w', write_headers: true, headers: headers){ |csv|
         fields.each{ |f| csv << f.to_csv }
       }
@@ -23,12 +23,12 @@ module CspaceConfigUntangler
     def summary
       @diff.map{ |k, arr| "#{k}: #{arr.size}" }.join("\n")
     end
-    
+
     private
 
     def diffed_fields
       diff_fields = []
-      
+
       @diff.each do |type, val|
         if type['not in']
           # val is an array of field objects
@@ -54,7 +54,7 @@ module CspaceConfigUntangler
 
       return diff_fields
     end
-    
+
 
     def diff_combined
       diff = {
@@ -64,13 +64,13 @@ module CspaceConfigUntangler
         'ui path differences' => [],
         'same' => []
       }
-      
+
       @combined.each{ |id, hash|
         if hash[0].nil?
           diff["not in #{@profiles[0]}"] << hash[1]
         elsif hash[1].nil?
           diff["not in #{@profiles[1]}"] << hash[0]
-        elsif hash[0].value_source.sort != hash[1].value_source.sort
+        elsif hash[0].value_source&.sort != hash[1].value_source&.sort
           diff['source differences'] << hash
         elsif hash[0].ui_path != hash[1].ui_path
           diff['ui path differences'] << hash
@@ -78,10 +78,10 @@ module CspaceConfigUntangler
           diff['same'] << hash
         end
       }
-      
+
       return diff
     end
-    
+
     def combined_fields
       h = {}
       @fields.each{ |fhash| fhash.keys.each{ |k| h[k] = { 0 => nil, 1 => nil } } }
