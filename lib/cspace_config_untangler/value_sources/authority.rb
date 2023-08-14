@@ -1,13 +1,9 @@
 # frozen_string_literal: true
 
-require_relative 'reportable'
-
 module CspaceConfigUntangler
   module ValueSources
     # basic value object to represent an authority
-    class Authority
-      include CCU::ValueSources::Reportable
-      attr_reader :name, :type, :subtype, :source_type
+    class Authority < AbstractValueSource
       def initialize(authority_source_string, profile)
         @name = authority_source_string
         split = name.split('/')
@@ -23,7 +19,7 @@ module CspaceConfigUntangler
 
       def service_paths
         return [] unless @config
-        
+
         [type_service_path, subtype_service_path].compact
       end
 
@@ -39,7 +35,7 @@ module CspaceConfigUntangler
       def subtype_service_path
         subtype_config = @config.dig('vocabularies', subtype)
         return unless subtype_config
-        
+
         path = subtype_config.dig('serviceConfig', 'servicePath')
         return unless path
 
