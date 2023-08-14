@@ -78,8 +78,20 @@ module CspaceConfigUntangler
     default: nil,
     reader: true,
     constructor: ->(value) do
-      rel = CCU::Validate.release(value)
-      CCU.switch_release(rel)
+      if value
+        rel = CCU::Validate.release(value)
+        CCU.switch_release(rel)
+      else
+        core = Dir.new(configdir)
+          .children
+          .select{ |filename| filename.start_with?("core") }
+          .first
+        rel = core.split("_")
+          .last
+          .split("-")
+          .first(2)
+          .join("_")
+      end
       rel
     end
   setting :prev_release,
