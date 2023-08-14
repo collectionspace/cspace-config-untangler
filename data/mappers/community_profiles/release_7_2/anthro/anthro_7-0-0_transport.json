@@ -1,0 +1,1314 @@
+{
+  "config": {
+    "profile_basename": "anthro",
+    "version": "7-0-0",
+    "recordtype": "transport",
+    "document_name": "transports",
+    "service_name": "Transport",
+    "service_path": "transports",
+    "service_type": "procedure",
+    "object_name": "Transport",
+    "ns_uri": {
+      "transports_common": "http://collectionspace.org/services/transport"
+    },
+    "identifier_field": "transportReferenceNumber",
+    "search_field": "transportReferenceNumber"
+  },
+  "docstructure": {
+    "transports_common": {
+      "transportTrackingNumberGroupList": {
+        "transportTrackingNumberGroup": {
+        }
+      },
+      "courierGroupList": {
+        "courierGroup": {
+        }
+      },
+      "additionalCostsGroupList": {
+        "additionalCostsGroup": {
+        }
+      },
+      "shippingQuoteGroupList": {
+        "shippingQuoteGroup": {
+        }
+      }
+    }
+  },
+  "mappings": [
+    {
+      "fieldname": "transportReferenceNumber",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "transports_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "transportReferenceNumber",
+      "required": "y"
+    },
+    {
+      "fieldname": "transportMethod",
+      "transforms": {
+      },
+      "source_type": "optionlist",
+      "source_name": "transportMethodTypes",
+      "namespace": "transports_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+        "LOFO freight",
+        "cargo aircraft",
+        "combi aircraft",
+        "common carrier",
+        "exclusive-use truck",
+        "expedited use freight",
+        "mail",
+        "non-commercial carrier",
+        "ocean freight",
+        "passenger aircraft",
+        "shuttle service"
+      ],
+      "datacolumn": "transportMethod",
+      "required": "n"
+    },
+    {
+      "fieldname": "numberOfCrates",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "transports_common",
+      "xpath": [
+
+      ],
+      "data_type": "integer",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "numberOfCrates",
+      "required": "n"
+    },
+    {
+      "fieldname": "transporter",
+      "transforms": {
+        "authority": [
+          "personauthorities",
+          "person"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "person/local",
+      "namespace": "transports_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "transporterPersonLocal",
+      "required": "n"
+    },
+    {
+      "fieldname": "transporter",
+      "transforms": {
+        "authority": [
+          "orgauthorities",
+          "organization"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "organization/local",
+      "namespace": "transports_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "transporterOrganizationLocal",
+      "required": "n"
+    },
+    {
+      "fieldname": "transporter",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "person/local",
+      "namespace": "transports_common",
+      "xpath": [
+
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "transporterRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "transporterContact",
+      "transforms": {
+        "authority": [
+          "personauthorities",
+          "person"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "person/local",
+      "namespace": "transports_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "transporterContact",
+      "required": "n"
+    },
+    {
+      "fieldname": "transporterContact",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "person/local",
+      "namespace": "transports_common",
+      "xpath": [
+
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "transporterContactRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "transporterContactNumber",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "transports_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "transporterContactNumber",
+      "required": "n"
+    },
+    {
+      "fieldname": "transportAuthorizer",
+      "transforms": {
+        "authority": [
+          "personauthorities",
+          "person"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "person/local",
+      "namespace": "transports_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "transportAuthorizer",
+      "required": "n"
+    },
+    {
+      "fieldname": "transportAuthorizer",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "person/local",
+      "namespace": "transports_common",
+      "xpath": [
+
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "transportAuthorizerRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "transportAuthorizationDate",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "transports_common",
+      "xpath": [
+
+      ],
+      "data_type": "date",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "transportAuthorizationDate",
+      "required": "n"
+    },
+    {
+      "fieldname": "transportTrackingNumber",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "transports_common",
+      "xpath": [
+        "transportTrackingNumberGroupList",
+        "transportTrackingNumberGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "transportTrackingNumber",
+      "required": "n"
+    },
+    {
+      "fieldname": "transportTrackingNumberNote",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "transports_common",
+      "xpath": [
+        "transportTrackingNumberGroupList",
+        "transportTrackingNumberGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "transportTrackingNumberNote",
+      "required": "n"
+    },
+    {
+      "fieldname": "departurePoint",
+      "transforms": {
+        "authority": [
+          "orgauthorities",
+          "organization"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "organization/local",
+      "namespace": "transports_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "departurePointOrganizationLocal",
+      "required": "n"
+    },
+    {
+      "fieldname": "departurePoint",
+      "transforms": {
+        "authority": [
+          "placeauthorities",
+          "place"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "place/local",
+      "namespace": "transports_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "departurePointPlaceLocal",
+      "required": "n"
+    },
+    {
+      "fieldname": "departurePoint",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "organization/local",
+      "namespace": "transports_common",
+      "xpath": [
+
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "departurePointRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "transportDepartureDate",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "transports_common",
+      "xpath": [
+
+      ],
+      "data_type": "date",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "transportDepartureDate",
+      "required": "n"
+    },
+    {
+      "fieldname": "transportDepartureTime",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "transports_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "transportDepartureTime",
+      "required": "n"
+    },
+    {
+      "fieldname": "destination",
+      "transforms": {
+        "authority": [
+          "placeauthorities",
+          "place"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "place/local",
+      "namespace": "transports_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "destinationPlaceLocal",
+      "required": "n"
+    },
+    {
+      "fieldname": "destination",
+      "transforms": {
+        "authority": [
+          "orgauthorities",
+          "organization"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "organization/local",
+      "namespace": "transports_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "destinationOrganizationLocal",
+      "required": "n"
+    },
+    {
+      "fieldname": "destination",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "place/local",
+      "namespace": "transports_common",
+      "xpath": [
+
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "destinationRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "transportArrivalDate",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "transports_common",
+      "xpath": [
+
+      ],
+      "data_type": "date",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "transportArrivalDate",
+      "required": "n"
+    },
+    {
+      "fieldname": "transportArrivalTime",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "transports_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "transportArrivalTime",
+      "required": "n"
+    },
+    {
+      "fieldname": "courier",
+      "transforms": {
+        "authority": [
+          "personauthorities",
+          "person"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "person/local",
+      "namespace": "transports_common",
+      "xpath": [
+        "courierGroupList",
+        "courierGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "courierPersonLocal",
+      "required": "n"
+    },
+    {
+      "fieldname": "courier",
+      "transforms": {
+        "authority": [
+          "orgauthorities",
+          "organization"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "organization/local",
+      "namespace": "transports_common",
+      "xpath": [
+        "courierGroupList",
+        "courierGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "courierOrganizationLocal",
+      "required": "n"
+    },
+    {
+      "fieldname": "courier",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "person/local",
+      "namespace": "transports_common",
+      "xpath": [
+        "courierGroupList",
+        "courierGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "courierRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "courierContactNumber",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "transports_common",
+      "xpath": [
+        "courierGroupList",
+        "courierGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "courierContactNumber",
+      "required": "n"
+    },
+    {
+      "fieldname": "transportRemarks",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "transports_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "transportRemarks",
+      "required": "n"
+    },
+    {
+      "fieldname": "transportCostType",
+      "transforms": {
+        "vocabulary": "transportcosttype"
+      },
+      "source_type": "vocabulary",
+      "source_name": "transportcosttype",
+      "namespace": "transports_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "transportCostType",
+      "required": "n"
+    },
+    {
+      "fieldname": "transportCostType",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "transportcosttype",
+      "namespace": "transports_common",
+      "xpath": [
+
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "transportCostTypeRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "transportCostResponsibleParty",
+      "transforms": {
+        "vocabulary": "transportresponsibleparty"
+      },
+      "source_type": "vocabulary",
+      "source_name": "transportresponsibleparty",
+      "namespace": "transports_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "transportCostResponsibleParty",
+      "required": "n"
+    },
+    {
+      "fieldname": "transportCostResponsibleParty",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "transportresponsibleparty",
+      "namespace": "transports_common",
+      "xpath": [
+
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "transportCostResponsiblePartyRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "insuranceCostResponsibleParty",
+      "transforms": {
+        "vocabulary": "transportresponsibleparty"
+      },
+      "source_type": "vocabulary",
+      "source_name": "transportresponsibleparty",
+      "namespace": "transports_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "insuranceCostResponsibleParty",
+      "required": "n"
+    },
+    {
+      "fieldname": "insuranceCostResponsibleParty",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "transportresponsibleparty",
+      "namespace": "transports_common",
+      "xpath": [
+
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "insuranceCostResponsiblePartyRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "finalShippingCostCurrency",
+      "transforms": {
+        "vocabulary": "currency"
+      },
+      "source_type": "vocabulary",
+      "source_name": "currency",
+      "namespace": "transports_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "finalShippingCostCurrency",
+      "required": "n"
+    },
+    {
+      "fieldname": "finalShippingCostCurrency",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "currency",
+      "namespace": "transports_common",
+      "xpath": [
+
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "finalShippingCostCurrencyRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "finalShippingCostValue",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "transports_common",
+      "xpath": [
+
+      ],
+      "data_type": "float",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "finalShippingCostValue",
+      "required": "n"
+    },
+    {
+      "fieldname": "customsBroker",
+      "transforms": {
+        "authority": [
+          "personauthorities",
+          "person"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "person/local",
+      "namespace": "transports_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "customsBrokerPersonLocal",
+      "required": "n"
+    },
+    {
+      "fieldname": "customsBroker",
+      "transforms": {
+        "authority": [
+          "orgauthorities",
+          "organization"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "organization/local",
+      "namespace": "transports_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "customsBrokerOrganizationLocal",
+      "required": "n"
+    },
+    {
+      "fieldname": "customsBroker",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "person/local",
+      "namespace": "transports_common",
+      "xpath": [
+
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "customsBrokerRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "customsBrokerContact",
+      "transforms": {
+        "authority": [
+          "personauthorities",
+          "person"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "person/local",
+      "namespace": "transports_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "customsBrokerContact",
+      "required": "n"
+    },
+    {
+      "fieldname": "customsBrokerContact",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "person/local",
+      "namespace": "transports_common",
+      "xpath": [
+
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "customsBrokerContactRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "customsDeclaredValueCurrency",
+      "transforms": {
+        "vocabulary": "currency"
+      },
+      "source_type": "vocabulary",
+      "source_name": "currency",
+      "namespace": "transports_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "customsDeclaredValueCurrency",
+      "required": "n"
+    },
+    {
+      "fieldname": "customsDeclaredValueCurrency",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "currency",
+      "namespace": "transports_common",
+      "xpath": [
+
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "customsDeclaredValueCurrencyRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "customsDeclaredValueAmount",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "transports_common",
+      "xpath": [
+
+      ],
+      "data_type": "float",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "customsDeclaredValueAmount",
+      "required": "n"
+    },
+    {
+      "fieldname": "customsFeeCurrency",
+      "transforms": {
+        "vocabulary": "currency"
+      },
+      "source_type": "vocabulary",
+      "source_name": "currency",
+      "namespace": "transports_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "customsFeeCurrency",
+      "required": "n"
+    },
+    {
+      "fieldname": "customsFeeCurrency",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "currency",
+      "namespace": "transports_common",
+      "xpath": [
+
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "customsFeeCurrencyRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "customsFeeValue",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "transports_common",
+      "xpath": [
+
+      ],
+      "data_type": "float",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "customsFeeValue",
+      "required": "n"
+    },
+    {
+      "fieldname": "customsFeeNote",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "transports_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "customsFeeNote",
+      "required": "n"
+    },
+    {
+      "fieldname": "additionalCostsType",
+      "transforms": {
+        "vocabulary": "transportadditionalcosttype"
+      },
+      "source_type": "vocabulary",
+      "source_name": "transportadditionalcosttype",
+      "namespace": "transports_common",
+      "xpath": [
+        "additionalCostsGroupList",
+        "additionalCostsGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "additionalCostsType",
+      "required": "n"
+    },
+    {
+      "fieldname": "additionalCostsType",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "transportadditionalcosttype",
+      "namespace": "transports_common",
+      "xpath": [
+        "additionalCostsGroupList",
+        "additionalCostsGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "additionalCostsTypeRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "additionalCostsCurrency",
+      "transforms": {
+        "vocabulary": "currency"
+      },
+      "source_type": "vocabulary",
+      "source_name": "currency",
+      "namespace": "transports_common",
+      "xpath": [
+        "additionalCostsGroupList",
+        "additionalCostsGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "additionalCostsCurrency",
+      "required": "n"
+    },
+    {
+      "fieldname": "additionalCostsCurrency",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "currency",
+      "namespace": "transports_common",
+      "xpath": [
+        "additionalCostsGroupList",
+        "additionalCostsGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "additionalCostsCurrencyRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "additionalCostsValue",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "transports_common",
+      "xpath": [
+        "additionalCostsGroupList",
+        "additionalCostsGroup"
+      ],
+      "data_type": "float",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "additionalCostsValue",
+      "required": "n"
+    },
+    {
+      "fieldname": "shippingQuoteProvider",
+      "transforms": {
+        "authority": [
+          "personauthorities",
+          "person"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "person/local",
+      "namespace": "transports_common",
+      "xpath": [
+        "shippingQuoteGroupList",
+        "shippingQuoteGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "shippingQuoteProviderPersonLocal",
+      "required": "n"
+    },
+    {
+      "fieldname": "shippingQuoteProvider",
+      "transforms": {
+        "authority": [
+          "orgauthorities",
+          "organization"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "organization/local",
+      "namespace": "transports_common",
+      "xpath": [
+        "shippingQuoteGroupList",
+        "shippingQuoteGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "shippingQuoteProviderOrganizationLocal",
+      "required": "n"
+    },
+    {
+      "fieldname": "shippingQuoteProvider",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "person/local",
+      "namespace": "transports_common",
+      "xpath": [
+        "shippingQuoteGroupList",
+        "shippingQuoteGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "shippingQuoteProviderRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "shippingQuoteCurrency",
+      "transforms": {
+        "vocabulary": "currency"
+      },
+      "source_type": "vocabulary",
+      "source_name": "currency",
+      "namespace": "transports_common",
+      "xpath": [
+        "shippingQuoteGroupList",
+        "shippingQuoteGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "shippingQuoteCurrency",
+      "required": "n"
+    },
+    {
+      "fieldname": "shippingQuoteCurrency",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "currency",
+      "namespace": "transports_common",
+      "xpath": [
+        "shippingQuoteGroupList",
+        "shippingQuoteGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "shippingQuoteCurrencyRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "shippingQuoteValue",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "transports_common",
+      "xpath": [
+        "shippingQuoteGroupList",
+        "shippingQuoteGroup"
+      ],
+      "data_type": "float",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "shippingQuoteValue",
+      "required": "n"
+    },
+    {
+      "fieldname": "shippingQuoteDate",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "transports_common",
+      "xpath": [
+        "shippingQuoteGroupList",
+        "shippingQuoteGroup"
+      ],
+      "data_type": "date",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "shippingQuoteDate",
+      "required": "n"
+    }
+  ]
+}
