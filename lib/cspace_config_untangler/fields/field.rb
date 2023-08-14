@@ -134,32 +134,68 @@ module CspaceConfigUntangler
       end
 
       def lookup_display_name(val)
+        return nil unless val
+        return nil if val["not-mapped"]
+
         msgs = @profile.messages
+
         if val.start_with?('panel.')
           if msgs.dig(val, 'name')
-            new = msgs[val]['name']
+            msgs[val]['name']
           else
-            new = alt_panel_lookup(val)
+            alt_panel_lookup(val)
           end
         elsif val.start_with?('inputTable.')
-          msgs.dig(val, 'name') ? new = msgs[val]['name'] : new = val
+          msgs.dig(val, 'name') ? msgs[val]['name'] : val
         else
-          val = "field.#{val}"
-          if msgs.dig(val, 'fullName')
-            new = msgs[val]['fullName']
-          elsif msgs.dig(val, 'name')
-            new = msgs[val]['name']
-          elsif val.end_with?('Group')
-            new = nil
-          elsif val.end_with?('List')
-            new = nil
-          elsif val.end_with?('s')
-            new = nil
+          fieldid = "field.#{val}"
+          if msgs.dig(fieldid, 'fullName')
+            msgs[fieldid]['fullName']
+          elsif msgs.dig(fieldid, 'name')
+            msgs[fieldid]['name']
+            # account for weirdness reported in DRYD-1269
+          elsif val == "uoc_common.useDateHoursSpent"
+            alt_fieldname_lookup(val.sub("useDateHoursSpent", "hoursSpent"))
+            # account for weirdness reported in DRYD-1270
+          elsif val == "collectionobjects_common.compressionStandard"
+            alt_fieldname_lookup(
+              val.sub("compressionStandard", "compressionstandard")
+            )
+            # account for weirdness reported in DRYD-1271
+          elsif val == "conservation_common.sampleReturned"
+            msgs["field.conservation_common.sampleReturned.nadme"]["fullName"] ||
+              msgs["field.conservation_common.sampleReturned.nadme"]["name"]
+          elsif val.start_with?("conservation_livingplant")
+            fixedval = val.sub("conservation_livingplant", "ext.livingplant")
+            lookup_display_name(fixedval)
+          # Added for 7.2 associatedAuthority extension removed right before
+          #   release
+          # elsif val["chronologies_common"]
+          #   fixedval = val.sub("chronologies_common", "ext.associatedAuthority")
+          #   lookup_display_name(fixedval)
           else
-            new = val
+            alt_fieldname_lookup(val)
           end
         end
-        return new
+      end
+
+      def alt_fieldname_lookup(val)
+        fieldname = val.split(".").last
+        msgs = profile.messages
+          .select do |id, data|
+            id.start_with?("field.") && id.end_with?(".#{fieldname}")
+          end
+        return nil if msgs.empty?
+        return "multiple msg matches: #{val}" if msgs.length > 1
+
+        msgdata = msgs.first[1]
+        fullname = msgdata["fullName"]
+        return fullname if fullname
+
+        name = msgdata["name"]
+        return name if name
+
+        val
       end
 
       def alt_panel_lookup(val)
@@ -169,14 +205,14 @@ module CspaceConfigUntangler
           trunc_lookup[name] = h
         }
         trunc_val = val.split('.').last
-        
+
         if trunc_lookup.dig(trunc_val, 'name')
           new = trunc_lookup[trunc_val]['name']
         else
           new = val
         end
         return new
-      end    
+      end
     end
   end
 end
