@@ -1,0 +1,288 @@
+profile,record_type,ui_info_group,ui_path,ui_field_label,xml_path,xml_field_name,repeats,group_repeats
+core_7-2-0,acquisition,Acquisition Information,"",Accession date,"",accessionDateGroup,n,n/a
+core_7-2-0,acquisition,Acquisition Information,"",Acquisition date,acquisitionDateGroupList,acquisitionDateGroup,y,n
+core_7-2-0,citation,Citation Information,Publication,Publication date,citationPublicationInfoGroupList > citationPublicationInfoGroup,publicationDate,n,y
+core_7-2-0,citation,Citation Information,Resource identifier,Resource identifier capture date,citationResourceIdentGroupList > citationResourceIdentGroup,captureDate,n,y
+core_7-2-0,chronology,Chronology Information,"",Primary date range,"",chronologyDateStructuredDateGroup,n,n/a
+core_7-2-0,chronology,Associated Authorities,Person,Person date,personGroupList > personGroup,personStructuredDateGroup,n,y
+core_7-2-0,chronology,Associated Authorities,People,People date,peopleGroupList > peopleGroup,peopleStructuredDateGroup,n,y
+core_7-2-0,chronology,Associated Authorities,Organization,Organization date,organizationGroupList > organizationGroup,organizationStructuredDateGroup,n,y
+core_7-2-0,chronology,Associated Authorities,Concept,Concept date,conceptGroupList > conceptGroup,conceptStructuredDateGroup,n,y
+core_7-2-0,chronology,Associated Authorities,Place,Place date,placeGroupList > placeGroup,placeStructuredDateGroup,n,y
+core_7-2-0,chronology,Associated Authorities,Related period,Related period date,relatedPeriodGroupList > relatedPeriodGroup,relatedPeriodStructuredDateGroup,n,y
+core_7-2-0,chronology,Alternative Date Information,Alternative date,Alternative date range,otherDateGroupList > otherDateGroup,otherDateStructuredDateGroup,n,y
+core_7-2-0,collectionobject,Object Description Information,Content,Content date,"",contentDateGroup,n,n/a
+core_7-2-0,collectionobject,Object Description Information,Textual Inscription > Textual inscription,Textual inscription date,textualInscriptionGroupList > textualInscriptionGroup,inscriptionContentDateGroup,n,y
+core_7-2-0,collectionobject,Object Description Information,Non-Textual Inscription > Non-textual inscription,Non-textual inscription date,nonTextualInscriptionGroupList > nonTextualInscriptionGroup,inscriptionDescriptionDateGroup,n,y
+core_7-2-0,collectionobject,Object Production Information,"",Production date,objectProductionDateGroupList,objectProductionDateGroup,y,n
+core_7-2-0,collectionobject,Object History and Association Information,Associations > Associated date,Associated date value,assocDateGroupList > assocDateGroup,assocStructuredDateGroup,n,y
+core_7-2-0,collectionobject,Object History and Association Information,"",Ownership date,ownershipDateGroupList,ownershipDateGroup,y,n
+core_7-2-0,collectionobject,Object Collection Information,"",Field collection date,"",fieldCollectionDateGroup,n,n/a
+core_7-2-0,exhibition,Exhibition Information,Gallery rotation,Gallery rotation start date,galleryRotationGroupList > galleryRotationGroup,galleryRotationStartDateGroup,n,y
+core_7-2-0,exhibition,Exhibition Information,Gallery rotation,Gallery rotation end date,galleryRotationGroupList > galleryRotationGroup,galleryRotationEndDateGroup,n,y
+core_7-2-0,media,Media Handling Information,"",Date,dateGroupList,dateGroup,y,n
+core_7-2-0,objectexit,Object Exit Information,"",Exit date,"",exitDateGroup,n,n/a
+core_7-2-0,organization,Organization Information,"",Foundation date,"",foundingDateGroup,n,n/a
+core_7-2-0,organization,Organization Information,"",Dissolution date,"",dissolutionDateGroup,n,n/a
+core_7-2-0,organization,Organization Information,Contact person,Contact date,contactGroupList > contactGroup,contactDateGroup,n,y
+core_7-2-0,organization,Organization Information,Contact person,Contact end date,contactGroupList > contactGroup,contactEndDateGroup,n,y
+core_7-2-0,person,Person Information,"",Birth date,"",birthDateGroup,n,n/a
+core_7-2-0,person,Person Information,"",Death date,"",deathDateGroup,n,n/a
+core_7-2-0,person,Maker-Supplied Identity Information,Supplied birth date,Birth date supplied,suppliedBirthDateGroupList > suppliedBirthDateGroup,suppliedStructuredBirthDateGroup,n,y
+core_7-2-0,place,Place Information,Term,Term date,placeTermGroupList > placeTermGroup,nameDateGroup,n,y
+core_7-2-0,place,Place Information,Ownership,Ownership date,placeOwnerGroupList > placeOwnerGroup,ownershipDateGroup,n,y
+core_7-2-0,place,Georeference Information,Georeference,Georeference date,placeGeoRefGroupList > placeGeoRefGroup,geoRefDateGroup,n,y
+core_7-2-0,work,Work Information,"",Work date,workDateGroupList,workDateGroup,y,n
+publicart_5-0-0,acquisition,Commission Information,"",Commission date,"",commissionDate,n,n/a
+publicart_5-0-0,citation,Citation Information,Publication,Publication date,citationPublicationInfoGroupList > citationPublicationInfoGroup,publicationDate,n,y
+publicart_5-0-0,citation,Citation Information,Resource identifier,Resource identifier capture date,citationResourceIdentGroupList > citationResourceIdentGroup,captureDate,n,y
+publicart_5-0-0,chronology,Chronology Information,"",Primary date range,"",chronologyDateStructuredDateGroup,n,n/a
+publicart_5-0-0,chronology,Associated Authorities,Person,Person date,personGroupList > personGroup,personStructuredDateGroup,n,y
+publicart_5-0-0,chronology,Associated Authorities,People,People date,peopleGroupList > peopleGroup,peopleStructuredDateGroup,n,y
+publicart_5-0-0,chronology,Associated Authorities,Organization,Organization date,organizationGroupList > organizationGroup,organizationStructuredDateGroup,n,y
+publicart_5-0-0,chronology,Associated Authorities,Concept,Concept date,conceptGroupList > conceptGroup,conceptStructuredDateGroup,n,y
+publicart_5-0-0,chronology,Associated Authorities,Place,Place date,placeGroupList > placeGroup,placeStructuredDateGroup,n,y
+publicart_5-0-0,chronology,Associated Authorities,Related period,Related period date,relatedPeriodGroupList > relatedPeriodGroup,relatedPeriodStructuredDateGroup,n,y
+publicart_5-0-0,chronology,Alternative Date Information,Alternative date,Alternative date range,otherDateGroupList > otherDateGroup,otherDateStructuredDateGroup,n,y
+publicart_5-0-0,collectionobject,Object Production Information,Artwork date,Artwork date,publicartProductionDateGroupList > publicartProductionDateGroup,publicartProductionDate,n,y
+publicart_5-0-0,exhibition,Exhibition Information,Gallery rotation,Gallery rotation start date,galleryRotationGroupList > galleryRotationGroup,galleryRotationStartDateGroup,n,y
+publicart_5-0-0,exhibition,Exhibition Information,Gallery rotation,Gallery rotation end date,galleryRotationGroupList > galleryRotationGroup,galleryRotationEndDateGroup,n,y
+publicart_5-0-0,media,Media Handling Information,"",Date,dateGroupList,dateGroup,y,n
+publicart_5-0-0,objectexit,Object Exit Information,"",Exit date,"",exitDateGroup,n,n/a
+publicart_5-0-0,organization,Organization Information,"",Foundation date,"",foundingDateGroup,n,n/a
+publicart_5-0-0,organization,Organization Information,"",Dissolution date,"",dissolutionDateGroup,n,n/a
+publicart_5-0-0,person,Person Information,"",Birth date,"",birthDateGroup,n,n/a
+publicart_5-0-0,person,Person Information,"",Death date,"",deathDateGroup,n,n/a
+publicart_5-0-0,person,Maker-Supplied Identity Information,Supplied birth date,Birth date supplied,suppliedBirthDateGroupList > suppliedBirthDateGroup,suppliedStructuredBirthDateGroup,n,y
+publicart_5-0-0,place,Place Information,Term > Name detail,Term date,placeTermGroupList > placeTermGroup,nameDateGroup,n,y
+publicart_5-0-0,place,Place Information,Ownership,Ownership date,publicartPlaceOwnerGroupList > publicartPlaceOwnerGroup,ownershipDateGroup,n,y
+publicart_5-0-0,place,Georeference Information,Georeference,Georeference date,placeGeoRefGroupList > placeGeoRefGroup,geoRefDateGroup,n,y
+publicart_5-0-0,work,Work Information,Work date,Work date,workDateGroupList,workDateGroup,y,n
+bonsai_5-0-5,acquisition,Acquisition Information,"",Accession date,"",accessionDateGroup,n,n/a
+bonsai_5-0-5,acquisition,Acquisition Information,"",Acquisition date,acquisitionDateGroupList,acquisitionDateGroup,y,n
+bonsai_5-0-5,citation,Citation Information,Publication,Publication date,citationPublicationInfoGroupList > citationPublicationInfoGroup,publicationDate,n,y
+bonsai_5-0-5,citation,Citation Information,Resource identifier,Resource identifier capture date,citationResourceIdentGroupList > citationResourceIdentGroup,captureDate,n,y
+bonsai_5-0-5,chronology,Chronology Information,"",Primary date range,"",chronologyDateStructuredDateGroup,n,n/a
+bonsai_5-0-5,chronology,Associated Authorities,Person,Person date,personGroupList > personGroup,personStructuredDateGroup,n,y
+bonsai_5-0-5,chronology,Associated Authorities,People,People date,peopleGroupList > peopleGroup,peopleStructuredDateGroup,n,y
+bonsai_5-0-5,chronology,Associated Authorities,Organization,Organization date,organizationGroupList > organizationGroup,organizationStructuredDateGroup,n,y
+bonsai_5-0-5,chronology,Associated Authorities,Concept,Concept date,conceptGroupList > conceptGroup,conceptStructuredDateGroup,n,y
+bonsai_5-0-5,chronology,Associated Authorities,Place,Place date,placeGroupList > placeGroup,placeStructuredDateGroup,n,y
+bonsai_5-0-5,chronology,Associated Authorities,Related period,Related period date,relatedPeriodGroupList > relatedPeriodGroup,relatedPeriodStructuredDateGroup,n,y
+bonsai_5-0-5,chronology,Alternative Date Information,Alternative date,Alternative date range,otherDateGroupList > otherDateGroup,otherDateStructuredDateGroup,n,y
+bonsai_5-0-5,collectionobject,Object Description Information,Textual Inscription > Textual inscription,Textual inscription date,textualInscriptionGroupList > textualInscriptionGroup,inscriptionContentDateGroup,n,y
+bonsai_5-0-5,collectionobject,Object Description Information,Non-Textual Inscription > Non-textual inscription,Non-textual inscription date,nonTextualInscriptionGroupList > nonTextualInscriptionGroup,inscriptionDescriptionDateGroup,n,y
+bonsai_5-0-5,collectionobject,Object Production Information,"",Production date,objectProductionDateGroupList,objectProductionDateGroup,y,n
+bonsai_5-0-5,collectionobject,Object History and Association Information,Associations > Associated date,Associated date value,assocDateGroupList > assocDateGroup,assocStructuredDateGroup,n,y
+bonsai_5-0-5,collectionobject,Object History and Association Information,"",Ownership date,ownershipDateGroupList,ownershipDateGroup,y,n
+bonsai_5-0-5,collectionobject,Object Collection Information,"",Field collection date,"",fieldCollectionDateGroup,n,n/a
+bonsai_5-0-5,exhibition,Exhibition Information,Gallery rotation,Gallery rotation start date,galleryRotationGroupList > galleryRotationGroup,galleryRotationStartDateGroup,n,y
+bonsai_5-0-5,exhibition,Exhibition Information,Gallery rotation,Gallery rotation end date,galleryRotationGroupList > galleryRotationGroup,galleryRotationEndDateGroup,n,y
+bonsai_5-0-5,media,Media Handling Information,"",Date,dateGroupList,dateGroup,y,n
+bonsai_5-0-5,objectexit,Object Exit Information,"",Exit date,"",exitDateGroup,n,n/a
+bonsai_5-0-5,organization,Organization Information,"",Foundation date,"",foundingDateGroup,n,n/a
+bonsai_5-0-5,organization,Organization Information,"",Dissolution date,"",dissolutionDateGroup,n,n/a
+bonsai_5-0-5,organization,Organization Information,Contact person,Contact date,contactGroupList > contactGroup,contactDateGroup,n,y
+bonsai_5-0-5,organization,Organization Information,Contact person,Contact end date,contactGroupList > contactGroup,contactEndDateGroup,n,y
+bonsai_5-0-5,person,Person Information,"",Birth date,"",birthDateGroup,n,n/a
+bonsai_5-0-5,person,Person Information,"",Death date,"",deathDateGroup,n,n/a
+bonsai_5-0-5,person,Maker-Supplied Identity Information,Supplied birth date,Birth date supplied,suppliedBirthDateGroupList > suppliedBirthDateGroup,suppliedStructuredBirthDateGroup,n,y
+bonsai_5-0-5,place,Place Information,Term,Term date,placeTermGroupList > placeTermGroup,nameDateGroup,n,y
+bonsai_5-0-5,place,Place Information,Ownership,Ownership date,placeOwnerGroupList > placeOwnerGroup,ownershipDateGroup,n,y
+bonsai_5-0-5,place,Georeference Information,Georeference,Georeference date,placeGeoRefGroupList > placeGeoRefGroup,geoRefDateGroup,n,y
+bonsai_5-0-5,work,Work Information,"",Work date,workDateGroupList,workDateGroup,y,n
+anthro_7-0-0,acquisition,Acquisition Information,"",Accession date,"",accessionDateGroup,n,n/a
+anthro_7-0-0,acquisition,Acquisition Information,"",Acquisition date,acquisitionDateGroupList,acquisitionDateGroup,y,n
+anthro_7-0-0,citation,Citation Information,Publication,Publication date,citationPublicationInfoGroupList > citationPublicationInfoGroup,publicationDate,n,y
+anthro_7-0-0,citation,Citation Information,Resource identifier,Resource identifier capture date,citationResourceIdentGroupList > citationResourceIdentGroup,captureDate,n,y
+anthro_7-0-0,chronology,Chronology Information,"",Primary date range,"",chronologyDateStructuredDateGroup,n,n/a
+anthro_7-0-0,chronology,Associated Authorities,Person,Person date,personGroupList > personGroup,personStructuredDateGroup,n,y
+anthro_7-0-0,chronology,Associated Authorities,People,People date,peopleGroupList > peopleGroup,peopleStructuredDateGroup,n,y
+anthro_7-0-0,chronology,Associated Authorities,Organization,Organization date,organizationGroupList > organizationGroup,organizationStructuredDateGroup,n,y
+anthro_7-0-0,chronology,Associated Authorities,Concept,Concept date,conceptGroupList > conceptGroup,conceptStructuredDateGroup,n,y
+anthro_7-0-0,chronology,Associated Authorities,Place,Place date,placeGroupList > placeGroup,placeStructuredDateGroup,n,y
+anthro_7-0-0,chronology,Associated Authorities,Related period,Related period date,relatedPeriodGroupList > relatedPeriodGroup,relatedPeriodStructuredDateGroup,n,y
+anthro_7-0-0,chronology,Alternative Date Information,Alternative date,Alternative date range,otherDateGroupList > otherDateGroup,otherDateStructuredDateGroup,n,y
+anthro_7-0-0,collectionobject,Object Collection Information,"",Field collection date,"",fieldCollectionDateGroup,n,n/a
+anthro_7-0-0,collectionobject,Object Production Information,"",Production date,objectProductionDateGroupList,objectProductionDateGroup,y,n
+anthro_7-0-0,collectionobject,Repatriation and NAGPRA Compliance Information,Reported to National NAGPRA,NAGPRA report filed date,nagpraReportFiledGroupList > nagpraReportFiledGroup,nagpraReportFiledDate,n,y
+anthro_7-0-0,collectionobject,Object Description Information,Biological Information > Determination history > Identification by,Taxonomic identification date,taxonomicIdentGroupList > taxonomicIdentGroup,identDateGroup,n,y
+anthro_7-0-0,collectionobject,Object Description Information,Content,Content date,"",contentDateGroup,n,n/a
+anthro_7-0-0,collectionobject,Object Description Information,Textual Inscription > Textual inscription,Textual inscription date,textualInscriptionGroupList > textualInscriptionGroup,inscriptionContentDateGroup,n,y
+anthro_7-0-0,collectionobject,Object Description Information,Non-Textual Inscription > Non-textual inscription,Non-textual inscription date,nonTextualInscriptionGroupList > nonTextualInscriptionGroup,inscriptionDescriptionDateGroup,n,y
+anthro_7-0-0,collectionobject,Object History and Association Information,Associations > Associated date,Associated date value,assocDateGroupList > assocDateGroup,assocStructuredDateGroup,n,y
+anthro_7-0-0,collectionobject,Object History and Association Information,Previous ownership,Previous ownership date,anthroOwnershipGroupList > anthroOwnershipGroup,anthroOwnershipDateGroup,n,y
+anthro_7-0-0,collectionobject,Locality Information,Locality > Georeference Detail,Georeference date,localityGroupList > localityGroup,geoRefDateGroup,n,y
+anthro_7-0-0,exhibition,Exhibition Information,Gallery rotation,Gallery rotation start date,galleryRotationGroupList > galleryRotationGroup,galleryRotationStartDateGroup,n,y
+anthro_7-0-0,exhibition,Exhibition Information,Gallery rotation,Gallery rotation end date,galleryRotationGroupList > galleryRotationGroup,galleryRotationEndDateGroup,n,y
+anthro_7-0-0,media,Media Handling Information,"",Date,dateGroupList,dateGroup,y,n
+anthro_7-0-0,objectexit,Object Exit Information,"",Exit date,"",exitDateGroup,n,n/a
+anthro_7-0-0,organization,Organization Information,"",Foundation date,"",foundingDateGroup,n,n/a
+anthro_7-0-0,organization,Organization Information,"",Dissolution date,"",dissolutionDateGroup,n,n/a
+anthro_7-0-0,organization,Organization Information,Contact person,Contact date,contactGroupList > contactGroup,contactDateGroup,n,y
+anthro_7-0-0,organization,Organization Information,Contact person,Contact end date,contactGroupList > contactGroup,contactEndDateGroup,n,y
+anthro_7-0-0,person,Person Information,"",Birth date,"",birthDateGroup,n,n/a
+anthro_7-0-0,person,Person Information,"",Death date,"",deathDateGroup,n,n/a
+anthro_7-0-0,person,Maker-Supplied Identity Information,Supplied birth date,Birth date supplied,suppliedBirthDateGroupList > suppliedBirthDateGroup,suppliedStructuredBirthDateGroup,n,y
+anthro_7-0-0,place,Place Information,Term,Term date,placeTermGroupList > placeTermGroup,nameDateGroup,n,y
+anthro_7-0-0,place,Place Information,Ownership,Ownership date,placeOwnerGroupList > placeOwnerGroup,ownershipDateGroup,n,y
+anthro_7-0-0,place,Georeference Information,Georeference,Georeference date,placeGeoRefGroupList > placeGeoRefGroup,geoRefDateGroup,n,y
+anthro_7-0-0,work,Work Information,"",Work date,workDateGroupList,workDateGroup,y,n
+anthro_7-0-0,osteology,Osteology Information,Age estimate,Age estimate date,osteoAgeEstimateGroupList > osteoAgeEstimateGroup,osteoAgeEstimateDateGroup,n,y
+anthro_7-0-0,osteology,Osteology Information,Sex determination,Sex determination date,sexDeterminationGroupList > sexDeterminationGroup,sexDeterminationDateGroup,n,y
+anthro_7-0-0,claim,Claim Context,Time period represented,Time period represented date,nagpraClaimPeriodGroupList > nagpraClaimPeriodGroup,nagpraClaimPeriodDateGroup,n,y
+botgarden_3-0-5,citation,Citation Information,Publication,Publication date,citationPublicationInfoGroupList > citationPublicationInfoGroup,publicationDate,n,y
+botgarden_3-0-5,citation,Citation Information,Resource identifier,Resource identifier capture date,citationResourceIdentGroupList > citationResourceIdentGroup,captureDate,n,y
+botgarden_3-0-5,chronology,Chronology Information,"",Primary date range,"",chronologyDateStructuredDateGroup,n,n/a
+botgarden_3-0-5,chronology,Associated Authorities,Person,Person date,personGroupList > personGroup,personStructuredDateGroup,n,y
+botgarden_3-0-5,chronology,Associated Authorities,People,People date,peopleGroupList > peopleGroup,peopleStructuredDateGroup,n,y
+botgarden_3-0-5,chronology,Associated Authorities,Organization,Organization date,organizationGroupList > organizationGroup,organizationStructuredDateGroup,n,y
+botgarden_3-0-5,chronology,Associated Authorities,Concept,Concept date,conceptGroupList > conceptGroup,conceptStructuredDateGroup,n,y
+botgarden_3-0-5,chronology,Associated Authorities,Place,Place date,placeGroupList > placeGroup,placeStructuredDateGroup,n,y
+botgarden_3-0-5,chronology,Associated Authorities,Related period,Related period date,relatedPeriodGroupList > relatedPeriodGroup,relatedPeriodStructuredDateGroup,n,y
+botgarden_3-0-5,chronology,Alternative Date Information,Alternative date,Alternative date range,otherDateGroupList > otherDateGroup,otherDateStructuredDateGroup,n,y
+botgarden_3-0-5,collectionobject,Object Identification Information,Determination history > Identification by,Taxonomic identification date,taxonomicIdentGroupList > taxonomicIdentGroup,identDateGroup,n,y
+botgarden_3-0-5,collectionobject,Locality Information,Locality > Georeference Detail,Georeference date,localityGroupList > localityGroup,geoRefDateGroup,n,y
+botgarden_3-0-5,collectionobject,Field Collection Information,"",Field collection date,"",fieldCollectionDateGroup,n,n/a
+botgarden_3-0-5,collectionobject,Object History and Association Information,Associations > Associated date,Associated date value,assocDateGroupList > assocDateGroup,assocStructuredDateGroup,n,y
+botgarden_3-0-5,collectionobject,Object History and Association Information,"",Ownership date,ownershipDateGroupList,ownershipDateGroup,y,n
+botgarden_3-0-5,media,Media Handling Information,"",Date,dateGroupList,dateGroup,y,n
+botgarden_3-0-5,objectexit,Distribution Information,"",Date,"",exitDateGroup,n,n/a
+botgarden_3-0-5,organization,Organization Information,"",Foundation date,"",foundingDateGroup,n,n/a
+botgarden_3-0-5,organization,Organization Information,"",Dissolution date,"",dissolutionDateGroup,n,n/a
+botgarden_3-0-5,organization,Organization Information,Contact person,Contact date,contactGroupList > contactGroup,contactDateGroup,n,y
+botgarden_3-0-5,organization,Organization Information,Contact person,Contact end date,contactGroupList > contactGroup,contactEndDateGroup,n,y
+botgarden_3-0-5,person,Person Information,"",Birth date,"",birthDateGroup,n,n/a
+botgarden_3-0-5,person,Person Information,"",Death date,"",deathDateGroup,n,n/a
+botgarden_3-0-5,person,Maker-Supplied Identity Information,Supplied birth date,Birth date supplied,suppliedBirthDateGroupList > suppliedBirthDateGroup,suppliedStructuredBirthDateGroup,n,y
+botgarden_3-0-5,place,Place Information,Term,Term date,placeTermGroupList > placeTermGroup,nameDateGroup,n,y
+botgarden_3-0-5,place,Place Information,Ownership,Ownership date,placeOwnerGroupList > placeOwnerGroup,ownershipDateGroup,n,y
+botgarden_3-0-5,place,Georeference Information,Georeference,Georeference date,placeGeoRefGroupList > placeGeoRefGroup,geoRefDateGroup,n,y
+botgarden_3-0-5,work,Work Information,"",Work date,workDateGroupList,workDateGroup,y,n
+botgarden_3-0-5,propagation,Propagation Information,"",Propagation date,"",propDate,n,n/a
+botgarden_3-0-5,propagation,Propagation Information,Activities > Activity,Activity date,propActivityGroupList > propActivityGroup,activityDate,n,y
+fcart_6-0-0,acquisition,Acquisition Information,"",Accession date,"",accessionDateGroup,n,n/a
+fcart_6-0-0,acquisition,Acquisition Information,"",Acquisition date,acquisitionDateGroupList,acquisitionDateGroup,y,n
+fcart_6-0-0,citation,Citation Information,Publication,Publication date,citationPublicationInfoGroupList > citationPublicationInfoGroup,publicationDate,n,y
+fcart_6-0-0,citation,Citation Information,Resource identifier,Resource identifier capture date,citationResourceIdentGroupList > citationResourceIdentGroup,captureDate,n,y
+fcart_6-0-0,chronology,Chronology Information,"",Primary date range,"",chronologyDateStructuredDateGroup,n,n/a
+fcart_6-0-0,chronology,Associated Authorities,Person,Person date,personGroupList > personGroup,personStructuredDateGroup,n,y
+fcart_6-0-0,chronology,Associated Authorities,People,People date,peopleGroupList > peopleGroup,peopleStructuredDateGroup,n,y
+fcart_6-0-0,chronology,Associated Authorities,Organization,Organization date,organizationGroupList > organizationGroup,organizationStructuredDateGroup,n,y
+fcart_6-0-0,chronology,Associated Authorities,Concept,Concept date,conceptGroupList > conceptGroup,conceptStructuredDateGroup,n,y
+fcart_6-0-0,chronology,Associated Authorities,Place,Place date,placeGroupList > placeGroup,placeStructuredDateGroup,n,y
+fcart_6-0-0,chronology,Associated Authorities,Related period,Related period date,relatedPeriodGroupList > relatedPeriodGroup,relatedPeriodStructuredDateGroup,n,y
+fcart_6-0-0,chronology,Alternative Date Information,Alternative date,Alternative date range,otherDateGroupList > otherDateGroup,otherDateStructuredDateGroup,n,y
+fcart_6-0-0,collectionobject,Object Production Information,"",Production date,objectProductionDateGroupList,objectProductionDateGroup,y,n
+fcart_6-0-0,collectionobject,Object Description Information,Content,Content date,"",contentDateGroup,n,n/a
+fcart_6-0-0,collectionobject,Object Description Information,Textual Inscription > Textual inscription,Textual inscription date,textualInscriptionGroupList > textualInscriptionGroup,inscriptionContentDateGroup,n,y
+fcart_6-0-0,collectionobject,Object Description Information,Non-Textual Inscription > Non-textual inscription,Non-textual inscription date,nonTextualInscriptionGroupList > nonTextualInscriptionGroup,inscriptionDescriptionDateGroup,n,y
+fcart_6-0-0,collectionobject,Object History and Association Information,Associations > Associated date,Associated date value,assocDateGroupList > assocDateGroup,assocStructuredDateGroup,n,y
+fcart_6-0-0,collectionobject,Object History and Association Information,"",Ownership date,ownershipDateGroupList,ownershipDateGroup,y,n
+fcart_6-0-0,concept,Concept Information,Related concept,Related concept date,relatedConceptsGroupList > relatedConceptsGroup,conceptRelationDateGroup,n,y
+fcart_6-0-0,concept,Concept Information,"",Concept Date,"",conceptTermDateGroup,n,n/a
+fcart_6-0-0,conditioncheck,Technical Changes,Technical change,Technical change date,technicalChangesGroupList > technicalChangesGroup,technicalChangeDate,n,y
+fcart_6-0-0,exhibition,Exhibition Information,Gallery rotation,Gallery rotation start date,galleryRotationGroupList > galleryRotationGroup,galleryRotationStartDateGroup,n,y
+fcart_6-0-0,exhibition,Exhibition Information,Gallery rotation,Gallery rotation end date,galleryRotationGroupList > galleryRotationGroup,galleryRotationEndDateGroup,n,y
+fcart_6-0-0,media,Media Handling Information,"",Date,dateGroupList,dateGroup,y,n
+fcart_6-0-0,objectexit,Object Exit Information,"",Exit date,"",exitDateGroup,n,n/a
+fcart_6-0-0,organization,Organization Information,"",Foundation date,"",foundingDateGroup,n,n/a
+fcart_6-0-0,organization,Organization Information,"",Dissolution date,"",dissolutionDateGroup,n,n/a
+fcart_6-0-0,organization,Organization Information,Contact person,Contact date,contactGroupList > contactGroup,contactDateGroup,n,y
+fcart_6-0-0,organization,Organization Information,Contact person,Contact end date,contactGroupList > contactGroup,contactEndDateGroup,n,y
+fcart_6-0-0,person,Person Information,"",Birth date,"",birthDateGroup,n,n/a
+fcart_6-0-0,person,Person Information,"",Death date,"",deathDateGroup,n,n/a
+fcart_6-0-0,person,Maker-Supplied Identity Information,Supplied birth date,Birth date supplied,suppliedBirthDateGroupList > suppliedBirthDateGroup,suppliedStructuredBirthDateGroup,n,y
+fcart_6-0-0,place,Place Information,Term,Term date,placeTermGroupList > placeTermGroup,nameDateGroup,n,y
+fcart_6-0-0,place,Place Information,Ownership,Ownership date,placeOwnerGroupList > placeOwnerGroup,ownershipDateGroup,n,y
+fcart_6-0-0,place,Georeference Information,Georeference,Georeference date,placeGeoRefGroupList > placeGeoRefGroup,geoRefDateGroup,n,y
+fcart_6-0-0,work,Work Information,"",Work date,workDateGroupList,workDateGroup,y,n
+materials_3-0-6,acquisition,Acquisition Information,"",Accession date,"",accessionDateGroup,n,n/a
+materials_3-0-6,acquisition,Acquisition Information,"",Acquisition date,acquisitionDateGroupList,acquisitionDateGroup,y,n
+materials_3-0-6,citation,Citation Information,Publication,Publication date,citationPublicationInfoGroupList > citationPublicationInfoGroup,publicationDate,n,y
+materials_3-0-6,citation,Citation Information,Resource identifier,Resource identifier capture date,citationResourceIdentGroupList > citationResourceIdentGroup,captureDate,n,y
+materials_3-0-6,chronology,Chronology Information,"",Primary date range,"",chronologyDateStructuredDateGroup,n,n/a
+materials_3-0-6,chronology,Associated Authorities,Person,Person date,personGroupList > personGroup,personStructuredDateGroup,n,y
+materials_3-0-6,chronology,Associated Authorities,People,People date,peopleGroupList > peopleGroup,peopleStructuredDateGroup,n,y
+materials_3-0-6,chronology,Associated Authorities,Organization,Organization date,organizationGroupList > organizationGroup,organizationStructuredDateGroup,n,y
+materials_3-0-6,chronology,Associated Authorities,Concept,Concept date,conceptGroupList > conceptGroup,conceptStructuredDateGroup,n,y
+materials_3-0-6,chronology,Associated Authorities,Place,Place date,placeGroupList > placeGroup,placeStructuredDateGroup,n,y
+materials_3-0-6,chronology,Associated Authorities,Related period,Related period date,relatedPeriodGroupList > relatedPeriodGroup,relatedPeriodStructuredDateGroup,n,y
+materials_3-0-6,chronology,Alternative Date Information,Alternative date,Alternative date range,otherDateGroupList > otherDateGroup,otherDateStructuredDateGroup,n,y
+materials_3-0-6,collectionobject,Object Production Information,"",Production date,objectProductionDateGroupList,objectProductionDateGroup,y,n
+materials_3-0-6,media,Media Handling Information,"",Date,dateGroupList,dateGroup,y,n
+materials_3-0-6,objectexit,Object Exit Information,"",Exit date,"",exitDateGroup,n,n/a
+materials_3-0-6,organization,Organization Information,"",Foundation date,"",foundingDateGroup,n,n/a
+materials_3-0-6,organization,Organization Information,"",Dissolution date,"",dissolutionDateGroup,n,n/a
+materials_3-0-6,organization,Organization Information,Contact person,Contact date,contactGroupList > contactGroup,contactDateGroup,n,y
+materials_3-0-6,organization,Organization Information,Contact person,Contact end date,contactGroupList > contactGroup,contactEndDateGroup,n,y
+materials_3-0-6,place,Place Information,Term,Term date,placeTermGroupList > placeTermGroup,nameDateGroup,n,y
+materials_3-0-6,place,Place Information,Ownership,Ownership date,placeOwnerGroupList > placeOwnerGroup,ownershipDateGroup,n,y
+materials_3-0-6,place,Georeference Information,Georeference,Georeference date,placeGeoRefGroupList > placeGeoRefGroup,geoRefDateGroup,n,y
+materials_3-0-6,work,Work Information,"",Work date,workDateGroupList,workDateGroup,y,n
+materials_3-0-6,material,Material Information,Discontinued,Discontinued date,"",discontinuedDate,n,n/a
+materials_3-0-6,material,Material Information,"",Production date,"",productionDate,n,n/a
+lhmc_6-0-0,acquisition,Acquisition Information,"",Accessioned,"",accessionDateGroup,n,n/a
+lhmc_6-0-0,acquisition,Acquisition Information,"",Acquisition date,acquisitionDateGroupList,acquisitionDateGroup,y,n
+lhmc_6-0-0,citation,Citation Information,Publication,Publication date,citationPublicationInfoGroupList > citationPublicationInfoGroup,publicationDate,n,y
+lhmc_6-0-0,citation,Citation Information,Resource identifier,Resource identifier capture date,citationResourceIdentGroupList > citationResourceIdentGroup,captureDate,n,y
+lhmc_6-0-0,chronology,Chronology Information,"",Primary date range,"",chronologyDateStructuredDateGroup,n,n/a
+lhmc_6-0-0,chronology,Associated Authorities,Person,Person date,personGroupList > personGroup,personStructuredDateGroup,n,y
+lhmc_6-0-0,chronology,Associated Authorities,People,People date,peopleGroupList > peopleGroup,peopleStructuredDateGroup,n,y
+lhmc_6-0-0,chronology,Associated Authorities,Organization,Organization date,organizationGroupList > organizationGroup,organizationStructuredDateGroup,n,y
+lhmc_6-0-0,chronology,Associated Authorities,Concept,Concept date,conceptGroupList > conceptGroup,conceptStructuredDateGroup,n,y
+lhmc_6-0-0,chronology,Associated Authorities,Place,Place date,placeGroupList > placeGroup,placeStructuredDateGroup,n,y
+lhmc_6-0-0,chronology,Associated Authorities,Related period,Related period date,relatedPeriodGroupList > relatedPeriodGroup,relatedPeriodStructuredDateGroup,n,y
+lhmc_6-0-0,chronology,Alternative Date Information,Alternative date,Alternative date range,otherDateGroupList > otherDateGroup,otherDateStructuredDateGroup,n,y
+lhmc_6-0-0,collectionobject,Object Description Information,Content,Content date,"",contentDateGroup,n,n/a
+lhmc_6-0-0,collectionobject,Object Description Information,Textual Inscription > Textual inscription,Textual inscription date,textualInscriptionGroupList > textualInscriptionGroup,inscriptionContentDateGroup,n,y
+lhmc_6-0-0,collectionobject,Object Description Information,Non-Textual Inscription > Non-textual inscription,Non-textual inscription date,nonTextualInscriptionGroupList > nonTextualInscriptionGroup,inscriptionDescriptionDateGroup,n,y
+lhmc_6-0-0,collectionobject,Object Production Information,"",Production date,objectProductionDateGroupList,objectProductionDateGroup,y,n
+lhmc_6-0-0,collectionobject,Object History and Association Information,Associations > Associated date,Associated date value,assocDateGroupList > assocDateGroup,assocStructuredDateGroup,n,y
+lhmc_6-0-0,collectionobject,Object History and Association Information,"",Ownership date,ownershipDateGroupList,ownershipDateGroup,y,n
+lhmc_6-0-0,collectionobject,Object Collection Information,"",Field collection date,"",fieldCollectionDateGroup,n,n/a
+lhmc_6-0-0,exhibition,Exhibition Information,Gallery rotation,Gallery rotation start date,galleryRotationGroupList > galleryRotationGroup,galleryRotationStartDateGroup,n,y
+lhmc_6-0-0,exhibition,Exhibition Information,Gallery rotation,Gallery rotation end date,galleryRotationGroupList > galleryRotationGroup,galleryRotationEndDateGroup,n,y
+lhmc_6-0-0,media,Media Handling Information,"",Date,dateGroupList,dateGroup,y,n
+lhmc_6-0-0,objectexit,Object Exit Information,"",Exit date,"",exitDateGroup,n,n/a
+lhmc_6-0-0,organization,Organization Information,"",Foundation date,"",foundingDateGroup,n,n/a
+lhmc_6-0-0,organization,Organization Information,"",Dissolution date,"",dissolutionDateGroup,n,n/a
+lhmc_6-0-0,organization,Organization Information,Contact person,Contact date,contactGroupList > contactGroup,contactDateGroup,n,y
+lhmc_6-0-0,organization,Organization Information,Contact person,Contact end date,contactGroupList > contactGroup,contactEndDateGroup,n,y
+lhmc_6-0-0,person,Person Information,"",Born,"",birthDateGroup,n,n/a
+lhmc_6-0-0,person,Person Information,"",Died,"",deathDateGroup,n,n/a
+lhmc_6-0-0,person,Maker-Supplied Identity Information,Supplied birth date,Birth date supplied,suppliedBirthDateGroupList > suppliedBirthDateGroup,suppliedStructuredBirthDateGroup,n,y
+lhmc_6-0-0,place,Place Information,Term,Term date,placeTermGroupList > placeTermGroup,nameDateGroup,n,y
+lhmc_6-0-0,place,Place Information,Ownership,Ownership date,placeOwnerGroupList > placeOwnerGroup,ownershipDateGroup,n,y
+lhmc_6-0-0,place,Georeference Information,Georeference,Georeference date,placeGeoRefGroupList > placeGeoRefGroup,geoRefDateGroup,n,y
+lhmc_6-0-0,work,Work Information,"",Work date,workDateGroupList,workDateGroup,y,n
+herbarium_2-0-5,citation,Citation Information,Publication,Publication date,citationPublicationInfoGroupList > citationPublicationInfoGroup,publicationDate,n,y
+herbarium_2-0-5,citation,Citation Information,Resource identifier,Resource identifier capture date,citationResourceIdentGroupList > citationResourceIdentGroup,captureDate,n,y
+herbarium_2-0-5,chronology,Chronology Information,"",Primary date range,"",chronologyDateStructuredDateGroup,n,n/a
+herbarium_2-0-5,chronology,Associated Authorities,Person,Person date,personGroupList > personGroup,personStructuredDateGroup,n,y
+herbarium_2-0-5,chronology,Associated Authorities,People,People date,peopleGroupList > peopleGroup,peopleStructuredDateGroup,n,y
+herbarium_2-0-5,chronology,Associated Authorities,Organization,Organization date,organizationGroupList > organizationGroup,organizationStructuredDateGroup,n,y
+herbarium_2-0-5,chronology,Associated Authorities,Concept,Concept date,conceptGroupList > conceptGroup,conceptStructuredDateGroup,n,y
+herbarium_2-0-5,chronology,Associated Authorities,Place,Place date,placeGroupList > placeGroup,placeStructuredDateGroup,n,y
+herbarium_2-0-5,chronology,Associated Authorities,Related period,Related period date,relatedPeriodGroupList > relatedPeriodGroup,relatedPeriodStructuredDateGroup,n,y
+herbarium_2-0-5,chronology,Alternative Date Information,Alternative date,Alternative date range,otherDateGroupList > otherDateGroup,otherDateStructuredDateGroup,n,y
+herbarium_2-0-5,collectionobject,Object Identification Information,Determination history > Identification by,Taxonomic identification date,determinationHistoryGroupList > determinationHistoryGroup,determinationDateGroup,n,y
+herbarium_2-0-5,collectionobject,Object History and Association Information,Associations > Associated date,Associated date value,assocDateGroupList > assocDateGroup,assocStructuredDateGroup,n,y
+herbarium_2-0-5,collectionobject,Object History and Association Information,"",Ownership date,ownershipDateGroupList,ownershipDateGroup,y,n
+herbarium_2-0-5,collectionobject,Object Collection Information,"",Field collection date,"",fieldCollectionDateGroup,n,n/a
+herbarium_2-0-5,collectionobject,Object Production Information,"",Production date,objectProductionDateGroupList,objectProductionDateGroup,y,n
+herbarium_2-0-5,collectionobject,Object Description Information,Content,Content date,"",contentDateGroup,n,n/a
+herbarium_2-0-5,exhibition,Exhibition Information,Gallery rotation,Gallery rotation start date,galleryRotationGroupList > galleryRotationGroup,galleryRotationStartDateGroup,n,y
+herbarium_2-0-5,exhibition,Exhibition Information,Gallery rotation,Gallery rotation end date,galleryRotationGroupList > galleryRotationGroup,galleryRotationEndDateGroup,n,y
+herbarium_2-0-5,media,Media Handling Information,"",Date,dateGroupList,dateGroup,y,n
+herbarium_2-0-5,organization,Organization Information,"",Foundation date,"",foundingDateGroup,n,n/a
+herbarium_2-0-5,organization,Organization Information,"",Dissolution date,"",dissolutionDateGroup,n,n/a
+herbarium_2-0-5,organization,Organization Information,Contact person,Contact date,contactGroupList > contactGroup,contactDateGroup,n,y
+herbarium_2-0-5,organization,Organization Information,Contact person,Contact end date,contactGroupList > contactGroup,contactEndDateGroup,n,y
+herbarium_2-0-5,person,Person Information,"",Birth date,"",birthDateGroup,n,n/a
+herbarium_2-0-5,person,Person Information,"",Death date,"",deathDateGroup,n,n/a
+herbarium_2-0-5,person,Maker-Supplied Identity Information,Supplied birth date,Birth date supplied,suppliedBirthDateGroupList > suppliedBirthDateGroup,suppliedStructuredBirthDateGroup,n,y
+herbarium_2-0-5,place,Place Information,Term,Term date,placeTermGroupList > placeTermGroup,nameDateGroup,n,y
+herbarium_2-0-5,place,Place Information,Ownership,Ownership date,placeOwnerGroupList > placeOwnerGroup,ownershipDateGroup,n,y
+herbarium_2-0-5,place,Georeference Information,Georeference,Georeference date,placeGeoRefGroupList > placeGeoRefGroup,geoRefDateGroup,n,y
+herbarium_2-0-5,work,Work Information,"",Work date,workDateGroupList,workDateGroup,y,n
