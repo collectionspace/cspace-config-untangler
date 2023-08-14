@@ -14,13 +14,13 @@ module CspaceConfigUntangler
 
       # @param release [String]
       # @param profile [String]
-      def initialize(release:, profile:)
+      def initialize(profile:, release: CCU.release)
         @mode = :collapsed
-        @release = CCU::Validate.release(release)
         @profile = CCU::Validate.profile(profile)
+        @release = release
         @target = File.join(
-          CCU.data_reference_dir(release: release),
-          "profile_fields_#{profile}.csv"
+          CCU.data_reference_dir(release),
+          "#{profile}_fields.csv"
         )
       end
 

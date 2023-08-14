@@ -64,36 +64,58 @@ module CspaceConfigUntangler
   setting :configdir, default: default_configdir, reader: true
   setting :templatedir, default: default_templatedir, reader: true
   setting :mapperdir, default: default_mapperdir, reader: true
-
+  setting :releases,
+    default: {
+      "5_2"=>nil,
+      "6_0"=>"5_2",
+      "6_1"=>"6_0",
+      "7_0"=>"6_1",
+      "7_1"=>"7_0",
+      "7_2"=>"7_1"
+    },
+    reader: true
+  setting :release,
+    default: nil,
+    reader: true,
+    constructor: ->(value) do
+      rel = CCU::Validate.release(value)
+      CCU.switch_release(rel)
+      rel
+    end
+  setting :prev_release,
+    default: nil,
+    reader: true,
+    constructor: ->(_v){ releases[release] }
   setting :main_profile_name, default: default_main_profile_name, reader: true
   setting :log, default: logger, reader: true
   setting :mapper_uri_base,
     default: default_mapper_uri_base,
     reader: true
 
-
   # @param release [String]
   # @param mode [:collapsed, :expanded]
-  def allfields_path(release:, mode: :collapsed)
+  def allfields_path(release: CCU.release, mode: :collapsed)
     vmode = CCU::Validate.date_mode(mode)
-    vrelease = CCU::Validate.release(release)
 
-    name = "all_fields_#{vrelease}_dates_#{vmode}.csv"
+    name = "all_fields_#{release}_dates_#{vmode}.csv"
     File.join(
-      data_reference_dir(release: vrelease),
+      data_reference_dir(release),
       name
     )
   end
 
-  def data_reference_dir(release:)
-    vrelease = CCU::Validate.release(release)
-
+  def data_reference_dir(release=CCU.release)
     File.join(
       app_dir,
       'data',
       'reference',
-      vrelease
+      release
     )
+  end
+
+  def release_configs_dir(release=CCU.release)
+    File.join(app_dir, "data", "config_holder",
+              "community_profiles", "release_#{release}")
   end
 
   def profiles
@@ -113,6 +135,27 @@ module CspaceConfigUntangler
 
   def safe_copy(hash)
     Marshal.load(Marshal.dump(hash))
+  end
+
+  def switch_release(release)
+    clear_config_dir
+    move_release_to_config_dir(release)
+  end
+
+  def clear_config_dir
+    configs = Dir.new(CCU.configdir)
+      .children
+      .select{ |filename| filename.end_with?(".json") }
+      .map{ |filename| File.join(CCU.configdir, filename) }
+    FileUtils.rm(configs)
+  end
+
+  def move_release_to_config_dir(release)
+    rel_cfg_dir = CCU.release_configs_dir(release)
+    release_configs = Dir.new(rel_cfg_dir)
+      .children
+      .map{ |fn| File.join(rel_cfg_dir, fn) }
+    FileUtils.cp(release_configs, CCU.configdir)
   end
 
   gem_agnostic_dir = $LOAD_PATH.select{ |dir| dir['untangler'] }.reject{ |dir| dir.end_with?('/spec') }.first

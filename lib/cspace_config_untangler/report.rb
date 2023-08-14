@@ -8,7 +8,8 @@ module CspaceConfigUntangler
     module_function
 
     def reference_reports(release)
-      dir = CCU.data_reference_dir(release: release)
+      CCU.config.release = CCU::Validate.release(release)
+      dir = CCU.data_reference_dir(release)
       FileUtils.mkdir_p(dir) unless Dir.exist?(dir)
 
       CCU::Report::AllFieldsGenerator.call(release: release)

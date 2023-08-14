@@ -16,9 +16,9 @@ module CspaceConfigUntangler
       # @param sourcefile [nil, String] path to custom allfields CSV
       def initialize(release:, sourcefile: nil)
         @release = release
-        @source = sourcefile || CCU.allfields_path(release: release)
+        @source = sourcefile || CCU.allfields_path
         @target = File.join(
-          CCU.data_reference_dir(release: release),
+          CCU.data_reference_dir(release),
           "multi_auth_repeatable_fields_#{release}.csv"
           )
       end
