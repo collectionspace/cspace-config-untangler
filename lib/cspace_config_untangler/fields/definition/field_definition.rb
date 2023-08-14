@@ -42,7 +42,7 @@ module CspaceConfigUntangler
         def rectype
           @config.rectype
         end
-        
+
         def to_csv
           arr = [@config.profile, @config.rectype, @config.namespace.literal, @id]
           @name ? arr << @name : arr << ''
@@ -55,9 +55,23 @@ module CspaceConfigUntangler
           @value_list ? arr << @value_list.join(', ') : arr << ''
           return arr
         end
-        
+
+        def inspect
+          omit = %i[@config @profile @hash @parent @datahash @name @ns_for_id
+                    @value_source @value_list]
+          attributes = instance_variables.unshift([]).inject do |info, attribute|
+            if omit.include?(attribute)
+              info
+            else
+              info << "#{attribute}=#{instance_variable_get(attribute).inspect}"
+            end
+          end
+
+          %(#<#{self.class}:#{object_id} #{attributes.join(", ")}>)
+        end
+
         private
-        
+
         def set_required
           if @datahash.dig('required') && @datahash['required'] == true
             return 'y'
@@ -72,19 +86,19 @@ module CspaceConfigUntangler
 
           sources = CCU::Fields::ValueSources::SourceExtractor.call(type, @datahash, @config.profile_object)
             .reject{ |source| source.source_type == 'authority' && !source.configured? }
-          
+
           @value_source = sources
           if type == 'option list'
             @value_list = @value_source.first.options
             return
           end
-          
+
           return unless @value_source.empty?
 
           if type == 'authority'
             CCU.log.warn("DATA SOURCES: #{@config.namespace_signature} - #{@id} - Autocomplete defined with no configured source")
             return
-          end          
+          end
         end
 
         def set_datatype

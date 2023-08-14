@@ -139,6 +139,10 @@ module CspaceConfigUntangler
       end
     end
 
+    def inspect
+      %(#<#{self.class}:#{object_id} profile: #{@profile.name}, name: #{@name}>)
+    end
+
     private
 
 
