@@ -113,6 +113,25 @@ module CspaceConfigUntangler
       @option_lists ||= get_option_lists
     end
 
+    # @return Array of authority vocabulary names used to control at least one
+    #   field in profile
+    def used_authority_vocabs
+      field_defs.values
+        .flatten
+        .map{ |fd| fd.value_source }
+        .flatten
+        .select{ |src| src.is_a?(CCU::ValueSources::Authority) }
+        .map(&:name)
+        .uniq
+        .sort
+    end
+
+    # @return Array of authority vocabulary names defined but not used to
+    #   control any fields
+    def unused_authority_vocabs
+      authorities - used_authority_vocabs
+    end
+
     def inspect
       %(#<#{self.class}:#{object_id} name: #{@name}>)
     end

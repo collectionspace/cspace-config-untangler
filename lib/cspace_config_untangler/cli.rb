@@ -1,3 +1,4 @@
+require_relative 'cli/authorities_cli'
 require_relative 'cli/debug_cli'
 require_relative 'cli/fields_cli'
 require_relative 'cli/forms_cli'
@@ -15,6 +16,9 @@ module CspaceConfigUntangler
       def self.exit_on_failure?
         true
       end
+
+      desc 'authorities SUBCOMMAND', 'Get info about authority vocabularies'
+      subcommand 'authorities', CCU::Cli::AuthoritiesCli
 
       desc 'debug SUBCOMMAND', 'Commands useful for digging into why CCU is producing its results'
       subcommand 'debug', CCU::Cli::DebugCli
