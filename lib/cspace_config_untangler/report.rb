@@ -6,14 +6,24 @@ module CspaceConfigUntangler
   # Namespace for report generators
   module Report
     module_function
+    extend Dry::Configurable
 
-    def qa_reports(release:)
+    setting :auth_vocab_report_path,
+      default: nil,
+      reader: true,
+      constructor: ->(_v) do
+        File.join(CCU.data_reference_dir, "authority_vocabulary_usage.csv")
+      end
+
+    def qa_reports(release:, clean: false)
       CCU.config.release = release
       prev = CCU.prev_release
 
       dir = CCU.data_reference_dir
       FileUtils.mkdir_p(dir) unless Dir.exist?(dir)
-      FileUtils.rm(Dir.new(dir).children.map{ |fn| File.join(dir, fn) })
+      if clean
+        FileUtils.rm(Dir.new(dir).children.map{ |fn| File.join(dir, fn) })
+      end
 
       CCU::Report::QaAllFields.call(release: release)
       CCU::Report::QaChangedFields.call(release: release)
@@ -21,6 +31,7 @@ module CspaceConfigUntangler
       CCU::Report::NonuniqueFieldPaths.call(profiles: "all", mode: :release)
       CCU::Report::NonuniqueFieldNames.call(profiles: "all", mode: :release)
       CCU::Report::XpathDepthCheck.call
+      CCU::Report::UnusedAuthorityVocabs.call
     end
 
     def reference_reports(release)
@@ -39,6 +50,7 @@ module CspaceConfigUntangler
       CCU::Report::StructuredDateFieldsGenerator.call(
         release: release
       )
+      CCU::Report::AuthorityVocabUse.call(profiles: "all")
       CCU::Cli::Helpers::ProfileGetter.call('all').each do |profile|
         CCU::Report::ProfileFieldsGenerator.call(
           release: release,

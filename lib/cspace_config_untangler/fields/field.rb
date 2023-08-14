@@ -34,12 +34,38 @@ module CspaceConfigUntangler
         end
       end
 
-      # returns copy of this Field object without all the profile and rectype data
-      def clean
-        c = self.dup
-        c.profile = @profile.name
-        c.rectype = @rectype.name
-        c
+      def freetext?
+        return true unless value_source
+
+        value_source.length == 1 &&
+          value_source.first.name == "na"
+      end
+
+      def controlled?
+        !freetext?
+      end
+
+      def authority_controlled?
+        controlled? &&
+          value_source.any?{ |src| src.source_type == "authority" }
+      end
+
+      def vocabulary_controlled?
+        controlled? &&
+          value_source.any?{ |src| src.source_type == "vocabulary" }
+      end
+
+      def optionlist_controlled?
+        controlled? &&
+          value_source.any?{ |src| src.source_type == "optionlist" }
+      end
+
+      # @param name [String]
+      def controlled_by?(name)
+        return false unless controlled?
+
+        value_source.map{ |src| src.name }
+          .include?(name)
       end
 
       private
