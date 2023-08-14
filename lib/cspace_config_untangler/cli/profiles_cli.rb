@@ -1,3 +1,5 @@
+require "fileutils"
+
 require_relative 'helpers'
 
 module CspaceConfigUntangler
@@ -81,6 +83,18 @@ LONGDESC
           }
         }
         say(message.join("\n"))
+      end
+
+      desc 'switch_release', 'Deletes configs and copies community profile '\
+        'configs from specified release as current configs'
+      option :release,
+        desc: 'Release (like 7_0)',
+        type: :string,
+        required: true,
+        aliases: '-r'
+      def switch_release
+        CCU.config.release = options[:release]
+        puts CCU::Cli::Helpers::ProfileGetter.call("all")
       end
     end
   end
