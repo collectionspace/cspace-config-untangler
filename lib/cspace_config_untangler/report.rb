@@ -44,6 +44,10 @@ module CspaceConfigUntangler
           release: release,
           profile: profile
         )
+        CCU::Report::ProfileSubjectsGenerator.call(
+          release: release,
+          profile: profile
+        )
       end
     end
 
