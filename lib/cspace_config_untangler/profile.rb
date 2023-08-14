@@ -55,15 +55,15 @@ module CspaceConfigUntangler
     end
 
     def nonunique_fields
-      h = {}
-      @rectypes.each{ |rt|
-        if rt.nonunique_fields.nil?
-          h[rt.name] = []
-        else
-          h[rt.name] = rt.nonunique_fields
-        end
-      }
-      return h
+      @rectypes.map{ |rt| [rt.name, rt.nonunique_fields] }
+        .to_h
+        .reject{ |rt, info| info.empty? }
+    end
+
+    def nonunique_field_names
+      @rectypes.map{ |rt| [rt.name, rt.nonunique_field_names] }
+        .to_h
+        .reject{ |rt, info| info.empty? }
     end
 
     def basename

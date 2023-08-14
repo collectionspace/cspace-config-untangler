@@ -38,17 +38,30 @@ Uniqueness is determined by the full XML schema, i.e. the schema_path plus the f
 The full schema_path should be unique within a record type. Non-unique fields are unexpected and the profile, record type, and schema path will be printed to the screen if any are found.
   LONGDESC
       def nonunique
-        get_profiles.each {|profile|
-          p = CCU::Profile.new(profile: profile)
-          h = {}
-          p.nonunique_fields.each{ |rt, fields| h[rt] = fields if fields.length > 0 }
-          h.each{ |rt, fields| fields.each{ |f| puts "#{@name} - #{rt} - #{f}" } }
-        }
+        CCU::Report::NonuniqueFieldPaths.call(profiles: options[:profiles])
+      end
+
+      desc 'nonunique_field_names', 'Print list of non-unique field names '\
+        'per profile'
+      long_desc <<~LONGDESC
+        This reports fields in the same record type that have the same
+        underlying field name, without consideration of the full XML schema path
+        of the field.
+
+        While these field names will work ok if they have different namespaces/
+        xpaths, they are confusing when we need to discuss what fields to
+        change, relabel, report on, update, or remove.
+
+        Known/legacy duplicates are shown separately, since it's difficult to
+        change them. Look out for new ones and don't let them in, if possible!
+      LONGDESC
+      def nonunique_field_names
+        CCU::Report::NonuniqueFieldNames.call(profiles: options[:profiles])
       end
 
       desc 'unmappable', 'Prints list of fields per profile that are omitted from templates/mappers due to being unmappable'
       long_desc <<~DESC
-This is introduced because some fields are being omitted from OMCA's templates/mappers because they have custom namespaces in their 'contact' subrecord. The Untangler assumes only the common namespace is used in subrecords, so these fields cannot be extracted/mapped at this point. 
+This is introduced because some fields are being omitted from OMCA's templates/mappers because they have custom namespaces in their 'contact' subrecord. The Untangler assumes only the common namespace is used in subrecords, so these fields cannot be extracted/mapped at this point.
 
 An unmappable field is identified by its field_mapping object having nil data_type and xpath attributes.
       DESC
