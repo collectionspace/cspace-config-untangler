@@ -9,21 +9,21 @@ module CspaceConfigUntangler
       attr_accessor :to_csv, :profile, :rectype
 
       def initialize(rectype_obj, form_field)
-        ff = form_field
         @rectype = rectype_obj
         @profile = @rectype.profile
-        @name = ff.name
-        @ns = ff.ns
-        @ns_for_id = ff.ns_for_id
-        @panel = ff.panel
-        @ui_path = ff.ui_path
-        @id = ff.id
+        @name = form_field.name
+        @ns = form_field.ns
+        @ns_for_id = form_field.ns_for_id
+        @panel = form_field.panel
+        @ui_path = form_field.ui_path
+        @id = form_field.id
         merge_field_defs
+        @fid = "#{@profile.name} #{rectype.name} #{@ns_for_id} #{@name}"
         @to_csv = format_csv
       end
 
       def csv_header
-        return %w[fid profile record_type namespace namespace_for_id field_id ui_info_group ui_path ui_field_label xml_path xml_field_name data_type required repeats group_repeats data_source option_list_values]
+        csv_row.keys.map(&:to_s)
       end
 
       def structured_date?
@@ -43,32 +43,51 @@ module CspaceConfigUntangler
       end
 
       private
-      
+
+      def csv_row
+        {
+          fid: @fid,
+          profile: @profile.name,
+          record_type: @rectype.name,
+          namespace: @ns,
+          namespace_for_id: @ns_for_id,
+          field_id: @id,
+          ui_info_group: get_ui_info_group,
+          ui_path: get_ui_path,
+          ui_field_label: lookup_display_name(@id),
+          xml_path: @schema_path.join(' > '),
+          xml_field_name: @name,
+          data_type: @data_type,
+          required: @required,
+          repeats: @repeats,
+          group_repeats: @in_repeating_group,
+          data_source: @value_source.map(&:fields_csv_label).compact.join('; '),
+          option_list_values: @value_list.join(', ')
+        }
+      end
+
       def format_csv
-        arr = ["#{@profile.name} #{@ns} #{@name}", @profile.name]
-        @rectype.is_a?(CCU::RecordType) ? arr << @rectype.name : arr << @rectype
-        @ns ? arr << @ns : arr << ''
-        @ns_for_id ? arr << @ns_for_id : arr << ''
-        @id ? arr << @id : arr << ''
-        if @ui_path
-          path = @ui_path.compact
-          path = path.map{ |e| lookup_display_name(e) }
-          arr << path.shift
-          arr << path.compact.join(' > ')
-        else
-          arr << ''
-          arr << ''
-        end
-        @id ? arr << lookup_display_name(@id) : arr << ''
-        @schema_path ? arr << @schema_path.join(' > ') : arr << ''
-        @name ? arr << @name : arr << ''
-        @data_type ? arr << @data_type : arr << ''
-        @required ? arr << @required : arr << ''
-        @repeats ? arr << @repeats : arr << ''
-        @in_repeating_group ? arr << @in_repeating_group : arr << ''
-        @value_source ? arr << @value_source.map(&:fields_csv_label).compact.join('; ') : arr << ''
-        @value_list ? arr << @value_list.join(', ') : arr << ''
-        return arr
+        csv_row.values
+          .map{ |val| val.nil? ? "" : val }
+      end
+
+      def get_ui_info_group
+        return "" unless @ui_path
+        return "" if @ui_path.empty?
+
+        lookup_display_name(@ui_path.compact.shift)
+      end
+
+      def get_ui_path
+        return "" unless @ui_path
+        return "" if @ui_path.empty?
+
+        remaining = @ui_path.compact[1..-1]
+        return "" unless remaining
+
+        remaining.map{ |segment| lookup_display_name(segment) }
+          .compact
+          .join(" > ")
       end
 
       def merge_field_defs
@@ -93,7 +112,7 @@ module CspaceConfigUntangler
         else
           try_id = "#{@ns.sub('ns2:', '')}.#{@name}"
         end
-        
+
         fd = @profile.field_defs.dig(try_id)
         if fd.nil?
           return nil
@@ -113,7 +132,7 @@ module CspaceConfigUntangler
         @value_list = fd.value_list
         @required = fd.required
       end
-      
+
       def lookup_display_name(val)
         msgs = @profile.messages
         if val.start_with?('panel.')
