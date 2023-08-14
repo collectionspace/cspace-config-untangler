@@ -7,6 +7,18 @@ module CspaceConfigUntangler
   module Report
     module_function
 
+    def qa_reports(release:)
+      CCU.config.release = release
+      prev = CCU.prev_release
+
+      dir = CCU.data_reference_dir
+      FileUtils.mkdir_p(dir) unless Dir.exist?(dir)
+      FileUtils.rm(Dir.new(dir).children.map{ |fn| File.join(dir, fn) })
+
+      CCU::Report::QaAllFields.call(release: release)
+      CCU::Report::QaChangedFields.call(release: release)
+    end
+
     def reference_reports(release)
       CCU.config.release = CCU::Validate.release(release)
       dir = CCU.data_reference_dir(release)
@@ -32,14 +44,27 @@ module CspaceConfigUntangler
     end
 
     def deversion_for_qa(row)
-      row['fid'] = row['fid'].sub(/_\d+(-\d+){2} /, ' ')
+      fid = row["fid"]
+      row['fid'] = fid.sub(/_\d+(-\d+){2} /, ' ')
       row['profile'] = row['profile'].sub(/_\d+(-\d+){2}/, '')
       row
     end
 
-    def get_qa_table(release)
-      vrelease = CCU::Validate.release(release)
-      path = CCU.allfields_path(release: vrelease)
+    def get_qa_table(release: CCU.release, prev: false)
+      if prev
+        current_release = release.dup
+        CCU.config.release = CCU.prev_release
+      end
+
+      path = CCU.allfields_path
+      unless File.exist?(path)
+        CCU::Report::AllFieldsGenerator.call(
+          release: CCU.release,
+          datemode: :collapsed
+        )
+      end
+
+      CCU.config.release = current_release if prev
 
       CSV.parse(File.read(path), headers: true)
         .map{ |row| deversion_for_qa(row) }

@@ -13,13 +13,12 @@ module CspaceConfigUntangler
       end
 
       # @param release [String]
-      # @param prev [String] previous release
-      def initialize(release:, prev:)
+      def initialize(release:)
         @release = release
-        @newrel = CCU::Report.get_qa_table(release)
-        @prev = CCU::Report.get_qa_table(prev)
+        @newrel = CCU::Report.get_qa_table
+        @prev = CCU::Report.get_qa_table(prev: true)
         @target = File.join(
-          CCU.data_reference_dir(release: release),
+          CCU.data_reference_dir,
           "qa_all_fields_#{release}.csv"
         )
         @prev_lookup = @prev.map{ |row| row['fid'] }
