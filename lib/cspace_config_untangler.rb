@@ -120,9 +120,9 @@ module CspaceConfigUntangler
 
   def profiles
     Dir.new(CCU.configdir).children
-    .reject{ |e| e['readable'] }
-    .reject{ |e| e == '.keep' }
-    .map{ |fn| File.basename(fn).sub('.json', '') }
+      .reject{ |e| e['readable'] }
+      .reject{ |e| e == '.keep' }
+      .map{ |fn| File.basename(fn).sub('.json', '') }
   end
 
   def main_profile
