@@ -113,6 +113,10 @@ module CspaceConfigUntangler
       @option_lists ||= get_option_lists
     end
 
+    def inspect
+      %(#<#{self.class}:#{object_id} name: #{@name}>)
+    end
+
     private
 
     def get_field_defs
