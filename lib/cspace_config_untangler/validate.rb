@@ -23,11 +23,15 @@ module CspaceConfigUntangler
     end
 
     def release(val)
-      if /^\d+(_\d+){1,2}$/.match?(val)
-        val
-      else
+      unless /^\d+(_\d+){1,2}$/.match?(val)
         fail(ArgumentError, 'release must follow pattern: #_# or #_#_#')
       end
+
+      unless Dir.exist?(CCU.release_configs_dir(val))
+        fail(ArgumentError, 'no configs directory for release')
+      end
+
+      val
     end
   end
 end
