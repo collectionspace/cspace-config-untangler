@@ -17,6 +17,10 @@ module CspaceConfigUntangler
 
       CCU::Report::QaAllFields.call(release: release)
       CCU::Report::QaChangedFields.call(release: release)
+      CCU::Report::QaDeletedFields.call(release: release)
+      CCU::Report::NonuniqueFieldPaths.call(profiles: "all", mode: :release)
+      CCU::Report::NonuniqueFieldNames.call(profiles: "all", mode: :release)
+      CCU::Report::XpathDepthCheck.call
     end
 
     def reference_reports(release)
