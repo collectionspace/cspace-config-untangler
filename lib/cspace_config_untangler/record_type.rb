@@ -46,8 +46,7 @@ module CspaceConfigUntangler
       fields = explode_structured_date_fields(fields) if @structured_date_treatment == :explode
       fields = fields.flatten
       fields << media_uri_field if @name == 'media'
-      @nonunique_fields = get_nonunique_fields(fields)
-      return fields
+      fields
     end
 
     def explode_structured_date_fields(fields)
@@ -57,7 +56,7 @@ module CspaceConfigUntangler
       fields
     end
 
-    def get_nonunique_fields(fields)
+    def nonunique_fields
       h = {}
       fields.each{ |f|
         path = [f.schema_path, f.name].flatten.join(' > ')
@@ -67,8 +66,21 @@ module CspaceConfigUntangler
           h[path] = [f]
         end
       }
-      multi = h.select{ |path, farr| farr.length > 1 }
-      return multi.keys
+      h.select{ |path, farr| farr.length > 1 }
+        .keys
+    end
+
+    def nonunique_field_names
+      h = {}
+      fields.each{ |f|
+        path = [f.schema_path, f.name].flatten.join(' > ')
+        if h.has_key?(f.name)
+          h[f.name] << path
+        else
+          h[f.name] = [path]
+        end
+      }
+      h.select{ |name, paths| paths.length > 1 }
     end
 
     def mappings
