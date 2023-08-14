@@ -15,11 +15,11 @@ module CspaceConfigUntangler
       # @param release [String]
       # @param datemode [:collapsed, :expanded]
       def initialize(release:, datemode: :expanded)
+        @release = release
         @mode = CCU::Validate.date_mode(datemode.to_sym)
-        @release = CCU::Validate.release(release)
         @profiles = CCU::Cli::Helpers::ProfileGetter.call('all')
         @target = File.join(
-          CCU.data_reference_dir(release: release),
+          CCU.data_reference_dir(release),
           "all_fields_#{release}_dates_#{mode}.csv"
         )
         @fields = []
