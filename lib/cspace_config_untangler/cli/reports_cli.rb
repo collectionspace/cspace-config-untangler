@@ -5,6 +5,28 @@ module CspaceConfigUntangler
     class ReportsCli < Thor
       include CCU::Cli::Helpers
 
+      desc 'qa', 'Writes all QA reports to release directory'
+      long_desc <<~LONG
+        Requirements:
+
+        - All profiles for release must be in the `configs` directory
+
+        Generates the following:
+
+        - De-versioned all fields reports for current and previous release, with
+          structured date fields collapsed
+
+        - Changed fields report
+      LONG
+      option :release,
+        desc: 'Release being QAed (like 7_2)',
+        type: :string,
+        required: true,
+        aliases: '-r'
+      def qa
+        CCU::Report.qa_reports(release: options[:release])
+      end
+
       desc 'ref', 'Writes all reference reports to release directory'
       long_desc <<~LONG
         Requirements:
