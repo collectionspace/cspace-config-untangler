@@ -15,7 +15,7 @@ module CspaceConfigUntangler
         @ns = form_field.ns
         @ns_for_id = form_field.ns_for_id
         @panel = form_field.panel
-        @ui_path = form_field.ui_path
+        @ui_path = formatted_ui_path(form_field.ui_path)
         @id = form_field.id
         @label = lookup_display_name(@id)
         merge_field_defs
@@ -71,6 +71,15 @@ module CspaceConfigUntangler
 
       private
 
+      def formatted_ui_path(orig)
+        return [] unless orig
+        return [] if orig.empty?
+
+        orig.compact
+          .map{ |segment| lookup_display_name(segment) }
+          .compact
+      end
+
       def csv_row
         {
           fid: @fid,
@@ -99,22 +108,15 @@ module CspaceConfigUntangler
       end
 
       def get_ui_info_group
-        return "" unless @ui_path
-        return "" if @ui_path.empty?
+        return if ui_path.empty?
 
-        lookup_display_name(@ui_path.compact.shift)
+        ui_path[0]
       end
 
       def get_ui_path
-        return "" unless @ui_path
-        return "" if @ui_path.empty?
+        return if ui_path.empty?
 
-        remaining = @ui_path.compact[1..-1]
-        return "" unless remaining
-
-        remaining.map{ |segment| lookup_display_name(segment) }
-          .compact
-          .join(" > ")
+        ui_path[1..-1].join(" > ")
       end
 
       def merge_field_defs
