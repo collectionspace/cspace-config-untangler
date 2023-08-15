@@ -6,29 +6,31 @@ module CspaceConfigUntangler
       include CCU::Cli::Helpers
 
       desc 'csv', 'Write CSV containing full field data'
-      option :output, desc: 'Path to output file', default: 'data/fields.csv', aliases: '-o'
-      option :rectypes, desc: 'Comma separated list (no spaces) of record types to include. Defaults to all.', default: 'all', aliases: '-r'
+      option :output,
+        desc: 'Path to output file',
+        default: 'data/fields.csv',
+        aliases: '-o',
+        type: :string
       option :structured_date,
-        desc: 'explode: report all individual structured date fields; collapse: report the parent of individual structured date fields as the field',
-        default: 'explode',
-        aliases: '-d'
+        desc: 'expanded: report all individual structured date fields; '\
+        'collapsed: report the parent of individual structured date fields as '\
+        'the field',
+        default: 'expanded',
+        aliases: '-d',
+        type: :string
+      option :output_mode,
+        desc: 'expert: xpaths, ids, machine names; friendly: omit expert '\
+        'stuff not useful for CSV Importer use',
+        default: 'expert',
+        aliases: '-m',
+        type: :string
       def csv
-        unless %w[explode collapse].include?(options[:structured_date])
-          puts '--structured_date parameter must be either "explode" or "collapse"'
-          exit
-        end
-        rt = options[:rectypes] == 'all' ? [] : options[:rectypes].split(',')
-        fields = []
-        get_profiles.each {|profile|
-          p = CCU::Profile.new(profile: profile, rectypes: rt, structured_date_treatment: options[:structured_date].to_sym)
-          p.fields.each{ |f| fields << f }
-        }
-        unless fields.empty?
-          CSV.open(options[:output], 'wb'){ |csv|
-            csv << fields[0].csv_header
-            fields.each{ |f| csv << f.to_csv }
-          }
-        end
+        CCU::Report::AllFieldsGenerator.call(
+          datemode: options[:structured_date].to_sym,
+          outmode: options[:output_mode].to_sym,
+          profiles: options[:profiles],
+          target: options[:output]
+        )
       end
 
       desc 'nonunique', 'Print list of non-unique fields per profile'
