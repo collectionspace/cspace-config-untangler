@@ -1,7 +1,7 @@
 module CspaceConfigUntangler
   module Fields
     class Field
-      attr_reader :name, :ns, :ns_for_id, :panel, :ui_path, :id,
+      attr_reader :name, :label, :ns, :ns_for_id, :panel, :ui_path, :id,
         :schema_path,
         :repeats, :in_repeating_group,
         :data_type, :value_source, :value_list,
@@ -17,6 +17,7 @@ module CspaceConfigUntangler
         @panel = form_field.panel
         @ui_path = form_field.ui_path
         @id = form_field.id
+        @label = lookup_display_name(@id)
         merge_field_defs
         @fid = "#{@profile.name} #{rectype.name} #{@ns_for_id} #{@name}"
         @to_csv = format_csv
@@ -80,7 +81,7 @@ module CspaceConfigUntangler
           field_id: @id,
           ui_info_group: get_ui_info_group,
           ui_path: get_ui_path,
-          ui_field_label: lookup_display_name(@id),
+          ui_field_label: label,
           xml_path: @schema_path.join(' > '),
           xml_field_name: @name,
           data_type: @data_type,
