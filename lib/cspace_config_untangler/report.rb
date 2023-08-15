@@ -82,6 +82,10 @@ module CspaceConfigUntangler
         profiles: "all",
         release: release,
       )
+      CCU::Report::ProfileAuthorityUse.call(
+        profiles: "all",
+        release: release,
+      )
     end
 
     def deversion_for_qa(row)
