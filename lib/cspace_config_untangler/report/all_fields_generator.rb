@@ -14,13 +14,17 @@ module CspaceConfigUntangler
 
       # @param release [String]
       # @param datemode [:collapsed, :expanded]
-      def initialize(release:, datemode: :expanded)
+      # @param outmode [:expert, :friendly]
+      # @param target [nil, String] path to output file. Defaults to release
+      #   allfields path for given datemode and outmode
+      def initialize(release: CCU.release, datemode: :expanded,
+                     outmode: :expert, target: nil)
         @release = release
         @datemode = CCU::Validate.date_mode(datemode.to_sym)
+        @outmode = CCU::Validate.out_mode(outmode.to_sym)
         @profiles = CCU::Cli::Helpers::ProfileGetter.call('all')
-        @target = File.join(
-          CCU.data_reference_dir(release),
-          "all_fields_#{release}_dates_#{datemode}.csv"
+        @target = target ||= CCU.allfields_path(
+          release: release, datemode: datemode, outmode: outmode
         )
         @fields = []
       end
@@ -29,11 +33,11 @@ module CspaceConfigUntangler
         profiles.each{ |profile| get_fields(profile) }
 
         flat = fields.flatten
-        headers = flat.first.csv_header
+        headers = flat.first.csv_header(outmode)
 
         CSV.open(target, 'w') do |csv|
           csv << headers
-          flat.each{ |row| csv << row.to_csv }
+          flat.each{ |row| csv << prepped(row) }
         end
 
         puts "Wrote #{target}"
@@ -41,13 +45,21 @@ module CspaceConfigUntangler
 
       private
 
-      attr_reader :release, :datemode, :profiles, :target, :fields
+      attr_reader :release, :datemode, :outmode, :profiles, :target, :fields
 
       def get_fields(profile)
         fields << CCU::Profile.new(profile: profile,
                                    rectypes: [],
                                    structured_date_treatment: datemode
                                   ).fields
+      end
+
+      def prepped(row)
+        case outmode
+        when :expert then row.to_csv
+        when :friendly then row.to_user_csv
+        else fail "Unknown outmode"
+        end
       end
     end
   end
