@@ -1,0 +1,37 @@
+profile,record_type,ui_info_group,ui_path,ui_field_label,xml_path,xml_field_name,repeats,group_repeats
+fcart_6-0-0,acquisition,Acquisition Information,"",Accession date,"",accessionDateGroup,n,n/a
+fcart_6-0-0,acquisition,Acquisition Information,"",Acquisition date,acquisitionDateGroupList,acquisitionDateGroup,y,n
+fcart_6-0-0,citation,Citation Information,Publication,Publication date,citationPublicationInfoGroupList > citationPublicationInfoGroup,publicationDate,n,y
+fcart_6-0-0,citation,Citation Information,Resource identifier,Resource identifier capture date,citationResourceIdentGroupList > citationResourceIdentGroup,captureDate,n,y
+fcart_6-0-0,chronology,Chronology Information,"",Primary date range,"",chronologyDateStructuredDateGroup,n,n/a
+fcart_6-0-0,chronology,Associated Authorities,Person,Person date,personGroupList > personGroup,personStructuredDateGroup,n,y
+fcart_6-0-0,chronology,Associated Authorities,People,People date,peopleGroupList > peopleGroup,peopleStructuredDateGroup,n,y
+fcart_6-0-0,chronology,Associated Authorities,Organization,Organization date,organizationGroupList > organizationGroup,organizationStructuredDateGroup,n,y
+fcart_6-0-0,chronology,Associated Authorities,Concept,Concept date,conceptGroupList > conceptGroup,conceptStructuredDateGroup,n,y
+fcart_6-0-0,chronology,Associated Authorities,Place,Place date,placeGroupList > placeGroup,placeStructuredDateGroup,n,y
+fcart_6-0-0,chronology,Associated Authorities,Related period,Related period date,relatedPeriodGroupList > relatedPeriodGroup,relatedPeriodStructuredDateGroup,n,y
+fcart_6-0-0,chronology,Alternative Date Information,Alternative date,Alternative date range,otherDateGroupList > otherDateGroup,otherDateStructuredDateGroup,n,y
+fcart_6-0-0,collectionobject,Object Production Information,"",Production date,objectProductionDateGroupList,objectProductionDateGroup,y,n
+fcart_6-0-0,collectionobject,Object Description Information,Content,Content date,"",contentDateGroup,n,n/a
+fcart_6-0-0,collectionobject,Object Description Information,Textual Inscription > Textual inscription,Textual inscription date,textualInscriptionGroupList > textualInscriptionGroup,inscriptionContentDateGroup,n,y
+fcart_6-0-0,collectionobject,Object Description Information,Non-Textual Inscription > Non-textual inscription,Non-textual inscription date,nonTextualInscriptionGroupList > nonTextualInscriptionGroup,inscriptionDescriptionDateGroup,n,y
+fcart_6-0-0,collectionobject,Object History and Association Information,Associations > Associated date,Associated date value,assocDateGroupList > assocDateGroup,assocStructuredDateGroup,n,y
+fcart_6-0-0,collectionobject,Object History and Association Information,"",Ownership date,ownershipDateGroupList,ownershipDateGroup,y,n
+fcart_6-0-0,concept,Concept Information,Related concept,Related concept date,relatedConceptsGroupList > relatedConceptsGroup,conceptRelationDateGroup,n,y
+fcart_6-0-0,concept,Concept Information,"",Concept Date,"",conceptTermDateGroup,n,n/a
+fcart_6-0-0,conditioncheck,Technical Changes,Technical change,Technical change date,technicalChangesGroupList > technicalChangesGroup,technicalChangeDate,n,y
+fcart_6-0-0,exhibition,Exhibition Information,Gallery rotation,Gallery rotation start date,galleryRotationGroupList > galleryRotationGroup,galleryRotationStartDateGroup,n,y
+fcart_6-0-0,exhibition,Exhibition Information,Gallery rotation,Gallery rotation end date,galleryRotationGroupList > galleryRotationGroup,galleryRotationEndDateGroup,n,y
+fcart_6-0-0,media,Media Handling Information,"",Date,dateGroupList,dateGroup,y,n
+fcart_6-0-0,objectexit,Object Exit Information,"",Exit date,"",exitDateGroup,n,n/a
+fcart_6-0-0,organization,Organization Information,"",Foundation date,"",foundingDateGroup,n,n/a
+fcart_6-0-0,organization,Organization Information,"",Dissolution date,"",dissolutionDateGroup,n,n/a
+fcart_6-0-0,organization,Organization Information,Contact person,Contact date,contactGroupList > contactGroup,contactDateGroup,n,y
+fcart_6-0-0,organization,Organization Information,Contact person,Contact end date,contactGroupList > contactGroup,contactEndDateGroup,n,y
+fcart_6-0-0,person,Person Information,"",Birth date,"",birthDateGroup,n,n/a
+fcart_6-0-0,person,Person Information,"",Death date,"",deathDateGroup,n,n/a
+fcart_6-0-0,person,Maker-Supplied Identity Information,Supplied birth date,Birth date supplied,suppliedBirthDateGroupList > suppliedBirthDateGroup,suppliedStructuredBirthDateGroup,n,y
+fcart_6-0-0,place,Place Information,Term,Term date,placeTermGroupList > placeTermGroup,nameDateGroup,n,y
+fcart_6-0-0,place,Place Information,Ownership,Ownership date,placeOwnerGroupList > placeOwnerGroup,ownershipDateGroup,n,y
+fcart_6-0-0,place,Georeference Information,Georeference,Georeference date,placeGeoRefGroupList > placeGeoRefGroup,geoRefDateGroup,n,y
+fcart_6-0-0,work,Work Information,"",Work date,workDateGroupList,workDateGroup,y,n

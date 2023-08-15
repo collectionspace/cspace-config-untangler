@@ -1,0 +1,26 @@
+profile,record_type,ui_info_group,ui_path,ui_field_label,xml_path,xml_field_name,repeats,group_repeats
+publicart_5-0-0,acquisition,Commission Information,"",Commission date,"",commissionDate,n,n/a
+publicart_5-0-0,citation,Citation Information,Publication,Publication date,citationPublicationInfoGroupList > citationPublicationInfoGroup,publicationDate,n,y
+publicart_5-0-0,citation,Citation Information,Resource identifier,Resource identifier capture date,citationResourceIdentGroupList > citationResourceIdentGroup,captureDate,n,y
+publicart_5-0-0,chronology,Chronology Information,"",Primary date range,"",chronologyDateStructuredDateGroup,n,n/a
+publicart_5-0-0,chronology,Associated Authorities,Person,Person date,personGroupList > personGroup,personStructuredDateGroup,n,y
+publicart_5-0-0,chronology,Associated Authorities,People,People date,peopleGroupList > peopleGroup,peopleStructuredDateGroup,n,y
+publicart_5-0-0,chronology,Associated Authorities,Organization,Organization date,organizationGroupList > organizationGroup,organizationStructuredDateGroup,n,y
+publicart_5-0-0,chronology,Associated Authorities,Concept,Concept date,conceptGroupList > conceptGroup,conceptStructuredDateGroup,n,y
+publicart_5-0-0,chronology,Associated Authorities,Place,Place date,placeGroupList > placeGroup,placeStructuredDateGroup,n,y
+publicart_5-0-0,chronology,Associated Authorities,Related period,Related period date,relatedPeriodGroupList > relatedPeriodGroup,relatedPeriodStructuredDateGroup,n,y
+publicart_5-0-0,chronology,Alternative Date Information,Alternative date,Alternative date range,otherDateGroupList > otherDateGroup,otherDateStructuredDateGroup,n,y
+publicart_5-0-0,collectionobject,Object Production Information,Artwork date,Artwork date,publicartProductionDateGroupList > publicartProductionDateGroup,publicartProductionDate,n,y
+publicart_5-0-0,exhibition,Exhibition Information,Gallery rotation,Gallery rotation start date,galleryRotationGroupList > galleryRotationGroup,galleryRotationStartDateGroup,n,y
+publicart_5-0-0,exhibition,Exhibition Information,Gallery rotation,Gallery rotation end date,galleryRotationGroupList > galleryRotationGroup,galleryRotationEndDateGroup,n,y
+publicart_5-0-0,media,Media Handling Information,"",Date,dateGroupList,dateGroup,y,n
+publicart_5-0-0,objectexit,Object Exit Information,"",Exit date,"",exitDateGroup,n,n/a
+publicart_5-0-0,organization,Organization Information,"",Foundation date,"",foundingDateGroup,n,n/a
+publicart_5-0-0,organization,Organization Information,"",Dissolution date,"",dissolutionDateGroup,n,n/a
+publicart_5-0-0,person,Person Information,"",Birth date,"",birthDateGroup,n,n/a
+publicart_5-0-0,person,Person Information,"",Death date,"",deathDateGroup,n,n/a
+publicart_5-0-0,person,Maker-Supplied Identity Information,Supplied birth date,Birth date supplied,suppliedBirthDateGroupList > suppliedBirthDateGroup,suppliedStructuredBirthDateGroup,n,y
+publicart_5-0-0,place,Place Information,Term > Name detail,Term date,placeTermGroupList > placeTermGroup,nameDateGroup,n,y
+publicart_5-0-0,place,Place Information,Ownership,Ownership date,publicartPlaceOwnerGroupList > publicartPlaceOwnerGroup,ownershipDateGroup,n,y
+publicart_5-0-0,place,Georeference Information,Georeference,Georeference date,placeGeoRefGroupList > placeGeoRefGroup,geoRefDateGroup,n,y
+publicart_5-0-0,work,Work Information,Work date,Work date,workDateGroupList,workDateGroup,y,n
