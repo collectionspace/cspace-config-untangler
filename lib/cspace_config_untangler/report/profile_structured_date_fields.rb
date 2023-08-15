@@ -22,12 +22,7 @@ module CspaceConfigUntangler
       end
 
       def call
-        profiles.each do |profile|
-          rows = rows_for(profile)
-            .map{ |row| CCU::Report.simplify_allfields(row) }
-
-          to_csv(profile, rows)
-        end
+        profiles.each{ |profile| to_csv(profile, rows_for(profile)) }
       end
 
       private

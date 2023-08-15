@@ -96,34 +96,28 @@ module CspaceConfigUntangler
     end
 
     def get_qa_table(release: CCU.release, prev: false)
-      get_all_fields(release: release, prev: prev)
+      get_all_fields(release: release, prev: prev, outmode: :expert)
         .map{ |row| deversion_for_qa(row) }
     end
 
-    def get_all_fields(release: CCU.release, prev: false)
+    def get_all_fields(release: CCU.release, prev: false, outmode: :friendly)
       if prev
         current_release = release.dup
         CCU.config.release = CCU.prev_release
       end
 
-      path = CCU.allfields_path
+      path = CCU.allfields_path(outmode: outmode)
       unless File.exist?(path)
         CCU::Report::AllFieldsGenerator.call(
           release: CCU.release,
-          datemode: :collapsed
+          datemode: :collapsed,
+          outmode: outmode
         )
       end
 
       CCU.config.release = current_release if prev
 
       CSV.parse(File.read(path), headers: true)
-    end
-
-    def simplify_allfields(row)
-      %w[fid namespace namespace_for_id field_id].each do |field|
-        row.delete(field)
-      end
-      row
     end
   end
 end

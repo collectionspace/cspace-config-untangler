@@ -1,26 +1,26 @@
-profile,record_type,ui_info_group,ui_path,ui_field_label,xml_path,xml_field_name,repeats,group_repeats
-materials_3-0-6,acquisition,Acquisition Information,"",Accession date,"",accessionDateGroup,n,n/a
-materials_3-0-6,acquisition,Acquisition Information,"",Acquisition date,acquisitionDateGroupList,acquisitionDateGroup,y,n
-materials_3-0-6,citation,Citation Information,Publication,Publication date,citationPublicationInfoGroupList > citationPublicationInfoGroup,publicationDate,n,y
-materials_3-0-6,citation,Citation Information,Resource identifier,Resource identifier capture date,citationResourceIdentGroupList > citationResourceIdentGroup,captureDate,n,y
-materials_3-0-6,chronology,Chronology Information,"",Primary date range,"",chronologyDateStructuredDateGroup,n,n/a
-materials_3-0-6,chronology,Associated Authorities,Person,Person date,personGroupList > personGroup,personStructuredDateGroup,n,y
-materials_3-0-6,chronology,Associated Authorities,People,People date,peopleGroupList > peopleGroup,peopleStructuredDateGroup,n,y
-materials_3-0-6,chronology,Associated Authorities,Organization,Organization date,organizationGroupList > organizationGroup,organizationStructuredDateGroup,n,y
-materials_3-0-6,chronology,Associated Authorities,Concept,Concept date,conceptGroupList > conceptGroup,conceptStructuredDateGroup,n,y
-materials_3-0-6,chronology,Associated Authorities,Place,Place date,placeGroupList > placeGroup,placeStructuredDateGroup,n,y
-materials_3-0-6,chronology,Associated Authorities,Related period,Related period date,relatedPeriodGroupList > relatedPeriodGroup,relatedPeriodStructuredDateGroup,n,y
-materials_3-0-6,chronology,Alternative Date Information,Alternative date,Alternative date range,otherDateGroupList > otherDateGroup,otherDateStructuredDateGroup,n,y
-materials_3-0-6,collectionobject,Object Production Information,"",Production date,objectProductionDateGroupList,objectProductionDateGroup,y,n
-materials_3-0-6,media,Media Handling Information,"",Date,dateGroupList,dateGroup,y,n
-materials_3-0-6,objectexit,Object Exit Information,"",Exit date,"",exitDateGroup,n,n/a
-materials_3-0-6,organization,Organization Information,"",Foundation date,"",foundingDateGroup,n,n/a
-materials_3-0-6,organization,Organization Information,"",Dissolution date,"",dissolutionDateGroup,n,n/a
-materials_3-0-6,organization,Organization Information,Contact person,Contact date,contactGroupList > contactGroup,contactDateGroup,n,y
-materials_3-0-6,organization,Organization Information,Contact person,Contact end date,contactGroupList > contactGroup,contactEndDateGroup,n,y
-materials_3-0-6,place,Place Information,Term,Term date,placeTermGroupList > placeTermGroup,nameDateGroup,n,y
-materials_3-0-6,place,Place Information,Ownership,Ownership date,placeOwnerGroupList > placeOwnerGroup,ownershipDateGroup,n,y
-materials_3-0-6,place,Georeference Information,Georeference,Georeference date,placeGeoRefGroupList > placeGeoRefGroup,geoRefDateGroup,n,y
-materials_3-0-6,work,Work Information,"",Work date,workDateGroupList,workDateGroup,y,n
-materials_3-0-6,material,Material Information,Discontinued,Discontinued date,"",discontinuedDate,n,n/a
-materials_3-0-6,material,Material Information,"",Production date,"",productionDate,n,n/a
+profile,record_type,field,record_section,path_to_field,repeats,group_repeats,record_type_machine_name,field_machine_name
+materials_3-0-6,Acquisition,Accession date,Acquisition Information,"",n,n/a,acquisition,accessionDateGroup
+materials_3-0-6,Acquisition,Acquisition date,Acquisition Information,"",y,n,acquisition,acquisitionDateGroup
+materials_3-0-6,Citation,Publication date,Citation Information,Publication,n,y,citation,publicationDate
+materials_3-0-6,Citation,Resource identifier capture date,Citation Information,Resource identifier,n,y,citation,captureDate
+materials_3-0-6,Chronology,Primary date range,Chronology Information,"",n,n/a,chronology,chronologyDateStructuredDateGroup
+materials_3-0-6,Chronology,Person date,Associated Authorities,Person,n,y,chronology,personStructuredDateGroup
+materials_3-0-6,Chronology,People date,Associated Authorities,People,n,y,chronology,peopleStructuredDateGroup
+materials_3-0-6,Chronology,Organization date,Associated Authorities,Organization,n,y,chronology,organizationStructuredDateGroup
+materials_3-0-6,Chronology,Concept date,Associated Authorities,Concept,n,y,chronology,conceptStructuredDateGroup
+materials_3-0-6,Chronology,Place date,Associated Authorities,Place,n,y,chronology,placeStructuredDateGroup
+materials_3-0-6,Chronology,Related period date,Associated Authorities,Related period,n,y,chronology,relatedPeriodStructuredDateGroup
+materials_3-0-6,Chronology,Alternative date range,Alternative Date Information,Alternative date,n,y,chronology,otherDateStructuredDateGroup
+materials_3-0-6,Object,Production date,Object Production Information,"",y,n,collectionobject,objectProductionDateGroup
+materials_3-0-6,Media Handling,Date,Media Handling Information,"",y,n,media,dateGroup
+materials_3-0-6,Object Exit,Exit date,Object Exit Information,"",n,n/a,objectexit,exitDateGroup
+materials_3-0-6,Organization,Foundation date,Organization Information,"",n,n/a,organization,foundingDateGroup
+materials_3-0-6,Organization,Dissolution date,Organization Information,"",n,n/a,organization,dissolutionDateGroup
+materials_3-0-6,Organization,Contact date,Organization Information,Contact person,n,y,organization,contactDateGroup
+materials_3-0-6,Organization,Contact end date,Organization Information,Contact person,n,y,organization,contactEndDateGroup
+materials_3-0-6,Place,Term date,Place Information,Term,n,y,place,nameDateGroup
+materials_3-0-6,Place,Ownership date,Place Information,Ownership,n,y,place,ownershipDateGroup
+materials_3-0-6,Place,Georeference date,Georeference Information,Georeference,n,y,place,geoRefDateGroup
+materials_3-0-6,Work,Work date,Work Information,"",y,n,work,workDateGroup
+materials_3-0-6,Material,Discontinued date,Material Information,Discontinued,n,n/a,material,discontinuedDate
+materials_3-0-6,Material,Production date,Material Information,"",n,n/a,material,productionDate
