@@ -33,28 +33,36 @@ module CspaceConfigUntangler
       attr_reader :profiles, :target
 
       def authorities_data(profile)
-        profile.authorities.map{ |auth| authority_data(profile, auth) }
+        authfields = profile.fields
+          .select{ |field| field.authority_controlled? }
+        profile.authorities.map{ |auth| auth_data(profile, authfields, auth) }
       end
 
-      def authority_data(profile, auth)
-        fields = get_controlled_fields(profile, auth)
+      def auth_data(profile, fields, auth)
+        fields = get_controlled_fields(profile, fields, auth)
        {
-          authority_vocab: auth,
           profile: profile.name,
           authority: auth.split("/").first,
-          controlled_fields: fields.join("\n"),
+          authority_vocab: auth,
+          used_in_profile: fields.empty? ? "n" : "y",
           controlled_field_ct: fields.length,
-          used_in_profile: fields.empty? ? "n" : "y"
+          controlled_fields: fields.join("\n")
         }
       end
 
-      def get_controlled_fields(profile, auth)
+      def get_controlled_fields(profile, fields, auth)
         return [] if profile.unused_authority_vocabs.include?(auth)
 
-        profile.fields
-          .select{ |field| field.controlled_by?(auth) }
-          .map{ |field| "#{field.rectype.name}/#{field.name} (#{field.ns})" }
+        fields.select{ |field| field.controlled_by?(auth) }
+          .map{ |field| build_output(field) }
           .sort
+      end
+
+      def build_output(field)
+        base = "#{field.rectype.label}: #{field.label}"
+        return base if field.ui_path.blank?
+
+        "#{base} (#{field.ui_path.join(">")})"
       end
 
       def to_csv(data)
