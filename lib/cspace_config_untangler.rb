@@ -104,15 +104,19 @@ module CspaceConfigUntangler
     default: default_mapper_uri_base,
     reader: true
 
-  # @param release [String]
-  # @param mode [:collapsed, :expanded]
-  def allfields_path(release: CCU.release, mode: :collapsed)
-    vmode = CCU::Validate.date_mode(mode)
+  def allfields_path(
+    release: CCU.release,
+    outmode: :expert,
+    datemode: :collapsed
+  )
+    vdatemode = CCU::Validate.date_mode(datemode)
+    voutmode = CCU::Validate.out_mode(outmode)
 
-    name = "all_fields_#{release}_dates_#{vmode}.csv"
+    basename = "all_fields_#{release}_dates_#{vdatemode}"
+    suffix = voutmode == :expert ? ".csv" : "_#{voutmode}.csv"
     File.join(
       data_reference_dir(release),
-      name
+      "#{basename}#{suffix}"
     )
   end
 
