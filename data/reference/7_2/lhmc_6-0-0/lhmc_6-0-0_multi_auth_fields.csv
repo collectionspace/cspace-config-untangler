@@ -1,81 +1,81 @@
-profile,record_type,ui_info_group,ui_path,ui_field_label,xml_path,xml_field_name,repeats,group_repeats,data_source
-lhmc_6-0-0,acquisition,Acquisition Information,Received,Received by,receivedGroupList > receivedGroup,receivedBy,n,y,authority: person/local; authority: person/ulan
-lhmc_6-0-0,acquisition,Acquisition Information,"",Acquisition source,acquisitionSources,acquisitionSource,y,n,authority: person/local; authority: organization/local
-lhmc_6-0-0,acquisition,Acquisition Information,"",Owner,owners,owner,y,n,authority: person/local; authority: organization/local
-lhmc_6-0-0,acquisition,Acquisition Information,Funding,Funding source,acquisitionFundingList > acquisitionFunding,acquisitionFundingSource,n,y,authority: person/local; authority: organization/local
-lhmc_6-0-0,citation,Citation Information,Term > Source,Term source name,citationTermGroupList > citationTermGroup,termSource,n,y,authority: citation/local; authority: citation/worldcat
-lhmc_6-0-0,citation,Citation Information,Publication,Publication place,citationPublicationInfoGroupList > citationPublicationInfoGroup,publicationPlace,n,y,authority: place/local; authority: place/tgn
-lhmc_6-0-0,citation,Citation Information,Agent,Agent name,citationAgentInfoGroupList > citationAgentInfoGroup,agent,n,y,authority: person/local; authority: person/ulan; authority: organization/local
-lhmc_6-0-0,citation,Citation Information,Related term,Related term,citationRelatedTermsGroupList > citationRelatedTermsGroup,relatedTerm,n,y,authority: concept/associated; authority: concept/activity; authority: concept/material
-lhmc_6-0-0,chronology,Chronology Information,Term > Source,Term source name,chronologyTermGroupList > chronologyTermGroup,termSource,n,y,authority: citation/local; authority: citation/worldcat
-lhmc_6-0-0,chronology,Chronology Information,Spatial coverage,"",chronologyPlaces,chronologyPlace,y,n,authority: place/local; authority: place/tgn
-lhmc_6-0-0,chronology,Chronology Information,Resource identifier,Resource identifier citation,identifierGroupList > identifierGroup,identifierCitation,n,y,authority: citation/local; authority: citation/worldcat
-lhmc_6-0-0,chronology,Associated Authorities,Person,Person associated,personGroupList > personGroup,person,n,y,authority: person/local; authority: person/ulan
-lhmc_6-0-0,chronology,Associated Authorities,Person,Person citation,personGroupList > personGroup > personCitations,personCitation,y,as part of larger repeating group,authority: citation/local; authority: citation/worldcat
-lhmc_6-0-0,chronology,Associated Authorities,People,People citation,peopleGroupList > peopleGroup > peopleCitations,peopleCitation,y,as part of larger repeating group,authority: citation/local; authority: citation/worldcat
-lhmc_6-0-0,chronology,Associated Authorities,Organization,Organization associated,organizationGroupList > organizationGroup,organization,n,y,authority: organization/local; authority: organization/ulan
-lhmc_6-0-0,chronology,Associated Authorities,Organization,Organization citation,organizationGroupList > organizationGroup > organizationCitations,organizationCitation,y,as part of larger repeating group,authority: citation/local; authority: citation/worldcat
-lhmc_6-0-0,chronology,Associated Authorities,Concept,Concept associated,conceptGroupList > conceptGroup,concept,n,y,authority: concept/activity; authority: concept/associated; authority: concept/material; authority: concept/nomenclature; authority: concept/occasion
-lhmc_6-0-0,chronology,Associated Authorities,Concept,Concept citation,conceptGroupList > conceptGroup > conceptCitations,conceptCitation,y,as part of larger repeating group,authority: citation/local; authority: citation/worldcat
-lhmc_6-0-0,chronology,Associated Authorities,Place,Place associated,placeGroupList > placeGroup,place,n,y,authority: place/local; authority: place/tgn
-lhmc_6-0-0,chronology,Associated Authorities,Place,Place citation,placeGroupList > placeGroup > placeCitations,placeCitation,y,as part of larger repeating group,authority: citation/local; authority: citation/worldcat
-lhmc_6-0-0,chronology,Associated Authorities,Related period,Related period associated,relatedPeriodGroupList > relatedPeriodGroup,relatedPeriod,n,y,authority: chronology/era; authority: chronology/event; authority: chronology/fieldcollection
-lhmc_6-0-0,chronology,Associated Authorities,Related period,Related period citation,relatedPeriodGroupList > relatedPeriodGroup > relatedPeriodCitations,relatedPeriodCitation,y,as part of larger repeating group,authority: citation/local; authority: citation/worldcat
-lhmc_6-0-0,chronology,Alternative Date Information,Alternative date,Alternative date spacial coverage,otherDateGroupList > otherDateGroup > otherDatePlaces,otherDatePlace,y,as part of larger repeating group,authority: place/local; authority: place/tgn
-lhmc_6-0-0,chronology,Alternative Date Information,Alternative date,Alternative date citation,otherDateGroupList > otherDateGroup > otherDateCitations,otherDateCitation,y,as part of larger repeating group,authority: citation/local; authority: citation/worldcat
-lhmc_6-0-0,collectionobject,Object Description Information,Dimensions > Measurement,Measured by,measuredPartGroupList > measuredPartGroup > dimensionSubGroupList > dimensionSubGroup,measuredBy,n,y,authority: person/local; authority: organization/local
-lhmc_6-0-0,collectionobject,Object Description Information,Content,Content concept,contentConcepts,contentConcept,y,n,authority: concept/associated; authority: concept/material
-lhmc_6-0-0,collectionobject,Object Description Information,Content,Content person,contentPersons,contentPerson,y,n,authority: person/local; authority: person/ulan
-lhmc_6-0-0,collectionobject,Object Description Information,Content,Content place,contentPlaces,contentPlace,y,n,authority: place/local; authority: place/tgn
-lhmc_6-0-0,collectionobject,Object Description Information,Content,Content organization,contentOrganizations,contentOrganization,y,n,authority: organization/local; authority: organization/ulan
-lhmc_6-0-0,collectionobject,Object Description Information,Content,Content controlled event or period/era,contentEvents,contentEvent,y,n,authority: chronology/event; authority: chronology/era
-lhmc_6-0-0,collectionobject,Object Description Information,Textual Inscription > Textual inscription,Textual inscription inscriber,textualInscriptionGroupList > textualInscriptionGroup,inscriptionContentInscriber,n,y,authority: person/local; authority: organization/local
-lhmc_6-0-0,collectionobject,Object Description Information,Non-Textual Inscription > Non-textual inscription,Non-textual inscription inscriber,nonTextualInscriptionGroupList > nonTextualInscriptionGroup,inscriptionDescriptionInscriber,n,y,authority: person/local; authority: organization/local
-lhmc_6-0-0,collectionobject,Object Production Information,Production place,Production place,objectProductionPlaceGroupList > objectProductionPlaceGroup,objectProductionPlace,n,y,authority: place/local; authority: place/tgn
-lhmc_6-0-0,collectionobject,Object History and Association Information,Associations > Associated place,Associated place,assocPlaceGroupList > assocPlaceGroup,assocPlace,n,y,authority: place/local; authority: place/tgn
-lhmc_6-0-0,collectionobject,Object History and Association Information,Associations,Associated controlled event or period/era,assocEvents,assocEvent,y,n,authority: chronology/event; authority: chronology/era
-lhmc_6-0-0,collectionobject,Object History and Association Information,Object Owner's Contribution Information,Owner,owners,owner,y,n,authority: person/local; authority: organization/local
-lhmc_6-0-0,collectionobject,Reference Information,Reference > Reference Information,Reference,referenceGroupList > referenceGroup,reference,n,y,authority: citation/local; authority: citation/worldcat
-lhmc_6-0-0,collectionobject,Object Collection Information,"",Field collector,fieldCollectors,fieldCollector,y,n,authority: person/local; authority: organization/local
-lhmc_6-0-0,collectionobject,Rights Management Information,Right holder,Right holder name,rightsGroupList > rightsGroup > rightHolderGroupList > rightHolderGroup,rightHolder,n,y,authority: organization/local; authority: person/local
-lhmc_6-0-0,collectionobject,Rights Management Information,Right holder,Right holder contact,rightsGroupList > rightsGroup > rightHolderGroupList > rightHolderGroup,rightHolderContact,n,y,authority: organization/local; authority: person/local
-lhmc_6-0-0,concept,Concept Information,Term > Source,Term source name,conceptTermGroupList > conceptTermGroup,termSource,n,y,authority: citation/local; authority: citation/worldcat
-lhmc_6-0-0,conservation,Conservation Treatment Information,"",Conservator,conservators,conservator,y,n,authority: person/local; authority: organization/local
-lhmc_6-0-0,conservation,Conservation Treatment Information,Other treatment party,Other treatment party name,otherPartyGroupList > otherPartyGroup,otherParty,n,y,authority: person/local; authority: organization/local
-lhmc_6-0-0,exhibition,Exhibition Information,"",Sponsor,sponsors,sponsor,y,n,authority: person/local; authority: person/ulan; authority: organization/local; authority: organization/ulan
-lhmc_6-0-0,exhibition,Exhibition Information,"",Organizer,organizers,organizer,y,n,authority: person/local; authority: person/ulan; authority: organization/local; authority: organization/ulan
-lhmc_6-0-0,exhibition,Exhibition Information,Venue,Venue name,venueGroupList > venueGroup,venue,n,y,authority: organization/local; authority: organization/ulan; authority: location/local; authority: location/offsite; authority: place/local; authority: place/tgn
-lhmc_6-0-0,exhibition,Exhibition Information,Working group > Working group member,Working group member name,workingGroupList > workingGroup > exhibitionPersonGroupList > exhibitionPersonGroup,exhibitionPerson,n,y,authority: person/local; authority: person/ulan; authority: organization/local; authority: organization/ulan
-lhmc_6-0-0,exhibition,Exhibition Information,Bibliographic reference,Bibliographic reference,exhibitionReferenceGroupList > exhibitionReferenceGroup,exhibitionReference,n,y,authority: citation/local; authority: citation/worldcat
-lhmc_6-0-0,insurance,Insurance and Indemnity Information,Quote,Quote provider,quoteProviderGroupList > quoteProviderGroup,insuranceIndemnityQuoteProvider,n,y,authority: person/local; authority: person/ulan; authority: organization/local; authority: organization/ulan
-lhmc_6-0-0,intake,Object Entry Information,"",Source,currentOwners,currentOwner,y,n,authority: person/local; authority: organization/local
-lhmc_6-0-0,intake,Object Entry Information,Depositor,Depositor name,depositorGroupList > depositorGroup,depositor,n,y,authority: person/local; authority: organization/local
-lhmc_6-0-0,intake,Insurance Information,"",Insurance company,insurers,insurer,y,n,authority: person/local; authority: organization/local
-lhmc_6-0-0,intake,Location Information,Interim location,Interim location,currentLocationGroupList > currentLocationGroup,currentLocation,n,y,authority: location/local; authority: location/offsite; authority: organization/local; authority: place/local
-lhmc_6-0-0,intake,Condition Check Information,"",Condition check by,conditionCheckersOrAssessors,conditionCheckerOrAssessor,y,n,authority: person/local; authority: organization/local
-lhmc_6-0-0,loanin,Loan In Information,Loan status,Loan status authorizer,loaninStatusLHMCGroupList > loaninStatusLHMCGroup,loaninStatusAuthorizerLHMC,n,y,authority: person/local; authority: person/ulan
-lhmc_6-0-0,loanin,Loan In Information,Lender,Lender name,lenderGroupList > lenderGroup,lender,n,y,authority: person/local; authority: organization/local
-lhmc_6-0-0,loanout,Loan Out Information,Loan status,Loan status authorizer,loanoutStatusLHMCGroupList > loanoutStatusLHMCGroup,loanoutStatusAuthorizerLHMC,n,y,authority: person/local; authority: person/ulan; authority: organization/local
-lhmc_6-0-0,location,Storage Location Information,Term > Source,Term source name,locTermGroupList > locTermGroup,termSource,n,y,authority: citation/local; authority: citation/worldcat
-lhmc_6-0-0,media,Media Handling Information,Dimensions > Measurement,Measured by,measuredPartGroupList > measuredPartGroup > dimensionSubGroupList > dimensionSubGroup,measuredBy,n,y,authority: person/local; authority: organization/local
-lhmc_6-0-0,organization,Organization Information,Term > Source,Term source name,orgTermGroupList > orgTermGroup,termSource,n,y,authority: citation/local; authority: citation/worldcat
-lhmc_6-0-0,person,Person Information,persons_common.personTermGroupList > Term > Source,Term source name,personTermGroupList > personTermGroup,termSource,n,y,authority: citation/local; authority: citation/worldcat
-lhmc_6-0-0,person,Person Information,Publication,Publication name,publicationsPersonGroupList > publicationsPersonGroup,publicationsPerson,n,y,authority: citation/local; authority: citation/worldcat
-lhmc_6-0-0,place,Place Information,Term > Source,Term source name,placeTermGroupList > placeTermGroup,termSource,n,y,authority: citation/local; authority: citation/worldcat
-lhmc_6-0-0,place,Place Information,Ownership,Owner,placeOwnerGroupList > placeOwnerGroup,owner,n,y,authority: person/local; authority: organization/local
-lhmc_6-0-0,place,Place Information,Address,Address municipality,addrGroupList > addrGroup,addressMunicipality,n,y,authority: place/local; authority: place/tgn
-lhmc_6-0-0,place,Place Information,Address,Address state/province,addrGroupList > addrGroup,addressStateOrProvince,n,y,authority: place/local; authority: place/tgn
-lhmc_6-0-0,place,Place Information,Address,Address country,addrGroupList > addrGroup,addressCountry,n,y,authority: place/local; authority: place/tgn
-lhmc_6-0-0,place,Georeference Information,Georeference,Georeferenced by,placeGeoRefGroupList > placeGeoRefGroup,geoReferencedBy,n,y,authority: person/local; authority: organization/local
-lhmc_6-0-0,transport,Transport Information,Courier,Courier name,courierGroupList > courierGroup,courier,n,y,authority: person/local; authority: organization/local
-lhmc_6-0-0,transport,Cost Information,"",Shipping quote provider,shippingQuoteGroupList > shippingQuoteGroup,shippingQuoteProvider,n,y,authority: person/local; authority: organization/local
-lhmc_6-0-0,uoc,Use of Collections Information,User,User name,userGroupList > userGroup,user,n,y,authority: person/local; authority: organization/local
-lhmc_6-0-0,uoc,Use of Collections Information,Authorization,Authorized by,authorizationGroupList > authorizationGroup,authorizedBy,n,y,authority: person/local; authority: organization/local
-lhmc_6-0-0,uoc,Use of Collections Information,Staff,Staff name,staffGroupList > staffGroup,staffName,n,y,authority: person/local; authority: organization/local
-lhmc_6-0-0,uoc,Use of Collections Information,"",Location,locationList,location,y,n,authority: organization/local; authority: place/local; authority: location/local
-lhmc_6-0-0,work,Work Information,Term > Source,Term source name,workTermGroupList > workTermGroup,termSource,n,y,authority: citation/local; authority: citation/worldcat
-lhmc_6-0-0,work,Work Information,Creator,Creator name,creatorGroupList > creatorGroup,creator,n,y,authority: person/local; authority: organization/local
-lhmc_6-0-0,work,Work Information,Publisher,Publisher name,publisherGroupList > publisherGroup,publisher,n,y,authority: person/local; authority: organization/local
-lhmc_6-0-0,work,Work Information,Address,Address municipality,addrGroupList > addrGroup,addressMunicipality,n,y,authority: place/local; authority: place/tgn
-lhmc_6-0-0,work,Work Information,Address,Address state/province,addrGroupList > addrGroup,addressStateOrProvince,n,y,authority: place/local; authority: place/tgn
-lhmc_6-0-0,work,Work Information,Address,Address country,addrGroupList > addrGroup,addressCountry,n,y,authority: place/local; authority: place/tgn
+profile,record_type,field,record_section,path_to_field,repeats,group_repeats,data_source,record_type_machine_name,field_machine_name
+lhmc_6-0-0,Acquisition,Received by,Acquisition Information,Received,n,y,authority: person/local; authority: person/ulan,acquisition,receivedBy
+lhmc_6-0-0,Acquisition,Acquisition source,Acquisition Information,"",y,n,authority: person/local; authority: organization/local,acquisition,acquisitionSource
+lhmc_6-0-0,Acquisition,Owner,Acquisition Information,"",y,n,authority: person/local; authority: organization/local,acquisition,owner
+lhmc_6-0-0,Acquisition,Funding source,Acquisition Information,Funding,n,y,authority: person/local; authority: organization/local,acquisition,acquisitionFundingSource
+lhmc_6-0-0,Citation,Term source name,Citation Information,Term > Source,n,y,authority: citation/local; authority: citation/worldcat,citation,termSource
+lhmc_6-0-0,Citation,Publication place,Citation Information,Publication,n,y,authority: place/local; authority: place/tgn,citation,publicationPlace
+lhmc_6-0-0,Citation,Agent name,Citation Information,Agent,n,y,authority: person/local; authority: person/ulan; authority: organization/local,citation,agent
+lhmc_6-0-0,Citation,Related term,Citation Information,Related term,n,y,authority: concept/associated; authority: concept/activity; authority: concept/material,citation,relatedTerm
+lhmc_6-0-0,Chronology,Term source name,Chronology Information,Term > Source,n,y,authority: citation/local; authority: citation/worldcat,chronology,termSource
+lhmc_6-0-0,Chronology,"",Chronology Information,Spatial coverage,y,n,authority: place/local; authority: place/tgn,chronology,chronologyPlace
+lhmc_6-0-0,Chronology,Resource identifier citation,Chronology Information,Resource identifier,n,y,authority: citation/local; authority: citation/worldcat,chronology,identifierCitation
+lhmc_6-0-0,Chronology,Person associated,Associated Authorities,Person,n,y,authority: person/local; authority: person/ulan,chronology,person
+lhmc_6-0-0,Chronology,Person citation,Associated Authorities,Person,y,as part of larger repeating group,authority: citation/local; authority: citation/worldcat,chronology,personCitation
+lhmc_6-0-0,Chronology,People citation,Associated Authorities,People,y,as part of larger repeating group,authority: citation/local; authority: citation/worldcat,chronology,peopleCitation
+lhmc_6-0-0,Chronology,Organization associated,Associated Authorities,Organization,n,y,authority: organization/local; authority: organization/ulan,chronology,organization
+lhmc_6-0-0,Chronology,Organization citation,Associated Authorities,Organization,y,as part of larger repeating group,authority: citation/local; authority: citation/worldcat,chronology,organizationCitation
+lhmc_6-0-0,Chronology,Concept associated,Associated Authorities,Concept,n,y,authority: concept/activity; authority: concept/associated; authority: concept/material; authority: concept/nomenclature; authority: concept/occasion,chronology,concept
+lhmc_6-0-0,Chronology,Concept citation,Associated Authorities,Concept,y,as part of larger repeating group,authority: citation/local; authority: citation/worldcat,chronology,conceptCitation
+lhmc_6-0-0,Chronology,Place associated,Associated Authorities,Place,n,y,authority: place/local; authority: place/tgn,chronology,place
+lhmc_6-0-0,Chronology,Place citation,Associated Authorities,Place,y,as part of larger repeating group,authority: citation/local; authority: citation/worldcat,chronology,placeCitation
+lhmc_6-0-0,Chronology,Related period associated,Associated Authorities,Related period,n,y,authority: chronology/era; authority: chronology/event; authority: chronology/fieldcollection,chronology,relatedPeriod
+lhmc_6-0-0,Chronology,Related period citation,Associated Authorities,Related period,y,as part of larger repeating group,authority: citation/local; authority: citation/worldcat,chronology,relatedPeriodCitation
+lhmc_6-0-0,Chronology,Alternative date spacial coverage,Alternative Date Information,Alternative date,y,as part of larger repeating group,authority: place/local; authority: place/tgn,chronology,otherDatePlace
+lhmc_6-0-0,Chronology,Alternative date citation,Alternative Date Information,Alternative date,y,as part of larger repeating group,authority: citation/local; authority: citation/worldcat,chronology,otherDateCitation
+lhmc_6-0-0,Object,Measured by,Object Description Information,Dimensions > Measurement,n,y,authority: person/local; authority: organization/local,collectionobject,measuredBy
+lhmc_6-0-0,Object,Content concept,Object Description Information,Content,y,n,authority: concept/associated; authority: concept/material,collectionobject,contentConcept
+lhmc_6-0-0,Object,Content person,Object Description Information,Content,y,n,authority: person/local; authority: person/ulan,collectionobject,contentPerson
+lhmc_6-0-0,Object,Content place,Object Description Information,Content,y,n,authority: place/local; authority: place/tgn,collectionobject,contentPlace
+lhmc_6-0-0,Object,Content organization,Object Description Information,Content,y,n,authority: organization/local; authority: organization/ulan,collectionobject,contentOrganization
+lhmc_6-0-0,Object,Content controlled event or period/era,Object Description Information,Content,y,n,authority: chronology/event; authority: chronology/era,collectionobject,contentEvent
+lhmc_6-0-0,Object,Textual inscription inscriber,Object Description Information,Textual Inscription > Textual inscription,n,y,authority: person/local; authority: organization/local,collectionobject,inscriptionContentInscriber
+lhmc_6-0-0,Object,Non-textual inscription inscriber,Object Description Information,Non-Textual Inscription > Non-textual inscription,n,y,authority: person/local; authority: organization/local,collectionobject,inscriptionDescriptionInscriber
+lhmc_6-0-0,Object,Production place,Object Production Information,Production place,n,y,authority: place/local; authority: place/tgn,collectionobject,objectProductionPlace
+lhmc_6-0-0,Object,Associated place,Object History and Association Information,Associations > Associated place,n,y,authority: place/local; authority: place/tgn,collectionobject,assocPlace
+lhmc_6-0-0,Object,Associated controlled event or period/era,Object History and Association Information,Associations,y,n,authority: chronology/event; authority: chronology/era,collectionobject,assocEvent
+lhmc_6-0-0,Object,Owner,Object History and Association Information,Object Owner's Contribution Information,y,n,authority: person/local; authority: organization/local,collectionobject,owner
+lhmc_6-0-0,Object,Reference,Reference Information,Reference > Reference Information,n,y,authority: citation/local; authority: citation/worldcat,collectionobject,reference
+lhmc_6-0-0,Object,Field collector,Object Collection Information,"",y,n,authority: person/local; authority: organization/local,collectionobject,fieldCollector
+lhmc_6-0-0,Object,Right holder name,Rights Management Information,Right holder,n,y,authority: organization/local; authority: person/local,collectionobject,rightHolder
+lhmc_6-0-0,Object,Right holder contact,Rights Management Information,Right holder,n,y,authority: organization/local; authority: person/local,collectionobject,rightHolderContact
+lhmc_6-0-0,Concept,Term source name,Concept Information,Term > Source,n,y,authority: citation/local; authority: citation/worldcat,concept,termSource
+lhmc_6-0-0,Conservation,Conservator,Conservation Treatment Information,"",y,n,authority: person/local; authority: organization/local,conservation,conservator
+lhmc_6-0-0,Conservation,Other treatment party name,Conservation Treatment Information,Other treatment party,n,y,authority: person/local; authority: organization/local,conservation,otherParty
+lhmc_6-0-0,Exhibition,Sponsor,Exhibition Information,"",y,n,authority: person/local; authority: person/ulan; authority: organization/local; authority: organization/ulan,exhibition,sponsor
+lhmc_6-0-0,Exhibition,Organizer,Exhibition Information,"",y,n,authority: person/local; authority: person/ulan; authority: organization/local; authority: organization/ulan,exhibition,organizer
+lhmc_6-0-0,Exhibition,Venue name,Exhibition Information,Venue,n,y,authority: organization/local; authority: organization/ulan; authority: location/local; authority: location/offsite; authority: place/local; authority: place/tgn,exhibition,venue
+lhmc_6-0-0,Exhibition,Working group member name,Exhibition Information,Working group > Working group member,n,y,authority: person/local; authority: person/ulan; authority: organization/local; authority: organization/ulan,exhibition,exhibitionPerson
+lhmc_6-0-0,Exhibition,Bibliographic reference,Exhibition Information,Bibliographic reference,n,y,authority: citation/local; authority: citation/worldcat,exhibition,exhibitionReference
+lhmc_6-0-0,Insurance/Indemnity,Quote provider,Insurance and Indemnity Information,Quote,n,y,authority: person/local; authority: person/ulan; authority: organization/local; authority: organization/ulan,insurance,insuranceIndemnityQuoteProvider
+lhmc_6-0-0,Intake,Source,Object Entry Information,"",y,n,authority: person/local; authority: organization/local,intake,currentOwner
+lhmc_6-0-0,Intake,Depositor name,Object Entry Information,Depositor,n,y,authority: person/local; authority: organization/local,intake,depositor
+lhmc_6-0-0,Intake,Insurance company,Insurance Information,"",y,n,authority: person/local; authority: organization/local,intake,insurer
+lhmc_6-0-0,Intake,Interim location,Location Information,Interim location,n,y,authority: location/local; authority: location/offsite; authority: organization/local; authority: place/local,intake,currentLocation
+lhmc_6-0-0,Intake,Condition check by,Condition Check Information,"",y,n,authority: person/local; authority: organization/local,intake,conditionCheckerOrAssessor
+lhmc_6-0-0,Loan In,Loan status authorizer,Loan In Information,Loan status,n,y,authority: person/local; authority: person/ulan,loanin,loaninStatusAuthorizerLHMC
+lhmc_6-0-0,Loan In,Lender name,Loan In Information,Lender,n,y,authority: person/local; authority: organization/local,loanin,lender
+lhmc_6-0-0,Loan Out,Loan status authorizer,Loan Out Information,Loan status,n,y,authority: person/local; authority: person/ulan; authority: organization/local,loanout,loanoutStatusAuthorizerLHMC
+lhmc_6-0-0,Storage Location,Term source name,Storage Location Information,Term > Source,n,y,authority: citation/local; authority: citation/worldcat,location,termSource
+lhmc_6-0-0,Media Handling,Measured by,Media Handling Information,Dimensions > Measurement,n,y,authority: person/local; authority: organization/local,media,measuredBy
+lhmc_6-0-0,Organization,Term source name,Organization Information,Term > Source,n,y,authority: citation/local; authority: citation/worldcat,organization,termSource
+lhmc_6-0-0,Person,Term source name,Person Information,persons_common.personTermGroupList > Term > Source,n,y,authority: citation/local; authority: citation/worldcat,person,termSource
+lhmc_6-0-0,Person,Publication name,Person Information,Publication,n,y,authority: citation/local; authority: citation/worldcat,person,publicationsPerson
+lhmc_6-0-0,Place,Term source name,Place Information,Term > Source,n,y,authority: citation/local; authority: citation/worldcat,place,termSource
+lhmc_6-0-0,Place,Owner,Place Information,Ownership,n,y,authority: person/local; authority: organization/local,place,owner
+lhmc_6-0-0,Place,Address municipality,Place Information,Address,n,y,authority: place/local; authority: place/tgn,place,addressMunicipality
+lhmc_6-0-0,Place,Address state/province,Place Information,Address,n,y,authority: place/local; authority: place/tgn,place,addressStateOrProvince
+lhmc_6-0-0,Place,Address country,Place Information,Address,n,y,authority: place/local; authority: place/tgn,place,addressCountry
+lhmc_6-0-0,Place,Georeferenced by,Georeference Information,Georeference,n,y,authority: person/local; authority: organization/local,place,geoReferencedBy
+lhmc_6-0-0,Transport,Courier name,Transport Information,Courier,n,y,authority: person/local; authority: organization/local,transport,courier
+lhmc_6-0-0,Transport,Shipping quote provider,Cost Information,"",n,y,authority: person/local; authority: organization/local,transport,shippingQuoteProvider
+lhmc_6-0-0,Use of Collections,User name,Use of Collections Information,User,n,y,authority: person/local; authority: organization/local,uoc,user
+lhmc_6-0-0,Use of Collections,Authorized by,Use of Collections Information,Authorization,n,y,authority: person/local; authority: organization/local,uoc,authorizedBy
+lhmc_6-0-0,Use of Collections,Staff name,Use of Collections Information,Staff,n,y,authority: person/local; authority: organization/local,uoc,staffName
+lhmc_6-0-0,Use of Collections,Location,Use of Collections Information,"",y,n,authority: organization/local; authority: place/local; authority: location/local,uoc,location
+lhmc_6-0-0,Work,Term source name,Work Information,Term > Source,n,y,authority: citation/local; authority: citation/worldcat,work,termSource
+lhmc_6-0-0,Work,Creator name,Work Information,Creator,n,y,authority: person/local; authority: organization/local,work,creator
+lhmc_6-0-0,Work,Publisher name,Work Information,Publisher,n,y,authority: person/local; authority: organization/local,work,publisher
+lhmc_6-0-0,Work,Address municipality,Work Information,Address,n,y,authority: place/local; authority: place/tgn,work,addressMunicipality
+lhmc_6-0-0,Work,Address state/province,Work Information,Address,n,y,authority: place/local; authority: place/tgn,work,addressStateOrProvince
+lhmc_6-0-0,Work,Address country,Work Information,Address,n,y,authority: place/local; authority: place/tgn,work,addressCountry

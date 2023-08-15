@@ -1,34 +1,34 @@
-profile,record_type,ui_info_group,ui_path,ui_field_label,xml_path,xml_field_name,repeats,group_repeats
-bonsai_5-0-5,acquisition,Acquisition Information,"",Accession date,"",accessionDateGroup,n,n/a
-bonsai_5-0-5,acquisition,Acquisition Information,"",Acquisition date,acquisitionDateGroupList,acquisitionDateGroup,y,n
-bonsai_5-0-5,citation,Citation Information,Publication,Publication date,citationPublicationInfoGroupList > citationPublicationInfoGroup,publicationDate,n,y
-bonsai_5-0-5,citation,Citation Information,Resource identifier,Resource identifier capture date,citationResourceIdentGroupList > citationResourceIdentGroup,captureDate,n,y
-bonsai_5-0-5,chronology,Chronology Information,"",Primary date range,"",chronologyDateStructuredDateGroup,n,n/a
-bonsai_5-0-5,chronology,Associated Authorities,Person,Person date,personGroupList > personGroup,personStructuredDateGroup,n,y
-bonsai_5-0-5,chronology,Associated Authorities,People,People date,peopleGroupList > peopleGroup,peopleStructuredDateGroup,n,y
-bonsai_5-0-5,chronology,Associated Authorities,Organization,Organization date,organizationGroupList > organizationGroup,organizationStructuredDateGroup,n,y
-bonsai_5-0-5,chronology,Associated Authorities,Concept,Concept date,conceptGroupList > conceptGroup,conceptStructuredDateGroup,n,y
-bonsai_5-0-5,chronology,Associated Authorities,Place,Place date,placeGroupList > placeGroup,placeStructuredDateGroup,n,y
-bonsai_5-0-5,chronology,Associated Authorities,Related period,Related period date,relatedPeriodGroupList > relatedPeriodGroup,relatedPeriodStructuredDateGroup,n,y
-bonsai_5-0-5,chronology,Alternative Date Information,Alternative date,Alternative date range,otherDateGroupList > otherDateGroup,otherDateStructuredDateGroup,n,y
-bonsai_5-0-5,collectionobject,Object Description Information,Textual Inscription > Textual inscription,Textual inscription date,textualInscriptionGroupList > textualInscriptionGroup,inscriptionContentDateGroup,n,y
-bonsai_5-0-5,collectionobject,Object Description Information,Non-Textual Inscription > Non-textual inscription,Non-textual inscription date,nonTextualInscriptionGroupList > nonTextualInscriptionGroup,inscriptionDescriptionDateGroup,n,y
-bonsai_5-0-5,collectionobject,Object Production Information,"",Production date,objectProductionDateGroupList,objectProductionDateGroup,y,n
-bonsai_5-0-5,collectionobject,Object History and Association Information,Associations > Associated date,Associated date value,assocDateGroupList > assocDateGroup,assocStructuredDateGroup,n,y
-bonsai_5-0-5,collectionobject,Object History and Association Information,"",Ownership date,ownershipDateGroupList,ownershipDateGroup,y,n
-bonsai_5-0-5,collectionobject,Object Collection Information,"",Field collection date,"",fieldCollectionDateGroup,n,n/a
-bonsai_5-0-5,exhibition,Exhibition Information,Gallery rotation,Gallery rotation start date,galleryRotationGroupList > galleryRotationGroup,galleryRotationStartDateGroup,n,y
-bonsai_5-0-5,exhibition,Exhibition Information,Gallery rotation,Gallery rotation end date,galleryRotationGroupList > galleryRotationGroup,galleryRotationEndDateGroup,n,y
-bonsai_5-0-5,media,Media Handling Information,"",Date,dateGroupList,dateGroup,y,n
-bonsai_5-0-5,objectexit,Object Exit Information,"",Exit date,"",exitDateGroup,n,n/a
-bonsai_5-0-5,organization,Organization Information,"",Foundation date,"",foundingDateGroup,n,n/a
-bonsai_5-0-5,organization,Organization Information,"",Dissolution date,"",dissolutionDateGroup,n,n/a
-bonsai_5-0-5,organization,Organization Information,Contact person,Contact date,contactGroupList > contactGroup,contactDateGroup,n,y
-bonsai_5-0-5,organization,Organization Information,Contact person,Contact end date,contactGroupList > contactGroup,contactEndDateGroup,n,y
-bonsai_5-0-5,person,Person Information,"",Birth date,"",birthDateGroup,n,n/a
-bonsai_5-0-5,person,Person Information,"",Death date,"",deathDateGroup,n,n/a
-bonsai_5-0-5,person,Maker-Supplied Identity Information,Supplied birth date,Birth date supplied,suppliedBirthDateGroupList > suppliedBirthDateGroup,suppliedStructuredBirthDateGroup,n,y
-bonsai_5-0-5,place,Place Information,Term,Term date,placeTermGroupList > placeTermGroup,nameDateGroup,n,y
-bonsai_5-0-5,place,Place Information,Ownership,Ownership date,placeOwnerGroupList > placeOwnerGroup,ownershipDateGroup,n,y
-bonsai_5-0-5,place,Georeference Information,Georeference,Georeference date,placeGeoRefGroupList > placeGeoRefGroup,geoRefDateGroup,n,y
-bonsai_5-0-5,work,Work Information,"",Work date,workDateGroupList,workDateGroup,y,n
+profile,record_type,field,record_section,path_to_field,repeats,group_repeats,record_type_machine_name,field_machine_name
+bonsai_5-0-5,Acquisition,Accession date,Acquisition Information,"",n,n/a,acquisition,accessionDateGroup
+bonsai_5-0-5,Acquisition,Acquisition date,Acquisition Information,"",y,n,acquisition,acquisitionDateGroup
+bonsai_5-0-5,Citation,Publication date,Citation Information,Publication,n,y,citation,publicationDate
+bonsai_5-0-5,Citation,Resource identifier capture date,Citation Information,Resource identifier,n,y,citation,captureDate
+bonsai_5-0-5,Chronology,Primary date range,Chronology Information,"",n,n/a,chronology,chronologyDateStructuredDateGroup
+bonsai_5-0-5,Chronology,Person date,Associated Authorities,Person,n,y,chronology,personStructuredDateGroup
+bonsai_5-0-5,Chronology,People date,Associated Authorities,People,n,y,chronology,peopleStructuredDateGroup
+bonsai_5-0-5,Chronology,Organization date,Associated Authorities,Organization,n,y,chronology,organizationStructuredDateGroup
+bonsai_5-0-5,Chronology,Concept date,Associated Authorities,Concept,n,y,chronology,conceptStructuredDateGroup
+bonsai_5-0-5,Chronology,Place date,Associated Authorities,Place,n,y,chronology,placeStructuredDateGroup
+bonsai_5-0-5,Chronology,Related period date,Associated Authorities,Related period,n,y,chronology,relatedPeriodStructuredDateGroup
+bonsai_5-0-5,Chronology,Alternative date range,Alternative Date Information,Alternative date,n,y,chronology,otherDateStructuredDateGroup
+bonsai_5-0-5,Object,Textual inscription date,Object Description Information,Textual Inscription > Textual inscription,n,y,collectionobject,inscriptionContentDateGroup
+bonsai_5-0-5,Object,Non-textual inscription date,Object Description Information,Non-Textual Inscription > Non-textual inscription,n,y,collectionobject,inscriptionDescriptionDateGroup
+bonsai_5-0-5,Object,Production date,Object Production Information,"",y,n,collectionobject,objectProductionDateGroup
+bonsai_5-0-5,Object,Associated date value,Object History and Association Information,Associations > Associated date,n,y,collectionobject,assocStructuredDateGroup
+bonsai_5-0-5,Object,Ownership date,Object History and Association Information,"",y,n,collectionobject,ownershipDateGroup
+bonsai_5-0-5,Object,Field collection date,Object Collection Information,"",n,n/a,collectionobject,fieldCollectionDateGroup
+bonsai_5-0-5,Exhibition,Gallery rotation start date,Exhibition Information,Gallery rotation,n,y,exhibition,galleryRotationStartDateGroup
+bonsai_5-0-5,Exhibition,Gallery rotation end date,Exhibition Information,Gallery rotation,n,y,exhibition,galleryRotationEndDateGroup
+bonsai_5-0-5,Media Handling,Date,Media Handling Information,"",y,n,media,dateGroup
+bonsai_5-0-5,Object Exit,Exit date,Object Exit Information,"",n,n/a,objectexit,exitDateGroup
+bonsai_5-0-5,Organization,Foundation date,Organization Information,"",n,n/a,organization,foundingDateGroup
+bonsai_5-0-5,Organization,Dissolution date,Organization Information,"",n,n/a,organization,dissolutionDateGroup
+bonsai_5-0-5,Organization,Contact date,Organization Information,Contact person,n,y,organization,contactDateGroup
+bonsai_5-0-5,Organization,Contact end date,Organization Information,Contact person,n,y,organization,contactEndDateGroup
+bonsai_5-0-5,Person,Birth date,Person Information,"",n,n/a,person,birthDateGroup
+bonsai_5-0-5,Person,Death date,Person Information,"",n,n/a,person,deathDateGroup
+bonsai_5-0-5,Person,Birth date supplied,Maker-Supplied Identity Information,Supplied birth date,n,y,person,suppliedStructuredBirthDateGroup
+bonsai_5-0-5,Place,Term date,Place Information,Term,n,y,place,nameDateGroup
+bonsai_5-0-5,Place,Ownership date,Place Information,Ownership,n,y,place,ownershipDateGroup
+bonsai_5-0-5,Place,Georeference date,Georeference Information,Georeference,n,y,place,geoRefDateGroup
+bonsai_5-0-5,Work,Work date,Work Information,"",y,n,work,workDateGroup

@@ -16,19 +16,12 @@ module CspaceConfigUntangler
       # @param sourcefile [nil, String] path to custom allfields CSV
       def initialize(release: CCU.release, sourcefile: nil)
         @release = release
-        @source = sourcefile || CCU.allfields_path(release: release)
+        @source = get_source(sourcefile)
         @target = CCU::Report.multi_auth_report_path
       end
 
       def call
-        unless File.exist?(source)
-          CCU::Report::AllFieldsGenerator.call(
-            release: release, datemode: :collapsed
-          )
-        end
-
-        res = CSV.read(source, headers: true)
-          .select{ |row| multi_auth?(row) && repeatable?(row) }
+        res = source.select{ |row| multi_auth?(row) && repeatable?(row) }
           .map{ |row| simplify(row) }
 
         headers = res.first.headers
@@ -44,6 +37,12 @@ module CspaceConfigUntangler
       private
 
       attr_reader :release, :source, :target
+
+      def get_source(sourcefile)
+        return CSV.parse(File.read(sourcefile), headers: true) if sourcefile
+
+        CCU::Report.get_all_fields(release: release, outmode: :friendly)
+      end
 
       def in_repeatable_group?(row)
         val = row['group_repeats']
@@ -73,7 +72,6 @@ module CspaceConfigUntangler
       end
 
       def simplify(row)
-        row = CCU::Report.simplify_allfields(row)
         row.delete('data_type')
         row.delete('option_list_values')
         row.delete('required')
