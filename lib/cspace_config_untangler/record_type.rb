@@ -4,15 +4,16 @@ module CspaceConfigUntangler
   class RecordType
     include CCU::Iterable
 
-    attr_reader :profile, :name, :id, :config, :ns, :panels, :input_tables,
-      :forms, :nonunique_fields, :structured_date_treatment, :service_type,
-      :subtypes, :record_search_field, :vocabularies
+    attr_reader :profile, :name, :label, :id, :config, :ns, :panels,
+      :input_tables, :forms, :nonunique_fields, :structured_date_treatment,
+      :service_type, :subtypes, :record_search_field, :vocabularies
 
     def initialize(profileobj, rectypename)
       @profile = profileobj
       @name = rectypename
       @id = "#{@profile.name}/#{@name}"
       @config = @profile.config['recordTypes'][@name]
+      @label = config.dig("messages", "record", "name", "defaultMessage")
       @ns = get_namespace
       @panels = get_panels
       @input_tables = get_input_tables
@@ -156,7 +157,6 @@ module CspaceConfigUntangler
     end
 
     private
-
 
     # sets up "faux-required" fields for record types that do not have any required fields
     #   some unique ID field is required for batch import/processing
