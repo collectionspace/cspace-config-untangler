@@ -13,7 +13,7 @@ module CspaceConfigUntangler
           .join(", ")
         fail(
           ArgumentError,
-          "#{name} must be one of: #{formatted}")
+          "#{name} #{val.inspect} must be one of: #{formatted}")
       end
     end
     private_class_method :opt_set
