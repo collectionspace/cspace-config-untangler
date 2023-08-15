@@ -16,11 +16,11 @@ module CspaceConfigUntangler
       # @param datemode [:collapsed, :expanded]
       def initialize(release:, datemode: :expanded)
         @release = release
-        @mode = CCU::Validate.date_mode(datemode.to_sym)
+        @datemode = CCU::Validate.date_mode(datemode.to_sym)
         @profiles = CCU::Cli::Helpers::ProfileGetter.call('all')
         @target = File.join(
           CCU.data_reference_dir(release),
-          "all_fields_#{release}_dates_#{mode}.csv"
+          "all_fields_#{release}_dates_#{datemode}.csv"
         )
         @fields = []
       end
@@ -41,12 +41,12 @@ module CspaceConfigUntangler
 
       private
 
-      attr_reader :release, :mode, :profiles, :target, :fields
+      attr_reader :release, :datemode, :profiles, :target, :fields
 
       def get_fields(profile)
         fields << CCU::Profile.new(profile: profile,
                                    rectypes: [],
-                                   structured_date_treatment: mode
+                                   structured_date_treatment: datemode
                                   ).fields
       end
     end
