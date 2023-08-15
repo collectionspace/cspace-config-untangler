@@ -5,14 +5,23 @@ module CspaceConfigUntangler
   module Validate
     module_function
 
-    def date_mode(mode)
-      if %i[collapsed expanded].any?(mode)
-        mode
+    def opt_set(opts, name, val)
+      if opts.any?(val)
+        val
       else
-        fail(ArgumentError, 'mode must be :collaped or :expanded')
+        formatted = opts.map{ |sym| sym.inspect}
+          .join(", ")
+        fail(
+          ArgumentError,
+          "#{name} must be one of: #{formatted}")
       end
     end
+    private_class_method :opt_set
 
+    def date_mode(mode)
+      opts = %i[collapsed expanded]
+      opt_set(opts, "datemode", mode)
+    end
     def profile(val)
       known = CCU::Cli::Helpers::ProfileGetter.call('all')
       if known.any?(val)
