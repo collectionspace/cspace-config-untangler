@@ -1,54 +1,45 @@
 # frozen_string_literal: true
 
-require 'csv'
-
 module CspaceConfigUntangler
   module Report
     class ProfileSubjectsGenerator
-
+      include ByProfileable
       class << self
         def call(...)
           self.new(...).call
         end
       end
 
-      # @param profile [String]
+      # @param profiles [String]
       # @param release [String]
-      def initialize(profile:, release: CCU.release)
-        @mode = :collapsed
+      def initialize(profiles:, release: CCU.release)
+        @profiles = CCU::Cli::Helpers::ProfileGetter.call(profiles)
         @release = release
-        @profile = CCU::Validate.profile(profile)
-        @target = File.join(
-          CCU.data_reference_dir(release),
-          "#{profile}_subject_fields.csv"
-        )
+        @basedir = CCU.data_reference_dir(release)
+        @basefilename = "_subject_fields.csv"
+        @all_fields = CCU::Report.get_all_fields(release: release)
       end
 
       def call
-        fields = get_fields(profile)
-          .map{ |row| shorten(row) }
-        return if fields.empty?
-
-        headers = fields.first.keys
-
-        CSV.open(target, 'w') do |csv|
-          csv << headers
-          fields.each{ |row| csv << row.values_at(*headers) }
-        end
-
-        puts "Wrote #{target}"
+        profiles.each{ |profile| write(profile) }
       end
 
       private
 
-      attr_reader :release, :mode, :profile, :target
+      attr_reader :profiles, :release, :basedir, :basefilename, :all_fields
 
-      def get_fields(profile)
-        path = CCU.allfields_path
-        CSV.parse(File.read(path), headers: true)
-          .select{ |row| row["profile"] == profile &&
-              row["record_type"] == "collectionobject" &&
-              subject_field?(row) }
+      def write(profile)
+        rows = rows_for(profile)
+          .map{ |row| shorten(row) }
+        return if rows.empty?
+
+        to_csv(profile, rows)
+      end
+
+      def rows_for(profile)
+        all_fields.select{ |row| row["profile"] == profile &&
+            row["record_type"] == "collectionobject" &&
+            subject_field?(row) }
       end
 
       def subject_field?(row)
