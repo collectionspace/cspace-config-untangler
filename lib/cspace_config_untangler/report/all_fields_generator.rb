@@ -17,12 +17,13 @@ module CspaceConfigUntangler
       # @param outmode [:expert, :friendly]
       # @param target [nil, String] path to output file. Defaults to release
       #   allfields path for given datemode and outmode
+      # @param profiles [nil, String]
       def initialize(release: CCU.release, datemode: :expanded,
-                     outmode: :expert, target: nil)
+                     outmode: :expert, target: nil, profiles: "all")
         @release = release
         @datemode = CCU::Validate.date_mode(datemode.to_sym)
         @outmode = CCU::Validate.out_mode(outmode.to_sym)
-        @profiles = CCU::Cli::Helpers::ProfileGetter.call('all')
+        @profiles = CCU::Cli::Helpers::ProfileGetter.call(profiles)
         @target = target ||= CCU.allfields_path(
           release: release, datemode: datemode, outmode: outmode
         )
