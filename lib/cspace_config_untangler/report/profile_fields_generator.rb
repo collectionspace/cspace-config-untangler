@@ -1,10 +1,9 @@
 # frozen_string_literal: true
 
-require 'csv'
-
 module CspaceConfigUntangler
   module Report
     class ProfileFieldsGenerator
+      include ByProfileable
 
       class << self
         def call(...)
@@ -12,39 +11,31 @@ module CspaceConfigUntangler
         end
       end
 
+      # @param profiles [String]
       # @param release [String]
-      # @param profile [String]
-      def initialize(profile:, release: CCU.release)
-        @mode = :collapsed
-        @profile = CCU::Validate.profile(profile)
+      def initialize(profiles:, release: CCU.release)
+        @profiles = CCU::Cli::Helpers::ProfileGetter.call(profiles)
         @release = release
-        @target = File.join(
-          CCU.data_reference_dir(release),
-          "#{profile}_fields.csv"
-        )
+        @basedir = CCU.data_reference_dir(release)
+        @basefilename = "_fields.csv"
+        @all_fields = CCU::Report.get_all_fields(release: release)
       end
 
       def call
-        fields = get_fields(profile)
-        headers = fields.first.csv_header
+        profiles.each do |profile|
+          rows = rows_for(profile)
+            .map{ |row| CCU::Report.simplify_allfields(row) }
 
-        CSV.open(target, 'w') do |csv|
-          csv << headers
-          fields.each{ |row| csv << row.to_csv }
+          to_csv(profile, rows)
         end
-
-        puts "Wrote #{target}"
       end
 
       private
 
-      attr_reader :release, :mode, :profile, :target
+      attr_reader :profiles, :release, :basedir, :basefilename, :all_fields
 
-      def get_fields(profile)
-        CCU::Profile.new(profile: profile,
-                         rectypes: [],
-                         structured_date_treatment: mode
-                        ).fields
+      def rows_for(profile)
+        all_fields.select{ |row| row["profile"] == profile }
       end
     end
   end

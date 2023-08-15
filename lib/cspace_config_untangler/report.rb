@@ -34,10 +34,13 @@ module CspaceConfigUntangler
       CCU::Report::UnusedAuthorityVocabs.call
     end
 
-    def reference_reports(release)
+    def reference_reports(release, clean: false)
       CCU.config.release = CCU::Validate.release(release)
       dir = CCU.data_reference_dir(release)
       FileUtils.mkdir_p(dir) unless Dir.exist?(dir)
+      if clean
+        FileUtils.rm_f(Dir.new(dir).children.map{ |fn| File.join(dir, fn) })
+      end
 
       CCU::Report::AllFieldsGenerator.call(release: release)
       CCU::Report::AllFieldsGenerator.call(
@@ -51,16 +54,14 @@ module CspaceConfigUntangler
         release: release
       )
       CCU::Report::AuthorityVocabUse.call(profiles: "all")
-      CCU::Cli::Helpers::ProfileGetter.call('all').each do |profile|
-        CCU::Report::ProfileFieldsGenerator.call(
-          release: release,
-          profile: profile
-        )
-        CCU::Report::ProfileSubjectsGenerator.call(
-          release: release,
-          profile: profile
-        )
-      end
+      CCU::Report::ProfileFieldsGenerator.call(
+        profiles: "all",
+        release: release
+      )
+      CCU::Report::ProfileSubjectsGenerator.call(
+        profiles: "all",
+        release: release,
+      )
     end
 
     def deversion_for_qa(row)
