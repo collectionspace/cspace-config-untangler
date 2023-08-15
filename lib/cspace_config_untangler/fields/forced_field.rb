@@ -23,7 +23,6 @@ module CspaceConfigUntangler
         @value_list = field_hash[:value_list]
         @required = field_hash[:required]
         @fid = "#{@profile.name} #{rectype.name} #{@ns_for_id} #{@name}"
-        @to_csv = format_csv
       end
     end
   end

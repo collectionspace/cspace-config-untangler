@@ -6,7 +6,7 @@ module CspaceConfigUntangler
         :repeats, :in_repeating_group,
         :data_type, :value_source, :value_list,
         :required
-      attr_accessor :to_csv, :profile, :rectype
+      attr_accessor :profile, :rectype
 
       def initialize(rectype_obj, form_field)
         @rectype = rectype_obj
@@ -20,11 +20,14 @@ module CspaceConfigUntangler
         @label = lookup_display_name(@id)
         merge_field_defs
         @fid = "#{@profile.name} #{rectype.name} #{@ns_for_id} #{@name}"
-        @to_csv = format_csv
       end
 
-      def csv_header
-        csv_row.keys.map(&:to_s)
+      def csv_header(mode=:expert)
+        case mode
+        when :expert then expert_csv_row.keys.map(&:to_s)
+        when :friendly then friendly_csv_row.keys.map(&:to_s)
+        else fail "Unknown mode"
+        end
       end
 
       def structured_date?
@@ -69,6 +72,14 @@ module CspaceConfigUntangler
           .include?(name)
       end
 
+      def to_csv
+        format_csv(expert_csv_row)
+      end
+
+      def to_user_csv
+        format_csv(friendly_csv_row)
+      end
+
       private
 
       def formatted_ui_path(orig)
@@ -80,7 +91,7 @@ module CspaceConfigUntangler
           .compact
       end
 
-      def csv_row
+      def expert_csv_row
         {
           fid: @fid,
           profile: @profile.name,
@@ -102,8 +113,26 @@ module CspaceConfigUntangler
         }
       end
 
-      def format_csv
-        csv_row.values
+      def friendly_csv_row
+        {
+          profile: @profile.name,
+          record_type: @rectype.label,
+          field: label,
+          record_section: get_ui_info_group,
+          path_to_field: get_ui_path,
+          data_type: @data_type,
+          required: @required,
+          repeats: @repeats,
+          group_repeats: @in_repeating_group,
+          data_source: @value_source.map(&:fields_csv_label).compact.join('; '),
+          option_list_values: @value_list.join(', '),
+          record_type_machine_name: @rectype.name,
+          field_machine_name: @name
+        }
+      end
+
+      def format_csv(source)
+        source.values
           .map{ |val| val.nil? ? "" : val }
       end
 
@@ -197,11 +226,11 @@ module CspaceConfigUntangler
           elsif val.start_with?("conservation_livingplant")
             fixedval = val.sub("conservation_livingplant", "ext.livingplant")
             lookup_display_name(fixedval)
-          # Added for 7.2 associatedAuthority extension removed right before
-          #   release
-          # elsif val["chronologies_common"]
-          #   fixedval = val.sub("chronologies_common", "ext.associatedAuthority")
-          #   lookup_display_name(fixedval)
+            # Added for 7.2 associatedAuthority extension removed right before
+            #   release
+            # elsif val["chronologies_common"]
+            #   fixedval = val.sub("chronologies_common", "ext.associatedAuthority")
+            #   lookup_display_name(fixedval)
           else
             alt_fieldname_lookup(val)
           end

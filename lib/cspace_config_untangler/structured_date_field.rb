@@ -6,8 +6,7 @@ module CspaceConfigUntangler
       :schema_path,
       :repeats, :in_repeating_group,
       :data_type, :value_source, :value_list,
-      :required,
-      :to_csv
+      :required
 
     def initialize(profile_obj, structured_date_field_maker, field_id)
       @parent = structured_date_field_maker
@@ -27,7 +26,6 @@ module CspaceConfigUntangler
       @value_source = []
       @value_list = []
       populate_value_data(@name)
-      @to_csv = format_csv
     end
 
     private
