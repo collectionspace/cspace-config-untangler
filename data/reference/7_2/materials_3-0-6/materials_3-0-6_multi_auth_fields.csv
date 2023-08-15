@@ -1,0 +1,25 @@
+profile,record_type,ui_info_group,ui_path,ui_field_label,xml_path,xml_field_name,repeats,group_repeats,data_source
+materials_3-0-6,acquisition,Acquisition Information,"",Acquisition source,acquisitionSources,acquisitionSource,y,n,authority: person/local; authority: organization/local
+materials_3-0-6,citation,Citation Information,Agent,Agent name,citationAgentInfoGroupList > citationAgentInfoGroup,agent,n,y,authority: person/local; authority: organization/local
+materials_3-0-6,chronology,Associated Authorities,Concept,Concept associated,conceptGroupList > conceptGroup,concept,n,y,authority: concept/nomenclature; authority: concept/occasion
+materials_3-0-6,chronology,Associated Authorities,Related period,Related period associated,relatedPeriodGroupList > relatedPeriodGroup,relatedPeriod,n,y,authority: chronology/era; authority: chronology/event; authority: chronology/fieldcollection
+materials_3-0-6,collectionobject,Object Identification Information,Material,Material,materialGroupList > materialGroup,material,n,y,authority: material/local; authority: material/shared
+materials_3-0-6,collectionobject,Object Description Information,Dimensions > Measurement,Measured by,measuredPartGroupList > measuredPartGroup > dimensionSubGroupList > dimensionSubGroup,measuredBy,n,y,authority: person/local; authority: organization/local
+materials_3-0-6,conservation,Conservation Treatment Information,"",Conservator,conservators,conservator,y,n,authority: person/local; authority: organization/local
+materials_3-0-6,conservation,Conservation Treatment Information,Other treatment party,Other treatment party name,otherPartyGroupList > otherPartyGroup,otherParty,n,y,authority: person/local; authority: organization/local
+materials_3-0-6,insurance,Insurance and Indemnity Information,Quote,Quote provider,quoteProviderGroupList > quoteProviderGroup,insuranceIndemnityQuoteProvider,n,y,authority: person/local; authority: organization/local
+materials_3-0-6,place,Place Information,Ownership,Owner,placeOwnerGroupList > placeOwnerGroup,owner,n,y,authority: person/local; authority: organization/local
+materials_3-0-6,place,Georeference Information,Georeference,Georeferenced by,placeGeoRefGroupList > placeGeoRefGroup,geoReferencedBy,n,y,authority: person/local; authority: organization/local
+materials_3-0-6,transport,Transport Information,Courier,Courier name,courierGroupList > courierGroup,courier,n,y,authority: person/local; authority: organization/local
+materials_3-0-6,transport,Cost Information,"",Shipping quote provider,shippingQuoteGroupList > shippingQuoteGroup,shippingQuoteProvider,n,y,authority: person/local; authority: organization/local
+materials_3-0-6,uoc,Use of Collections Information,User,User name,userGroupList > userGroup,user,n,y,authority: person/local; authority: organization/local
+materials_3-0-6,uoc,Use of Collections Information,Authorization,Authorized by,authorizationGroupList > authorizationGroup,authorizedBy,n,y,authority: person/local; authority: organization/local
+materials_3-0-6,uoc,Use of Collections Information,Staff,Staff name,staffGroupList > staffGroup,staffName,n,y,authority: person/local; authority: organization/local
+materials_3-0-6,uoc,Use of Collections Information,"",Location,locationList,location,y,n,authority: organization/local; authority: place/local; authority: location/local
+materials_3-0-6,work,Work Information,Creator,Creator name,creatorGroupList > creatorGroup,creator,n,y,authority: person/local; authority: organization/local
+materials_3-0-6,work,Work Information,Publisher,Publisher name,publisherGroupList > publisherGroup,publisher,n,y,authority: person/local; authority: organization/local
+materials_3-0-6,material,Material Information,Featured collection,Featured collection name,featuredCollectionGroupList > featuredCollectionGroup,featuredCollection,n,y,authority: work/local; authority: work/shared
+materials_3-0-6,material,Material Information,Composition,Composition family name,materialCompositionGroupList > materialCompositionGroup,materialCompositionFamilyName,n,y,authority: concept/materialclassification; authority: concept/sharedmaterialclassification
+materials_3-0-6,material,Material Information,Composition,Composition class name,materialCompositionGroupList > materialCompositionGroup,materialCompositionClassName,n,y,authority: concept/materialclassification; authority: concept/sharedmaterialclassification
+materials_3-0-6,material,Material Information,Composition,Composition generic name,materialCompositionGroupList > materialCompositionGroup,materialCompositionGenericName,n,y,authority: concept/materialclassification; authority: concept/sharedmaterialclassification
+materials_3-0-6,material,Material Information,Featured application,Featured application name,featuredApplicationGroupList > featuredApplicationGroup,featuredApplication,n,y,authority: work/local; authority: work/shared
