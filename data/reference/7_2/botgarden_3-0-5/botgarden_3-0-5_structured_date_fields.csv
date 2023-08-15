@@ -1,0 +1,31 @@
+profile,record_type,ui_info_group,ui_path,ui_field_label,xml_path,xml_field_name,repeats,group_repeats
+botgarden_3-0-5,citation,Citation Information,Publication,Publication date,citationPublicationInfoGroupList > citationPublicationInfoGroup,publicationDate,n,y
+botgarden_3-0-5,citation,Citation Information,Resource identifier,Resource identifier capture date,citationResourceIdentGroupList > citationResourceIdentGroup,captureDate,n,y
+botgarden_3-0-5,chronology,Chronology Information,"",Primary date range,"",chronologyDateStructuredDateGroup,n,n/a
+botgarden_3-0-5,chronology,Associated Authorities,Person,Person date,personGroupList > personGroup,personStructuredDateGroup,n,y
+botgarden_3-0-5,chronology,Associated Authorities,People,People date,peopleGroupList > peopleGroup,peopleStructuredDateGroup,n,y
+botgarden_3-0-5,chronology,Associated Authorities,Organization,Organization date,organizationGroupList > organizationGroup,organizationStructuredDateGroup,n,y
+botgarden_3-0-5,chronology,Associated Authorities,Concept,Concept date,conceptGroupList > conceptGroup,conceptStructuredDateGroup,n,y
+botgarden_3-0-5,chronology,Associated Authorities,Place,Place date,placeGroupList > placeGroup,placeStructuredDateGroup,n,y
+botgarden_3-0-5,chronology,Associated Authorities,Related period,Related period date,relatedPeriodGroupList > relatedPeriodGroup,relatedPeriodStructuredDateGroup,n,y
+botgarden_3-0-5,chronology,Alternative Date Information,Alternative date,Alternative date range,otherDateGroupList > otherDateGroup,otherDateStructuredDateGroup,n,y
+botgarden_3-0-5,collectionobject,Object Identification Information,Determination history > Identification by,Taxonomic identification date,taxonomicIdentGroupList > taxonomicIdentGroup,identDateGroup,n,y
+botgarden_3-0-5,collectionobject,Locality Information,Locality > Georeference Detail,Georeference date,localityGroupList > localityGroup,geoRefDateGroup,n,y
+botgarden_3-0-5,collectionobject,Field Collection Information,"",Field collection date,"",fieldCollectionDateGroup,n,n/a
+botgarden_3-0-5,collectionobject,Object History and Association Information,Associations > Associated date,Associated date value,assocDateGroupList > assocDateGroup,assocStructuredDateGroup,n,y
+botgarden_3-0-5,collectionobject,Object History and Association Information,"",Ownership date,ownershipDateGroupList,ownershipDateGroup,y,n
+botgarden_3-0-5,media,Media Handling Information,"",Date,dateGroupList,dateGroup,y,n
+botgarden_3-0-5,objectexit,Distribution Information,"",Date,"",exitDateGroup,n,n/a
+botgarden_3-0-5,organization,Organization Information,"",Foundation date,"",foundingDateGroup,n,n/a
+botgarden_3-0-5,organization,Organization Information,"",Dissolution date,"",dissolutionDateGroup,n,n/a
+botgarden_3-0-5,organization,Organization Information,Contact person,Contact date,contactGroupList > contactGroup,contactDateGroup,n,y
+botgarden_3-0-5,organization,Organization Information,Contact person,Contact end date,contactGroupList > contactGroup,contactEndDateGroup,n,y
+botgarden_3-0-5,person,Person Information,"",Birth date,"",birthDateGroup,n,n/a
+botgarden_3-0-5,person,Person Information,"",Death date,"",deathDateGroup,n,n/a
+botgarden_3-0-5,person,Maker-Supplied Identity Information,Supplied birth date,Birth date supplied,suppliedBirthDateGroupList > suppliedBirthDateGroup,suppliedStructuredBirthDateGroup,n,y
+botgarden_3-0-5,place,Place Information,Term,Term date,placeTermGroupList > placeTermGroup,nameDateGroup,n,y
+botgarden_3-0-5,place,Place Information,Ownership,Ownership date,placeOwnerGroupList > placeOwnerGroup,ownershipDateGroup,n,y
+botgarden_3-0-5,place,Georeference Information,Georeference,Georeference date,placeGeoRefGroupList > placeGeoRefGroup,geoRefDateGroup,n,y
+botgarden_3-0-5,work,Work Information,"",Work date,workDateGroupList,workDateGroup,y,n
+botgarden_3-0-5,propagation,Propagation Information,"",Propagation date,"",propDate,n,n/a
+botgarden_3-0-5,propagation,Propagation Information,Activities > Activity,Activity date,propActivityGroupList > propActivityGroup,activityDate,n,y

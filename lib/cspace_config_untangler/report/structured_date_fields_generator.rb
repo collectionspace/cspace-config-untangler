@@ -16,16 +16,16 @@ module CspaceConfigUntangler
       # @param sourcefile [nil, String] path to custom allfields CSV
       def initialize(release:, sourcefile: nil)
         @release = release
-        @source = sourcefile || CCU.allfields_path
-        @target = File.join(
-          CCU.data_reference_dir(release),
-          "structured_date_fields_#{release}.csv"
-          )
+        @source = sourcefile || CCU.allfields_path(release: release)
+        @target = CCU::Report.structured_date_report_path
       end
 
       def call
         unless File.exist?(source)
-          fail(Errno::ENOENT, source)
+          CCU::Report::AllFieldsGenerator.call(
+            release: release,
+            datemode: :collapsed
+          )
         end
 
         res = CSV.read(source, headers: true)
