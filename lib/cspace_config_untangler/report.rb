@@ -71,6 +71,11 @@ module CspaceConfigUntangler
     end
 
     def get_qa_table(release: CCU.release, prev: false)
+      get_all_fields(release: release, prev: prev)
+        .map{ |row| deversion_for_qa(row) }
+    end
+
+    def get_all_fields(release: CCU.release, prev: false)
       if prev
         current_release = release.dup
         CCU.config.release = CCU.prev_release
@@ -87,7 +92,6 @@ module CspaceConfigUntangler
       CCU.config.release = current_release if prev
 
       CSV.parse(File.read(path), headers: true)
-        .map{ |row| deversion_for_qa(row) }
     end
 
     def simplify_allfields(row)
