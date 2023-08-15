@@ -22,6 +22,12 @@ module CspaceConfigUntangler
       opts = %i[collapsed expanded]
       opt_set(opts, "datemode", mode)
     end
+
+    def out_mode(mode)
+      opts = %i[expert friendly]
+      opt_set(opts, "outmode", mode)
+    end
+
     def profile(val)
       known = CCU::Cli::Helpers::ProfileGetter.call('all')
       if known.any?(val)
