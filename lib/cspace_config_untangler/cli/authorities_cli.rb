@@ -55,6 +55,7 @@ module CspaceConfigUntangler
 
       no_commands do
         def profiles_def(authvocab)
+          options[:profiles] = "all"
           get_profiles.map{ |profile| CCU::Profile.new(profile: profile) }
             .select{ |profile| profile.authorities.include?(authvocab) }
         end
