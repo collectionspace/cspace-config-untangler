@@ -14,6 +14,12 @@ module CspaceConfigUntangler
       constructor: ->(_v) do
         File.join(CCU.data_reference_dir, "authority_vocabulary_usage.csv")
       end
+    setting :multi_auth_report_path,
+      default: nil,
+      reader: true,
+      constructor: ->(_v) do
+        File.join(CCU.data_reference_dir, "multi_auth_repeatable_fields.csv")
+      end
     setting :structured_date_report_path,
       default: nil,
       reader: true,
@@ -69,6 +75,10 @@ module CspaceConfigUntangler
         release: release,
       )
       CCU::Report::ProfileStructuredDateFields.call(
+        profiles: "all",
+        release: release,
+      )
+      CCU::Report::ProfileMultiAuthFields.call(
         profiles: "all",
         release: release,
       )

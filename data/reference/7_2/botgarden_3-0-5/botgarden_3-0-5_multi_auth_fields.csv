@@ -1,0 +1,55 @@
+profile,record_type,ui_info_group,ui_path,ui_field_label,xml_path,xml_field_name,repeats,group_repeats,data_source
+botgarden_3-0-5,citation,Citation Information,Term > Source,Term source name,citationTermGroupList > citationTermGroup,termSource,n,y,authority: citation/local; authority: citation/worldcat
+botgarden_3-0-5,citation,Citation Information,Publication,Publication place,citationPublicationInfoGroupList > citationPublicationInfoGroup,publicationPlace,n,y,authority: place/local; authority: place/tgn
+botgarden_3-0-5,citation,Citation Information,Agent,Agent name,citationAgentInfoGroupList > citationAgentInfoGroup,agent,n,y,authority: person/local; authority: person/ulan; authority: organization/local
+botgarden_3-0-5,citation,Citation Information,Related term,Related term,citationRelatedTermsGroupList > citationRelatedTermsGroup,relatedTerm,n,y,authority: concept/associated; authority: concept/activity; authority: concept/material
+botgarden_3-0-5,chronology,Chronology Information,Term > Source,Term source name,chronologyTermGroupList > chronologyTermGroup,termSource,n,y,authority: citation/local; authority: citation/worldcat
+botgarden_3-0-5,chronology,Chronology Information,Spatial coverage,"",chronologyPlaces,chronologyPlace,y,n,authority: place/local; authority: place/tgn
+botgarden_3-0-5,chronology,Chronology Information,Resource identifier,Resource identifier citation,identifierGroupList > identifierGroup,identifierCitation,n,y,authority: citation/local; authority: citation/worldcat
+botgarden_3-0-5,chronology,Associated Authorities,Person,Person associated,personGroupList > personGroup,person,n,y,authority: person/local; authority: person/ulan
+botgarden_3-0-5,chronology,Associated Authorities,Person,Person citation,personGroupList > personGroup > personCitations,personCitation,y,as part of larger repeating group,authority: citation/local; authority: citation/worldcat
+botgarden_3-0-5,chronology,Associated Authorities,People,People citation,peopleGroupList > peopleGroup > peopleCitations,peopleCitation,y,as part of larger repeating group,authority: citation/local; authority: citation/worldcat
+botgarden_3-0-5,chronology,Associated Authorities,Organization,Organization associated,organizationGroupList > organizationGroup,organization,n,y,authority: organization/local; authority: organization/ulan
+botgarden_3-0-5,chronology,Associated Authorities,Organization,Organization citation,organizationGroupList > organizationGroup > organizationCitations,organizationCitation,y,as part of larger repeating group,authority: citation/local; authority: citation/worldcat
+botgarden_3-0-5,chronology,Associated Authorities,Concept,Concept associated,conceptGroupList > conceptGroup,concept,n,y,authority: concept/activity; authority: concept/associated; authority: concept/material; authority: concept/nomenclature; authority: concept/occasion
+botgarden_3-0-5,chronology,Associated Authorities,Concept,Concept citation,conceptGroupList > conceptGroup > conceptCitations,conceptCitation,y,as part of larger repeating group,authority: citation/local; authority: citation/worldcat
+botgarden_3-0-5,chronology,Associated Authorities,Place,Place associated,placeGroupList > placeGroup,place,n,y,authority: place/local; authority: place/tgn
+botgarden_3-0-5,chronology,Associated Authorities,Place,Place citation,placeGroupList > placeGroup > placeCitations,placeCitation,y,as part of larger repeating group,authority: citation/local; authority: citation/worldcat
+botgarden_3-0-5,chronology,Associated Authorities,Related period,Related period associated,relatedPeriodGroupList > relatedPeriodGroup,relatedPeriod,n,y,authority: chronology/era; authority: chronology/event; authority: chronology/fieldcollection
+botgarden_3-0-5,chronology,Associated Authorities,Related period,Related period citation,relatedPeriodGroupList > relatedPeriodGroup > relatedPeriodCitations,relatedPeriodCitation,y,as part of larger repeating group,authority: citation/local; authority: citation/worldcat
+botgarden_3-0-5,chronology,Alternative Date Information,Alternative date,Alternative date spacial coverage,otherDateGroupList > otherDateGroup > otherDatePlaces,otherDatePlace,y,as part of larger repeating group,authority: place/local; authority: place/tgn
+botgarden_3-0-5,chronology,Alternative Date Information,Alternative date,Alternative date citation,otherDateGroupList > otherDateGroup > otherDateCitations,otherDateCitation,y,as part of larger repeating group,authority: citation/local; authority: citation/worldcat
+botgarden_3-0-5,collectionobject,Object Identification Information,Determination history > Identification by,Taxonomic identification by,taxonomicIdentGroupList > taxonomicIdentGroup,identBy,n,y,authority: person/local; authority: organization/local
+botgarden_3-0-5,collectionobject,Field Collection Information,"",Field collector,fieldCollectors,fieldCollector,y,n,authority: person/local; authority: organization/local
+botgarden_3-0-5,collectionobject,Accession Use Information,Accession use,Accession used in,accessionUseGroupList > accessionUseGroup,accessionUsedIn,n,y,authority: concept/class; authority: concept/research
+botgarden_3-0-5,collectionobject,Object History and Association Information,Object Owner's Contribution Information,Owner,owners,owner,y,n,authority: person/local; authority: organization/local
+botgarden_3-0-5,concept,Concept Information,Term > Source,Term source name,conceptTermGroupList > conceptTermGroup,termSource,n,y,authority: citation/local; authority: citation/worldcat
+botgarden_3-0-5,insurance,Insurance and Indemnity Information,Quote,Quote provider,quoteProviderGroupList > quoteProviderGroup,insuranceIndemnityQuoteProvider,n,y,authority: person/local; authority: person/ulan; authority: organization/local; authority: organization/ulan
+botgarden_3-0-5,intake,Object Entry Information,"",Current owner,currentOwners,currentOwner,y,n,authority: person/local; authority: organization/local
+botgarden_3-0-5,intake,Object Entry Information,Depositor,Depositor name,depositorGroupList > depositorGroup,depositor,n,y,authority: person/local; authority: organization/local
+botgarden_3-0-5,intake,Insurance Information,"",Insurer,insurers,insurer,y,n,authority: person/local; authority: organization/local
+botgarden_3-0-5,intake,Condition Check Information,"",Condition check assessor,conditionCheckersOrAssessors,conditionCheckerOrAssessor,y,n,authority: person/local; authority: organization/local
+botgarden_3-0-5,media,Media Handling Information,Dimensions > Measurement,Measured by,measuredPartGroupList > measuredPartGroup > dimensionSubGroupList > dimensionSubGroup,measuredBy,n,y,authority: person/local; authority: organization/local
+botgarden_3-0-5,organization,Organization Information,Term > Source,Term source name,orgTermGroupList > orgTermGroup,termSource,n,y,authority: citation/local; authority: citation/worldcat
+botgarden_3-0-5,person,Person Information,Term > Source,Term source name,personTermGroupList > personTermGroup,termSource,n,y,authority: citation/local; authority: citation/worldcat
+botgarden_3-0-5,place,Place Information,Term > Source,Term source name,placeTermGroupList > placeTermGroup,termSource,n,y,authority: citation/local; authority: citation/worldcat
+botgarden_3-0-5,place,Place Information,Ownership,Owner,placeOwnerGroupList > placeOwnerGroup,owner,n,y,authority: person/local; authority: organization/local
+botgarden_3-0-5,place,Place Information,Address,Address municipality,addrGroupList > addrGroup,addressMunicipality,n,y,authority: place/local; authority: place/tgn
+botgarden_3-0-5,place,Place Information,Address,Address state/province,addrGroupList > addrGroup,addressStateOrProvince,n,y,authority: place/local; authority: place/tgn
+botgarden_3-0-5,place,Place Information,Address,Address country,addrGroupList > addrGroup,addressCountry,n,y,authority: place/local; authority: place/tgn
+botgarden_3-0-5,place,Georeference Information,Georeference,Georeferenced by,placeGeoRefGroupList > placeGeoRefGroup,geoReferencedBy,n,y,authority: person/local; authority: organization/local
+botgarden_3-0-5,transport,Transport Information,Courier,Courier name,courierGroupList > courierGroup,courier,n,y,authority: person/local; authority: organization/local
+botgarden_3-0-5,transport,Cost Information,"",Shipping quote provider,shippingQuoteGroupList > shippingQuoteGroup,shippingQuoteProvider,n,y,authority: person/local; authority: organization/local
+botgarden_3-0-5,uoc,Use of Collections Information,User,User name,userGroupList > userGroup,user,n,y,authority: person/local; authority: organization/local
+botgarden_3-0-5,uoc,Use of Collections Information,Authorization,Authorized by,authorizationGroupList > authorizationGroup,authorizedBy,n,y,authority: person/local; authority: organization/local
+botgarden_3-0-5,uoc,Use of Collections Information,Staff,Staff name,staffGroupList > staffGroup,staffName,n,y,authority: person/local; authority: organization/local
+botgarden_3-0-5,uoc,Use of Collections Information,"",Location,locationList,location,y,n,authority: organization/local; authority: place/local; authority: location/local
+botgarden_3-0-5,work,Work Information,Term > Source,Term source name,workTermGroupList > workTermGroup,termSource,n,y,authority: citation/local; authority: citation/worldcat
+botgarden_3-0-5,work,Work Information,Creator,Creator name,creatorGroupList > creatorGroup,creator,n,y,authority: person/local; authority: organization/local
+botgarden_3-0-5,work,Work Information,Publisher,Publisher name,publisherGroupList > publisherGroup,publisher,n,y,authority: person/local; authority: organization/local
+botgarden_3-0-5,work,Work Information,Address,Address municipality,addrGroupList > addrGroup,addressMunicipality,n,y,authority: place/local; authority: place/tgn
+botgarden_3-0-5,work,Work Information,Address,Address state/province,addrGroupList > addrGroup,addressStateOrProvince,n,y,authority: place/local; authority: place/tgn
+botgarden_3-0-5,work,Work Information,Address,Address country,addrGroupList > addrGroup,addressCountry,n,y,authority: place/local; authority: place/tgn
+botgarden_3-0-5,taxon,Taxonomic Name Information,Term > Source,Term source name,taxonTermGroupList > taxonTermGroup,termSource,n,y,authority: citation/local; authority: citation/worldcat
+botgarden_3-0-5,taxon,Taxonomic Name Information,Author,Author name,taxonAuthorGroupList > taxonAuthorGroup,taxonAuthor,n,y,authority: person/local; authority: organization/local
+botgarden_3-0-5,taxon,Taxonomic Name Information,"",Citation,taxonCitationList,taxonCitation,y,n,authority: citation/local; authority: citation/worldcat
