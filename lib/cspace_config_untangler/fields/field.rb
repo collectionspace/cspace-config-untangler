@@ -212,26 +212,21 @@ module CspaceConfigUntangler
             msgs[fieldid]['fullName']
           elsif msgs.dig(fieldid, 'name')
             msgs[fieldid]['name']
-            # account for weirdness reported in DRYD-1269
           elsif val == "uoc_common.useDateHoursSpent"
+            CCU.warn_on_upgrade(binding.source_location, "DRYD-1269")
             alt_fieldname_lookup(val.sub("useDateHoursSpent", "hoursSpent"))
-            # account for weirdness reported in DRYD-1270
           elsif val == "collectionobjects_common.compressionStandard"
+            CCU.warn_on_upgrade(binding.source_location, "DRYD-1270")
             alt_fieldname_lookup(
               val.sub("compressionStandard", "compressionstandard")
             )
-            # account for weirdness reported in DRYD-1271
           elsif val == "conservation_common.sampleReturned"
+            CCU.warn_on_upgrade(binding.source_location, "DRYD-1271")
             msgs["field.conservation_common.sampleReturned.nadme"]["fullName"] ||
               msgs["field.conservation_common.sampleReturned.nadme"]["name"]
           elsif val.start_with?("conservation_livingplant")
             fixedval = val.sub("conservation_livingplant", "ext.livingplant")
             lookup_display_name(fixedval)
-            # Added for 7.2 associatedAuthority extension removed right before
-            #   release
-            # elsif val["chronologies_common"]
-            #   fixedval = val.sub("chronologies_common", "ext.associatedAuthority")
-            #   lookup_display_name(fixedval)
           else
             alt_fieldname_lookup(val)
           end
