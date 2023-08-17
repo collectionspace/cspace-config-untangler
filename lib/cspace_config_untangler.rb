@@ -174,6 +174,15 @@ module CspaceConfigUntangler
     FileUtils.cp(release_configs, CCU.configdir)
   end
 
+  def warn_on_upgrade(src, issue=nil)
+    return unless prev_release == "7_2"
+
+    basemsg = "Verify that code at line #{src[1]} in #{src[0]} is still "\
+      "needed after next release"
+    msgissue = issue ? "(#{issue})" : nil
+    warn([basemsg, msgissue].compact.join(" "))
+  end
+
   gem_agnostic_dir = $LOAD_PATH.select{ |dir| dir['untangler'] }.reject{ |dir| dir.end_with?('/spec') }.first
 
   # Require all application files
