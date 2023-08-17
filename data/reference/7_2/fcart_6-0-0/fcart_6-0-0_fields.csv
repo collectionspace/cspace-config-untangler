@@ -74,48 +74,18 @@ fcart_6-0-0,Chronology,Term source name,Chronology Information,Term > Source,str
 fcart_6-0-0,Chronology,Term source detail,Chronology Information,Term > Source,string,n,n,y,"","",chronology,termSourceDetail
 fcart_6-0-0,Chronology,Term source ID,Chronology Information,Term > Source,string,n,n,y,"","",chronology,termSourceID
 fcart_6-0-0,Chronology,Term source note,Chronology Information,Term > Source,string,n,n,y,"","",chronology,termSourceNote
-fcart_6-0-0,Chronology,Primary date range,Chronology Information,"",structured date group,n,n,n/a,"","",chronology,chronologyDateStructuredDateGroup
+fcart_6-0-0,Chronology,Primary date range,Chronology Information,"",structured date group,n,n,n/a,"","",chronology,primaryDateRangeStructuredDateGroup
 fcart_6-0-0,Chronology,Chronology type,Chronology Information,"",string,n,n,n/a,vocabulary: chronologytypes,"",chronology,chronologyType
-fcart_6-0-0,Chronology,"",Chronology Information,Spatial coverage,string,n,y,n,authority: place/local; authority: place/tgn,"",chronology,chronologyPlace
+fcart_6-0-0,Chronology,Spatial coverage,Chronology Information,"",string,n,y,n,authority: place/local; authority: place/tgn,"",chronology,spatialCoverage
 fcart_6-0-0,Chronology,Chronology description,Chronology Information,"",string,n,n,n/a,"","",chronology,chronologyDescription
 fcart_6-0-0,Chronology,Chronology note,Chronology Information,"",string,n,n,n/a,"","",chronology,chronologyNote
 fcart_6-0-0,Chronology,Resource identifier value,Chronology Information,Resource identifier,string,n,n,y,"","",chronology,identifierValue
 fcart_6-0-0,Chronology,Resource identifier citation,Chronology Information,Resource identifier,string,n,n,y,authority: citation/local; authority: citation/worldcat,"",chronology,identifierCitation
 fcart_6-0-0,Chronology,Resource identifier date,Chronology Information,Resource identifier,date,n,n,y,"","",chronology,identifierDate
-fcart_6-0-0,Chronology,Person associated,Associated Authorities,Person,string,n,n,y,authority: person/local; authority: person/ulan,"",chronology,person
-fcart_6-0-0,Chronology,Person relationship/type,Associated Authorities,Person,string,n,n,y,vocabulary: chronologypersonrelations,"",chronology,personType
-fcart_6-0-0,Chronology,Person date,Associated Authorities,Person,structured date group,n,n,y,"","",chronology,personStructuredDateGroup
-fcart_6-0-0,Chronology,Person citation,Associated Authorities,Person,string,n,y,as part of larger repeating group,authority: citation/local; authority: citation/worldcat,"",chronology,personCitation
-fcart_6-0-0,Chronology,Person note,Associated Authorities,Person,string,n,n,y,"","",chronology,personNote
-fcart_6-0-0,Chronology,People associated,Associated Authorities,People,string,n,n,y,authority: concept/associated,"",chronology,people
-fcart_6-0-0,Chronology,People relationship/type,Associated Authorities,People,string,n,n,y,vocabulary: chronologypeoplerelations,"",chronology,peopleType
-fcart_6-0-0,Chronology,People date,Associated Authorities,People,structured date group,n,n,y,"","",chronology,peopleStructuredDateGroup
-fcart_6-0-0,Chronology,People citation,Associated Authorities,People,string,n,y,as part of larger repeating group,authority: citation/local; authority: citation/worldcat,"",chronology,peopleCitation
-fcart_6-0-0,Chronology,People note,Associated Authorities,People,string,n,n,y,"","",chronology,peopleNote
-fcart_6-0-0,Chronology,Organization associated,Associated Authorities,Organization,string,n,n,y,authority: organization/local; authority: organization/ulan,"",chronology,organization
-fcart_6-0-0,Chronology,Organization relationship/type,Associated Authorities,Organization,string,n,n,y,vocabulary: chronologyorganizationrelations,"",chronology,organizationType
-fcart_6-0-0,Chronology,Organization date,Associated Authorities,Organization,structured date group,n,n,y,"","",chronology,organizationStructuredDateGroup
-fcart_6-0-0,Chronology,Organization citation,Associated Authorities,Organization,string,n,y,as part of larger repeating group,authority: citation/local; authority: citation/worldcat,"",chronology,organizationCitation
-fcart_6-0-0,Chronology,Organization note,Associated Authorities,Organization,string,n,n,y,"","",chronology,organizationNote
-fcart_6-0-0,Chronology,Concept associated,Associated Authorities,Concept,string,n,n,y,authority: concept/activity; authority: concept/associated; authority: concept/material; authority: concept/nomenclature; authority: concept/occasion,"",chronology,concept
-fcart_6-0-0,Chronology,Concept relationship/type,Associated Authorities,Concept,string,n,n,y,vocabulary: chronologyconceptrelations,"",chronology,conceptType
-fcart_6-0-0,Chronology,Concept date,Associated Authorities,Concept,structured date group,n,n,y,"","",chronology,conceptStructuredDateGroup
-fcart_6-0-0,Chronology,Concept citation,Associated Authorities,Concept,string,n,y,as part of larger repeating group,authority: citation/local; authority: citation/worldcat,"",chronology,conceptCitation
-fcart_6-0-0,Chronology,Concept note,Associated Authorities,Concept,string,n,n,y,"","",chronology,conceptNote
-fcart_6-0-0,Chronology,Place associated,Associated Authorities,Place,string,n,n,y,authority: place/local; authority: place/tgn,"",chronology,place
-fcart_6-0-0,Chronology,multiple msg matches: chronologies_common.placeType,Associated Authorities,Place,string,n,n,y,vocabulary: chronologyplacerelations,"",chronology,placeType
-fcart_6-0-0,Chronology,Place date,Associated Authorities,Place,structured date group,n,n,y,"","",chronology,placeStructuredDateGroup
-fcart_6-0-0,Chronology,Place citation,Associated Authorities,Place,string,n,y,as part of larger repeating group,authority: citation/local; authority: citation/worldcat,"",chronology,placeCitation
-fcart_6-0-0,Chronology,multiple msg matches: chronologies_common.placeNote,Associated Authorities,Place,string,n,n,y,"","",chronology,placeNote
-fcart_6-0-0,Chronology,Related period associated,Associated Authorities,Related period,string,n,n,y,authority: chronology/era; authority: chronology/event; authority: chronology/fieldcollection,"",chronology,relatedPeriod
-fcart_6-0-0,Chronology,Related period relationship/type,Associated Authorities,Related period,string,n,n,y,vocabulary: chronologyrelations,"",chronology,relatedPeriodType
-fcart_6-0-0,Chronology,Related period date,Associated Authorities,Related period,structured date group,n,n,y,"","",chronology,relatedPeriodStructuredDateGroup
-fcart_6-0-0,Chronology,Related period citation,Associated Authorities,Related period,string,n,y,as part of larger repeating group,authority: citation/local; authority: citation/worldcat,"",chronology,relatedPeriodCitation
-fcart_6-0-0,Chronology,Related period note,Associated Authorities,Related period,string,n,n,y,"","",chronology,relatedPeriodNote
-fcart_6-0-0,Chronology,Alternative date range,Alternative Date Information,Alternative date,structured date group,n,n,y,"","",chronology,otherDateStructuredDateGroup
-fcart_6-0-0,Chronology,Alternative date spacial coverage,Alternative Date Information,Alternative date,string,n,y,as part of larger repeating group,authority: place/local; authority: place/tgn,"",chronology,otherDatePlace
-fcart_6-0-0,Chronology,Alternative date citation,Alternative Date Information,Alternative date,string,n,y,as part of larger repeating group,authority: citation/local; authority: citation/worldcat,"",chronology,otherDateCitation
-fcart_6-0-0,Chronology,Alternative date note,Alternative Date Information,Alternative date,string,n,n,y,"","",chronology,otherDateNote
+fcart_6-0-0,Chronology,Alternative date range,Alternative Date Information,Alternative date,structured date group,n,n,y,"","",chronology,altDateRangeStructuredDateGroup
+fcart_6-0-0,Chronology,Alternative date spatial coverage,Alternative Date Information,Alternative date,string,n,y,as part of larger repeating group,authority: place/local; authority: place/tgn,"",chronology,altDateSpatialCoverage
+fcart_6-0-0,Chronology,Alternative date citation,Alternative Date Information,Alternative date,string,n,y,as part of larger repeating group,authority: citation/local; authority: citation/worldcat,"",chronology,altDateCitation
+fcart_6-0-0,Chronology,Alternative date note,Alternative Date Information,Alternative date,string,n,n,y,"","",chronology,altDateNote
 fcart_6-0-0,Object,Identification number,Object Identification Information,"",string,y,n,n/a,"","",collectionobject,objectNumber
 fcart_6-0-0,Object,Number of objects,Object Identification Information,"",integer,n,n,n/a,"","",collectionobject,numberOfObjects
 fcart_6-0-0,Object,Other number value,Object Identification Information,Other number,string,n,n,y,"","",collectionobject,numberValue

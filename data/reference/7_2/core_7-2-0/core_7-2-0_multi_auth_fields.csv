@@ -7,21 +7,10 @@ core_7-2-0,Citation,Publication place,Citation Information,Publication,n,y,autho
 core_7-2-0,Citation,Agent name,Citation Information,Agent,n,y,authority: person/local; authority: person/ulan; authority: organization/local,citation,agent
 core_7-2-0,Citation,Related term,Citation Information,Related term,n,y,authority: concept/associated; authority: concept/activity; authority: concept/material,citation,relatedTerm
 core_7-2-0,Chronology,Term source name,Chronology Information,Term > Source,n,y,authority: citation/local; authority: citation/worldcat,chronology,termSource
-core_7-2-0,Chronology,"",Chronology Information,Spatial coverage,y,n,authority: place/local; authority: place/tgn,chronology,chronologyPlace
+core_7-2-0,Chronology,Spatial coverage,Chronology Information,"",y,n,authority: place/local; authority: place/tgn,chronology,spatialCoverage
 core_7-2-0,Chronology,Resource identifier citation,Chronology Information,Resource identifier,n,y,authority: citation/local; authority: citation/worldcat,chronology,identifierCitation
-core_7-2-0,Chronology,Person associated,Associated Authorities,Person,n,y,authority: person/local; authority: person/ulan,chronology,person
-core_7-2-0,Chronology,Person citation,Associated Authorities,Person,y,as part of larger repeating group,authority: citation/local; authority: citation/worldcat,chronology,personCitation
-core_7-2-0,Chronology,People citation,Associated Authorities,People,y,as part of larger repeating group,authority: citation/local; authority: citation/worldcat,chronology,peopleCitation
-core_7-2-0,Chronology,Organization associated,Associated Authorities,Organization,n,y,authority: organization/local; authority: organization/ulan,chronology,organization
-core_7-2-0,Chronology,Organization citation,Associated Authorities,Organization,y,as part of larger repeating group,authority: citation/local; authority: citation/worldcat,chronology,organizationCitation
-core_7-2-0,Chronology,Concept associated,Associated Authorities,Concept,n,y,authority: concept/activity; authority: concept/associated; authority: concept/material; authority: concept/nomenclature; authority: concept/occasion,chronology,concept
-core_7-2-0,Chronology,Concept citation,Associated Authorities,Concept,y,as part of larger repeating group,authority: citation/local; authority: citation/worldcat,chronology,conceptCitation
-core_7-2-0,Chronology,Place associated,Associated Authorities,Place,n,y,authority: place/local; authority: place/tgn,chronology,place
-core_7-2-0,Chronology,Place citation,Associated Authorities,Place,y,as part of larger repeating group,authority: citation/local; authority: citation/worldcat,chronology,placeCitation
-core_7-2-0,Chronology,Related period associated,Associated Authorities,Related period,n,y,authority: chronology/era; authority: chronology/event; authority: chronology/fieldcollection,chronology,relatedPeriod
-core_7-2-0,Chronology,Related period citation,Associated Authorities,Related period,y,as part of larger repeating group,authority: citation/local; authority: citation/worldcat,chronology,relatedPeriodCitation
-core_7-2-0,Chronology,Alternative date spacial coverage,Alternative Date Information,Alternative date,y,as part of larger repeating group,authority: place/local; authority: place/tgn,chronology,otherDatePlace
-core_7-2-0,Chronology,Alternative date citation,Alternative Date Information,Alternative date,y,as part of larger repeating group,authority: citation/local; authority: citation/worldcat,chronology,otherDateCitation
+core_7-2-0,Chronology,Alternative date spatial coverage,Alternative Date Information,Alternative date,y,as part of larger repeating group,authority: place/local; authority: place/tgn,chronology,altDateSpatialCoverage
+core_7-2-0,Chronology,Alternative date citation,Alternative Date Information,Alternative date,y,as part of larger repeating group,authority: citation/local; authority: citation/worldcat,chronology,altDateCitation
 core_7-2-0,Object,Measured by,Object Description Information,Dimensions > Measurement,n,y,authority: person/local; authority: organization/local,collectionobject,measuredBy
 core_7-2-0,Object,Content concept,Object Description Information,Content,y,n,authority: concept/associated; authority: concept/material,collectionobject,contentConcept
 core_7-2-0,Object,Content person,Object Description Information,Content,y,n,authority: person/local; authority: person/ulan,collectionobject,contentPerson

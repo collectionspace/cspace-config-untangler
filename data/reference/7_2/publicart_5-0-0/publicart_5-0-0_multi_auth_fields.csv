@@ -6,17 +6,6 @@ publicart_5-0-0,Acquisition,Commissioning body,Commission Information,"",y,n,aut
 publicart_5-0-0,Citation,Term source name,Citation Information,Term > Source,n,y,authority: citation/local; authority: citation/worldcat,citation,termSource
 publicart_5-0-0,Citation,Agent name,Citation Information,Agent,n,y,authority: person/local; authority: organization/local,citation,agent
 publicart_5-0-0,Citation,Related term,Citation Information,Related term,n,y,authority: concept/associated; authority: concept/material,citation,relatedTerm
-publicart_5-0-0,Chronology,Term source name,Chronology Information,Term > Source,n,y,authority: citation/local; authority: citation/worldcat,chronology,termSource
-publicart_5-0-0,Chronology,Resource identifier citation,Chronology Information,Resource identifier,n,y,authority: citation/local; authority: citation/worldcat,chronology,identifierCitation
-publicart_5-0-0,Chronology,Person citation,Associated Authorities,Person,y,as part of larger repeating group,authority: citation/local; authority: citation/worldcat,chronology,personCitation
-publicart_5-0-0,Chronology,People citation,Associated Authorities,People,y,as part of larger repeating group,authority: citation/local; authority: citation/worldcat,chronology,peopleCitation
-publicart_5-0-0,Chronology,Organization citation,Associated Authorities,Organization,y,as part of larger repeating group,authority: citation/local; authority: citation/worldcat,chronology,organizationCitation
-publicart_5-0-0,Chronology,Concept associated,Associated Authorities,Concept,n,y,authority: concept/associated; authority: concept/material; authority: concept/nomenclature; authority: concept/occasion,chronology,concept
-publicart_5-0-0,Chronology,Concept citation,Associated Authorities,Concept,y,as part of larger repeating group,authority: citation/local; authority: citation/worldcat,chronology,conceptCitation
-publicart_5-0-0,Chronology,Place citation,Associated Authorities,Place,y,as part of larger repeating group,authority: citation/local; authority: citation/worldcat,chronology,placeCitation
-publicart_5-0-0,Chronology,Related period associated,Associated Authorities,Related period,n,y,authority: chronology/era; authority: chronology/event; authority: chronology/fieldcollection,chronology,relatedPeriod
-publicart_5-0-0,Chronology,Related period citation,Associated Authorities,Related period,y,as part of larger repeating group,authority: citation/local; authority: citation/worldcat,chronology,relatedPeriodCitation
-publicart_5-0-0,Chronology,Alternative date citation,Alternative Date Information,Alternative date,y,as part of larger repeating group,authority: citation/local; authority: citation/worldcat,chronology,otherDateCitation
 publicart_5-0-0,Object,Owner,Object Identification Information,Object Owner's Contribution Information,y,n,authority: person/local; authority: organization/local,collectionobject,owner
 publicart_5-0-0,Object,Textual inscription inscriber,Object Description Information,Textual Inscription > Textual inscription,n,y,authority: person/local; authority: organization/local,collectionobject,inscriptionContentInscriber
 publicart_5-0-0,Object,Artwork creator name,Object Production Information,Artwork creator,n,y,authority: person/local; authority: organization/local,collectionobject,publicartProductionPerson

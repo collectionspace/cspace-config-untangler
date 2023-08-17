@@ -3,14 +3,8 @@ fcart_6-0-0,Acquisition,Accession date,Acquisition Information,"",n,n/a,acquisit
 fcart_6-0-0,Acquisition,Acquisition date,Acquisition Information,"",y,n,acquisition,acquisitionDateGroup
 fcart_6-0-0,Citation,Publication date,Citation Information,Publication,n,y,citation,publicationDate
 fcart_6-0-0,Citation,Resource identifier capture date,Citation Information,Resource identifier,n,y,citation,captureDate
-fcart_6-0-0,Chronology,Primary date range,Chronology Information,"",n,n/a,chronology,chronologyDateStructuredDateGroup
-fcart_6-0-0,Chronology,Person date,Associated Authorities,Person,n,y,chronology,personStructuredDateGroup
-fcart_6-0-0,Chronology,People date,Associated Authorities,People,n,y,chronology,peopleStructuredDateGroup
-fcart_6-0-0,Chronology,Organization date,Associated Authorities,Organization,n,y,chronology,organizationStructuredDateGroup
-fcart_6-0-0,Chronology,Concept date,Associated Authorities,Concept,n,y,chronology,conceptStructuredDateGroup
-fcart_6-0-0,Chronology,Place date,Associated Authorities,Place,n,y,chronology,placeStructuredDateGroup
-fcart_6-0-0,Chronology,Related period date,Associated Authorities,Related period,n,y,chronology,relatedPeriodStructuredDateGroup
-fcart_6-0-0,Chronology,Alternative date range,Alternative Date Information,Alternative date,n,y,chronology,otherDateStructuredDateGroup
+fcart_6-0-0,Chronology,Primary date range,Chronology Information,"",n,n/a,chronology,primaryDateRangeStructuredDateGroup
+fcart_6-0-0,Chronology,Alternative date range,Alternative Date Information,Alternative date,n,y,chronology,altDateRangeStructuredDateGroup
 fcart_6-0-0,Object,Production date,Object Production Information,"",y,n,collectionobject,objectProductionDateGroup
 fcart_6-0-0,Object,Content date,Object Description Information,Content,n,n/a,collectionobject,contentDateGroup
 fcart_6-0-0,Object,Textual inscription date,Object Description Information,Textual Inscription > Textual inscription,n,y,collectionobject,inscriptionContentDateGroup

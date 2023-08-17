@@ -1,0 +1,18 @@
+profile,record_type,field,record_section,path_to_field,repeats,group_repeats,record_type_machine_name,field_machine_name
+materials_3-0-8,Acquisition,Accession date,Acquisition Information,"",n,n/a,acquisition,accessionDateGroup
+materials_3-0-8,Acquisition,Acquisition date,Acquisition Information,"",y,n,acquisition,acquisitionDateGroup
+materials_3-0-8,Citation,Publication date,Citation Information,Publication,n,y,citation,publicationDate
+materials_3-0-8,Citation,Resource identifier capture date,Citation Information,Resource identifier,n,y,citation,captureDate
+materials_3-0-8,Object,Production date,Object Production Information,"",y,n,collectionobject,objectProductionDateGroup
+materials_3-0-8,Media Handling,Date,Media Handling Information,"",y,n,media,dateGroup
+materials_3-0-8,Object Exit,Exit date,Object Exit Information,"",n,n/a,objectexit,exitDateGroup
+materials_3-0-8,Organization,Foundation date,Organization Information,"",n,n/a,organization,foundingDateGroup
+materials_3-0-8,Organization,Dissolution date,Organization Information,"",n,n/a,organization,dissolutionDateGroup
+materials_3-0-8,Organization,Contact date,Organization Information,Contact person,n,y,organization,contactDateGroup
+materials_3-0-8,Organization,Contact end date,Organization Information,Contact person,n,y,organization,contactEndDateGroup
+materials_3-0-8,Place,Term date,Place Information,Term,n,y,place,nameDateGroup
+materials_3-0-8,Place,Ownership date,Place Information,Ownership,n,y,place,ownershipDateGroup
+materials_3-0-8,Place,Georeference date,Georeference Information,Georeference,n,y,place,geoRefDateGroup
+materials_3-0-8,Work,Work date,Work Information,"",y,n,work,workDateGroup
+materials_3-0-8,Material,Discontinued date,Material Information,Discontinued,n,n/a,material,discontinuedDate
+materials_3-0-8,Material,Production date,Material Information,"",n,n/a,material,productionDate
