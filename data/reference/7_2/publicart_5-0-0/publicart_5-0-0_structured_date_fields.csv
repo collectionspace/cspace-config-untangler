@@ -2,14 +2,6 @@ profile,record_type,field,record_section,path_to_field,repeats,group_repeats,rec
 publicart_5-0-0,Acquisition,Commission date,Commission Information,"",n,n/a,acquisition,commissionDate
 publicart_5-0-0,Citation,Publication date,Citation Information,Publication,n,y,citation,publicationDate
 publicart_5-0-0,Citation,Resource identifier capture date,Citation Information,Resource identifier,n,y,citation,captureDate
-publicart_5-0-0,Chronology,Primary date range,Chronology Information,"",n,n/a,chronology,chronologyDateStructuredDateGroup
-publicart_5-0-0,Chronology,Person date,Associated Authorities,Person,n,y,chronology,personStructuredDateGroup
-publicart_5-0-0,Chronology,People date,Associated Authorities,People,n,y,chronology,peopleStructuredDateGroup
-publicart_5-0-0,Chronology,Organization date,Associated Authorities,Organization,n,y,chronology,organizationStructuredDateGroup
-publicart_5-0-0,Chronology,Concept date,Associated Authorities,Concept,n,y,chronology,conceptStructuredDateGroup
-publicart_5-0-0,Chronology,Place date,Associated Authorities,Place,n,y,chronology,placeStructuredDateGroup
-publicart_5-0-0,Chronology,Related period date,Associated Authorities,Related period,n,y,chronology,relatedPeriodStructuredDateGroup
-publicart_5-0-0,Chronology,Alternative date range,Alternative Date Information,Alternative date,n,y,chronology,otherDateStructuredDateGroup
 publicart_5-0-0,Object,Artwork date,Object Production Information,Artwork date,n,y,collectionobject,publicartProductionDate
 publicart_5-0-0,Exhibition,Gallery rotation start date,Exhibition Information,Gallery rotation,n,y,exhibition,galleryRotationStartDateGroup
 publicart_5-0-0,Exhibition,Gallery rotation end date,Exhibition Information,Gallery rotation,n,y,exhibition,galleryRotationEndDateGroup

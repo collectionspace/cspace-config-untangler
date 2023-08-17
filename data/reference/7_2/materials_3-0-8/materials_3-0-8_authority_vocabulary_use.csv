@@ -1,17 +1,5 @@
 profile,authority,authority_vocab,used_in_profile,controlled_field_ct,controlled_fields
-materials_3-0-6,chronology,chronology/era,y,1,Chronology: Related period associated (Associated Authorities>Related period)
-materials_3-0-6,chronology,chronology/event,y,1,Chronology: Related period associated (Associated Authorities>Related period)
-materials_3-0-6,chronology,chronology/fieldcollection,y,1,Chronology: Related period associated (Associated Authorities>Related period)
-materials_3-0-6,citation,citation/local,y,18,"Chronology: Alternative date citation (Alternative Date Information>Alternative date)
-Chronology: Concept citation (Associated Authorities>Concept)
-Chronology: Organization citation (Associated Authorities>Organization)
-Chronology: People citation (Associated Authorities>People)
-Chronology: Person citation (Associated Authorities>Person)
-Chronology: Place citation (Associated Authorities>Place)
-Chronology: Related period citation (Associated Authorities>Related period)
-Chronology: Resource identifier citation (Chronology Information>Resource identifier)
-Chronology: Term source name (Chronology Information>Term>Source)
-Citation: Term source name (Citation Information>Term>Source)
+materials_3-0-8,citation,citation/local,y,9,"Citation: Term source name (Citation Information>Term>Source)
 Concept: Term source name (Concept Information>Term>Source)
 Material: Citation source (Material Information>Citation)
 Material: Term source name (Material Information>Term>Source)
@@ -20,29 +8,27 @@ Person: Term source name (Person Information>Term>Source)
 Place: Term source name (Place Information>Term>Source)
 Storage Location: Term source name (Storage Location Information>Term>Source)
 Work: Term source name (Work Information>Term>Source)"
-materials_3-0-6,citation,citation/shared,n,0,""
-materials_3-0-6,concept,concept/materialclassification,y,3,"Material: Composition class name (Material Information>Composition)
+materials_3-0-8,citation,citation/shared,n,0,""
+materials_3-0-8,concept,concept/materialclassification,y,3,"Material: Composition class name (Material Information>Composition)
 Material: Composition family name (Material Information>Composition)
 Material: Composition generic name (Material Information>Composition)"
-materials_3-0-6,concept,concept/nomenclature,y,1,Chronology: Concept associated (Associated Authorities>Concept)
-materials_3-0-6,concept,concept/occasion,y,2,"Chronology: Concept associated (Associated Authorities>Concept)
-Use of Collections: Occasion (Use of Collections Information)"
-materials_3-0-6,concept,concept/sharedmaterialclassification,y,3,"Material: Composition class name (Material Information>Composition)
+materials_3-0-8,concept,concept/nomenclature,n,0,""
+materials_3-0-8,concept,concept/occasion,y,1,Use of Collections: Occasion (Use of Collections Information)
+materials_3-0-8,concept,concept/sharedmaterialclassification,y,3,"Material: Composition class name (Material Information>Composition)
 Material: Composition family name (Material Information>Composition)
 Material: Composition generic name (Material Information>Composition)"
-materials_3-0-6,location,location/local,y,4,"Location/Movement/Inventory: Current location (Object Location Information)
+materials_3-0-8,location,location/local,y,4,"Location/Movement/Inventory: Current location (Object Location Information)
 Location/Movement/Inventory: Normal location (Object Location Information)
 Object: Computed current location (Object Identification Information)
 Use of Collections: Location (Use of Collections Information)"
-materials_3-0-6,location,location/offsite,y,3,"Location/Movement/Inventory: Current location (Object Location Information)
+materials_3-0-8,location,location/offsite,y,3,"Location/Movement/Inventory: Current location (Object Location Information)
 Location/Movement/Inventory: Normal location (Object Location Information)
 Object: Computed current location (Object Identification Information)"
-materials_3-0-6,material,material/local,y,2,"Media Handling: Coverage (Media Handling Information)
+materials_3-0-8,material,material/local,y,2,"Media Handling: Coverage (Media Handling Information)
 Object: Material (Object Identification Information>Material)"
-materials_3-0-6,material,material/shared,y,2,"Media Handling: Coverage (Media Handling Information)
+materials_3-0-8,material,material/shared,y,2,"Media Handling: Coverage (Media Handling Information)
 Object: Material (Object Identification Information>Material)"
-materials_3-0-6,organization,organization/local,y,40,"Acquisition: Acquisition source (Acquisition Information)
-Chronology: Organization associated (Associated Authorities>Organization)
+materials_3-0-8,organization,organization/local,y,39,"Acquisition: Acquisition source (Acquisition Information)
 Citation: Agent name (Citation Information>Agent)
 Citation: Publisher (Citation Information>Publication)
 Conservation: Conservator (Conservation Treatment Information)
@@ -81,10 +67,9 @@ Use of Collections: User institution (Use of Collections Information>User)
 Use of Collections: User name (Use of Collections Information>User)
 Work: Creator name (Work Information>Creator)
 Work: Publisher name (Work Information>Publisher)"
-materials_3-0-6,organization,organization/shared,n,0,""
-materials_3-0-6,person,person/local,y,49,"Acquisition: Acquisition source (Acquisition Information)
+materials_3-0-8,organization,organization/shared,n,0,""
+materials_3-0-8,person,person/local,y,48,"Acquisition: Acquisition source (Acquisition Information)
 Acquisition: Authorizer (Acquisition Information>Authorization)
-Chronology: Person associated (Associated Authorities>Person)
 Citation: Agent name (Citation Information>Agent)
 Conservation: Analysis researcher (Object Analysis Information)
 Conservation: Approved by (Conservation Treatment Information)
@@ -131,11 +116,8 @@ Use of Collections: Staff name (Use of Collections Information>Staff)
 Use of Collections: User name (Use of Collections Information>User)
 Work: Creator name (Work Information>Creator)
 Work: Publisher name (Work Information>Publisher)"
-materials_3-0-6,person,person/shared,n,0,""
-materials_3-0-6,place,place/local,y,12,"Chronology:  (Chronology Information>Spatial coverage)
-Chronology: Alternative date spacial coverage (Alternative Date Information>Alternative date)
-Chronology: Place associated (Associated Authorities>Place)
-Citation: Publication place (Citation Information>Publication)
+materials_3-0-8,person,person/shared,n,0,""
+materials_3-0-8,place,place/local,y,9,"Citation: Publication place (Citation Information>Publication)
 Material: Production place name (Material Information>Production place)
 Media Handling: Coverage (Media Handling Information)
 Transport: Arrival point (Transport Information>Arrival)
@@ -144,9 +126,9 @@ Use of Collections: Location (Use of Collections Information)
 Work: Address country (Work Information>Address)
 Work: Address municipality (Work Information>Address)
 Work: Address state/province (Work Information>Address)"
-materials_3-0-6,place,place/shared,n,0,""
-materials_3-0-6,work,work/local,y,3,"Material: Featured application name (Material Information>Featured application)
+materials_3-0-8,place,place/shared,n,0,""
+materials_3-0-8,work,work/local,y,3,"Material: Featured application name (Material Information>Featured application)
 Material: Featured collection name (Material Information>Featured collection)
 Object: Named collection (Object Identification Information)"
-materials_3-0-6,work,work/shared,y,2,"Material: Featured application name (Material Information>Featured application)
+materials_3-0-8,work,work/shared,y,2,"Material: Featured application name (Material Information>Featured application)
 Material: Featured collection name (Material Information>Featured collection)"

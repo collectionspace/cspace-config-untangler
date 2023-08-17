@@ -3,14 +3,8 @@ lhmc_6-0-0,Acquisition,Accessioned,Acquisition Information,"",n,n/a,acquisition,
 lhmc_6-0-0,Acquisition,Acquisition date,Acquisition Information,"",y,n,acquisition,acquisitionDateGroup
 lhmc_6-0-0,Citation,Publication date,Citation Information,Publication,n,y,citation,publicationDate
 lhmc_6-0-0,Citation,Resource identifier capture date,Citation Information,Resource identifier,n,y,citation,captureDate
-lhmc_6-0-0,Chronology,Primary date range,Chronology Information,"",n,n/a,chronology,chronologyDateStructuredDateGroup
-lhmc_6-0-0,Chronology,Person date,Associated Authorities,Person,n,y,chronology,personStructuredDateGroup
-lhmc_6-0-0,Chronology,People date,Associated Authorities,People,n,y,chronology,peopleStructuredDateGroup
-lhmc_6-0-0,Chronology,Organization date,Associated Authorities,Organization,n,y,chronology,organizationStructuredDateGroup
-lhmc_6-0-0,Chronology,Concept date,Associated Authorities,Concept,n,y,chronology,conceptStructuredDateGroup
-lhmc_6-0-0,Chronology,Place date,Associated Authorities,Place,n,y,chronology,placeStructuredDateGroup
-lhmc_6-0-0,Chronology,Related period date,Associated Authorities,Related period,n,y,chronology,relatedPeriodStructuredDateGroup
-lhmc_6-0-0,Chronology,Alternative date range,Alternative Date Information,Alternative date,n,y,chronology,otherDateStructuredDateGroup
+lhmc_6-0-0,Chronology,Primary date range,Chronology Information,"",n,n/a,chronology,primaryDateRangeStructuredDateGroup
+lhmc_6-0-0,Chronology,Alternative date range,Alternative Date Information,Alternative date,n,y,chronology,altDateRangeStructuredDateGroup
 lhmc_6-0-0,Object,Content date,Object Description Information,Content,n,n/a,collectionobject,contentDateGroup
 lhmc_6-0-0,Object,Textual inscription date,Object Description Information,Textual Inscription > Textual inscription,n,y,collectionobject,inscriptionContentDateGroup
 lhmc_6-0-0,Object,Non-textual inscription date,Object Description Information,Non-Textual Inscription > Non-textual inscription,n,y,collectionobject,inscriptionDescriptionDateGroup

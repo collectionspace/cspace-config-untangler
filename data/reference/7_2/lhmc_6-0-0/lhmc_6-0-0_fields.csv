@@ -71,48 +71,18 @@ lhmc_6-0-0,Chronology,Term source name,Chronology Information,Term > Source,stri
 lhmc_6-0-0,Chronology,Term source detail,Chronology Information,Term > Source,string,n,n,y,"","",chronology,termSourceDetail
 lhmc_6-0-0,Chronology,Term source ID,Chronology Information,Term > Source,string,n,n,y,"","",chronology,termSourceID
 lhmc_6-0-0,Chronology,Term source note,Chronology Information,Term > Source,string,n,n,y,"","",chronology,termSourceNote
-lhmc_6-0-0,Chronology,Primary date range,Chronology Information,"",structured date group,n,n,n/a,"","",chronology,chronologyDateStructuredDateGroup
+lhmc_6-0-0,Chronology,Primary date range,Chronology Information,"",structured date group,n,n,n/a,"","",chronology,primaryDateRangeStructuredDateGroup
 lhmc_6-0-0,Chronology,Chronology type,Chronology Information,"",string,n,n,n/a,vocabulary: chronologytypes,"",chronology,chronologyType
-lhmc_6-0-0,Chronology,"",Chronology Information,Spatial coverage,string,n,y,n,authority: place/local; authority: place/tgn,"",chronology,chronologyPlace
+lhmc_6-0-0,Chronology,Spatial coverage,Chronology Information,"",string,n,y,n,authority: place/local; authority: place/tgn,"",chronology,spatialCoverage
 lhmc_6-0-0,Chronology,Chronology description,Chronology Information,"",string,n,n,n/a,"","",chronology,chronologyDescription
 lhmc_6-0-0,Chronology,Chronology note,Chronology Information,"",string,n,n,n/a,"","",chronology,chronologyNote
 lhmc_6-0-0,Chronology,Resource identifier value,Chronology Information,Resource identifier,string,n,n,y,"","",chronology,identifierValue
 lhmc_6-0-0,Chronology,Resource identifier citation,Chronology Information,Resource identifier,string,n,n,y,authority: citation/local; authority: citation/worldcat,"",chronology,identifierCitation
 lhmc_6-0-0,Chronology,Resource identifier date,Chronology Information,Resource identifier,date,n,n,y,"","",chronology,identifierDate
-lhmc_6-0-0,Chronology,Person associated,Associated Authorities,Person,string,n,n,y,authority: person/local; authority: person/ulan,"",chronology,person
-lhmc_6-0-0,Chronology,Person relationship/type,Associated Authorities,Person,string,n,n,y,vocabulary: chronologypersonrelations,"",chronology,personType
-lhmc_6-0-0,Chronology,Person date,Associated Authorities,Person,structured date group,n,n,y,"","",chronology,personStructuredDateGroup
-lhmc_6-0-0,Chronology,Person citation,Associated Authorities,Person,string,n,y,as part of larger repeating group,authority: citation/local; authority: citation/worldcat,"",chronology,personCitation
-lhmc_6-0-0,Chronology,Person note,Associated Authorities,Person,string,n,n,y,"","",chronology,personNote
-lhmc_6-0-0,Chronology,People associated,Associated Authorities,People,string,n,n,y,authority: concept/associated,"",chronology,people
-lhmc_6-0-0,Chronology,People relationship/type,Associated Authorities,People,string,n,n,y,vocabulary: chronologypeoplerelations,"",chronology,peopleType
-lhmc_6-0-0,Chronology,People date,Associated Authorities,People,structured date group,n,n,y,"","",chronology,peopleStructuredDateGroup
-lhmc_6-0-0,Chronology,People citation,Associated Authorities,People,string,n,y,as part of larger repeating group,authority: citation/local; authority: citation/worldcat,"",chronology,peopleCitation
-lhmc_6-0-0,Chronology,People note,Associated Authorities,People,string,n,n,y,"","",chronology,peopleNote
-lhmc_6-0-0,Chronology,Organization associated,Associated Authorities,Organization,string,n,n,y,authority: organization/local; authority: organization/ulan,"",chronology,organization
-lhmc_6-0-0,Chronology,Organization relationship/type,Associated Authorities,Organization,string,n,n,y,vocabulary: chronologyorganizationrelations,"",chronology,organizationType
-lhmc_6-0-0,Chronology,Organization date,Associated Authorities,Organization,structured date group,n,n,y,"","",chronology,organizationStructuredDateGroup
-lhmc_6-0-0,Chronology,Organization citation,Associated Authorities,Organization,string,n,y,as part of larger repeating group,authority: citation/local; authority: citation/worldcat,"",chronology,organizationCitation
-lhmc_6-0-0,Chronology,Organization note,Associated Authorities,Organization,string,n,n,y,"","",chronology,organizationNote
-lhmc_6-0-0,Chronology,Concept associated,Associated Authorities,Concept,string,n,n,y,authority: concept/activity; authority: concept/associated; authority: concept/material; authority: concept/nomenclature; authority: concept/occasion,"",chronology,concept
-lhmc_6-0-0,Chronology,Concept relationship/type,Associated Authorities,Concept,string,n,n,y,vocabulary: chronologyconceptrelations,"",chronology,conceptType
-lhmc_6-0-0,Chronology,Concept date,Associated Authorities,Concept,structured date group,n,n,y,"","",chronology,conceptStructuredDateGroup
-lhmc_6-0-0,Chronology,Concept citation,Associated Authorities,Concept,string,n,y,as part of larger repeating group,authority: citation/local; authority: citation/worldcat,"",chronology,conceptCitation
-lhmc_6-0-0,Chronology,Concept note,Associated Authorities,Concept,string,n,n,y,"","",chronology,conceptNote
-lhmc_6-0-0,Chronology,Place associated,Associated Authorities,Place,string,n,n,y,authority: place/local; authority: place/tgn,"",chronology,place
-lhmc_6-0-0,Chronology,multiple msg matches: chronologies_common.placeType,Associated Authorities,Place,string,n,n,y,vocabulary: chronologyplacerelations,"",chronology,placeType
-lhmc_6-0-0,Chronology,Place date,Associated Authorities,Place,structured date group,n,n,y,"","",chronology,placeStructuredDateGroup
-lhmc_6-0-0,Chronology,Place citation,Associated Authorities,Place,string,n,y,as part of larger repeating group,authority: citation/local; authority: citation/worldcat,"",chronology,placeCitation
-lhmc_6-0-0,Chronology,multiple msg matches: chronologies_common.placeNote,Associated Authorities,Place,string,n,n,y,"","",chronology,placeNote
-lhmc_6-0-0,Chronology,Related period associated,Associated Authorities,Related period,string,n,n,y,authority: chronology/era; authority: chronology/event; authority: chronology/fieldcollection,"",chronology,relatedPeriod
-lhmc_6-0-0,Chronology,Related period relationship/type,Associated Authorities,Related period,string,n,n,y,vocabulary: chronologyrelations,"",chronology,relatedPeriodType
-lhmc_6-0-0,Chronology,Related period date,Associated Authorities,Related period,structured date group,n,n,y,"","",chronology,relatedPeriodStructuredDateGroup
-lhmc_6-0-0,Chronology,Related period citation,Associated Authorities,Related period,string,n,y,as part of larger repeating group,authority: citation/local; authority: citation/worldcat,"",chronology,relatedPeriodCitation
-lhmc_6-0-0,Chronology,Related period note,Associated Authorities,Related period,string,n,n,y,"","",chronology,relatedPeriodNote
-lhmc_6-0-0,Chronology,Alternative date range,Alternative Date Information,Alternative date,structured date group,n,n,y,"","",chronology,otherDateStructuredDateGroup
-lhmc_6-0-0,Chronology,Alternative date spacial coverage,Alternative Date Information,Alternative date,string,n,y,as part of larger repeating group,authority: place/local; authority: place/tgn,"",chronology,otherDatePlace
-lhmc_6-0-0,Chronology,Alternative date citation,Alternative Date Information,Alternative date,string,n,y,as part of larger repeating group,authority: citation/local; authority: citation/worldcat,"",chronology,otherDateCitation
-lhmc_6-0-0,Chronology,Alternative date note,Alternative Date Information,Alternative date,string,n,n,y,"","",chronology,otherDateNote
+lhmc_6-0-0,Chronology,Alternative date range,Alternative Date Information,Alternative date,structured date group,n,n,y,"","",chronology,altDateRangeStructuredDateGroup
+lhmc_6-0-0,Chronology,Alternative date spatial coverage,Alternative Date Information,Alternative date,string,n,y,as part of larger repeating group,authority: place/local; authority: place/tgn,"",chronology,altDateSpatialCoverage
+lhmc_6-0-0,Chronology,Alternative date citation,Alternative Date Information,Alternative date,string,n,y,as part of larger repeating group,authority: citation/local; authority: citation/worldcat,"",chronology,altDateCitation
+lhmc_6-0-0,Chronology,Alternative date note,Alternative Date Information,Alternative date,string,n,n,y,"","",chronology,altDateNote
 lhmc_6-0-0,Object,Identification number,Object Identification Information,"",string,y,n,n/a,"","",collectionobject,objectNumber
 lhmc_6-0-0,Object,Number of objects,Object Identification Information,"",integer,n,n,n/a,"","",collectionobject,numberOfObjects
 lhmc_6-0-0,Object,Other number value,Object Identification Information,Other number,string,n,n,y,"","",collectionobject,numberValue
@@ -541,6 +511,7 @@ lhmc_6-0-0,Loan In,Note,Loan In Information,"",string,n,n,n/a,"","",loanin,loanI
 lhmc_6-0-0,Loan In,Loan in date,Loan In Information,"",date,n,n,n/a,"","",loanin,loanInDate
 lhmc_6-0-0,Loan In,Loan return date,Loan In Information,"",date,n,n,n/a,"","",loanin,loanReturnDate
 lhmc_6-0-0,Loan In,Loan renewal application date,Loan In Information,"",date,n,n,n/a,"","",loanin,loanRenewalApplicationDate
+lhmc_6-0-0,Loan In,Credit line,Loan In Information,"",string,n,n,n/a,"","",loanin,creditLine
 lhmc_6-0-0,Loan Out,Loan out number,Loan Out Information,"",string,y,n,n/a,"","",loanout,loanOutNumber
 lhmc_6-0-0,Loan Out,Loan purpose,Loan Out Information,"",string,n,n,n/a,option list: loanPurposes,"analysis, conservationotherrequestedservices, exhibition, longtermcollectionsmanagementandstorage, photography, research, scientificorexhibitpreparation",loanout,loanPurpose
 lhmc_6-0-0,Loan Out,Lender authorizer,Loan Out Information,Lender,string,n,n,n/a,authority: person/local,"",loanout,lendersAuthorizer
@@ -559,6 +530,7 @@ lhmc_6-0-0,Loan Out,Loan status authorizer,Loan Out Information,Loan status,stri
 lhmc_6-0-0,Loan Out,Loan out date,Loan Out Information,"",date,n,n,n/a,"","",loanout,loanOutDate
 lhmc_6-0-0,Loan Out,Loan return date,Loan Out Information,"",date,n,n,n/a,"","",loanout,loanReturnDate
 lhmc_6-0-0,Loan Out,Loan renewal application date,Loan Out Information,"",date,n,n,n/a,"","",loanout,loanRenewalApplicationDate
+lhmc_6-0-0,Loan Out,Credit line,Loan Out Information,"",string,n,n,n/a,"","",loanout,creditLine
 lhmc_6-0-0,Storage Location,Term display name,Storage Location Information,Term,string,y,n,y,"","",location,termDisplayName
 lhmc_6-0-0,Storage Location,Term name,Storage Location Information,Term,string,n,n,y,"","",location,termName
 lhmc_6-0-0,Storage Location,Term qualifier,Storage Location Information,Term,string,n,n,y,"","",location,termQualifier

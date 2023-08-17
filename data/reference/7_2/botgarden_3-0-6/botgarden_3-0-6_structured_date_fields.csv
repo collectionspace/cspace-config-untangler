@@ -1,0 +1,23 @@
+profile,record_type,field,record_section,path_to_field,repeats,group_repeats,record_type_machine_name,field_machine_name
+botgarden_3-0-6,Citation,Publication date,Citation Information,Publication,n,y,citation,publicationDate
+botgarden_3-0-6,Citation,Resource identifier capture date,Citation Information,Resource identifier,n,y,citation,captureDate
+botgarden_3-0-6,Object,Taxonomic identification date,Object Identification Information,Determination history > Identification by,n,y,collectionobject,identDateGroup
+botgarden_3-0-6,Object,Georeference date,Locality Information,Locality > Georeference Detail,n,y,collectionobject,geoRefDateGroup
+botgarden_3-0-6,Object,Field collection date,Field Collection Information,"",n,n/a,collectionobject,fieldCollectionDateGroup
+botgarden_3-0-6,Object,Associated date value,Object History and Association Information,Associations > Associated date,n,y,collectionobject,assocStructuredDateGroup
+botgarden_3-0-6,Object,Ownership date,Object History and Association Information,"",y,n,collectionobject,ownershipDateGroup
+botgarden_3-0-6,Media Handling,Date,Media Handling Information,"",y,n,media,dateGroup
+botgarden_3-0-6,Object Exit,Date,Distribution Information,"",n,n/a,objectexit,exitDateGroup
+botgarden_3-0-6,Organization,Foundation date,Organization Information,"",n,n/a,organization,foundingDateGroup
+botgarden_3-0-6,Organization,Dissolution date,Organization Information,"",n,n/a,organization,dissolutionDateGroup
+botgarden_3-0-6,Organization,Contact date,Organization Information,Contact person,n,y,organization,contactDateGroup
+botgarden_3-0-6,Organization,Contact end date,Organization Information,Contact person,n,y,organization,contactEndDateGroup
+botgarden_3-0-6,Person,Birth date,Person Information,"",n,n/a,person,birthDateGroup
+botgarden_3-0-6,Person,Death date,Person Information,"",n,n/a,person,deathDateGroup
+botgarden_3-0-6,Person,Birth date supplied,Maker-Supplied Identity Information,Supplied birth date,n,y,person,suppliedStructuredBirthDateGroup
+botgarden_3-0-6,Place,Term date,Place Information,Term,n,y,place,nameDateGroup
+botgarden_3-0-6,Place,Ownership date,Place Information,Ownership,n,y,place,ownershipDateGroup
+botgarden_3-0-6,Place,Georeference date,Georeference Information,Georeference,n,y,place,geoRefDateGroup
+botgarden_3-0-6,Work,Work date,Work Information,"",y,n,work,workDateGroup
+botgarden_3-0-6,Propagation,Propagation date,Propagation Information,"",n,n/a,propagation,propDate
+botgarden_3-0-6,Propagation,Activity date,Propagation Information,Activities > Activity,n,y,propagation,activityDate

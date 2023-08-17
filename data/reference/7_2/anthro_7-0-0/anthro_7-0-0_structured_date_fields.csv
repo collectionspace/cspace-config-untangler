@@ -3,14 +3,8 @@ anthro_7-0-0,Acquisition,Accession date,Acquisition Information,"",n,n/a,acquisi
 anthro_7-0-0,Acquisition,Acquisition date,Acquisition Information,"",y,n,acquisition,acquisitionDateGroup
 anthro_7-0-0,Citation,Publication date,Citation Information,Publication,n,y,citation,publicationDate
 anthro_7-0-0,Citation,Resource identifier capture date,Citation Information,Resource identifier,n,y,citation,captureDate
-anthro_7-0-0,Chronology,Primary date range,Chronology Information,"",n,n/a,chronology,chronologyDateStructuredDateGroup
-anthro_7-0-0,Chronology,Person date,Associated Authorities,Person,n,y,chronology,personStructuredDateGroup
-anthro_7-0-0,Chronology,People date,Associated Authorities,People,n,y,chronology,peopleStructuredDateGroup
-anthro_7-0-0,Chronology,Organization date,Associated Authorities,Organization,n,y,chronology,organizationStructuredDateGroup
-anthro_7-0-0,Chronology,Concept date,Associated Authorities,Concept,n,y,chronology,conceptStructuredDateGroup
-anthro_7-0-0,Chronology,Place date,Associated Authorities,Place,n,y,chronology,placeStructuredDateGroup
-anthro_7-0-0,Chronology,Related period date,Associated Authorities,Related period,n,y,chronology,relatedPeriodStructuredDateGroup
-anthro_7-0-0,Chronology,Alternative date range,Alternative Date Information,Alternative date,n,y,chronology,otherDateStructuredDateGroup
+anthro_7-0-0,Chronology,Primary date range,Chronology Information,"",n,n/a,chronology,primaryDateRangeStructuredDateGroup
+anthro_7-0-0,Chronology,Alternative date range,Alternative Date Information,Alternative date,n,y,chronology,altDateRangeStructuredDateGroup
 anthro_7-0-0,Object,Field collection date,Object Collection Information,"",n,n/a,collectionobject,fieldCollectionDateGroup
 anthro_7-0-0,Object,Production date,Object Production Information,"",y,n,collectionobject,objectProductionDateGroup
 anthro_7-0-0,Object,NAGPRA report filed date,Repatriation and NAGPRA Compliance Information,Reported to National NAGPRA,n,y,collectionobject,nagpraReportFiledDate
