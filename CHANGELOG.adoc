@@ -37,6 +37,32 @@ These changes are merged into the `main` branch, but have not been released. Aft
 
 == Releases
 
+=== 2.0.0 - 2023-08-16
+==== Breaking
+* `ccu fields csv` command no longer allows you to specify record types to include. All record types from the given profiles are included in the output, which you can easily filter to the record type(s) of interest.
+* `explode` is no longer a valid `--structured_date` option value for the `ccu fields csv` command. It has been replaced by `expanded`, which results in the same output as `explode`, which is still the default. Likewise, the `collapse` option has been replaced by `collapsed`
+
+==== Added
+* `ccu profiles switch_release` command
+* Several commands organized under `ccu authorities` (do `ccu authorities` for the list)
+* `ccu fields nonunique_field_names` command
+* `--output_mode`/`-m` option for `ccu fields csv` command. Defaults to `expert`, which maintains the same behavior. Can also be set to `friendly`, to generate reports less frightening to users who primarily work in the UI.
+* Several new report generators:
+** `AuthorityVocabUse`
+** `NonuniqueFieldNames`
+** `NonuniqueFieldPaths`
+** `QaAllFields`
+** `QaChangedFields`
+** `QaDeletedFields`
+** `UnusedAuthorityVocabs`
+** `XpathDepthCheck`
+* Auto-splitting of user-facing reference reports into single-profile reports organized by profile
+* `ccu reports qa` command - generate all QA related reports for a new release
+
+==== Bugfixes
+* Resolved issues extracting ui_path and ui_field_label for various fields
+
+
 === 1.11.0 - 2022-11-22
 ==== Bugfixes
 * CLI: `-p all` flag no longer errors if no profile in configs directory matches main profile (PR#106)
