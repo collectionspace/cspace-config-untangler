@@ -29,7 +29,7 @@ module CspaceConfigUntangler
     end
 
     def summary
-      @diff.map{ |k, arr| "#{k}: #{arr.size}" }.join("\n")
+      @diff.map { |k, arr| "#{k}: #{arr.size}" }.join("\n")
     end
 
     private
@@ -40,18 +40,20 @@ module CspaceConfigUntangler
       diff_fields = []
 
       @diff.each do |type, val|
-        if type['not in']
+        if type["not in"]
           # val is an array of field objects
           val.each do |f|
             diff_fields << f.to_h.merge({"diff_info" => type})
           end
-        elsif type == 'same'
-          # val is array of hashes of two field objects { 0 => fieldobj, 1 => fieldobj }
+        elsif type == "same"
+          # val is array of hashes of two field objects
+          #   { 0 => fieldobj, 1 => fieldobj }
           val.each do |h|
             h.each_value { |f| diff_fields << f.to_h }
           end
         else
-          # val is array of hashes of two field objects { 0 => fieldobj, 1 => fieldobj }
+          # val is array of hashes of two field objects
+          #   { 0 => fieldobj, 1 => fieldobj }
           val.each do |h|
             h.each_value do |f|
               diff_fields << f.to_h.merge({"diff_info" => type})
@@ -60,7 +62,7 @@ module CspaceConfigUntangler
         end
       end
 
-      return diff_fields
+      diff_fields
     end
 
     def populate_diff
@@ -78,22 +80,26 @@ module CspaceConfigUntangler
           cat = "ui path differences"
           diff[cat] << hash
         else
-          diff['same'] << hash
+          diff["same"] << hash
         end
       }
 
-      return diff
+      diff
     end
 
     def combined_fields
       h = {}
-      @fields.each{ |fhash| fhash.keys.each{ |k| h[k] = { 0 => nil, 1 => nil } } }
-      @fields.each_with_index{ |fhash, i|
-        fhash.each{ |path, f|
+      @fields.each { |fhash|
+        fhash.keys.each { |k|
+          h[k] = {0 => nil, 1 => nil}
+        }
+      }
+      @fields.each_with_index { |fhash, i|
+        fhash.each { |path, f|
           h[path][i] = f
         }
       }
-      return h
+      h
     end
 
     # receives field_defs hash
@@ -104,6 +110,5 @@ module CspaceConfigUntangler
         [path, f]
       }.to_h
     end
-
-  end #class ProfileComparison
-end #module
+  end
+end

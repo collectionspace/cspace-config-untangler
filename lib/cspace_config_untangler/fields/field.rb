@@ -23,7 +23,7 @@ module CspaceConfigUntangler
         @fid = "#{@profile.name} #{rectype.name} #{@ns_for_id} #{@name}"
       end
 
-      def csv_header(mode=:expert)
+      def csv_header(mode = :expert)
         case mode
         when :expert then expert_csv_row.keys.map(&:to_s)
         when :friendly then friendly_csv_row.keys.map(&:to_s)
@@ -32,11 +32,7 @@ module CspaceConfigUntangler
       end
 
       def structured_date?
-        if @data_type == 'structured date group'
-          return true
-        else
-          return false
-        end
+        @data_type == "structured date group"
       end
 
       def freetext?
@@ -52,24 +48,24 @@ module CspaceConfigUntangler
 
       def authority_controlled?
         controlled? &&
-          value_source.any?{ |src| src.source_type == "authority" }
+          value_source.any? { |src| src.source_type == "authority" }
       end
 
       def vocabulary_controlled?
         controlled? &&
-          value_source.any?{ |src| src.source_type == "vocabulary" }
+          value_source.any? { |src| src.source_type == "vocabulary" }
       end
 
       def optionlist_controlled?
         controlled? &&
-          value_source.any?{ |src| src.source_type == "optionlist" }
+          value_source.any? { |src| src.source_type == "optionlist" }
       end
 
       # @param name [String]
       def controlled_by?(name)
         return false unless controlled?
 
-        value_source.map{ |src| src.name }
+        value_source.map { |src| src.name }
           .include?(name)
       end
 
@@ -92,7 +88,7 @@ module CspaceConfigUntangler
         return [] if orig.empty?
 
         orig.compact
-          .map{ |segment| lookup_display_name(segment) }
+          .map { |segment| lookup_display_name(segment) }
           .compact
       end
 
@@ -107,14 +103,14 @@ module CspaceConfigUntangler
           ui_info_group: get_ui_info_group,
           ui_path: get_ui_path,
           ui_field_label: label,
-          xml_path: @schema_path.join(' > '),
+          xml_path: @schema_path.join(" > "),
           xml_field_name: @name,
           data_type: @data_type,
           required: @required,
           repeats: @repeats,
           group_repeats: @in_repeating_group,
-          data_source: @value_source.map(&:fields_csv_label).compact.join('; '),
-          option_list_values: @value_list.join(', ')
+          data_source: @value_source.map(&:fields_csv_label).compact.join("; "),
+          option_list_values: @value_list.join(", ")
         }
       end
 
@@ -129,8 +125,8 @@ module CspaceConfigUntangler
           required: @required,
           repeats: @repeats,
           group_repeats: @in_repeating_group,
-          data_source: @value_source.map(&:fields_csv_label).compact.join('; '),
-          option_list_values: @value_list.join(', '),
+          data_source: @value_source.map(&:fields_csv_label).compact.join("; "),
+          option_list_values: @value_list.join(", "),
           record_type_machine_name: @rectype.name,
           field_machine_name: @name
         }
@@ -138,7 +134,7 @@ module CspaceConfigUntangler
 
       def format_csv(source)
         source.values
-          .map{ |val| val.nil? ? "" : val }
+          .map { |val| val.nil? ? "" : val }
       end
 
       def get_ui_info_group
@@ -161,28 +157,28 @@ module CspaceConfigUntangler
       def find_field_def
         fd = @profile.field_defs.dig(@id)
         if fd.nil?
-          return find_field_def_alt
+          find_field_def_alt
         elsif fd.length == 1
-          return fd.first
+          fd.first
         else
-          return fd.select{ |f| f.ns == @ns }.first
+          fd.select { |f| f.ns == @ns }.first
         end
       end
 
       def find_field_def_alt
-        if @ns == 'ns2:conservation_livingplant'
-          try_id = @id.sub('ext.', 'conservation_')
+        try_id = if @ns == "ns2:conservation_livingplant"
+          @id.sub("ext.", "conservation_")
         else
-          try_id = "#{@ns.sub('ns2:', '')}.#{@name}"
+          "#{@ns.sub("ns2:", "")}.#{@name}"
         end
 
         fd = @profile.field_defs.dig(try_id)
         if fd.nil?
-          return nil
+          nil
         elsif fd.length == 1
-          return fd.first
+          fd.first
         else
-          return fd.select{ |f| f.ns == @ns }.first
+          fd.select { |f| f.ns == @ns }.first
         end
       end
 
@@ -202,20 +198,20 @@ module CspaceConfigUntangler
 
         msgs = @profile.messages
 
-        if val.start_with?('panel.')
-          if msgs.dig(val, 'name')
-            msgs[val]['name']
+        if val.start_with?("panel.")
+          if msgs.dig(val, "name")
+            msgs[val]["name"]
           else
             alt_panel_lookup(val)
           end
-        elsif val.start_with?('inputTable.')
-          msgs.dig(val, 'name') ? msgs[val]['name'] : val
+        elsif val.start_with?("inputTable.")
+          msgs.dig(val, "name") ? msgs[val]["name"] : val
         else
           fieldid = "field.#{val}"
-          if msgs.dig(fieldid, 'fullName')
-            msgs[fieldid]['fullName']
-          elsif msgs.dig(fieldid, 'name')
-            msgs[fieldid]['name']
+          if msgs.dig(fieldid, "fullName")
+            msgs[fieldid]["fullName"]
+          elsif msgs.dig(fieldid, "name")
+            msgs[fieldid]["name"]
           elsif val == "uoc_common.useDateHoursSpent"
             CCU.warn_on_upgrade(binding.source_location, "DRYD-1269")
             alt_fieldname_lookup(val.sub("useDateHoursSpent", "hoursSpent"))
@@ -258,18 +254,19 @@ module CspaceConfigUntangler
 
       def alt_panel_lookup(val)
         trunc_lookup = {}
-        @profile.messages.select{ |id, h| id.start_with?('panel.') }.each{ |id, h|
-          name = id.split('.').last
+        @profile.messages.select { |id, h|
+          id.start_with?("panel.")
+        }.each { |id, h|
+          name = id.split(".").last
           trunc_lookup[name] = h
         }
-        trunc_val = val.split('.').last
+        trunc_val = val.split(".").last
 
-        if trunc_lookup.dig(trunc_val, 'name')
-          new = trunc_lookup[trunc_val]['name']
+        if trunc_lookup.dig(trunc_val, "name")
+          trunc_lookup[trunc_val]["name"]
         else
-          new = val
+          val
         end
-        return new
       end
 
       def fix_museum_records
