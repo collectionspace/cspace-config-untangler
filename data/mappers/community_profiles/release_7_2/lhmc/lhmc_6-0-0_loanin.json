@@ -596,6 +596,25 @@
       ],
       "datacolumn": "loanRenewalApplicationDate",
       "required": "n"
+    },
+    {
+      "fieldname": "creditLine",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "loansin_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "creditLine",
+      "required": "n"
     }
   ]
 }
