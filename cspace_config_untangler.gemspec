@@ -29,12 +29,10 @@ Gem::Specification.new do |spec|
   spec.executables = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
 
-  spec.add_development_dependency "bundler", "~> 2.3.9"
-  spec.add_development_dependency "pry", "~> 0.13.0"
-#  spec.add_development_dependency "byebug"
-#  spec.add_development_dependency "pry-byebug"
-  spec.add_development_dependency "rake", "~> 13.0.6"
-  spec.add_development_dependency "rspec", "~> 3.11"
+  spec.add_development_dependency "bundler"
+  spec.add_development_dependency "pry"
+  spec.add_development_dependency "rake"
+  spec.add_development_dependency "rspec"
 
   spec.add_runtime_dependency "dry-configurable", "~> 0.12"
   spec.add_runtime_dependency "facets", "~> 3.1.0"
