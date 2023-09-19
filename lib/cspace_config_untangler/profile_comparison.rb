@@ -2,21 +2,29 @@ module CspaceConfigUntangler
   class ProfileComparison
     attr_reader :output
     def initialize(profilearray, outputdir)
-      profiles = profilearray.map{ |p| CCU::Profile.new(profile: p) }
-      @profiles = profiles.map{ |p| p.name }
-      @output = "#{outputdir}/compare_#{@profiles[0]}_to_#{@profiles[1]}.csv"
-      @fields = profiles.map{ |p| p.fields.map{ |f| f.clean} }.map{ |p| by_path(p) }
+      @profilenames = profilearray
+      @profiles = profilearray.map do |p|
+        CCU::Profile.new(profile: p, structured_date_treatment: :collapse)
+      end
+      @output = "#{outputdir}/compare_#{profilenames[0]}_to_#{profilenames[1]}.csv"
+      @fields = profiles.map { |profile| by_path(profile.fields) }
       @combined = combined_fields
-      @diff = diff_combined
+      @diff = {
+        "not in #{profilenames[0]}" => [],
+        "not in #{profilenames[1]}" => [],
+        "source differences" => [],
+        "ui path differences" => [],
+        "same" => []
+      }
+      populate_diff
     end
 
     def write_csv
       fields = diffed_fields
-      headers = fields.first.csv_header
-      headers << 'diff info'
+      headers = fields.first.keys
 
-      CSV.open(@output, 'w', write_headers: true, headers: headers){ |csv|
-        fields.each{ |f| csv << f.to_csv }
+      CSV.open(@output, "w", write_headers: true, headers: headers) { |csv|
+        fields.each { |f| csv << f.values_at(*headers) }
       }
     end
 
@@ -26,6 +34,8 @@ module CspaceConfigUntangler
 
     private
 
+    attr_reader :profilenames, :profiles, :fields, :diff
+
     def diffed_fields
       diff_fields = []
 
@@ -33,20 +43,18 @@ module CspaceConfigUntangler
         if type['not in']
           # val is an array of field objects
           val.each do |f|
-            f.to_csv << type
-            diff_fields << f
+            diff_fields << f.to_h.merge({"diff_info" => type})
           end
         elsif type == 'same'
           # val is array of hashes of two field objects { 0 => fieldobj, 1 => fieldobj }
           val.each do |h|
-            h.each_value{ |f| diff_fields << f }
+            h.each_value { |f| diff_fields << f.to_h }
           end
         else
           # val is array of hashes of two field objects { 0 => fieldobj, 1 => fieldobj }
           val.each do |h|
             h.each_value do |f|
-              f.to_csv << type
-              diff_fields << f
+              diff_fields << f.to_h.merge({"diff_info" => type})
             end
           end
         end
@@ -55,25 +63,20 @@ module CspaceConfigUntangler
       return diff_fields
     end
 
-
-    def diff_combined
-      diff = {
-        "not in #{@profiles[0]}" => [],
-        "not in #{@profiles[1]}" => [],
-        'source differences' => [],
-        'ui path differences' => [],
-        'same' => []
-      }
-
-      @combined.each{ |id, hash|
-        if hash[0].nil?
-          diff["not in #{@profiles[0]}"] << hash[1]
-        elsif hash[1].nil?
-          diff["not in #{@profiles[1]}"] << hash[0]
+    def populate_diff
+      @combined.each { |id, hash|
+        if hash[0].nil? && hash[1]
+          cat = "not in #{profilenames[0]}"
+          diff[cat] << hash[1]
+        elsif hash[0] && hash[1].nil?
+          cat = "not in #{profilenames[1]}"
+          diff[cat] << hash[0]
         elsif hash[0].value_source&.sort != hash[1].value_source&.sort
-          diff['source differences'] << hash
+          cat = "source differences"
+          diff[cat] << hash
         elsif hash[0].ui_path != hash[1].ui_path
-          diff['ui path differences'] << hash
+          cat = "ui path differences"
+          diff[cat] << hash
         else
           diff['same'] << hash
         end
@@ -96,12 +99,10 @@ module CspaceConfigUntangler
     # receives field_defs hash
     # returns has by rectype + schema path + name
     def by_path(field_arr)
-      h = {}
-      field_arr.each{ |f|
-        path = [f.rectype, f.schema_path, f.name].flatten
-          h[path] = f
-        }
-      return h
+      field_arr.map { |f|
+        path = [f.rectype.name, f.schema_path, f.name].flatten
+        [path, f]
+      }.to_h
     end
 
   end #class ProfileComparison

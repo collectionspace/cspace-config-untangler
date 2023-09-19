@@ -81,6 +81,10 @@ module CspaceConfigUntangler
         format_csv(friendly_csv_row)
       end
 
+      def to_h
+        expert_csv_row
+      end
+
       private
 
       def formatted_ui_path(orig)
