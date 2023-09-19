@@ -12,6 +12,8 @@ RSpec.describe CCU::ProfileComparison do
         File.join("data", "configs", filename)
       )
     end
+    CCU.config.main_profile_name = "anthro_7-0-0"
+    CCU.config.configdir = File.join("data", "configs")
   end
 
   after do
@@ -20,6 +22,7 @@ RSpec.describe CCU::ProfileComparison do
     end
     FileUtils.rm(File.join("spec", "fixtures",
       "compare_anthro_7-0-0_to_ohc_1-0-18_7-2.csv"))
+    CCU.reset_config
   end
 
   let(:expected_path) do

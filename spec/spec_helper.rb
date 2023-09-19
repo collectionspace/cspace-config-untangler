@@ -3,6 +3,11 @@ require "rspec/custom/matchers/match_csv"
 
 require "cspace_config_untangler"
 require_relative "helpers"
+require "dry/configurable/test_interface"
+
+module CspaceConfigUntangler
+  enable_test_interface
+end
 
 RSpec.configure do |config|
   config.include Helpers
