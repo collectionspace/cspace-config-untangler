@@ -37,6 +37,10 @@ These changes are merged into the `main` branch, but have not been released. Aft
 
 == Releases
 
+=== 2.0.1 - 2023-09-19
+==== Bugfixes
+* Fix failure in `ProfileComparison` class and add integration test
+
 === 2.0.0 - 2023-08-16
 ==== Breaking
 * `ccu fields csv` command no longer allows you to specify record types to include. All record types from the given profiles are included in the output, which you can easily filter to the record type(s) of interest.
