@@ -1,4 +1,6 @@
 require "bundler/setup"
+require "rspec/custom/matchers/match_csv"
+
 require "cspace_config_untangler"
 require_relative "helpers"
 
