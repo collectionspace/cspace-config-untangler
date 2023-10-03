@@ -12,7 +12,7 @@
       "locations_common": "http://collectionspace.org/services/location"
     },
     "identifier_field": "shortIdentifier",
-    "search_field": "locationTermGroupList/0/termDisplayName",
+    "search_field": "locTermGroupList/0/termDisplayName",
     "authority_subtypes": [
       {
         "name": "Local",

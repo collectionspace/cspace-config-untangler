@@ -37,6 +37,11 @@ These changes are merged into the `main` branch, but have not been released. Aft
 
 == Releases
 
+=== 2.0.1 - 2023-10-03
+==== Bugfixes
+
+* Fix bug in extraction of search_path for authorities (affected chronology, organization, location)
+
 === 2.0.1 - 2023-09-19
 ==== Bugfixes
 * Fix failure in `ProfileComparison` class and add integration test
