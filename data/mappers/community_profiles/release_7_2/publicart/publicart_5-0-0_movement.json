@@ -113,6 +113,29 @@
       "fieldname": "currentLocation",
       "transforms": {
         "authority": [
+          "orgauthorities",
+          "organization_shared"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "organization/shared",
+      "namespace": "movements_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "currentLocationOrganizationShared",
+      "required": "y"
+    },
+    {
+      "fieldname": "currentLocation",
+      "transforms": {
+        "authority": [
           "placeauthorities",
           "place"
         ]
@@ -130,6 +153,29 @@
 
       ],
       "datacolumn": "currentLocationPlaceLocal",
+      "required": "y"
+    },
+    {
+      "fieldname": "currentLocation",
+      "transforms": {
+        "authority": [
+          "placeauthorities",
+          "place_shared"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "place/shared",
+      "namespace": "movements_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "currentLocationPlaceShared",
       "required": "y"
     },
     {
@@ -316,7 +362,30 @@
       "opt_list_values": [
 
       ],
-      "datacolumn": "movementContact",
+      "datacolumn": "movementContactPersonLocal",
+      "required": "n"
+    },
+    {
+      "fieldname": "movementContact",
+      "transforms": {
+        "authority": [
+          "personauthorities",
+          "person_shared"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "person/shared",
+      "namespace": "movements_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "movementContactPersonShared",
       "required": "n"
     },
     {

@@ -291,6 +291,30 @@
       "fieldname": "user",
       "transforms": {
         "authority": [
+          "personauthorities",
+          "person_shared"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "person/shared",
+      "namespace": "uoc_common",
+      "xpath": [
+        "userGroupList",
+        "userGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "userPersonShared",
+      "required": "n"
+    },
+    {
+      "fieldname": "user",
+      "transforms": {
+        "authority": [
           "orgauthorities",
           "organization"
         ]
@@ -309,6 +333,30 @@
 
       ],
       "datacolumn": "userOrganizationLocal",
+      "required": "n"
+    },
+    {
+      "fieldname": "user",
+      "transforms": {
+        "authority": [
+          "orgauthorities",
+          "organization_shared"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "organization/shared",
+      "namespace": "uoc_common",
+      "xpath": [
+        "userGroupList",
+        "userGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "userOrganizationShared",
       "required": "n"
     },
     {
@@ -393,7 +441,31 @@
       "opt_list_values": [
 
       ],
-      "datacolumn": "userInstitution",
+      "datacolumn": "userInstitutionOrganizationLocal",
+      "required": "n"
+    },
+    {
+      "fieldname": "userInstitution",
+      "transforms": {
+        "authority": [
+          "orgauthorities",
+          "organization_shared"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "organization/shared",
+      "namespace": "uoc_common",
+      "xpath": [
+        "userGroupList",
+        "userGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "userInstitutionOrganizationShared",
       "required": "n"
     },
     {
@@ -603,6 +675,30 @@
       "fieldname": "authorizedBy",
       "transforms": {
         "authority": [
+          "personauthorities",
+          "person_shared"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "person/shared",
+      "namespace": "uoc_common",
+      "xpath": [
+        "authorizationGroupList",
+        "authorizationGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "authorizedByPersonShared",
+      "required": "n"
+    },
+    {
+      "fieldname": "authorizedBy",
+      "transforms": {
+        "authority": [
           "orgauthorities",
           "organization"
         ]
@@ -621,6 +717,30 @@
 
       ],
       "datacolumn": "authorizedByOrganizationLocal",
+      "required": "n"
+    },
+    {
+      "fieldname": "authorizedBy",
+      "transforms": {
+        "authority": [
+          "orgauthorities",
+          "organization_shared"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "organization/shared",
+      "namespace": "uoc_common",
+      "xpath": [
+        "authorizationGroupList",
+        "authorizationGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "authorizedByOrganizationShared",
       "required": "n"
     },
     {
@@ -871,6 +991,30 @@
       "fieldname": "staffName",
       "transforms": {
         "authority": [
+          "personauthorities",
+          "person_shared"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "person/shared",
+      "namespace": "uoc_common",
+      "xpath": [
+        "staffGroupList",
+        "staffGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "staffNamePersonShared",
+      "required": "n"
+    },
+    {
+      "fieldname": "staffName",
+      "transforms": {
+        "authority": [
           "orgauthorities",
           "organization"
         ]
@@ -889,6 +1033,30 @@
 
       ],
       "datacolumn": "staffNameOrganizationLocal",
+      "required": "n"
+    },
+    {
+      "fieldname": "staffName",
+      "transforms": {
+        "authority": [
+          "orgauthorities",
+          "organization_shared"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "organization/shared",
+      "namespace": "uoc_common",
+      "xpath": [
+        "staffGroupList",
+        "staffGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "staffNameOrganizationShared",
       "required": "n"
     },
     {
@@ -1019,6 +1187,29 @@
       "fieldname": "location",
       "transforms": {
         "authority": [
+          "orgauthorities",
+          "organization_shared"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "organization/shared",
+      "namespace": "uoc_common",
+      "xpath": [
+        "locationList"
+      ],
+      "data_type": "string",
+      "repeats": "y",
+      "in_repeating_group": "n",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "locationOrganizationShared",
+      "required": "n"
+    },
+    {
+      "fieldname": "location",
+      "transforms": {
+        "authority": [
           "placeauthorities",
           "place"
         ]
@@ -1036,6 +1227,29 @@
 
       ],
       "datacolumn": "locationPlaceLocal",
+      "required": "n"
+    },
+    {
+      "fieldname": "location",
+      "transforms": {
+        "authority": [
+          "placeauthorities",
+          "place_shared"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "place/shared",
+      "namespace": "uoc_common",
+      "xpath": [
+        "locationList"
+      ],
+      "data_type": "string",
+      "repeats": "y",
+      "in_repeating_group": "n",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "locationPlaceShared",
       "required": "n"
     },
     {

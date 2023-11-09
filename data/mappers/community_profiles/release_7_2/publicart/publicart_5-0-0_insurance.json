@@ -112,6 +112,29 @@
       "fieldname": "insurerIndemnifier",
       "transforms": {
         "authority": [
+          "personauthorities",
+          "person_shared"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "person/shared",
+      "namespace": "insurances_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "insurerIndemnifierPersonShared",
+      "required": "n"
+    },
+    {
+      "fieldname": "insurerIndemnifier",
+      "transforms": {
+        "authority": [
           "orgauthorities",
           "organization"
         ]
@@ -129,6 +152,29 @@
 
       ],
       "datacolumn": "insurerIndemnifierOrganizationLocal",
+      "required": "n"
+    },
+    {
+      "fieldname": "insurerIndemnifier",
+      "transforms": {
+        "authority": [
+          "orgauthorities",
+          "organization_shared"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "organization/shared",
+      "namespace": "insurances_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "insurerIndemnifierOrganizationShared",
       "required": "n"
     },
     {
@@ -305,7 +351,30 @@
       "opt_list_values": [
 
       ],
-      "datacolumn": "insuranceIndemnityAuthorizer",
+      "datacolumn": "insuranceIndemnityAuthorizerPersonLocal",
+      "required": "n"
+    },
+    {
+      "fieldname": "insuranceIndemnityAuthorizer",
+      "transforms": {
+        "authority": [
+          "personauthorities",
+          "person_shared"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "person/shared",
+      "namespace": "insurances_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "insuranceIndemnityAuthorizerPersonShared",
       "required": "n"
     },
     {
@@ -474,6 +543,30 @@
       "fieldname": "insuranceIndemnityQuoteProvider",
       "transforms": {
         "authority": [
+          "personauthorities",
+          "person_shared"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "person/shared",
+      "namespace": "insurances_common",
+      "xpath": [
+        "quoteProviderGroupList",
+        "quoteProviderGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "insuranceIndemnityQuoteProviderPersonShared",
+      "required": "n"
+    },
+    {
+      "fieldname": "insuranceIndemnityQuoteProvider",
+      "transforms": {
+        "authority": [
           "orgauthorities",
           "organization"
         ]
@@ -492,6 +585,30 @@
 
       ],
       "datacolumn": "insuranceIndemnityQuoteProviderOrganizationLocal",
+      "required": "n"
+    },
+    {
+      "fieldname": "insuranceIndemnityQuoteProvider",
+      "transforms": {
+        "authority": [
+          "orgauthorities",
+          "organization_shared"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "organization/shared",
+      "namespace": "insurances_common",
+      "xpath": [
+        "quoteProviderGroupList",
+        "quoteProviderGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "insuranceIndemnityQuoteProviderOrganizationShared",
       "required": "n"
     },
     {

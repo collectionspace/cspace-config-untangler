@@ -277,7 +277,31 @@
       "opt_list_values": [
 
       ],
-      "datacolumn": "termSource",
+      "datacolumn": "termSourceCitationLocal",
+      "required": "n"
+    },
+    {
+      "fieldname": "termSource",
+      "transforms": {
+        "authority": [
+          "citationauthorities",
+          "citation_shared"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "citation/shared",
+      "namespace": "works_common",
+      "xpath": [
+        "workTermGroupList",
+        "workTermGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "termSourceCitationShared",
       "required": "n"
     },
     {
@@ -465,6 +489,30 @@
       "fieldname": "creator",
       "transforms": {
         "authority": [
+          "personauthorities",
+          "person_shared"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "person/shared",
+      "namespace": "works_common",
+      "xpath": [
+        "creatorGroupList",
+        "creatorGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "creatorPersonShared",
+      "required": "n"
+    },
+    {
+      "fieldname": "creator",
+      "transforms": {
+        "authority": [
           "orgauthorities",
           "organization"
         ]
@@ -483,6 +531,30 @@
 
       ],
       "datacolumn": "creatorOrganizationLocal",
+      "required": "n"
+    },
+    {
+      "fieldname": "creator",
+      "transforms": {
+        "authority": [
+          "orgauthorities",
+          "organization_shared"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "organization/shared",
+      "namespace": "works_common",
+      "xpath": [
+        "creatorGroupList",
+        "creatorGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "creatorOrganizationShared",
       "required": "n"
     },
     {
@@ -574,6 +646,30 @@
       "fieldname": "publisher",
       "transforms": {
         "authority": [
+          "personauthorities",
+          "person_shared"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "person/shared",
+      "namespace": "works_common",
+      "xpath": [
+        "publisherGroupList",
+        "publisherGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "publisherPersonShared",
+      "required": "n"
+    },
+    {
+      "fieldname": "publisher",
+      "transforms": {
+        "authority": [
           "orgauthorities",
           "organization"
         ]
@@ -592,6 +688,30 @@
 
       ],
       "datacolumn": "publisherOrganizationLocal",
+      "required": "n"
+    },
+    {
+      "fieldname": "publisher",
+      "transforms": {
+        "authority": [
+          "orgauthorities",
+          "organization_shared"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "organization/shared",
+      "namespace": "works_common",
+      "xpath": [
+        "publisherGroupList",
+        "publisherGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "publisherOrganizationShared",
       "required": "n"
     },
     {

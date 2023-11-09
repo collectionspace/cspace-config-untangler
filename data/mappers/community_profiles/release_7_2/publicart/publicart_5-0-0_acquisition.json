@@ -229,6 +229,29 @@
       "fieldname": "acquisitionSource",
       "transforms": {
         "authority": [
+          "personauthorities",
+          "person_shared"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "person/shared",
+      "namespace": "acquisitions_common",
+      "xpath": [
+        "acquisitionSources"
+      ],
+      "data_type": "string",
+      "repeats": "y",
+      "in_repeating_group": "n",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "acquisitionSourcePersonShared",
+      "required": "n"
+    },
+    {
+      "fieldname": "acquisitionSource",
+      "transforms": {
+        "authority": [
           "orgauthorities",
           "organization"
         ]
@@ -246,6 +269,29 @@
 
       ],
       "datacolumn": "acquisitionSourceOrganizationLocal",
+      "required": "n"
+    },
+    {
+      "fieldname": "acquisitionSource",
+      "transforms": {
+        "authority": [
+          "orgauthorities",
+          "organization_shared"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "organization/shared",
+      "namespace": "acquisitions_common",
+      "xpath": [
+        "acquisitionSources"
+      ],
+      "data_type": "string",
+      "repeats": "y",
+      "in_repeating_group": "n",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "acquisitionSourceOrganizationShared",
       "required": "n"
     },
     {
@@ -294,6 +340,29 @@
       "fieldname": "owner",
       "transforms": {
         "authority": [
+          "personauthorities",
+          "person_shared"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "person/shared",
+      "namespace": "acquisitions_common",
+      "xpath": [
+        "owners"
+      ],
+      "data_type": "string",
+      "repeats": "y",
+      "in_repeating_group": "n",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "ownerPersonShared",
+      "required": "n"
+    },
+    {
+      "fieldname": "owner",
+      "transforms": {
+        "authority": [
           "orgauthorities",
           "organization"
         ]
@@ -311,6 +380,29 @@
 
       ],
       "datacolumn": "ownerOrganizationLocal",
+      "required": "n"
+    },
+    {
+      "fieldname": "owner",
+      "transforms": {
+        "authority": [
+          "orgauthorities",
+          "organization_shared"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "organization/shared",
+      "namespace": "acquisitions_common",
+      "xpath": [
+        "owners"
+      ],
+      "data_type": "string",
+      "repeats": "y",
+      "in_repeating_group": "n",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "ownerOrganizationShared",
       "required": "n"
     },
     {
@@ -625,6 +717,30 @@
       "fieldname": "acquisitionFundingSource",
       "transforms": {
         "authority": [
+          "personauthorities",
+          "person_shared"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "person/shared",
+      "namespace": "acquisitions_common",
+      "xpath": [
+        "acquisitionFundingList",
+        "acquisitionFunding"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "acquisitionFundingSourcePersonShared",
+      "required": "n"
+    },
+    {
+      "fieldname": "acquisitionFundingSource",
+      "transforms": {
+        "authority": [
           "orgauthorities",
           "organization"
         ]
@@ -643,6 +759,30 @@
 
       ],
       "datacolumn": "acquisitionFundingSourceOrganizationLocal",
+      "required": "n"
+    },
+    {
+      "fieldname": "acquisitionFundingSource",
+      "transforms": {
+        "authority": [
+          "orgauthorities",
+          "organization_shared"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "organization/shared",
+      "namespace": "acquisitions_common",
+      "xpath": [
+        "acquisitionFundingList",
+        "acquisitionFunding"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "acquisitionFundingSourceOrganizationShared",
       "required": "n"
     },
     {
@@ -731,6 +871,29 @@
       "fieldname": "commissioningBody",
       "transforms": {
         "authority": [
+          "personauthorities",
+          "person_shared"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "person/shared",
+      "namespace": "acquisitions_commission",
+      "xpath": [
+        "commissioningBodyList"
+      ],
+      "data_type": "string",
+      "repeats": "y",
+      "in_repeating_group": "n",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "commissioningBodyPersonShared",
+      "required": "n"
+    },
+    {
+      "fieldname": "commissioningBody",
+      "transforms": {
+        "authority": [
           "orgauthorities",
           "organization"
         ]
@@ -748,6 +911,29 @@
 
       ],
       "datacolumn": "commissioningBodyOrganizationLocal",
+      "required": "n"
+    },
+    {
+      "fieldname": "commissioningBody",
+      "transforms": {
+        "authority": [
+          "orgauthorities",
+          "organization_shared"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "organization/shared",
+      "namespace": "acquisitions_commission",
+      "xpath": [
+        "commissioningBodyList"
+      ],
+      "data_type": "string",
+      "repeats": "y",
+      "in_repeating_group": "n",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "commissioningBodyOrganizationShared",
       "required": "n"
     },
     {

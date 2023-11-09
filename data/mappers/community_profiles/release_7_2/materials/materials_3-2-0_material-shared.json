@@ -419,7 +419,31 @@
       "opt_list_values": [
 
       ],
-      "datacolumn": "termSource",
+      "datacolumn": "termSourceCitationLocal",
+      "required": "n"
+    },
+    {
+      "fieldname": "termSource",
+      "transforms": {
+        "authority": [
+          "citationauthorities",
+          "citation_shared"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "citation/shared",
+      "namespace": "materials_common",
+      "xpath": [
+        "materialTermGroupList",
+        "materialTermGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "termSourceCitationShared",
       "required": "n"
     },
     {
@@ -931,7 +955,30 @@
       "opt_list_values": [
 
       ],
-      "datacolumn": "discontinuedBy",
+      "datacolumn": "discontinuedByOrganizationLocal",
+      "required": "n"
+    },
+    {
+      "fieldname": "discontinuedBy",
+      "transforms": {
+        "authority": [
+          "orgauthorities",
+          "organization_shared"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "organization/shared",
+      "namespace": "materials_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "discontinuedByOrganizationShared",
       "required": "n"
     },
     {
@@ -1031,7 +1078,31 @@
       "opt_list_values": [
 
       ],
-      "datacolumn": "materialProductionOrganization",
+      "datacolumn": "materialProductionOrganizationOrganizationLocal",
+      "required": "n"
+    },
+    {
+      "fieldname": "materialProductionOrganization",
+      "transforms": {
+        "authority": [
+          "orgauthorities",
+          "organization_shared"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "organization/shared",
+      "namespace": "materials_common",
+      "xpath": [
+        "materialProductionOrganizationGroupList",
+        "materialProductionOrganizationGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "materialProductionOrganizationOrganizationShared",
       "required": "n"
     },
     {
@@ -1116,7 +1187,31 @@
       "opt_list_values": [
 
       ],
-      "datacolumn": "materialProductionPerson",
+      "datacolumn": "materialProductionPersonPersonLocal",
+      "required": "n"
+    },
+    {
+      "fieldname": "materialProductionPerson",
+      "transforms": {
+        "authority": [
+          "personauthorities",
+          "person_shared"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "person/shared",
+      "namespace": "materials_common",
+      "xpath": [
+        "materialProductionPersonGroupList",
+        "materialProductionPersonGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "materialProductionPersonPersonShared",
       "required": "n"
     },
     {
@@ -1201,7 +1296,31 @@
       "opt_list_values": [
 
       ],
-      "datacolumn": "materialProductionPlace",
+      "datacolumn": "materialProductionPlacePlaceLocal",
+      "required": "n"
+    },
+    {
+      "fieldname": "materialProductionPlace",
+      "transforms": {
+        "authority": [
+          "placeauthorities",
+          "place_shared"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "place/shared",
+      "namespace": "materials_common",
+      "xpath": [
+        "materialProductionPlaceGroupList",
+        "materialProductionPlaceGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "materialProductionPlacePlaceShared",
       "required": "n"
     },
     {
@@ -1374,7 +1493,31 @@
       "opt_list_values": [
 
       ],
-      "datacolumn": "materialCitationSource",
+      "datacolumn": "materialCitationSourceCitationLocal",
+      "required": "n"
+    },
+    {
+      "fieldname": "materialCitationSource",
+      "transforms": {
+        "authority": [
+          "citationauthorities",
+          "citation_shared"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "citation/shared",
+      "namespace": "materials_common",
+      "xpath": [
+        "materialCitationGroupList",
+        "materialCitationGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "materialCitationSourceCitationShared",
       "required": "n"
     },
     {
@@ -1539,7 +1682,31 @@
       "opt_list_values": [
 
       ],
-      "datacolumn": "materialTermAttributionContributingOrganization",
+      "datacolumn": "materialTermAttributionContributingOrganizationOrganizationLocal",
+      "required": "n"
+    },
+    {
+      "fieldname": "materialTermAttributionContributingOrganization",
+      "transforms": {
+        "authority": [
+          "orgauthorities",
+          "organization_shared"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "organization/shared",
+      "namespace": "materials_common",
+      "xpath": [
+        "materialTermAttributionContributingGroupList",
+        "materialTermAttributionContributingGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "materialTermAttributionContributingOrganizationOrganizationShared",
       "required": "n"
     },
     {
@@ -1583,7 +1750,31 @@
       "opt_list_values": [
 
       ],
-      "datacolumn": "materialTermAttributionContributingPerson",
+      "datacolumn": "materialTermAttributionContributingPersonPersonLocal",
+      "required": "n"
+    },
+    {
+      "fieldname": "materialTermAttributionContributingPerson",
+      "transforms": {
+        "authority": [
+          "personauthorities",
+          "person_shared"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "person/shared",
+      "namespace": "materials_common",
+      "xpath": [
+        "materialTermAttributionContributingGroupList",
+        "materialTermAttributionContributingGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "materialTermAttributionContributingPersonPersonShared",
       "required": "n"
     },
     {
@@ -1647,7 +1838,31 @@
       "opt_list_values": [
 
       ],
-      "datacolumn": "materialTermAttributionEditingOrganization",
+      "datacolumn": "materialTermAttributionEditingOrganizationOrganizationLocal",
+      "required": "n"
+    },
+    {
+      "fieldname": "materialTermAttributionEditingOrganization",
+      "transforms": {
+        "authority": [
+          "orgauthorities",
+          "organization_shared"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "organization/shared",
+      "namespace": "materials_common",
+      "xpath": [
+        "materialTermAttributionEditingGroupList",
+        "materialTermAttributionEditingGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "materialTermAttributionEditingOrganizationOrganizationShared",
       "required": "n"
     },
     {
@@ -1691,7 +1906,31 @@
       "opt_list_values": [
 
       ],
-      "datacolumn": "materialTermAttributionEditingPerson",
+      "datacolumn": "materialTermAttributionEditingPersonPersonLocal",
+      "required": "n"
+    },
+    {
+      "fieldname": "materialTermAttributionEditingPerson",
+      "transforms": {
+        "authority": [
+          "personauthorities",
+          "person_shared"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "person/shared",
+      "namespace": "materials_common",
+      "xpath": [
+        "materialTermAttributionEditingGroupList",
+        "materialTermAttributionEditingGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "materialTermAttributionEditingPersonPersonShared",
       "required": "n"
     },
     {

@@ -381,7 +381,31 @@
       "opt_list_values": [
 
       ],
-      "datacolumn": "termSource",
+      "datacolumn": "termSourceCitationLocal",
+      "required": "n"
+    },
+    {
+      "fieldname": "termSource",
+      "transforms": {
+        "authority": [
+          "citationauthorities",
+          "citation_shared"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "citation/shared",
+      "namespace": "citations_common",
+      "xpath": [
+        "citationTermGroupList",
+        "citationTermGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "termSourceCitationShared",
       "required": "n"
     },
     {

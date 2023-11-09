@@ -730,7 +730,31 @@
       "opt_list_values": [
 
       ],
-      "datacolumn": "annotationAuthor",
+      "datacolumn": "annotationAuthorPersonLocal",
+      "required": "n"
+    },
+    {
+      "fieldname": "annotationAuthor",
+      "transforms": {
+        "authority": [
+          "personauthorities",
+          "person_shared"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "person/shared",
+      "namespace": "collectionobjects_annotation",
+      "xpath": [
+        "annotationGroupList",
+        "annotationGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "annotationAuthorPersonShared",
       "required": "n"
     },
     {
@@ -1520,6 +1544,32 @@
       "fieldname": "measuredBy",
       "transforms": {
         "authority": [
+          "personauthorities",
+          "person_shared"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "person/shared",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "measuredPartGroupList",
+        "measuredPartGroup",
+        "dimensionSubGroupList",
+        "dimensionSubGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "measuredByPersonShared",
+      "required": "n"
+    },
+    {
+      "fieldname": "measuredBy",
+      "transforms": {
+        "authority": [
           "orgauthorities",
           "organization"
         ]
@@ -1540,6 +1590,32 @@
 
       ],
       "datacolumn": "measuredByOrganizationLocal",
+      "required": "n"
+    },
+    {
+      "fieldname": "measuredBy",
+      "transforms": {
+        "authority": [
+          "orgauthorities",
+          "organization_shared"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "organization/shared",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "measuredPartGroupList",
+        "measuredPartGroup",
+        "dimensionSubGroupList",
+        "dimensionSubGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "measuredByOrganizationShared",
       "required": "n"
     },
     {
@@ -1827,7 +1903,31 @@
       "opt_list_values": [
 
       ],
-      "datacolumn": "objectProductionPerson",
+      "datacolumn": "objectProductionPersonPersonLocal",
+      "required": "n"
+    },
+    {
+      "fieldname": "objectProductionPerson",
+      "transforms": {
+        "authority": [
+          "personauthorities",
+          "person_shared"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "person/shared",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "objectProductionPersonGroupList",
+        "objectProductionPersonGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "objectProductionPersonPersonShared",
       "required": "n"
     },
     {
@@ -1891,7 +1991,31 @@
       "opt_list_values": [
 
       ],
-      "datacolumn": "objectProductionOrganization",
+      "datacolumn": "objectProductionOrganizationOrganizationLocal",
+      "required": "n"
+    },
+    {
+      "fieldname": "objectProductionOrganization",
+      "transforms": {
+        "authority": [
+          "orgauthorities",
+          "organization_shared"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "organization/shared",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "objectProductionOrganizationGroupList",
+        "objectProductionOrganizationGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "objectProductionOrganizationOrganizationShared",
       "required": "n"
     },
     {

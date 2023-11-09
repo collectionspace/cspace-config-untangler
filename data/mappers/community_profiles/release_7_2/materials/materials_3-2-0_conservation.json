@@ -183,6 +183,29 @@
       "fieldname": "conservator",
       "transforms": {
         "authority": [
+          "personauthorities",
+          "person_shared"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "person/shared",
+      "namespace": "conservation_common",
+      "xpath": [
+        "conservators"
+      ],
+      "data_type": "string",
+      "repeats": "y",
+      "in_repeating_group": "n",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "conservatorPersonShared",
+      "required": "n"
+    },
+    {
+      "fieldname": "conservator",
+      "transforms": {
+        "authority": [
           "orgauthorities",
           "organization"
         ]
@@ -200,6 +223,29 @@
 
       ],
       "datacolumn": "conservatorOrganizationLocal",
+      "required": "n"
+    },
+    {
+      "fieldname": "conservator",
+      "transforms": {
+        "authority": [
+          "orgauthorities",
+          "organization_shared"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "organization/shared",
+      "namespace": "conservation_common",
+      "xpath": [
+        "conservators"
+      ],
+      "data_type": "string",
+      "repeats": "y",
+      "in_repeating_group": "n",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "conservatorOrganizationShared",
       "required": "n"
     },
     {
@@ -249,6 +295,30 @@
       "fieldname": "otherParty",
       "transforms": {
         "authority": [
+          "personauthorities",
+          "person_shared"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "person/shared",
+      "namespace": "conservation_common",
+      "xpath": [
+        "otherPartyGroupList",
+        "otherPartyGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "otherPartyPersonShared",
+      "required": "n"
+    },
+    {
+      "fieldname": "otherParty",
+      "transforms": {
+        "authority": [
           "orgauthorities",
           "organization"
         ]
@@ -267,6 +337,30 @@
 
       ],
       "datacolumn": "otherPartyOrganizationLocal",
+      "required": "n"
+    },
+    {
+      "fieldname": "otherParty",
+      "transforms": {
+        "authority": [
+          "orgauthorities",
+          "organization_shared"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "organization/shared",
+      "namespace": "conservation_common",
+      "xpath": [
+        "otherPartyGroupList",
+        "otherPartyGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "otherPartyOrganizationShared",
       "required": "n"
     },
     {
@@ -371,7 +465,31 @@
       "opt_list_values": [
 
       ],
-      "datacolumn": "examinationStaff",
+      "datacolumn": "examinationStaffPersonLocal",
+      "required": "n"
+    },
+    {
+      "fieldname": "examinationStaff",
+      "transforms": {
+        "authority": [
+          "personauthorities",
+          "person_shared"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "person/shared",
+      "namespace": "conservation_common",
+      "xpath": [
+        "examinationGroupList",
+        "examinationGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "examinationStaffPersonShared",
       "required": "n"
     },
     {
@@ -533,7 +651,30 @@
       "opt_list_values": [
 
       ],
-      "datacolumn": "approvedBy",
+      "datacolumn": "approvedByPersonLocal",
+      "required": "n"
+    },
+    {
+      "fieldname": "approvedBy",
+      "transforms": {
+        "authority": [
+          "personauthorities",
+          "person_shared"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "person/shared",
+      "namespace": "conservation_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "approvedByPersonShared",
       "required": "n"
     },
     {
@@ -670,7 +811,30 @@
       "opt_list_values": [
 
       ],
-      "datacolumn": "researcher",
+      "datacolumn": "researcherPersonLocal",
+      "required": "n"
+    },
+    {
+      "fieldname": "researcher",
+      "transforms": {
+        "authority": [
+          "personauthorities",
+          "person_shared"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "person/shared",
+      "namespace": "conservation_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "researcherPersonShared",
       "required": "n"
     },
     {
@@ -772,7 +936,31 @@
       "opt_list_values": [
 
       ],
-      "datacolumn": "sampleBy",
+      "datacolumn": "sampleByPersonLocal",
+      "required": "n"
+    },
+    {
+      "fieldname": "sampleBy",
+      "transforms": {
+        "authority": [
+          "personauthorities",
+          "person_shared"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "person/shared",
+      "namespace": "conservation_common",
+      "xpath": [
+        "destAnalysisGroupList",
+        "destAnalysisGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "sampleByPersonShared",
       "required": "n"
     },
     {
