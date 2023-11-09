@@ -168,6 +168,29 @@
       "fieldname": "valueSource",
       "transforms": {
         "authority": [
+          "personauthorities",
+          "person_shared"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "person/shared",
+      "namespace": "valuationcontrols_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "valueSourcePersonShared",
+      "required": "n"
+    },
+    {
+      "fieldname": "valueSource",
+      "transforms": {
+        "authority": [
           "orgauthorities",
           "organization"
         ]
@@ -185,6 +208,29 @@
 
       ],
       "datacolumn": "valueSourceOrganizationLocal",
+      "required": "n"
+    },
+    {
+      "fieldname": "valueSource",
+      "transforms": {
+        "authority": [
+          "orgauthorities",
+          "organization_shared"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "organization/shared",
+      "namespace": "valuationcontrols_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "valueSourceOrganizationShared",
       "required": "n"
     },
     {

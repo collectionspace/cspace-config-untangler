@@ -564,7 +564,30 @@
       "opt_list_values": [
 
       ],
-      "datacolumn": "foundingPlace",
+      "datacolumn": "foundingPlacePlaceLocal",
+      "required": "n"
+    },
+    {
+      "fieldname": "foundingPlace",
+      "transforms": {
+        "authority": [
+          "placeauthorities",
+          "place_shared"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "place/shared",
+      "namespace": "organizations_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "foundingPlacePlaceShared",
       "required": "n"
     },
     {
@@ -625,7 +648,30 @@
       "opt_list_values": [
 
       ],
-      "datacolumn": "currentPlace",
+      "datacolumn": "currentPlacePlaceLocal",
+      "required": "n"
+    },
+    {
+      "fieldname": "currentPlace",
+      "transforms": {
+        "authority": [
+          "placeauthorities",
+          "place_shared"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "place/shared",
+      "namespace": "organizations_publicart",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "currentPlacePlaceShared",
       "required": "n"
     },
     {

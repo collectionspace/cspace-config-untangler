@@ -62,7 +62,30 @@
       "opt_list_values": [
 
       ],
-      "datacolumn": "lendersAuthorizer",
+      "datacolumn": "lendersAuthorizerPersonLocal",
+      "required": "n"
+    },
+    {
+      "fieldname": "lendersAuthorizer",
+      "transforms": {
+        "authority": [
+          "personauthorities",
+          "person_shared"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "person/shared",
+      "namespace": "loansout_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "lendersAuthorizerPersonShared",
       "required": "n"
     },
     {
@@ -155,6 +178,29 @@
       "fieldname": "borrower",
       "transforms": {
         "authority": [
+          "personauthorities",
+          "person_shared"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "person/shared",
+      "namespace": "loansout_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "borrowerPersonShared",
+      "required": "n"
+    },
+    {
+      "fieldname": "borrower",
+      "transforms": {
+        "authority": [
           "orgauthorities",
           "organization"
         ]
@@ -172,6 +218,29 @@
 
       ],
       "datacolumn": "borrowerOrganizationLocal",
+      "required": "n"
+    },
+    {
+      "fieldname": "borrower",
+      "transforms": {
+        "authority": [
+          "orgauthorities",
+          "organization_shared"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "organization/shared",
+      "namespace": "loansout_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "borrowerOrganizationShared",
       "required": "n"
     },
     {
@@ -274,7 +343,31 @@
       "opt_list_values": [
 
       ],
-      "datacolumn": "loanIndividual",
+      "datacolumn": "loanIndividualPersonLocal",
+      "required": "n"
+    },
+    {
+      "fieldname": "loanIndividual",
+      "transforms": {
+        "authority": [
+          "personauthorities",
+          "person_shared"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "person/shared",
+      "namespace": "loansout_common",
+      "xpath": [
+        "loanStatusGroupList",
+        "loanStatusGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "loanIndividualPersonShared",
       "required": "n"
     },
     {

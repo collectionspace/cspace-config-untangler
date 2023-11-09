@@ -299,6 +299,29 @@
       "fieldname": "contributor",
       "transforms": {
         "authority": [
+          "personauthorities",
+          "person_shared"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "person/shared",
+      "namespace": "media_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "contributorPersonShared",
+      "required": "n"
+    },
+    {
+      "fieldname": "contributor",
+      "transforms": {
+        "authority": [
           "orgauthorities",
           "organization"
         ]
@@ -316,6 +339,29 @@
 
       ],
       "datacolumn": "contributorOrganizationLocal",
+      "required": "n"
+    },
+    {
+      "fieldname": "contributor",
+      "transforms": {
+        "authority": [
+          "orgauthorities",
+          "organization_shared"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "organization/shared",
+      "namespace": "media_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "contributorOrganizationShared",
       "required": "n"
     },
     {
@@ -364,6 +410,29 @@
       "fieldname": "creator",
       "transforms": {
         "authority": [
+          "personauthorities",
+          "person_shared"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "person/shared",
+      "namespace": "media_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "creatorPersonShared",
+      "required": "n"
+    },
+    {
+      "fieldname": "creator",
+      "transforms": {
+        "authority": [
           "orgauthorities",
           "organization"
         ]
@@ -381,6 +450,29 @@
 
       ],
       "datacolumn": "creatorOrganizationLocal",
+      "required": "n"
+    },
+    {
+      "fieldname": "creator",
+      "transforms": {
+        "authority": [
+          "orgauthorities",
+          "organization_shared"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "organization/shared",
+      "namespace": "media_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "creatorOrganizationShared",
       "required": "n"
     },
     {
@@ -635,6 +727,29 @@
       "fieldname": "rightsHolder",
       "transforms": {
         "authority": [
+          "personauthorities",
+          "person_shared"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "person/shared",
+      "namespace": "media_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "rightsHolderPersonShared",
+      "required": "n"
+    },
+    {
+      "fieldname": "rightsHolder",
+      "transforms": {
+        "authority": [
           "orgauthorities",
           "organization"
         ]
@@ -652,6 +767,29 @@
 
       ],
       "datacolumn": "rightsHolderOrganizationLocal",
+      "required": "n"
+    },
+    {
+      "fieldname": "rightsHolder",
+      "transforms": {
+        "authority": [
+          "orgauthorities",
+          "organization_shared"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "organization/shared",
+      "namespace": "media_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "rightsHolderOrganizationShared",
       "required": "n"
     },
     {

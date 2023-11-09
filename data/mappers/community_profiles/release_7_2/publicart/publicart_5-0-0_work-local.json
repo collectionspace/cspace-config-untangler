@@ -462,6 +462,30 @@
       "fieldname": "creator",
       "transforms": {
         "authority": [
+          "personauthorities",
+          "person_shared"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "person/shared",
+      "namespace": "works_common",
+      "xpath": [
+        "creatorGroupList",
+        "creatorGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "creatorPersonShared",
+      "required": "n"
+    },
+    {
+      "fieldname": "creator",
+      "transforms": {
+        "authority": [
           "orgauthorities",
           "organization"
         ]
@@ -480,6 +504,30 @@
 
       ],
       "datacolumn": "creatorOrganizationLocal",
+      "required": "n"
+    },
+    {
+      "fieldname": "creator",
+      "transforms": {
+        "authority": [
+          "orgauthorities",
+          "organization_shared"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "organization/shared",
+      "namespace": "works_common",
+      "xpath": [
+        "creatorGroupList",
+        "creatorGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "creatorOrganizationShared",
       "required": "n"
     },
     {
@@ -604,7 +652,31 @@
       "opt_list_values": [
 
       ],
-      "datacolumn": "addressMunicipality",
+      "datacolumn": "addressMunicipalityPlaceLocal",
+      "required": "n"
+    },
+    {
+      "fieldname": "addressMunicipality",
+      "transforms": {
+        "authority": [
+          "placeauthorities",
+          "place_shared"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "place/shared",
+      "namespace": "works_common",
+      "xpath": [
+        "addrGroupList",
+        "addrGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "addressMunicipalityPlaceShared",
       "required": "n"
     },
     {
@@ -648,7 +720,31 @@
       "opt_list_values": [
 
       ],
-      "datacolumn": "addressStateOrProvince",
+      "datacolumn": "addressStateOrProvincePlaceLocal",
+      "required": "n"
+    },
+    {
+      "fieldname": "addressStateOrProvince",
+      "transforms": {
+        "authority": [
+          "placeauthorities",
+          "place_shared"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "place/shared",
+      "namespace": "works_common",
+      "xpath": [
+        "addrGroupList",
+        "addrGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "addressStateOrProvincePlaceShared",
       "required": "n"
     },
     {
@@ -712,7 +808,31 @@
       "opt_list_values": [
 
       ],
-      "datacolumn": "addressCountry",
+      "datacolumn": "addressCountryPlaceLocal",
+      "required": "n"
+    },
+    {
+      "fieldname": "addressCountry",
+      "transforms": {
+        "authority": [
+          "placeauthorities",
+          "place_shared"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "place/shared",
+      "namespace": "works_common",
+      "xpath": [
+        "addrGroupList",
+        "addrGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "addressCountryPlaceShared",
       "required": "n"
     },
     {

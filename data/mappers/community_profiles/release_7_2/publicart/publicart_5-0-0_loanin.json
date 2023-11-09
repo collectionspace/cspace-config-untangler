@@ -133,7 +133,31 @@
       "opt_list_values": [
 
       ],
-      "datacolumn": "loanIndividual",
+      "datacolumn": "loanIndividualPersonLocal",
+      "required": "n"
+    },
+    {
+      "fieldname": "loanIndividual",
+      "transforms": {
+        "authority": [
+          "personauthorities",
+          "person_shared"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "person/shared",
+      "namespace": "loansin_common",
+      "xpath": [
+        "loanStatusGroupList",
+        "loanStatusGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "loanIndividualPersonShared",
       "required": "n"
     },
     {
@@ -265,6 +289,30 @@
       "fieldname": "lender",
       "transforms": {
         "authority": [
+          "personauthorities",
+          "person_shared"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "person/shared",
+      "namespace": "loansin_common",
+      "xpath": [
+        "lenderGroupList",
+        "lenderGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "lenderPersonShared",
+      "required": "n"
+    },
+    {
+      "fieldname": "lender",
+      "transforms": {
+        "authority": [
           "orgauthorities",
           "organization"
         ]
@@ -283,6 +331,30 @@
 
       ],
       "datacolumn": "lenderOrganizationLocal",
+      "required": "n"
+    },
+    {
+      "fieldname": "lender",
+      "transforms": {
+        "authority": [
+          "orgauthorities",
+          "organization_shared"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "organization/shared",
+      "namespace": "loansin_common",
+      "xpath": [
+        "lenderGroupList",
+        "lenderGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "lenderOrganizationShared",
       "required": "n"
     },
     {
@@ -326,7 +398,31 @@
       "opt_list_values": [
 
       ],
-      "datacolumn": "lendersContact",
+      "datacolumn": "lendersContactPersonLocal",
+      "required": "n"
+    },
+    {
+      "fieldname": "lendersContact",
+      "transforms": {
+        "authority": [
+          "personauthorities",
+          "person_shared"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "person/shared",
+      "namespace": "loansin_common",
+      "xpath": [
+        "lenderGroupList",
+        "lenderGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "lendersContactPersonShared",
       "required": "n"
     },
     {

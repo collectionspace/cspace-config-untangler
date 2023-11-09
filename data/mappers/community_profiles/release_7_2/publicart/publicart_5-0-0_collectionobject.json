@@ -172,7 +172,30 @@
       "opt_list_values": [
 
       ],
-      "datacolumn": "publicartCollection",
+      "datacolumn": "publicartCollectionOrganizationLocal",
+      "required": "n"
+    },
+    {
+      "fieldname": "publicartCollection",
+      "transforms": {
+        "authority": [
+          "orgauthorities",
+          "organization_shared"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "organization/shared",
+      "namespace": "collectionobjects_publicart",
+      "xpath": [
+        "publicartCollections"
+      ],
+      "data_type": "string",
+      "repeats": "y",
+      "in_repeating_group": "n",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "publicartCollectionOrganizationShared",
       "required": "n"
     },
     {
@@ -638,6 +661,29 @@
       "fieldname": "owner",
       "transforms": {
         "authority": [
+          "personauthorities",
+          "person_shared"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "person/shared",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "owners"
+      ],
+      "data_type": "string",
+      "repeats": "y",
+      "in_repeating_group": "n",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "ownerPersonShared",
+      "required": "n"
+    },
+    {
+      "fieldname": "owner",
+      "transforms": {
+        "authority": [
           "orgauthorities",
           "organization"
         ]
@@ -655,6 +701,29 @@
 
       ],
       "datacolumn": "ownerOrganizationLocal",
+      "required": "n"
+    },
+    {
+      "fieldname": "owner",
+      "transforms": {
+        "authority": [
+          "orgauthorities",
+          "organization_shared"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "organization/shared",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "owners"
+      ],
+      "data_type": "string",
+      "repeats": "y",
+      "in_repeating_group": "n",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "ownerOrganizationShared",
       "required": "n"
     },
     {
@@ -958,6 +1027,30 @@
     {
       "fieldname": "inscriptionContentInscriber",
       "transforms": {
+        "authority": [
+          "orgauthorities",
+          "organization_shared"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "organization/shared",
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "textualInscriptionGroupList",
+        "textualInscriptionGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "inscriptionContentInscriberOrganizationShared",
+      "required": "n"
+    },
+    {
+      "fieldname": "inscriptionContentInscriber",
+      "transforms": {
       },
       "source_type": "refname",
       "source_name": "person/local",
@@ -1123,6 +1216,30 @@
       "fieldname": "publicartProductionPerson",
       "transforms": {
         "authority": [
+          "personauthorities",
+          "person_shared"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "person/shared",
+      "namespace": "collectionobjects_publicart",
+      "xpath": [
+        "publicartProductionPersonGroupList",
+        "publicartProductionPersonGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "publicartProductionPersonPersonShared",
+      "required": "n"
+    },
+    {
+      "fieldname": "publicartProductionPerson",
+      "transforms": {
+        "authority": [
           "orgauthorities",
           "organization"
         ]
@@ -1141,6 +1258,30 @@
 
       ],
       "datacolumn": "publicartProductionPersonOrganizationLocal",
+      "required": "n"
+    },
+    {
+      "fieldname": "publicartProductionPerson",
+      "transforms": {
+        "authority": [
+          "orgauthorities",
+          "organization_shared"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "organization/shared",
+      "namespace": "collectionobjects_publicart",
+      "xpath": [
+        "publicartProductionPersonGroupList",
+        "publicartProductionPersonGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "publicartProductionPersonOrganizationShared",
       "required": "n"
     },
     {

@@ -115,6 +115,29 @@
       "fieldname": "owner",
       "transforms": {
         "authority": [
+          "personauthorities",
+          "person_shared"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "person/shared",
+      "namespace": "groups_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "ownerPersonShared",
+      "required": "n"
+    },
+    {
+      "fieldname": "owner",
+      "transforms": {
+        "authority": [
           "orgauthorities",
           "organization"
         ]
@@ -132,6 +155,29 @@
 
       ],
       "datacolumn": "ownerOrganizationLocal",
+      "required": "n"
+    },
+    {
+      "fieldname": "owner",
+      "transforms": {
+        "authority": [
+          "orgauthorities",
+          "organization_shared"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "organization/shared",
+      "namespace": "groups_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "ownerOrganizationShared",
       "required": "n"
     },
     {
@@ -356,7 +402,33 @@
       "opt_list_values": [
 
       ],
-      "datacolumn": "checklistAssignee",
+      "datacolumn": "checklistAssigneePersonLocal",
+      "required": "n"
+    },
+    {
+      "fieldname": "checklistAssignee",
+      "transforms": {
+        "authority": [
+          "personauthorities",
+          "person_shared"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "person/shared",
+      "namespace": "groups_checklist",
+      "xpath": [
+        "checklistGroupList",
+        "checklistGroup",
+        "checklistItemGroupList",
+        "checklistItemGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "checklistAssigneePersonShared",
       "required": "n"
     },
     {
