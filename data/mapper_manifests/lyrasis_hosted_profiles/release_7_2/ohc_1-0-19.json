@@ -1,0 +1,380 @@
+{
+  "mappers": [
+    {
+      "profile": "ohc",
+      "version": "1-0-19",
+      "type": "acquisition",
+      "digest": "bb058e6137d5d9cdda9b8e66026097f7110c9d4c1cdbfda9ca221189abbdef69",
+      "enabled": true,
+      "url": "https://raw.githubusercontent.com/collectionspace/cspace-config-untangler/main/data/mappers/lyrasis_hosted_profiles/release_7_2/ohc_1-0-19/ohc_1-0-19_acquisition.json"
+    },
+    {
+      "profile": "ohc",
+      "version": "1-0-19",
+      "type": "authorityhierarchy",
+      "digest": "125660b63479ab2c7ad6489808328ac449b27de2ddbd807c528f79d86edfb9dc",
+      "enabled": true,
+      "url": "https://raw.githubusercontent.com/collectionspace/cspace-config-untangler/main/data/mappers/lyrasis_hosted_profiles/release_7_2/ohc_1-0-19/ohc_1-0-19_authorityhierarchy.json"
+    },
+    {
+      "profile": "ohc",
+      "version": "1-0-19",
+      "type": "chronology-era",
+      "digest": "c0351aeadc5603b7a8e7b2fae1800b28426aa206a11d290d0d4cb50a6e5efa3c",
+      "enabled": true,
+      "url": "https://raw.githubusercontent.com/collectionspace/cspace-config-untangler/main/data/mappers/lyrasis_hosted_profiles/release_7_2/ohc_1-0-19/ohc_1-0-19_chronology-era.json"
+    },
+    {
+      "profile": "ohc",
+      "version": "1-0-19",
+      "type": "chronology-event",
+      "digest": "95b2ffb12bb03423fdf1499a69f609b1f6406b75cb2d8a66b3181d3ab36646f2",
+      "enabled": true,
+      "url": "https://raw.githubusercontent.com/collectionspace/cspace-config-untangler/main/data/mappers/lyrasis_hosted_profiles/release_7_2/ohc_1-0-19/ohc_1-0-19_chronology-event.json"
+    },
+    {
+      "profile": "ohc",
+      "version": "1-0-19",
+      "type": "chronology-field-collection",
+      "digest": "3a01fd43551d8e250a676b145717010303a4fbe64e0c2430a6b00394646e4b42",
+      "enabled": true,
+      "url": "https://raw.githubusercontent.com/collectionspace/cspace-config-untangler/main/data/mappers/lyrasis_hosted_profiles/release_7_2/ohc_1-0-19/ohc_1-0-19_chronology-field-collection.json"
+    },
+    {
+      "profile": "ohc",
+      "version": "1-0-19",
+      "type": "citation-local",
+      "digest": "fbec45493f9b562e3d59a641d42264ed91eb781cbe1cfa1725d3cd554a33d1d7",
+      "enabled": true,
+      "url": "https://raw.githubusercontent.com/collectionspace/cspace-config-untangler/main/data/mappers/lyrasis_hosted_profiles/release_7_2/ohc_1-0-19/ohc_1-0-19_citation-local.json"
+    },
+    {
+      "profile": "ohc",
+      "version": "1-0-19",
+      "type": "citation-worldcat",
+      "digest": "06247f90a4b9b7bc2b53c0913bfe8d8430a2e8af6803a3374f1e685eddf35c08",
+      "enabled": true,
+      "url": "https://raw.githubusercontent.com/collectionspace/cspace-config-untangler/main/data/mappers/lyrasis_hosted_profiles/release_7_2/ohc_1-0-19/ohc_1-0-19_citation-worldcat.json"
+    },
+    {
+      "profile": "ohc",
+      "version": "1-0-19",
+      "type": "claim",
+      "digest": "b89862ad13f1c3102b11254fa8c86c993be6ab99af773c3e984febd168e26eb2",
+      "enabled": true,
+      "url": "https://raw.githubusercontent.com/collectionspace/cspace-config-untangler/main/data/mappers/lyrasis_hosted_profiles/release_7_2/ohc_1-0-19/ohc_1-0-19_claim.json"
+    },
+    {
+      "profile": "ohc",
+      "version": "1-0-19",
+      "type": "collectionobject",
+      "digest": "cf96a50d640f0657091c144ae466b8a9c9a18d9c67643a2b03f7672d8a549bb7",
+      "enabled": true,
+      "url": "https://raw.githubusercontent.com/collectionspace/cspace-config-untangler/main/data/mappers/lyrasis_hosted_profiles/release_7_2/ohc_1-0-19/ohc_1-0-19_collectionobject.json"
+    },
+    {
+      "profile": "ohc",
+      "version": "1-0-19",
+      "type": "concept-activity",
+      "digest": "0dd737d00c45db246bbf104dfd720ad797c52d48a3234ef84e013bd5f1eaefbe",
+      "enabled": true,
+      "url": "https://raw.githubusercontent.com/collectionspace/cspace-config-untangler/main/data/mappers/lyrasis_hosted_profiles/release_7_2/ohc_1-0-19/ohc_1-0-19_concept-activity.json"
+    },
+    {
+      "profile": "ohc",
+      "version": "1-0-19",
+      "type": "concept-archaeological-culture",
+      "digest": "4bd7c16fe2adabb1cf202f890f1d79a7f11b317fd901a963ea3ffb092f112094",
+      "enabled": true,
+      "url": "https://raw.githubusercontent.com/collectionspace/cspace-config-untangler/main/data/mappers/lyrasis_hosted_profiles/release_7_2/ohc_1-0-19/ohc_1-0-19_concept-archaeological-culture.json"
+    },
+    {
+      "profile": "ohc",
+      "version": "1-0-19",
+      "type": "concept-associated",
+      "digest": "b9ae5abd8386476d52a44dfd2831615a7d41df8224a1178354f0903a05844a76",
+      "enabled": true,
+      "url": "https://raw.githubusercontent.com/collectionspace/cspace-config-untangler/main/data/mappers/lyrasis_hosted_profiles/release_7_2/ohc_1-0-19/ohc_1-0-19_concept-associated.json"
+    },
+    {
+      "profile": "ohc",
+      "version": "1-0-19",
+      "type": "concept-ethnographic-culture",
+      "digest": "423326b13383fe30f06f59543b0c82d19b70b3b5b870c62cea380b2f834aeace",
+      "enabled": true,
+      "url": "https://raw.githubusercontent.com/collectionspace/cspace-config-untangler/main/data/mappers/lyrasis_hosted_profiles/release_7_2/ohc_1-0-19/ohc_1-0-19_concept-ethnographic-culture.json"
+    },
+    {
+      "profile": "ohc",
+      "version": "1-0-19",
+      "type": "concept-ethnographic-file-code",
+      "digest": "b154e180a48e4d6457b1b25688e65ca40d622c4bbbdabc117c2e816519eeb318",
+      "enabled": true,
+      "url": "https://raw.githubusercontent.com/collectionspace/cspace-config-untangler/main/data/mappers/lyrasis_hosted_profiles/release_7_2/ohc_1-0-19/ohc_1-0-19_concept-ethnographic-file-code.json"
+    },
+    {
+      "profile": "ohc",
+      "version": "1-0-19",
+      "type": "concept-material",
+      "digest": "12c4a6861cd608f1b5b7f70d1894465a46dc10965111b99829e3bfc66e1e6d7d",
+      "enabled": true,
+      "url": "https://raw.githubusercontent.com/collectionspace/cspace-config-untangler/main/data/mappers/lyrasis_hosted_profiles/release_7_2/ohc_1-0-19/ohc_1-0-19_concept-material.json"
+    },
+    {
+      "profile": "ohc",
+      "version": "1-0-19",
+      "type": "concept-nomenclature",
+      "digest": "a5a5ccc5673d9f2417aa2a1b09669e9da98f2c714cb12df513e7ebd1753b5523",
+      "enabled": true,
+      "url": "https://raw.githubusercontent.com/collectionspace/cspace-config-untangler/main/data/mappers/lyrasis_hosted_profiles/release_7_2/ohc_1-0-19/ohc_1-0-19_concept-nomenclature.json"
+    },
+    {
+      "profile": "ohc",
+      "version": "1-0-19",
+      "type": "concept-occasion",
+      "digest": "2dc5c69a4a7a379676ce165a5a9ac086c90befb1c4a35c4d9fcd5be2f0e49318",
+      "enabled": true,
+      "url": "https://raw.githubusercontent.com/collectionspace/cspace-config-untangler/main/data/mappers/lyrasis_hosted_profiles/release_7_2/ohc_1-0-19/ohc_1-0-19_concept-occasion.json"
+    },
+    {
+      "profile": "ohc",
+      "version": "1-0-19",
+      "type": "conditioncheck",
+      "digest": "1a672b45dd31a5ed7f8bd725523691b9725020603d25ce072d1e346120dc937f",
+      "enabled": true,
+      "url": "https://raw.githubusercontent.com/collectionspace/cspace-config-untangler/main/data/mappers/lyrasis_hosted_profiles/release_7_2/ohc_1-0-19/ohc_1-0-19_conditioncheck.json"
+    },
+    {
+      "profile": "ohc",
+      "version": "1-0-19",
+      "type": "conservation",
+      "digest": "0701d4c76a45f93e2fd5fcaeacba651d3181cd06a2fb4d9cf1792c2be58a548b",
+      "enabled": true,
+      "url": "https://raw.githubusercontent.com/collectionspace/cspace-config-untangler/main/data/mappers/lyrasis_hosted_profiles/release_7_2/ohc_1-0-19/ohc_1-0-19_conservation.json"
+    },
+    {
+      "profile": "ohc",
+      "version": "1-0-19",
+      "type": "exhibition",
+      "digest": "f49fba52e7a028ee38b35463c8021eee132244b83671038fdafb23139b203d05",
+      "enabled": true,
+      "url": "https://raw.githubusercontent.com/collectionspace/cspace-config-untangler/main/data/mappers/lyrasis_hosted_profiles/release_7_2/ohc_1-0-19/ohc_1-0-19_exhibition.json"
+    },
+    {
+      "profile": "ohc",
+      "version": "1-0-19",
+      "type": "group",
+      "digest": "fa9e47c34f2a90ba70ef11a765ddef72edc8cf0849f505df56ff38780702788e",
+      "enabled": true,
+      "url": "https://raw.githubusercontent.com/collectionspace/cspace-config-untangler/main/data/mappers/lyrasis_hosted_profiles/release_7_2/ohc_1-0-19/ohc_1-0-19_group.json"
+    },
+    {
+      "profile": "ohc",
+      "version": "1-0-19",
+      "type": "insurance",
+      "digest": "d0d0328150379526ec34747bdf1b3bdd8cd445e51c36016389d76c5399545c18",
+      "enabled": true,
+      "url": "https://raw.githubusercontent.com/collectionspace/cspace-config-untangler/main/data/mappers/lyrasis_hosted_profiles/release_7_2/ohc_1-0-19/ohc_1-0-19_insurance.json"
+    },
+    {
+      "profile": "ohc",
+      "version": "1-0-19",
+      "type": "intake",
+      "digest": "a7adfb2cd2276c5186a79bd3cc6c55307330260ba86c468591603979516363d4",
+      "enabled": true,
+      "url": "https://raw.githubusercontent.com/collectionspace/cspace-config-untangler/main/data/mappers/lyrasis_hosted_profiles/release_7_2/ohc_1-0-19/ohc_1-0-19_intake.json"
+    },
+    {
+      "profile": "ohc",
+      "version": "1-0-19",
+      "type": "loanin",
+      "digest": "27384bcd5c9272bccc0b01e5db445a10f480667f87791fcb2ce34079112edd1b",
+      "enabled": true,
+      "url": "https://raw.githubusercontent.com/collectionspace/cspace-config-untangler/main/data/mappers/lyrasis_hosted_profiles/release_7_2/ohc_1-0-19/ohc_1-0-19_loanin.json"
+    },
+    {
+      "profile": "ohc",
+      "version": "1-0-19",
+      "type": "loanout",
+      "digest": "f9d8fca6c67021ba9cc23e944bd109baf1f6184f1d4a22d6322d6802aa705ec8",
+      "enabled": true,
+      "url": "https://raw.githubusercontent.com/collectionspace/cspace-config-untangler/main/data/mappers/lyrasis_hosted_profiles/release_7_2/ohc_1-0-19/ohc_1-0-19_loanout.json"
+    },
+    {
+      "profile": "ohc",
+      "version": "1-0-19",
+      "type": "location-local",
+      "digest": "d288fe3d7ddbfa80e07f53708082e097b3841e6a6eef05059b692e33e1c75146",
+      "enabled": true,
+      "url": "https://raw.githubusercontent.com/collectionspace/cspace-config-untangler/main/data/mappers/lyrasis_hosted_profiles/release_7_2/ohc_1-0-19/ohc_1-0-19_location-local.json"
+    },
+    {
+      "profile": "ohc",
+      "version": "1-0-19",
+      "type": "location-offsite",
+      "digest": "aceee81634a1085a3e58afc79089021ab3a8c7c35164159fc56b42ae4ecde112",
+      "enabled": true,
+      "url": "https://raw.githubusercontent.com/collectionspace/cspace-config-untangler/main/data/mappers/lyrasis_hosted_profiles/release_7_2/ohc_1-0-19/ohc_1-0-19_location-offsite.json"
+    },
+    {
+      "profile": "ohc",
+      "version": "1-0-19",
+      "type": "media",
+      "digest": "ea2aa661a7a6a406d22973a0545c4652242f5a5a211f8216bceeb0ac0df575c6",
+      "enabled": true,
+      "url": "https://raw.githubusercontent.com/collectionspace/cspace-config-untangler/main/data/mappers/lyrasis_hosted_profiles/release_7_2/ohc_1-0-19/ohc_1-0-19_media.json"
+    },
+    {
+      "profile": "ohc",
+      "version": "1-0-19",
+      "type": "movement",
+      "digest": "d6e230738441f47a931f68e229f57cba630ae06ce2e5fa44039964dadfac0880",
+      "enabled": true,
+      "url": "https://raw.githubusercontent.com/collectionspace/cspace-config-untangler/main/data/mappers/lyrasis_hosted_profiles/release_7_2/ohc_1-0-19/ohc_1-0-19_movement.json"
+    },
+    {
+      "profile": "ohc",
+      "version": "1-0-19",
+      "type": "nonhierarchicalrelationship",
+      "digest": "bacdc5e07861faebf0cee1d8713ed89d41935aacded4b7450597ea38c7113261",
+      "enabled": true,
+      "url": "https://raw.githubusercontent.com/collectionspace/cspace-config-untangler/main/data/mappers/lyrasis_hosted_profiles/release_7_2/ohc_1-0-19/ohc_1-0-19_nonhierarchicalrelationship.json"
+    },
+    {
+      "profile": "ohc",
+      "version": "1-0-19",
+      "type": "objectexit",
+      "digest": "da60c8bd1a346143bece86faa92499637f2d410487eb9bc166dfcb092475adb4",
+      "enabled": true,
+      "url": "https://raw.githubusercontent.com/collectionspace/cspace-config-untangler/main/data/mappers/lyrasis_hosted_profiles/release_7_2/ohc_1-0-19/ohc_1-0-19_objectexit.json"
+    },
+    {
+      "profile": "ohc",
+      "version": "1-0-19",
+      "type": "objecthierarchy",
+      "digest": "6d9139796770c689809cfb73662161425a64d30ed35aa7bc10f0a610613c78e1",
+      "enabled": true,
+      "url": "https://raw.githubusercontent.com/collectionspace/cspace-config-untangler/main/data/mappers/lyrasis_hosted_profiles/release_7_2/ohc_1-0-19/ohc_1-0-19_objecthierarchy.json"
+    },
+    {
+      "profile": "ohc",
+      "version": "1-0-19",
+      "type": "organization-local",
+      "digest": "98130ca5a51caf76f98f87ab986bb49238fe9511707213fd61fb37bd381d16bb",
+      "enabled": true,
+      "url": "https://raw.githubusercontent.com/collectionspace/cspace-config-untangler/main/data/mappers/lyrasis_hosted_profiles/release_7_2/ohc_1-0-19/ohc_1-0-19_organization-local.json"
+    },
+    {
+      "profile": "ohc",
+      "version": "1-0-19",
+      "type": "organization-ulan",
+      "digest": "b6891e535c5dd97e6363dfe290395bb3d771b63cacb59575f83676eee7dd5058",
+      "enabled": true,
+      "url": "https://raw.githubusercontent.com/collectionspace/cspace-config-untangler/main/data/mappers/lyrasis_hosted_profiles/release_7_2/ohc_1-0-19/ohc_1-0-19_organization-ulan.json"
+    },
+    {
+      "profile": "ohc",
+      "version": "1-0-19",
+      "type": "osteology",
+      "digest": "280ffdfb76d78da3704bf5586d6018726f46f75cd0aae4c4806051fad0025290",
+      "enabled": true,
+      "url": "https://raw.githubusercontent.com/collectionspace/cspace-config-untangler/main/data/mappers/lyrasis_hosted_profiles/release_7_2/ohc_1-0-19/ohc_1-0-19_osteology.json"
+    },
+    {
+      "profile": "ohc",
+      "version": "1-0-19",
+      "type": "person-local",
+      "digest": "19eb0e0bf4eea1e499e5d2877a225398e9b1402cda4c1bca5b873bcaef4cc740",
+      "enabled": true,
+      "url": "https://raw.githubusercontent.com/collectionspace/cspace-config-untangler/main/data/mappers/lyrasis_hosted_profiles/release_7_2/ohc_1-0-19/ohc_1-0-19_person-local.json"
+    },
+    {
+      "profile": "ohc",
+      "version": "1-0-19",
+      "type": "person-ulan",
+      "digest": "8ca405ac9414d654a88982dabd7c926d0eb21f95d340a558560c0dc81dd3cd24",
+      "enabled": true,
+      "url": "https://raw.githubusercontent.com/collectionspace/cspace-config-untangler/main/data/mappers/lyrasis_hosted_profiles/release_7_2/ohc_1-0-19/ohc_1-0-19_person-ulan.json"
+    },
+    {
+      "profile": "ohc",
+      "version": "1-0-19",
+      "type": "place-archaeological",
+      "digest": "5d65028d4cf591ec93b7bda078f1882e9725cb2bcf2e7f4c797f888aa7ce940f",
+      "enabled": true,
+      "url": "https://raw.githubusercontent.com/collectionspace/cspace-config-untangler/main/data/mappers/lyrasis_hosted_profiles/release_7_2/ohc_1-0-19/ohc_1-0-19_place-archaeological.json"
+    },
+    {
+      "profile": "ohc",
+      "version": "1-0-19",
+      "type": "place-local",
+      "digest": "ee949eeaf8bcff91643373ecd0ef8e1a6d63ea97dff998f088ae62defd1b11dd",
+      "enabled": true,
+      "url": "https://raw.githubusercontent.com/collectionspace/cspace-config-untangler/main/data/mappers/lyrasis_hosted_profiles/release_7_2/ohc_1-0-19/ohc_1-0-19_place-local.json"
+    },
+    {
+      "profile": "ohc",
+      "version": "1-0-19",
+      "type": "place-tgn",
+      "digest": "1e1cfb32078f21a446a2bff506f30636aa19acbb7ec65231cd546b52804dc141",
+      "enabled": true,
+      "url": "https://raw.githubusercontent.com/collectionspace/cspace-config-untangler/main/data/mappers/lyrasis_hosted_profiles/release_7_2/ohc_1-0-19/ohc_1-0-19_place-tgn.json"
+    },
+    {
+      "profile": "ohc",
+      "version": "1-0-19",
+      "type": "taxon-common",
+      "digest": "1d7978c7328d637d45445b732a3f0fd40c25d5c851ab13747544745c91e433bc",
+      "enabled": true,
+      "url": "https://raw.githubusercontent.com/collectionspace/cspace-config-untangler/main/data/mappers/lyrasis_hosted_profiles/release_7_2/ohc_1-0-19/ohc_1-0-19_taxon-common.json"
+    },
+    {
+      "profile": "ohc",
+      "version": "1-0-19",
+      "type": "taxon-local",
+      "digest": "12e6f33f3c9f61ba56859d992f2e9534515333fea996d49ca4e927d7ec84d681",
+      "enabled": true,
+      "url": "https://raw.githubusercontent.com/collectionspace/cspace-config-untangler/main/data/mappers/lyrasis_hosted_profiles/release_7_2/ohc_1-0-19/ohc_1-0-19_taxon-local.json"
+    },
+    {
+      "profile": "ohc",
+      "version": "1-0-19",
+      "type": "transport",
+      "digest": "c4e4822bb18e4527345221152597f82c85ac88dd1c429bf7c5c4f53e041487b7",
+      "enabled": true,
+      "url": "https://raw.githubusercontent.com/collectionspace/cspace-config-untangler/main/data/mappers/lyrasis_hosted_profiles/release_7_2/ohc_1-0-19/ohc_1-0-19_transport.json"
+    },
+    {
+      "profile": "ohc",
+      "version": "1-0-19",
+      "type": "uoc",
+      "digest": "6b1b1db148a7897bffdad7659ff2ae1b9c4b41ce53f027fdd07086d75645d2f3",
+      "enabled": true,
+      "url": "https://raw.githubusercontent.com/collectionspace/cspace-config-untangler/main/data/mappers/lyrasis_hosted_profiles/release_7_2/ohc_1-0-19/ohc_1-0-19_uoc.json"
+    },
+    {
+      "profile": "ohc",
+      "version": "1-0-19",
+      "type": "valuation",
+      "digest": "2ca4bb1cb23c0e2e579c507b4ab0c6e0564a932f5e66ed3b9aeeba4584882828",
+      "enabled": true,
+      "url": "https://raw.githubusercontent.com/collectionspace/cspace-config-untangler/main/data/mappers/lyrasis_hosted_profiles/release_7_2/ohc_1-0-19/ohc_1-0-19_valuation.json"
+    },
+    {
+      "profile": "ohc",
+      "version": "1-0-19",
+      "type": "work-cona",
+      "digest": "d37750f45c9d1679cd027279e072a8b67d8d600c7dcdfd90a2ef86d27bd7f614",
+      "enabled": true,
+      "url": "https://raw.githubusercontent.com/collectionspace/cspace-config-untangler/main/data/mappers/lyrasis_hosted_profiles/release_7_2/ohc_1-0-19/ohc_1-0-19_work-cona.json"
+    },
+    {
+      "profile": "ohc",
+      "version": "1-0-19",
+      "type": "work-local",
+      "digest": "81542ef139bb895854ee2a64ca2bff31fc36332cde211d3c1da41afbc4f6982e",
+      "enabled": true,
+      "url": "https://raw.githubusercontent.com/collectionspace/cspace-config-untangler/main/data/mappers/lyrasis_hosted_profiles/release_7_2/ohc_1-0-19/ohc_1-0-19_work-local.json"
+    }
+  ]
+}
