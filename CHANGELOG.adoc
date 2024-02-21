@@ -31,6 +31,8 @@ These changes are merged into the `main` branch, but have not been released. Aft
 
 === Bugfixes
 
+* Fix bug in writing fields CSV when there is no value for a field (PR#133)
+
 === Deleted
 
 === Deprecated/Will break in a future version

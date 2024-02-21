@@ -93,7 +93,7 @@ module CspaceConfigUntangler
       end
 
       def expert_csv_row
-        {
+        row = {
           fid: @fid,
           profile: @profile.name,
           record_type: @rectype.name,
@@ -103,19 +103,27 @@ module CspaceConfigUntangler
           ui_info_group: get_ui_info_group,
           ui_path: get_ui_path,
           ui_field_label: label,
-          xml_path: @schema_path.join(" > "),
+          xml_path: nil,
           xml_field_name: @name,
           data_type: @data_type,
           required: @required,
           repeats: @repeats,
           group_repeats: @in_repeating_group,
-          data_source: @value_source.map(&:fields_csv_label).compact.join("; "),
-          option_list_values: @value_list.join(", ")
+          data_source: nil,
+          option_list_values: nil
         }
+        row[:xml_path] = @schema_path.join(" > ") if @schema_path
+        if @value_source
+          row[:data_source] = @value_source.map(&:fields_csv_label)
+            .compact
+            .join("; ")
+        end
+        row[:option_list_values] = @value_list.join(", ") if @value_list
+        row
       end
 
       def friendly_csv_row
-        {
+        row = {
           profile: @profile.name,
           record_type: @rectype.label,
           field: label,
@@ -125,11 +133,18 @@ module CspaceConfigUntangler
           required: @required,
           repeats: @repeats,
           group_repeats: @in_repeating_group,
-          data_source: @value_source.map(&:fields_csv_label).compact.join("; "),
-          option_list_values: @value_list.join(", "),
+          data_source: nil,
+          option_list_values: nil,
           record_type_machine_name: @rectype.name,
           field_machine_name: @name
         }
+        if @value_source
+          row[:data_source] = @value_source.map(&:fields_csv_label)
+            .compact
+            .join("; ")
+        end
+        row[:option_list_values] = @value_list.join(", ") if @value_list
+        row
       end
 
       def format_csv(source)
