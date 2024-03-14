@@ -19,7 +19,6 @@ module CspaceConfigUntangler
         @id = form_field.id
         @label = lookup_display_name(@id)
         merge_field_defs
-        fix_museum_records if id == "places_nagpra.museumRecords"
         @fid = "#{@profile.name} #{rectype.name} #{@ns_for_id} #{@name}"
       end
 
@@ -282,11 +281,6 @@ module CspaceConfigUntangler
         else
           val
         end
-      end
-
-      def fix_museum_records
-        CCU.warn_on_upgrade(binding.source_location, "DRYD-1274")
-        @label = ui_path.pop
       end
     end
   end
