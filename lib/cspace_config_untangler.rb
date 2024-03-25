@@ -41,6 +41,23 @@ module CspaceConfigUntangler
     'omca' => '6-1-0',
     'publicart' => '2-0-1'
   }
+  # The last version of each profile that should get plain (i.e. no
+  # authority name and vocab name added to column header in template
+  # and mapper.
+  default_single_authority_plain_last_versions = {
+    'anthro' => '7-0-0',
+    'bonsai' => '5-0-6',
+    'botgarden' => '3-0-6',
+    'core' => '7-2-0',
+    'fcart' => '6-0-0',
+    'herbarium' => '2-0-9',
+    'lhmc' => '6-0-0',
+    'hku' => '',
+    'materials' => '3-2-0',
+    'ohc' => '1-0-19',
+    'omca' => '1-0-0-rc6',
+    'publicart' => '5-0-0'
+  }
   # Don't change stuff after this
 
   File.delete('log.log') if File.exist?('log.log')
@@ -61,6 +78,9 @@ module CspaceConfigUntangler
 
   setting :last_fancy_column_versions,
           default: default_last_fancy_column_versions, reader: true
+  setting :single_authority_plain_last_versions,
+          default: default_single_authority_plain_last_versions,
+          reader: true
   setting :datadir, default: default_datadir, reader: true
   setting :configdir, default: default_configdir, reader: true
   setting :templatedir, default: default_templatedir, reader: true
