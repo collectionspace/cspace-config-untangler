@@ -1,13 +1,23 @@
 # frozen_string_literal: true
 
-require_relative 'reportable'
+require_relative "reportable"
 
 module CspaceConfigUntangler
   module ValueSources
-    # basic value object to represent an authority
+    # @abstract
     class AbstractValueSource
       include CCU::ValueSources::Reportable
       attr_reader :name, :type, :subtype, :source_type
+
+      def column_header_consistent(fieldname)
+        fieldname
+      end
+
+      def column_header_fancy(fieldname, sources)
+        fieldname
+      end
+
+      def transforms = nil
 
       def inspect
         included = %i[@name @type @subtype @source_type]
