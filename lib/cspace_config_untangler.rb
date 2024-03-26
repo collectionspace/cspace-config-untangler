@@ -3,7 +3,6 @@ require 'csv'
 require 'fileutils'
 require 'json'
 require 'logger'
-require 'pp'
 require 'yaml'
 
 # external gems
@@ -15,10 +14,11 @@ require 'nokogiri'
 require 'pry'
 require 'thor'
 
-
 module CspaceConfigUntangler
   ::CCU = CspaceConfigUntangler
+
   module_function
+
   extend Dry::Configurable
 
   # Change these variables to reflect your desired directory structure and main profile
@@ -39,11 +39,28 @@ module CspaceConfigUntangler
     'materials' => '2-0-0',
     'ohc' => '1-0-4',
     'omca' => '6-1-0',
-    'publicart' => '2-0-1',
+    'publicart' => '2-0-1'
+  }
+  # The last version of each profile that should get plain (i.e. no
+  # authority name and vocab name added to column header in template
+  # and mapper.
+  default_single_authority_plain_last_versions = {
+    'anthro' => '7-0-0',
+    'bonsai' => '5-0-6',
+    'botgarden' => '3-0-6',
+    'core' => '7-2-0',
+    'fcart' => '6-0-0',
+    'herbarium' => '2-0-9',
+    'lhmc' => '6-0-0',
+    'hku' => '',
+    'materials' => '3-2-0',
+    'ohc' => '1-0-19',
+    'omca' => '1-0-0-rc6',
+    'publicart' => '5-0-0'
   }
   # Don't change stuff after this
 
-  File.delete('log.log') if File::exist?('log.log')
+  File.delete('log.log') if File.exist?('log.log')
 
   def logger
     @logger ||= Logger.new('log.log')
@@ -59,50 +76,55 @@ module CspaceConfigUntangler
   default_templatedir = File.join(default_datadir, 'templates')
   default_mapperdir = File.join(default_datadir, 'mappers')
 
-  setting :last_fancy_column_versions, default: default_last_fancy_column_versions, reader: true
+  setting :last_fancy_column_versions,
+          default: default_last_fancy_column_versions, reader: true
+  setting :single_authority_plain_last_versions,
+          default: default_single_authority_plain_last_versions,
+          reader: true
   setting :datadir, default: default_datadir, reader: true
   setting :configdir, default: default_configdir, reader: true
   setting :templatedir, default: default_templatedir, reader: true
   setting :mapperdir, default: default_mapperdir, reader: true
   setting :releases,
-    default: {
-      "5_2"=>nil,
-      "6_0"=>"5_2",
-      "6_1"=>"6_0",
-      "7_0"=>"6_1",
-      "7_1"=>"7_0",
-      "7_2"=>"7_1"
-    },
-    reader: true
+          default: {
+            '5_2' => nil,
+            '6_0' => '5_2',
+            '6_1' => '6_0',
+            '7_0' => '6_1',
+            '7_1' => '7_0',
+            '7_2' => '7_1',
+            '8_0' => '7_2'
+          },
+          reader: true
   setting :release,
-    default: nil,
-    reader: true,
-    constructor: ->(value) do
-      if value
-        rel = CCU::Validate.release(value)
-        CCU.switch_release(rel)
-      else
-        core = Dir.new(configdir)
-          .children
-          .select{ |filename| filename.start_with?("core") }
-          .first
-        rel = core.split("_")
-          .last
-          .split("-")
-          .first(2)
-          .join("_")
-      end
-      rel
-    end
+          default: nil,
+          reader: true,
+          constructor: lambda { |value|
+            if value
+              rel = CCU::Validate.release(value)
+              CCU.switch_release(rel)
+            else
+              core = Dir.new(configdir)
+                        .children
+                        .select { |filename| filename.start_with?('core') }
+                        .first
+              rel = core.split('_')
+                        .last
+                        .split('-')
+                        .first(2)
+                        .join('_')
+            end
+            rel
+          }
   setting :prev_release,
-    default: nil,
-    reader: true,
-    constructor: ->(_v){ releases[release] }
+          default: nil,
+          reader: true,
+          constructor: ->(_v) { releases[release] }
   setting :main_profile_name, default: default_main_profile_name, reader: true
   setting :log, default: logger, reader: true
   setting :mapper_uri_base,
-    default: default_mapper_uri_base,
-    reader: true
+          default: default_mapper_uri_base,
+          reader: true
 
   def allfields_path(
     release: CCU.release,
@@ -113,14 +135,14 @@ module CspaceConfigUntangler
     voutmode = CCU::Validate.out_mode(outmode)
 
     basename = "all_fields_#{release}_dates_#{vdatemode}"
-    suffix = voutmode == :expert ? ".csv" : "_#{voutmode}.csv"
+    suffix = voutmode == :expert ? '.csv' : "_#{voutmode}.csv"
     File.join(
       data_reference_dir(release),
       "#{basename}#{suffix}"
     )
   end
 
-  def data_reference_dir(release=CCU.release)
+  def data_reference_dir(release = CCU.release)
     File.join(
       app_dir,
       'data',
@@ -129,24 +151,24 @@ module CspaceConfigUntangler
     )
   end
 
-  def release_configs_dir(release=CCU.release)
-    File.join(app_dir, "data", "config_holder",
-              "community_profiles", "release_#{release}")
+  def release_configs_dir(release = CCU.release)
+    File.join(app_dir, 'data', 'config_holder',
+              'community_profiles', "release_#{release}")
   end
 
   def profiles
     Dir.new(CCU.configdir).children
-      .reject{ |e| e['readable'] }
-      .reject{ |e| e == '.keep' }
-      .map{ |fn| File.basename(fn).sub('.json', '') }
+       .reject { |e| e['readable'] }
+       .reject { |e| e == '.keep' }
+       .map { |fn| File.basename(fn).sub('.json', '') }
   end
 
   def main_profile
     Pathname.new(CCU.configdir)
-      .children(false)
-      .select{ |filename| filename.to_s.start_with?(CCU.main_profile_name) }
-      .map{ |filename| filename.to_s.delete_suffix(filename.extname) }
-      .first
+            .children(false)
+            .select { |filename| filename.to_s.start_with?(CCU.main_profile_name) }
+            .map { |filename| filename.to_s.delete_suffix(filename.extname) }
+            .first
   end
 
   def safe_copy(hash)
@@ -160,33 +182,37 @@ module CspaceConfigUntangler
 
   def clear_config_dir
     configs = Dir.new(CCU.configdir)
-      .children
-      .select{ |filename| filename.end_with?(".json") }
-      .map{ |filename| File.join(CCU.configdir, filename) }
+                 .children
+                 .select { |filename| filename.end_with?('.json') }
+                 .map { |filename| File.join(CCU.configdir, filename) }
     FileUtils.rm(configs)
   end
 
   def move_release_to_config_dir(release)
     rel_cfg_dir = CCU.release_configs_dir(release)
     release_configs = Dir.new(rel_cfg_dir)
-      .children
-      .map{ |fn| File.join(rel_cfg_dir, fn) }
+                         .children
+                         .map { |fn| File.join(rel_cfg_dir, fn) }
     FileUtils.cp(release_configs, CCU.configdir)
   end
 
-  def warn_on_upgrade(src, issue=nil)
-    return unless prev_release == "7_2"
+  def warn_on_upgrade(src, issue = nil)
+    return unless prev_release == '7_2'
 
     basemsg = "Verify that code at line #{src[1]} in #{src[0]} is still "\
-      "needed after next release"
+      'needed after next release'
     msgissue = issue ? "(#{issue})" : nil
-    warn([basemsg, msgissue].compact.join(" "))
+    warn([basemsg, msgissue].compact.join(' '))
   end
 
-  gem_agnostic_dir = $LOAD_PATH.select{ |dir| dir['untangler'] }.reject{ |dir| dir.end_with?('/spec') }.first
+  gem_agnostic_dir = $LOAD_PATH.select do |dir|
+    dir['untangler']
+  end.reject { |dir| dir.end_with?('/spec') }.first
 
   # Require all application files
-  Dir.glob("#{gem_agnostic_dir}/cspace_config_untangler/**/*").sort.select{ |path| path.match?(/\.rb$/) }.each do |rbfile|
+  Dir.glob("#{gem_agnostic_dir}/cspace_config_untangler/**/*").sort.select do |path|
+    path.match?(/\.rb$/)
+  end.each do |rbfile|
     req_file = rbfile.delete_prefix("#{gem_agnostic_dir}/").delete_suffix('.rb')
     require req_file
   end

@@ -5,7 +5,7 @@ module CspaceConfigUntangler
     # nil value object representing no value source
     class NoSource < AbstractValueSource
       def initialize
-        @type = 'na'
+        @type = "na"
         @source_type = type
         @name = type
         @subtype = type

@@ -1,14 +1,13 @@
 # frozen_string_literal: true
 
-require 'csv'
+require "csv"
 
 module CspaceConfigUntangler
   module Report
     class QaDeletedFields
-
       class << self
         def call(...)
-          self.new(...).call
+          new(...).call
         end
       end
 
@@ -20,15 +19,15 @@ module CspaceConfigUntangler
           CCU.data_reference_dir(release),
           "qa_deleted_fields_#{release}.csv"
         )
-        @new_fids = @release.map{ |row| row["fid"] }.flatten
+        @new_fids = @release.map { |row| row["fid"] }.flatten
         @headers = @release.first.headers
       end
 
       def call
-        CSV.open(target, 'w') do |csv|
+        CSV.open(target, "w") do |csv|
           csv << headers
-          prev.select{ |row| deleted?(row) }
-            .each{ |row| csv << row.values_at(*headers) }
+          prev.select { |row| deleted?(row) }
+            .each { |row| csv << row.values_at(*headers) }
         end
 
         puts "Wrote #{target}"

@@ -1,9 +1,9 @@
 GIT
   remote: https://github.com/kspurgin/rspec-custom.git
-  revision: 074dcc0a4ffeccd1cebcd8654e13724117bc8b4f
+  revision: 4c65dd3a0a02dffc17703e8e8d0513d64ba4cad9
   branch: main
   specs:
-    rspec-custom (0.1.0)
+    rspec-custom (1.0.0)
       rspec-core
 
 PATH
@@ -48,7 +48,9 @@ GEM
     http-parser (1.2.3)
       ffi-compiler (>= 1.0, < 2.0)
     method_source (1.0.0)
-    nokogiri (1.14.3-x86_64-darwin)
+    mini_portile2 (2.8.5)
+    nokogiri (1.14.3)
+      mini_portile2 (~> 2.8.0)
       racc (~> 1.4)
     pry (0.13.1)
       coderay (~> 1.1)

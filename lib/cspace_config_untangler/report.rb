@@ -1,11 +1,12 @@
 # frozen_string_literal: true
 
-require 'fileutils'
+require "fileutils"
 
 module CspaceConfigUntangler
   # Namespace for report generators
   module Report
     module_function
+
     extend Dry::Configurable
 
     setting :auth_vocab_report_path,
@@ -34,7 +35,7 @@ module CspaceConfigUntangler
       dir = CCU.data_reference_dir
       FileUtils.mkdir_p(dir) unless Dir.exist?(dir)
       if clean
-        FileUtils.rm(Dir.new(dir).children.map{ |fn| File.join(dir, fn) })
+        FileUtils.rm(Dir.new(dir).children.map { |fn| File.join(dir, fn) })
       end
 
       CCU::Report::QaAllFields.call(release: release)
@@ -51,7 +52,7 @@ module CspaceConfigUntangler
       dir = CCU.data_reference_dir(release)
       FileUtils.mkdir_p(dir) unless Dir.exist?(dir)
       if clean
-        FileUtils.rm_f(Dir.new(dir).children.map{ |fn| File.join(dir, fn) })
+        FileUtils.rm_f(Dir.new(dir).children.map { |fn| File.join(dir, fn) })
       end
 
       CCU::Report::AllFieldsGenerator.call(release: release)
@@ -72,32 +73,32 @@ module CspaceConfigUntangler
       )
       CCU::Report::ProfileSubjectsGenerator.call(
         profiles: "all",
-        release: release,
+        release: release
       )
       CCU::Report::ProfileStructuredDateFields.call(
         profiles: "all",
-        release: release,
+        release: release
       )
       CCU::Report::ProfileMultiAuthFields.call(
         profiles: "all",
-        release: release,
+        release: release
       )
       CCU::Report::ProfileAuthorityUse.call(
         profiles: "all",
-        release: release,
+        release: release
       )
     end
 
     def deversion_for_qa(row)
       fid = row["fid"]
-      row['fid'] = fid.sub(/_\d+(-\d+){2} /, ' ')
-      row['profile'] = row['profile'].sub(/_\d+(-\d+){2}/, '')
+      row["fid"] = fid.sub(/_\d+(-\d+){2}(-rc\d+|) /, " ")
+      row["profile"] = row["profile"].sub(/_\d+(-\d+){2}(-rc\d+|)/, "")
       row
     end
 
     def get_qa_table(release: CCU.release, prev: false)
       get_all_fields(release: release, prev: prev, outmode: :expert)
-        .map{ |row| deversion_for_qa(row) }
+        .map { |row| deversion_for_qa(row) }
     end
 
     def get_all_fields(release: CCU.release, prev: false, outmode: :friendly)

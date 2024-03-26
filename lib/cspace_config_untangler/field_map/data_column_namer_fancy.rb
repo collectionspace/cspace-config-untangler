@@ -11,15 +11,21 @@ module CspaceConfigUntangler
         @result = {}
 
         # build hash used to check whether to name using authority type, subtype, or both
-        h = @sources.group_by{ |src| src.type }.transform_values{ |val| val.map(&:subtype) }
+        h = @sources.reject { |src| src.source_type == "refname" }
+          .group_by { |src| src.type }
+          .transform_values { |val| val.map(&:subtype) }
 
         @sources.each do |source|
-          type = source.type
           name = @fieldname.clone
-          use_type = h.keys.size > 1 ? true : false
-          use_subtype = h[type].size > 1 ? true : false
-          name = use_type ? name << type.capitalize : name
-          name = use_subtype ? name << source.subtype.capitalize : name
+          if source.source_type == "refname"
+            name << "Refname"
+          else
+            type = source.type
+            use_type = h.keys.size > 1
+            use_subtype = h[type].size > 1
+            name = use_type ? name << type.capitalize : name
+            name = use_subtype ? name << source.subtype.capitalize : name
+          end
           @result[source] = name
         end
       end
