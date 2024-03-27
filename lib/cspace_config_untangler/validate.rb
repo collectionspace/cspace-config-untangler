@@ -39,6 +39,10 @@ module CspaceConfigUntangler
     end
 
     def release(val)
+      unless CCU.releases.include?(val)
+        fail(ArgumentError, "Add release to CCU.releases setting")
+      end
+
       unless /^\d+(_\d+){1,2}$/.match?(val)
         fail(ArgumentError, "release must follow pattern: #_# or #_#_#")
       end

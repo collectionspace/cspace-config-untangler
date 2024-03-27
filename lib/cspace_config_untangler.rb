@@ -86,40 +86,16 @@ module CspaceConfigUntangler
   setting :templatedir, default: default_templatedir, reader: true
   setting :mapperdir, default: default_mapperdir, reader: true
   setting :releases,
-          default: {
-            '5_2' => nil,
-            '6_0' => '5_2',
-            '6_1' => '6_0',
-            '7_0' => '6_1',
-            '7_1' => '7_0',
-            '7_2' => '7_1',
-            '8_0' => '7_2'
-          },
-          reader: true
+    default: ["5_2", "6_0", "6_1", "7_0", "7_1", "7_2", "8_0"],
+    reader: true
   setting :release,
-          default: nil,
-          reader: true,
-          constructor: lambda { |value|
-            if value
-              rel = CCU::Validate.release(value)
-              CCU.switch_release(rel)
-            else
-              core = Dir.new(configdir)
-                        .children
-                        .select { |filename| filename.start_with?('core') }
-                        .first
-              rel = core.split('_')
-                        .last
-                        .split('-')
-                        .first(2)
-                        .join('_')
-            end
-            rel
-          }
+    default: nil,
+    reader: true,
+    constructor: ->(value) { CCU::Release.new(value) }
   setting :prev_release,
-          default: nil,
-          reader: true,
-          constructor: ->(_v) { releases[release] }
+    default: nil,
+    reader: true,
+    constructor: ->(_v) { release.previous }
   setting :main_profile_name, default: default_main_profile_name, reader: true
   setting :log, default: logger, reader: true
   setting :mapper_uri_base,
@@ -142,7 +118,7 @@ module CspaceConfigUntangler
     )
   end
 
-  def data_reference_dir(release = CCU.release)
+  def data_reference_dir(release = CCU.release.version)
     File.join(
       app_dir,
       "data",
@@ -151,7 +127,7 @@ module CspaceConfigUntangler
     )
   end
 
-  def release_configs_dir(release = CCU.release)
+  def release_configs_dir(release = CCU.release.version)
     File.join(app_dir, "data", "config_holder",
       "community_profiles", "release_#{release}")
   end
@@ -178,22 +154,6 @@ module CspaceConfigUntangler
   def switch_release(release)
     clear_config_dir
     move_release_to_config_dir(release)
-  end
-
-  def clear_config_dir
-    configs = Dir.new(CCU.configdir)
-                 .children
-                 .select { |filename| filename.end_with?('.json') }
-                 .map { |filename| File.join(CCU.configdir, filename) }
-    FileUtils.rm(configs)
-  end
-
-  def move_release_to_config_dir(release)
-    rel_cfg_dir = CCU.release_configs_dir(release)
-    release_configs = Dir.new(rel_cfg_dir)
-                         .children
-                         .map { |fn| File.join(rel_cfg_dir, fn) }
-    FileUtils.cp(release_configs, CCU.configdir)
   end
 
   def warn_on_upgrade(src, issue = nil)

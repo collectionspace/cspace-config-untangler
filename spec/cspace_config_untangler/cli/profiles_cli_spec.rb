@@ -1,11 +1,13 @@
 require "spec_helper"
 
 RSpec.describe CCU::Cli::ProfilesCli do
-  before(:context) { set_profile_release("7_0") }
+  before(:each) { set_profile_release("7_0") }
   describe "#all" do
     it "prints all known profiles to screen" do
       allow(subject.shell).to receive(:say)
-      msg = "anthro_5-0-0\nbonsai_5-0-0\nbotgarden_3-0-0\ncore_7-0-0\nfcart_4-0-0\nherbarium_2-0-0\nlhmc_4-0-0\nmaterials_3-0-0\npublicart_3-0-0"
+      msg = "anthro_5-0-0\nbonsai_5-0-0\nbotgarden_3-0-0\ncore_7-0-0\n"\
+        "fcart_4-0-0\nherbarium_2-0-0\nlhmc_4-0-0\nmaterials_3-0-0\n"\
+        "publicart_3-0-0"
       result = subject.invoke(:all, [], {})
       expect(subject.shell).to have_received(:say).with(msg).once
     end
@@ -24,7 +26,7 @@ RSpec.describe CCU::Cli::ProfilesCli do
   describe "#compare" do
     let(:outfile) { "#{fixtures}/compare_core_7-0-0_to_bonsai_5-0-0.csv" }
     context "with expected parameters" do
-      after(:context) {
+      after(:each) {
         File.delete("#{fixtures}/compare_core_7-0-0_to_bonsai_5-0-0.csv")
       }
       let(:opts) {
@@ -115,7 +117,7 @@ RSpec.describe CCU::Cli::ProfilesCli do
   end
 
   describe "#readable" do
-    before(:context) do
+    before(:each) do
       @testprofile = "test_1-1-1"
       origstr = '
 {"allowDeleteHierarchyLeaves":false,"autocompleteFindDelay":500,"autocompleteMinLength":3,"basename":"/cspace/profile","className":"cspace-ui-plugin-profile-profile--common","container":"#cspace","defaultAdvancedSearchBooleanOp":"and","defaultDropdownFilter":"substring","defaultUserPrefs":{"panels":{"collectionobject":{"mediaSnapshotPanel":{"collapsed":false}}}},"index":"/search","locale":"en-US"}
@@ -124,7 +126,7 @@ RSpec.describe CCU::Cli::ProfilesCli do
       File.write(@profilepath, origstr)
     end
 
-    after(:context) { File.delete(@profilepath) }
+    after(:each) { File.delete(@profilepath) }
 
     it "reformats profiles" do
       allow(subject.shell).to receive(:say)

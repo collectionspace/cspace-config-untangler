@@ -5,8 +5,8 @@ module Helpers
     File.join(CCU.app_dir, "spec", "fixtures")
   end
 
-    CCU.config.configdir = File.join(CCU.datadir, 'config_holder', 'community_profiles', "release_#{version}")
   def set_profile_release(version = "7_0")
+    CCU.config.release = version
     CCU.config.mapperdir = File.join(CCU.mapperdir, "community_profiles",
       "release_#{version}")
     CCU.config.templatedir = File.join(fixtures, "files", version, "templates")
