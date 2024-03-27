@@ -9,11 +9,12 @@ module CspaceConfigUntangler
       if opts.any?(val)
         val
       else
-        formatted = opts.map{ |sym| sym.inspect}
+        formatted = opts.map { |sym| sym.inspect }
           .join(", ")
         fail(
           ArgumentError,
-          "#{name} #{val.inspect} must be one of: #{formatted}")
+          "#{name} #{val.inspect} must be one of: #{formatted}"
+        )
       end
     end
     private_class_method :opt_set
@@ -29,21 +30,21 @@ module CspaceConfigUntangler
     end
 
     def profile(val)
-      known = CCU::Cli::Helpers::ProfileGetter.call('all')
+      known = CCU::Cli::Helpers::ProfileGetter.call("all")
       if known.any?(val)
         val
       else
-        fail(ArgumentError, "profile must be one of: #{known.join('; ')}")
+        fail(ArgumentError, "profile must be one of: #{known.join("; ")}")
       end
     end
 
     def release(val)
       unless /^\d+(_\d+){1,2}$/.match?(val)
-        fail(ArgumentError, 'release must follow pattern: #_# or #_#_#')
+        fail(ArgumentError, "release must follow pattern: #_# or #_#_#")
       end
 
       unless Dir.exist?(CCU.release_configs_dir(val))
-        fail(ArgumentError, 'no configs directory for release')
+        fail(ArgumentError, "no configs directory for release")
       end
 
       val
