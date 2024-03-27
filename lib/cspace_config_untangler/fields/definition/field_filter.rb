@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require_relative 'field_definition'
+require_relative "field_definition"
 
 module CspaceConfigUntangler
   module Fields
@@ -12,7 +12,7 @@ module CspaceConfigUntangler
 
         # This allows us to to skip manually doing `new.call` every time
         def self.call(config)
-          self.new.call(config)
+          new.call(config)
         end
 
         # @param config [CCU::Fields::Definition::Config]
@@ -21,7 +21,7 @@ module CspaceConfigUntangler
 
           field_def = FieldDefinition.new(config)
           return unless field_def
-          
+
           update_field_defs(config, field_def)
         end
 

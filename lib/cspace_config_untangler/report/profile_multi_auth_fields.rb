@@ -7,7 +7,7 @@ module CspaceConfigUntangler
 
       class << self
         def call(...)
-          self.new(...).call
+          new(...).call
         end
       end
 
@@ -22,7 +22,7 @@ module CspaceConfigUntangler
       end
 
       def call
-        profiles.each{ |profile| to_csv(profile, rows_for(profile)) }
+        profiles.each { |profile| to_csv(profile, rows_for(profile)) }
       end
 
       private
@@ -38,7 +38,7 @@ module CspaceConfigUntangler
       end
 
       def rows_for(profile)
-        all.select{ |row| row["profile"] == profile }
+        all.select { |row| row["profile"] == profile }
       end
     end
   end

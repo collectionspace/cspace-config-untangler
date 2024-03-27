@@ -1,4 +1,4 @@
-require_relative 'form'
+require_relative "form"
 
 module CspaceConfigUntangler
   class Panel < CCU::Form
@@ -14,14 +14,14 @@ module CspaceConfigUntangler
     private
 
     def get_form_fields
-      @config.each{ |panel| process_panel(panel) }
+      @config.each { |panel| process_panel(panel) }
     end
 
     def process_panel(panel)
       # As of 2020-04-14, all key, ref, and _owner values at the panel level are nil
-      panel = panel['props']
-      panel_name = panel['name']
-      if panel_name == 'contact'
+      panel = panel["props"]
+      panel_name = panel["name"]
+      if panel_name == "contact"
         # figure out how to get fields from subrecord treated as extension
       else
         children = get_panel_children(panel)
@@ -29,13 +29,13 @@ module CspaceConfigUntangler
     end
 
     def get_panel_children(panel)
-      children = panel['children']
-      puts "#{children.class} -- #{rectype.id} #{panel['name']}"
+      children = panel["children"]
+      puts "#{children.class} -- #{rectype.id} #{panel["name"]}"
     end
-      
+
     def get_config
-      config = @rectype.config['forms'][@name]['template']['props']['children']
-      return standardize_form_data(config)
+      config = @rectype.config["forms"][@name]["template"]["props"]["children"]
+      standardize_form_data(config)
     end
 
     # if there is only one child, it gets created as a hash
@@ -48,7 +48,7 @@ module CspaceConfigUntangler
         result = data
       end
       report_non_nil_keys(data)
-      return data
+      data
     end
 
     # form children have keys: key, ref, props, and _owner
@@ -56,16 +56,12 @@ module CspaceConfigUntangler
     #  the others are always nil
     # This logs any non-nil values for key, ref, or _owner so I can inspect
     def report_non_nil_and_missing_keys(data)
-      data.each{ |h|
-        %w[key ref _owner].each{ |k| check_key(h, k) }
+      data.each { |h|
+        %w[key ref _owner].each { |k| check_key(h, k) }
       }
     end
 
     def check_key(hash, key)
-      
     end
-    
-    
-  end #class Form
-  
-end #module
+  end # class Form
+end # module

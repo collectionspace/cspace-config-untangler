@@ -1,14 +1,14 @@
-require 'cspace_config_untangler/json_writable'
-require 'cspace_config_untangler/special_rectype'
+require "cspace_config_untangler/json_writable"
+require "cspace_config_untangler/special_rectype"
 
 module CspaceConfigUntangler
   class NonHierarchicalRelationship
     include CCU::JsonWritable
     include CCU::SpecialRectype
-    def initialize(profile: )
+    def initialize(profile:)
       @profile = profile
     end
-    
+
     def mapper
       {
         config: config,
@@ -18,26 +18,26 @@ module CspaceConfigUntangler
     end
 
     def name
-      'nonhierarchicalrelationship'
+      "nonhierarchicalrelationship"
     end
 
     private
-    
+
     def config
       {
         profile_basename: @profile.basename,
         version: @profile.version,
         recordtype: name,
-        document_name: 'relations',
-        service_name: 'Relations',
-        service_path: 'relations',
-        service_type: 'relation',
-        object_name: 'Non-Hierarchy Relation',
+        document_name: "relations",
+        service_name: "Relations",
+        service_path: "relations",
+        service_type: "relation",
+        object_name: "Non-Hierarchy Relation",
         ns_uri: {
-          relations_common: 'http://collectionspace.org/services/relation'
+          relations_common: "http://collectionspace.org/services/relation"
         },
-        identifier_field: 'subjectCsid',
-        search_field: 'term'
+        identifier_field: "subjectCsid",
+        search_field: "term"
       }
     end
 
@@ -46,7 +46,7 @@ module CspaceConfigUntangler
         relations_common: {
           subjectCsid: {},
           relationshipType: {},
-          objectCsid: {},
+          objectCsid: {}
         }
       }
     end
@@ -54,75 +54,75 @@ module CspaceConfigUntangler
     def mappings
       [
         {
-          fieldname: 'subjectType',
+          fieldname: "subjectType",
           transforms: {},
-          source_type: 'optionlist',
-          source_name: 'fakeProfileTypes',
-          namespace: 'relations_common',
+          source_type: "optionlist",
+          source_name: "fakeProfileTypes",
+          namespace: "relations_common",
           xpath: [],
-          data_type: 'string',
-          repeats: 'n',
-          in_repeating_group: 'n',
+          data_type: "string",
+          repeats: "n",
+          in_repeating_group: "n",
           opt_list_values: @profile.object_and_procedures,
-          datacolumn: 'item1_type',
-          required: 'y in template'
+          datacolumn: "item1_type",
+          required: "y in template"
         },
         {
-          fieldname: 'subjectCsid',
-          transforms: { special: [:obj_to_csid] },
-          source_type: 'na',
+          fieldname: "subjectCsid",
+          transforms: {special: [:obj_to_csid]},
+          source_type: "na",
           source_name: nil,
-          namespace: 'relations_common',
+          namespace: "relations_common",
           xpath: [],
-          data_type: 'string',
-          repeats: 'n',
-          in_repeating_group: 'n',
+          data_type: "string",
+          repeats: "n",
+          in_repeating_group: "n",
           opt_list_values: [],
-          datacolumn: 'item1_id',
-          required: 'y'
-          },
+          datacolumn: "item1_id",
+          required: "y"
+        },
         {
-          fieldname: 'relationshipType',
+          fieldname: "relationshipType",
           transforms: {},
-          source_type: 'na',
+          source_type: "na",
           source_name: nil,
-          namespace: 'relations_common',
+          namespace: "relations_common",
           xpath: [],
-          data_type: 'string',
-          repeats: 'n',
-          in_repeating_group: 'n',
+          data_type: "string",
+          repeats: "n",
+          in_repeating_group: "n",
           opt_list_values: [],
-          datacolumn: 'relationshiptype',
-          required: 'y',
+          datacolumn: "relationshiptype",
+          required: "y",
           to_template: false
         },
         {
-          fieldname: 'objectType',
+          fieldname: "objectType",
           transforms: {},
-          source_type: 'optionlist',
-          source_name: 'fakeProfileTypes',
-          namespace: 'relations_common',
+          source_type: "optionlist",
+          source_name: "fakeProfileTypes",
+          namespace: "relations_common",
           xpath: [],
-          data_type: 'string',
-          repeats: 'n',
-          in_repeating_group: 'n',
+          data_type: "string",
+          repeats: "n",
+          in_repeating_group: "n",
           opt_list_values: @profile.object_and_procedures,
-          datacolumn: 'item2_type',
-          required: 'y in template'
+          datacolumn: "item2_type",
+          required: "y in template"
         },
         {
-          fieldname: 'objectCsid',
-          transforms: { special: [:obj_to_csid] },
-          source_type: 'na',
+          fieldname: "objectCsid",
+          transforms: {special: [:obj_to_csid]},
+          source_type: "na",
           source_name: nil,
-          namespace: 'relations_common',
+          namespace: "relations_common",
           xpath: [],
-          data_type: 'string',
-          repeats: 'n',
-          in_repeating_group: 'n',
+          data_type: "string",
+          repeats: "n",
+          in_repeating_group: "n",
           opt_list_values: [],
-          datacolumn: 'item2_id',
-          required: 'y'
+          datacolumn: "item2_id",
+          required: "y"
         }
       ]
     end

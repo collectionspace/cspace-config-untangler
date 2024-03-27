@@ -7,7 +7,7 @@ module CspaceConfigUntangler
     class UnusedAuthorityVocabs
       class << self
         def call(...)
-          self.new(...).call
+          new(...).call
         end
       end
 
@@ -17,12 +17,12 @@ module CspaceConfigUntangler
           CCU::Report::AuthorityVocabUse.call(profiles: "all")
         end
         @target = File.join(CCU.data_reference_dir,
-                            "qa_unused_authority_vocabs.rb")
+          "qa_unused_authority_vocabs.rb")
       end
 
       def call
         rows = CSV.parse(File.read(source), headers: true)
-          .select{ |row| row["used_in_profile"] == "n" }
+          .select { |row| row["used_in_profile"] == "n" }
         if rows.empty?
           puts "No unused authority vocabularies"
         else
@@ -38,7 +38,7 @@ module CspaceConfigUntangler
         headers = data.first.headers
         CSV.open(target, "w") do |csv|
           csv << headers
-          data.each{ |row| csv << row.values_at(*headers) }
+          data.each { |row| csv << row.values_at(*headers) }
         end
         puts "Wrote #{target}"
       end

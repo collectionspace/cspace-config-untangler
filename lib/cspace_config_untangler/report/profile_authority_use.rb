@@ -6,7 +6,7 @@ module CspaceConfigUntangler
       include ByProfileable
       class << self
         def call(...)
-          self.new(...).call
+          new(...).call
         end
       end
 
@@ -22,7 +22,7 @@ module CspaceConfigUntangler
       end
 
       def call
-        profiles.each{ |profile| write(profile) }
+        profiles.each { |profile| write(profile) }
       end
 
       private
@@ -39,7 +39,7 @@ module CspaceConfigUntangler
       end
 
       def write(profile)
-        rows = all.select{ |row| row["profile"] == profile }
+        rows = all.select { |row| row["profile"] == profile }
         return if rows.empty?
 
         to_csv(profile, rows)

@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-require 'csv'
-require 'fileutils'
+require "csv"
+require "fileutils"
 
 module CspaceConfigUntangler
   module Report
@@ -11,16 +11,15 @@ module CspaceConfigUntangler
     #
     # Including class must respond to :basedir and :basefilename
     module ByProfileable
-
       private
 
       def to_csv(profile, rows)
         headers = rows.first.to_h.keys
 
         path = path_for(profile)
-        CSV.open(path, 'w') do |csv|
+        CSV.open(path, "w") do |csv|
           csv << headers
-          rows.each{ |row| csv << row.values_at(*headers) }
+          rows.each { |row| csv << row.values_at(*headers) }
         end
 
         puts "Wrote #{path}"

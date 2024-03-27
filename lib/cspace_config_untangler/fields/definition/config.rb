@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require_relative 'namespace'
+require_relative "namespace"
 
 module CspaceConfigUntangler
   module Fields
@@ -8,7 +8,8 @@ module CspaceConfigUntangler
       # Parameter object used to pass around all the stuff needed to create a field definition
       class Config
         attr_reader :name, :namespace, :hash, :parser, :parent
-        def initialize(rectype:, namespace:, field_hash:, parser:, name: nil, parent: nil)
+        def initialize(rectype:, namespace:, field_hash:, parser:, name: nil,
+          parent: nil)
           @rectype = rectype
           @namespace = Namespace.new(namespace)
           @hash = field_hash
@@ -16,7 +17,7 @@ module CspaceConfigUntangler
           @name = name
           @parent = parent
         end
-        
+
         # returns a copy of itself that can be safely passed on and modified
         def derive_child(field_hash:, name:, parent:)
           self.class.new(
@@ -31,14 +32,14 @@ module CspaceConfigUntangler
 
         def signature
           return namespace_signature unless @name
-          
+
           namespace_signature + " - #{@name}"
         end
-        
+
         def namespace_signature
           "#{profile} - #{rectype} - #{namespace.literal}"
         end
-        
+
         def profile
           @rectype.profile.name
         end

@@ -5,10 +5,9 @@ require "csv"
 module CspaceConfigUntangler
   module Report
     class NonuniqueFieldNames
-
       class << self
         def call(...)
-          self.new(...).call
+          new(...).call
         end
       end
 
@@ -16,28 +15,30 @@ module CspaceConfigUntangler
       # @param mode [:stdout, :release]
       def initialize(profiles: nil, mode: :stdout)
         @profiles = CCU::Cli::Helpers::ProfileGetter.call(profiles)
-          .map do |profile| CCU::Profile.new(
-            profile: profile, structured_date_treatment: :collapse)
+          .map do |profile|
+            CCU::Profile.new(
+              profile: profile, structured_date_treatment: :collapse
+            )
           end
         @mode = mode
         @categorized = []
         @legacy = {
-          "bonsai"=>{
-            "conservation"=>%w[futureTreatment futureTreatmentDate]
+          "bonsai" => {
+            "conservation" => %w[futureTreatment futureTreatmentDate]
           },
-          "anthro"=>{
-            "collectionobject"=>%w[fieldLocVerbatim sex reference]
+          "anthro" => {
+            "collectionobject" => %w[fieldLocVerbatim sex reference]
           },
-          "botgarden"=>{
-            "collectionobject"=>["reference"]
+          "botgarden" => {
+            "collectionobject" => ["reference"]
           }
         }
       end
 
       def call
-        result = profiles.map{ |p| [p, p.nonunique_field_names] }
+        result = profiles.map { |p| [p, p.nonunique_field_names] }
           .to_h
-          .reject{ |profile, info| info.empty? }
+          .reject { |profile, info| info.empty? }
         result.empty? ? output_empty : output(result)
       end
 
@@ -52,8 +53,8 @@ module CspaceConfigUntangler
       def output(result)
         categorize(result)
         if mode == :stdout
-          categorized.group_by{ |h| h[:status] }
-            .each{ |cat, grp| to_stdout(cat, grp) }
+          categorized.group_by { |h| h[:status] }
+            .each { |cat, grp| to_stdout(cat, grp) }
         else
           to_csv
         end
@@ -81,10 +82,10 @@ module CspaceConfigUntangler
         name = profile.name
         cleanprofile = name.match(/^[a-z]+/i).to_s
         h = {profile: name, rectype: rt, field: field, xpaths: paths}
-        if legacy.dig(cleanprofile, rt)&.include?(field)
-          categorized << h.merge({status: :known})
+        categorized << if legacy.dig(cleanprofile, rt)&.include?(field)
+          h.merge({status: :known})
         else
-          categorized << h.merge({status: :new})
+          h.merge({status: :new})
         end
       end
 
@@ -93,7 +94,7 @@ module CspaceConfigUntangler
         grp.each do |fieldinfo|
           puts "#{fieldinfo[:profile]} - #{fieldinfo[:rectype]} - "\
             "#{fieldinfo[:field]}"
-          fieldinfo[:xpaths].each{ |xp| puts "  #{xp}" }
+          fieldinfo[:xpaths].each { |xp| puts "  #{xp}" }
         end
       end
 
@@ -103,7 +104,7 @@ module CspaceConfigUntangler
         headers = categorized.first.keys
         CSV.open(path, "w") do |csv|
           csv << headers
-          categorized.each{ |fieldinfo| csv << fieldinfo.values_at(*headers) }
+          categorized.each { |fieldinfo| csv << fieldinfo.values_at(*headers) }
         end
         puts "Wrote #{path}"
       end

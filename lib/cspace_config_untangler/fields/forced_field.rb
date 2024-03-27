@@ -1,4 +1,4 @@
-require_relative 'field'
+require_relative "field"
 
 module CspaceConfigUntangler
   module Fields
@@ -12,7 +12,7 @@ module CspaceConfigUntangler
         @name = field_hash[:name]
         @ns = field_hash[:ns]
         @ns_for_id = @ns
-        @panel = ''
+        @panel = ""
         @ui_path = []
         @id = "#{@ns}.#{@name}"
         @schema_path = []

@@ -1,14 +1,13 @@
 # frozen_string_literal: true
 
-require 'csv'
+require "csv"
 
 module CspaceConfigUntangler
   module Report
     class AllFieldsGenerator
-
       class << self
         def call(...)
-          self.new(...).call
+          new(...).call
         end
       end
 
@@ -19,7 +18,7 @@ module CspaceConfigUntangler
       #   allfields path for given datemode and outmode
       # @param profiles [nil, String]
       def initialize(release: CCU.release, datemode: :expanded,
-                     outmode: :expert, target: nil, profiles: "all")
+        outmode: :expert, target: nil, profiles: "all")
         @release = release
         @datemode = CCU::Validate.date_mode(datemode.to_sym)
         @outmode = CCU::Validate.out_mode(outmode.to_sym)
@@ -31,14 +30,14 @@ module CspaceConfigUntangler
       end
 
       def call
-        profiles.each{ |profile| get_fields(profile) }
+        profiles.each { |profile| get_fields(profile) }
 
         flat = fields.flatten
         headers = flat.first.csv_header(outmode)
 
-        CSV.open(target, 'w') do |csv|
+        CSV.open(target, "w") do |csv|
           csv << headers
-          flat.each{ |row| csv << prepped(row) }
+          flat.each { |row| csv << prepped(row) }
         end
 
         puts "Wrote #{target}"
@@ -50,9 +49,8 @@ module CspaceConfigUntangler
 
       def get_fields(profile)
         fields << CCU::Profile.new(profile: profile,
-                                   rectypes: [],
-                                   structured_date_treatment: datemode
-                                  ).fields
+          rectypes: [],
+          structured_date_treatment: datemode).fields
       end
 
       def prepped(row)

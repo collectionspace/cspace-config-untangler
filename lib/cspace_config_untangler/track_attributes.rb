@@ -1,11 +1,11 @@
 module CspaceConfigUntangler
   module TrackAttributes
     def attr_readers
-      self.class.instance_variable_get('@attr_readers')
+      self.class.instance_variable_get(:@attr_readers)
     end
 
     def attr_accessors
-      self.class.instance_variable_get('@attr_accessors')
+      self.class.instance_variable_get(:@attr_accessors)
     end
 
     def self.included(klass)
