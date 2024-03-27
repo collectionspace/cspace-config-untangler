@@ -4,12 +4,12 @@ module CspaceConfigUntangler
   module Forms
     class Form
       ::CCU::Form = CspaceConfigUntangler::Forms::Form
-      attr_reader :rectype, :name, :fields
+      attr_reader :rectype, :name, :config, :fields
 
       def initialize(rectypeobj, formname)
         @rectype = rectypeobj
         @name = formname
-        @config = get_config
+        @config = rectype.config["forms"][name]["template"]["props"]
         @fields = []
         return self if disabled?
 
@@ -24,15 +24,14 @@ module CspaceConfigUntangler
             rectype.name == "work"
           @fields = fields.reject { |f| f.name == "addressCounty" }
         end
-        self
       end
 
       def disabled?
-        return false unless disabled
-
-        disabled
-        disabled = rectype.config.dig("forms", name, "disabled")
+        disabled = config.dig("disabled")
+        disabled ? true : false
       end
+
+      def enabled? = !disabled?
 
       def id
         "#{rectype.profile.name} #{rectype.name} #{name}"
@@ -47,12 +46,6 @@ module CspaceConfigUntangler
       alias_method :inspect, :to_s
 
       private
-
-      attr_reader :config
-
-      def get_config
-        return rectype.config['forms'][name]['template']['props']
-      end
 
       def get_form_fields
         CCU::Forms::Properties.new(self, config)
