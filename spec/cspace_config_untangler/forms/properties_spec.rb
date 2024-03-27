@@ -1,7 +1,7 @@
 require "spec_helper"
 
 RSpec.describe CCU::Forms::Properties do
-  let(:release){ '6_0' }
+  let(:release) { "8_0" }
   let(:profilename) { "anthro" }
   let(:rectypes) { ["collectionobject"] }
   let(:generator) {
