@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require_relative "fields/definition/parser"
 
 module CspaceConfigUntangler
@@ -196,11 +198,11 @@ module CspaceConfigUntangler
     end
 
     def get_field_mapping(mappings, fieldname)
-      mappings.select { |m| m.fieldname == fieldname }.first
+      mappings.find { |m| m.fieldname == fieldname }
     end
 
     def get_vocabularies
-      view = extract_by_key(@config["fields"], "view")
+      extract_by_key(@config["fields"], "view")
         .select { |h| h["type"] == "TermPickerInput" }
         .select { |h| h.key?("props") }
         .select { |h| h["props"].key?("source") }

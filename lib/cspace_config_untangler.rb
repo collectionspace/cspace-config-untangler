@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # standard library
 require "csv"
 require "fileutils"

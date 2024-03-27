@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Helpers
   extend self
 
@@ -27,9 +29,9 @@ module Helpers
     end
 
     def field(rectype, fieldname)
-      profile.fields.select { |field|
+      profile.fields.find { |field|
         field.rectype.name == rectype && field.name == fieldname
-      }.first
+      }
     end
 
     def field_def_config(namespace)
@@ -88,8 +90,7 @@ module Helpers
     def template_file_path
       Pathname.new(File.join(CCU.templatedir, CCU.main_profile_name))
         .children
-        .select { |filename| filename.to_s["_#{rectype.name}-template"] }
-        .first
+        .find { |filename| filename.to_s["_#{rectype.name}-template"] }
     end
   end
 end

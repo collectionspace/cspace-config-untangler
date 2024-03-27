@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require "spec_helper"
 
 RSpec.describe CCU::Fields::Field do
@@ -10,9 +12,9 @@ RSpec.describe CCU::Fields::Field do
   }
   let(:co_fields) { core_profile.fields }
   let(:contentConcept) {
-    co_fields.select { |f|
+    co_fields.find { |f|
       f.name == "contentConcept"
-    }[0]
+    }
   }
   #  let(:anthro_profile) { CCU::Profile.new('anthro') }
   #  let(:anthro_co) { CCU::RecordType.new(anthro_profile, 'collectionobject') }

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require_relative "form"
 
 module CspaceConfigUntangler
@@ -24,7 +26,7 @@ module CspaceConfigUntangler
       if panel_name == "contact"
         # figure out how to get fields from subrecord treated as extension
       else
-        children = get_panel_children(panel)
+        get_panel_children(panel)
       end
     end
 
@@ -43,9 +45,9 @@ module CspaceConfigUntangler
     # turns a single child into an array containing one hash
     def standardize_form_data(data)
       if data.is_a?(Hash)
-        result = [data]
+        [data]
       elsif data.is_a?(Array)
-        result = data
+        data
       end
       report_non_nil_keys(data)
       data

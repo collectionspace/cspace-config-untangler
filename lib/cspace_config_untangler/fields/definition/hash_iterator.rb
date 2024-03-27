@@ -23,7 +23,7 @@ module CspaceConfigUntangler
           old_hash = @config.hash.dup
           return if old_hash.length == 1
 
-          cleaned_hash = old_hash.reject { |key, _| key == "[config]" }
+          cleaned_hash = old_hash.except("[config]")
           @config.update_field_hash(cleaned_hash)
         end
 

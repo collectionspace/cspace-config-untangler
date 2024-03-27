@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require_relative "cli/authorities_cli"
 require_relative "cli/debug_cli"
 require_relative "cli/fields_cli"
