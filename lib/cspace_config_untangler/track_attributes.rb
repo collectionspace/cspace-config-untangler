@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module CspaceConfigUntangler
   module TrackAttributes
     def attr_readers

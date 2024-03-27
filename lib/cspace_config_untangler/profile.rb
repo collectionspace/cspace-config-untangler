@@ -195,12 +195,10 @@ module CspaceConfigUntangler
     def apply_overrides
       # This applies messages defined at the profile level
       o = @config.dig("messages")
-      if o
-        o.each { |k, v|
-          apply_field_override(k, v) if k.start_with?("field.")
-          apply_panel_override(k, v) if k.start_with?("panel.")
-        }
-      end
+      o&.each { |k, v|
+        apply_field_override(k, v) if k.start_with?("field.")
+        apply_panel_override(k, v) if k.start_with?("panel.")
+      }
 
       # This accounts for the fact that the livingplant extension ids don't use extension format
       #  in field definitions
@@ -247,7 +245,7 @@ module CspaceConfigUntangler
       remove = %w[core authItem]
       ext = @config["extensions"].keys - remove
       %w[contact blob].each { |subrec|
-        ext << subrec if @config["recordTypes"].keys.include?(subrec)
+        ext << subrec if @config["recordTypes"].key?(subrec)
       }
       ext
     end
@@ -268,15 +266,15 @@ module CspaceConfigUntangler
     end
 
     def rectypes_include_authorities
-      @rectypes.select { |rt|
+      !@rectypes.select { |rt|
         rt.service_type == "authority"
-      }.empty? ? false : true
+      }.empty?
     end
 
     def rectypes_include_procedures
-      @rectypes.select { |rt|
+      !@rectypes.select { |rt|
         rt.service_type == "procedure"
-      }.empty? ? false : true
+      }.empty?
     end
 
     def get_option_lists
