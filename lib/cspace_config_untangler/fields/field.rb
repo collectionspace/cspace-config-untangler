@@ -227,15 +227,24 @@ module CspaceConfigUntangler
           elsif msgs.dig(fieldid, "name")
             msgs[fieldid]["name"]
           elsif val == "uoc_common.useDateHoursSpent"
-            CCU.warn_on_upgrade(binding.source_location, "DRYD-1269")
+            CCU.warn_on_upgrade(
+              target_version: "8_0_1",
+              issue: "DRYD-1269"
+            )
             alt_fieldname_lookup(val.sub("useDateHoursSpent", "hoursSpent"))
           elsif val == "collectionobjects_common.compressionStandard"
-            CCU.warn_on_upgrade(binding.source_location, "DRYD-1270")
+            CCU.warn_on_upgrade(
+              target_version: "8_0_1",
+              issue: "DRYD-1270"
+            )
             alt_fieldname_lookup(
               val.sub("compressionStandard", "compressionstandard")
             )
           elsif val == "conservation_common.sampleReturned"
-            CCU.warn_on_upgrade(binding.source_location, "DRYD-1271")
+            CCU.warn_on_upgrade(
+              target_version: "8_0_1",
+              issue: "DRYD-1271"
+            )
             msgs["field.conservation_common.sampleReturned.nadme"]["fullName"] ||
               msgs["field.conservation_common.sampleReturned.nadme"]["name"]
           elsif val.start_with?("conservation_livingplant")
