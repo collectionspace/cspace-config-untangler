@@ -1,9 +1,11 @@
+# frozen_string_literal: true
+
 require "spec_helper"
 
 RSpec.describe CCU::FieldMap::DataColumnNamerFancy do
   let(:generator) {
     Helpers::SetupGenerator.new(profile: "core", rectypes: ["collectionobject"],
-      release: "7_0")
+      release: "6_1")
   }
   let(:profile) { generator.profile }
 
@@ -35,7 +37,8 @@ RSpec.describe CCU::FieldMap::DataColumnNamerFancy do
       end
     end
 
-    context "and person/ulan, person/local, org/ulan, and org/local may be used" do
+    context "and person/ulan, person/local, org/ulan, and org/local may "\
+      "be used" do
       let(:sources) do
         ["person/local", "organization/local",
           "person/ulan", "organization/ulan"]
@@ -48,7 +51,8 @@ RSpec.describe CCU::FieldMap::DataColumnNamerFancy do
 
     context "and person/ulan, person/local, and org/local may be used" do
       let(:sources) { ["person/local", "organization/local", "person/ulan"] }
-      it "names columns using authority types and subtypes for person, type only for org" do
+      it "names columns using authority types and subtypes for person, "\
+        "type only for org" do
         expect(result).to eq(%w[namePersonLocal nameOrganization
           namePersonUlan])
       end
