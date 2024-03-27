@@ -9,7 +9,7 @@ module CspaceConfigUntangler
         @service_type = @rectype.service_type
         @mappers = []
 
-        if @service_type == 'authority'
+        if @service_type == "authority"
           @rectype.subtypes.each do |subtype|
             @mappers << get_wrapped_mapper(subtype: subtype)
           end
@@ -23,8 +23,11 @@ module CspaceConfigUntangler
       def get_wrapped_mapper(subtype: nil)
         if subtype
           {
-            mapper: RecordMapping.new(profile: @profile, rectype: @rectype, subtype: subtype),
-            path: "#{@base_path}/#{@profile.name}_#{@rectype.name}-#{subtype[:name].downcase.gsub(' ', '-')}.json"
+            mapper: RecordMapping.new(profile: @profile, rectype: @rectype,
+              subtype: subtype),
+            path: "#{@base_path}/#{@profile.name}_#{@rectype.name}-#{subtype[:name].downcase.tr(
+              " ", "-"
+            )}.json"
           }
         else
           {

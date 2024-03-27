@@ -16,11 +16,11 @@ module CspaceConfigUntangler
 
           warn
         end
-        
+
         private
 
         def field?(hash)
-          hash.keys == ['[config]']
+          hash.keys == ["[config]"]
         end
 
         def group?(hash)
@@ -28,17 +28,17 @@ module CspaceConfigUntangler
         end
 
         def structured_date?(hash)
-          return true if hash.dig('[config]', 'dataType') == 'DATA_TYPE_STRUCTURED_DATE'
-          return true if hash.dig('dateLatestDay')
+          return true if hash.dig("[config]",
+            "dataType") == "DATA_TYPE_STRUCTURED_DATE"
+          return true if hash.dig("dateLatestDay")
           false
         end
-        
+
         def warn
-          prefix = 'field definition structure'.upcase
-          message = 'Unexpected keys in'
+          prefix = "field definition structure".upcase
+          message = "Unexpected keys in"
           CCU.log.warn("#{prefix}: #{message} #{@config.signature}")
         end
-
       end
     end
   end

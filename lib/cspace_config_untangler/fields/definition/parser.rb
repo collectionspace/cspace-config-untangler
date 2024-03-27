@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-require_relative 'config'
-require_relative 'namespace_field_parser'
+require_relative "config"
+require_relative "namespace_field_parser"
 
 module CspaceConfigUntangler
   module Fields
@@ -10,14 +10,15 @@ module CspaceConfigUntangler
         attr_reader :rectype, :config, :field_defs
 
         # Namespaces we do not extract fields from
-        SkippableNamespaces = ['[config]', 'ns2:collectionspace_core', 'rel:relations-common-list']
+        SkippableNamespaces = ["[config]", "ns2:collectionspace_core",
+          "rel:relations-common-list"]
 
         # @param rectypeobj [CspaceConfigUntangler::RecordType]
         # @param fields_config [Hash] from JSON config: record type/fields/document/config
         def initialize(rectypeobj, fields_config)
           @rectype = rectypeobj
           @config = fields_config
-          @ns = @config['[config]']['view']['props']['defaultChildSubpath']
+          @ns = @config["[config]"]["view"]["props"]["defaultChildSubpath"]
           @field_defs = []
           namespace_field_defs
         end
@@ -38,7 +39,7 @@ module CspaceConfigUntangler
               namespace: namespace,
               field_hash: ns_field_hash,
               parser: self
-              )
+            )
             CCU::Fields::Def::NamespaceFieldParser.new(namespace_field_config)
           end
         end

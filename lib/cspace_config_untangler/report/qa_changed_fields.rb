@@ -1,14 +1,13 @@
 # frozen_string_literal: true
 
-require 'csv'
+require "csv"
 
 module CspaceConfigUntangler
   module Report
     class QaChangedFields
-
       class << self
         def call(...)
-          self.new(...).call
+          new(...).call
         end
       end
 
@@ -28,9 +27,9 @@ module CspaceConfigUntangler
       def call
         @new_fids = select_new_fids
 
-        CSV.open(target, 'w') do |csv|
+        CSV.open(target, "w") do |csv|
           csv << headers
-          select_changed_fids.each{ |row| write(row, csv) }
+          select_changed_fids.each { |row| write(row, csv) }
         end
 
         puts "Wrote #{target}"
@@ -42,31 +41,31 @@ module CspaceConfigUntangler
         :headers, :new_fids
 
       def changed?(row, lookup)
-        id = row['fid']
+        id = row["fid"]
         return false if new_fids.any?(id)
 
         true unless row.to_h == lookup[id]
       end
 
       def get_lookup(table)
-        table.map{ |row| [row['fid'], row.to_h] }
+        table.map { |row| [row["fid"], row.to_h] }
           .to_h
       end
 
       def select_changed_fids
-        release.select{ |row| changed?(row, prev_lookup) }
+        release.select { |row| changed?(row, prev_lookup) }
       end
 
       def select_new_fids
-        release.reject{ |row| prev_lookup.key?(row['fid']) }
-          .map{ |row| row['fid'] }
+        release.reject { |row| prev_lookup.key?(row["fid"]) }
+          .map { |row| row["fid"] }
       end
 
       def write(row, csv)
         newrow = row.to_h
-          .merge("status"=>"new")
+          .merge("status" => "new")
         oldrow = prev_lookup[row["fid"]].to_h
-          .merge("status"=>"old")
+          .merge("status" => "old")
         [newrow, oldrow].each do |r|
           csv << r.values_at(*headers)
         end

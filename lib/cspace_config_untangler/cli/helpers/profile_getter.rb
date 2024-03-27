@@ -6,10 +6,10 @@ module CspaceConfigUntangler
           return [CCU.main_profile] unless opt_profiles
           return [CCU.main_profile] if opt_profiles.empty?
 
-          return self.all_profiles if opt_profiles == 'all'
+          return all_profiles if opt_profiles == "all"
 
-          profiles = opt_profiles.split(',').map(&:strip)
-          self.get(profiles)
+          profiles = opt_profiles.split(",").map(&:strip)
+          get(profiles)
         end
 
         private
@@ -20,14 +20,14 @@ module CspaceConfigUntangler
 
         def self.get(profiles)
           acc = []
-          profiles.each{ |profile|
+          profiles.each { |profile|
             if all_profiles.include?(profile)
               acc << profile
             else
               puts "Unknown profile \"#{profile}\" will be ignored..."
             end
           }
-          return acc.uniq
+          acc.uniq
         end
       end
     end

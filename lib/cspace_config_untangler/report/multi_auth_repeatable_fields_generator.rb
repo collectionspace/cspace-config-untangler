@@ -1,14 +1,13 @@
 # frozen_string_literal: true
 
-require 'csv'
+require "csv"
 
 module CspaceConfigUntangler
   module Report
     class MultiAuthRepeatableFieldsGenerator
-
       class << self
         def call(...)
-          self.new(...).call
+          new(...).call
         end
       end
 
@@ -21,14 +20,14 @@ module CspaceConfigUntangler
       end
 
       def call
-        res = source.select{ |row| multi_auth?(row) && repeatable?(row) }
-          .map{ |row| simplify(row) }
+        res = source.select { |row| multi_auth?(row) && repeatable?(row) }
+          .map { |row| simplify(row) }
 
         headers = res.first.headers
 
-        CSV.open(target, 'w') do |csv|
+        CSV.open(target, "w") do |csv|
           csv << headers
-          res.each{ |row| csv << row.values_at(*headers) }
+          res.each { |row| csv << row.values_at(*headers) }
         end
 
         puts "Wrote #{target}"
@@ -45,18 +44,18 @@ module CspaceConfigUntangler
       end
 
       def in_repeatable_group?(row)
-        val = row['group_repeats']
+        val = row["group_repeats"]
         return false if val.blank?
 
-        true if ['as part of larger repeating group', 'y'].any?(val)
+        true if ["as part of larger repeating group", "y"].any?(val)
       end
 
       def multi_auth?(row)
-        val = row['data_source']
+        val = row["data_source"]
         return false if val.blank?
-        return false unless val['authority']
+        return false unless val["authority"]
 
-        vals = val.split(';')
+        vals = val.split(";")
         true if vals.length > 1
       end
 
@@ -65,16 +64,16 @@ module CspaceConfigUntangler
       end
 
       def repeats?(row)
-        val = row['repeats']
+        val = row["repeats"]
         return false if val.blank?
 
-        true if val == 'y'
+        true if val == "y"
       end
 
       def simplify(row)
-        row.delete('data_type')
-        row.delete('option_list_values')
-        row.delete('required')
+        row.delete("data_type")
+        row.delete("option_list_values")
+        row.delete("required")
         row
       end
     end

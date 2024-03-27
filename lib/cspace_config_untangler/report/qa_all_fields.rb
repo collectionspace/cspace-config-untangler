@@ -1,14 +1,13 @@
 # frozen_string_literal: true
 
-require 'csv'
+require "csv"
 
 module CspaceConfigUntangler
   module Report
     class QaAllFields
-
       class << self
         def call(...)
-          self.new(...).call
+          new(...).call
         end
       end
 
@@ -21,16 +20,16 @@ module CspaceConfigUntangler
           CCU.data_reference_dir,
           "qa_all_fields_#{release}.csv"
         )
-        @prev_lookup = @prev.map{ |row| row['fid'] }
+        @prev_lookup = @prev.map { |row| row["fid"] }
       end
 
       def call
-        newrel.map{ |row| augment(row) }
+        newrel.map { |row| augment(row) }
         headers = newrel.first.headers
 
-        CSV.open(target, 'w') do |csv|
+        CSV.open(target, "w") do |csv|
           csv << headers
-          newrel.each{ |row| csv << row.values_at(*headers) }
+          newrel.each { |row| csv << row.values_at(*headers) }
         end
 
         puts "Wrote #{target}"
@@ -41,13 +40,13 @@ module CspaceConfigUntangler
       attr_reader :release, :newrel, :prev, :target, :prev_lookup
 
       def augment(row)
-        row['dumbfieldname'] = "#{row['record_type']} #{row['xml_field_name']}"
-        row['new?'] = new?(row) ? 'y' : ''
+        row["dumbfieldname"] = "#{row["record_type"]} #{row["xml_field_name"]}"
+        row["new?"] = new?(row) ? "y" : ""
         row
       end
 
       def new?(row)
-        true unless prev_lookup.any?(row['fid'])
+        true unless prev_lookup.any?(row["fid"])
       end
     end
   end

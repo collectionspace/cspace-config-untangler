@@ -1,11 +1,11 @@
-require_relative 'helpers'
+require_relative "helpers"
 
 module CspaceConfigUntangler
   module Cli
     class ReportsCli < Thor
       include CCU::Cli::Helpers
 
-      desc 'qa', 'Writes all QA reports to release directory'
+      desc "qa", "Writes all QA reports to release directory"
       long_desc <<~LONG
         Requirements:
 
@@ -19,15 +19,15 @@ module CspaceConfigUntangler
         - Changed fields report
       LONG
       option :release,
-        desc: 'Release being QAed (like 7_2)',
+        desc: "Release being QAed (like 7_2)",
         type: :string,
         required: true,
-        aliases: '-r'
+        aliases: "-r"
       def qa
         CCU::Report.qa_reports(release: options[:release])
       end
 
-      desc 'ref', 'Writes all reference reports to release directory'
+      desc "ref", "Writes all reference reports to release directory"
       long_desc <<~LONG
         Requirements:
 
@@ -44,10 +44,10 @@ module CspaceConfigUntangler
         - list of all structured date fields
       LONG
       option :release,
-        desc: 'Release (like 7_0)',
+        desc: "Release (like 7_0)",
         type: :string,
         required: true,
-        aliases: '-r'
+        aliases: "-r"
       def ref
         CCU::Report.reference_reports(options[:release])
       end
