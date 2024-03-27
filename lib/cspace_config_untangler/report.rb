@@ -30,7 +30,7 @@ module CspaceConfigUntangler
 
     def qa_reports(release:, clean: false)
       CCU.config.release = release
-      prev = CCU.prev_release
+      CCU.prev_release
 
       dir = CCU.data_reference_dir
       FileUtils.mkdir_p(dir) unless Dir.exist?(dir)

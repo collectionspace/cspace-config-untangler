@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module CspaceConfigUntangler
   class StructuredDateMessageGetter
     def initialize(profileobj)

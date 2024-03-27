@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module CspaceConfigUntangler
   module Fields
     class Field
@@ -160,7 +162,7 @@ module CspaceConfigUntangler
       def get_ui_path
         return if ui_path.empty?
 
-        ui_path[1..-1].join(" > ")
+        ui_path[1..].join(" > ")
       end
 
       def merge_field_defs
@@ -175,7 +177,7 @@ module CspaceConfigUntangler
         elsif fd.length == 1
           fd.first
         else
-          fd.select { |f| f.ns == @ns }.first
+          fd.find { |f| f.ns == @ns }
         end
       end
 
@@ -192,7 +194,7 @@ module CspaceConfigUntangler
         elsif fd.length == 1
           fd.first
         else
-          fd.select { |f| f.ns == @ns }.first
+          fd.find { |f| f.ns == @ns }
         end
       end
 

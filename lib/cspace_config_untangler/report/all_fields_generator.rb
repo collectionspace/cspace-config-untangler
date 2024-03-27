@@ -23,7 +23,7 @@ module CspaceConfigUntangler
         @datemode = CCU::Validate.date_mode(datemode.to_sym)
         @outmode = CCU::Validate.out_mode(outmode.to_sym)
         @profiles = CCU::Cli::Helpers::ProfileGetter.call(profiles)
-        @target = target ||= CCU.allfields_path(
+        @target = target || CCU.allfields_path(
           release: release, datemode: datemode, outmode: outmode
         )
         @fields = []

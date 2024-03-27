@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module CspaceConfigUntangler
   class Release
     attr_reader :version
@@ -6,7 +8,7 @@ module CspaceConfigUntangler
     #   in format #_# or #_#_#
     def initialize(version = nil, switch: true)
       CCU::Validate.release(version) if version
-      @version = version ||= CCU.releases.last
+      @version = version || CCU.releases.last
       @index = CCU.releases.index(@version)
       switch_release if switch
     end

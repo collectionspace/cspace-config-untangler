@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module CspaceConfigUntangler
   # methods to make special/manually created relationship rectypes act as much as
   #  real rectypes as they need to

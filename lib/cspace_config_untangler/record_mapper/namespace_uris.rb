@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module CspaceConfigUntangler
   module RecordMapper
     # returns hash of namespaces in a document, and their namespace URIs
@@ -89,7 +91,7 @@ module CspaceConfigUntangler
 
           return result if result
 
-          WEIRD_NS_LOOKUP.keys.include?(ns) ? WEIRD_NS_LOOKUP[ns] : extension_ns_uri(ns)
+          WEIRD_NS_LOOKUP.key?(ns) ? WEIRD_NS_LOOKUP[ns] : extension_ns_uri(ns)
         end
       end
     end

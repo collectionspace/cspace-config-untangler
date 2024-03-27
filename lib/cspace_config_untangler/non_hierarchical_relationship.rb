@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require "cspace_config_untangler/json_writable"
 require "cspace_config_untangler/special_rectype"
 

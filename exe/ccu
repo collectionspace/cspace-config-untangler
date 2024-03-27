@@ -1,4 +1,5 @@
 #!/usr/bin/env ruby
+# frozen_string_literal: true
 
 # If we're loading from source instead of a gem, rubygems
 # isn't setting load paths for us, so we need to set it ourselves

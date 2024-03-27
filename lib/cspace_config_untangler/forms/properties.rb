@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require_relative "children"
 require_relative "field"
 
@@ -65,13 +67,13 @@ module CspaceConfigUntangler
 
       def is_measurement?
         return true if @name == "measuredPartGroupList"
-        return true if @parent && @parent.is_measurement
+        return true if @parent&.is_measurement
         false
       end
 
       def is_address?
         return true if @name == "addrGroupList"
-        return true if @parent && @parent.is_address
+        return true if @parent&.is_address
         false
       end
 
@@ -123,7 +125,7 @@ module CspaceConfigUntangler
       end
 
       def get_ns_for_id
-        ns = @parent.ns_for_id if @parent && @parent.ns_for_id.start_with?("ext.")
+        ns = @parent.ns_for_id if @parent&.ns_for_id&.start_with?("ext.")
         ns = "ext.dimension" if is_measurement?
         ns = "ext.address" if is_address? && @is_contact == false
         ns = "ext.accessionattributes" if @ns == "ns2:collectionobjects_accessionattributes"
@@ -160,7 +162,7 @@ module CspaceConfigUntangler
       end
 
       def is_input_table
-        true if @form.rectype.input_tables.keys.include?(@name) && @hash["children"]
+        true if @form.rectype.input_tables.key?(@name) && @hash["children"]
       end
     end
   end

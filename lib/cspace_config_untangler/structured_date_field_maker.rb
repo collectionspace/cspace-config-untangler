@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module CspaceConfigUntangler
   class StructuredDateFieldMaker
     attr_reader :profile, :rectype, :ns, :ns_for_id, :panel, :ui_path,

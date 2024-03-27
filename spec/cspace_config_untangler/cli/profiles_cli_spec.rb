@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require "spec_helper"
 
 RSpec.describe CCU::Cli::ProfilesCli do
@@ -8,7 +10,7 @@ RSpec.describe CCU::Cli::ProfilesCli do
       msg = "anthro_5-0-0\nbonsai_5-0-0\nbotgarden_3-0-0\ncore_7-0-0\n"\
         "fcart_4-0-0\nherbarium_2-0-0\nlhmc_4-0-0\nmaterials_3-0-0\n"\
         "publicart_3-0-0"
-      result = subject.invoke(:all, [], {})
+      subject.invoke(:all, [], {})
       expect(subject.shell).to have_received(:say).with(msg).once
     end
   end
@@ -17,7 +19,7 @@ RSpec.describe CCU::Cli::ProfilesCli do
     it "prints given profiles to screen" do
       allow(subject.shell).to receive(:say)
       msg = "core_7-0-0\nbonsai_5-0-0"
-      result = subject.invoke(:check, [],
+      subject.invoke(:check, [],
         {"profiles" => "core_7-0-0,bonsai_5-0-0"})
       expect(subject.shell).to have_received(:say).with(msg).once
     end
@@ -45,7 +47,7 @@ RSpec.describe CCU::Cli::ProfilesCli do
       end
       it "writes csv file to given output directory" do
         allow(subject.shell).to receive(:say)
-        result = subject.invoke(:compare, [], opts)
+        subject.invoke(:compare, [], opts)
         expect(subject.shell).to have_received(:say).with(msg.chomp).once
         expect(File.exist?(outfile)).to be true
       end
@@ -56,7 +58,7 @@ RSpec.describe CCU::Cli::ProfilesCli do
       let(:msg) { "Can only compare two profiles at a time" }
       it "returns warning message" do
         allow(subject.shell).to receive(:say)
-        result = subject.invoke(:compare, [], opts)
+        subject.invoke(:compare, [], opts)
         expect(subject.shell).to have_received(:say).with(msg.chomp).once
         expect(File.exist?(outfile)).to be false
       end
@@ -67,7 +69,7 @@ RSpec.describe CCU::Cli::ProfilesCli do
       let(:msg) { "Needs two profiles to compare" }
       it "returns warning message" do
         allow(subject.shell).to receive(:say)
-        result = subject.invoke(:compare, [], opts)
+        subject.invoke(:compare, [], opts)
         expect(subject.shell).to have_received(:say).with(msg.chomp).once
         expect(File.exist?(outfile)).to be false
       end
@@ -102,7 +104,7 @@ RSpec.describe CCU::Cli::ProfilesCli do
       core_7
       it "prints profiles by extension report to screen" do
         allow(subject.shell).to receive(:say)
-        result = subject.invoke(:by_extension, [], opts)
+        subject.invoke(:by_extension, [], opts)
         expect(subject.shell).to have_received(:say).with(msg.chomp).once
       end
     end
@@ -111,7 +113,7 @@ RSpec.describe CCU::Cli::ProfilesCli do
   describe "#main" do
     it "prints name of main profile to screen" do
       allow(subject.shell).to receive(:say)
-      result = subject.invoke(:main, [], {})
+      subject.invoke(:main, [], {})
       expect(subject.shell).to have_received(:say).with("core_7-0-0").once
     end
   end
@@ -130,7 +132,7 @@ RSpec.describe CCU::Cli::ProfilesCli do
 
     it "reformats profiles" do
       allow(subject.shell).to receive(:say)
-      result = subject.invoke(:readable, [], {"profiles" => @testprofile})
+      subject.invoke(:readable, [], {"profiles" => @testprofile})
       newstr = File.read(@profilepath)
       expected = <<~EXP
         {

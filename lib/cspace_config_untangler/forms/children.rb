@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require_relative "properties"
 
 module CspaceConfigUntangler
@@ -7,12 +9,10 @@ module CspaceConfigUntangler
         @form = formobj
         @parent = parentprops
         @children = standardize_form_data(data)
-        unless @children.nil?
-          @children.each { |child|
-            CCU::Forms::Properties.new(@form, child["props"],
-              @parent)
-          }
-        end
+        @children&.each { |child|
+          CCU::Forms::Properties.new(@form, child["props"],
+            @parent)
+        }
       end
 
       # Only one child in the UI config is represented as a hash, while multiple
@@ -33,11 +33,9 @@ module CspaceConfigUntangler
       #  the others are always nil
       # This logs any non-nil values for key, ref, or _owner so I can inspect
       def report_non_nil_and_missing_keys(data)
-        unless data.nil?
-          data.each { |h|
-            %w[key ref _owner].each { |k| check_key(h, k) }
-          }
-        end
+        data&.each { |h|
+          %w[key ref _owner].each { |k| check_key(h, k) }
+        }
       end
 
       def check_key(hash, key)

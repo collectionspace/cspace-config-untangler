@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module CspaceConfigUntangler
   module FieldMap
     # Given a CSpace field, generates one or more FieldMapping objects, each of
@@ -52,7 +54,7 @@ module CspaceConfigUntangler
         when :fully_consistent
           source.column_header_consistent(field.name)
         when :consistent
-          if sources.reject { |src| src.source_type == "refname" }.length == 1
+          if sources.count { |src| !(src.source_type == "refname") } == 1
             case source.source_type
             when "refname"
               source.column_header_consistent(field.name)
