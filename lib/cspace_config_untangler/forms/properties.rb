@@ -58,107 +58,103 @@ module CspaceConfigUntangler
       private
 
       def is_measurement?
-        return true if @name == 'measuredPartGroupList'
+        return true if @name == "measuredPartGroupList"
         return true if @parent && @parent.is_measurement
-        return false
+        false
       end
 
       def is_address?
-        return true if @name == 'addrGroupList'
+        return true if @name == "addrGroupList"
         return true if @parent && @parent.is_address
-        return false
+        false
       end
-      
+
       def process_subrecord(subrec, formname)
-        return if @ns == 'ns2:acquisitions_omca' # this is a plain field, not a call to contacts subrecord
-        
-        @hash = @form.rectype.profile.config['recordTypes'][subrec]['forms'][formname]['template']['props']['children']['props']
+        return if @ns == "ns2:acquisitions_omca" # this is a plain field, not a call to contacts subrecord
+
+        @hash = @form.rectype.profile.config["recordTypes"][subrec]["forms"][formname]["template"]["props"]["children"]["props"]
         @is_panel = true
         @is_ext = true
-        @panel = @form.rectype.profile.config.dig('recordTypes', subrec, 'messages', 'panel', 'info', 'id')
-        @ns = @form.rectype.profile.config['recordTypes'][subrec]['fields']['document']['[config]']['view']['props']['defaultChildSubpath']
+        @panel = @form.rectype.profile.config.dig("recordTypes", subrec,
+          "messages", "panel", "info", "id")
+        @ns = @form.rectype.profile.config["recordTypes"][subrec]["fields"]["document"]["[config]"]["view"]["props"]["defaultChildSubpath"]
         @ui_path = build_ui_path
 
-        if formname == 'upload'
-          self.new(@form, @hash, self)
+        if formname == "upload"
+          new(@form, @hash, self)
         else
-          CCU::Forms::Children.new(@form, self, @hash['children'])
+          CCU::Forms::Children.new(@form, self, @hash["children"])
         end
       end
 
       def get_panel_id
         if @is_panel
-          return "panel.#{@form.rectype.name}.#{@name}"
+          "panel.#{@form.rectype.name}.#{@name}"
         elsif @parent
-          return @parent.panel
+          @parent.panel
         else
-          return ''
+          ""
         end
       end
-      
+
       def get_name
-        if @hash.dig('name')
-          @name = @hash['name']
+        @name = if @hash.dig("name")
+          @hash["name"]
         else
-          @name = ''
+          ""
         end
       end
-      
+
       def get_ns
-        if @parent
-          ns = @parent.ns
+        ns = if @parent
+          @parent.ns
         else
-          ns = @form.rectype.ns
+          @form.rectype.ns
         end
 
-        ns = @hash.dig('subpath') ? @hash['subpath'] : ns
+        @hash.dig("subpath") ? @hash["subpath"] : ns
         #      ns = "ext.#{@name}" if @is_ext
-        
-        return ns        
       end
 
       def get_ns_for_id
-        ns = @parent.ns_for_id if @parent && @parent.ns_for_id.start_with?('ext.')
-        ns = 'ext.dimension' if is_measurement?
-        ns = 'ext.address' if is_address? && @is_contact == false
-        ns = 'ext.accessionattributes' if @ns == 'ns2:collectionobjects_accessionattributes'
-        ns = 'ext.accessionuse' if @ns == 'ns2:collectionobjects_accessionuse'
-        ns = 'ext.fineart' if @ns == 'ns2:collectionobjects_fineart'
-        ns = 'ext.commission' if @ns == 'ns2:acquisitions_commission'
-        if @ns == 'ns2:collectionobjects_variablemedia'
-          @name.start_with?('contentWork') ? ns = 'ext.contentWorks' : ns = 'ext.technicalSpecs'
+        ns = @parent.ns_for_id if @parent && @parent.ns_for_id.start_with?("ext.")
+        ns = "ext.dimension" if is_measurement?
+        ns = "ext.address" if is_address? && @is_contact == false
+        ns = "ext.accessionattributes" if @ns == "ns2:collectionobjects_accessionattributes"
+        ns = "ext.accessionuse" if @ns == "ns2:collectionobjects_accessionuse"
+        ns = "ext.fineart" if @ns == "ns2:collectionobjects_fineart"
+        ns = "ext.commission" if @ns == "ns2:acquisitions_commission"
+        if @ns == "ns2:collectionobjects_variablemedia"
+          @name.start_with?("contentWork") ? ns = "ext.contentWorks" : ns = "ext.technicalSpecs"
         end
-        if @ns == 'ns2:conditionchecks_variablemedia'
-          ns = 'ext.technicalChanges'
+        if @ns == "ns2:conditionchecks_variablemedia"
+          ns = "ext.technicalChanges"
         end
-        if @ns == 'ns2:persons_publicart' || @ns == 'ns2:organizations_publicart'
-          ns = 'ext.socialMedia' if @name.start_with?('socialMedia')
+        if @ns == "ns2:persons_publicart" || @ns == "ns2:organizations_publicart"
+          ns = "ext.socialMedia" if @name.start_with?("socialMedia")
         end
-        ns = 'ext.locality' if @name.start_with?('localityGroup')
+        ns = "ext.locality" if @name.start_with?("localityGroup")
         ns = @ns if ns.nil?
-        return ns
+        ns
       end
 
-
       def build_ui_path
-        return [] if @name == 'document'
+        return [] if @name == "document"
         return [] if @is_panel && !@parent
         path = @parent ? @parent.ui_path.clone : []
 
         if is_input_table
           path << @form.rectype.input_tables[@name]
         elsif is_panel
-          path << @panel  
-        elsif @hash.dig('children') && !@name.empty?
-          path << "#{@ns.sub('ns2:', '')}.#{@name}"
-        else
-          # skip
+          path << @panel
+        elsif @hash.dig("children") && !@name.empty?
+          path << "#{@ns.sub("ns2:", "")}.#{@name}"
         end
-        return path
+        path
       end
 
       def is_input_table
-        return true if @form.rectype.input_tables.keys.include?(@name) && @hash['children']
+        true if @form.rectype.input_tables.keys.include?(@name) && @hash["children"]
       end
     end
   end

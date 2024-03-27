@@ -25,7 +25,7 @@ module CspaceConfigUntangler
           result = data
         end
         report_non_nil_and_missing_keys(result)
-        return result
+        result
       end
 
       # form children have keys: key, ref, props, and _owner
