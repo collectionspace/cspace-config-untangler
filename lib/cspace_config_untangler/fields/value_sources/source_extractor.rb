@@ -5,11 +5,11 @@ module CspaceConfigUntangler
     module ValueSources
       class SourceExtractor
         def self.call(type, field_hash, profile)
-          return [CCU::ValueSources::NoSource.new] if type == "no source"
-
           sources = field_hash.dig("view", "props", "source")
 
           case type
+          when "no source"
+            [CCU::ValueSources::NoSource.new]
           when "option list"
             [profile.option_lists.get_option_list(sources)]
           when "vocabulary"
@@ -20,6 +20,9 @@ module CspaceConfigUntangler
               .map do |source|
                 CCU::ValueSources::Authority.new(source, profile)
               end
+          else
+            warn("Unknown value source pattern, #{__FILE__}, #{__LINE__}")
+            puts field_hash
           end
         end
       end
