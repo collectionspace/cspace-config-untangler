@@ -4,29 +4,35 @@ require_relative "field"
 module CspaceConfigUntangler
   module Forms
     class Properties
-      attr :form, :panel, :name, :ui_path, :ns, :ns_for_id, :is_panel, :is_ext, :is_measurement, :is_address, :is_contact, :parent
+      attr_reader :form, :parent,
+        :panel, :name, :ui_path, :ns, :ns_for_id, :is_panel, :is_ext,
+        :is_measurement, :is_address, :is_contact, :parent
 
       def initialize(formobj, hash, parent = nil)
         @form = formobj
         @hash = hash
         @parent = parent
-
-        
         @name = get_name
         @is_panel = @form.rectype.panels.include?(@name)
-        @is_ext = @is_panel ? @form.rectype.profile.extensions.include?(@name) : false
+        @is_ext = if @is_panel
+          @form.rectype.profile.extensions.include?(@name)
+        else
+          false
+        end
         @is_measurement = is_measurement?
         @is_address = is_address?
         @is_contact = false
         @is_blob = false
-        
-        @panel = get_panel_id
+        # We only want top-level panels to be treated as such in the
+        #   human-readable CSVs
+        @panel = if @is_panel && @parent
+          @parent.panel
+        else
+          get_panel_id
+        end
         @ns = get_ns
         @ns_for_id = get_ns_for_id
         @ui_path = build_ui_path
-
-        # we only want top-level panels to be treated as such in the human-readable CSVs
-        @panel = @parent.panel if @is_panel && @parent
 
         if @ns == "ns2:collectionspace_core"
           # skip
