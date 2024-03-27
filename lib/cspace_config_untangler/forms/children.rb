@@ -15,9 +15,9 @@ module CspaceConfigUntangler
         end
       end
 
-      # if there is only one child, it gets created as a hash
-      # if there are multiple children, they are an array of hashes
-      # turns a single child into an array containing one hash
+      # Only one child in the UI config is represented as a hash, while multiple
+      # children are represented as an array of hashes
+      # This method converts a single child into an array containing one hash
       def standardize_form_data(data)
         if data.is_a?(Hash)
           result = [data]
