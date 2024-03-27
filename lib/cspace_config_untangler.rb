@@ -156,13 +156,18 @@ module CspaceConfigUntangler
     move_release_to_config_dir(release)
   end
 
-  def warn_on_upgrade(src, issue = nil)
-    return unless prev_release == "7_2"
+  # @param target_version [String] of release for which warnings should be
+  #   emitted
+  # @param issue [nil, String] Jira or other issue to check for information on
+  #   the status of changes expected to impact this code
+  def warn_on_upgrade(target_version:, issue: nil)
+    return unless release.version == target_version
 
-    basemsg = "Verify that code at line #{src[1]} in #{src[0]} is still "\
-      "needed after next release"
-    msgissue = issue ? "(#{issue})" : nil
-    warn([basemsg, msgissue].compact.join(" "))
+    basemsg = "Verify that code at the following location is still "\
+      "needed with #{target_version}"
+    msgissue = issue ? "(see #{issue})" : nil
+    fullmsg = [basemsg, msgissue].compact.join(" ")
+    warn([fullmsg, caller(1..1).first].compact.join(":\n"))
   end
 
   gem_agnostic_dir = $LOAD_PATH.select do |dir|
