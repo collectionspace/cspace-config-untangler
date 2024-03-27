@@ -1,10 +1,11 @@
-require_relative '../track_attributes'
+require_relative "../track_attributes"
 
 module CspaceConfigUntangler
   module Forms
     class Field
       include CCU::TrackAttributes
-      attr_reader :profile, :rectype, :name, :ns, :ns_for_id, :panel, :ui_path, :id, :to_csv
+      attr_reader :profile, :rectype, :name, :ns, :ns_for_id, :panel, :ui_path,
+        :id, :to_csv
 
       def initialize(propsobj)
         @form = propsobj.form
@@ -16,13 +17,13 @@ module CspaceConfigUntangler
         @ns = propsobj.ns
         @ns_for_id = propsobj.ns_for_id
         @ui_path = propsobj.ui_path
-        @id = "#{@ns_for_id.sub('ns2:', '')}.#{@name}"
+        @id = "#{@ns_for_id.sub("ns2:", "")}.#{@name}"
         @to_csv = format_csv
         clean_up
       end
 
       def csv_header
-        return %w[profile record_type panel ui_path field_id field_name]
+        %w[profile record_type panel ui_path field_id field_name]
       end
 
       def to_h
@@ -30,7 +31,7 @@ module CspaceConfigUntangler
         h = {}
         attrs.each{ |a| h[a] = self.instance_variable_get(a) }
         h.delete(:@to_csv)
-        return h
+        h
       end
 
       private
@@ -40,14 +41,14 @@ module CspaceConfigUntangler
         if @ui_path
           path = @ui_path.clone
           arr << path.shift
-          arr << path.compact.join(' > ')
+          arr << path.compact.join(" > ")
         else
-          arr << ''
-          arr << ''
+          arr << ""
+          arr << ""
         end
-        @id ? arr << @id : arr << ''
-        @name ? arr << @name : arr << ''
-        return arr
+        arr << (@id || "")
+        arr << (@name || "")
+        arr
       end
 
       def clean_up

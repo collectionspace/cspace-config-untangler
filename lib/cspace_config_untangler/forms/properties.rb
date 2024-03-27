@@ -1,5 +1,5 @@
-require_relative 'children'
-require_relative 'field'
+require_relative "children"
+require_relative "field"
 
 module CspaceConfigUntangler
   module Forms
@@ -28,28 +28,28 @@ module CspaceConfigUntangler
         # we only want top-level panels to be treated as such in the human-readable CSVs
         @panel = @parent.panel if @is_panel && @parent
 
-        if @ns == 'ns2:collectionspace_core'
-          #skip
-        elsif @hash.dig('children')
+        if @ns == "ns2:collectionspace_core"
+          # skip
+        elsif @hash.dig("children")
           # this catches a form field whose child field is not defined as a field
-          if @ns == 'ns2:works_common' && @name == 'workDateGroup'
+          if @ns == "ns2:works_common" && @name == "workDateGroup"
             @form.fields << CCU::Forms::Field.new(self)
           else
-            CCU::Forms::Children.new(@form, self, @hash['children'])
+            CCU::Forms::Children.new(@form, self, @hash["children"])
           end
-        elsif @name == 'contact' && @form.rectype.profile.extensions.include?(@name)
+        elsif @name == "contact" && @form.rectype.profile.extensions.include?(@name)
           @is_contact = true
-          process_subrecord('contact', 'default')
-        elsif @name == 'blob' && @form.rectype.profile.extensions.include?(@name)
+          process_subrecord("contact", "default")
+        elsif @name == "blob" && @form.rectype.profile.extensions.include?(@name)
           @is_blob = true
           #        process_subrecord('blob', 'upload')
-          process_subrecord('blob', 'view')
+          process_subrecord("blob", "view")
         elsif @name.empty?
           profile = @form.rectype.profile.name
           rectype = @form.rectype.name
           CCU.log.warn("FORM STRUCTURE: EMPTY HASH: #{profile} - #{rectype} - #{@form.name} contains empty hash under #{@parent.ui_path}")
-        elsif @name == 'relation-list-item'
-          #skip for now
+        elsif @name == "relation-list-item"
+          # skip for now
         else
           @form.fields << CCU::Forms::Field.new(self)
         end

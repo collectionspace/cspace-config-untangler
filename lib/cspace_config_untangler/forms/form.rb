@@ -1,4 +1,4 @@
-require_relative 'properties'
+require_relative "properties"
 
 module CspaceConfigUntangler
   module Forms
@@ -20,18 +20,18 @@ module CspaceConfigUntangler
         #   https://collectionspace.atlassian.net/browse/DRYD-882
         # This was resolved in 7.0, but we keep it because this needs to support
         #   6.1 as well
-        if rectype.profile.name.start_with?('publicart') &&
-            rectype.name == 'work'
-          @fields = fields.reject{ |f| f.name == 'addressCounty' }
+        if rectype.profile.name.start_with?("publicart") &&
+            rectype.name == "work"
+          @fields = fields.reject { |f| f.name == "addressCounty" }
         end
         self
       end
 
       def disabled?
-        disabled = rectype.config.dig('forms', name, 'disabled')
         return false unless disabled
 
         disabled
+        disabled = rectype.config.dig("forms", name, "disabled")
       end
 
       def id
@@ -39,12 +39,12 @@ module CspaceConfigUntangler
       end
 
       def to_s
-        "<##{self.class}:#{self.object_id.to_s(8)}\n"\
+        "<##{self.class}:#{object_id.to_s(8)}\n"\
           "  id: #{id}\n"\
           "  disabled?: #{disabled?.inspect}\n"\
           "  fields: #{fields.length}>"
       end
-      alias :inspect :to_s
+      alias_method :inspect, :to_s
 
       private
 
