@@ -5,10 +5,9 @@ require "csv"
 module CspaceConfigUntangler
   module Report
     class AuthorityVocabUse
-
       class << self
         def call(...)
-          self.new(...).call
+          new(...).call
         end
       end
 
@@ -16,14 +15,16 @@ module CspaceConfigUntangler
       # @param target [String] path to output file
       def initialize(profiles: nil, target: CCU::Report.auth_vocab_report_path)
         @profiles = CCU::Cli::Helpers::ProfileGetter.call(profiles)
-          .map do |profile| CCU::Profile.new(
-            profile: profile, structured_date_treatment: :collapse)
+          .map do |profile|
+            CCU::Profile.new(
+              profile: profile, structured_date_treatment: :collapse
+            )
           end
         @target = target
       end
 
       def call
-        data = profiles.map{ |profile| authorities_data(profile) }
+        data = profiles.map { |profile| authorities_data(profile) }
           .flatten
         to_csv(data)
       end
@@ -34,13 +35,13 @@ module CspaceConfigUntangler
 
       def authorities_data(profile)
         authfields = profile.fields
-          .select{ |field| field.authority_controlled? }
-        profile.authorities.map{ |auth| auth_data(profile, authfields, auth) }
+          .select { |field| field.authority_controlled? }
+        profile.authorities.map { |auth| auth_data(profile, authfields, auth) }
       end
 
       def auth_data(profile, fields, auth)
         fields = get_controlled_fields(profile, fields, auth)
-       {
+        {
           profile: profile.name,
           authority: auth.split("/").first,
           authority_vocab: auth,
@@ -53,8 +54,8 @@ module CspaceConfigUntangler
       def get_controlled_fields(profile, fields, auth)
         return [] if profile.unused_authority_vocabs.include?(auth)
 
-        fields.select{ |field| field.controlled_by?(auth) }
-          .map{ |field| build_output(field) }
+        fields.select { |field| field.controlled_by?(auth) }
+          .map { |field| build_output(field) }
           .sort
       end
 
@@ -69,7 +70,7 @@ module CspaceConfigUntangler
         headers = data.first.keys
         CSV.open(target, "w") do |csv|
           csv << headers
-          data.each{ |row| csv << row.values_at(*headers) }
+          data.each { |row| csv << row.values_at(*headers) }
         end
         puts "Wrote #{target}"
       end

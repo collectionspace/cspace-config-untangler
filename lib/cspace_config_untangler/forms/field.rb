@@ -27,9 +27,9 @@ module CspaceConfigUntangler
       end
 
       def to_h
-        attrs = self.attr_readers.map{ |e| '@' + e.to_s }.map{ |e| e.to_sym }
+        attrs = attr_readers.map { |e| "@" + e.to_s }.map { |e| e.to_sym }
         h = {}
-        attrs.each{ |a| h[a] = self.instance_variable_get(a) }
+        attrs.each { |a| h[a] = instance_variable_get(a) }
         h.delete(:@to_csv)
         h
       end

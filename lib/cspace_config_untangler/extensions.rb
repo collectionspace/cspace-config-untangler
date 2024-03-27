@@ -9,7 +9,7 @@ module CspaceConfigUntangler
     def initialize(profileobj, extname)
       @name = extname
       @profile = profileobj
-      @config = @profile.config['extensions'][@name]
+      @config = @profile.config["extensions"][@name]
       determine_types
     end
 
@@ -17,27 +17,28 @@ module CspaceConfigUntangler
 
     def determine_types
       case @name
-      when 'contact'
-        @type = 'subrecord'
-        @rectypes = @profile.config['recordTypes'].keys.select{ |rt| @profile.config['recordTypes'][rt].dig('subrecords', 'contact') }
-      when 'blob'
-        @type = 'subrecord'
-        @rectypes = @profile.config['recordTypes'].keys.select{ |rt| @profile.config['recordTypes'][rt].dig('subrecords', 'blob') }
+      when "contact"
+        @type = "subrecord"
+        @rectypes = @profile.config["recordTypes"].keys.select { |rt|
+          @profile.config["recordTypes"][rt].dig("subrecords", "contact")
+        }
+      when "blob"
+        @type = "subrecord"
+        @rectypes = @profile.config["recordTypes"].keys.select { |rt|
+          @profile.config["recordTypes"][rt].dig("subrecords", "blob")
+        }
       else
-        chk = @config.keys & @profile.rectypes.map{ |rt| rt.name }
-        
-        case chk.length
+        chk = @config.keys & @profile.rectypes.map { |rt| rt.name }
+
+        @type = case chk.length
         when 0
-          @type = 'generic'
+          "generic"
         else
-          @type = 'rectype specific'
+          "rectype specific"
         end
-        
+
         @rectypes = chk
       end
     end
-
-    end
-    
-
+  end
 end
