@@ -23,11 +23,17 @@ module CspaceConfigUntangler
 
   extend Dry::Configurable
 
-  # Change these variables to reflect your desired directory structure and main profile
+  # Change these variables to reflect your desired directory structure and main
+  # profile
   default_datadir = "/Users/kristina/code/cs/untangler-cspace-config/data"
   default_main_profile_name = "core"
-  # The publicly available web directory from which the CSV Importer will request mappers
-  default_mapper_uri_base = "https://raw.githubusercontent.com/collectionspace/cspace-config-untangler/main/data/mappers"
+
+  # The publicly available web directory from which the CSV Importer will
+  # request mappers
+  default_mapper_uri_base =
+    "https://raw.githubusercontent.com/collectionspace/"\
+    "cspace-config-untangler/main/data/mappers"
+
   # The last version of each profile that should get fancy column names created.
   default_last_fancy_column_versions = {
     "anthro" => "4-1-2",
@@ -43,6 +49,7 @@ module CspaceConfigUntangler
     "omca" => "6-1-0",
     "publicart" => "2-0-1"
   }
+
   # The last version of each profile that should get plain (i.e. no
   # authority name and vocab name added to column header in template
   # and mapper.
@@ -60,23 +67,19 @@ module CspaceConfigUntangler
     "omca" => "1-0-0-rc6",
     "publicart" => "5-0-0"
   }
+
   # Don't change stuff after this
-
-  File.delete("log.log") if File.exist?("log.log")
-
-  def logger
-    @logger ||= Logger.new("log.log")
-  end
 
   def app_dir
     File.realpath(File.join(File.dirname(__FILE__), ".."))
   end
 
-  # Do not mess with these. Control subdirectories within them by passing in command output parameters as
-  #   shown in the docs
+  # Do not mess with these. Control subdirectories within them by
+  # passing in command output parameters as shown in the docs
   default_configdir = File.join(default_datadir, "configs")
   default_templatedir = File.join(default_datadir, "templates")
   default_mapperdir = File.join(default_datadir, "mappers")
+  default_logpath = File.join(app_dir, "log.log")
 
   setting :last_fancy_column_versions,
     default: default_last_fancy_column_versions, reader: true
@@ -87,6 +90,7 @@ module CspaceConfigUntangler
   setting :configdir, default: default_configdir, reader: true
   setting :templatedir, default: default_templatedir, reader: true
   setting :mapperdir, default: default_mapperdir, reader: true
+  setting :logpath, default: default_logpath, reader: true
   setting :releases,
     default: ["5_2", "6_0", "6_1", "7_0", "7_1", "7_2", "8_0"],
     reader: true
@@ -99,10 +103,18 @@ module CspaceConfigUntangler
     reader: true,
     constructor: ->(_v) { release.previous }
   setting :main_profile_name, default: default_main_profile_name, reader: true
-  setting :log, default: logger, reader: true
   setting :mapper_uri_base,
     default: default_mapper_uri_base,
     reader: true
+
+  File.delete(logpath) if File.exist?(logpath)
+  # def logger
+  #   @logger ||= Logger.new(logpath)
+  # end
+  setting :log,
+    default: nil,
+    reader: true,
+    constructor: ->(default) { default ||= Logger.new(logpath) }
 
   def allfields_path(
     release: CCU.release,
@@ -177,10 +189,12 @@ module CspaceConfigUntangler
   end.reject { |dir| dir.end_with?("/spec") }.first
 
   # Require all application files
-  Dir.glob("#{gem_agnostic_dir}/cspace_config_untangler/**/*").sort.select do |path|
-    path.match?(/\.rb$/)
-  end.each do |rbfile|
-    req_file = rbfile.delete_prefix("#{gem_agnostic_dir}/").delete_suffix(".rb")
-    require req_file
-  end
+  Dir.glob("#{gem_agnostic_dir}/cspace_config_untangler/**/*")
+    .sort
+    .select { |path|
+      path.match?(/\.rb$/)
+    }.each { |rbfile|
+      req_file = rbfile.delete_prefix("#{gem_agnostic_dir}/").delete_suffix(".rb")
+      require req_file
+    }
 end
