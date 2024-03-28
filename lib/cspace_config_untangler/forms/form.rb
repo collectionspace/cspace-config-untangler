@@ -1,31 +1,35 @@
 # frozen_string_literal: true
 
-require_relative "properties"
+require_relative "iterative_field_extractor"
 
 module CspaceConfigUntangler
   module Forms
     class Form
       ::CCU::Form = CspaceConfigUntangler::Forms::Form
-      attr_reader :rectype, :name, :config, :fields
+      attr_reader :rectype, :profile, :name, :config, :fields
 
+      # @param rectypeobj [CCU:RecordType]
+      # @param formname [String]
       def initialize(rectypeobj, formname)
         @rectype = rectypeobj
+        @profile = rectype.profile
         @name = formname
-        @config = rectype.config["forms"][name]["template"]["props"]
+        @config = rectype.config["forms"][name]
         @fields = []
         return self if disabled?
 
-        get_form_fields
+        CCU::Forms::Properties.new(self, field_config)
+        CCU::Forms::IterativeFieldExtractor.new(self, field_config)
+          .call
+      end
 
-        # This logic loop prevents failure for of publicart work due to an
-        #   inconsistency in the config described at
-        #   https://collectionspace.atlassian.net/browse/DRYD-882
-        # This was resolved in 7.0, but we keep it because this needs to support
-        #   6.1 as well
-        if rectype.profile.name.start_with?("publicart") &&
-            rectype.name == "work"
-          @fields = fields.reject { |f| f.name == "addressCounty" }
-        end
+      def field_config = config["template"]["props"]
+
+      # param field [CCU::Forms::Field]
+      def add_field(field)
+        return if ignored?(field)
+
+        fields << field
       end
 
       def disabled?
@@ -36,7 +40,7 @@ module CspaceConfigUntangler
       def enabled? = !disabled?
 
       def id
-        "#{rectype.profile.name} #{rectype.name} #{name}"
+        "#{profile.name} #{rectype.name} #{name}"
       end
 
       def to_s
@@ -49,8 +53,16 @@ module CspaceConfigUntangler
 
       private
 
-      def get_form_fields
-        CCU::Forms::Properties.new(self, config)
+      def ignored?(field)
+        # This logic loop prevents failure for of publicart work due to an
+        # inconsistency in the config described at
+        # https://collectionspace.atlassian.net/browse/DRYD-882. This was
+        # resolved in 7.0, but we keep it because this needs to support
+        # 6.1 as well
+        true if field.name == "addressCounty" &&
+          rectype.name == "work" &&
+          profile.name.start_with?("publicart") &&
+          CCU.release.lt("7_0")
       end
     end
   end

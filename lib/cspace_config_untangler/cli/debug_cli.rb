@@ -7,6 +7,25 @@ module CspaceConfigUntangler
     class DebugCli < Thor
       include CCU::Cli::Helpers
 
+      desc "check_forms",
+        "Runs all forms, for puts-based reporting"
+      option :rectype,
+        desc: "Comma separated list (no spaces) of record types to include. "\
+        "Defaults to all.",
+        default: "all",
+        aliases: "-r"
+      def check_forms
+        get_profiles.each { |profile|
+          p = CCU::Profile.new(profile: profile)
+          forms = p.rectypes
+            .map(&:forms)
+            .flatten
+            .map(&:values)
+            .flatten
+          # forms.each { |form| puts "#{form.id}\t #{form.fields.length}" }
+        }
+      end
+
       desc "check_xpath_depth",
         "Reports fields with unusual xpath depth (i.e. not 0, 1, 2, 3, or 4)"
       option :rectype,
