@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 module Helpers
-  extend self
+  module_function
 
   def fixtures
     File.join(CCU.app_dir, 'spec', 'fixtures')
