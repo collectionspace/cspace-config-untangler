@@ -18,8 +18,14 @@ module CspaceConfigUntangler
         @panel = propsobj.panel
         @ns = propsobj.ns
         @ns_for_id = propsobj.ns_for_id
+        if ns_for_id.is_a?(String)
+          @id = "#{@ns_for_id.sub("ns2:", "")}.#{@name}"
+        else
+          @id = "#{profile} #{rectype} #{name}"
+          CCU.log.error("FORM STRUCTURE: NAMESPACE EXTRACTION: missing or "\
+                       "malformed namespace extracted for #{id}")
+        end
         @ui_path = propsobj.ui_path
-        @id = "#{@ns_for_id.sub("ns2:", "")}.#{@name}"
         @to_csv = format_csv
         clean_up
       end
