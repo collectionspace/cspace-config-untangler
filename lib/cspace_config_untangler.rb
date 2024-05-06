@@ -67,13 +67,8 @@ module CspaceConfigUntangler
     "omca" => "1-0-0-rc6",
     "publicart" => "5-0-0"
   }
+
   # Don't change stuff after this
-
-  File.delete("log.log") if File.exist?("log.log")
-
-  def logger
-    @logger ||= Logger.new("log.log")
-  end
 
   def app_dir
     File.realpath(File.join(File.dirname(__FILE__), ".."))
@@ -84,6 +79,7 @@ module CspaceConfigUntangler
   default_configdir = File.join(default_datadir, "configs")
   default_templatedir = File.join(default_datadir, "templates")
   default_mapperdir = File.join(default_datadir, "mappers")
+  default_logpath = File.join(app_dir, "log.log")
 
   setting :last_fancy_column_versions,
     default: default_last_fancy_column_versions, reader: true
@@ -94,6 +90,7 @@ module CspaceConfigUntangler
   setting :configdir, default: default_configdir, reader: true
   setting :templatedir, default: default_templatedir, reader: true
   setting :mapperdir, default: default_mapperdir, reader: true
+  setting :logpath, default: default_logpath, reader: true
   setting :releases,
     default: ["5_2", "6_0", "6_1", "7_0", "7_1", "7_2", "8_0"],
     reader: true
@@ -106,10 +103,18 @@ module CspaceConfigUntangler
     reader: true,
     constructor: ->(_v) { release.previous }
   setting :main_profile_name, default: default_main_profile_name, reader: true
-  setting :log, default: logger, reader: true
   setting :mapper_uri_base,
     default: default_mapper_uri_base,
     reader: true
+
+  File.delete(logpath) if File.exist?(logpath)
+  # def logger
+  #   @logger ||= Logger.new(logpath)
+  # end
+  setting :log,
+    default: nil,
+    reader: true,
+    constructor: ->(default) { default ||= Logger.new(logpath) }
 
   def allfields_path(
     release: CCU.release,
