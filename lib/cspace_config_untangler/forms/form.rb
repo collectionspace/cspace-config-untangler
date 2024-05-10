@@ -33,7 +33,7 @@ module CspaceConfigUntangler
       end
 
       def disabled?
-        disabled = config.dig("disabled")
+        disabled = config.dig('disabled')
         disabled ? true : false
       end
 

@@ -1,13 +1,13 @@
 # frozen_string_literal: true
 
-require_relative "../track_attributes"
+require_relative '../track_attributes'
 
 module CspaceConfigUntangler
   module Forms
     class Field
       include CCU::TrackAttributes
       attr_reader :profile, :rectype, :name, :ns, :ns_for_id, :panel, :ui_path,
-        :id, :to_csv
+                  :id, :to_csv
 
       def initialize(propsobj)
         @form = propsobj.form
@@ -19,10 +19,10 @@ module CspaceConfigUntangler
         @ns = propsobj.ns
         @ns_for_id = propsobj.ns_for_id
         if ns_for_id.is_a?(String)
-          @id = "#{@ns_for_id.sub("ns2:", "")}.#{@name}"
+          @id = "#{@ns_for_id.sub('ns2:', '')}.#{@name}"
         else
           @id = "#{profile} #{rectype} #{name}"
-          CCU.log.error("FORM STRUCTURE: NAMESPACE EXTRACTION: missing or "\
+          CCU.log.error('FORM STRUCTURE: NAMESPACE EXTRACTION: missing or '\
                        "malformed namespace extracted for #{id}")
         end
         @ui_path = propsobj.ui_path
@@ -35,7 +35,7 @@ module CspaceConfigUntangler
       end
 
       def to_h
-        attrs = attr_readers.map { |e| "@" + e.to_s }.map { |e| e.to_sym }
+        attrs = attr_readers.map { |e| '@' + e.to_s }.map { |e| e.to_sym }
         h = {}
         attrs.each { |a| h[a] = instance_variable_get(a) }
         h.delete(:@to_csv)
@@ -49,13 +49,13 @@ module CspaceConfigUntangler
         if @ui_path
           path = @ui_path.clone
           arr << path.shift
-          arr << path.compact.join(" > ")
+          arr << path.compact.join(' > ')
         else
-          arr << ""
-          arr << ""
+          arr << ''
+          arr << ''
         end
-        arr << (@id || "")
-        arr << (@name || "")
+        arr << (@id || '')
+        arr << (@name || '')
         arr
       end
 
