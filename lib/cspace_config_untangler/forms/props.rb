@@ -74,8 +74,7 @@ module CspaceConfigUntangler
       end
 
       def ns_for_id
-        return parent.ns_for_id if parent &&
-          parent.ns_for_id &&
+        return parent.ns_for_id if parent&.ns_for_id &&
           parent.ns_for_id.start_with?("ext.")
 
         return "ext.measurement" if measurement?

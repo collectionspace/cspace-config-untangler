@@ -7,7 +7,7 @@ RSpec.describe CCU::Forms::Props do
     iter = CCU::Forms::IterativeFieldExtractor.new(form, formconfig)
 
     iter.call
-    iter.send(:allprops).select { |p| p.name == name }.first
+    iter.send(:allprops).find { |p| p.name == name }
   end
 
   let(:release) { "8_0" }

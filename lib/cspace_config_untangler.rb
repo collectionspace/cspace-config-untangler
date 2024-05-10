@@ -114,7 +114,7 @@ module CspaceConfigUntangler
   setting :log,
     default: nil,
     reader: true,
-    constructor: ->(default) { default ||= Logger.new(logpath) }
+    constructor: ->(default) { default || Logger.new(logpath) }
 
   def allfields_path(
     release: CCU.release,
