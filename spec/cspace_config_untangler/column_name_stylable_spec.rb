@@ -2,11 +2,11 @@
 
 require "spec_helper"
 
-RSpec.describe CCU::ColumnNameStylable do
-  class ColStyleClass
-    include CCU::ColumnNameStylable
-  end
+class ColStyleClass
+  include CCU::ColumnNameStylable
+end
 
+RSpec.describe CCU::ColumnNameStylable do
   describe "#column_name_style" do
     let(:result) do
       ColStyleClass.new.column_name_style(profile_name, profile_version)

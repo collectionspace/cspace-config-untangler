@@ -258,7 +258,6 @@ module CspaceConfigUntangler
           if subpath?(subpath)
             subpath
           else
-            binding.pry
             CCU.log.warn("FORM SUBPATH: non-namespace string: #{config}")
           end
         when "Array"

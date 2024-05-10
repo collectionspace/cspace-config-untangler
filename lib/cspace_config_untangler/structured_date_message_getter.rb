@@ -16,10 +16,10 @@ module CspaceConfigUntangler
         id = "field.ext.structuredDate.#{field}"
         name = @config.dig(field, "[config]", "messages", "fullName",
           "defaultMessage")
-        fullName = @config.dig(field, "[config]", "messages", "fullName",
+        fullname = @config.dig(field, "[config]", "messages", "fullName",
           "defaultMessage")
-        fullName = fix_labels(field) if fullName.nil?
-        @profile.messages[id] = {"name" => name, "fullName" => fullName}
+        fullname = fix_labels(field) if fullname.nil?
+        @profile.messages[id] = {"name" => name, "fullName" => fullname}
       end
     end
 
@@ -61,5 +61,5 @@ module CspaceConfigUntangler
         "Scalar values computed?"
       end
     end
-  end # class
-end # module
+  end
+end

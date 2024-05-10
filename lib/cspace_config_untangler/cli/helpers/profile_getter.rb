@@ -14,7 +14,7 @@ module CspaceConfigUntangler
           get(profiles)
         end
 
-        private
+        private_class_method
 
         def self.all_profiles
           [CCU.main_profile, CCU.profiles].compact.flatten.uniq

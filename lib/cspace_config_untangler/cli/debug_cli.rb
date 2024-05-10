@@ -106,7 +106,7 @@ module CspaceConfigUntangler
             .map { |form| form.send(:iterator).send(:allprops) }
             .flatten
         end.flatten
-        binding.pry
+        # binding.pry
 
         grouped = props.group_by { |prop| prop.config.keys.sort }
 

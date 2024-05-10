@@ -8,7 +8,7 @@ module CspaceConfigUntangler
     class Properties
       attr_reader :form, :parent,
         :panel, :name, :ui_path, :ns, :ns_for_id, :is_panel, :is_ext,
-        :is_measurement, :is_address, :is_contact, :parent
+        :is_measurement, :is_address, :is_contact
 
       def initialize(formobj, hash, parent = nil)
         @form = formobj

@@ -7,7 +7,7 @@ module CspaceConfigUntangler
     include CCU::Iterable
 
     attr_reader :profile, :name, :label, :id, :config, :ns, :panels,
-      :input_tables, :forms, :nonunique_fields, :structured_date_treatment,
+      :input_tables, :forms, :structured_date_treatment,
       :service_type, :subtypes, :record_search_field, :vocabularies
 
     def initialize(profileobj, rectypename)
@@ -45,7 +45,9 @@ module CspaceConfigUntangler
 
     def fields
       fields = form_fields.map { |ff| CCU::Fields::Field.new(self, ff) }
-      fields = explode_structured_date_fields(fields) if @structured_date_treatment == :explode
+      if @structured_date_treatment == :explode
+        fields = explode_structured_date_fields(fields)
+      end
       fields = fields.flatten
       fields << media_uri_field if @name == "media"
       fields
@@ -99,10 +101,13 @@ module CspaceConfigUntangler
         next if mapping.xpath.nil?
 
         if checkhash.key?(mapping.datacolumn)
-          add = mapping.xpath.empty? ? mapping.namespace.split("_").last : mapping.xpath.last
+          add = if mapping.xpath.empty?
+            mapping.namespace.split("_").last
+          else
+            mapping.xpath.last
+          end
           mapping.datacolumn = "#{add}_#{mapping.datacolumn}"
         else
-          mapping.datacolumn = mapping.datacolumn
           checkhash[mapping.datacolumn] = nil
         end
       end
@@ -129,7 +134,8 @@ module CspaceConfigUntangler
         when 1
           id_field = required_mappings.first.fieldname
         else
-          # osteology has 3 required fields, but only the ID is suitable for use here
+          # osteology has 3 required fields, but only the ID is suitable for use
+          # here
           id_field = "InventoryID" if @name == "osteology"
           id_field = "movementReferenceNumber" if @name == "movement"
         end
@@ -166,8 +172,9 @@ module CspaceConfigUntangler
 
     private
 
-    # sets up "faux-required" fields for record types that do not have any required fields
-    #   some unique ID field is required for batch import/processing
+    # sets up "faux-required" fields for record types that do not have
+    #   any required fields some unique ID field is required for batch
+    #   import/processing
     def faux_require_mappings(mappings)
       instructions = {
         "movement" => "movementReferenceNumber",
@@ -212,7 +219,8 @@ module CspaceConfigUntangler
         .sort
     end
 
-    # get rid of mappings for fields we do not want to import via the batch import tool
+    # get rid of mappings for fields we do not want to import via the
+    # batch import tool
     def remove_unimportable_fields_from(mappings, context)
       constant_instructions = {
         "collectionobject" => %w[computedCurrentLocation]
@@ -220,7 +228,10 @@ module CspaceConfigUntangler
       mapper_instructions = {
         "media" => %w[mediaFileURI]
       }
-      return mappings unless constant_instructions.key?(@name) || mapper_instructions.key?(@name)
+      unless constant_instructions.key?(@name) ||
+          mapper_instructions.key?(@name)
+        return mappings
+      end
 
       if constant_instructions.key?(@name)
         constant_instructions[@name].each do |fieldname|
@@ -234,10 +245,11 @@ module CspaceConfigUntangler
         end
       end
 
-      # omits any fields for which workable mapping cannot be extracted
-      # this is introduced in order to output any workable template/mappers for OMCA, because
-      #   they have custom namespace inside the contact subrecord which the Untangler can't
-      #   deal with at present
+      # omits any fields for which workable mapping cannot be
+      # extracted this is introduced in order to output any workable
+      # template/mappers for OMCA, because they have custom namespace
+      # inside the contact subrecord which the Untangler can't deal
+      # with at present
       mappings.reject { |mapping| mapping.data_type.nil? && mapping.xpath.nil? }
     end
 

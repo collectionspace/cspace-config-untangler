@@ -16,7 +16,7 @@ module CspaceConfigUntangler
         @name = formname
         @config = rectype.config["forms"][name]
         @fields = []
-        return self if disabled?
+        return if disabled?
 
         # CCU::Forms::Properties.new(self, field_config)
         @iterator = CCU::Forms::IterativeFieldExtractor.new(self, field_config)
