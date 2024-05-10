@@ -1,4 +1,10 @@
 # frozen_string_literal: true
+<<<<<<< HEAD
+=======
+
+require "bundler/setup"
+require "rspec/custom/matchers/match_csv"
+>>>>>>> a034c3944f7ed1a798cdcb8335753b901ed1956d
 
 require 'bundler/setup'
 require 'rspec/custom/matchers/match_csv'
