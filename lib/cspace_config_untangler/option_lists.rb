@@ -8,9 +8,9 @@ module CspaceConfigUntangler
       config = option_list_config
       @names = config.keys
       @all = {}
-      config.each { |name, list_config|
+      config.each do |name, list_config|
         @all[name] = CCU::ValueSources::OptionList.new(name, list_config)
-      }
+      end
     end
 
     def get_option_list(name)

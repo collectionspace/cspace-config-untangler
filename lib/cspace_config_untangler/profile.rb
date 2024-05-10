@@ -32,22 +32,22 @@ module CspaceConfigUntangler
 
     def extensions_for(rectype)
       exts = {}
-      @extensions.map { |e| CCU::Extension.new(self, e) }.each { |ext|
+      @extensions.map { |e| CCU::Extension.new(self, e) }.each do |ext|
         if ext.type == "generic"
           exts[ext.name] = ext
         elsif ext.rectypes.include?(rectype)
           exts[ext.name] = ext
         end
-      }
+      end
       exts
     end
 
     def defined_fields_not_used
       form_field_lookup = form_fields_by_id
       arr = []
-      field_defs.keys.each { |fd|
+      field_defs.keys.each do |fd|
         arr << fd unless form_field_lookup.has_key?(fd)
-      }
+      end
       arr
     end
 
@@ -87,23 +87,23 @@ module CspaceConfigUntangler
     end
 
     def authority_types
-      @rectypes_all.select { |rt|
+      @rectypes_all.select do |rt|
         @config["recordTypes"][rt]["serviceConfig"]["serviceType"] == "authority"
-      }
+      end
         .map { |rt| @config["recordTypes"][rt]["serviceConfig"]["servicePath"] }
         .sort
     end
 
     def authority_subtypes
-      ast = @rectypes_all.select { |rt|
+      ast = @rectypes_all.select do |rt|
               @config["recordTypes"][rt]["serviceConfig"]["serviceType"] == "authority"
-            }
+            end
         .map { |rt| @config["recordTypes"][rt]["vocabularies"] }
-        .map { |vocabhash|
-              vocabhash.map { |vocab, h|
+        .map do |vocabhash|
+              vocabhash.map do |vocab, h|
                 h["serviceConfig"]["servicePath"]
-              }
-            }
+              end
+            end
         .flatten
         .reject { |e| e == "_ALL_" }
         .map { |refname| refname.match(/\((.*)\)/)[1] }
@@ -112,9 +112,9 @@ module CspaceConfigUntangler
     end
 
     def object_and_procedures
-      op = @rectypes_all.select { |rt|
+      op = @rectypes_all.select do |rt|
              @config["recordTypes"][rt]["serviceConfig"]["serviceType"] == "procedure"
-           }
+           end
         .map { |rt| @config["recordTypes"][rt]["serviceConfig"]["servicePath"] }
       op << "collectionobjects"
       op.sort
@@ -157,13 +157,13 @@ module CspaceConfigUntangler
       end
 
       h = {}
-      fields.flatten.each { |f|
+      fields.flatten.each do |f|
         if h.has_key?(f.id)
           h[f.id] << f
         else
           h[f.id] = [f]
         end
-      }
+      end
 
       @field_defs = h
     end
@@ -195,22 +195,22 @@ module CspaceConfigUntangler
     def apply_overrides
       # This applies messages defined at the profile level
       o = @config.dig("messages")
-      o&.each { |k, v|
+      o&.each do |k, v|
         apply_field_override(k, v) if k.start_with?("field.")
         apply_panel_override(k, v) if k.start_with?("panel.")
-      }
+      end
 
       # This accounts for the fact that the livingplant extension ids don't use extension format
       #  in field definitions
-      to_update = @messages.keys.select { |e|
+      to_update = @messages.keys.select do |e|
         e["field.conservation_livingplant"]
-      }
-      to_update.each { |key|
+      end
+      to_update.each do |key|
         newkey = key.sub("field.conservation_livingplant",
           "field.ext.livingplant")
         @messages[newkey] = @messages[key]
         @messages.delete(key)
-      }
+      end
     end
 
     def apply_field_override(id, value)
@@ -244,37 +244,37 @@ module CspaceConfigUntangler
     def get_extensions
       remove = %w[core authItem]
       ext = @config["extensions"].keys - remove
-      %w[contact blob].each { |subrec|
+      %w[contact blob].each do |subrec|
         ext << subrec if @config["recordTypes"].key?(subrec)
-      }
+      end
       ext
     end
 
     def get_authorities
       authorities = []
-      @rectypes_all.each { |rt|
+      @rectypes_all.each do |rt|
         c = @config["recordTypes"][rt]
         if c.dig("serviceConfig", "serviceType") == "authority"
-          c["vocabularies"].keys.reject { |e| e == "all" }.each { |subtype|
+          c["vocabularies"].keys.reject { |e| e == "all" }.each do |subtype|
             authorities << "#{rt}/#{subtype}"
-          }
+          end
         else
           next
         end
-      }
+      end
       authorities.sort
     end
 
     def rectypes_include_authorities
-      !@rectypes.select { |rt|
+      !@rectypes.select do |rt|
         rt.service_type == "authority"
-      }.empty?
+      end.empty?
     end
 
     def rectypes_include_procedures
-      !@rectypes.select { |rt|
+      !@rectypes.select do |rt|
         rt.service_type == "procedure"
-      }.empty?
+      end.empty?
     end
 
     def get_option_lists

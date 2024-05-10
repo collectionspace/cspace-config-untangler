@@ -58,15 +58,15 @@ module CspaceConfigUntangler
         "List all extensions used in profiles, and list which profile uses each"
       def by_extension
         exts = {}
-        get_profiles.each { |p|
-          CCU::Profile.new(profile: p).extensions.each { |ext|
+        get_profiles.each do |p|
+          CCU::Profile.new(profile: p).extensions.each do |ext|
             if exts.has_key?(ext)
               exts[ext] << p
             else
               exts[ext] = [p]
             end
-          }
-        }
+          end
+        end
         exts.keys.sort.each do |ext|
           puts ext
           exts[ext].each { |p| puts "  #{p}" }
@@ -82,13 +82,13 @@ module CspaceConfigUntangler
         "Reformats (in place) JSON profile configs so that they are not one very long line. Non-destructive if run over JSON multiple times."
       def readable
         message = []
-        get_profiles.each { |p|
+        get_profiles.each do |p|
           message << "Reformatting #{p} config"
           oldprofile = JSON.parse(File.read("#{CCU.configdir}/#{p}.json"))
-          File.open("#{CCU.configdir}/#{p}.json", "w") { |f|
+          File.open("#{CCU.configdir}/#{p}.json", "w") do |f|
             f.puts JSON.pretty_generate(oldprofile)
-          }
-        }
+          end
+        end
         say(message.join("\n"))
       end
 

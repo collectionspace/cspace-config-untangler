@@ -28,12 +28,12 @@ RSpec.describe CCU::Cli::ProfilesCli do
   describe "#compare" do
     let(:outfile) { "#{fixtures}/compare_core_7-0-0_to_bonsai_5-0-0.csv" }
     context "with expected parameters" do
-      after(:each) {
+      after(:each) do
         File.delete("#{fixtures}/compare_core_7-0-0_to_bonsai_5-0-0.csv")
-      }
-      let(:opts) {
+      end
+      let(:opts) do
         {"profiles" => "core_7-0-0,bonsai_5-0-0", "output" => fixtures}
-      }
+      end
       let(:msg) do
         <<~MSG
           not in core_7-0-0: 89

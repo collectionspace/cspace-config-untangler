@@ -22,13 +22,13 @@ module CspaceConfigUntangler
 
         def self.get(profiles)
           acc = []
-          profiles.each { |profile|
+          profiles.each do |profile|
             if all_profiles.include?(profile)
               acc << profile
             else
               puts "Unknown profile \"#{profile}\" will be ignored..."
             end
-          }
+          end
           acc.uniq
         end
       end

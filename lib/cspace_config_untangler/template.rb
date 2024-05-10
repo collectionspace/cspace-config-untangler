@@ -15,9 +15,9 @@ module CspaceConfigUntangler
         @config = @profile.config
         @mappings = @rectype.batch_mappings(:template).map(&:to_h)
         if @type == "displayname"
-          @mappings = @mappings.reject { |mapping|
+          @mappings = @mappings.reject do |mapping|
                         mapping[:data_type] == "csrefname"
-                      }
+                      end
             .reject { |mapping| mapping.key?(:to_template) && mapping[:to_template] == false }
         elsif @type == "refname"
           @mappings = @mappings.reject do |mapping|

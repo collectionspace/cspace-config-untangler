@@ -8,9 +8,9 @@ RSpec.describe CCU::ColumnNameStylable do
   end
 
   describe "#column_name_style" do
-    let(:result) {
+    let(:result) do
       ColStyleClass.new.column_name_style(profile_name, profile_version)
-    }
+    end
 
     context "when core 6.1" do
       let(:profile_name) { "core" }

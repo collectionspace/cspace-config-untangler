@@ -3,10 +3,10 @@
 require "spec_helper"
 
 RSpec.describe CCU::RecordMapper::RecordMapping do
-  let(:generator) {
+  let(:generator) do
     Helpers::SetupGenerator.new(profile: profilename, rectypes: rectypes,
       release: release)
-  }
+  end
   let(:profilename) { "core" }
   let(:rectypes) { ["collectionobject", "concept", "movement"] }
   let(:release) { "6_1" }

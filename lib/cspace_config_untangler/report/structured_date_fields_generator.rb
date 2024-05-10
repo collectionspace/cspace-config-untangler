@@ -20,9 +20,9 @@ module CspaceConfigUntangler
       end
 
       def call
-        res = source.select { |row|
+        res = source.select do |row|
                 row["data_type"] == "structured date group"
-              }
+              end
           .map { |row| simplify(row) }
 
         headers = res.first.headers

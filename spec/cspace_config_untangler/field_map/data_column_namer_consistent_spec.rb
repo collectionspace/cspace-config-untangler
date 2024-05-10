@@ -3,22 +3,22 @@
 require "spec_helper"
 
 RSpec.describe CCU::FieldMap::DataColumnNamerConsistent do
-  let(:generator) {
+  let(:generator) do
     Helpers::SetupGenerator.new(profile: "core", rectypes: ["collectionobject"],
       release: "7_0")
-  }
+  end
   let(:profile) { generator.profile }
 
   let(:fieldname) { "name" }
-  let(:xform_sources) {
-    sources.map { |source|
+  let(:xform_sources) do
+    sources.map do |source|
       CCU::ValueSources::Authority.new(source, profile)
-    }
-  }
-  let(:result) {
+    end
+  end
+  let(:result) do
     DataColumnNamerConsistent.new(fieldname: fieldname,
       sources: xform_sources).result.values
-  }
+  end
 
   context "when source is authority" do
     context "and two authorities may be used" do

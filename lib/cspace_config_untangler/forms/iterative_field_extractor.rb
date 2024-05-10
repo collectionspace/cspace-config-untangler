@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
-require_relative 'field'
-require_relative 'props'
-require_relative 'subrecord'
+require_relative "field"
+require_relative "props"
+require_relative "subrecord"
 
 module CspaceConfigUntangler
   module Forms
@@ -31,7 +31,7 @@ module CspaceConfigUntangler
         when :subrecord
           process_subrecord(props)
         when :props
-          reiterate(props.config['props'], props)
+          reiterate(props.config["props"], props)
         when :content_free_parent
           process_children(props, :self)
         when :content_bearing_parent
@@ -44,19 +44,19 @@ module CspaceConfigUntangler
           "  profile-rectype-form: #{profile.name}/#{rectype.name}/"\
           "#{form.name}>"
       end
-      alias inspect to_s
+      alias_method :inspect, :to_s
 
       # private
 
       attr_reader :form, :config, :parent, :rectype, :profile,
-                  :validator, :initialprops, :allprops
+        :validator, :initialprops, :allprops
 
       def add_form_field(props)
         form.add_field(CCU::Forms::Field.new(props))
       end
 
       def process_children(props, parentmode)
-        parent = parentmode == :self ? props : props.parent
+        parent = (parentmode == :self) ? props : props.parent
         normalized_children(props).each do |child|
           reiterate(child, parent)
         end
@@ -75,7 +75,7 @@ module CspaceConfigUntangler
       # children are represented as an array of hashes
       # Only one child in the UI config is represented as a hash, while multiple
       # This method converts a single child into an array containing one hash
-      def normalized_children(props) = [props.config['children']].flatten
+      def normalized_children(props) = [props.config["children"]].flatten
     end
   end
 end

@@ -3,10 +3,10 @@
 require "spec_helper"
 
 RSpec.describe CCU::ValueSources::Authority do
-  let(:generator) {
+  let(:generator) do
     Helpers::SetupGenerator.new(profile: profilename, rectypes: rectypes,
       release: release)
-  }
+  end
   let(:profilename) { "core" }
   let(:rectypes) { ["collectionobject"] }
   let(:release) { "6_0" }

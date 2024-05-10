@@ -3,10 +3,10 @@
 require "spec_helper"
 
 RSpec.describe CCU::FieldMap::FieldMapper do
-  let(:generator) {
+  let(:generator) do
     Helpers::SetupGenerator.new(profile: profilename, rectypes: rectypes,
       release: release)
-  }
+  end
   let(:profilename) { "core" }
   let(:rectypes) { ["collectionobject", "concept", "movement"] }
   let(:release) { "6_0" }
@@ -20,9 +20,9 @@ RSpec.describe CCU::FieldMap::FieldMapper do
 
     describe "#get_data_columns" do
       it "column is the same as field name" do
-        expect(mapper.hash.map { |src, h|
+        expect(mapper.hash.map do |src, h|
                  h[:column_name]
-               }).to eq(["assocActivity"])
+               end).to eq(["assocActivity"])
       end
     end
     describe "#mappings" do
@@ -65,9 +65,9 @@ RSpec.describe CCU::FieldMap::FieldMapper do
 
       describe "#get_data_columns" do
         it "column is the same as field name" do
-          expect(mapper.hash.map { |src, h|
+          expect(mapper.hash.map do |src, h|
                    h[:column_name]
-                 }).to eq(["ageQualifier", "ageQualifierRefname"])
+                 end).to eq(["ageQualifier", "ageQualifierRefname"])
         end
       end
       describe "#mappings" do
@@ -174,9 +174,9 @@ RSpec.describe CCU::FieldMap::FieldMapper do
 
     describe "#get_data_columns" do
       it "merges in column name hash as expected" do
-        expect(mapper.hash.map { |src, h|
+        expect(mapper.hash.map do |src, h|
                  h[:column_name]
-               }).to eq(%w[assocStructuredDateGroup])
+               end).to eq(%w[assocStructuredDateGroup])
       end
     end
     describe "#mappings" do

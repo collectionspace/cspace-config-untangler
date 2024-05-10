@@ -3,16 +3,16 @@
 require "spec_helper"
 
 RSpec.describe CCU::RecordMapper::NamespaceUris do
-  let(:generator) {
+  let(:generator) do
     Helpers::SetupGenerator.new(profile: profilename, rectypes: rectypes,
       release: release)
-  }
+  end
   let(:profilename) { "core" }
   let(:release) { "6_1" }
-  let(:nsuri) {
+  let(:nsuri) do
     CCU::RecordMapper::NamespaceUris.new(profile_config: profile.config,
       rectype: rectype, mapper_config: config)
-  }
+  end
   let(:profile) { generator.profile }
   let(:rectype) { generator.rectype.name }
   let(:mapper) { generator.record_mapping }

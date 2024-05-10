@@ -95,9 +95,9 @@ module CspaceConfigUntangler
         if null_uris.empty?
           true
         else
-          null_uris.keys.each { |ns|
+          null_uris.keys.each do |ns|
             @errors << "No namespace URI extracted for #{ns}"
-          }
+          end
           false
         end
       end
@@ -123,9 +123,9 @@ module CspaceConfigUntangler
         if missing_ns.empty?
           true
         else
-          missing_ns.each { |mapping|
+          missing_ns.each do |mapping|
             @errors << "Field mapping(s) for #{mapping["fieldname"]} lack(s) namespace"
-          }
+          end
           false
         end
       end
@@ -136,15 +136,15 @@ module CspaceConfigUntangler
           @errors << "No field mappings specified"
           return false
         end
-        not_ok = mappings.select { |mapping|
+        not_ok = mappings.select do |mapping|
           mapping["source_type"].start_with?("invalid source type")
-        }
+        end
         if not_ok.empty?
           true
         else
-          not_ok.each { |mapping|
+          not_ok.each do |mapping|
             @errors << "Source type for #{mapping["fieldname"]} is not an option_list, vocabulary, or authority."
-          }
+          end
           false
         end
       end

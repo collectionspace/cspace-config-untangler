@@ -17,9 +17,9 @@ module CspaceConfigUntangler
     attr_reader :indir, :output, :recurse
 
     def json_hash
-      {"mappers" => mapper_paths.map { |path|
+      {"mappers" => mapper_paths.map do |path|
                       CCU::ManifestEntry.new(path: path)
-                    }.map(&:to_h).compact}
+                    end.map(&:to_h).compact}
     end
 
     def mapper_paths

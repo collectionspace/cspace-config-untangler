@@ -5,10 +5,10 @@ require "spec_helper"
 RSpec.describe CCU::Profile do
   let(:release) { "6_1" }
   let(:rectypes) { ["person"] }
-  let(:generator) {
+  let(:generator) do
     Helpers::SetupGenerator.new(profile: profilename, rectypes: rectypes,
       release: release)
-  }
+  end
   let(:profile) { generator.profile }
 
   let(:core_rectypes) do

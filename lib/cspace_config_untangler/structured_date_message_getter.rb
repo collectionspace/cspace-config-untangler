@@ -12,7 +12,7 @@ module CspaceConfigUntangler
     private
 
     def set_messages
-      @fields.each { |field|
+      @fields.each do |field|
         id = "field.ext.structuredDate.#{field}"
         name = @config.dig(field, "[config]", "messages", "fullName",
           "defaultMessage")
@@ -20,7 +20,7 @@ module CspaceConfigUntangler
           "defaultMessage")
         fullName = fix_labels(field) if fullName.nil?
         @profile.messages[id] = {"name" => name, "fullName" => fullName}
-      }
+      end
     end
 
     def fix_labels(fieldname)

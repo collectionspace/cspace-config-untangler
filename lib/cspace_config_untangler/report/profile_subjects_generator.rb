@@ -37,11 +37,11 @@ module CspaceConfigUntangler
       end
 
       def rows_for(profile)
-        all_fields.select { |row|
+        all_fields.select do |row|
           row["profile"] == profile &&
             row["record_type"] == "collectionobject" &&
             subject_field?(row)
-        }
+        end
       end
 
       def subject_field?(row)

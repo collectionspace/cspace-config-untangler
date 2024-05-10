@@ -34,10 +34,10 @@ module CspaceConfigUntangler
       attr_reader :max, :allfields, :target
 
       def get_eligible_rows
-        allfields.select { |row|
+        allfields.select do |row|
           !row["xml_path"].blank? &&
             row["xml_path"].split(" > ").length > max
-        }
+        end
       end
 
       def write(eligible_rows)

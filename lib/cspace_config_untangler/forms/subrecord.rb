@@ -5,8 +5,8 @@ module CspaceConfigUntangler
     # Props from a subrecord's form config
     class Subrecord < Props
       FORM_LOOKUP = {
-        'contact' => 'default',
-        'blob' => 'view'
+        "contact" => "default",
+        "blob" => "view"
       }
 
       # @param name ["blob", "contact"]
@@ -16,9 +16,9 @@ module CspaceConfigUntangler
       def initialize(name, form, validator, parent = nil)
         @subrecname = name
         @validator = validator
-        @subrec = form.profile.config.dig('recordTypes', name)
-        @subrecform = subrec.dig('forms', FORM_LOOKUP[name])
-        @config = subrecform.dig('template', 'props', 'children', 'props')
+        @subrec = form.profile.config.dig("recordTypes", name)
+        @subrecform = subrec.dig("forms", FORM_LOOKUP[name])
+        @config = subrecform.dig("template", "props", "children", "props")
 
         super(form, validator, @config, parent)
       end
@@ -26,12 +26,12 @@ module CspaceConfigUntangler
       def extension? = true
 
       def ns
-        subrec.dig('fields', 'document', '[config]', 'view', 'props',
-                   'defaultChildSubpath')
+        subrec.dig("fields", "document", "[config]", "view", "props",
+          "defaultChildSubpath")
       end
 
       def panel
-        subrec.dig('messages', 'panel', config['name'], 'id')
+        subrec.dig("messages", "panel", config["name"], "id")
       end
 
       def panel? = true

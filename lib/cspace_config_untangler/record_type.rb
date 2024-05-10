@@ -37,9 +37,9 @@ module CspaceConfigUntangler
 
     def form_fields
       all = []
-      @forms.each { |formname, form|
+      @forms.each do |formname, form|
         all << form.fields
-      }
+      end
       all.flatten.uniq { |f| f.id }
     end
 
@@ -54,45 +54,45 @@ module CspaceConfigUntangler
     def explode_structured_date_fields(fields)
       sd_fields = fields.select { |f| f.structured_date? }
       fields -= sd_fields
-      sd_fields.each { |f|
+      sd_fields.each do |f|
         fields << CCU::StructuredDateFieldMaker.new(f).fields(@profile)
-      }
+      end
       fields
     end
 
     def nonunique_fields
       h = {}
-      fields.each { |f|
+      fields.each do |f|
         path = [f.schema_path, f.name].flatten.join(" > ")
         if h.has_key?(path)
           h[path] << f
         else
           h[path] = [f]
         end
-      }
+      end
       h.select { |path, farr| farr.length > 1 }
         .keys
     end
 
     def nonunique_field_names
       h = {}
-      fields.each { |f|
+      fields.each do |f|
         path = [f.schema_path, f.name].flatten.join(" > ")
         if h.has_key?(f.name)
           h[f.name] << path
         else
           h[f.name] = [path]
         end
-      }
+      end
       h.select { |name, paths| paths.length > 1 }
     end
 
     def mappings
       checkhash = {}
-      mappings = fields.map { |f|
+      mappings = fields.map do |f|
         FieldMapper.new(field: f,
           column_style: profile.column_style).mappings
-      }.flatten
+      end.flatten
 
       # ensure unique datacolumn values for templates and mapper
       mappings.each do |mapping|
@@ -150,9 +150,9 @@ module CspaceConfigUntangler
     end
 
     def unmappable_fields
-      unmappable = mappings.select { |mapping|
+      unmappable = mappings.select do |mapping|
         mapping.xpath.nil? && mapping.data_type.nil?
-      }
+      end
       return if unmappable.empty?
 
       unmappable.each do |mapping|
@@ -283,14 +283,14 @@ module CspaceConfigUntangler
     def get_input_tables
       if @config.dig("messages", "inputTable")
         h = {}
-        @config["messages"]["inputTable"].each { |name, hash|
+        @config["messages"]["inputTable"].each do |name, hash|
           h[name] = hash["id"]
           unless @profile.messages.has_key?(hash["id"])
             @profile.messages[hash["id"]] =
               {"name" => hash["defaultMessage"],
                "fullName" => hash["defaultMessage"]}
           end
-        }
+        end
         h
       else
         {}
@@ -301,14 +301,14 @@ module CspaceConfigUntangler
       if @config.dig("messages", "panel")
         arr = []
 
-        @config["messages"]["panel"].keys.each { |panelname|
+        @config["messages"]["panel"].keys.each do |panelname|
           arr << panelname
 
           msgs = @profile.messages
           id = @config["messages"]["panel"][panelname]["id"]
           label = @config["messages"]["panel"][panelname]["defaultMessage"]
           msgs[id] = {"name" => label, "fullName" => label}
-        }
+        end
         arr
       else
         []

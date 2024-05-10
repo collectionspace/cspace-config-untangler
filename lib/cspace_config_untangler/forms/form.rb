@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require_relative 'iterative_field_extractor'
+require_relative "iterative_field_extractor"
 
 module CspaceConfigUntangler
   module Forms
@@ -14,7 +14,7 @@ module CspaceConfigUntangler
         @rectype = rectypeobj
         @profile = rectype.profile
         @name = formname
-        @config = rectype.config['forms'][name]
+        @config = rectype.config["forms"][name]
         @fields = []
         return self if disabled?
 
@@ -23,7 +23,7 @@ module CspaceConfigUntangler
         iterator.call
       end
 
-      def field_config = config['template']['props']
+      def field_config = config["template"]["props"]
 
       # param field [CCU::Forms::Field]
       def add_field(field)
@@ -33,7 +33,7 @@ module CspaceConfigUntangler
       end
 
       def disabled?
-        disabled = config.dig('disabled')
+        disabled = config.dig("disabled")
         disabled ? true : false
       end
 
@@ -49,7 +49,7 @@ module CspaceConfigUntangler
           "  disabled?: #{disabled?.inspect}\n"\
           "  fields: #{fields.length}>"
       end
-      alias inspect to_s
+      alias_method :inspect, :to_s
 
       private
 
@@ -61,10 +61,10 @@ module CspaceConfigUntangler
         # https://collectionspace.atlassian.net/browse/DRYD-882. This was
         # resolved in 7.0, but we keep it because this needs to support
         # 6.1 as well
-        true if field.name == 'addressCounty' &&
-                rectype.name == 'work' &&
-                profile.name.start_with?('publicart') &&
-                CCU.release.lt('7_0')
+        true if field.name == "addressCounty" &&
+          rectype.name == "work" &&
+          profile.name.start_with?("publicart") &&
+          CCU.release.lt("7_0")
       end
     end
   end

@@ -4,10 +4,10 @@ require "spec_helper"
 
 RSpec.describe CCU::RecordType do
   let(:release) { "7_0" }
-  let(:generator) {
+  let(:generator) do
     Helpers::SetupGenerator.new(profile: profilename, rectypes: rectypes,
       release: release)
-  }
+  end
   let(:profilename) { "core" }
   let(:rectypes) { %w[collectionobject] }
   let(:profile) { generator.profile }
@@ -143,11 +143,11 @@ RSpec.describe CCU::RecordType do
 
   describe "#mappings" do
     let(:result) { rectype.mappings }
-    let(:columns) {
-      result.select { |m|
+    let(:columns) do
+      result.select do |m|
         m.fieldname == fieldname
-      }.map { |m| m.datacolumn }.sort
-    }
+      end.map { |m| m.datacolumn }.sort
+    end
     context "anthro profile" do
       let(:profilename) { "anthro" }
       context "collectionobject recordtype" do
@@ -177,11 +177,11 @@ RSpec.describe CCU::RecordType do
 
       context "when movement recordtype" do
         let(:rectypes) { %w[movement] }
-        let(:required) {
-          result.select { |m|
+        let(:required) do
+          result.select do |m|
             m.fieldname == fieldname
-          }.map { |m| m.required }.sort
-        }
+          end.map { |m| m.required }.sort
+        end
         context "with fieldname = movementReferenceNumber" do
           let(:fieldname) { "movementReferenceNumber" }
           it "is not required" do
@@ -218,9 +218,9 @@ RSpec.describe CCU::RecordType do
         let(:profilename) { "anthro" }
         context "collectionobject" do
           it "removes computedCurrentLocation mappings" do
-            check = result.select { |m|
+            check = result.select do |m|
               m.fieldname == "computedCurrentLocation"
-            }
+            end
             expect(check).to be_empty
           end
         end
@@ -236,9 +236,9 @@ RSpec.describe CCU::RecordType do
         context "movement recordtype" do
           let(:rectypes) { %w[movement] }
           it "movementReferenceNumber is required" do
-            check = result.select { |m|
+            check = result.select do |m|
                       m.fieldname == "movementReferenceNumber"
-                    }.map { |m| m.required }.sort
+                    end.map { |m| m.required }.sort
             expect(check).to eq(%w[y])
           end
         end
@@ -251,9 +251,9 @@ RSpec.describe CCU::RecordType do
         let(:profilename) { "anthro" }
         context "collectionobject" do
           it "removes computedCurrentLocation mappings" do
-            check = result.select { |m|
+            check = result.select do |m|
               m.fieldname == "computedCurrentLocation"
-            }
+            end
             expect(check).to be_empty
           end
         end
@@ -269,9 +269,9 @@ RSpec.describe CCU::RecordType do
         context "movement recordtype" do
           let(:rectypes) { %w[movement] }
           it "movementReferenceNumber is required" do
-            check = result.select { |m|
+            check = result.select do |m|
                       m.fieldname == "movementReferenceNumber"
-                    }.map { |m| m.required }.sort
+                    end.map { |m| m.required }.sort
             expect(check).to eq(%w[y])
           end
         end

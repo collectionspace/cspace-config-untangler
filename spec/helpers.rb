@@ -4,24 +4,24 @@ module Helpers
   module_function
 
   def fixtures
-    File.join(CCU.app_dir, 'spec', 'fixtures')
+    File.join(CCU.app_dir, "spec", "fixtures")
   end
 
-  def set_profile_release(version = '7_0')
+  def set_profile_release(version = "7_0")
     CCU.config.release = version
-    CCU.config.mapperdir = File.join(CCU.mapperdir, 'community_profiles',
-                                     "release_#{version}")
-    CCU.config.templatedir = File.join(fixtures, 'files', version, 'templates')
+    CCU.config.mapperdir = File.join(CCU.mapperdir, "community_profiles",
+      "release_#{version}")
+    CCU.config.templatedir = File.join(fixtures, "files", version, "templates")
   end
 
   class SetupGenerator
     attr_reader :profile, :rectype
 
-    def initialize(profile:, rectypes:, release: '7_0', dates: :collapse)
+    def initialize(profile:, rectypes:, release: "7_0", dates: :collapse)
       Helpers.set_profile_release(release)
       CCU.config.main_profile_name = profile
       @profile = CCU::Profile.new(profile: CCU.main_profile,
-                                  rectypes:, structured_date_treatment: dates)
+        rectypes:, structured_date_treatment: dates)
       @rectype = @profile.rectypes.first
     end
 
@@ -47,15 +47,15 @@ module Helpers
     end
 
     def field_def_hash
-      @field_def_hash ||= rectype.config['fields']['document']
+      @field_def_hash ||= rectype.config["fields"]["document"]
     end
 
     def field_def_parser
       @field_def_parser ||= CCU::Fields::Def::Parser.new(rectype,
-                                                         field_def_hash)
+        field_def_hash)
     end
 
-    def form(template = 'default')
+    def form(template = "default")
       rectype.forms[template]
     end
 
@@ -66,7 +66,7 @@ module Helpers
 
     def record_mapping(subtype = nil)
       CCU::RecordMapper::RecordMapping.new(profile:, rectype:,
-                                           subtype:)
+        subtype:)
     end
 
     def template_file
@@ -75,12 +75,12 @@ module Helpers
       csv.transpose
     end
 
-    def template_object(type = 'displayname')
+    def template_object(type = "displayname")
       CCU::Template::CsvTemplate.new(profile:, rectype:,
-                                     type:)
+        type:)
     end
 
-    def template_testable(type = 'displayname')
+    def template_testable(type = "displayname")
       csv = template_object(type).csvdata
       csv.shift
       csv.transpose
@@ -90,8 +90,8 @@ module Helpers
 
     def template_file_path
       Pathname.new(File.join(CCU.templatedir, CCU.main_profile_name))
-              .children
-              .find { |filename| filename.to_s["_#{rectype.name}-template"] }
+        .children
+        .find { |filename| filename.to_s["_#{rectype.name}-template"] }
     end
   end
 end

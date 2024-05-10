@@ -5,10 +5,10 @@ require "spec_helper"
 RSpec.describe CCU::Extension do
   let(:release) { "6_1" }
   let(:rectypes) { ["collectionobject"] }
-  let(:generator) {
+  let(:generator) do
     Helpers::SetupGenerator.new(profile: profilename, rectypes: rectypes,
       release: release)
-  }
+  end
 
   context "when core rectype" do
     let(:profilename) { "core" }

@@ -58,9 +58,9 @@ module CspaceConfigUntangler
     #  the others are always nil
     # This logs any non-nil values for key, ref, or _owner so I can inspect
     def report_non_nil_and_missing_keys(data)
-      data.each { |h|
+      data.each do |h|
         %w[key ref _owner].each { |k| check_key(h, k) }
-      }
+      end
     end
 
     def check_key(hash, key)

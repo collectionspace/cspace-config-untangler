@@ -14,7 +14,8 @@ module CspaceConfigUntangler
       POPULATED_KEYS = %w[props].freeze
       KNOWN_KEYS = (EMPTY_KEYS + POPULATED_KEYS).freeze
 
-      def initialize; end
+      def initialize
+      end
 
       # @param child [Hash]
       # @param props [CCU::Forms::Props]
@@ -34,7 +35,7 @@ module CspaceConfigUntangler
         return if chk.empty?
 
         chk.each do |key|
-          CCU.log.warn('FORM STRUCTURE: NEW/UNHANDLED CHILD HASH KEY(S): '\
+          CCU.log.warn("FORM STRUCTURE: NEW/UNHANDLED CHILD HASH KEY(S): "\
                        "#{formatted_key(props, key)}")
         end
         result << :ok
@@ -45,7 +46,7 @@ module CspaceConfigUntangler
         return if chk.empty?
 
         chk.each do |key|
-          CCU.log.warn('FORM STRUCTURE: MISSING HASH KEY: '\
+          CCU.log.warn("FORM STRUCTURE: MISSING HASH KEY: "\
                        "#{formatted_key(props, key)}")
         end
         result << :ok
@@ -56,8 +57,8 @@ module CspaceConfigUntangler
         return if not_empty.empty?
 
         not_empty.each do |key|
-          CCU.log.warn('FORM STRUCTURE: EXPECTED EMPTY CHILD HASH KEY IS '\
-                       'NON-NIL: '\
+          CCU.log.warn("FORM STRUCTURE: EXPECTED EMPTY CHILD HASH KEY IS "\
+                       "NON-NIL: "\
                        "#{formatted_key(props, key)} has value: "\
                        "#{hash[key]}")
         end

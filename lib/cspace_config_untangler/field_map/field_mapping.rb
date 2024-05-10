@@ -41,9 +41,9 @@ module CspaceConfigUntangler
 
         ivs = attrs.flatten.map { |e| "@" + e.to_s }.map { |e| e.to_sym }
         h = {}
-        attrs.each_with_index { |a, i|
+        attrs.each_with_index do |a, i|
           h[a.to_sym] = instance_variable_get(ivs[i])
-        }
+        end
         h
       end
     end

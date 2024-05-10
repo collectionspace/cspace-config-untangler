@@ -279,12 +279,12 @@ module CspaceConfigUntangler
 
       def alt_panel_lookup(val)
         trunc_lookup = {}
-        @profile.messages.select { |id, h|
+        @profile.messages.select do |id, h|
           id.start_with?("panel.")
-        }.each { |id, h|
+        end.each do |id, h|
           name = id.split(".").last
           trunc_lookup[name] = h
-        }
+        end
         trunc_val = val.split(".").last
 
         if trunc_lookup.dig(trunc_val, "name")

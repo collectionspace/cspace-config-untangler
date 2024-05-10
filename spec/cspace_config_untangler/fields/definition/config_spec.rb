@@ -3,9 +3,9 @@
 require "spec_helper"
 
 RSpec.describe CCU::Fields::Def::Config do
-  let(:generator) {
+  let(:generator) do
     Helpers::SetupGenerator.new(profile: "core", rectypes: ["collectionobject"])
-  }
+  end
   let(:ns) { "ns2:collectionobjects_common" }
   let(:config) { generator.field_def_config(ns) }
 

@@ -191,10 +191,10 @@ module CspaceConfigUntangler
   # Require all application files
   Dir.glob("#{gem_agnostic_dir}/cspace_config_untangler/**/*")
     .sort
-    .select { |path|
+    .select do |path|
       path.match?(/\.rb$/)
-    }.each { |rbfile|
+    end.each do |rbfile|
       req_file = rbfile.delete_prefix("#{gem_agnostic_dir}/").delete_suffix(".rb")
       require req_file
-    }
+    end
 end

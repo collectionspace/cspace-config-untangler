@@ -4,10 +4,10 @@ require "spec_helper"
 
 RSpec.describe CCU::Template::CsvTemplate do
   let(:release) { "6_1" }
-  let(:generator) {
+  let(:generator) do
     Helpers::SetupGenerator.new(profile: profilename, rectypes: rectypes,
       release: release)
-  }
+  end
   let(:profilename) { "core" }
   let(:rectypes) { %w[collectionobject] }
   let(:profile) { generator.profile }
@@ -22,9 +22,9 @@ RSpec.describe CCU::Template::CsvTemplate do
       describe ".csvdata" do
         it "does not output computedCurrentLocation field" do
           headers = template.csvdata[6]
-          result = headers.select { |h|
+          result = headers.select do |h|
             h.start_with?("computedCurrentLocation")
-          }
+          end
           expect(result).to be_empty
         end
       end

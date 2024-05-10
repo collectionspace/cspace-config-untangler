@@ -6,10 +6,10 @@ RSpec.describe CCU::Forms::Form do
   let(:release) { "8_0" }
   let(:profilename) { "anthro" }
   let(:rectypes) { ["collectionobject"] }
-  let(:generator) {
+  let(:generator) do
     Helpers::SetupGenerator.new(profile: profilename, rectypes: rectypes,
       release: release)
-  }
+  end
   let(:form) { generator.form(templatename) }
 
   describe "#disabled?" do

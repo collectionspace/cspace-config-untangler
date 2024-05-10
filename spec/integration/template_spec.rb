@@ -4,10 +4,10 @@ require "spec_helper"
 
 RSpec.describe CCU::Template::CsvTemplate do
   let(:release) { "7_0" }
-  let(:generator) {
+  let(:generator) do
     Helpers::SetupGenerator.new(profile: profilename, rectypes: rectypes,
       release: release)
-  }
+  end
   let(:profilename) { "anthro" }
   let(:rectypes) { %w[collectionobject] }
   let(:profile) { generator.profile }

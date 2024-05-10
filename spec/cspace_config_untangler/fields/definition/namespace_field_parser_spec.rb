@@ -3,9 +3,9 @@
 require "spec_helper"
 
 RSpec.describe CCU::Fields::Def::NamespaceFieldParser do
-  let(:generator) {
+  let(:generator) do
     Helpers::SetupGenerator.new(profile: "core", rectypes: ["person"])
-  }
+  end
   let(:ns) { "ns2:contacts_common" }
   let(:config) { generator.field_def_config(ns) }
   let(:parser) { generator.namespace_field_parser(ns, config) }
