@@ -23,8 +23,6 @@ module CspaceConfigUntangler
         return if props.skippable?
         return unless props.valid?
 
-        puts form.fields.length
-
         case props.treatment
         when :field
           add_form_field(props)
