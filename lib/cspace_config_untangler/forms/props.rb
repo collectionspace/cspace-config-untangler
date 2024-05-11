@@ -8,7 +8,7 @@ module CspaceConfigUntangler
     # we can work with them
     class Props
       attr_reader :form, :config, :parent,
-        :keys, :rectype, :profile, :name, :ui_path,
+        :keys, :rectype, :profile, :name, :ns, :ns_for_id, :ui_path,
         :warnings, :errors
 
       # @param form [CCU::Forms::Form]
@@ -24,6 +24,8 @@ module CspaceConfigUntangler
         @rectype = form.rectype
         @profile = rectype.profile
         @name = get_name
+        @ns = get_ns
+        @ns_for_id = get_ns_for_id
         @ui_path = populate_ui_path
         @warnings = []
         @errors = []
@@ -44,7 +46,7 @@ module CspaceConfigUntangler
       end
 
       def address?
-        return true if parent? && parent.address?
+        return true if parent&.address?
 
         true if name == "addrGroupList"
       end
@@ -67,13 +69,7 @@ module CspaceConfigUntangler
         profile.extensions.include?(name)
       end
 
-      def ns
-        return subpath_ns if subpath_ns
-
-        parent? ? parent.ns : rectype.ns
-      end
-
-      def ns_for_id
+      def get_ns_for_id
         return parent.ns_for_id if parent&.ns_for_id &&
           parent.ns_for_id.start_with?("ext.")
 
@@ -105,23 +101,21 @@ module CspaceConfigUntangler
 
       def panel
         return "panel.#{rectype.name}.#{name}" if panel?
-        return parent.panel if parent?
+        return parent.panel if parent
 
         ""
       end
 
       def panel?
-        return false if parent? && parent.panel?
+        return false if parent&.panel?
 
         rectype.panels.include?(name)
       end
 
-      def parent? = parent ? true : false
-
       def measurement?
         return true if name == "measuredPartGroupList"
 
-        true if parent? && parent.measurement?
+        true if parent&.measurement?
       end
 
       def treatment
@@ -129,9 +123,9 @@ module CspaceConfigUntangler
         return :field if field?
         return :props if keys == %w[_owner key props ref] ||
           keys == %w[_owner key props ref type]
-        return :content_free_parent if content_free_parent?
+        return :content_free_parent if content_free_has_parent
 
-        :content_bearing_parent if content_bearing_parent?
+        :content_bearing_parent if content_bearing_has_parent
       end
 
       def subrecord? = blob? || contact?
@@ -175,6 +169,13 @@ module CspaceConfigUntangler
         "nameless"
       end
 
+      def get_ns
+        return subpath_ns if subpath_ns
+        return parent.ns if parent
+
+        rectype.ns
+      end
+
       def field?
         keysigs = [
           %w[name],
@@ -185,7 +186,7 @@ module CspaceConfigUntangler
         true if bad_work_date? || keysigs.include?(keys)
       end
 
-      def content_free_parent?
+      def content_free_has_parent
         keysigs = [
           %w[children],
           %w[children style]
@@ -194,7 +195,7 @@ module CspaceConfigUntangler
         true if keysigs.include?(keys)
       end
 
-      def content_bearing_parent?
+      def content_bearing_has_parent
         keysigs = [
           %w[children name],
           %w[children collapsed collapsible name],
@@ -212,7 +213,7 @@ module CspaceConfigUntangler
 
         path = initial_ui_path
         return path if name == "document"
-        return path if panel? && !parent?
+        return path if panel? && parent.nil?
 
         append_to_ui_path(path)
         path
@@ -221,7 +222,7 @@ module CspaceConfigUntangler
       def initial_ui_path
         if field_specific_subpath?
           # binding.pry
-        elsif parent?
+        elsif parent
           parent.ui_path.clone
         else
           []
@@ -255,13 +256,13 @@ module CspaceConfigUntangler
         subpath = config["subpath"]
         case subpath.class.name
         when "String"
-          if subpath?(subpath)
+          if namespace?(subpath)
             subpath
           else
             CCU.log.warn("FORM SUBPATH: non-namespace string: #{config}")
           end
         when "Array"
-          result = subpath.find { |val| subpath?(val) }
+          result = subpath.find { |val| namespace?(val) }
           if result.empty?
             CCU.log.warn("FORM SUBPATH: array with no namespace: #{config}")
           else
@@ -272,7 +273,7 @@ module CspaceConfigUntangler
         end
       end
 
-      def subpath?(val) = val.match?(/^(?:ns2:|ext\.)/)
+      def namespace?(subpath) = subpath.match?(/^(?:ns2:|ext\.)/)
 
       # Prior to 6.1, the form output in the config included "workDate" as a
       # child under "workDateGroup", though "workDate" was not output as a
