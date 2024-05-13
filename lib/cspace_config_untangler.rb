@@ -16,6 +16,8 @@ require "nokogiri"
 require "pry"
 require "thor"
 
+require_relative "cspace_config_untangler/upgrade_warner"
+
 module CspaceConfigUntangler
   ::CCU = CspaceConfigUntangler
 
@@ -116,6 +118,9 @@ module CspaceConfigUntangler
     reader: true,
     constructor: ->(default) { default || Logger.new(logpath) }
 
+  setting :upgrade_warner,
+    default: CCU::UpgradeWarner.new,
+    reader: true
   def allfields_path(
     release: CCU.release,
     outmode: :expert,
@@ -168,20 +173,6 @@ module CspaceConfigUntangler
   def switch_release(release)
     clear_config_dir
     move_release_to_config_dir(release)
-  end
-
-  # @param target_version [String] of release for which warnings should be
-  #   emitted
-  # @param issue [nil, String] Jira or other issue to check for information on
-  #   the status of changes expected to impact this code
-  def warn_on_upgrade(target_version:, issue: nil)
-    return unless release.version == target_version
-
-    basemsg = "Verify that code at the following location is still "\
-      "needed with #{target_version}"
-    msgissue = issue ? "(see #{issue})" : nil
-    fullmsg = [basemsg, msgissue].compact.join(" ")
-    warn([fullmsg, caller(1..1).first].compact.join(":\n"))
   end
 
   gem_agnostic_dir = $LOAD_PATH.select do |dir|
