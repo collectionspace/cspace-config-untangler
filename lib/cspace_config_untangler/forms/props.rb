@@ -7,8 +7,14 @@ module CspaceConfigUntangler
     # exposing the known and calculated properties at that level, so
     # we can work with them
     class Props
-      attr_reader :form, :config, :parent,
-        :keys, :rectype, :profile, :name, :ns, :ns_for_id, :ui_path,
+      NS_MATCHER = /^(?:ns2:|ext\.)/
+
+      # name values that are not appended to ui/xml path
+      NON_PATH_NAMES = %w[document propsHolder childHolder nameless].freeze
+
+      attr_reader :form, :config, :parent, :ancestors,
+        :keys, :rectype, :profile, :name, :is_panel, :panel,
+        :ns, :ns_for_id, :ui_path,
         :warnings, :errors
 
       # @param form [CCU::Forms::Form]
@@ -20,10 +26,14 @@ module CspaceConfigUntangler
         @validator = validator
         @config = config
         @keys = config.keys.sort
+        @subpath = config["subpath"]
         @parent = parent
+        @ancestors = get_ancestors
         @rectype = form.rectype
         @profile = rectype.profile
         @name = get_name
+        @is_panel = get_is_panel
+        @panel = get_panel
         @ns = get_ns
         @ns_for_id = get_ns_for_id
         @ui_path = populate_ui_path
@@ -45,6 +55,46 @@ module CspaceConfigUntangler
         true if errors.empty?
       end
 
+      def treatment
+        return :subrecord if subrecord?
+        return :field if field?
+        return :props if keys == %w[_owner key props ref] ||
+          keys == %w[_owner key props ref type]
+        return :content_free_parent if content_free_has_children
+
+        :content_bearing_parent if content_bearing_has_children
+      end
+
+      def warning_id
+        "#{form.id} #{formatted_ui_path}"
+      end
+
+      def formatted_ui_path
+        ui_path.join(" / ")
+      end
+
+      def skippable?
+        return true if name == "hierarchy"
+        return true if name == "relation-list-item"
+        return true if bad_material_public_template_field?
+        return true if keys == ["style"]
+        return true if keys == %w[defaultMessage id values]
+        return true if keys == %w[name showDetachButton]
+        return true if core?
+
+        false
+      end
+
+      def to_s
+        parts = [profile.name, rectype.name, "#{form.name} form",
+          formatted_ui_path, name].compact.join(" / ")
+
+        "<##{self.class}:#{object_id.to_s(8)} #{parts}>"
+      end
+      alias_method :inspect, :to_s
+
+      protected
+
       def address?
         return true if parent&.address?
 
@@ -64,9 +114,61 @@ module CspaceConfigUntangler
       def core? = ns == "ns2:collectionspace_core"
 
       def extension?
-        return false unless panel?
+        return false unless is_panel
 
         profile.extensions.include?(name)
+      end
+
+      def measurement?
+        return true if name == "measuredPartGroupList"
+
+        true if parent&.measurement?
+      end
+
+      def input_table?
+        true if children? && rectype.input_tables.key?(name)
+      end
+
+      def subrecord? = blob? || contact?
+
+      private
+
+      attr_reader :subpath, :validator, :validated
+
+      def get_ancestors
+        if parent
+          parent.ancestors.clone + [parent]
+        else
+          []
+        end
+      end
+
+      def get_name
+        return config["name"] if config.key?("name")
+        return "propsHolder" if config.key?("props")
+        return "childHolder" if config.key?("children")
+
+        "nameless"
+      end
+
+      def get_panel
+        return "panel.#{rectype.name}.#{name}" if is_panel
+        return parent.panel if parent
+
+        ""
+      end
+
+      def get_is_panel
+        return false if ancestors.any? { |ancestor| ancestor.is_panel }
+
+        rectype.panels.include?(name)
+      end
+
+      def get_ns
+        return subpath_ns if subpath_ns
+        return parent.ns if parent
+
+        rectype.ns
       end
 
       def get_ns_for_id
@@ -82,16 +184,20 @@ module CspaceConfigUntangler
         return "ext.fineart" if ns == "ns2:collectionobjects_fineart"
         return "ext.commission" if ns == "ns2:acquisitions_commission"
 
-        if ns == "ns2:collectionobjects_variablemedia"
-          return "ext.contentWorks" if name.start_with?("contentWork")
-
-          return "ext.technicalSpecs"
-
+        if ns == "ns2:collectionobjects_variablemedia" &&
+            !NON_PATH_NAMES.include?(name)
+          if name.start_with?("contentWork")
+            return "ext.contentWorks"
+          else
+            return "ext.technicalSpecs"
+          end
         end
         return "ext.technicalChanges" if ns ==
           "ns2:conditionchecks_variablemedia"
 
-        if (ns == "ns2:persons_publicart" || ns == "ns2:organizations_publicart") && name.start_with?("socialMedia")
+        if (ns == "ns2:persons_publicart" ||
+            ns == "ns2:organizations_publicart") &&
+            name.start_with?("socialMedia")
           return "ext.socialMedia"
         end
         return "ext.locality" if name.start_with?("localityGroup")
@@ -99,94 +205,20 @@ module CspaceConfigUntangler
         ns
       end
 
-      def panel
-        return "panel.#{rectype.name}.#{name}" if panel?
-        return parent.panel if parent
-
-        ""
-      end
-
-      def panel?
-        return false if parent&.panel?
-
-        rectype.panels.include?(name)
-      end
-
-      def measurement?
-        return true if name == "measuredPartGroupList"
-
-        true if parent&.measurement?
-      end
-
-      def treatment
-        return :subrecord if subrecord?
-        return :field if field?
-        return :props if keys == %w[_owner key props ref] ||
-          keys == %w[_owner key props ref type]
-        return :content_free_parent if content_free_has_parent
-
-        :content_bearing_parent if content_bearing_has_parent
-      end
-
-      def subrecord? = blob? || contact?
-
-      def warning_id
-        "#{form.id} #{formatted_ui_path}"
-      end
-
-      def formatted_ui_path
-        ui_path.join(" / ")
-      end
-
-      def skippable?
-        return true if name == "hierarchy"
-        return true if name == "relation-list-item"
-        return true if keys == ["style"]
-        return true if keys == %w[defaultMessage id values]
-        return true if keys == %w[name showDetachButton]
-        return true if core?
-
-        false
-      end
-
-      def to_s
-        parts = [profile.name, rectype.name, "#{form.name} form",
-          formatted_ui_path, name].compact.join(" / ")
-
-        "<##{self.class}:#{object_id.to_s(8)} #{parts}>"
-      end
-      alias_method :inspect, :to_s
-
-      private
-
-      attr_reader :validator, :validated
-
-      def get_name
-        return config["name"] if config.key?("name")
-        return "propsHolder" if config.key?("props")
-        return "childHolder" if config.key?("children")
-
-        "nameless"
-      end
-
-      def get_ns
-        return subpath_ns if subpath_ns
-        return parent.ns if parent
-
-        rectype.ns
-      end
-
       def field?
+        return true if bad_work_date?
+        return false if children?
+
         keysigs = [
           %w[name],
           %w[name subpath],
           %w[embedded label name]
         ]
 
-        true if bad_work_date? || keysigs.include?(keys)
+        true if keysigs.include?(keys)
       end
 
-      def content_free_has_parent
+      def content_free_has_children
         keysigs = [
           %w[children],
           %w[children style]
@@ -195,14 +227,14 @@ module CspaceConfigUntangler
         true if keysigs.include?(keys)
       end
 
-      def content_bearing_has_parent
+      def content_bearing_has_children
         keysigs = [
           %w[children name],
           %w[children collapsed collapsible name],
           %w[children collapsible name],
           %w[children name subpath],
           %w[children subpath tabular],
-          %w[childen name tabular]
+          %w[children name tabular]
         ]
 
         true if keysigs.include?(keys)
@@ -212,57 +244,56 @@ module CspaceConfigUntangler
         return [] if skippable?
 
         path = initial_ui_path
-        return path if name == "document"
-        return path if panel? && parent.nil?
+        return path if NON_PATH_NAMES.include?(name) ||
+          bad_work_date? ||
+          field_array_subpath?
 
         append_to_ui_path(path)
         path
       end
 
       def initial_ui_path
-        if field_specific_subpath?
-          # binding.pry
-        elsif parent
-          parent.ui_path.clone
-        else
-          []
-        end
+        return parent.ui_path.clone if parent
+
+        []
       end
 
       def append_to_ui_path(path)
         if input_table?
           path << rectype.input_tables[name]
-        elsif panel?
+        elsif is_panel
           path << panel
         elsif children? && !name.empty?
           path << "#{ns&.sub("ns2:", "")}.#{name}"
         end
       end
 
-      def field_specific_subpath?
-        !children? &&
-          !config.key?("props") &&
-          config.key?("subpath") &&
-          config["subpath"].is_a?(Array)
+      def field_array_subpath?
+        subpath && subpath.is_a?(Array) && field? && namespace_str?(subpath[0])
       end
 
-      def input_table?
-        true if children? && rectype.input_tables.key?(name)
+      def embedded_field?
+        # binding.pry if name == "material"
+        keys.include?("embedded") &&
+          config["embedded"] == true &&
+          ancestors.any? do |anc|
+            anc.keys.include?("tabular") &&
+              anc.config["tabular"] == false
+          end
       end
 
       def subpath_ns
-        return nil unless config.key?("subpath")
+        return nil unless subpath
 
-        subpath = config["subpath"]
         case subpath.class.name
         when "String"
-          if namespace?(subpath)
+          if namespace_str?
             subpath
           else
             CCU.log.warn("FORM SUBPATH: non-namespace string: #{config}")
           end
         when "Array"
-          result = subpath.find { |val| namespace?(val) }
+          result = subpath.find { |val| namespace_str?(val) }
           if result.empty?
             CCU.log.warn("FORM SUBPATH: array with no namespace: #{config}")
           else
@@ -273,15 +304,24 @@ module CspaceConfigUntangler
         end
       end
 
-      def namespace?(subpath) = subpath.match?(/^(?:ns2:|ext\.)/)
+      def namespace_str?(val = subpath) = val.match?(NS_MATCHER)
 
       # Prior to 6.1, the form output in the config included "workDate" as a
       # child under "workDateGroup", though "workDate" was not output as a
-      # field definition in the fields section of the config
+      # field definition in the fields section of the config. The issue remains
+      # in the default works form in publicart
       def bad_work_date?
-        true if CCU.release.lt("6_1") &&
-          rectype == "work" &&
-          name == "workDateGroup"
+        rectype.name == "work" &&
+          name == "workDateGroup" &&
+          children?
+      end
+
+      def bad_material_public_template_field?
+        CCU.upgrade_warner.call(target_version: "8_1", issue: "DRYD-1419")
+
+        profile.name.start_with?("materials") &&
+          rectype.name == "collectionobject" &&
+          form.name == "public"
       end
     end
   end

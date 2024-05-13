@@ -115,7 +115,7 @@ module CspaceConfigUntangler
           .reverse
           .to_h
           .each { |val, ct| puts "#{ct}\t#{val.inspect}" }
-        grouped[%w[children name]].select(&:panel?).first(10).each do |prop|
+        grouped[%w[children name]].select(&:is_panel).first(10).each do |prop|
           puts prop
           puts prop.config
           puts "\n\n"

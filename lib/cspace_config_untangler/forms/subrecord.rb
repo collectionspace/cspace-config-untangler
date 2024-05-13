@@ -21,6 +21,8 @@ module CspaceConfigUntangler
         @config = subrecform.dig("template", "props", "children", "props")
 
         super(form, validator, @config, parent)
+
+        @is_panel = true
       end
 
       def extension? = true
@@ -33,8 +35,6 @@ module CspaceConfigUntangler
       def panel
         subrec.dig("messages", "panel", config["name"], "id")
       end
-
-      def panel? = true
 
       private
 

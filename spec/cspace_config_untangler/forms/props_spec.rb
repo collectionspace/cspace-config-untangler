@@ -5,9 +5,8 @@ require "spec_helper"
 RSpec.describe CCU::Forms::Props do
   subject(:props) do
     iter = CCU::Forms::IterativeFieldExtractor.new(form, formconfig)
-
     iter.call
-    iter.send(:allprops).find { |p| p.name == name }
+    iter.send(:allprops).find { |p| p.name == name && !p.skippable? }
   end
 
   let(:release) { "8_0" }
@@ -23,7 +22,7 @@ RSpec.describe CCU::Forms::Props do
 
   describe "#address?" do
     let(:rectypes) { ["place"] }
-    let(:result) { props.address? }
+    let(:result) { props.send(:address?) }
 
     context "when address group list" do
       let(:name) { "addrGroupList" }
@@ -59,7 +58,7 @@ RSpec.describe CCU::Forms::Props do
   end
 
   describe "#children?" do
-    let(:result) { props.children? }
+    let(:result) { props.send(:children?) }
 
     context "with children" do
       let(:name) { "ethnoFileCodes" }
@@ -80,7 +79,7 @@ RSpec.describe CCU::Forms::Props do
 
   describe "#contact?" do
     let(:rectypes) { ["organization"] }
-    let(:result) { props.contact? }
+    let(:result) { props.send(:contact?) }
 
     context "when a contact" do
       let(:name) { "contact" }
@@ -108,7 +107,7 @@ RSpec.describe CCU::Forms::Props do
   end
 
   describe "#extension?" do
-    let(:result) { props.extension? }
+    let(:result) { props.send(:extension?) }
 
     context "when prop represents a form panel with same name as a profile "\
       "extension (anthro collectionobject locality)" do
@@ -138,7 +137,7 @@ RSpec.describe CCU::Forms::Props do
 
   describe "#measurement?" do
     let(:profilename) { "fcart" }
-    let(:result) { props.measurement? }
+    let(:result) { props.send(:measurement?) }
 
     context "when prop is measuredPartGroupList" do
       let(:name) { "measuredPartGroupList" }
@@ -312,11 +311,10 @@ RSpec.describe CCU::Forms::Props do
     end
   end
 
-  describe "#panel?" do
+  describe "#is_panel" do
     let(:rectypes) { ["acquisition"] }
     let(:result) do
-      puts "parent: #{props.parent.name}"
-      props.panel?
+      props.is_panel
     end
 
     context "when a panel" do
@@ -347,13 +345,35 @@ RSpec.describe CCU::Forms::Props do
   describe "#formatted_ui_path" do
     let(:result) { props.formatted_ui_path }
 
+    context "with normal repeatable field group field" do
+      let(:name) { "objectCount" }
+
+      it "returns path" do
+        expect(result).to eq("panel.collectionobject.id / "\
+                             "collectionobjects_common.objectCountGroupList / "\
+                             "collectionobjects_common.objectCountGroup")
+      end
+    end
+
     context "with array subpath overriding repeating field group" do
       let(:profilename) { "materials" }
       let(:name) { "objectCount" }
 
       it "returns path" do
-        expect(result).to eq("ns2:collectionobjects_common / "\
-                             "objectCountGroupList / objectCountGroup")
+        expect(result).to eq("panel.collectionobject.id")
+      end
+    end
+
+    context "with bad work date form element" do
+      let(:profilename) { "publicart" }
+      let(:rectypes) { ["work"] }
+      let(:name) { "workDateGroup" }
+
+      it "returns path" do
+        expect(result).to eq("panel.work.info / works_common.workDateGroupList")
+      end
+    end
+  end
       end
     end
   end

@@ -7,6 +7,7 @@ module CspaceConfigUntangler
     class Field
       include CCU::TrackAttributes
       attr_reader :profile, :rectype, :name, :ns, :ns_for_id, :panel, :ui_path,
+        :repeats, :in_repeating_group,
         :id, :to_csv
 
       def initialize(propsobj)
@@ -26,8 +27,9 @@ module CspaceConfigUntangler
                        "malformed namespace extracted for #{id}")
         end
         @ui_path = propsobj.ui_path
+        @repeats = propsobj.repeats
+        @in_repeating_group = propsobj.in_repeating_group
         @to_csv = format_csv
-        clean_up
       end
 
       def csv_header
@@ -41,6 +43,13 @@ module CspaceConfigUntangler
         h.delete(:@to_csv)
         h
       end
+
+      def to_s
+        parts = [profile, rectype, "#{form.name} form", id].compact.join(" / ")
+
+        "<##{self.class}:#{object_id.to_s(8)} #{parts}>"
+      end
+      alias_method :inspect, :to_s
 
       private
 
@@ -57,10 +66,6 @@ module CspaceConfigUntangler
         arr << (@id || "")
         arr << (@name || "")
         arr
-      end
-
-      def clean_up
-        @form = @form.name
       end
     end
   end
