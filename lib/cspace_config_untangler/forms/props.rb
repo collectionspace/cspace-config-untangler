@@ -15,12 +15,13 @@ module CspaceConfigUntangler
       attr_reader :form, :config, :parent, :ancestors,
         :keys, :rectype, :profile, :name, :is_panel, :panel,
         :ns, :ns_for_id, :ui_path,
+        :repeats, :in_repeating_group,
         :warnings, :errors
 
       # @param form [CCU::Forms::Form]
       # @param validator [CCU::Forms::PropsValidator]
       # @param config [Hash]
-      # @param parent [nil, ?]
+      # @param parent [nil, CCU::Forms::Props]
       def initialize(form, validator, config, parent = nil)
         @form = form
         @validator = validator
@@ -37,6 +38,8 @@ module CspaceConfigUntangler
         @ns = get_ns
         @ns_for_id = get_ns_for_id
         @ui_path = populate_ui_path
+        @repeats = get_repeats
+        @in_repeating_group = get_in_repeating_group
         @warnings = []
         @errors = []
         @validated = false
@@ -305,6 +308,16 @@ module CspaceConfigUntangler
       end
 
       def namespace_str?(val = subpath) = val.match?(NS_MATCHER)
+
+      def get_repeats
+        return "n" if field_array_subpath? && subpath[-1] == "0"
+
+        "y" if embedded_field?
+      end
+
+      def get_in_repeating_group
+        "n" if field_array_subpath? || embedded_field?
+      end
 
       # Prior to 6.1, the form output in the config included "workDate" as a
       # child under "workDateGroup", though "workDate" was not output as a

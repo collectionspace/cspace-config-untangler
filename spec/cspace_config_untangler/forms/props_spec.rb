@@ -374,6 +374,91 @@ RSpec.describe CCU::Forms::Props do
       end
     end
   end
+
+  describe "#repeats" do
+    let(:result) { props.repeats }
+
+    context "with materials profile" do
+      let(:profilename) { "materials" }
+
+      context "with field group overridden, single value constrained" do
+        let(:name) { "objectCount" }
+
+        it "returns n" do
+          expect(result).to eq("n")
+        end
+      end
+
+      context "with field group overridden" do
+        let(:name) { "material" }
+
+        it "returns y" do
+          expect(result).to eq("y")
+        end
+      end
+    end
+
+    context "with core profile" do
+      let(:profilename) { "core" }
+
+      context "with normal repeatable field group" do
+        let(:name) { "objectCount" }
+
+        it "returns nil" do
+          expect(result).to be_nil
+        end
+      end
+
+      context "with normal repeatable field group" do
+        let(:name) { "material" }
+
+        it "returns nil" do
+          expect(result).to be_nil
+        end
+      end
+    end
+  end
+
+  describe "#in_repeating_group" do
+    let(:result) { props.in_repeating_group }
+
+    context "with materials profile" do
+      let(:profilename) { "materials" }
+
+      context "with field group overridden, single value constrained" do
+        let(:name) { "objectCount" }
+
+        it "returns n" do
+          expect(result).to eq("n")
+        end
+      end
+
+      context "with field group overridden" do
+        let(:name) { "material" }
+
+        it "returns n" do
+          expect(result).to eq("n")
+        end
+      end
+    end
+
+    context "with core profile" do
+      let(:profilename) { "core" }
+
+      context "with normal repeatable field group" do
+        let(:name) { "objectCount" }
+
+        it "returns nil" do
+          expect(result).to be_nil
+        end
+      end
+
+      context "with normal repeatable field group" do
+        let(:name) { "material" }
+
+        it "returns nil" do
+          expect(result).to be_nil
+        end
       end
     end
   end
