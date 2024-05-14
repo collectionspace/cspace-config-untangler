@@ -44,10 +44,8 @@ module CspaceConfigUntangler
       end
 
       def to_s
-        "<##{self.class}:#{object_id.to_s(8)}\n"\
-          "  id: #{id}\n"\
-          "  disabled?: #{disabled?.inspect}\n"\
-          "  fields: #{fields.length}>"
+        "<##{self.class}:#{object_id.to_s(8)} #{id} form; "\
+          "disabled?: #{disabled?.inspect}; fields: #{fields.length}>"
       end
       alias_method :inspect, :to_s
 

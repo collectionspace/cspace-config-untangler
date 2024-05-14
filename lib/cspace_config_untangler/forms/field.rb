@@ -52,6 +52,8 @@ module CspaceConfigUntangler
 
       private
 
+      attr_reader :form
+
       def format_csv
         arr = [@profile, @rectype]
         if @ui_path
