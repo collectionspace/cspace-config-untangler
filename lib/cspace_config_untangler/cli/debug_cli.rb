@@ -89,13 +89,25 @@ module CspaceConfigUntangler
 
       desc "form_props_sigs",
         "Get all used props key signature patterns"
+      option :keys, desc: "Key signature to find", type: :array,
+        required: false, aliases: "-k"
+      option :selector, desc: "CCU::Forms::Props method used to "\
+        "select specific props.", aliases: "-s", type: :string, required: false
+      option :rejector, desc: "CCU::Forms::Props method used to "\
+        "reject specific props.", aliases: "-r", type: :string, required: false
+      option :count, desc: "Whether to print count of props following pattern",
+        aliases: "-c", type: :boolean, default: true, required: false
+      option :example, desc: "Whether to print examples", aliases: "-e",
+        type: :boolean, default: false, required: false
+      option :maxex, desc: "Maximum number of examples to print", aliases: "-m",
+        type: :numeric, default: 10, required: false
       option :rectype,
         desc: "Comma separated list (no spaces) of record types to include. "\
         "Defaults to all.",
         default: "all",
         aliases: "-r"
       def form_props_sigs
-        props = get_profiles.map do |profile|
+        all = get_profiles.map do |profile|
           p = CCU::Profile.new(profile:)
           p.rectypes
             .map(&:forms)
@@ -106,19 +118,36 @@ module CspaceConfigUntangler
             .map { |form| form.send(:iterator).send(:allprops) }
             .flatten
         end.flatten
-        # binding.pry
 
-        grouped = props.group_by { |prop| prop.config.keys.sort }
+        by_sig = if options[:keys]
+          all.select { |p| p.keys == options[:keys].sort }
+        else
+          all
+        end
+        selected = if options[:selector]
+          meth = options[:selector].to_sym
+          by_sig.select { |p| p.send(meth) }
+        else
+          by_sig
+        end
+        rejected = if options[:rejector]
+          selected.reject { |p| p.send(options[:rejector].to_sym) }
+        else
+          selected
+        end
+        grouped = rejected.group_by { |prop| prop.keys }
 
-        grouped.map { |subpath, arr| [subpath, arr.length] }
-          .sort_by { |subarr| subarr[1] }
-          .reverse
-          .to_h
-          .each { |val, ct| puts "#{ct}\t#{val.inspect}" }
-        grouped[%w[children name]].select(&:is_panel).first(10).each do |prop|
-          puts prop
-          puts prop.config
-          puts "\n\n"
+        grouped.sort_by { |keys, props| props.length }
+          .reverse_each do |keys, props|
+          puts "#{props.length}\t#{keys.inspect}" if options[:count]
+          if options[:example]
+            props.first(options[:maxex]).each do |prop|
+              puts prop
+              puts prop.config
+              puts "\n"
+            end
+            puts "\n\n"
+          end
         end
       end
 
