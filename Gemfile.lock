@@ -22,7 +22,7 @@ PATH
   specs:
     cspace_config_untangler (2.0.2)
       dry-configurable (~> 0.12)
-      facets (~> 3.1.0)
+      facets
       nokogiri
       thor
 
