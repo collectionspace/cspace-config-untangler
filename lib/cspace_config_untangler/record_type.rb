@@ -41,13 +41,7 @@ module CspaceConfigUntangler
       end
     end
 
-    def form_fields
-      all = []
-      @forms.each do |formname, form|
-        all << form.fields
-      end
-      all.flatten.uniq { |f| f.id }
-    end
+    def form_fields = all_form_fields.uniq
 
     def fields
       fields = form_fields.map { |ff| CCU::Fields::Field.new(self, ff) }
@@ -184,6 +178,8 @@ module CspaceConfigUntangler
     # @todo create a public method grouping on id and comparing fields
     #   that appear in multiple forms, to see if any are defined
     #   differently across forms
+    def all_form_fields = forms.values.map(&:fields).flatten
+
     # sets up "faux-required" fields for record types that do not have
     #   any required fields some unique ID field is required for batch
     #   import/processing
@@ -293,15 +289,17 @@ module CspaceConfigUntangler
     end
 
     def get_forms
-      if @config.dig("forms") && @name != "blob"
-        h = {}
-        @config["forms"].keys
-          .reject { |e| e == "mini" }
-          .each { |e| h[e] = CCU::Form.new(self, e) }
-        h
-      else
-        {}
-      end
+      formnames = config.dig("forms").keys
+      return {} unless formnames
+      return {} if name == "blob"
+
+      # Process the default form first
+      formnames.unshift("default") if formnames.include?("default")
+
+      formnames.uniq
+        .reject { |fn| fn == "mini" }
+        .map { |fn| [fn, CCU::Form.new(self, fn)] }
+        .to_h
     end
 
     def get_input_tables
