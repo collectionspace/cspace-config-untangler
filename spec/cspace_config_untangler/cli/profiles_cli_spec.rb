@@ -4,6 +4,8 @@ require "spec_helper"
 
 RSpec.describe CCU::Cli::ProfilesCli do
   before(:each) { set_profile_release("7_0") }
+  after(:each) { CCU.reset_config }
+
   describe "#all" do
     it "prints all known profiles to screen" do
       allow(subject.shell).to receive(:say)
@@ -40,11 +42,12 @@ RSpec.describe CCU::Cli::ProfilesCli do
           not in bonsai_5-0-0: 55
           source differences: 3
           ui path differences: 0
-          same: 772
+          same: 769
 
           Wrote detailed report to: #{outfile}
         MSG
       end
+
       it "writes csv file to given output directory" do
         allow(subject.shell).to receive(:say)
         subject.invoke(:compare, [], opts)
