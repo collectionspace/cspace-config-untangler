@@ -36,7 +36,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "rake"
   spec.add_development_dependency "rspec"
 
-  spec.add_runtime_dependency "dry-configurable", "~> 0.12"
+  spec.add_runtime_dependency "dry-configurable"
   spec.add_runtime_dependency "facets"
   spec.add_runtime_dependency "nokogiri"
   spec.add_runtime_dependency "thor"
