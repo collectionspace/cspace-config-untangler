@@ -46,6 +46,8 @@ module CspaceConfigUntangler
       CCU.releases[index + 1]
     end
 
+    def to_s = version || ""
+
     protected
 
     attr_reader :index

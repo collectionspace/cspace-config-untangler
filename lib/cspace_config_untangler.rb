@@ -142,7 +142,7 @@ module CspaceConfigUntangler
       app_dir,
       "data",
       "reference",
-      release
+      release.to_s
     )
   end
 
