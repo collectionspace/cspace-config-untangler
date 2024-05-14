@@ -19,9 +19,9 @@ module CspaceConfigUntangler
         @ns = form_field.ns
         @ns_for_id = form_field.ns_for_id
         @panel = form_field.panel
-        @ui_path = formatted_ui_path(form_field.ui_path)
         @id = form_field.id
         @label = lookup_display_name(@id)
+        @ui_path = formatted_ui_path(form_field.ui_path)
         merge_field_defs(form_field)
         @fid = "#{@profile.name} #{rectype.name} #{@ns_for_id} #{@name}"
       end
@@ -90,9 +90,14 @@ module CspaceConfigUntangler
         return [] unless orig
         return [] if orig.empty?
 
-        orig.compact
+        result = orig.compact
           .map { |segment| lookup_display_name(segment) }
           .compact
+        return result if result.empty?
+        return result unless result.last == label
+
+        result.pop
+        result
       end
 
       def expert_csv_row
