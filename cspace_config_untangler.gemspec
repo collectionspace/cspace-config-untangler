@@ -38,7 +38,7 @@ Gem::Specification.new do |spec|
 
   spec.add_runtime_dependency "dry-configurable", "~> 0.12"
   spec.add_runtime_dependency "facets", "~> 3.1.0"
-  spec.add_runtime_dependency "http", "~> 4.4.1"
+  spec.add_runtime_dependency "http"
   spec.add_runtime_dependency "nokogiri"
   spec.add_runtime_dependency "thor"
 end
