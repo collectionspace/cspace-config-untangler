@@ -203,7 +203,7 @@ RSpec.describe CCU::Forms::Props do
       let(:name) { "measuredPartGroupList" }
 
       it "returns correct ns" do
-        expect(result).to eq("ext.measurement")
+        expect(result).to eq("ext.dimension")
       end
     end
 
@@ -211,7 +211,7 @@ RSpec.describe CCU::Forms::Props do
       let(:name) { "dimensionSummary" }
 
       it "returns correct ns" do
-        expect(result).to eq("ext.measurement")
+        expect(result).to eq("ext.dimension")
       end
     end
 
@@ -329,7 +329,7 @@ RSpec.describe CCU::Forms::Props do
       let(:name) { "priceInformation" }
 
       it "returns falsey" do
-        expect(result).to be_falsey
+        expect(result).to be true
       end
     end
 

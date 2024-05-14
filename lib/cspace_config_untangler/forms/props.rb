@@ -33,7 +33,7 @@ module CspaceConfigUntangler
         @rectype = form.rectype
         @profile = rectype.profile
         @name = get_name
-        @is_panel = get_is_panel
+        @is_panel = rectype.panels.include?(name)
         @panel = get_panel
         @ns = get_ns
         @ns_for_id = get_ns_for_id
@@ -158,17 +158,12 @@ module CspaceConfigUntangler
         return "panel.#{rectype.name}.#{name}" if is_panel
         return parent.panel if parent
 
-        ""
-      end
-
-      def get_is_panel
-        return false if ancestors.any? { |ancestor| ancestor.is_panel }
-
-        rectype.panels.include?(name)
+        nil
       end
 
       def get_ns
         return subpath_ns if subpath_ns
+        return "ext.associatedAuthority" if name == "authorities"
         return parent.ns if parent
 
         rectype.ns
@@ -178,7 +173,7 @@ module CspaceConfigUntangler
         return parent.ns_for_id if parent&.ns_for_id &&
           parent.ns_for_id.start_with?("ext.")
 
-        return "ext.measurement" if measurement?
+        return "ext.dimension" if measurement?
         return "ext.address" if address? && !contact?
 
         return "ext.accessionattributes" if ns ==
