@@ -262,25 +262,6 @@ module CspaceConfigUntangler
         end
       end
 
-      def alt_fieldname_lookup(val)
-        fieldname = val.split(".").last
-        msgs = profile.messages
-          .select do |id, data|
-            id.start_with?("field.") && id.end_with?(".#{fieldname}")
-          end
-        return nil if msgs.empty?
-        return "multiple msg matches: #{val}" if msgs.length > 1
-
-        msgdata = msgs.first[1]
-        fullname = msgdata["fullName"]
-        return fullname if fullname
-
-        name = msgdata["name"]
-        return name if name
-
-        val
-      end
-
       def alt_panel_lookup(val)
         trunc_lookup = {}
         @profile.messages.select do |id, h|
@@ -294,6 +275,33 @@ module CspaceConfigUntangler
         if trunc_lookup.dig(trunc_val, "name")
           trunc_lookup[trunc_val]["name"]
         else
+          val
+        end
+      end
+
+      def alt_fieldname_lookup(val)
+        fieldname = val.split(".").last
+        msgs = profile.messages
+          .select do |id, data|
+            id.start_with?("field.") && id.end_with?(".#{fieldname}")
+          end
+
+        if msgs.empty?
+          CCU.log.error("FIELD MESSAGE LOOKUP: NO MESSAGE: "\
+                        "#{profile.name} #{rectype.name} #{id}")
+          nil
+        elsif msgs.length > 1
+          CCU.log.error("FIELD MESSAGE LOOKUP: MULTIPLE MESSAGES: "\
+                        "#{profile.name} #{rectype.name} #{id}")
+          "multiple msg matches: #{val}"
+        else
+          msgdata = msgs.first[1]
+          fullname = msgdata["fullName"]
+          return fullname if fullname
+
+          name = msgdata["name"]
+          return name if name
+
           val
         end
       end
