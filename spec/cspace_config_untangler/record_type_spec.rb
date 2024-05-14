@@ -159,8 +159,10 @@ RSpec.describe CCU::RecordType do
         end
         context "fieldname = reference" do
           let(:fieldname) { "reference" }
-          # does NOT change datacolumn values, as one field's use of multiple authorities
-          #  has already caused all datacolumn values to be different
+
+          # does NOT change datacolumn values, as one field's use of
+          #  multiple authorities has already caused all datacolumn
+          #  values to be different
           it "columnnames: reference referenceCitationLocal referenceCitationWorldcat" do
             expect(columns).to eq(%w[reference referenceCitationLocal
               referenceCitationWorldcat referenceRefname])

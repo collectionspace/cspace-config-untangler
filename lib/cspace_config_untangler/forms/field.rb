@@ -24,7 +24,7 @@ module CspaceConfigUntangler
         else
           @id = "#{profile} #{rectype} #{name}"
           CCU.log.error("FORM STRUCTURE: NAMESPACE EXTRACTION: missing or "\
-                       "malformed namespace extracted for #{id}")
+                        "malformed namespace extracted for #{id}")
         end
         @ui_path = propsobj.ui_path
         @repeats = propsobj.repeats
@@ -46,7 +46,6 @@ module CspaceConfigUntangler
 
       def to_s
         parts = [profile, rectype, "#{form.name} form", id].compact.join(" / ")
-
         "<##{self.class}:#{object_id.to_s(8)} #{parts}>"
       end
       alias_method :inspect, :to_s

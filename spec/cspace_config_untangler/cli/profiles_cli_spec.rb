@@ -121,9 +121,13 @@ RSpec.describe CCU::Cli::ProfilesCli do
   describe "#readable" do
     before(:each) do
       @testprofile = "test_1-1-1"
-      origstr = '
-{"allowDeleteHierarchyLeaves":false,"autocompleteFindDelay":500,"autocompleteMinLength":3,"basename":"/cspace/profile","className":"cspace-ui-plugin-profile-profile--common","container":"#cspace","defaultAdvancedSearchBooleanOp":"and","defaultDropdownFilter":"substring","defaultUserPrefs":{"panels":{"collectionobject":{"mediaSnapshotPanel":{"collapsed":false}}}},"index":"/search","locale":"en-US"}
-      '
+      origstr = '{"allowDeleteHierarchyLeaves":false,"autocompleteFindDelay"'\
+        ':500,"autocompleteMinLength":3,"basename":"/cspace/profile",'\
+        '"className":"cspace-ui-plugin-profile-profile--common","container":'\
+        '"#cspace","defaultAdvancedSearchBooleanOp":"and",'\
+        '"defaultDropdownFilter":"substring","defaultUserPrefs":{"panels":{'\
+        '"collectionobject":{"mediaSnapshotPanel":{"collapsed":false}}}},'\
+        '"index":"/search","locale":"en-US"}'
       @profilepath = "#{CCU.configdir}/#{@testprofile}.json"
       File.write(@profilepath, origstr)
     end
