@@ -6,9 +6,42 @@ require_relative "record_type"
 module CspaceConfigUntangler
   class Profile
     include CCU::ColumnNameStylable
-    attr_reader :name, :config, :authorities, :rectypes, :rectypes_all,
-      :extensions, :vocabularies, :panels, :form_fields, :field_defs, :messages, :structured_date_treatment
 
+    # @return [String] name of the profile
+    attr_reader :name
+
+    # @return [Hash] derived from JSON config for the profile
+    attr_reader :config
+
+    attr_reader :authorities
+
+    # @return [Array<CCU::RecordType>] selected/specified for processing
+    attr_reader :rectypes
+
+    # @return [Array<String>] all non-ignored record type names in profile
+    attr_reader :rectypes_all
+
+    # @return [Array<String>] names of extensions defined in the profile
+    attr_reader :extensions
+
+    # @return [Array<String>] names of vocabularies defined in the profile
+    attr_reader :vocabularies
+
+    attr_reader :panels
+    attr_reader :form_fields
+    attr_reader :field_defs
+
+    # @return [Hash] lookup by panel, inputTable, grouping, or field id
+    # @todo refactor to Message objects
+    attr_reader :messages
+
+    # @return [:collapse, :explode]
+    attr_reader :structured_date_treatment
+
+    # @param profile [String] profile name; must match a file in `data/configs`
+    #   directory, minus `.json` file extension
+    # @param rectypes [Array<String>] rectype names to include in processing
+    # @param structured_date_treatment [:explode, :collapse]
     def initialize(profile:, rectypes: [], structured_date_treatment: :explode)
       @name = profile
       @config = JSON.parse(File.read("#{CCU.configdir}/#{@name}.json"))

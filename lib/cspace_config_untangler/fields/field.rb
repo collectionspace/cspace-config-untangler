@@ -2,6 +2,8 @@
 
 module CspaceConfigUntangler
   module Fields
+    # Merges fields configuration field definition information into forms field
+    # information
     class Field
       attr_reader :name, :label, :ns, :ns_for_id, :panel, :ui_path, :id,
         :schema_path,
@@ -208,6 +210,7 @@ module CspaceConfigUntangler
         @required = fd.required
       end
 
+      # @todo Refactor this hideousness
       def lookup_display_name(val)
         return nil unless val
         return nil if val["not-mapped"]
