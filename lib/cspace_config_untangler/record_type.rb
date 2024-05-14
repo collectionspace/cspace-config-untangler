@@ -174,9 +174,10 @@ module CspaceConfigUntangler
       end
     end
 
-    def inspect
-      %(#<#{self.class}:#{object_id} profile: #{@profile.name}, name: #{@name}>)
+    def to_s
+      "<##{self.class}:#{object_id.to_s(8)} #{profile.name} name: #{name}>"
     end
+    alias_method :inspect, :to_s
 
     private
 
