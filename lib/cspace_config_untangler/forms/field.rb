@@ -6,6 +6,8 @@ module CspaceConfigUntangler
   module Forms
     class Field
       include CCU::TrackAttributes
+      include Comparable
+
       attr_reader :profile, :rectype, :name, :ns, :ns_for_id, :panel, :ui_path,
         :repeats, :in_repeating_group,
         :id, :to_csv
@@ -43,6 +45,14 @@ module CspaceConfigUntangler
         h.delete(:@to_csv)
         h
       end
+
+      def <=>(other) = id <=> other.id
+
+      def eql?(other)
+        self.class == other.class && self == other
+      end
+
+      def hash = id.hash
 
       def to_s
         parts = [profile, rectype, "#{form.name} form", id].compact.join(" / ")
