@@ -272,11 +272,12 @@ module CspaceConfigUntangler
       end
 
       def field_array_subpath?
-        subpath && subpath.is_a?(Array) && field? && namespace_str?(subpath[0])
+        subpath&.is_a?(Array) && field? && namespace_str?(subpath[0])
       end
 
+      # rubocop:disable Performance/InefficientHashSearch
+      # These usages of `keys.include?` are not on a Hash.
       def embedded_field?
-        # binding.pry if name == "material"
         keys.include?("embedded") &&
           config["embedded"] == true &&
           ancestors.any? do |anc|
@@ -284,6 +285,7 @@ module CspaceConfigUntangler
               anc.config["tabular"] == false
           end
       end
+      # rubocop:enable Performance/InefficientHashSearch
 
       def subpath_ns
         return nil unless subpath

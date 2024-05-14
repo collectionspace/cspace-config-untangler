@@ -20,7 +20,6 @@ module CspaceConfigUntangler
           @ns = @parent.config.namespace.literal
           @ns_for_id = @parent.config.namespace.for_id
           update_id_ns
-          #      binding.pry if @name == 'visualPreferencesList'
           @id = get_id
           get_message("name") if @id
           get_message("fullName") if @id
