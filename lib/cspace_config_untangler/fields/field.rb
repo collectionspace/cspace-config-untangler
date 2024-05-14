@@ -22,7 +22,7 @@ module CspaceConfigUntangler
         @ui_path = formatted_ui_path(form_field.ui_path)
         @id = form_field.id
         @label = lookup_display_name(@id)
-        merge_field_defs
+        merge_field_defs(form_field)
         @fid = "#{@profile.name} #{rectype.name} #{@ns_for_id} #{@name}"
       end
 
@@ -167,9 +167,9 @@ module CspaceConfigUntangler
         ui_path[1..].join(" > ")
       end
 
-      def merge_field_defs
+      def merge_field_defs(formfield)
         fd = find_field_def
-        merge_from_fd(fd) if fd
+        merge_from_fd(formfield, fd) if fd
       end
 
       def find_field_def
@@ -200,10 +200,11 @@ module CspaceConfigUntangler
         end
       end
 
-      def merge_from_fd(fd)
+      def merge_from_fd(formfield, fd)
         @schema_path = fd.schema_path
-        @repeats = fd.repeats
-        @in_repeating_group = fd.in_repeating_group
+        @repeats = formfield.repeats || fd.repeats
+        @in_repeating_group = formfield.in_repeating_group ||
+          fd.in_repeating_group
         @data_type = fd.data_type
         @value_source = fd.value_source
         @value_list = fd.value_list
