@@ -1,14 +1,13 @@
 # frozen_string_literal: true
 
-require 'csv'
+require "csv"
 
 module CspaceConfigUntangler
   module Report
     class XpathDepthCheck
-
       class << self
         def call
-          self.new.call
+          new.call
         end
       end
 
@@ -35,15 +34,17 @@ module CspaceConfigUntangler
       attr_reader :max, :allfields, :target
 
       def get_eligible_rows
-        allfields.select{ |row| !row["xml_path"].blank? &&
-          row["xml_path"].split(" > ").length > max }
+        allfields.select do |row|
+          !row["xml_path"].blank? &&
+            row["xml_path"].split(" > ").length > max
+        end
       end
 
       def write(eligible_rows)
-      headers = eligible_rows.first.headers
-        CSV.open(target, 'w') do |csv|
+        headers = eligible_rows.first.headers
+        CSV.open(target, "w") do |csv|
           csv << headers
-          eligible_rows.each{ |row| csv << row.values_at(*headers) }
+          eligible_rows.each { |row| csv << row.values_at(*headers) }
         end
 
         puts "Wrote #{target}"

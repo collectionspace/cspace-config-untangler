@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module CspaceConfigUntangler
   module RecordMapper
     class RecordMapping
@@ -18,7 +20,6 @@ module CspaceConfigUntangler
         append_subtype if @subtype
       end
 
-
       private
 
       def append_subtype
@@ -26,26 +27,36 @@ module CspaceConfigUntangler
         @hash[:config][:authority_subtype] = @subtype[:subtype]
       end
 
-
       def build_hash
         @hash[:config] = {}
         @hash[:config][:profile_basename] = @profile.basename
         @hash[:config][:version] = @profile.version
         @hash[:config][:recordtype] = @rectype.name
-        @hash[:config][:document_name] = @config.dig('recordTypes', @rectype.name, 'serviceConfig', 'documentName')
-        @hash[:config][:service_name] = @config.dig('recordTypes', @rectype.name, 'serviceConfig', 'serviceName')
-        @hash[:config][:service_path] = @config.dig('recordTypes', @rectype.name, 'serviceConfig', 'servicePath')
+        @hash[:config][:document_name] =
+          @config.dig("recordTypes", @rectype.name, "serviceConfig",
+            "documentName")
+        @hash[:config][:service_name] =
+          @config.dig("recordTypes", @rectype.name, "serviceConfig",
+            "serviceName")
+        @hash[:config][:service_path] =
+          @config.dig("recordTypes", @rectype.name, "serviceConfig",
+            "servicePath")
         @hash[:config][:service_type] = @rectype.service_type
-        @hash[:config][:object_name] = @config.dig('recordTypes', @rectype.name, 'serviceConfig', 'objectName')
+        @hash[:config][:object_name] =
+          @config.dig("recordTypes", @rectype.name, "serviceConfig",
+            "objectName")
         @hash[:config][:ns_uri] = NamespaceUris.new(profile_config: @config,
-                                                    rectype: @rectype.name,
-                                                    mapper_config: @hash[:config]).hash
+          rectype: @rectype.name,
+          mapper_config: @hash[:config]).hash
         @hash[:config][:identifier_field] = @rectype.id_field
         @hash[:config][:search_field] = @rectype.search_field
-        @hash[:config][:authority_subtypes] = @rectype.subtypes if @rectype.service_type == 'authority'
+        if @rectype.service_type == "authority"
+          @hash[:config][:authority_subtypes] =
+            @rectype.subtypes
+        end
         @hash[:docstructure] = {}
         create_hierarchy
-        @hash[:mappings] = @mappings.map{ |m| m.to_h }
+        @hash[:mappings] = @mappings.map { |m| m.to_h }
       end
 
       def create_hierarchy
@@ -59,7 +70,7 @@ module CspaceConfigUntangler
 
           levels = m.xpath.clone
           done = []
-          while levels.size > 0 do
+          while levels.size > 0
             thislevel = levels.shift
             path = done.clone << thislevel
             add_key = @hash[:docstructure][m.namespace].dig(*path) ? false : true

@@ -6,15 +6,15 @@ module CspaceConfigUntangler
     module Reportable
       include Comparable
 
-      def <=>(other_source)
-        name <=> other_source.name
+      def <=>(other)
+        name <=> other.name
       end
-      
+
       def fields_csv_label
-        return if source_type == 'na'
-        return if name == 'citation/shared'
-        
-        "#{source_type}: #{name}".sub('optionlist', 'option list')
+        return if source_type == "na"
+        return if name == "citation/shared"
+
+        "#{source_type}: #{name}".sub("optionlist", "option list")
       end
     end
   end

@@ -1,9 +1,9 @@
+# frozen_string_literal: true
+
 module CspaceConfigUntangler
   module JsonWritable
-      def to_json(data:, output: )
-        File.open(output, 'w') do |f|
-          f.write(JSON.pretty_generate(data))
-        end
-      end
+    def to_json(data:, output:)
+      File.write(output, JSON.pretty_generate(data))
+    end
   end
 end

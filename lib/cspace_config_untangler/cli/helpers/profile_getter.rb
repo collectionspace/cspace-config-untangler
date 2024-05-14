@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module CspaceConfigUntangler
   module Cli
     module Helpers
@@ -6,13 +8,13 @@ module CspaceConfigUntangler
           return [CCU.main_profile] unless opt_profiles
           return [CCU.main_profile] if opt_profiles.empty?
 
-          return self.all_profiles if opt_profiles == 'all'
+          return all_profiles if opt_profiles == "all"
 
-          profiles = opt_profiles.split(',').map(&:strip)
-          self.get(profiles)
+          profiles = opt_profiles.split(",").map(&:strip)
+          get(profiles)
         end
 
-        private
+        private_class_method
 
         def self.all_profiles
           [CCU.main_profile, CCU.profiles].compact.flatten.uniq
@@ -20,14 +22,14 @@ module CspaceConfigUntangler
 
         def self.get(profiles)
           acc = []
-          profiles.each{ |profile|
+          profiles.each do |profile|
             if all_profiles.include?(profile)
               acc << profile
             else
               puts "Unknown profile \"#{profile}\" will be ignored..."
             end
-          }
-          return acc.uniq
+          end
+          acc.uniq
         end
       end
     end

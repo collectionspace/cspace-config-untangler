@@ -1,5 +1,9 @@
+# frozen_string_literal: true
+
 module CspaceConfigUntangler
   module Fields
+    # Merges fields configuration field definition information into forms field
+    # information
     class Field
       attr_reader :name, :label, :ns, :ns_for_id, :panel, :ui_path, :id,
         :schema_path,
@@ -15,11 +19,10 @@ module CspaceConfigUntangler
         @ns = form_field.ns
         @ns_for_id = form_field.ns_for_id
         @panel = form_field.panel
-        @ui_path = formatted_ui_path(form_field.ui_path)
         @id = form_field.id
         @label = lookup_display_name(@id)
-        merge_field_defs
-        fix_museum_records if id == "places_nagpra.museumRecords"
+        @ui_path = formatted_ui_path(form_field.ui_path)
+        merge_field_defs(form_field)
         @fid = "#{@profile.name} #{rectype.name} #{@ns_for_id} #{@name}"
       end
 
@@ -87,9 +90,14 @@ module CspaceConfigUntangler
         return [] unless orig
         return [] if orig.empty?
 
-        orig.compact
+        result = orig.compact
           .map { |segment| lookup_display_name(segment) }
           .compact
+        return result if result.empty?
+        return result unless result.last == label
+
+        result.pop
+        result
       end
 
       def expert_csv_row
@@ -161,12 +169,12 @@ module CspaceConfigUntangler
       def get_ui_path
         return if ui_path.empty?
 
-        ui_path[1..-1].join(" > ")
+        ui_path[1..].join(" > ")
       end
 
-      def merge_field_defs
+      def merge_field_defs(formfield)
         fd = find_field_def
-        merge_from_fd(fd) if fd
+        merge_from_fd(formfield, fd) if fd
       end
 
       def find_field_def
@@ -176,7 +184,7 @@ module CspaceConfigUntangler
         elsif fd.length == 1
           fd.first
         else
-          fd.select { |f| f.ns == @ns }.first
+          fd.find { |f| f.ns == @ns }
         end
       end
 
@@ -193,20 +201,22 @@ module CspaceConfigUntangler
         elsif fd.length == 1
           fd.first
         else
-          fd.select { |f| f.ns == @ns }.first
+          fd.find { |f| f.ns == @ns }
         end
       end
 
-      def merge_from_fd(fd)
+      def merge_from_fd(formfield, fd)
         @schema_path = fd.schema_path
-        @repeats = fd.repeats
-        @in_repeating_group = fd.in_repeating_group
+        @repeats = formfield.repeats || fd.repeats
+        @in_repeating_group = formfield.in_repeating_group ||
+          fd.in_repeating_group
         @data_type = fd.data_type
         @value_source = fd.value_source
         @value_list = fd.value_list
         @required = fd.required
       end
 
+      # @todo Refactor this hideousness
       def lookup_display_name(val)
         return nil unless val
         return nil if val["not-mapped"]
@@ -228,15 +238,24 @@ module CspaceConfigUntangler
           elsif msgs.dig(fieldid, "name")
             msgs[fieldid]["name"]
           elsif val == "uoc_common.useDateHoursSpent"
-            CCU.warn_on_upgrade(binding.source_location, "DRYD-1269")
+            CCU.upgrade_warner.call(
+              target_version: "8_1",
+              issue: "DRYD-1269"
+            )
             alt_fieldname_lookup(val.sub("useDateHoursSpent", "hoursSpent"))
           elsif val == "collectionobjects_common.compressionStandard"
-            CCU.warn_on_upgrade(binding.source_location, "DRYD-1270")
+            CCU.upgrade_warner.call(
+              target_version: "8_1",
+              issue: "DRYD-1270"
+            )
             alt_fieldname_lookup(
               val.sub("compressionStandard", "compressionstandard")
             )
           elsif val == "conservation_common.sampleReturned"
-            CCU.warn_on_upgrade(binding.source_location, "DRYD-1271")
+            CCU.upgrade_warner.call(
+              target_version: "8_1",
+              issue: "DRYD-1271"
+            )
             msgs["field.conservation_common.sampleReturned.nadme"]["fullName"] ||
               msgs["field.conservation_common.sampleReturned.nadme"]["name"]
           elsif val.start_with?("conservation_livingplant")
@@ -248,33 +267,14 @@ module CspaceConfigUntangler
         end
       end
 
-      def alt_fieldname_lookup(val)
-        fieldname = val.split(".").last
-        msgs = profile.messages
-          .select do |id, data|
-            id.start_with?("field.") && id.end_with?(".#{fieldname}")
-          end
-        return nil if msgs.empty?
-        return "multiple msg matches: #{val}" if msgs.length > 1
-
-        msgdata = msgs.first[1]
-        fullname = msgdata["fullName"]
-        return fullname if fullname
-
-        name = msgdata["name"]
-        return name if name
-
-        val
-      end
-
       def alt_panel_lookup(val)
         trunc_lookup = {}
-        @profile.messages.select { |id, h|
+        @profile.messages.select do |id, h|
           id.start_with?("panel.")
-        }.each { |id, h|
+        end.each do |id, h|
           name = id.split(".").last
           trunc_lookup[name] = h
-        }
+        end
         trunc_val = val.split(".").last
 
         if trunc_lookup.dig(trunc_val, "name")
@@ -284,9 +284,31 @@ module CspaceConfigUntangler
         end
       end
 
-      def fix_museum_records
-        CCU.warn_on_upgrade(binding.source_location, "DRYD-1274")
-        @label = ui_path.pop
+      def alt_fieldname_lookup(val)
+        fieldname = val.split(".").last
+        msgs = profile.messages
+          .select do |id, data|
+            id.start_with?("field.") && id.end_with?(".#{fieldname}")
+          end
+
+        if msgs.empty?
+          CCU.log.error("FIELD MESSAGE LOOKUP: NO MESSAGE: "\
+                        "#{profile.name} #{rectype.name} #{id}")
+          nil
+        elsif msgs.length > 1
+          CCU.log.error("FIELD MESSAGE LOOKUP: MULTIPLE MESSAGES: "\
+                        "#{profile.name} #{rectype.name} #{id}")
+          "multiple msg matches: #{val}"
+        else
+          msgdata = msgs.first[1]
+          fullname = msgdata["fullName"]
+          return fullname if fullname
+
+          name = msgdata["name"]
+          return name if name
+
+          val
+        end
       end
     end
   end

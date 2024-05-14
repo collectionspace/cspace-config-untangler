@@ -1,14 +1,13 @@
 # frozen_string_literal: true
 
-require 'csv'
+require "csv"
 
 module CspaceConfigUntangler
   module Report
     class StructuredDateFieldsGenerator
-
       class << self
         def call(...)
-          self.new(...).call
+          new(...).call
         end
       end
 
@@ -21,14 +20,16 @@ module CspaceConfigUntangler
       end
 
       def call
-        res = source.select{ |row| row['data_type'] == 'structured date group' }
-          .map{ |row| simplify(row) }
+        res = source.select do |row|
+                row["data_type"] == "structured date group"
+              end
+          .map { |row| simplify(row) }
 
         headers = res.first.headers
 
-        CSV.open(target, 'w') do |csv|
+        CSV.open(target, "w") do |csv|
           csv << headers
-          res.each{ |row| csv << row.values_at(*headers) }
+          res.each { |row| csv << row.values_at(*headers) }
         end
 
         puts "Wrote #{target}"
@@ -45,10 +46,10 @@ module CspaceConfigUntangler
       end
 
       def simplify(row)
-        row.delete('data_type')
-        row.delete('option_list_values')
-        row.delete('required')
-        row.delete('data_source')
+        row.delete("data_type")
+        row.delete("option_list_values")
+        row.delete("required")
+        row.delete("data_source")
         row
       end
     end

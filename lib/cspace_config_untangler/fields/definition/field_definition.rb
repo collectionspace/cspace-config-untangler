@@ -101,9 +101,13 @@ module CspaceConfigUntangler
           return unless @value_source.empty?
 
           if type == "authority"
-            CCU.log.warn("DATA SOURCES: #{@config.namespace_signature} - #{@id} - Autocomplete defined with no configured source")
-            nil
+            CCU.log.warn(
+              "DATA SOURCES: #{@config.namespace_signature} - #{@id} - "\
+                "Autocomplete defined with no configured source"
+            )
           end
+
+          @value_source = [CCU::ValueSources::NoSource.new]
         end
 
         def set_datatype

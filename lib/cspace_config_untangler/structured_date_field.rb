@@ -1,8 +1,10 @@
-require_relative 'fields/field'
+# frozen_string_literal: true
+
+require_relative "fields/field"
 
 module CspaceConfigUntangler
   class StructuredDateField < CCU::Fields::Field
-  attr_reader :profile, :rectype, :name, :ns, :ns_for_id, :panel, :ui_path, :id,
+    attr_reader :profile, :rectype, :name, :ns, :ns_for_id, :panel, :ui_path, :id,
       :schema_path,
       :repeats, :in_repeating_group,
       :data_type, :value_source, :value_list,
@@ -12,7 +14,7 @@ module CspaceConfigUntangler
       @parent = structured_date_field_maker
       @profile = profile_obj
       @rectype = @parent.rectype
-      @name = field_id.sub('ext.structuredDate.', '')
+      @name = field_id.sub("ext.structuredDate.", "")
       @ns = @parent.ns
       @ns_for_id = @parent.ns_for_id
       @panel = @parent.panel
@@ -31,21 +33,20 @@ module CspaceConfigUntangler
     private
 
     def populate_value_data(fieldname)
-      return unless @profile.config.dig('extensions', 'structuredDate',
-                                        'fields', fieldname, '[config]')
+      return unless @profile.config.dig("extensions", "structuredDate",
+        "fields", fieldname, "[config]")
 
-      datahash = @profile.config.dig('extensions', 'structuredDate', 'fields',
-                                     fieldname, '[config]')
+      datahash = @profile.config.dig("extensions", "structuredDate", "fields",
+        fieldname, "[config]")
 
       type = CCU::Fields::ValueSources::TypeExtractor.call(datahash)
       return unless type
-
 
       @value_source = CCU::Fields::ValueSources::SourceExtractor.call(
         type, datahash, @profile
       )
 
-      if  @value_source.empty? && type == 'authority'
+      if @value_source.empty? && type == "authority"
         CCU.log.warn(
           "DATA SOURCES: #{@config.namespace_signature} - #{@id} - "\
             "Autocomplete defined with no source"
@@ -53,39 +54,39 @@ module CspaceConfigUntangler
         return
       end
 
-      if type == 'option list'
+      if type == "option list"
         @value_list = @value_source.first.options
-        return
+        nil
       end
     end
 
     def set_data_type(fieldname)
       h = {
-        'dateDisplayDate' => 'string',
-        'dateAssociation' => 'string',
-        'datePeriod' => 'string',
-        'dateNote' => 'string',
-        'dateEarliestSingleCertainty' => 'string',
-        'dateEarliestSingleDay' => 'integer',
-        'dateEarliestSingleEra' => 'string',
-        'dateEarliestSingleMonth' => 'integer',
-        'dateEarliestSingleQualifier' => 'string',
-        'dateEarliestSingleQualifierUnit' => 'string',
-        'dateEarliestSingleQualifierValue' => 'integer',
-        'dateEarliestSingleYear' => 'integer',
-        'dateLatestCertainty' => 'string',
-        'dateLatestDay' => 'integer',
-        'dateLatestEra' => 'string',
-        'dateLatestMonth' => 'integer',
-        'dateLatestQualifier' => 'string',
-        'dateLatestQualifierUnit' => 'string',
-        'dateLatestQualifierValue' => 'integer',
-        'dateLatestYear' => 'integer',
-        'dateEarliestScalarValue' => 'string',
-        'dateLatestScalarValue' => 'string',
-        'scalarValuesComputed' => 'boolean'
+        "dateDisplayDate" => "string",
+        "dateAssociation" => "string",
+        "datePeriod" => "string",
+        "dateNote" => "string",
+        "dateEarliestSingleCertainty" => "string",
+        "dateEarliestSingleDay" => "integer",
+        "dateEarliestSingleEra" => "string",
+        "dateEarliestSingleMonth" => "integer",
+        "dateEarliestSingleQualifier" => "string",
+        "dateEarliestSingleQualifierUnit" => "string",
+        "dateEarliestSingleQualifierValue" => "integer",
+        "dateEarliestSingleYear" => "integer",
+        "dateLatestCertainty" => "string",
+        "dateLatestDay" => "integer",
+        "dateLatestEra" => "string",
+        "dateLatestMonth" => "integer",
+        "dateLatestQualifier" => "string",
+        "dateLatestQualifierUnit" => "string",
+        "dateLatestQualifierValue" => "integer",
+        "dateLatestYear" => "integer",
+        "dateEarliestScalarValue" => "string",
+        "dateLatestScalarValue" => "string",
+        "scalarValuesComputed" => "boolean"
       }
-      return h[fieldname]
+      h[fieldname]
     end
-  end #class Field
-end #module
+  end # class Field
+end # module

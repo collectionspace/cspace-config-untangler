@@ -8,8 +8,8 @@ module CspaceConfigUntangler
 
       def initialize(name, list_config)
         @name = name
-        @options = list_config['values'].sort
-        @source_type = 'optionlist'
+        @options = list_config["values"].sort
+        @source_type = "optionlist"
         @type = source_type
         @subtype = nil
       end

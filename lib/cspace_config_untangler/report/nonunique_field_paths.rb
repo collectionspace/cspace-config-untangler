@@ -3,10 +3,9 @@
 module CspaceConfigUntangler
   module Report
     class NonuniqueFieldPaths
-
       class << self
         def call(...)
-          self.new(...).call
+          new(...).call
         end
       end
 
@@ -14,14 +13,14 @@ module CspaceConfigUntangler
       # @param mode [:stdout, :release]
       def initialize(profiles: nil, mode: :stdout)
         @profiles = CCU::Cli::Helpers::ProfileGetter.call(profiles)
-          .map{ |profile| CCU::Profile.new(profile: profile) }
+          .map { |profile| CCU::Profile.new(profile: profile) }
         @mode = mode
       end
 
       def call
-        result = profiles.map{ |profile| [profile, profile.nonunique_fields] }
+        result = profiles.map { |profile| [profile, profile.nonunique_fields] }
           .to_h
-          .reject{ |profile, info| info.empty? }
+          .reject { |profile, info| info.empty? }
         result.empty? ? output_empty : output(result)
       end
 

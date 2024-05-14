@@ -5,19 +5,18 @@ module CspaceConfigUntangler
     module ValueSources
       class TypeExtractor
         def self.call(field_hash)
-          case field_hash.dig('view', 'type')
-          when 'AutocompleteInput'
-            'authority'
-          when 'OptionPickerInput'
-            'option list'
-          when 'TermPickerInput'
-            'vocabulary'
+          case field_hash.dig("view", "type")
+          when "AutocompleteInput"
+            "authority"
+          when "OptionPickerInput"
+            "option list"
+          when "TermPickerInput"
+            "vocabulary"
           else
-            'no source'
+            "no source"
           end
         end
       end
     end
   end
 end
-

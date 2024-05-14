@@ -1,14 +1,16 @@
-require 'cspace_config_untangler/json_writable'
-require 'cspace_config_untangler/special_rectype'
+# frozen_string_literal: true
+
+require "cspace_config_untangler/json_writable"
+require "cspace_config_untangler/special_rectype"
 
 module CspaceConfigUntangler
   class ObjectHierarchy
     include CCU::JsonWritable
     include CCU::SpecialRectype
-    def initialize(profile: )
+    def initialize(profile:)
       @profile = profile
     end
-    
+
     def mapper
       {
         config: config,
@@ -18,13 +20,13 @@ module CspaceConfigUntangler
     end
 
     def name
-      'objecthierarchy'
+      "objecthierarchy"
     end
 
     private
-    
+
     def object_parent_types
-      @profile.config.dig('optionLists', 'objectParentTypes', 'values')
+      @profile.config.dig("optionLists", "objectParentTypes", "values")
     end
 
     def config
@@ -32,16 +34,16 @@ module CspaceConfigUntangler
         profile_basename: @profile.basename,
         version: @profile.version,
         recordtype: name,
-        document_name: 'relations',
-        service_name: 'Relations',
-        service_path: 'relations',
-        service_type: 'relation',
-        object_name: 'Object Hierarchy Relation',
+        document_name: "relations",
+        service_name: "Relations",
+        service_path: "relations",
+        service_type: "relation",
+        object_name: "Object Hierarchy Relation",
         ns_uri: {
-          relations_common: 'http://collectionspace.org/services/relation'
+          relations_common: "http://collectionspace.org/services/relation"
         },
-        identifier_field: 'subjectCsid',
-        search_field: 'objectNumber'
+        identifier_field: "subjectCsid",
+        search_field: "objectNumber"
       }
     end
 
@@ -61,61 +63,61 @@ module CspaceConfigUntangler
     def mappings
       [
         {
-          fieldname: 'subjectCsid',
-          transforms: { special: [:obj_num_to_csid] },
-          source_type: 'na',
+          fieldname: "subjectCsid",
+          transforms: {special: [:obj_num_to_csid]},
+          source_type: "na",
           source_name: nil,
-          namespace: 'relations_common',
+          namespace: "relations_common",
           xpath: [],
-          data_type: 'string',
-          repeats: 'n',
-          in_repeating_group: 'n',
+          data_type: "string",
+          repeats: "n",
+          in_repeating_group: "n",
           opt_list_values: [],
-          datacolumn: 'narrower_object_number',
-          required: 'y'
+          datacolumn: "narrower_object_number",
+          required: "y"
         },
         {
-          fieldname: 'relationshipType',
+          fieldname: "relationshipType",
           transforms: {},
-          source_type: 'na',
+          source_type: "na",
           source_name: nil,
-          namespace: 'relations_common',
+          namespace: "relations_common",
           xpath: [],
-          data_type: 'string',
-          repeats: 'n',
-          in_repeating_group: 'n',
+          data_type: "string",
+          repeats: "n",
+          in_repeating_group: "n",
           opt_list_values: [],
-          datacolumn: 'relationshiptype',
-          required: 'y',
+          datacolumn: "relationshiptype",
+          required: "y",
           to_template: false
         },
         {
-          fieldname: 'relationshipMetaType',
+          fieldname: "relationshipMetaType",
           transforms: {},
-          source_type: 'optionlist',
-          source_name: 'objectParentTypes',
-          namespace: 'relations_common',
+          source_type: "optionlist",
+          source_name: "objectParentTypes",
+          namespace: "relations_common",
           xpath: [],
-          data_type: 'string',
-          repeats: 'n',
-          in_repeating_group: 'n',
+          data_type: "string",
+          repeats: "n",
+          in_repeating_group: "n",
           opt_list_values: object_parent_types,
-          datacolumn: 'relationship_type',
-          required: 'n'
+          datacolumn: "relationship_type",
+          required: "n"
         },
         {
-          fieldname: 'objectCsid',
-          transforms: { special: [:obj_num_to_csid] },
-          source_type: 'na',
+          fieldname: "objectCsid",
+          transforms: {special: [:obj_num_to_csid]},
+          source_type: "na",
           source_name: nil,
-          namespace: 'relations_common',
+          namespace: "relations_common",
           xpath: [],
-          data_type: 'string',
-          repeats: 'n',
-          in_repeating_group: 'n',
+          data_type: "string",
+          repeats: "n",
+          in_repeating_group: "n",
           opt_list_values: [],
-          datacolumn: 'broader_object_number',
-          required: 'y'
+          datacolumn: "broader_object_number",
+          required: "y"
         }
       ]
     end

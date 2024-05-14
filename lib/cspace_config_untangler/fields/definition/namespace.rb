@@ -22,14 +22,14 @@ module CspaceConfigUntangler
 
         def id_namespace
           case literal
-          when 'ns2:collectionobjects_accessionuse'
-            'ext.accessionuse'
-          when 'ns2:propagations_common'
-            'ns2:propagation_common'
-          when 'ns2:conditionchecks_variablemedia'
-            'ext.technicalChanges'
-          when 'ns2:acquisitions_commission'
-            'ext.commission'
+          when "ns2:collectionobjects_accessionuse"
+            "ext.accessionuse"
+          when "ns2:propagations_common"
+            "ns2:propagation_common"
+          when "ns2:conditionchecks_variablemedia"
+            "ext.technicalChanges"
+          when "ns2:acquisitions_commission"
+            "ext.commission"
           else
             literal
           end

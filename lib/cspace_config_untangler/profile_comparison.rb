@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module CspaceConfigUntangler
   class ProfileComparison
     attr_reader :output
@@ -23,9 +25,9 @@ module CspaceConfigUntangler
       fields = diffed_fields
       headers = fields.first.keys
 
-      CSV.open(@output, "w", write_headers: true, headers: headers) { |csv|
+      CSV.open(@output, "w", write_headers: true, headers: headers) do |csv|
         fields.each { |f| csv << f.values_at(*headers) }
-      }
+      end
     end
 
     def summary
@@ -66,7 +68,7 @@ module CspaceConfigUntangler
     end
 
     def populate_diff
-      @combined.each { |id, hash|
+      @combined.each do |id, hash|
         if hash[0].nil? && hash[1]
           cat = "not in #{profilenames[0]}"
           diff[cat] << hash[1]
@@ -82,33 +84,33 @@ module CspaceConfigUntangler
         else
           diff["same"] << hash
         end
-      }
+      end
 
       diff
     end
 
     def combined_fields
       h = {}
-      @fields.each { |fhash|
-        fhash.keys.each { |k|
+      @fields.each do |fhash|
+        fhash.keys.each do |k|
           h[k] = {0 => nil, 1 => nil}
-        }
-      }
-      @fields.each_with_index { |fhash, i|
-        fhash.each { |path, f|
+        end
+      end
+      @fields.each_with_index do |fhash, i|
+        fhash.each do |path, f|
           h[path][i] = f
-        }
-      }
+        end
+      end
       h
     end
 
     # receives field_defs hash
     # returns has by rectype + schema path + name
     def by_path(field_arr)
-      field_arr.map { |f|
+      field_arr.map do |f|
         path = [f.rectype.name, f.schema_path, f.name].flatten
         [path, f]
-      }.to_h
+      end.to_h
     end
   end
 end
