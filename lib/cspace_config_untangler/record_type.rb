@@ -180,6 +180,9 @@ module CspaceConfigUntangler
 
     private
 
+    # @todo create a public method grouping on id and comparing fields
+    #   that appear in multiple forms, to see if any are defined
+    #   differently across forms
     # sets up "faux-required" fields for record types that do not have
     #   any required fields some unique ID field is required for batch
     #   import/processing

@@ -55,6 +55,7 @@ module CspaceConfigUntangler
 
       attr_reader :iterator
 
+      # @todo move to Props.skippable?
       def ignored?(field)
         # This logic loop prevents failure for of publicart work due to an
         # inconsistency in the config described at

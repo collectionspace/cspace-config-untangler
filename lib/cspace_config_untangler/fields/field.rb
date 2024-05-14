@@ -2,6 +2,8 @@
 
 module CspaceConfigUntangler
   module Fields
+    # Merges fields configuration field definition information into forms field
+    # information
     class Field
       attr_reader :name, :label, :ns, :ns_for_id, :panel, :ui_path, :id,
         :schema_path,
