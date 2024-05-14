@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require_relative "column_name_stylable"
+require_relative "record_type"
 
 module CspaceConfigUntangler
   class Profile
@@ -14,9 +15,8 @@ module CspaceConfigUntangler
       @messages = {}
       @extensions = get_extensions
       @structured_date_treatment = structured_date_treatment
-      @rectypes = [] # rectype objects to be processed/reported
-      @rectypes_all = [] # all rectype names for profile
-      get_rectypes(rectypes)
+      @rectypes_all = get_rectypes_all
+      @rectypes = get_rectypes(rectypes)
       @authorities = get_authorities
       @vocabularies = get_vocabularies
       @panels = get_panels
@@ -228,17 +228,18 @@ module CspaceConfigUntangler
       @messages[id] = {"name" => value, "fullName" => value}
     end
 
-    def get_rectypes(rectypes)
-      remove = %w[account all audit authrole authority batch batchinvocation
-        blob contact export idgenerator object procedure relation
-        report reportinvocation structureddates vocabulary]
-      @rectypes_all = @config["recordTypes"].keys - remove
+    def get_rectypes_all
+      config["recordTypes"].keys - CCU::RecordType::IGNORED
+    end
 
-      # if no rectypes are given, process all of them
-      # otherwise process only the ones passed in
-      @rectypes = rectypes.empty? ? @config["recordTypes"].keys - remove : rectypes - remove
-      @rectypes = @rectypes.select { |rt| @rectypes_all.include?(rt) }
-      @rectypes = @rectypes.map { |rt| CCU::RecordType.new(self, rt) }
+    def get_rectypes(rectypes)
+      types = if rectypes.empty?
+        rectypes_all
+      else
+        rectypes_all.intersection(rectypes)
+      end
+
+      types.map { |rt| CCU::RecordType.new(self, rt) }
     end
 
     def get_extensions

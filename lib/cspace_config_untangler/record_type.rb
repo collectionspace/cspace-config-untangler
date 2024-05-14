@@ -6,6 +6,12 @@ module CspaceConfigUntangler
   class RecordType
     include CCU::Iterable
 
+    # Names of record types we don't interact with as first-class data-layer
+    # entities, which are thus ignored by this application
+    IGNORED = %w[account all audit authrole authority batch batchinvocation
+      blob contact export idgenerator object procedure relation
+      report reportinvocation structureddates vocabulary]
+
     attr_reader :profile, :name, :label, :id, :config, :ns, :panels,
       :input_tables, :forms, :structured_date_treatment,
       :service_type, :subtypes, :record_search_field, :vocabularies
