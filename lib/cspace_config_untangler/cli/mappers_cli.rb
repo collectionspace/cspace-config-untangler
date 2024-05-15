@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# rubocop:disable Layout/LineLength
 require_relative "helpers"
 
 module CspaceConfigUntangler
@@ -12,20 +13,20 @@ module CspaceConfigUntangler
       long_desc <<~LONGDESC
         Usage:
         \x5  ccu mappers manifest
-        
+
         Options:
         \x5  -i, [--inputdir=INPUTDIR]    # Path to directory containing RecordMapper JSON files. Specify the path relative to #{CCU.mapperdir}
         \x5  -o, [--output=OUTPUT]        # Path to output file
         \x5                               # Default: /Users/kristina/code/cspace-config-untangler/data/mappers.json
         \x5  -r, [--recursive=RECURSIVE]  # y/n. Whether to traverse the inputdir recursively
         \x5                               # Default: y
-        
+
         Includes valid mappers in the given directory (recursively, as an option). Invalid mappers are excluded
-        
+
         The manifest is used by cspace-batch-import.
-        
+
         Assumes that all mappers will be found in `#{CCU.mapperdir}` (CCU.mapperdir) or subdirectories thereof. Base URI for raw files in this directory on Github in CCU.mapper_uri_base: #{CCU.mapper_uri_base}
-        
+
         These constants can be changed in `lib/cspace_config_untangler.rb` if necessary.
       LONGDESC
       option(:inputdir,
@@ -123,3 +124,4 @@ module CspaceConfigUntangler
     end
   end
 end
+# rubocop:enable Layout/LineLength

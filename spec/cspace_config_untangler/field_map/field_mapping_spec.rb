@@ -23,7 +23,8 @@ RSpec.describe CCU::FieldMap::FieldMapping do
         result = mappings.map { |m| m.source_type }
         expect(result).to eq(%w[authority authority refname])
       end
-      it "mappings datacolumns = contentConceptConceptAssociated contentConceptConceptMaterial" do
+      it "mappings datacolumns = contentConceptConceptAssociated "\
+        "contentConceptConceptMaterial" do
         result = mappings.map { |m| m.datacolumn }.sort
         expect(result).to eq(%w[contentConceptConceptAssociated
           contentConceptConceptMaterial contentConceptRefname])
@@ -44,10 +45,14 @@ RSpec.describe CCU::FieldMap::FieldMapping do
         result = mappings.map { |m| m.source_type }
         expect(result).to eq(%w[authority authority authority refname])
       end
-      it "mappings datacolumns = currentLocationLocationLocal currentLocationLocationOffsite currentLocationOrganizationLocal currentLocationRefname" do
+      it "mappings datacolumns = currentLocationLocationLocal "\
+        "currentLocationLocationOffsite currentLocationOrganizationLocal "\
+        "currentLocationRefname" do
         result = mappings.map { |m| m.datacolumn }.sort
-        expect(result).to eq(%w[currentLocationLocationLocal currentLocationLocationOffsite currentLocationOrganizationLocal
-          currentLocationRefname])
+        expect(result).to eq(
+          %w[currentLocationLocationLocal currentLocationLocationOffsite
+            currentLocationOrganizationLocal currentLocationRefname]
+        )
       end
 
       describe ".to_h" do

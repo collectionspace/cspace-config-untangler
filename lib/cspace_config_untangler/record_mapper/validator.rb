@@ -124,7 +124,8 @@ module CspaceConfigUntangler
           true
         else
           missing_ns.each do |mapping|
-            @errors << "Field mapping(s) for #{mapping["fieldname"]} lack(s) namespace"
+            @errors << "Field mapping(s) for #{mapping["fieldname"]} lack(s) "\
+              "namespace"
           end
           false
         end
@@ -143,7 +144,8 @@ module CspaceConfigUntangler
           true
         else
           not_ok.each do |mapping|
-            @errors << "Source type for #{mapping["fieldname"]} is not an option_list, vocabulary, or authority."
+            @errors << "Source type for #{mapping["fieldname"]} is not an "\
+              "option_list, vocabulary, or authority."
           end
           false
         end

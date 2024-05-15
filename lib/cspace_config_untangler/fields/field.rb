@@ -256,8 +256,8 @@ module CspaceConfigUntangler
               target_version: "8_1",
               issue: "DRYD-1271"
             )
-            msgs["field.conservation_common.sampleReturned.nadme"]["fullName"] ||
-              msgs["field.conservation_common.sampleReturned.nadme"]["name"]
+            base = "field.conservation_common.sampleReturned.nadme"
+            msgs[base]["fullName"] || msgs[base]["name"]
           elsif val.start_with?("conservation_livingplant")
             fixedval = val.sub("conservation_livingplant", "ext.livingplant")
             lookup_display_name(fixedval)

@@ -12,53 +12,71 @@ RSpec.describe CCU::Profile do
   let(:profile) { generator.profile }
 
   let(:core_rectypes) do
-    [
-      "acquisition", "citation", "collectionobject", "concept", "conditioncheck", "conservation", "exhibition",
-      "group", "intake", "loanin", "loanout", "location", "media", "movement", "objectexit", "organization",
-      "person", "place", "uoc", "valuation", "work"
-    ]
+    ["acquisition", "citation",
+      "collectionobject", "concept", "conditioncheck", "conservation",
+      "exhibition", "group", "intake", "loanin", "loanout", "location",
+      "media", "movement", "objectexit", "organization", "person",
+      "place", "uoc", "valuation", "work"]
   end
 
   let(:core_authorities) do
     %w[
-      citation/local citation/worldcat concept/activity concept/associated concept/material
-      concept/nomenclature concept/occasion location/local location/offsite organization/local
-      organization/ulan person/local person/ulan place/local place/tgn work/cona work/local
+      citation/local citation/worldcat concept/activity
+      concept/associated concept/material concept/nomenclature
+      concept/occasion location/local location/offsite
+      organization/local organization/ulan person/local person/ulan
+      place/local place/tgn work/cona work/local
     ]
   end
 
   let(:core_option_lists) do
     %w[
-      dimensions measurementUnits searchResultPagePageSizes searchPanelPageSizes booleans
-      yesNoValues dateQualifiers departments loanPurposes accountStatuses acquisitionMethods
-      citationTermStatuses ageUnits collections contentObjectTypes forms inscriptionTypes measuredParts
-      measurementMethods nameCurrencies nameLevels nameSystems nameTypes numberTypes objectComponentNames
-      objectStatuses ownershipAccessLevels ownershipCategories ownershipExchangeMethods phases positions
-      recordStatuses scripts sexes technicalAttributes technicalAttributeMeasurements
-      technicalAttributeMeasurementUnits titleTypes objectParentTypes objectChildTypes conceptTermStatuses
-      conceptTermTypes conceptHistoricalStatuses objectAuditCategories completenessLevels conditions
-      conservationTreatmentPriorities hazards conditionCheckMethods conditionCheckReasons salvagePriorityCodes
-      emailTypes telephoneNumberTypes faxNumberTypes webAddressTypes addressTypes addressCountries
-      exhibitionConsTreatmentStatuses exhibitionMountStatuses entryReasons locationTermTypes
-      locationTermStatuses mediaTypes locationFitnesses moveReasons moveMethods invActions invFreqs exitReasons
-      exitMethods orgTermTypes orgTermStatuses personTermStatuses personTermTypes salutations personTitles
-      genders placeTermTypes placeTermStatuses placeHistoricalStatuses placeTypes coordinateSystems
-      spatialRefSystems localityUnits geodeticDatums geoRefProtocols geoRefVerificationStatuses
+      dimensions measurementUnits searchResultPagePageSizes
+      searchPanelPageSizes booleans yesNoValues dateQualifiers
+      departments loanPurposes accountStatuses acquisitionMethods
+      citationTermStatuses ageUnits collections contentObjectTypes
+      forms inscriptionTypes measuredParts measurementMethods
+      nameCurrencies nameLevels nameSystems nameTypes numberTypes
+      objectComponentNames objectStatuses ownershipAccessLevels
+      ownershipCategories ownershipExchangeMethods phases positions
+      recordStatuses scripts sexes technicalAttributes
+      technicalAttributeMeasurements
+      technicalAttributeMeasurementUnits titleTypes objectParentTypes
+      objectChildTypes conceptTermStatuses conceptTermTypes
+      conceptHistoricalStatuses objectAuditCategories
+      completenessLevels conditions conservationTreatmentPriorities
+      hazards conditionCheckMethods conditionCheckReasons
+      salvagePriorityCodes emailTypes telephoneNumberTypes
+      faxNumberTypes webAddressTypes addressTypes addressCountries
+      exhibitionConsTreatmentStatuses exhibitionMountStatuses
+      entryReasons locationTermTypes locationTermStatuses mediaTypes
+      locationFitnesses moveReasons moveMethods invActions invFreqs
+      exitReasons exitMethods orgTermTypes orgTermStatuses
+      personTermStatuses personTermTypes salutations personTitles
+      genders placeTermTypes placeTermStatuses placeHistoricalStatuses
+      placeTypes coordinateSystems spatialRefSystems localityUnits
+      geodeticDatums geoRefProtocols geoRefVerificationStatuses
       reportMimeTypes valueTypes vocabTermStatuses workTermStatuses
     ].sort
   end
 
   let(:core_vocabs) do
     %w[
-      addresstype agentinfotype agequalifier citationtermflag citationtermtype collectionmethod
-      concepttermflag concepttype conditioncheckmethod conditioncheckreason conditionfitness
-      conservationstatus contactrole contactstatus currency datecertainty dateera datequalifier
-      deaccessionapprovalgroup deaccessionapprovalstatus disposalmethod entrymethod examinationphase
-      exhibitionpersonrole exhibitionreferencetype exhibitionstatus exhibitiontype inventorystatus
-      languages loanoutstatus locationtermflag locationtype organizationtype orgtermflag otherpartyrole
-      persontermflag persontermtype placetermflag publishto relationtypetype resourceidtype treatmentpurpose
-      uocauthorizationstatuses uoccollectiontypes uocmaterialtypes uocmethods uocprojectid uocstaffroles
-      uocsubcollections uocuserroles uocusertypes workcreatortype workpublishertype worktermflag worktype
+      addresstype agentinfotype agequalifier citationtermflag
+      citationtermtype collectionmethod concepttermflag concepttype
+      conditioncheckmethod conditioncheckreason conditionfitness
+      conservationstatus contactrole contactstatus currency
+      datecertainty dateera datequalifier deaccessionapprovalgroup
+      deaccessionapprovalstatus disposalmethod entrymethod
+      examinationphase exhibitionpersonrole exhibitionreferencetype
+      exhibitionstatus exhibitiontype inventorystatus languages
+      loanoutstatus locationtermflag locationtype organizationtype
+      orgtermflag otherpartyrole persontermflag persontermtype
+      placetermflag publishto relationtypetype resourceidtype
+      treatmentpurpose uocauthorizationstatuses uoccollectiontypes
+      uocmaterialtypes uocmethods uocprojectid uocstaffroles
+      uocsubcollections uocuserroles uocusertypes workcreatortype
+      workpublishertype worktermflag worktype
     ].sort
   end
 
@@ -145,8 +163,12 @@ RSpec.describe CCU::Profile do
     let(:rectypes) { ["conservation"] }
 
     describe "apply_overrides" do
-      it "gives living plant extension messages ext prefix instead of conservation_livingplant" do
-        expect(profile.messages.has_key?("field.ext.livingplant.pestOrDiseaseObserved")).to be true
+      it "gives living plant extension messages ext prefix instead of "\
+        "conservation_livingplant" do
+        expect(
+          profile.messages
+            .has_key?("field.ext.livingplant.pestOrDiseaseObserved")
+        ).to be true
       end
     end
 
@@ -219,14 +241,22 @@ RSpec.describe CCU::Profile do
     context "rectypes = work" do
       let(:rectypes) { ["work"] }
       it "returns authorityhierarchy" do
-        expect(profile.special_rectypes.map(&:name).sort).to eq(%w[authorityhierarchy])
+        expect(
+          profile.special_rectypes
+            .map(&:name)
+            .sort
+        ).to eq(%w[authorityhierarchy])
       end
     end
 
     context "rectypes = acquisition" do
       let(:rectypes) { ["acquisition"] }
       it "returns relationship" do
-        expect(profile.special_rectypes.map(&:name).sort).to eq(%w[nonhierarchicalrelationship])
+        expect(
+          profile.special_rectypes
+            .map(&:name)
+            .sort
+        ).to eq(%w[nonhierarchicalrelationship])
       end
     end
   end

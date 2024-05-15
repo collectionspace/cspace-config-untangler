@@ -154,7 +154,8 @@ module CspaceConfigUntangler
       desc "check_xpath_depth",
         "Reports fields with unusual xpath depth (i.e. not 0, 1, 2, 3, or 4)"
       option :rectype,
-        desc: "Comma separated list (no spaces) of record types to include. Defaults to all.", default: "all", aliases: "-r"
+        desc: "Comma separated list (no spaces) of record types to include. "\
+        "Defaults to all.", default: "all", aliases: "-r"
       def check_xpath_depth
         field_defs = []
         get_profiles.each do |profile|
@@ -178,7 +179,8 @@ module CspaceConfigUntangler
 
       desc "write_field_defs", "Write file containing field definition data"
       option :rectype,
-        desc: "Comma separated list (no spaces) of record types to include. Defaults to all.", default: "all", aliases: "-r"
+        desc: "Comma separated list (no spaces) of record types to include. "\
+        "Defaults to all.", default: "all", aliases: "-r"
       option :format, desc: "Output format: csv or json", default: "csv",
         aliases: "-f"
       option :output, desc: "Path to output file",
@@ -205,9 +207,9 @@ module CspaceConfigUntangler
             field_defs.each { |fd| csv << fd.to_csv }
           end
         when "json"
-          File.write(options[:output], JSON.pretty_generate(field_defs.map do |fd|
-                                                              fd.to_h
-                                                            end))
+          File.write(options[:output], JSON.pretty_generate(
+            field_defs.map { |fd| fd.to_h }
+          ))
         else
           puts "Format must be csv or json"
         end
@@ -215,7 +217,8 @@ module CspaceConfigUntangler
 
       desc "write_form_fields", "Write file containing form field data"
       option :rectype,
-        desc: "Comma separated list (no spaces) of record types to include. Defaults to all.", default: "all", aliases: "-r"
+        desc: "Comma separated list (no spaces) of record types to include. "\
+        "Defaults to all.", default: "all", aliases: "-r"
       option :format, desc: "Output format: csv or json", default: "csv",
         aliases: "-f"
       option :output, desc: "Path to output file",
@@ -243,9 +246,9 @@ module CspaceConfigUntangler
             form_fields.each { |ff| csv << ff.to_csv }
           end
         when "json"
-          File.write(options[:output], JSON.pretty_generate(form_fields.map do |ff|
-                                                              ff.to_h
-                                                            end))
+          File.write(options[:output], JSON.pretty_generate(
+            form_fields.map { |ff| ff.to_h }
+          ))
         else
           puts "Format must be csv or json"
         end

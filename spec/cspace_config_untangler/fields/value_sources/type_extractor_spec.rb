@@ -39,6 +39,7 @@ RSpec.describe CCU::Fields::ValueSources::TypeExtractor do
       end
     end
 
+    # rubocop:disable Layout/LineLength
     context "with TermPickerInput" do
       let(:hash) do
         {"defaultValue" =>
@@ -55,6 +56,7 @@ RSpec.describe CCU::Fields::ValueSources::TypeExtractor do
         expect(result).to eq("vocabulary")
       end
     end
+    # rubocop:enable Layout/LineLength
 
     context "with IDGeneratorInput" do
       let(:hash) do

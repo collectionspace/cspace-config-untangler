@@ -38,7 +38,9 @@ module CspaceConfigUntangler
         private
 
         def update_id_ns
-          @ns_for_id = "ext.#{@hash["extensionName"]}" if @hash.dig("extensionName")
+          @ns_for_id = "ext.#{@hash["extensionName"]}" if @hash.dig(
+            "extensionName"
+          )
           @ns_for_id = "ext.#{@hash["[config]"]["extensionName"]}" if @hash.dig(
             "[config]", "extensionName"
           )

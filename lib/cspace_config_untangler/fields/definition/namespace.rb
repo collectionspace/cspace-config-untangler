@@ -5,9 +5,10 @@ module CspaceConfigUntangler
     module Definition
       # little class to handle namespace logic
       #
-      # The namespaces used to define fields in the `document` section are not always the same
-      #   used in the field ids, so we need to keep the `literal` and `for_id` namespaces together
-      #   but separate
+      # The namespaces used to define fields in the `document` section
+      #   are not always the same used in the field ids, so we need to
+      #   keep the `literal` and `for_id` namespaces together but
+      #   separate
       class Namespace
         attr_reader :literal
         def initialize(namespace)

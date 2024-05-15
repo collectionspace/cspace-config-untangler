@@ -8,7 +8,10 @@ module CspaceConfigUntangler
       @profiles = profilearray.map do |p|
         CCU::Profile.new(profile: p, structured_date_treatment: :collapse)
       end
-      @output = "#{outputdir}/compare_#{profilenames[0]}_to_#{profilenames[1]}.csv"
+      @output = File.join(
+        outputdir,
+        "compare_#{profilenames[0]}_to_#{profilenames[1]}.csv"
+      )
       @fields = profiles.map { |profile| by_path(profile.fields) }
       @combined = combined_fields
       @diff = {

@@ -37,7 +37,8 @@ module CspaceConfigUntangler
 
         def csv_header
           %w[profile record_type namespace field_id field_name
-            schema_path required repeats group_repeats data_type data_source option_list_values]
+            schema_path required repeats group_repeats data_type data_source
+            option_list_values]
         end
 
         def rectype
@@ -53,7 +54,11 @@ module CspaceConfigUntangler
           arr << (@repeats || "")
           arr << (@in_repeating_group || "")
           arr << (@data_type || "")
-          @value_source ? arr << @value_source.map(&:fields_csv_label).compact.join(", ") : arr << ""
+          arr << if @value_source
+            @value_source.map(&:fields_csv_label).compact.join(", ")
+          else
+            ""
+          end
           arr << (@value_list ? @value_list.join(", ") : "")
           arr
         end
@@ -61,7 +66,8 @@ module CspaceConfigUntangler
         def inspect
           omit = %i[@config @profile @hash @parent @datahash @name @ns_for_id
             @value_source @value_list]
-          attributes = instance_variables.unshift([]).inject do |info, attribute|
+          attributes = instance_variables.unshift([])
+            .inject do |info, attribute|
             if omit.include?(attribute)
               info
             else
@@ -135,9 +141,11 @@ module CspaceConfigUntangler
         end
 
         def set_id
-          if @parent.is_a?(CCU::Fields::Def::Grouping) && @parent.is_structured_date?
+          if @parent.is_a?(CCU::Fields::Def::Grouping) &&
+              @parent.is_structured_date?
             @id = "ext.structuredDate.#{@name}"
-          elsif @parent.is_a?(CCU::Fields::Def::Grouping) && @parent.schema_path.include?("localityGroupList")
+          elsif @parent.is_a?(CCU::Fields::Def::Grouping) &&
+              @parent.schema_path.include?("localityGroupList")
             @id = "ext.locality.#{@name}"
           elsif @datahash.dig("extensionName")
             @id = "ext.structuredDate.#{@name}" if @datahash["extensionName"] == "structuredDate"

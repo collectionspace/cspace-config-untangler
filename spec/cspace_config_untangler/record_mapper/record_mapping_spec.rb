@@ -101,7 +101,8 @@ RSpec.describe CCU::RecordMapper::RecordMapping do
         it "identifier_field = shortIdentifier" do
           expect(config[:identifier_field]).to eq("shortIdentifier")
         end
-        it "[:authority_subtypes] returns array of hashes with keys: name, servicepathname" do
+        it "[:authority_subtypes] returns array of hashes with keys: name, "\
+          "servicepathname" do
           subtypes = config[:authority_subtypes]
           expected = [
             {name: "Local", subtype: "taxon"},

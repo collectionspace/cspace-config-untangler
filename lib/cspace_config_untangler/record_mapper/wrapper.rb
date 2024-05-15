@@ -27,9 +27,10 @@ module CspaceConfigUntangler
           {
             mapper: RecordMapping.new(profile: @profile, rectype: @rectype,
               subtype: subtype),
-            path: "#{@base_path}/#{@profile.name}_#{@rectype.name}-#{subtype[:name].downcase.tr(
-              " ", "-"
-            )}.json"
+            path: "#{@base_path}/"\
+              "#{@profile.name}_#{@rectype.name}-#{subtype[:name].downcase.tr(
+                " ", "-"
+              )}.json"
           }
         else
           {

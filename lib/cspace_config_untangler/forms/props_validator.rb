@@ -12,7 +12,8 @@ module CspaceConfigUntangler
       # Keys that may not be nil or empty if present
       CONTENT_KEYS = %w[children name props subpath].freeze
       EMPTY_KEYS = %w[key ref _owner].freeze
-      DISPLAY_KEYS = %w[collapsed collapsible defaultMessage embedded id label showDetachButton style
+      DISPLAY_KEYS = %w[collapsed collapsible defaultMessage embedded id label
+        showDetachButton style
         tabular type values].freeze
       KNOWN_KEYS = (CONTENT_KEYS + EMPTY_KEYS + DISPLAY_KEYS).freeze
 
@@ -67,13 +68,13 @@ module CspaceConfigUntangler
         props.keys
           .intersection(CONTENT_KEYS)
           .each do |key|
-          val = props.config[key]
-          next unless val.nil? || val.empty?
+            val = props.config[key]
+            next unless val.nil? || val.empty?
 
-          CCU.log.error("FORM STRUCTURE: EMPTY #{key.upcase}: "\
-                        "#{props.warning_id}")
-          props.add_error(:"empty_#{key}")
-        end
+            CCU.log.error("FORM STRUCTURE: EMPTY #{key.upcase}: "\
+                          "#{props.warning_id}")
+            props.add_error(:"empty_#{key}")
+          end
       end
 
       def check_assumed_empty_keys(props)
@@ -95,11 +96,4 @@ module CspaceConfigUntangler
       def formatted_key(props, key) = "#{props.warning_id} #{key}"
     end
   end
-
-  # showDetachButton profile-rectype-form: core_9-0-0 /media /default form / ns2:media_common / file / blob
 end
-
-# id
-# defaultMessage
-
-# return unless props.config.keys.include?('values')
