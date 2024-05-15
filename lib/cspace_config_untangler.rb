@@ -26,7 +26,6 @@ module CspaceConfigUntangler
 
   # Change these variables to reflect your desired directory structure and main
   # profile
-  default_datadir = "/Users/kristina/code/cs/untangler-cspace-config/data"
   default_main_profile_name = "core"
 
   # The publicly available web directory from which the CSV Importer will
@@ -77,6 +76,7 @@ module CspaceConfigUntangler
 
   # Do not mess with these. Control subdirectories within them by
   # passing in command output parameters as shown in the docs
+  default_datadir = File.join(app_dir, "data")
   default_configdir = File.join(default_datadir, "configs")
   default_templatedir = File.join(default_datadir, "templates")
   default_mapperdir = File.join(default_datadir, "mappers")
