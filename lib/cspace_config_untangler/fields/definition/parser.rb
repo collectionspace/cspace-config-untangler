@@ -6,16 +6,43 @@ require_relative "namespace_field_parser"
 module CspaceConfigUntangler
   module Fields
     module Definition
+      # Coordinates the extraction/gathering of all field definitions from
+      # recordTypes/{recordType}/fields/document
+      #
+      # The child keys at this level (for anthro collectionobject) are:
+      #
+      # - [config]
+      # - ns2:collectionspace_core
+      # - rel: relations-common-list
+      # - ns2:collectionobjects_annotation
+      # - ns2:collectionobjects_common
+      # - ns2:collectionobjects_anthro
+      # - ns2:collectionobjects_culturalcare
+      # - ns2:collectionobjects_nagpra
+      # - ns2:collectionobjects_naturalhistory_extension
+      #
+      # The overall namespace (@ns) is derived from:
+      # [config]/view/props/defaultChildSubpath
+      #
+      # Otherwise we call each of the children of this level a namespace,
+      # skip the skippable ones, and call {NamespaceFieldParser} on each.
       class Parser
-        attr_reader :rectype, :config, :field_defs
+        # @return [CspaceConfigUntangler::RecordType]
+        attr_reader :rectype
 
-        # Namespaces we do not extract fields from
+        # @return [Hash] from JSON config: recordtype/fields/document
+        attr_reader :config
+
+        # @return [Array<CCU::Fields::Def::FieldDefinition>]
+        attr_reader :field_defs
+
+        # Top-level children of the config that we do not extract fields from
         SKIPPABLE_NAMESPACES = ["[config]", "ns2:collectionspace_core",
           "rel:relations-common-list"]
 
         # @param rectypeobj [CspaceConfigUntangler::RecordType]
         # @param fields_config [Hash] from JSON config: record
-        #   type/fields/document/config
+        #   type/fields/document
         def initialize(rectypeobj, fields_config)
           @rectype = rectypeobj
           @config = fields_config
