@@ -61,7 +61,7 @@ module CspaceConfigUntangler
     "fcart" => "6-0-0",
     "herbarium" => "2-0-9",
     "lhmc" => "6-0-0",
-    "hku" => "",
+    "hku" => "1-0-0",
     "materials" => "3-2-0",
     "ohc" => "1-0-19",
     "omca" => "1-0-0-rc6",
