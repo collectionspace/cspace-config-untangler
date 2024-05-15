@@ -9,15 +9,19 @@ module CspaceConfigUntangler
           @config = config
         end
 
+        # @param hash [Hash]
+        # @return [:field, :structured_date, :group]
         def call(hash)
           return :field if field?(hash)
           return :structured_date if structured_date?(hash)
           return :group if group?(hash)
 
-          warn
+          warn(hash)
         end
 
         private
+
+        attr_reader :config
 
         def field?(hash)
           hash.keys == ["[config]"]
@@ -28,16 +32,22 @@ module CspaceConfigUntangler
         end
 
         def structured_date?(hash)
-          return true if hash.dig("[config]",
-            "dataType") == "DATA_TYPE_STRUCTURED_DATE"
-          return true if hash.dig("dateLatestDay")
-          false
+          true if hash.dig("[config]", "dataType") ==
+            "DATA_TYPE_STRUCTURED_DATE" ||
+            hash.dig("dateLatestDay")
         end
 
-        def warn
+        def warn(hash)
           prefix = "field definition structure".upcase
-          message = "Unexpected keys in"
-          CCU.log.warn("#{prefix}: #{message} #{@config.signature}")
+          name = hash.dig("[config]", "messages", "name", "defaultMessage")
+          message = if name
+            "Unexpected field defintion structure for "\
+              "#{config.signature} - #{name}"
+          else
+            "Unexpected field defintion structure under "\
+              "#{config.signature}"
+          end
+          CCU.log.warn("#{prefix}: #{message}")
         end
       end
     end
