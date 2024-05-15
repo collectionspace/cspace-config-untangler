@@ -8,7 +8,29 @@ module CspaceConfigUntangler
       # Parameter object used to pass around all the stuff needed to
       # create a field definition
       class Config
-        attr_reader :name, :namespace, :hash, :parser, :parent
+        # @return [String, nil]
+        attr_reader :name
+
+        # @return [CCU::Fields::Def::Namespace]
+        attr_reader :namespace
+
+        # @return [Hash]
+        attr_reader :hash
+
+        # @return [CCU::Fields::Def::Parser]
+        attr_reader :parser
+
+        # @return [CCU::Fields::Def::NamespaceFieldParser,
+        #   CCU::Fields::Def::Grouping]
+        attr_reader :parent
+
+        # @param rectype [CCU::RecordType]
+        # @param namespace [String]
+        # @param field_hash [Hash]
+        # @param parser [CCU::Fields::Def::Parser]
+        # @param name [String]
+        # @param parent [CCU::Fields::Def::NamespaceFieldParser,
+        #   CCU::Fields::Def::Grouping]
         def initialize(rectype:, namespace:, field_hash:, parser:, name: nil,
           parent: nil)
           @rectype = rectype

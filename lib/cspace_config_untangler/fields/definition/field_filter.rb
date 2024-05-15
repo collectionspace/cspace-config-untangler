@@ -7,6 +7,9 @@ module CspaceConfigUntangler
     module Definition
       # Ensures some fields do not get included in the resulting field
       # definitions
+      #
+      # @todo Another example of "single responsibility" taken a bit too
+      #   far. Refactor to be included in HashIterator or elsewhere
       class FieldFilter
         # List of fields to omit from resulting field definitions
         OMITTED_FIELDS = %w[csid inAuthority refName shortIdentifier]

@@ -10,6 +10,7 @@ module CspaceConfigUntangler
       #   keep the `literal` and `for_id` namespaces together but
       #   separate
       class Namespace
+        # @return [String]
         attr_reader :literal
         def initialize(namespace)
           @literal = namespace

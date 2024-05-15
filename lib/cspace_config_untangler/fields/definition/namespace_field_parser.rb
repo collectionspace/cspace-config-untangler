@@ -5,8 +5,19 @@ require_relative "hash_iterator"
 module CspaceConfigUntangler
   module Fields
     module Definition
+      # If the given {Config} is not for a blob or contact subrecord, does
+      # nothing except calling {HashIterator} on the {Config}. If it is a
+      # subrecord, replaces the Hash in {Config} with the subrecord-as-record
+      # type field definiton hash (from recordTypes/{subrecord}) and
+      # calls {HashIterator}
+      #
+      # @todo The existence of this as a separate class seems like an
+      # example of past-me taking "single responsibility principle" a
+      # little too literally. This is better handled in {Parser}.
       class NamespaceFieldParser
+        # @return [CCU::Fields::Definition::Config]
         attr_reader :config
+
         # @param config [CCU::Fields::Definition::Config]
         def initialize(config)
           @config = config

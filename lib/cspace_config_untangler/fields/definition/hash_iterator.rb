@@ -7,8 +7,13 @@ require_relative "hash_entry_typer"
 module CspaceConfigUntangler
   module Fields
     module Definition
+      # Takes a field definition {Config} (either representing namespace,
+      # field grouping, or field), along with its parent, and iterates
+      # through them to get all individual field definitions
       class HashIterator
         # @param config [CCU::Fields::Definition::Config]
+        # @param called_from [CCU::Fields::Definition::NamespaceFieldParser,
+        #   CCU::Fields::Definition::Grouping]
         def initialize(config, called_from)
           @config = config
           clean_config_hash

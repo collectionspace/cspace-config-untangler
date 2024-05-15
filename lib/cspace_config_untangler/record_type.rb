@@ -7,7 +7,16 @@ module CspaceConfigUntangler
     include CCU::Iterable
 
     # Names of record types we don't interact with as first-class data-layer
-    # entities, which are thus ignored by this application
+    # entities, which are thus ignored by this application.
+    #
+    # NOTE: we pull blob and contact in as subrecords where they are
+    # included as such, but we don't treat them as a record type that
+    # you can ingest on their own
+    #
+    # NOTE: object is the superclass of collectionobject and any other "object"
+    # record types that may be added in the future, like procedure is the
+    # superclass of all record types listed under procedures on the Create New
+    # page
     IGNORED = %w[account all audit authrole authority batch batchinvocation
       blob contact export idgenerator object procedure relation
       report reportinvocation structureddates vocabulary]
