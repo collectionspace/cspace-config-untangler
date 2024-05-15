@@ -18,6 +18,9 @@ jobs:
           bundler-cache: true
           ruby-version: ${{ matrix.ruby-version }}
 
+      - name: Do not run in deployment mode
+        run: bundle config unset deployment
+
       - name: Install dependencies
         run: bundle install
 
