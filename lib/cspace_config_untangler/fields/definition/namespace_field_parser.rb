@@ -21,22 +21,34 @@ module CspaceConfigUntangler
         # @param config [CCU::Fields::Definition::Config]
         def initialize(config)
           @config = config
+          @ns = config.namespace.literal
           update_subrecord_field_hash
           HashIterator.new(@config, self)
         end
 
-        def subrecord_config_hash(subrec_type, ns)
-          @config.profile_config.dig("recordTypes", subrec_type, "fields",
+        private
+
+        # @return [String]
+        attr_reader :ns
+
+        def subrecord_config_hash(subrec_type)
+          config.profile_config.dig("recordTypes", subrec_type, "fields",
             "document", ns)
         end
 
         def update_subrecord_field_hash
-          ns = @config.namespace.literal
+          return unless subrecord?
+
           if ns.start_with?("ns2:contacts_")
-            @config.update_field_hash(subrecord_config_hash("contact", ns))
+            config.update_field_hash(subrecord_config_hash("contact"))
           elsif ns == ("ns2:blobs_common")
-            @config.update_field_hash(subrecord_config_hash("blob", ns))
+            config.update_field_hash(subrecord_config_hash("blob"))
           end
+        end
+
+        def subrecord?
+          true if ns.start_with?("ns2:contacts_") ||
+            ns == "ns2:blobs_common"
         end
       end
     end

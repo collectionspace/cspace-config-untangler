@@ -46,7 +46,7 @@ module CspaceConfigUntangler
         def initialize(rectypeobj, fields_config)
           @rectype = rectypeobj
           @config = fields_config
-          @ns = @config["[config]"]["view"]["props"]["defaultChildSubpath"]
+          @ns = config["[config]"]["view"]["props"]["defaultChildSubpath"]
           @field_defs = []
           namespace_field_defs
         end
@@ -59,7 +59,7 @@ module CspaceConfigUntangler
         private
 
         def namespace_field_defs
-          @config.each do |namespace, ns_field_hash|
+          config.each do |namespace, ns_field_hash|
             next if SKIPPABLE_NAMESPACES.any?(namespace)
 
             namespace_field_config = CCU::Fields::Def::Config.new(
