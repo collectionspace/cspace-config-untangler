@@ -20,7 +20,8 @@ module CspaceConfigUntangler
     end
 
     def process_panel(panel)
-      # As of 2020-04-14, all key, ref, and _owner values at the panel level are nil
+      # As of 2020-04-14, all key, ref, and _owner values at the panel
+      # level are nil
       panel = panel["props"]
       panel_name = panel["name"]
       if panel_name == "contact"
@@ -54,8 +55,10 @@ module CspaceConfigUntangler
     end
 
     # form children have keys: key, ref, props, and _owner
-    # I'm proceeding based on the assumption that I only care about props because
-    #  the others are always nil
+    #
+    # I'm proceeding based on the assumption that I only care about
+    #  props because the others are always nil
+    #
     # This logs any non-nil values for key, ref, or _owner so I can inspect
     def report_non_nil_and_missing_keys(data)
       data.each do |h|

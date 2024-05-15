@@ -35,11 +35,13 @@ module CspaceConfigUntangler
       subcommand "forms", CCU::Cli::FormsCli
 
       desc "mappers SUBCOMMAND",
-        "Produce or work with JSON RecordMappers, as used by cspace-batch-import"
+        "Produce or work with JSON RecordMappers, as used by "\
+        "cspace-batch-import"
       subcommand "mappers", CCU::Cli::MappersCli
 
       desc "profiles SUBCOMMAND",
-        "Get info about and manipulate the profiles (i.e. CSpace application configs)"
+        "Get info about and manipulate the profiles (i.e. CSpace application "\
+        "configs)"
       subcommand "profiles", CCU::Cli::ProfilesCli
 
       desc "rectypes SUBCOMMAND", "Work with record types"
@@ -53,7 +55,9 @@ module CspaceConfigUntangler
       subcommand "templates", CCU::Cli::TemplatesCli
 
       class_option :profiles,
-        desc: 'Comma-separated list (NO SPACES) of non-main profiles you want to process. If not set, will run main profile only. If "all", will run all known profiles.',
+        desc: "Comma-separated list (NO SPACES) of non-main profiles you "\
+        "want to process. If not set, will run main profile only. If `all`, "\
+        "will run all known profiles.",
         type: "string",
         default: CCU.main_profile,
         aliases: "-p"

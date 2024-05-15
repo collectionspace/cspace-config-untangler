@@ -9,6 +9,7 @@ module CspaceConfigUntangler
     class NamespaceUris
       ::NamespaceUris = CspaceConfigUntangler::RecordMapper::NamespaceUris
 
+      # rubocop:disable Layout/LineLength
       WEIRD_NS_LOOKUP = {
         "ns2:collectionobjects_annotation" =>
           "http://collectionspace.org/services/collectionobject/domain/"\
@@ -39,6 +40,8 @@ module CspaceConfigUntangler
         "ns2:osteology_anthropology" =>
           "http://collectionspace.org/services/osteology/domain/anthropology"
       }
+      # rubocop:enable Layout/LineLength
+
       def initialize(profile_config:, rectype:, mapper_config:)
         @config = profile_config
         @rectype = rectype
@@ -49,7 +52,10 @@ module CspaceConfigUntangler
         hash = {}
         @config.dig("recordTypes", @rectype, "fields", "document").keys
           .select { |k| k.start_with?("ns2") }
-          .reject { |k| k == "ns2:collectionspace_core" || k == "ns2:account_permission" }
+          .reject do |k|
+          k == "ns2:collectionspace_core" ||
+            k == "ns2:account_permission"
+        end
           .each { |ns| hash[ns.sub("ns2:", "")] = uri(ns) }
         hash
       end
@@ -84,10 +90,11 @@ module CspaceConfigUntangler
             "http://collectionspace.org/services/#{object_name}"
           end
         when "ns2:#{@mconfig[:document_name]}_#{@mconfig[:profile_basename]}"
-          "http://collectionspace.org/services/#{object_name}/domain/#{@mconfig[:profile_basename]}"
+          ["http://collectionspace.org", "services", object_name, "domain",
+            @mconfig[:profile_basename]].join("/")
         else
-          result = @config.dig("recordTypes", @rectype, "fields", "document", ns,
-            "[config]", "service", "ns")
+          result = @config.dig("recordTypes", @rectype, "fields", "document",
+            ns, "[config]", "service", "ns")
 
           return result if result
 

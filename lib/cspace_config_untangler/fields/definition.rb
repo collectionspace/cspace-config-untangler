@@ -2,11 +2,11 @@
 
 module CspaceConfigUntangler
   module Fields
-    # Namespace for classes concerned with deriving field information from the rectype/fields section of JSON
-    #   UI config
+    # Namespace for classes concerned with deriving field information
+    #   from the rectype/fields section of JSON UI config
     #
-    # This information gets combined with information in the rectype/forms/default/template section of the JSON
-    #   UI config
+    # This information gets combined with information in the
+    #   rectype/forms/default/template section of the JSON UI config
     #   to create CCU::Fields::Field objects
     #
     # The information in a CCU::Fields::Definition::FieldDefinition include:

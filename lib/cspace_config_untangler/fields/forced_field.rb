@@ -4,9 +4,11 @@ require_relative "field"
 
 module CspaceConfigUntangler
   module Fields
-    # Provides a way to force a field external to the configs into Untangler output
-    # Initially used only to make CSV templates for Media record types include a mediaFileURI field
-    # See the `media_uri_field` private method in record_type.rb for how to set up field_hash parameter.
+    # Provides a way to force a field external to the configs into
+    # Untangler output Initially used only to make CSV templates for
+    # Media record types include a mediaFileURI field See the
+    # `media_uri_field` private method in record_type.rb for how to
+    # set up field_hash parameter.
     class ForcedField < Field
       def initialize(rectype_obj, field_hash)
         @rectype = rectype_obj

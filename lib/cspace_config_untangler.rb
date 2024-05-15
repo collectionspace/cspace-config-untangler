@@ -184,7 +184,8 @@ module CspaceConfigUntangler
     .select do |path|
       path.match?(/\.rb$/)
     end.each do |rbfile|
-      req_file = rbfile.delete_prefix("#{gem_agnostic_dir}/").delete_suffix(".rb")
+      req_file = rbfile.delete_prefix("#{gem_agnostic_dir}/")
+        .delete_suffix(".rb")
       require req_file
     end
 end

@@ -5,7 +5,8 @@ require_relative "namespace"
 module CspaceConfigUntangler
   module Fields
     module Definition
-      # Parameter object used to pass around all the stuff needed to create a field definition
+      # Parameter object used to pass around all the stuff needed to
+      # create a field definition
       class Config
         attr_reader :name, :namespace, :hash, :parser, :parent
         def initialize(rectype:, namespace:, field_hash:, parser:, name: nil,

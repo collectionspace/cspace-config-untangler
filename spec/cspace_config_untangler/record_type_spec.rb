@@ -95,9 +95,13 @@ RSpec.describe CCU::RecordType do
           expect(result).to be_a(Array)
         end
         it "includes all panel names for rectype" do
-          panels = ["id", "desc", "content", "textInscript", "nonTextInscript", "prod", "hist", "assoc", "owner",
-            "viewer", "reference", "collect", "hierarchy", "bio", "commingledRemains", "locality",
-            "culturalCare", "georefDetail", "nagpraCompliance"].sort
+          panels = [
+            "id", "desc", "content", "textInscript",
+            "nonTextInscript", "prod", "hist", "assoc", "owner",
+            "viewer", "reference", "collect", "hierarchy", "bio",
+            "commingledRemains", "locality", "culturalCare",
+            "georefDetail", "nagpraCompliance"
+          ].sort
           expect(result).to eq(panels)
         end
       end
@@ -113,8 +117,12 @@ RSpec.describe CCU::RecordType do
           expect(result).to be_a(Hash)
         end
         it "keys are the panel names for rectype" do
-          panels = ["age", "assocEvent", "ownershipExchange", "behrensmeyer", "depth", "elevation",
-            "distanceAboveSurface", "nagpraReportFiled", "taxonName", "taxonIdent", "taxonReference"].sort
+          panels = [
+            "age", "assocEvent", "ownershipExchange", "behrensmeyer",
+            "depth", "elevation", "distanceAboveSurface",
+            "nagpraReportFiled", "taxonName", "taxonIdent",
+            "taxonReference"
+          ].sort
           expect(result.keys.sort).to eq(panels)
         end
       end
@@ -163,7 +171,8 @@ RSpec.describe CCU::RecordType do
           # does NOT change datacolumn values, as one field's use of
           #  multiple authorities has already caused all datacolumn
           #  values to be different
-          it "columnnames: reference referenceCitationLocal referenceCitationWorldcat" do
+          it "columnnames: reference referenceCitationLocal "\
+            "referenceCitationWorldcat" do
             expect(columns).to eq(%w[reference referenceCitationLocal
               referenceCitationWorldcat referenceRefname])
           end

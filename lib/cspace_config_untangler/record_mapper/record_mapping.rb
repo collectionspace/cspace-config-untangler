@@ -73,9 +73,17 @@ module CspaceConfigUntangler
           while levels.size > 0
             thislevel = levels.shift
             path = done.clone << thislevel
-            add_key = @hash[:docstructure][m.namespace].dig(*path) ? false : true
+            add_key = if @hash[:docstructure][m.namespace].dig(*path)
+              false
+            else
+              true
+            end
             if add_key
-              add_path = done.empty? ? @hash[:docstructure][m.namespace] : @hash[:docstructure][m.namespace].dig(*done)
+              add_path = if done.empty?
+                @hash[:docstructure][m.namespace]
+              else
+                @hash[:docstructure][m.namespace].dig(*done)
+              end
               add_path[thislevel] = {}
             end
             done << thislevel

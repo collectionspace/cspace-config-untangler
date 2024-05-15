@@ -4,8 +4,8 @@ require_relative "fields/field"
 
 module CspaceConfigUntangler
   class StructuredDateField < CCU::Fields::Field
-    attr_reader :profile, :rectype, :name, :ns, :ns_for_id, :panel, :ui_path, :id,
-      :schema_path,
+    attr_reader :profile, :rectype, :name, :ns, :ns_for_id, :panel, :ui_path,
+      :id, :schema_path,
       :repeats, :in_repeating_group,
       :data_type, :value_source, :value_list,
       :required

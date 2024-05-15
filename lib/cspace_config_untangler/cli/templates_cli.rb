@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# rubocop:disable Layout/LineLength
 require_relative "helpers"
 
 module CspaceConfigUntangler
@@ -12,7 +13,7 @@ module CspaceConfigUntangler
       long_desc <<-LONGDESC
     Using type = displayname creates templates assuming users want to enter human-readable name strings in the CSV. For fields populated from more than one authority or vocabulary, the template contains a separate column per term source.
 
-    Using type = refname creates templates assuming users will enter CollectionSpace refnames in their CSV. One column is output per CollectionSpace field, regardless of how many authorities can be used to populate that field. 
+    Using type = refname creates templates assuming users will enter CollectionSpace refnames in their CSV. One column is output per CollectionSpace field, regardless of how many authorities can be used to populate that field.
       LONGDESC
       option :rectypes,
         desc: "Comma-delimited (no spaces) list of record types to create templates for; if blank, will process all record types in profile", default: "", aliases: "-r"
@@ -66,3 +67,4 @@ module CspaceConfigUntangler
     end
   end
 end
+# rubocop:enable Layout/LineLength

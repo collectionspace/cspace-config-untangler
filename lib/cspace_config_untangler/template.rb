@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# rubocop:disable Layout/LineLength
 module CspaceConfigUntangler
   module Template
     class CsvTemplate
@@ -90,4 +91,5 @@ module CspaceConfigUntangler
       end
     end
   end
-end # module
+end
+# rubocop:enable Layout/LineLength
