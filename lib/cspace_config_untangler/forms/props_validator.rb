@@ -8,6 +8,8 @@ module CspaceConfigUntangler
     # This will hopefully alert us of any changes to patterns that need to
     # be handled in the config, instead of there just being errors somewhere
     # in the processing
+    #
+    # @todo add more validations
     class PropsValidator
       # Keys that may not be nil or empty if present
       CONTENT_KEYS = %w[children name props subpath].freeze
