@@ -7,22 +7,17 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        ruby-version: ['3.1']
+        ruby: ['3.1']
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Set up Ruby ${{ matrix.ruby-version }}
+      - name: Set up Ruby ${{ matrix.ruby }}
         uses: ruby/setup-ruby@v1
         with:
+          ruby-version: ${{ matrix.ruby }}
           bundler-cache: true
-          ruby-version: ${{ matrix.ruby-version }}
-
-      - name: Do not run in deployment mode
-        run: bundle config unset deployment
-
-      - name: Install dependencies
-        run: bundle install
+          cache-version: 2
 
       - name: Lint
         run: |
