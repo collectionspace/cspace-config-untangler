@@ -31,6 +31,10 @@ module CspaceConfigUntangler
           @config.namespace.literal
         end
 
+        def parse_fields
+          @config.hash.each { |name, data| parse_field(name, data) }
+        end
+
         def parse_field(name, data)
           type = @typer.call(data)
           return unless type
@@ -42,10 +46,6 @@ module CspaceConfigUntangler
           elsif type == :group
             Grouping.new(config)
           end
-        end
-
-        def parse_fields
-          @config.hash.each { |name, data| parse_field(name, data) }
         end
       end
     end
