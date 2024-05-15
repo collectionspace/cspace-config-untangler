@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require_relative "../upgrade_warner"
+
 module CspaceConfigUntangler
   module Fields
     # Merges fields configuration field definition information into forms field
