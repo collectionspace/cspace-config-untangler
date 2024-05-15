@@ -86,6 +86,11 @@ module CspaceConfigUntangler
         def update_field_hash(hash)
           @hash = CCU.safe_copy(hash)
         end
+
+        def to_s
+          "<##{self.class}:#{object_id.to_s(8)} #{signature}>"
+        end
+        alias_method :inspect, :to_s
       end
     end
   end
