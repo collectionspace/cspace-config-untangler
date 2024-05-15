@@ -163,7 +163,6 @@ module CspaceConfigUntangler
 
       def get_ns
         return subpath_ns if subpath_ns
-        return "ext.associatedAuthority" if name == "authorities"
         return parent.ns if parent
 
         rectype.ns
@@ -172,7 +171,7 @@ module CspaceConfigUntangler
       def get_ns_for_id
         return parent.ns_for_id if parent&.ns_for_id &&
           parent.ns_for_id.start_with?("ext.")
-
+        return "ext.associatedAuthority" if name == "authorities"
         return "ext.dimension" if measurement?
         return "ext.address" if address? && !contact?
 
