@@ -53,7 +53,7 @@ module CspaceConfigUntangler
       fields
     end
 
-    def has_form?(formname) = forms.keys.include?(formname)
+    def has_form?(formname) = forms.key?(formname)
 
     def explode_structured_date_fields(fields)
       sd_fields = fields.select { |f| f.structured_date? }

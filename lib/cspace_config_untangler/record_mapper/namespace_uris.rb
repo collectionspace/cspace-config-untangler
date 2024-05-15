@@ -76,7 +76,9 @@ module CspaceConfigUntangler
       end
 
       def object_name
-        @mconfig[:object_name].downcase unless @mconfig[:service_type] == "authority"
+        return if @mconfig[:service_type] == "authority"
+
+        @mconfig[:object_name].downcase
       end
 
       def uri(ns)

@@ -3,6 +3,7 @@
 require_relative "field_config_child"
 require_relative "../value_sources/type_extractor"
 require_relative "../../track_attributes"
+require_relative "../../upgrade_warner"
 
 module CspaceConfigUntangler
   module Fields
@@ -148,13 +149,21 @@ module CspaceConfigUntangler
               @parent.schema_path.include?("localityGroupList")
             @id = "ext.locality.#{@name}"
           elsif @datahash.dig("extensionName")
-            @id = "ext.structuredDate.#{@name}" if @datahash["extensionName"] == "structuredDate"
-            @id = "ext.dimension.#{@name}" if @datahash["extensionName"] == "dimension"
-            @id = "ext.address.#{@name}" if @datahash["extensionName"] == "address"
-            @id = "ext.locality.#{@name}" if @datahash["extensionName"] == "locality"
-            # handles weirdness described at:
-            #  https://collectionspace.atlassian.net/browse/DRYD-863
+            @id = case @datahash["extensionName"]
+            when "structuredDate"
+              "ext.structuredDate.#{@name}"
+            when "dimension"
+              "ext.dimension.#{@name}"
+            when "address"
+              "ext.address.#{@name}"
+            when "locality"
+              "ext.locality.#{@name}"
+            end
           elsif @id == "approvalGroupField.approvalGroup"
+            CCU.upgrade_warner.call(
+              target_version: "8_1",
+              issue: "DRYD-863"
+            )
             @id = "#{@ns.sub("ns2:", "")}.approvalGroup"
           else
             @id = "#{@ns_for_id.sub("ns2:", "")}.#{@name}"
