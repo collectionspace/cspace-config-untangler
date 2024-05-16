@@ -9,22 +9,12 @@ module CspaceConfigUntangler
 
       desc "check_xpath_depth",
         "Reports fields with unusual xpath depth (i.e. not 0, 1, 2, 3, or 4)"
-      option :rectype,
-        desc: "Comma separated list (no spaces) of record types to include. "\
-        "Defaults to all.", default: "all", aliases: "-r"
       def check_xpath_depth
-        field_defs = []
-        get_profiles.each do |profile|
-          p = CCU::Profile.new(profile:)
-          rts = if options[:rectype] == "all"
-            p.rectypes.map { |rt| rt.name }
-          else
-            options[:rectype].split(",").map { |e| e.strip }
-          end
-          p.field_defs.each do |_id, arr|
-            arr.each { |fd| field_defs << fd if rts.include?(fd.rectype) }
-          end
-        end
+        field_defs = get_profiles.map do |profile|
+          CCU::Profile.new(profile: profile, rectypes: parse_rectypes)
+            .field_defs
+            .values
+        end.flatten
 
         known_depths = [0, 1, 2, 3, 4]
         odd_depths = field_defs.reject do |fd|
@@ -34,26 +24,17 @@ module CspaceConfigUntangler
       end
 
       desc "write_field_defs", "Write file containing field definition data"
-      option :rectype,
-        desc: "Comma separated list (no spaces) of record types to include. "\
-        "Defaults to all.", default: "all", aliases: "-r"
       option :format, desc: "Output format: csv or json", default: "csv",
         aliases: "-f"
       option :output, desc: "Path to output file",
         default: "data/field_definitions.csv", aliases: "-o"
       def write_field_defs
-        field_defs = []
-        get_profiles.each do |profile|
-          p = CCU::Profile.new(profile:)
-          rts = if options[:rectype] == "all"
-            p.rectypes.map { |rt| rt.name }
-          else
-            options[:rectype].split(",").map { |e| e.strip }
-          end
-          p.field_defs.each do |_id, arr|
-            arr.each { |fd| field_defs << fd if rts.include?(fd.rectype) }
-          end
-        end
+        field_defs = get_profiles.map do |profile|
+          CCU::Profile.new(profile: profile, rectypes: parse_rectypes)
+            .field_defs
+            .values
+        end.flatten
+
         return if field_defs.empty?
 
         case options[:format]
@@ -72,26 +53,15 @@ module CspaceConfigUntangler
       end
 
       desc "write_form_fields", "Write file containing form field data"
-      option :rectype,
-        desc: "Comma separated list (no spaces) of record types to include. "\
-        "Defaults to all.", default: "all", aliases: "-r"
       option :format, desc: "Output format: csv or json", default: "csv",
         aliases: "-f"
       option :output, desc: "Path to output file",
         default: "data/form_fields.csv", aliases: "-o"
       def write_form_fields
-        form_fields = []
-        get_profiles.each do |profile|
-          p = CCU::Profile.new(profile:)
-          rts = if options[:rectype] == "all"
-            p.rectypes.map { |rt| rt.name }
-          else
-            options[:rectype].split(",").map { |e| e.strip }
-          end
-          p.form_fields.each do |ff|
-            form_fields << ff if rts.include?(ff.rectype)
-          end
-        end
+        form_fields = get_profiles.map do |profile|
+          CCU::Profile.new(profile: profile, rectypes: parse_rectypes)
+            .form_fields
+        end.flatten
 
         return if form_fields.empty?
 

@@ -15,8 +15,6 @@ module CspaceConfigUntangler
 
     Using type = refname creates templates assuming users will enter CollectionSpace refnames in their CSV. One column is output per CollectionSpace field, regardless of how many authorities can be used to populate that field.
       LONGDESC
-      option :rectypes,
-        desc: "Comma-delimited (no spaces) list of record types to create templates for; if blank, will process all record types in profile", default: "", aliases: "-r"
       option :outputdir,
         desc: "Path to output directory. File name will be: profile-rectype_template.csv", default: "data/templates", aliases: "-o"
       option :subdirs,
@@ -29,7 +27,6 @@ module CspaceConfigUntangler
           exit
         end
 
-        @rectypes = options[:rectypes].split(",").map(&:strip)
         @subdirs = options[:subdirs] == "y"
         @outdir = options[:outputdir]
         @types = (options[:type] == "both") ? %w[displayname
@@ -37,7 +34,7 @@ module CspaceConfigUntangler
 
         get_profiles.each do |profile|
           puts "Writing templates for #{profile}..."
-          profile = CCU::Profile.new(profile: profile, rectypes: @rectypes,
+          profile = CCU::Profile.new(profile: profile, rectypes: parse_rectypes,
             structured_date_treatment: :collapse)
           dir_path = (options[:subdirs] == "y") ? "#{@outdir}/#{profile.basename}" : @outdir
           FileUtils.mkdir_p(dir_path)

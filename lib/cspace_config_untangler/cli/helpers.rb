@@ -11,9 +11,11 @@ module CspaceConfigUntangler
       end
 
       def parse_rectypes
-        return [] if options[:rectypes] == "all"
+        rt = options[:rectypes]
+        return [] if rt == "all" || rt == ["all"]
+        return rt if rt.is_a?(Array)
 
-        options[:rectypes].split(",")
+        rt.split(",")
       end
     end
   end

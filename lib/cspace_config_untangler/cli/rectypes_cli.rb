@@ -19,10 +19,6 @@ module CspaceConfigUntangler
         "with the given name"
       option :form, desc: "The formname (e.g. default, public, timebased)",
         required: true, type: :string, aliases: "-f"
-      option :rectypes, desc: "Comma separated list (no spaces) of record "\
-        "types to include. Defaults to all.",
-        default: "all",
-        aliases: "-r"
       def without_form
         results = get_profiles.map do |profile|
           CCU::Profile.new(profile: profile, rectypes: parse_rectypes)
