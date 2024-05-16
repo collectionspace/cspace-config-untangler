@@ -58,7 +58,7 @@ module CspaceConfigUntangler
         desc: "Comma-separated list (NO SPACES) of non-main profiles you "\
         "want to process. If not set, will run main profile only. If `all`, "\
         "will run all known profiles.",
-        type: "string",
+        type: :string,
         default: CCU.main_profile,
         aliases: "-p"
 
