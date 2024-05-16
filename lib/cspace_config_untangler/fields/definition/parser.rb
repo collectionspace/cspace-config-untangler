@@ -36,6 +36,11 @@ module CspaceConfigUntangler
         # @return [Array<CCU::Fields::Def::FieldDefinition>]
         attr_reader :field_defs
 
+        # @return [Hash{CCU::Fields::Def::Config => Hash}] values of JSON
+        #   objects having `[config]` key, nested in the field definition; used
+        #   to verify we are not missing unexpectedly added info
+        attr_reader :config_keys
+
         # Top-level children of the config that we do not extract fields from
         SKIPPABLE_NAMESPACES = ["[config]", "ns2:collectionspace_core",
           "rel:relations-common-list"]
@@ -48,12 +53,19 @@ module CspaceConfigUntangler
           @config = fields_config
           @ns = config["[config]"]["view"]["props"]["defaultChildSubpath"]
           @field_defs = []
+          @config_keys = {}
           namespace_field_defs
         end
 
         # @param field_def [CCU::Fields::Def::FieldDefinition]
         def add_field_def(field_def)
           @field_defs << field_def
+        end
+
+        # @param configobj [CCU::Fields::Def::Config]
+        # @param hash [Hash]
+        def add_config_key(configobj, hash)
+          config_keys[configobj.signature] = hash
         end
 
         private
