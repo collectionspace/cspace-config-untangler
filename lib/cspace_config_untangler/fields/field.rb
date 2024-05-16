@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require_relative "../upgrade_warner"
+require_relative "../value_sources"
 
 module CspaceConfigUntangler
   module Fields
@@ -176,7 +177,13 @@ module CspaceConfigUntangler
 
       def merge_field_defs(formfield)
         fd = find_field_def
-        merge_from_fd(formfield, fd) if fd
+        if fd
+          merge_from_fd(formfield, fd)
+        else
+          CCU.log.error("CANNOT MATCH FORM FIELD TO FIELD DEF: "\
+                        "#{formfield.form.id} #{formfield.id}")
+          @value_source = [CCU::ValueSources::NoSource.new]
+        end
       end
 
       def find_field_def
