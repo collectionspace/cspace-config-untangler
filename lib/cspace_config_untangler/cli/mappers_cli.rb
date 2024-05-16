@@ -67,17 +67,14 @@ module CspaceConfigUntangler
 
       desc "write",
         "Writes JSON serializations of RecordMappers for the given rectype(s) for the given profiles."
-      option :rectypes,
-        desc: "Comma-delimited (no spaces) list of record types to write mappers for. If blank, will process all record types in profile", default: "", aliases: "-r"
       option :outputdir,
         desc: "Path to output directory. File name will be: profile-rectype.json", default: "data/mappers", aliases: "-o"
       option :subdirs,
         desc: "y/n. Whether to organize into subdirectories within given output directory by normalized profile name. Normalized profile name is the profile with version info/underscores removed.", default: "n", aliases: "-s"
       def write
-        rts = options[:rectypes].split(",").map(&:strip)
         get_profiles.each do |profile|
           puts "Writing mappers for #{profile}..."
-          p = CCU::Profile.new(profile: profile, rectypes: rts,
+          p = CCU::Profile.new(profile: profile, rectypes: parse_rectypes,
             structured_date_treatment: :collapse)
           dir_path = (options[:subdirs] == "y") ? "#{options[:outputdir]}/#{p.basename}" : options[:outputdir]
           FileUtils.mkdir_p(dir_path)

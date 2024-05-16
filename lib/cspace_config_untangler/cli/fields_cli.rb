@@ -77,11 +77,6 @@ module CspaceConfigUntangler
         An unmappable field is identified by its field_mapping object having nil
         data_type and xpath attributes.
       DESC
-      option :rectypes,
-        desc: "Comma separated list (no spaces) of record types to "\
-              "include. Defaults to all.",
-        default: "all",
-        aliases: "-r"
       option :structured_date,
         desc: "explode: report all individual structured date fields; "\
               "collapse: report the parent of individual structured date "\
@@ -89,14 +84,13 @@ module CspaceConfigUntangler
         default: "explode",
         aliases: "-d"
       def unmappable
-        rt = (options[:rectypes] == "all") ? [] : options[:rectypes].split(",")
-        get_profiles.each do |profile|
-          profile_obj = CCU::Profile.new(
+        get_profiles.map do |profile|
+          CCU::Profile.new(
             profile: profile,
-            rectypes: rt,
+            rectypes: parse_rectypes,
             structured_date_treatment: options[:structured_date].to_sym
-          )
-          profile_obj.rectypes.each { |rt| rt.unmappable_fields }
+          ).rectypes
+            .map(&:unmappable_fields)
         end
       end
     end

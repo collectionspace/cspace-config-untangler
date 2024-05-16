@@ -62,6 +62,13 @@ module CspaceConfigUntangler
         default: CCU.main_profile,
         aliases: "-p"
 
+      class_option :rectypes,
+        desc: "Comma separated list (no spaces) of record types to include. "\
+        "Defaults to all.",
+        type: :array,
+        default: ["all"],
+        aliases: "-r"
+
       # desc 'test', 'temporary stuff for expediency'
       # def test
       #   profile = 'botgarden_1_0_0'

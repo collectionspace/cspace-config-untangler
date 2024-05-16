@@ -8,14 +8,9 @@ module CspaceConfigUntangler
       include CCU::Cli::Helpers
 
       desc "disabled", "List disabled forms in given profiles/record types"
-      option :rectypes, desc: "Comma separated list (no spaces) of record "\
-        "types to include. Defaults to all.",
-        default: "all",
-        aliases: "-r"
       def disabled
-        rt = (options[:rectypes] == "all") ? [] : options[:rectypes].split(",")
         get_profiles.map do |profile|
-          CCU::Profile.new(profile: profile, rectypes: rt)
+          CCU::Profile.new(profile: profile, rectypes: parse_rectypes)
             .rectypes
             .map { |rt| rt.forms.values }
         end
@@ -25,11 +20,6 @@ module CspaceConfigUntangler
       end
 
       desc "subpaths", "Get all form props subpath values used"
-      option :rectype,
-        desc: "Comma separated list (no spaces) of record types to include. "\
-        "Defaults to all.",
-        default: "all",
-        aliases: "-r"
       option :mode,
         desc: "Whether to output just list of subpath values, or to "\
         "include occurrence counts",
@@ -39,7 +29,7 @@ module CspaceConfigUntangler
         aliases: "-m"
       def subpaths
         props = get_profiles.map do |profile|
-          p = CCU::Profile.new(profile:)
+          p = CCU::Profile.new(profile: profile, rectypes: parse_rectypes)
           p.rectypes
             .map(&:forms)
             .flatten
@@ -74,14 +64,9 @@ module CspaceConfigUntangler
       end
 
       desc "props_types", "Get all values of props/type used"
-      option :rectype,
-        desc: "Comma separated list (no spaces) of record types to include. "\
-        "Defaults to all.",
-        default: "all",
-        aliases: "-r"
       def props_types
         props = get_profiles.map do |profile|
-          p = CCU::Profile.new(profile:)
+          p = CCU::Profile.new(profile: profile, rectypes: parse_rectypes)
           p.rectypes
             .map(&:forms)
             .flatten
@@ -115,14 +100,9 @@ module CspaceConfigUntangler
         type: :boolean, default: false, required: false
       option :maxex, desc: "Maximum number of examples to print", aliases: "-m",
         type: :numeric, default: 10, required: false
-      option :rectype,
-        desc: "Comma separated list (no spaces) of record types to include. "\
-        "Defaults to all.",
-        default: "all",
-        aliases: "-r"
       def props_key_sigs
         all = get_profiles.map do |profile|
-          p = CCU::Profile.new(profile:)
+          p = CCU::Profile.new(profile: profile, rectypes: parse_rectypes)
           p.rectypes
             .map(&:forms)
             .flatten
