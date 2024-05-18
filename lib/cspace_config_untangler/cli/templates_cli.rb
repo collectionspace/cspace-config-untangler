@@ -43,22 +43,22 @@ module CspaceConfigUntangler
         end
       end
 
-      private
-
-      def write_templates(profile, dir_path)
-        rectypes = profile.rectypes + profile.special_rectypes
-        rectypes.each do |rectype|
-          puts "  ...#{rectype.name}"
-          write_rectype_profiles(profile, rectype, dir_path)
+      no_commands do
+        def write_templates(profile, dir_path)
+          rectypes = profile.rectypes + profile.special_rectypes
+          rectypes.each do |rectype|
+            puts "  ...#{rectype.name}"
+            write_rectype_profiles(profile, rectype, dir_path)
+          end
         end
-      end
 
-      def write_rectype_profiles(profile, rectype, dir_path)
-        @types.each do |type|
-          path = (type == "refname") ? "#{dir_path}/refname" : dir_path
-          FileUtils.mkdir_p(path) if type == "refname"
-          CsvTemplate.new(profile: profile, rectype: rectype,
-            type: type).write(path)
+        def write_rectype_profiles(profile, rectype, dir_path)
+          @types.each do |type|
+            path = (type == "refname") ? "#{dir_path}/refname" : dir_path
+            FileUtils.mkdir_p(path) if type == "refname"
+            CsvTemplate.new(profile: profile, rectype: rectype,
+              type: type).write(path)
+          end
         end
       end
     end
