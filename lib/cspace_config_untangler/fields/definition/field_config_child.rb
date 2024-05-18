@@ -19,7 +19,6 @@ module CspaceConfigUntangler
           @name = config.name
           @ns = @parent.config.namespace.literal
           @ns_for_id = @parent.config.namespace.for_id
-          update_id_ns
           @id = get_id
           get_message("name") if @id
           get_message("fullName") if @id
@@ -36,15 +35,6 @@ module CspaceConfigUntangler
         end
 
         private
-
-        def update_id_ns
-          @ns_for_id = "ext.#{@hash["extensionName"]}" if @hash.dig(
-            "extensionName"
-          )
-          @ns_for_id = "ext.#{@hash["[config]"]["extensionName"]}" if @hash.dig(
-            "[config]", "extensionName"
-          )
-        end
 
         def set_schema_path
           if @parent.is_a?(CCU::Fields::Def::NamespaceFieldParser)

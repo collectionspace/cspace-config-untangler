@@ -34,11 +34,11 @@ module CspaceConfigUntangler
         def initialize(rectype:, namespace:, field_hash:, parser:, name: nil,
           parent: nil)
           @rectype = rectype
-          @namespace = Namespace.new(namespace)
           @hash = field_hash
           @parser = parser
           @name = name
           @parent = parent
+          @namespace = Namespace.new(namespace, field_hash)
         end
 
         # returns a copy of itself that can be safely passed on and modified
