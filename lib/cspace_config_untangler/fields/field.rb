@@ -181,7 +181,8 @@ module CspaceConfigUntangler
           merge_from_fd(formfield, fd)
         else
           CCU.log.error("CANNOT MATCH FORM FIELD TO FIELD DEF: "\
-                        "#{formfield.form.id} #{formfield.id}")
+                        "#{formfield.form.id} #{formfield.id} "\
+                        "(#{__FILE__}, #{__LINE__})")
           @value_source = [CCU::ValueSources::NoSource.new]
         end
       end
@@ -302,11 +303,13 @@ module CspaceConfigUntangler
 
         if msgs.empty?
           CCU.log.error("FIELD MESSAGE LOOKUP: NO MESSAGE: "\
-                        "#{profile.name} #{rectype.name} #{id}")
+                        "#{profile.name} #{rectype.name} #{id} "\
+                       "#{__FILE__}, #{__LINE__})")
           nil
         elsif msgs.length > 1
           CCU.log.error("FIELD MESSAGE LOOKUP: MULTIPLE MESSAGES: "\
-                        "#{profile.name} #{rectype.name} #{id}")
+                        "#{profile.name} #{rectype.name} #{id} "\
+                       "#{__FILE__}, #{__LINE__})")
           "multiple msg matches: #{val}"
         else
           msgdata = msgs.first[1]
