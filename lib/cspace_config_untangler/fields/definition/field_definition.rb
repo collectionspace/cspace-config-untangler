@@ -12,7 +12,7 @@ module CspaceConfigUntangler
         include CCU::TrackAttributes
         attr_reader :name, :ns, :ns_for_id, :id,
           :schema_path,
-          :repeats, :in_repeating_group,
+          :repeats, :in_repeating_group, :valsrctype,
           :data_type, :value_source, :value_list,
           :required,
           :profile
@@ -21,6 +21,7 @@ module CspaceConfigUntangler
         def initialize(config)
           super(config)
           @datahash = config.hash["[config]"]
+          @valsrctype = CCU::Fields::ValueSources::TypeExtractor.call(datahash)
           set_id
           @data_type = set_datatype
           @value_source = []
@@ -81,6 +82,8 @@ module CspaceConfigUntangler
 
         private
 
+        attr_reader :datahash
+
         def set_required
           if @datahash.dig("required") && @datahash["required"] == true
             "y"
@@ -90,29 +93,21 @@ module CspaceConfigUntangler
         end
 
         def set_value_sources
-          type = CCU::Fields::ValueSources::TypeExtractor.call(@datahash)
-          return unless type
+          return unless valsrctype
 
           sources = CCU::Fields::ValueSources::SourceExtractor.call(
-            type, @datahash, @config.profile_object
+            valsrctype, @datahash, @config.profile_object
           ).reject do |source|
             source.source_type == "authority" && !source.configured?
           end
 
           @value_source = sources
-          if type == "option list"
+          if valsrctype == "option list"
             @value_list = @value_source.first.options
             return
           end
 
           return unless @value_source.empty?
-
-          if type == "authority"
-            CCU.log.warn(
-              "DATA SOURCES: #{@config.namespace_signature} - #{@id} - "\
-                "Autocomplete defined with no configured source"
-            )
-          end
 
           @value_source = [CCU::ValueSources::NoSource.new]
         end

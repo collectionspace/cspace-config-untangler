@@ -178,6 +178,14 @@ module CspaceConfigUntangler
       def merge_field_defs(formfield)
         fd = find_field_def
         if fd
+          if fd.valsrctype == "authority" &&
+              fd.value_source == [CCU::ValueSources::NoSource.new]
+            CCU.log.warn(
+              "DATA SOURCES: #{fd.config.namespace_signature} - #{@id} - "\
+                "Authority autocomplete field defined with no configured "\
+                "source (#{__FILE__}, #{__LINE__})"
+            )
+          end
           merge_from_fd(formfield, fd)
         else
           CCU.log.error("CANNOT MATCH FORM FIELD TO FIELD DEF: "\
