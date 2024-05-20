@@ -16,10 +16,14 @@ module CspaceConfigUntangler
         # For-id namespace values that can be assigned simply based on
         # literal namespace value
         FOR_ID_BY_LITERAL = {
+          "ns2:acquisitions_commission" => "ext.commission",
+          "ns2:collectionobjects_accessionattributes" =>
+            "ext.accessionattributes",
           "ns2:collectionobjects_accessionuse" => "ext.accessionuse",
-          "ns2:propagations_common" => "ns2:propagation_common",
+          "ns2:collectionobjects_fineart" => "ext.fineart",
           "ns2:conditionchecks_variablemedia" => "ext.technicalChanges",
-          "ns2:acquisitions_commission" => "ext.commission"
+          "ns2:conservation_livingplant" => "ext.livingplant",
+          "ns2:propagation_common" => "ns2:propagations_common"
         }
 
         # @param namespace [String]

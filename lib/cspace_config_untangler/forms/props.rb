@@ -175,11 +175,8 @@ module CspaceConfigUntangler
         return "ext.dimension" if measurement?
         return "ext.address" if address? && !contact?
 
-        return "ext.accessionattributes" if ns ==
-          "ns2:collectionobjects_accessionattributes"
-        return "ext.accessionuse" if ns == "ns2:collectionobjects_accessionuse"
-        return "ext.fineart" if ns == "ns2:collectionobjects_fineart"
-        return "ext.commission" if ns == "ns2:acquisitions_commission"
+        lkup = CCU::Fields::Definition::Namespace::FOR_ID_BY_LITERAL
+        return lkup[ns] if lkup.key?(ns)
 
         if ns == "ns2:collectionobjects_variablemedia" &&
             !NON_PATH_NAMES.include?(name)
