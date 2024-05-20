@@ -23,7 +23,7 @@ module CspaceConfigUntangler
         @ns_for_id = form_field.ns_for_id
         @panel = form_field.panel
         @id = form_field.id
-        @label = lookup_display_name(@id)
+        @label = lookup_field_label
         @ui_path = formatted_ui_path(form_field.ui_path)
         merge_field_defs(form_field)
         @fid = "#{@profile.name} #{rectype.name} #{@ns_for_id} #{@name}"
@@ -234,7 +234,42 @@ module CspaceConfigUntangler
         @required = fd.required
       end
 
-      # @todo Refactor this hideousness
+      def lookup_field_label
+        msgs = profile.messages
+        fieldid = "field.#{id}"
+        from_msg = msgs.dig(fieldid, "fullName") || msgs.dig(fieldid, "name")
+        return from_msg if from_msg
+
+        altform = case id
+        when "uoc_common.useDateHoursSpent"
+          CCU.upgrade_warner.call(target_version: "8_1",
+            issue: "DRYD-1269")
+          "field.uoc_common.hoursSpent"
+        when "collectionobjects_common.compressionStandard"
+          CCU.upgrade_warner.call(target_version: "8_1",
+            issue: "DRYD-1270")
+          "field.collectionobjects_common.compressionstandard"
+        end
+        from_msg = msgs.dig(altform, "fullName") || msgs.dig(altform, "name")
+        return from_msg if from_msg
+
+        binding.pry
+        if id == "conservation_common.sampleReturned"
+          CCU.upgrade_warner.call(
+            target_version: "8_1", issue: "DRYD-1271"
+          )
+          base = "field.conservation_common.sampleReturned"
+          msgs["#{base}.fullName"] || msgs["#{base}.nadme"]
+        elsif val.start_with?("conservation_livingplant")
+          fixedval = val.sub(
+            "conservation_livingplant", "ext.livingplant"
+          )
+          lookup_display_name(fixedval)
+        else
+          alt_fieldname_lookup(val)
+        end
+      end
+
       def lookup_display_name(val)
         return nil unless val
         return nil if val["not-mapped"]
@@ -249,39 +284,6 @@ module CspaceConfigUntangler
           end
         elsif val.start_with?("inputTable.")
           msgs.dig(val, "name") ? msgs[val]["name"] : val
-        else
-          fieldid = "field.#{val}"
-          if msgs.dig(fieldid, "fullName")
-            msgs[fieldid]["fullName"]
-          elsif msgs.dig(fieldid, "name")
-            msgs[fieldid]["name"]
-          elsif val == "uoc_common.useDateHoursSpent"
-            CCU.upgrade_warner.call(
-              target_version: "8_1",
-              issue: "DRYD-1269"
-            )
-            alt_fieldname_lookup(val.sub("useDateHoursSpent", "hoursSpent"))
-          elsif val == "collectionobjects_common.compressionStandard"
-            CCU.upgrade_warner.call(
-              target_version: "8_1",
-              issue: "DRYD-1270"
-            )
-            alt_fieldname_lookup(
-              val.sub("compressionStandard", "compressionstandard")
-            )
-          elsif val == "conservation_common.sampleReturned"
-            CCU.upgrade_warner.call(
-              target_version: "8_1",
-              issue: "DRYD-1271"
-            )
-            base = "field.conservation_common.sampleReturned.nadme"
-            msgs[base]["fullName"] || msgs[base]["name"]
-          elsif val.start_with?("conservation_livingplant")
-            fixedval = val.sub("conservation_livingplant", "ext.livingplant")
-            lookup_display_name(fixedval)
-          else
-            alt_fieldname_lookup(val)
-          end
         end
       end
 
