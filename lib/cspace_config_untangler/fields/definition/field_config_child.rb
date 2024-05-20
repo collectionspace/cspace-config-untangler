@@ -55,26 +55,29 @@ module CspaceConfigUntangler
         end
 
         def get_id
-          id = @hash.dig("[config]", "messages", "name", "id")
-          id = @hash.dig("[config]", "messages", "fullName", "id") if id.nil?
+          id = @hash.dig("[config]", "messages", "name", "id") ||
+            @hash.dig("[config]", "messages", "fullName", "id")
 
-          if id
-            # the following account for typos in the ui config
-            id = id.gsub("acquistion", "acquisition")
-            id = id.sub("despositor", "depositor")
-            id = id.sub("webAddressTypeType", "webAddressType")
-            id = id.sub("graveAssocCodes", "graveAssocCode")
-            id = id.sub("persons_common.forename", "persons_common.foreName")
-            id = id.sub("persons_common.surname", "persons_common.surName")
-            id = id.sub("propagations_common", "propagation_common")
+          return nil unless id
+
+          # the following account for typos in the ui config
+          untypo = id.gsub("acquistion", "acquisition")
+            .sub("despositor", "depositor")
+            .sub("webAddressTypeType", "webAddressType")
+            .sub("graveAssocCodes", "graveAssocCode")
+            .sub("persons_common.forename", "persons_common.foreName")
+            .sub("persons_common.surname", "persons_common.surName")
+            .sub("propagation_common", "propagations_common")
             # match form used in namespace/subpaths
-            id = id.sub("_naturalhistory.", "_naturalhistory_extension.")
+            .sub("_naturalhistory.", "_naturalhistory_extension.")
+
+          id = if @config.rectype == "location" && name == "conditionGroup"
+            untypo.sub("persons_", "locations_")
+          else
+            untypo
           end
 
-          if id
-            id.sub("field.", "").sub(/\.name$/, "").sub(".fullName",
-              "")
-          end
+          id.split(".")[1..-2].join(".")
         end
 
         def set_repeats
