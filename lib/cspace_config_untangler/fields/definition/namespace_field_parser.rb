@@ -18,6 +18,9 @@ module CspaceConfigUntangler
         # @return [CCU::Fields::Definition::Config]
         attr_reader :config
 
+        # @return [String]
+        attr_reader :ns
+
         # @param config [CCU::Fields::Definition::Config]
         def initialize(config)
           @config = config
@@ -27,9 +30,6 @@ module CspaceConfigUntangler
         end
 
         private
-
-        # @return [String]
-        attr_reader :ns
 
         def subrecord_config_hash(subrec_type)
           config.profile_config.dig("recordTypes", subrec_type, "fields",
