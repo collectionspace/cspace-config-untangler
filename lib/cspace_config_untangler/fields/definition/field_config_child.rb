@@ -6,7 +6,7 @@ module CspaceConfigUntangler
   module Fields
     module Definition
       class FieldConfigChild
-        attr_reader :name, :ns, :ns_for_id, :id,
+        attr_reader :config, :name, :ns, :ns_for_id, :id,
           :schema_path,
           :repeats, :in_repeating_group
 
