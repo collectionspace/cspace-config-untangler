@@ -308,18 +308,19 @@ module CspaceConfigUntangler
         fieldname = val.split(".").last
         msgs = profile.messages
           .select do |id, data|
-            id.start_with?("field.") && id.end_with?(".#{fieldname}")
-          end
+          id.start_with?("field.") && id.end_with?(".#{fieldname}")
+        end
 
         if msgs.empty?
+          binding.pry
           CCU.log.error("FIELD MESSAGE LOOKUP: NO MESSAGE: "\
                         "#{profile.name} #{rectype.name} #{id} "\
-                       "#{__FILE__}, #{__LINE__})")
+                                    "#{__FILE__}, #{__LINE__})")
           nil
         elsif msgs.length > 1
           CCU.log.error("FIELD MESSAGE LOOKUP: MULTIPLE MESSAGES: "\
-                        "#{profile.name} #{rectype.name} #{id} "\
-                       "#{__FILE__}, #{__LINE__})")
+                            "#{profile.name} #{rectype.name} #{id} "\
+                                        "#{__FILE__}, #{__LINE__})")
           "multiple msg matches: #{val}"
         else
           msgdata = msgs.first[1]
