@@ -17,9 +17,14 @@ module CspaceConfigUntangler
           @parent = config.parent
 
           @name = config.name
-          @ns = @parent.config.namespace.literal
-          @ns_for_id = @parent.config.namespace.for_id
+          @ns = @parent.ns
+          @ns_for_id = if @parent.respond_to?(:ns_for_id)
+            @parent.ns_for_id
+          else
+            @ns
+          end
           @id = get_id
+
           get_message("name") if @id
           get_message("fullName") if @id
           @schema_path = set_schema_path
