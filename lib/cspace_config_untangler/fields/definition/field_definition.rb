@@ -144,16 +144,19 @@ module CspaceConfigUntangler
               @parent.schema_path.include?("localityGroupList")
             @id = "ext.locality.#{@name}"
           elsif @datahash.dig("extensionName")
-            @id = case @datahash["extensionName"]
-            when "structuredDate"
-              "ext.structuredDate.#{@name}"
-            when "dimension"
-              "ext.dimension.#{@name}"
-            when "address"
-              "ext.address.#{@name}"
-            when "locality"
-              "ext.locality.#{@name}"
-            end
+            @id = "ext.#{@datahash.dig("extensionName")}.#{@name}"
+            # @id = case @datahash["extensionName"]
+            # when "structuredDate"
+            #   "ext.structuredDate.#{@name}"
+            # when "dimension"
+            #   "ext.dimension.#{@name}"
+            # when "address"
+            #   "ext.address.#{@name}"
+            # when "locality"
+            #   "ext.locality.#{@name}"
+            # else
+            #   binding.pry
+            # end
           elsif @id == "approvalGroupField.approvalGroup"
             CCU.upgrade_warner.call(
               target_version: "8_1",
