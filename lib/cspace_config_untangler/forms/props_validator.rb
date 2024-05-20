@@ -73,8 +73,8 @@ module CspaceConfigUntangler
             val = props.config[key]
             next unless val.nil? || val.empty?
 
-            CCU.log.warn("FORM STRUCTURE: EMPTY #{key.upcase}: "\
-                          "#{props.warning_id}")
+            CCU.log.info("FORM STRUCTURE: EMPTY #{key.upcase}: "\
+                         "#{props.warning_id} (#{__FILE__}, #{__LINE__}")
             props.add_error(:"empty_#{key}")
           end
       end
