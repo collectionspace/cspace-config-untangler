@@ -87,6 +87,10 @@ module CspaceConfigUntangler
   setting :single_authority_plain_last_versions,
     default: default_single_authority_plain_last_versions,
     reader: true
+  setting :community_supported_profiles,
+    default: %w[core anthro bonsai botgarden fcart herbarium lhmc materials
+      publicart],
+    reader: true
   setting :datadir, default: default_datadir, reader: true
   setting :configdir, default: default_configdir, reader: true
   setting :templatedir, default: default_templatedir, reader: true
