@@ -109,9 +109,7 @@ module CspaceConfigUntangler
     reader: true
 
   File.delete(logpath) if File.exist?(logpath)
-  # def logger
-  #   @logger ||= Logger.new(logpath)
-  # end
+
   setting :log,
     default: nil,
     reader: true,
@@ -167,11 +165,6 @@ module CspaceConfigUntangler
 
   def safe_copy(hash)
     Marshal.load(Marshal.dump(hash))
-  end
-
-  def switch_release(release)
-    clear_config_dir
-    move_release_to_config_dir(release)
   end
 
   gem_agnostic_dir = $LOAD_PATH.select do |dir|
