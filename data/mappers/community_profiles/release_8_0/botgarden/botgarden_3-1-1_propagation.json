@@ -15,7 +15,7 @@
     "search_field": "propNumber"
   },
   "docstructure": {
-    "propagation_common": {
+    "propagations_common": {
       "scarStratGroupList": {
         "scarStratGroup": {
         }
@@ -33,7 +33,7 @@
       },
       "source_type": "na",
       "source_name": "na",
-      "namespace": "propagation_common",
+      "namespace": "propagations_common",
       "xpath": [
 
       ],
@@ -53,7 +53,7 @@
       },
       "source_type": "vocabulary",
       "source_name": "proptype",
-      "namespace": "propagation_common",
+      "namespace": "propagations_common",
       "xpath": [
 
       ],
@@ -72,7 +72,7 @@
       },
       "source_type": "refname",
       "source_name": "vocabulary refname",
-      "namespace": "propagation_common",
+      "namespace": "propagations_common",
       "xpath": [
 
       ],
@@ -91,7 +91,7 @@
       },
       "source_type": "na",
       "source_name": "na",
-      "namespace": "propagation_common",
+      "namespace": "propagations_common",
       "xpath": [
 
       ],
@@ -110,7 +110,7 @@
       },
       "source_type": "na",
       "source_name": "na",
-      "namespace": "propagation_common",
+      "namespace": "propagations_common",
       "xpath": [
 
       ],
@@ -130,7 +130,7 @@
       },
       "source_type": "vocabulary",
       "source_name": "propreason",
-      "namespace": "propagation_common",
+      "namespace": "propagations_common",
       "xpath": [
 
       ],
@@ -149,7 +149,7 @@
       },
       "source_type": "refname",
       "source_name": "vocabulary refname",
-      "namespace": "propagation_common",
+      "namespace": "propagations_common",
       "xpath": [
 
       ],
@@ -168,7 +168,7 @@
       },
       "source_type": "na",
       "source_name": "na",
-      "namespace": "propagation_common",
+      "namespace": "propagations_common",
       "xpath": [
 
       ],
@@ -188,7 +188,7 @@
       },
       "source_type": "vocabulary",
       "source_name": "scarstrat",
-      "namespace": "propagation_common",
+      "namespace": "propagations_common",
       "xpath": [
         "scarStratGroupList",
         "scarStratGroup"
@@ -208,7 +208,7 @@
       },
       "source_type": "refname",
       "source_name": "vocabulary refname",
-      "namespace": "propagation_common",
+      "namespace": "propagations_common",
       "xpath": [
         "scarStratGroupList",
         "scarStratGroup"
@@ -228,7 +228,7 @@
       },
       "source_type": "na",
       "source_name": "na",
-      "namespace": "propagation_common",
+      "namespace": "propagations_common",
       "xpath": [
         "scarStratGroupList",
         "scarStratGroup"
@@ -249,7 +249,7 @@
       },
       "source_type": "vocabulary",
       "source_name": "durationunit",
-      "namespace": "propagation_common",
+      "namespace": "propagations_common",
       "xpath": [
         "scarStratGroupList",
         "scarStratGroup"
@@ -269,7 +269,7 @@
       },
       "source_type": "refname",
       "source_name": "vocabulary refname",
-      "namespace": "propagation_common",
+      "namespace": "propagations_common",
       "xpath": [
         "scarStratGroupList",
         "scarStratGroup"
@@ -292,7 +292,7 @@
       },
       "source_type": "na",
       "source_name": "na",
-      "namespace": "propagation_common",
+      "namespace": "propagations_common",
       "xpath": [
 
       ],
@@ -314,7 +314,7 @@
       },
       "source_type": "na",
       "source_name": "na",
-      "namespace": "propagation_common",
+      "namespace": "propagations_common",
       "xpath": [
 
       ],
@@ -334,7 +334,7 @@
       },
       "source_type": "vocabulary",
       "source_name": "cuttingtype",
-      "namespace": "propagation_common",
+      "namespace": "propagations_common",
       "xpath": [
 
       ],
@@ -353,7 +353,7 @@
       },
       "source_type": "refname",
       "source_name": "vocabulary refname",
-      "namespace": "propagation_common",
+      "namespace": "propagations_common",
       "xpath": [
 
       ],
@@ -373,7 +373,7 @@
       },
       "source_type": "vocabulary",
       "source_name": "propHormones",
-      "namespace": "propagation_common",
+      "namespace": "propagations_common",
       "xpath": [
 
       ],
@@ -392,7 +392,7 @@
       },
       "source_type": "refname",
       "source_name": "vocabulary refname",
-      "namespace": "propagation_common",
+      "namespace": "propagations_common",
       "xpath": [
 
       ],
@@ -411,7 +411,7 @@
       },
       "source_type": "na",
       "source_name": "na",
-      "namespace": "propagation_common",
+      "namespace": "propagations_common",
       "xpath": [
 
       ],
@@ -433,7 +433,7 @@
       },
       "source_type": "na",
       "source_name": "na",
-      "namespace": "propagation_common",
+      "namespace": "propagations_common",
       "xpath": [
 
       ],
@@ -453,7 +453,7 @@
       },
       "source_type": "vocabulary",
       "source_name": "propPlantType",
-      "namespace": "propagation_common",
+      "namespace": "propagations_common",
       "xpath": [
 
       ],
@@ -472,7 +472,7 @@
       },
       "source_type": "refname",
       "source_name": "vocabulary refname",
-      "namespace": "propagation_common",
+      "namespace": "propagations_common",
       "xpath": [
 
       ],
@@ -491,7 +491,7 @@
       },
       "source_type": "na",
       "source_name": "na",
-      "namespace": "propagation_common",
+      "namespace": "propagations_common",
       "xpath": [
         "propActivityGroupList",
         "propActivityGroup"
@@ -512,7 +512,7 @@
       },
       "source_type": "vocabulary",
       "source_name": "propActivityType",
-      "namespace": "propagation_common",
+      "namespace": "propagations_common",
       "xpath": [
         "propActivityGroupList",
         "propActivityGroup"
@@ -532,7 +532,7 @@
       },
       "source_type": "refname",
       "source_name": "vocabulary refname",
-      "namespace": "propagation_common",
+      "namespace": "propagations_common",
       "xpath": [
         "propActivityGroupList",
         "propActivityGroup"
@@ -552,7 +552,7 @@
       },
       "source_type": "na",
       "source_name": "na",
-      "namespace": "propagation_common",
+      "namespace": "propagations_common",
       "xpath": [
         "propActivityGroupList",
         "propActivityGroup"
@@ -576,7 +576,7 @@
       },
       "source_type": "authority",
       "source_name": "concept/associated",
-      "namespace": "propagation_common",
+      "namespace": "propagations_common",
       "xpath": [
         "propActivityGroupList",
         "propActivityGroup"
@@ -596,7 +596,7 @@
       },
       "source_type": "refname",
       "source_name": "authority refname",
-      "namespace": "propagation_common",
+      "namespace": "propagations_common",
       "xpath": [
         "propActivityGroupList",
         "propActivityGroup"
@@ -617,7 +617,7 @@
       },
       "source_type": "vocabulary",
       "source_name": "potsize",
-      "namespace": "propagation_common",
+      "namespace": "propagations_common",
       "xpath": [
         "propActivityGroupList",
         "propActivityGroup"
@@ -637,7 +637,7 @@
       },
       "source_type": "refname",
       "source_name": "vocabulary refname",
-      "namespace": "propagation_common",
+      "namespace": "propagations_common",
       "xpath": [
         "propActivityGroupList",
         "propActivityGroup"
@@ -661,7 +661,7 @@
       },
       "source_type": "authority",
       "source_name": "location/local",
-      "namespace": "propagation_common",
+      "namespace": "propagations_common",
       "xpath": [
         "propActivityGroupList",
         "propActivityGroup"
@@ -681,7 +681,7 @@
       },
       "source_type": "refname",
       "source_name": "authority refname",
-      "namespace": "propagation_common",
+      "namespace": "propagations_common",
       "xpath": [
         "propActivityGroupList",
         "propActivityGroup"
@@ -702,7 +702,7 @@
       },
       "source_type": "vocabulary",
       "source_name": "propConditions",
-      "namespace": "propagation_common",
+      "namespace": "propagations_common",
       "xpath": [
         "propActivityGroupList",
         "propActivityGroup"
@@ -722,7 +722,7 @@
       },
       "source_type": "refname",
       "source_name": "vocabulary refname",
-      "namespace": "propagation_common",
+      "namespace": "propagations_common",
       "xpath": [
         "propActivityGroupList",
         "propActivityGroup"
@@ -743,7 +743,7 @@
       },
       "source_type": "vocabulary",
       "source_name": "propChemicals",
-      "namespace": "propagation_common",
+      "namespace": "propagations_common",
       "xpath": [
         "propActivityGroupList",
         "propActivityGroup"
@@ -763,7 +763,7 @@
       },
       "source_type": "refname",
       "source_name": "vocabulary refname",
-      "namespace": "propagation_common",
+      "namespace": "propagations_common",
       "xpath": [
         "propActivityGroupList",
         "propActivityGroup"
@@ -783,7 +783,7 @@
       },
       "source_type": "na",
       "source_name": "na",
-      "namespace": "propagation_common",
+      "namespace": "propagations_common",
       "xpath": [
         "propActivityGroupList",
         "propActivityGroup"
@@ -803,7 +803,7 @@
       },
       "source_type": "na",
       "source_name": "na",
-      "namespace": "propagation_common",
+      "namespace": "propagations_common",
       "xpath": [
         "propActivityGroupList",
         "propActivityGroup"
@@ -823,7 +823,7 @@
       },
       "source_type": "na",
       "source_name": "na",
-      "namespace": "propagation_common",
+      "namespace": "propagations_common",
       "xpath": [
 
       ],
@@ -842,7 +842,7 @@
       },
       "source_type": "na",
       "source_name": "na",
-      "namespace": "propagation_common",
+      "namespace": "propagations_common",
       "xpath": [
 
       ],
