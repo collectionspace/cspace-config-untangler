@@ -62,9 +62,17 @@ module CspaceConfigUntangler
     def clear_config_dir
       configs = Dir.new(CCU.configdir)
         .children
-        .select { |filename| filename.end_with?(".json") }
+        .select { |filename| clearable?(filename) }
         .map { |filename| File.join(CCU.configdir, filename) }
       FileUtils.rm(configs)
+    end
+
+    def community_supported_profile?(filename)
+      CCU.community_supported_profiles.include?(filename.split("_").first)
+    end
+
+    def clearable?(filename)
+      filename.end_with?(".json") && community_supported_profile?(filename)
     end
 
     def move_release_to_config_dir
