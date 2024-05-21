@@ -23,10 +23,10 @@ RSpec.describe CCU::Fields::Def::Namespace do
     end
 
     context "when literal lookup namespace" do
-      let(:str) { "ns2:propagations_common" }
+      let(:str) { "ns2:collectionobjects_common" }
 
       it "returns adjusted namespace" do
-        expect(result).to eq("ns2:propagation_common")
+        expect(result).to eq("ns2:collectionobjects_common")
       end
     end
 
