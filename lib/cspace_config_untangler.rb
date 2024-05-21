@@ -99,10 +99,16 @@ module CspaceConfigUntangler
   setting :releases,
     default: ["5_2", "6_0", "6_1", "7_0", "7_1", "7_2", "8_0"],
     reader: true
+
   setting :release,
     default: nil,
     reader: true,
-    constructor: ->(value) { CCU::Release.new(value) }
+    constructor: ->(value) do
+      return CCU::Release.new(value) if value
+
+      CCU::Release.new(releases.last)
+    end
+
   setting :prev_release,
     default: nil,
     reader: true,
