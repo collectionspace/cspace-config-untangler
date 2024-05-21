@@ -24,7 +24,7 @@ module CspaceConfigUntangler
         # @param config [CCU::Fields::Definition::Config]
         def initialize(config)
           @config = config
-          @ns = config.namespace.literal
+          @ns = config.ns.literal
           update_subrecord_field_hash
           HashIterator.new(@config, self)
         end

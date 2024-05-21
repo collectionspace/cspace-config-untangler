@@ -9,8 +9,8 @@ RSpec.describe CCU::Fields::Def::Config do
   let(:ns) { "ns2:collectionobjects_common" }
   let(:config) { generator.field_def_config(ns) }
 
-  describe "#namespace" do
-    let(:result) { config.namespace }
+  describe "#ns" do
+    let(:result) { config.ns }
 
     it "returns a Namespace object" do
       expect(result).to be_a(CCU::Fields::Def::Namespace)
