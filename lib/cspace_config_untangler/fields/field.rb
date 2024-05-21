@@ -180,11 +180,7 @@ module CspaceConfigUntangler
         if fd
           if fd.valsrctype == "authority" &&
               fd.value_source == [CCU::ValueSources::NoSource.new]
-            CCU.log.warn(
-              "DATA SOURCES: #{fd.config.namespace_signature} - #{@id} - "\
-                "Authority autocomplete field defined with no configured "\
-                "source (#{__FILE__}, #{__LINE__})"
-            )
+            controlled_by_missing_authority(fd)
           end
           merge_from_fd(formfield, fd)
         else
@@ -192,6 +188,21 @@ module CspaceConfigUntangler
                         "#{formfield.form.id} #{formfield.id} "\
                         "(#{__FILE__}, #{__LINE__})")
           @value_source = [CCU::ValueSources::NoSource.new]
+        end
+      end
+
+      def controlled_by_missing_authority(field_def)
+        # Don't log warnings about known and reported issues
+        if name == "relatedTerm" && rectype.name == "citation" &&
+            profile.name.start_with?("materials_")
+          CCU.upgrade_warner.call(target_version: "8_1",
+            issue: "DRYD-1425")
+        else
+          CCU.log.warn(
+            "DATA SOURCES: #{field_def.config.namespace_signature} - #{@id} - "\
+              "Authority autocomplete field defined with no configured "\
+              "source (#{__FILE__}, #{__LINE__})"
+          )
         end
       end
 
@@ -253,7 +264,6 @@ module CspaceConfigUntangler
         from_msg = msgs.dig(altform, "fullName") || msgs.dig(altform, "name")
         return from_msg if from_msg
 
-        binding.pry
         if id == "conservation_common.sampleReturned"
           CCU.upgrade_warner.call(
             target_version: "8_1", issue: "DRYD-1271"
@@ -312,7 +322,6 @@ module CspaceConfigUntangler
         end
 
         if msgs.empty?
-          binding.pry
           CCU.log.error("FIELD MESSAGE LOOKUP: NO MESSAGE: "\
                         "#{profile.name} #{rectype.name} #{id} "\
                                     "#{__FILE__}, #{__LINE__})")
