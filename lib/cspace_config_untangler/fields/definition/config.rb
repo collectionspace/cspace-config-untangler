@@ -12,7 +12,7 @@ module CspaceConfigUntangler
         attr_reader :name
 
         # @return [CCU::Fields::Def::Namespace]
-        attr_reader :namespace
+        attr_reader :ns
 
         # @return [Hash]
         attr_reader :hash
@@ -38,14 +38,14 @@ module CspaceConfigUntangler
           @parser = parser
           @name = name
           @parent = parent
-          @namespace = Namespace.new(namespace, field_hash)
+          @ns = Namespace.new(namespace, field_hash)
         end
 
         # returns a copy of itself that can be safely passed on and modified
         def derive_child(field_hash:, name:, parent:)
           self.class.new(
             rectype: @rectype,
-            namespace: @namespace.literal,
+            namespace: @ns.literal,
             field_hash: field_hash,
             parser: @parser,
             name: name,
@@ -60,7 +60,7 @@ module CspaceConfigUntangler
         end
 
         def namespace_signature
-          "#{profile} - #{rectype} - #{namespace.literal}"
+          "#{profile} - #{rectype} - #{ns.literal}"
         end
 
         def profile
