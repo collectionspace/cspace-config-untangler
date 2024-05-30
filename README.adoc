@@ -45,6 +45,41 @@ The benefit of this is that you can run `ccu` from the command line anywhere to 
 
 The way you do this is different depending on your operating system, terminal configuration, and whether you want it to be permanent or not, so google it.
 
+=== Optional: create a client connection config file
+
+==== Why/when is this necessary?
+Unfortunately the UI config JSON file does not contain any information about which vocabularies (dynamic term lists) are configured for an instance. The only way to get this data programmatically is via API calls.
+
+For the purposes of this code base, that means using https://github.com/collectionspace/collectionspace-client[collectionspace-client] to interact with the API, and this requires, at minimum, management of authentication credentials for a user with at least the TENANT_READER role/permission. The purpose of cspace-config-untangler is solely to read available CollectionSpace configuration info, not to make any changes to any CollectionSpace instance, so we recommend against configuring connections with more than TENANT_READER permissions.
+
+*Currently, you only need to create this config file if you wish to run commands found beneath `ccu vocabs`.* If you run one of those commands on a profile without a client connection config, it will just fail gracefully, telling you that you need to configure a connection.
+
+*You do not need to create a client connection config file if you are working only with the community supported profiles.* The `Reader` user in those instances is set up following a pattern which works without needing configuration.
+
+==== Client connection config file location
+
+By default, the application will look for the config file in `(your home directory}/.config/cspace-config-untangler/client_connection_config.yml`. You can override that that by changing the default value of the `:client_connection_config_path` setting in `lib/cspace_config_untangler.rb` from `nil` to your path (a String).
+
+==== Client connection config file format
+
+The config file must be a valid YAML file.
+
+Here is a sample, which will be explained below:
+
+.[source,yaml]
+----
+instanced:
+  base_uri: https://collectionspace.institution_d_name.org/cspace-services
+  username: readonlyuser@institution_d_name.org
+  password: randomstring
+----
+
+The top level key is the profile name the connection will be associated, minus any version suffix associated with the profile/UI config file. For example, you may have a UI config file for instancea_8-0-1. The key here would be just `instancea`.
+
+WARNING: While we can keep previous versions of UI config files to compare or go back in time, this is not true for client connections. Those are always made to the current, live instance.
+
+NOTE: There is an `--env` option on relevant commands that allow you to specify that the dev or qa instances of community supported profiles should be used.
+
 == Usage
 
 Once the setup is done, you should be able to `cd` into the cloned directory and type `exe/ccu` (or just `ccu` if you have installed as a gem) at the command prompt to get the list of available functions with their brief descriptions.
