@@ -39,6 +39,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "rake"
   spec.add_development_dependency "rspec"
 
+  spec.add_runtime_dependency "collectionspace-client"
   spec.add_runtime_dependency "dry-configurable"
   spec.add_runtime_dependency "facets"
   spec.add_runtime_dependency "nokogiri"

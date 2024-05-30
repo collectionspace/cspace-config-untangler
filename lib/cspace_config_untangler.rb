@@ -68,6 +68,23 @@ module CspaceConfigUntangler
     "publicart" => "5-0-0"
   }
 
+  # @return [nil, String] path to YAML file containing credentials for
+  #   CollectionSpace::Client connections. Defaults to
+  #   `#{user home dir}/.config/cspace-config-untangler/client_connection_config.yml`
+  setting :client_connection_config_path,
+    default: nil,
+    reader: true,
+    constructor: ->(default) do
+      return default if default
+
+      home = File.expand_path("~")
+      full = File.join(home, ".config", "cspace-config-untangler",
+        "client_connection_config.yml")
+      return full if File.exist?(full)
+
+      nil
+    end
+
   # Don't change stuff after this
 
   def app_dir
@@ -128,6 +145,21 @@ module CspaceConfigUntangler
   setting :upgrade_warner,
     default: CCU::UpgradeWarner.new,
     reader: true
+
+  # @return [:demo, :qa, :dev] Used when setting up a CollectionSpace::Client
+  #   for community supported profiles. The client is only used for commands
+  #   in the `ccu vocabs` namespace
+  setting :instance_env, default: :demo, reader: true
+
+  setting :client_connection_config,
+    default: nil,
+    reader: true,
+    constructor: ->(_default) do
+      return nil unless client_connection_config_path
+
+      YAML.load_file(client_connection_config_path)
+    end
+
   def allfields_path(
     release: CCU.release,
     outmode: :expert,
