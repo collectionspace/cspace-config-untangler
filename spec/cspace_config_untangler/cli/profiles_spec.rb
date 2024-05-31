@@ -2,8 +2,12 @@
 
 require "spec_helper"
 
-RSpec.describe CCU::Cli::ProfilesCli do
-  before(:each) { set_profile_release("7_0") }
+RSpec.describe CCU::Cli::Profiles do
+  before(:each) do
+    delete_all_configs
+    set_profile_release("7_0")
+  end
+
   after(:each) { CCU.reset_config }
 
   describe "#all" do

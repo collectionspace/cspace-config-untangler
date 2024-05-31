@@ -3,12 +3,11 @@
 # rubocop:disable Layout/LineLength
 require "fileutils"
 
-require_relative "helpers"
+require_relative "subcommand_base"
 
 module CspaceConfigUntangler
   module Cli
-    class ProfilesCli < Thor
-      include CCU::Cli::Helpers
+    class Profiles < SubcommandBase
       desc "all", "Print the names of all known profiles to screen"
       def all
         say([CCU.main_profile,

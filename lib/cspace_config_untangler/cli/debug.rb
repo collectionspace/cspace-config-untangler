@@ -1,12 +1,10 @@
 # frozen_string_literal: true
 
-require_relative "helpers"
+require_relative "subcommand_base"
 
 module CspaceConfigUntangler
   module Cli
-    class DebugCli < Thor
-      include CCU::Cli::Helpers
-
+    class Debug < CCU::Cli::SubcommandBase
       desc "check_xpath_depth",
         "Reports fields with unusual xpath depth (i.e. not 0, 1, 2, 3, or 4)"
       def check_xpath_depth

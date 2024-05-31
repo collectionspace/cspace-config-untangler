@@ -6,8 +6,9 @@ module CspaceConfigUntangler
   module Cli
     # Helper methods for CLI support
     module Helpers
-      def get_profiles
-        CCU::Cli::Helpers::ProfileGetter.call(options[:profiles])
+      # @param mode [:uiconfig, :api]
+      def get_profiles(mode = :uiconfig)
+        CCU::Cli::Helpers::ProfileGetter.call(options[:profiles], mode)
       end
 
       def parse_rectypes

@@ -1,12 +1,10 @@
 # frozen_string_literal: true
 
-require_relative "helpers"
+require_relative "subcommand_base"
 
 module CspaceConfigUntangler
   module Cli
-    class FieldsCli < Thor
-      include CCU::Cli::Helpers
-
+    class Fields < SubcommandBase
       desc "csv", "Write CSV containing full field data"
       option :output,
         desc: "Path to output file",

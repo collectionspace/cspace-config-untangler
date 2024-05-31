@@ -1,11 +1,11 @@
 # frozen_string_literal: true
 
-require_relative "helpers"
+require_relative "subcommand_base"
 
 module CspaceConfigUntangler
   module Cli
-    class AuthoritiesCli < Thor
-      include CCU::Cli::Helpers
+    class Authorities < CCU::Cli::SubcommandBase
+      remove_class_option :rectypes
 
       desc "defined", "List authority vocabularies defined in profiles"
       def defined

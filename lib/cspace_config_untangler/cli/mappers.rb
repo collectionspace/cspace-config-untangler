@@ -1,13 +1,11 @@
 # frozen_string_literal: true
 
 # rubocop:disable Layout/LineLength
-require_relative "helpers"
+require_relative "subcommand_base"
 
 module CspaceConfigUntangler
   module Cli
-    class MappersCli < Thor
-      include CCU::Cli::Helpers
-
+    class Mappers < SubcommandBase
       desc "manifest",
         "Writes JSON manifest of RecordMappers, as used by cspace-batch-import"
       long_desc <<~LONGDESC

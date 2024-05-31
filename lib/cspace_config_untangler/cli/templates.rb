@@ -1,13 +1,11 @@
 # frozen_string_literal: true
 
 # rubocop:disable Layout/LineLength
-require_relative "helpers"
+require_relative "subcommand_base"
 
 module CspaceConfigUntangler
   module Cli
-    class TemplatesCli < Thor
-      include CCU::Cli::Helpers
-
+    class Templates < SubcommandBase
       desc "write",
         "Write batch import CSV templates for given (or all) record types in the given profiles."
       long_desc <<-LONGDESC

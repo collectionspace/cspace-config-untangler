@@ -1,12 +1,10 @@
 # frozen_string_literal: true
 
-require_relative "helpers"
+require_relative "subcommand_base"
 
 module CspaceConfigUntangler
   module Cli
-    class FormsCli < Thor
-      include CCU::Cli::Helpers
-
+    class Forms < SubcommandBase
       desc "disabled", "List disabled forms in given profiles/record types"
       def disabled
         get_profiles.map do |profile|
