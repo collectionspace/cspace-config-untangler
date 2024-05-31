@@ -9,4 +9,4 @@ $LOAD_PATH << self_load_path unless is_gem ||
   $LOAD_PATH.include?(self_load_path)
 require "cspace_config_untangler"
 
-CspaceConfigUntangler::Cli::CommandLine.start(ARGV)
+CCU::Cli::TopCli.start(ARGV)

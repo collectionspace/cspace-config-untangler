@@ -1,11 +1,11 @@
 # frozen_string_literal: true
 
-require_relative "helpers"
+require_relative "subcommand_base"
 
 module CspaceConfigUntangler
   module Cli
-    class ReportsCli < Thor
-      include CCU::Cli::Helpers
+    class Reports < SubcommandBase
+      remove_class_option :profiles, :rectypes
 
       desc "qa", "Writes all QA reports to release directory"
       long_desc <<~LONG

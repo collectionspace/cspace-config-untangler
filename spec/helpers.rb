@@ -7,6 +7,13 @@ module Helpers
     File.join(CCU.app_dir, "spec", "fixtures")
   end
 
+  def delete_all_configs
+    FileUtils.rm(Dir.new(CCU.configdir)
+                 .children
+                 .select { |filename| filename.end_with?(".json") }
+                 .map { |filename| File.join(CCU.configdir, filename) })
+  end
+
   def set_profile_release(version = "7_0")
     CCU.config.release = version
     CCU.config.mapperdir = File.join(CCU.mapperdir, "community_profiles",

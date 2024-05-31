@@ -1,12 +1,10 @@
 # frozen_string_literal: true
 
-require_relative "helpers"
+require_relative "subcommand_base"
 
 module CspaceConfigUntangler
   module Cli
-    class RecTypesCli < Thor
-      include CCU::Cli::Helpers
-
+    class Rectypes < SubcommandBase
       desc "list", "Lists record types in each profile"
       def list
         get_profiles.each do |p|
