@@ -7,36 +7,28 @@ module CspaceConfigUntangler
   class Profile
     include CCU::ColumnNameStylable
 
-    # @return [String] name of the profile
-    attr_reader :name
-
+    attr_reader :authorities
     # @return [Hash] derived from JSON config for the profile
     attr_reader :config
-
-    attr_reader :authorities
-
-    # @return [Array<CCU::RecordType>] selected/specified for processing
-    attr_reader :rectypes
-
-    # @return [Array<String>] all non-ignored record type names in profile
-    attr_reader :rectypes_all
-
     # @return [Array<String>] names of extensions defined in the profile
     attr_reader :extensions
-
-    # @return [Array<String>] names of vocabularies defined in the profile
-    attr_reader :vocabularies
-
-    attr_reader :panels
-    attr_reader :form_fields
     attr_reader :field_defs
-
+    attr_reader :form_fields
     # @return [Hash] lookup by panel, inputTable, grouping, or field id
     # @todo refactor to Message objects
     attr_reader :messages
-
+    # @return [String] name of the profile
+    attr_reader :name
+    attr_reader :panels
+    # @return [Array<CCU::RecordType>] selected/specified for processing
+    attr_reader :rectypes
+    # @return [Array<String>] all non-ignored record type names in profile
+    attr_reader :rectypes_all
     # @return [:collapse, :explode]
     attr_reader :structured_date_treatment
+    # @return [Array<String>] shortIdentifier values of all vocabularies defined
+    #   as term sources for fields used in profile
+    attr_reader :vocabularies
 
     # @param profile [String] profile name; must match a file in `data/configs`
     #   directory, minus `.json` file extension

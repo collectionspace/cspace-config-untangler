@@ -23,7 +23,11 @@ module CspaceConfigUntangler
 
     attr_reader :profile, :name, :label, :id, :config, :ns, :panels,
       :input_tables, :forms, :structured_date_treatment,
-      :service_type, :subtypes, :record_search_field, :vocabularies
+      :service_type, :subtypes, :record_search_field
+
+    # @return [Array<String>] shortIdentifier values of all vocabularies defined
+    #   as term sources for fields used in record type
+    attr_reader :vocabularies
 
     def initialize(profileobj, rectypename)
       @profile = profileobj
