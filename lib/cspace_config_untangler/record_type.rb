@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require_relative "fields/definition/parser"
+require_relative "iterable"
 
 module CspaceConfigUntangler
   class RecordType
