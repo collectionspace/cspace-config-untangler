@@ -129,16 +129,16 @@ module CspaceConfigUntangler
 
     def authority_subtypes
       ast = @rectypes_all.select do |rt|
-              @config.dig(
-                "recordTypes", rt, "serviceConfig", "serviceType"
-              ) == "authority"
-            end
+        @config.dig(
+          "recordTypes", rt, "serviceConfig", "serviceType"
+        ) == "authority"
+      end
         .map { |rt| @config["recordTypes"][rt]["vocabularies"] }
         .map do |vocabhash|
-              vocabhash.map do |vocab, h|
-                h["serviceConfig"]["servicePath"]
-              end
-            end
+          vocabhash.map do |vocab, h|
+            h["serviceConfig"]["servicePath"]
+          end
+        end
         .flatten
         .reject { |e| e == "_ALL_" }
         .map { |refname| refname.match(/\((.*)\)/)[1] }
@@ -148,10 +148,10 @@ module CspaceConfigUntangler
 
     def object_and_procedures
       op = @rectypes_all.select do |rt|
-             @config.dig(
-               "recordTypes", rt, "serviceConfig", "serviceType"
-             ) == "procedure"
-           end
+        @config.dig(
+          "recordTypes", rt, "serviceConfig", "serviceType"
+        ) == "procedure"
+      end
         .map { |rt| @config["recordTypes"][rt]["serviceConfig"]["servicePath"] }
       op << "collectionobjects"
       op.sort

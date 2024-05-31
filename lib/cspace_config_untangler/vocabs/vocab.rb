@@ -36,7 +36,7 @@ module CspaceConfigUntangler
 
       def to_stdout
         "  #{short_identifier} -- #{csid} -- Updated: #{updated}\n"\
-        "    Used by: #{formatted_used_by}"
+          "    Used by: #{formatted_used_by}"
       end
 
       def used_by = @used_by ||= get_used_by

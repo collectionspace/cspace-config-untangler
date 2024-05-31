@@ -68,6 +68,8 @@ module CspaceConfigUntangler
     "publicart" => "5-0-0"
   }
 
+  # rubocop:disable Layout/LineLength
+
   # @return [nil, String] path to YAML file containing credentials for
   #   CollectionSpace::Client connections. Defaults to
   #   `#{user home dir}/.config/cspace-config-untangler/client_connection_config.yml`
@@ -84,6 +86,7 @@ module CspaceConfigUntangler
 
       nil
     end
+  # rubocop:enable Layout/LineLength
 
   # Don't change stuff after this
 
