@@ -17,13 +17,16 @@ module CspaceConfigUntangler
       attr_reader :profile, :csid, :uri, :refname, :updated, :workflow_state,
         :short_identifier, :display_name,
         :client
+      private attr_reader :configprofilename
 
       # @param definition [Hash] parsed record from Client response
       # @param profilename [String]
       # @param client [CollectionSpace::Client]
-      def initialize(definition, profilename, client)
+      # @param configprofilename [nil, String]
+      def initialize(definition, profilename, client, configprofilename)
         @profile = profilename
         @client = client
+        @configprofilename = configprofilename
         definition.each do |key, val|
           next unless KEEP_KEYS.key?(key)
 
@@ -63,14 +66,14 @@ module CspaceConfigUntangler
         fields
       end
 
-      private def config_profile = @config_profile ||= get_config_profile
+      def config_profile = @config_profile ||= get_config_profile
 
       private def get_config_profile
-        config = CCU.profiles.select { |p| p.start_with?(profile) }
-        return nil if config.empty?
+        return unless configprofilename
 
-        CCU::Profile.new(profile: config.first, rectypes: [])
+        CCU::Profile.new(profile: configprofilename, rectypes: [])
       end
+
       def to_s
         "<##{self.class}:#{object_id.to_s(8)} #{id}>"
       end
