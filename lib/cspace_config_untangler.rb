@@ -205,6 +205,21 @@ module CspaceConfigUntangler
       .first
   end
 
+  # Look up the versioned config name available for the given profile basename
+  # @param basename [String] like "core" or "anthro"
+  # @return [String, nil]
+  def profile_for(basename)
+    comm = profiles.select do |profile|
+      profile.start_with?(basename)
+    end
+    return comm.first unless comm.empty?
+
+    for_api_profile = CCU.client_connection_config&.dig(basename, "profile")
+    return unless for_api_profile
+
+    profiles.find { |profile| profile.start_with?(for_api_profile) }
+  end
+
   def safe_copy(hash)
     Marshal.load(Marshal.dump(hash))
   end

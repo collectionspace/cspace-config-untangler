@@ -72,9 +72,12 @@ instanced:
   base_uri: https://collectionspace.institution_d_name.org/cspace-services
   username: readonlyuser@institution_d_name.org
   password: randomstring
+  profile: anthro
 ----
 
 The top level key is the profile name the connection will be associated, minus any version suffix associated with the profile/UI config file. For example, you may have a UI config file for instancea_8-0-1. The key here would be just `instancea`.
+
+The profile key is not required, but can be used to indicate that the instance is using a UI config you have accessible in the Untangler.
 
 WARNING: While we can keep previous versions of UI config files to compare or go back in time, this is not true for client connections. Those are always made to the current, live instance.
 
