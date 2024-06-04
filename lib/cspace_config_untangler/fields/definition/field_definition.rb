@@ -48,7 +48,7 @@ module CspaceConfigUntangler
         end
 
         def to_csv
-          arr = [@config.profile, @config.rectype, @config.namespace.literal,
+          arr = [@config.profile, @config.rectype, @config.ns.literal,
             @id]
           arr << (@name || "")
           arr << (@schema_path ? @schema_path.join(" > ") : "")
