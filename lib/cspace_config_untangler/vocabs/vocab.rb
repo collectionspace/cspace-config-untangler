@@ -44,6 +44,17 @@ module CspaceConfigUntangler
         CCU::Vocabs::ItemGetter.call(self)
           .to_a
       end
+
+      # @return [Hash{String=>Array<CCU::Vocabs::VocabItem>}]
+      def duplicate_terms = @duplicate_terms ||= get_duplicate_terms
+
+      private def get_duplicate_terms
+        return [] if terms.empty?
+
+        terms.group_by { |term| term.display_name.downcase }
+          .reject { |term, arr| arr.length == 1 }
+      end
+
       def to_stdout(pad = 2)
         "#{" " * pad}#{short_identifier} -- #{csid} -- Updated: #{updated}\n"\
           "    Used by: #{formatted_used_by}"
