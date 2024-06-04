@@ -38,6 +38,18 @@ module CspaceConfigUntangler
         end
       end
 
+      desc "short_ids", "List short identifiers of defined vocabularies"
+      def short_ids
+        set_env(options[:env])
+
+        get_profiles(:api).each do |profile|
+          puts profile
+          puts CCU::Vocabs::Getter.call(profile)
+            .map { |vocab| "  #{vocab.short_identifier}" }
+            .sort
+        end
+      end
+
       no_commands do
         def set_env(env)
           return if env == "demo"
