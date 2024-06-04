@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require_relative "item_getter"
+
 module CspaceConfigUntangler
   module Vocabs
     # Represents a vocabulary
@@ -34,6 +36,14 @@ module CspaceConfigUntangler
         end
       end
 
+      # @return [Array<CCU::Vocabs::VocabItem>]
+      def terms = @terms ||= get_terms
+
+      private def get_terms
+        puts "Harvesting terms for #{id}..."
+        CCU::Vocabs::ItemGetter.call(self)
+          .to_a
+      end
       def to_stdout(pad = 2)
         "#{" " * pad}#{short_identifier} -- #{csid} -- Updated: #{updated}\n"\
           "    Used by: #{formatted_used_by}"
