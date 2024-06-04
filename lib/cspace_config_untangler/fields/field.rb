@@ -87,6 +87,10 @@ module CspaceConfigUntangler
         expert_csv_row
       end
 
+      def friendly_label
+        "#{rectype.name.upcase}: #{ui_path.join(" > ")} > #{label}"
+      end
+
       private
 
       def formatted_ui_path(orig)
