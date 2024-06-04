@@ -7,14 +7,18 @@ module CspaceConfigUntangler
     # Represents a vocabulary
     class Vocab
       KEEP_KEYS = {
+        "displayName" => :@display_name,
+        "shortIdentifier" => :@short_identifier,
+        "workflowState" => :@workflow_state,
+        "updatedAt" => :@updated,
         "csid" => :@csid,
         "uri" => :@uri,
-        "refName" => :@refname,
-        "updatedAt" => :@updated,
-        "workflowState" => :@workflow_state,
-        "shortIdentifier" => :@short_identifier,
-        "displayName" => :@display_name
+        "refName" => :@refname
       }
+
+      CSV_HEADERS = %w[profile ui_config] +
+        KEEP_KEYS.values.map { |val| val.to_s.tr("@", "") } +
+        ["used_by"]
 
       attr_reader :profile, :csid, :uri, :refname, :updated, :workflow_state,
         :short_identifier, :display_name,
@@ -55,9 +59,25 @@ module CspaceConfigUntangler
           .reject { |term, arr| arr.length == 1 }
       end
 
+      def to_csv
+        CSV_HEADERS.map { |hdr| get_csv_val(hdr) }
+      end
+
+      private def get_csv_val(hdr)
+        case hdr
+        when "used_by"
+          formatted_used_by
+        when "ui_config"
+          configprofilename
+        else
+          send(hdr.to_sym)
+        end
+      end
+
       def to_stdout(pad = 2)
+        indent = " " * (pad + 2)
         "#{" " * pad}#{short_identifier} -- #{csid} -- Updated: #{updated}\n"\
-          "    Used by: #{formatted_used_by}"
+          "#{indent}Used by: #{formatted_used_by}"
       end
 
       def used_by = @used_by ||= get_used_by
