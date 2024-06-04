@@ -57,6 +57,8 @@ children
 
 |9 |["name", "showDetachButton"] |ignore
 
+|8 |["multiline", "name"] |capture
+
 |5 |["embedded", "label", "name"] |capture
 
 |3 |["children", "name", "tabular"] |capture; iterate children
@@ -131,6 +133,20 @@ Treatment detail::
 
 <#CspaceConfigUntangler::Forms::Props:4110 core_9-0-0 / acquisition / default form / panel.acquisition.info / inputTable.acquisition.acquisitionAuthorizer / acquisitionAuthorizer>
 {"name"=>"acquisitionAuthorizer"}
+....
+
+==== multiline, name
+
+Description/understanding::
+  Defines a single field that displays as a multiline text box. Currently
+  only present on the `+annotationNote+` field in the OHC profile.
+Treatment detail::
+  Captured as a *form field*. Inherits namespace from parent. Iterative
+  processing terminates.
+
+....
+<#CspaceConfigUntangler::Forms::Props:3530 ohc_2-0-0-20240521 / collectionobject / default form / panel.collectionobject.id / collectionobjects_annotation.annotationGroupList / collectionobjects_annotation.annotationGroup / annotationNote>
+{"name"=>"annotationNote", "multiline"=>true}
 ....
 
 ==== children, name

@@ -33,6 +33,7 @@ module CspaceConfigUntangler
         ["children"],
         ["defaultMessage", "id", "values"],
         ["embedded", "label", "name"],
+        ["multiline", "name"],
         ["name", "showDetachButton"],
         ["name", "subpath"],
         ["name"],
