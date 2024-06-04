@@ -19,7 +19,27 @@ module CspaceConfigUntangler
         tabular type values].freeze
       KNOWN_KEYS = (CONTENT_KEYS + EMPTY_KEYS + DISPLAY_KEYS).freeze
 
-      # To update this, run `ccu debug form_subpaths -p all -m code`
+      # To update this, run `ccu forms props_key_sigs -p all`
+      KNOWN_KEYSIGS = [
+        ["_owner", "key", "props", "ref", "type"],
+        ["_owner", "key", "props", "ref"],
+        ["children", "collapsed", "collapsible", "name"],
+        ["children", "collapsible", "name"],
+        ["children", "name", "subpath"],
+        ["children", "name", "tabular"],
+        ["children", "name"],
+        ["children", "style"],
+        ["children", "subpath", "tabular"],
+        ["children"],
+        ["defaultMessage", "id", "values"],
+        ["embedded", "label", "name"],
+        ["name", "showDetachButton"],
+        ["name", "subpath"],
+        ["name"],
+        ["style"]
+      ]
+
+      # To update this, run `ccu forms subpaths -p all -m code`
       KNOWN_SUBPATHS = [["ns2:collectionobjects_common",
         "objectCountGroupList", "objectCountGroup", "0"],
         "ns2:acquisitions_commission", "ns2:acquisitions_lhmc",
@@ -61,6 +81,7 @@ module CspaceConfigUntangler
       # @param props [CCU::Forms::Props]
       def call(props)
         content_keys_populated(props)
+        check_keysigs(props)
         # check_assumed_empty_keys(props)
       end
 
@@ -77,6 +98,16 @@ module CspaceConfigUntangler
                          "#{props.warning_id} (#{__FILE__}, #{__LINE__}")
             props.add_error(:"empty_#{key}")
           end
+      end
+
+      def check_keysigs(props)
+        return if KNOWN_KEYSIGS.include?(props.keys.sort)
+
+        CCU.log.error("FORM STRUCTURE: UNKNOWN PROPS KEYSIG: "\
+                      "#{props.keys.sort.inspect} in #{props.warning_id}. "\
+                      "Add treatment handling in Forms::Props. "\
+                    "(#{__FILE__}, #{__LINE__}")
+        props.add_error(:unknown_keysig)
       end
 
       def check_assumed_empty_keys(props)

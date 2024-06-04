@@ -27,6 +27,7 @@ These changes are merged into the `main` branch, but have not been released. Aft
 
 === Added
 
+* Validation of key signatures in form props, and logging (as errors) of unknown key signatures
 * `ccu vocabs duplicate` command (leveraging REST API connections)
 * Ability connect to community-supported profile REST API by default, and configure REST API connections for other profiles
 * Mappers, manifest, templates for OHC 2.0.0 / 20240521
