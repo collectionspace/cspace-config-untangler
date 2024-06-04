@@ -7,10 +7,12 @@ module CspaceConfigUntangler
   module Vocabs
     module_function
 
-    # @param profiles [Array<String>] versionless profile basenames
-    def from_profiles(profiles)
-      profiles.map { |profile| CCU::Vocabs::Getter.call(profile) }
-        .flatten
+    # @param vocabs [Array<CCU::Vocabs::Vocab>] for a given profile
+    # @return [Hash{String=>Array<CCU::Vocabs::Vocab>}] key is display name of
+    #   duplicate vocabularies return in value
+    def duplicates(vocabs)
+      vocabs.group_by { |vocab| vocab.display_name.downcase }
+        .reject { |name, vocabs| vocabs.length == 1 }
     end
   end
 end

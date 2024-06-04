@@ -13,9 +13,9 @@ module CspaceConfigUntangler
             configprofilename = CCU.profile_for(profilename)
             client.all("vocabularies")
               .map do |vocab|
-              CCU::Vocabs::Vocab.new(vocab, profilename,
-                client, configprofilename)
-            end
+                CCU::Vocabs::Vocab.new(vocab, profilename,
+                  client, configprofilename)
+              end.to_a
           else
             puts client
             []

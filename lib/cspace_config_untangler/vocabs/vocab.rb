@@ -34,8 +34,8 @@ module CspaceConfigUntangler
         end
       end
 
-      def to_stdout
-        "  #{short_identifier} -- #{csid} -- Updated: #{updated}\n"\
+      def to_stdout(pad = 2)
+        "#{" " * pad}#{short_identifier} -- #{csid} -- Updated: #{updated}\n"\
           "    Used by: #{formatted_used_by}"
       end
 
