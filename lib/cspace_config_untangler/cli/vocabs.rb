@@ -27,10 +27,9 @@ module CspaceConfigUntangler
       desc "duplicate", "List vocabularies defined more than once in a profile"
       def duplicate
         set_env(options[:env])
+
         get_profiles(:api).each do |profile|
-          CCU::Vocabs::Getter.call(profile)
-            .group_by { |vocab| vocab.display_name.downcase }
-            .reject { |name, vocabs| vocabs.length == 1 }
+          CCU::Vocabs.duplicates(CCU::Vocabs::Getter.call(profile))
             .each do |name, vocabs|
               puts "#{profile} -- #{vocabs.first.display_name}"
               vocabs.sort_by { |vocab| vocab.updated }
