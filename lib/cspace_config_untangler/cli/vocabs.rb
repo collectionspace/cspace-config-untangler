@@ -24,22 +24,41 @@ module CspaceConfigUntangler
         aliases: "-e",
         enum: %w[demo dev qa]
 
+      mode_option = [:mode, {
+        desc: "Output mode in which to run command",
+        type: :string,
+        enum: %w[csv stdout],
+        default: "stdout",
+        aliases: "-m"
+      }]
+
+      outpath_option_hash = {
+        desc: "Path to output file, if run in csv mode",
+        type: :string,
+        aliases: "-o"
+      }
+
       desc "duplicate", "List vocabularies defined more than once in a profile"
+      method_option(*mode_option)
+      method_option :outpath, **outpath_option_hash.merge({
+        default: File.join(Bundler.root, "data", "duplicate_vocabs.csv")
+      })
       def duplicate
         set_env(options[:env])
 
-        get_profiles(:api).each do |profile|
-          CCU::Vocabs.duplicates(CCU::Vocabs::Getter.call(profile))
-            .each do |name, vocabs|
-              puts "#{profile} -- #{vocabs.first.display_name}"
-              vocabs.sort_by { |vocab| vocab.updated }
-                .each { |vocab| puts vocab.to_stdout }
-            end
-        end
+        CCU::Vocabs::DuplicateVocabReport.run(
+          profiles: get_profiles(:api),
+          mode: options[:mode].to_sym,
+          outpath: options[:outpath]
+        )
       end
 
       desc "duplicate_terms", "List vocabulary terms defined more than once "\
         "in a vocabulary"
+      method_option(*mode_option)
+      method_option :outpath, **outpath_option_hash.merge({
+        default: File.join(Bundler.root, "data", "duplicate_vocab_terms.csv")
+      })
       option :vocabs,
         desc: "Short identifiers of vocabs to check",
         type: :array,
