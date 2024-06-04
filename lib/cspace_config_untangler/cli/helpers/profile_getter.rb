@@ -17,8 +17,11 @@ module CspaceConfigUntangler
 
         private_class_method
 
-        def self.all_profiles
-          [CCU.main_profile, CCU.profiles].compact.flatten.uniq
+        def self.all_profiles(mode)
+          all = [CCU.main_profile, CCU.profiles].compact.flatten.uniq
+          return all if mode == :uiconfig
+
+          for_api(all)
         end
 
         def self.get(profiles, mode)
@@ -34,8 +37,12 @@ module CspaceConfigUntangler
             end
             acc.uniq
           when :api
-            profiles.map { |profile| profile.split("_").first }
+            for_api(profiles)
           end
+        end
+
+        def self.for_api(profiles)
+          profiles.map { |profile| profile.split("_").first }
         end
       end
     end

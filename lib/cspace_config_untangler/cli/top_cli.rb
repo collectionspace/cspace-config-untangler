@@ -11,6 +11,7 @@ require_relative "profiles"
 require_relative "rectypes"
 require_relative "reports"
 require_relative "templates"
+require_relative "vocabs"
 
 module CspaceConfigUntangler
   module Cli
@@ -55,6 +56,10 @@ module CspaceConfigUntangler
       desc "templates SUBCOMMAND",
         "Generate CSV templates for preparing data for cspace-batch-import"
       subcommand "templates", CCU::Cli::Templates
+
+      desc "vocabs SUBCOMMAND",
+        "Get info about vocabularies (dynamic term lists)"
+      subcommand "vocabs", CCU::Cli::Vocabs
 
       # desc 'test', 'temporary stuff for expediency'
       # def test
