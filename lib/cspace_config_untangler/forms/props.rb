@@ -205,6 +205,7 @@ module CspaceConfigUntangler
 
         keysigs = [
           %w[name],
+          %w[multiline name],
           %w[name subpath],
           %w[embedded label name]
         ]
