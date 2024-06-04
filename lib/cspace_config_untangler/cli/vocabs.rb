@@ -38,6 +38,33 @@ module CspaceConfigUntangler
         end
       end
 
+      desc "duplicate_terms", "List vocabulary terms defined more than once "\
+        "in a vocabulary"
+      option :vocabs,
+        desc: "Short identifiers of vocabs to check",
+        type: :array,
+        default: ["all"],
+        aliases: "-v"
+      def duplicate_terms
+        set_env(options[:env])
+
+        get_profiles(:api).each do |profile|
+          duplicates = filter_vocabs(
+            CCU::Vocabs::Getter.call(profile), options[:vocabs]
+          ).reject { |vocab| vocab.duplicate_terms.blank? }
+          next if duplicates.empty?
+
+          puts profile
+          duplicates.each do |vocab|
+            puts vocab.to_stdout
+            vocab.duplicate_terms.each do |name, items|
+              puts "    #{name}"
+              items.each { |item| puts item.to_stdout(6) }
+            end
+          end
+        end
+      end
+
       desc "short_ids", "List short identifiers of defined vocabularies"
       def short_ids
         set_env(options[:env])
@@ -55,6 +82,12 @@ module CspaceConfigUntangler
           return if env == "demo"
 
           CCU.config.instance_env = env.to_sym
+        end
+
+        def filter_vocabs(all, keep)
+          return all if keep == ["all"]
+
+          all.select { |vocab| keep.include?(vocab.short_identifier) }
         end
       end
     end
