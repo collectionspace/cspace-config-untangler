@@ -40,7 +40,7 @@ RSpec.describe CCU::Cli::Profiles do
         File.delete("#{fixtures}/compare_core_7-0-0_to_bonsai_5-0-0.csv")
       end
       let(:opts) do
-        {"profiles" => "core_7-0-0,bonsai_5-0-0", "output" => fixtures}
+        {"profiles" => "core_7-0-0,bonsai_5-0-0", "output_dir" => fixtures}
       end
       let(:msg) do
         <<~MSG
