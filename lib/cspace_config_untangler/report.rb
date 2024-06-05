@@ -92,8 +92,8 @@ module CspaceConfigUntangler
 
     def deversion_for_qa(row)
       fid = row["fid"]
-      row["fid"] = fid.sub(/_\d+(-\d+){2}(-rc\d+|) /, " ")
-      row["profile"] = row["profile"].sub(/_\d+(-\d+){2}(-rc\d+|)/, "")
+      row["fid"] = fid.sub(/_\d+[^ ]+ /, " ")
+      row["profile"] = row["profile"].sub(/_\d+.*/, "")
       row
     end
 
