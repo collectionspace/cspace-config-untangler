@@ -55,6 +55,10 @@ module CspaceConfigUntangler
 
       desc "duplicate_terms", "List vocabulary terms defined more than once "\
         "in a vocabulary"
+      long_desc "List vocabulary terms defined more than once in a "\
+        "vocabulary.\n\nA term is considered to be defined more than once "\
+        "if more than one term in the vocabulary shared the same downcased "\
+        "display name."
       method_option(*mode_option)
       method_option :outpath, **outpath_option_hash.merge({
         default: File.join(Bundler.root, "data", "duplicate_vocab_terms.csv")
@@ -64,24 +68,22 @@ module CspaceConfigUntangler
         type: :array,
         default: ["all"],
         aliases: "-v"
+      option :usage,
+        desc: "Whether to report usage of duplicate terms reported. This can "\
+        "cause the report to take a much longer time to run.",
+        type: :boolean,
+        default: false,
+        aliases: "-u"
       def duplicate_terms
         set_env(options[:env])
 
-        get_profiles(:api).each do |profile|
-          duplicates = filter_vocabs(
-            CCU::Vocabs::Getter.call(profile), options[:vocabs]
-          ).reject { |vocab| vocab.duplicate_terms.blank? }
-          next if duplicates.empty?
-
-          puts profile
-          duplicates.each do |vocab|
-            puts vocab.to_stdout
-            vocab.duplicate_terms.each do |name, items|
-              puts "    #{name}"
-              items.each { |item| puts item.to_stdout(6) }
-            end
-          end
-        end
+        CCU::Vocabs::DuplicateTermReport.run(
+          profiles: get_profiles(:api),
+          vocabs: options[:vocabs],
+          usage: options[:usage],
+          mode: options[:mode].to_sym,
+          outpath: options[:outpath]
+        )
       end
 
       desc "short_ids", "List short identifiers of defined vocabularies"

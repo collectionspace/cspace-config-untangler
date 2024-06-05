@@ -5,15 +5,15 @@ module CspaceConfigUntangler
     # Represents a vocabulary item (e.g. a term in a vocabulary)
     class VocabItem
       KEEP_KEYS = {
+        "displayName" => :@display_name,
+        "shortIdentifier" => :@short_identifier,
+        "workflowState" => :@workflow_state,
+        "updatedAt" => :@updated,
+        "termStatus" => :@status,
+        "proposed" => :@proposed,
         "csid" => :@csid,
         "uri" => :@uri,
-        "refName" => :@refname,
-        "updatedAt" => :@updated,
-        "workflowState" => :@workflow_state,
-        "proposed" => :@proposed,
-        "termStatus" => :@status,
-        "shortIdentifier" => :@short_identifier,
-        "displayName" => :@display_name
+        "refName" => :@refname
       }
 
       attr_reader :profile, :vocab, :csid, :uri, :refname, :updated,
@@ -33,9 +33,35 @@ module CspaceConfigUntangler
         end
       end
 
-      def to_stdout(pad = 4)
-        "#{" " * pad} #{display_name} #{short_identifier} #{csid} "\
-          "Updated: #{updated} Uses: #{uses}"
+      def headers(usage: false) = @headers ||= get_headers(usage)
+
+      private def get_headers(usage)
+        base = %w[profile vocab] +
+          KEEP_KEYS.values.map { |val| val.to_s.tr("@", "") }
+        return base unless usage
+
+        base + %w[uses]
+      end
+
+      def to_csv(usage: false)
+        headers(usage: usage).map { |hdr| get_csv_val(hdr) }
+      end
+
+      private def get_csv_val(hdr)
+        case hdr
+        when "vocab"
+          vocab.short_identifier
+        else
+          send(hdr.to_sym)
+        end
+      end
+
+      def to_stdout(pad: 4, usage: false)
+        base = "#{" " * pad} #{display_name} #{short_identifier} #{csid} "\
+          "Updated: #{updated}"
+        return base unless usage
+
+        "#{base} Uses: #{uses}"
       end
 
       def uses = @uses ||= get_uses
