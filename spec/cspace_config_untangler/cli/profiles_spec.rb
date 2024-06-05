@@ -33,6 +33,8 @@ RSpec.describe CCU::Cli::Profiles do
 
   describe "#compare" do
     let(:outfile) { "#{fixtures}/compare_core_7-0-0_to_bonsai_5-0-0.csv" }
+    let(:result) { subject.invoke(:compare, [], opts) }
+
     context "with expected parameters" do
       after(:each) do
         File.delete("#{fixtures}/compare_core_7-0-0_to_bonsai_5-0-0.csv")
@@ -54,7 +56,7 @@ RSpec.describe CCU::Cli::Profiles do
 
       it "writes csv file to given output directory" do
         allow(subject.shell).to receive(:say)
-        subject.invoke(:compare, [], opts)
+        result
         expect(subject.shell).to have_received(:say).with(msg.chomp).once
         expect(File.exist?(outfile)).to be true
       end
@@ -65,9 +67,8 @@ RSpec.describe CCU::Cli::Profiles do
       let(:msg) { "Can only compare two profiles at a time" }
       it "returns warning message" do
         allow(subject.shell).to receive(:say)
-        subject.invoke(:compare, [], opts)
-        expect(subject.shell).to have_received(:say).with(msg.chomp).once
-        expect(File.exist?(outfile)).to be false
+        expect(subject.shell).to receive(:say).with(msg.chomp).once
+        expect { result }.to raise_error(SystemExit)
       end
     end
 
@@ -76,9 +77,8 @@ RSpec.describe CCU::Cli::Profiles do
       let(:msg) { "Needs two profiles to compare" }
       it "returns warning message" do
         allow(subject.shell).to receive(:say)
-        subject.invoke(:compare, [], opts)
-        expect(subject.shell).to have_received(:say).with(msg.chomp).once
-        expect(File.exist?(outfile)).to be false
+        expect(subject.shell).to receive(:say).with(msg.chomp).once
+        expect { result }.to raise_error(SystemExit)
       end
     end
   end
