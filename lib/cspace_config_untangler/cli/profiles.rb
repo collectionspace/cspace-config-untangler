@@ -44,8 +44,10 @@ module CspaceConfigUntangler
 
         if profiles.length > 2
           say("Can only compare two profiles at a time")
+          exit(1)
         elsif profiles.length == 1
           say("Needs two profiles to compare")
+          exit(1)
         else
           comparer = CCU::ProfileComparison.new(profiles, options[:output])
           comparer.write_csv
