@@ -22,6 +22,7 @@ module CspaceConfigUntangler
       fullmsg = [basemsg, msgissue].compact.join(" ")
       warn([fullmsg, source].compact.join(":\n"))
       CCU.log.warn([fullmsg, source].compact.join(": "))
+      warned << warned_key
     end
 
     private
