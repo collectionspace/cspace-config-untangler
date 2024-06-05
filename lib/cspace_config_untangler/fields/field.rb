@@ -274,13 +274,13 @@ module CspaceConfigUntangler
           )
           base = "field.conservation_common.sampleReturned"
           msgs["#{base}.fullName"] || msgs["#{base}.nadme"]
-        elsif val.start_with?("conservation_livingplant")
-          fixedval = val.sub(
+        elsif id.start_with?("conservation_livingplant")
+          fixedval = id.sub(
             "conservation_livingplant", "ext.livingplant"
           )
           lookup_display_name(fixedval)
         else
-          alt_fieldname_lookup(val)
+          alt_fieldname_lookup(id)
         end
       end
 
