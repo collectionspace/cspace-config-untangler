@@ -104,6 +104,9 @@ module CspaceConfigUntangler
         say(message.join("\n"))
       end
 
+      remove_class_option :rectypes
+      remove_class_option :profiles
+
       desc "switch_release", "Deletes configs and copies community profile "\
         "configs from specified release as current configs"
       option :release,
