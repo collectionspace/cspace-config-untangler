@@ -39,6 +39,7 @@ These changes are merged into the `main` branch, but have not been released. Aft
 
 === Bugfixes
 
+* Remove unnecessary/redundant class options on commands in `CCU::Cli::Profiles`
 * Stop `CCU::UpgradeWarner` from emitting duplicate warnings
 * Fix variable names in `CCU::Fields::Field`
 * Do not write unused authority report CSV to an .rb file 🤣

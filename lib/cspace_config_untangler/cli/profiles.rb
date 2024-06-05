@@ -7,10 +7,25 @@ require_relative "subcommand_base"
 module CspaceConfigUntangler
   module Cli
     class Profiles < SubcommandBase
-      desc "all", "Print the names of all known profiles to screen"
-      def all
-        say([CCU.main_profile,
-          CCU.profiles].compact.flatten.uniq.sort.join("\n"))
+      remove_class_option :rectypes
+
+      desc "by_extension",
+        "List all extensions used in profiles, and list which profile uses each"
+      def by_extension
+        exts = {}
+        get_profiles.each do |p|
+          CCU::Profile.new(profile: p).extensions.each do |ext|
+            if exts.has_key?(ext)
+              exts[ext] << p
+            else
+              exts[ext] = [p]
+            end
+          end
+        end
+        exts.keys.sort.each do |ext|
+          puts ext
+          exts[ext].each { |p| puts "  #{p}" }
+        end
       end
 
       desc "check",
@@ -42,7 +57,7 @@ module CspaceConfigUntangler
         > $ exe/ccu profiles compare -p core_6_1_0,anthro_4_1_2
         >   -o /Users/you/files
       LONGDESC
-      option :output,
+      option :output_dir,
         desc: "Path to directory in which to output file. Name of the file "\
         "is hardcoded, using the names of the profiles.",
         default: CCU.datadir,
@@ -57,36 +72,12 @@ module CspaceConfigUntangler
           say("Needs two profiles to compare")
           exit(1)
         else
-          comparer = CCU::ProfileComparison.new(profiles, options[:output])
+          comparer = CCU::ProfileComparison.new(profiles, options[:output_dir])
           comparer.write_csv
           message = "#{comparer.summary}\n\n"\
             "Wrote detailed report to: #{comparer.output}"
           say(message)
         end
-      end
-
-      desc "by_extension",
-        "List all extensions used in profiles, and list which profile uses each"
-      def by_extension
-        exts = {}
-        get_profiles.each do |p|
-          CCU::Profile.new(profile: p).extensions.each do |ext|
-            if exts.has_key?(ext)
-              exts[ext] << p
-            else
-              exts[ext] = [p]
-            end
-          end
-        end
-        exts.keys.sort.each do |ext|
-          puts ext
-          exts[ext].each { |p| puts "  #{p}" }
-        end
-      end
-
-      desc "main", "Print the name of the main profile"
-      def main
-        say(CCU.main_profile)
       end
 
       desc "readable",
@@ -104,8 +95,18 @@ module CspaceConfigUntangler
         say(message.join("\n"))
       end
 
-      remove_class_option :rectypes
       remove_class_option :profiles
+
+      desc "all", "Print the names of all known profiles to screen"
+      def all
+        say([CCU.main_profile,
+          CCU.profiles].compact.flatten.uniq.sort.join("\n"))
+      end
+
+      desc "main", "Print the name of the main profile"
+      def main
+        say(CCU.main_profile)
+      end
 
       desc "switch_release", "Deletes configs and copies community profile "\
         "configs from specified release as current configs"
