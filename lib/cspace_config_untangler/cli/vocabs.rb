@@ -36,6 +36,21 @@ module CspaceConfigUntangler
         aliases: "-o"
       }
 
+      desc "all", "List vocabularies defined in profile(s)"
+      method_option(*mode_option)
+      method_option :outpath, **outpath_option_hash.merge({
+        default: File.join(Bundler.root, "data", "vocabs.csv")
+      })
+      def all
+        set_env(options[:env])
+
+        CCU::Vocabs::AllVocabReport.run(
+          profiles: get_profiles(:api),
+          mode: options[:mode].to_sym,
+          outpath: options[:outpath]
+        )
+      end
+
       desc "duplicate", "List vocabularies defined more than once in a profile"
       method_option(*mode_option)
       method_option :outpath, **outpath_option_hash.merge({
