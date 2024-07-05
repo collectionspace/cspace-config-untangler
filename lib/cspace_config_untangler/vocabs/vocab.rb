@@ -23,16 +23,16 @@ module CspaceConfigUntangler
       attr_reader :profile, :csid, :uri, :refname, :updated, :workflow_state,
         :short_identifier, :display_name,
         :client
-      private attr_reader :configprofilename
+      private attr_reader :configprofile
 
       # @param definition [Hash] parsed record from Client response
       # @param profilename [String]
       # @param client [CollectionSpace::Client]
-      # @param configprofilename [nil, String]
-      def initialize(definition, profilename, client, configprofilename)
+      # @param configprofile [nil, CCU::Profile]
+      def initialize(definition, profilename, client, configprofile)
         @profile = profilename
         @client = client
-        @configprofilename = configprofilename
+        @configprofile = configprofile
         definition.each do |key, val|
           next unless KEEP_KEYS.key?(key)
 
@@ -68,7 +68,7 @@ module CspaceConfigUntangler
         when "used_by"
           formatted_used_by
         when "ui_config"
-          configprofilename
+          configprofile.name
         else
           send(hdr.to_sym)
         end
@@ -95,9 +95,9 @@ module CspaceConfigUntangler
       end
 
       private def get_used_by
-        return :no_config_profile unless config_profile
+        return :no_config_profile unless configprofile
 
-        fields = config_profile.fields
+        fields = configprofile.fields
           .select do |field|
           field.vocabulary_controlled? &&
             field.controlled_by?(short_identifier)
@@ -105,14 +105,6 @@ module CspaceConfigUntangler
         return :not_used if fields.empty?
 
         fields
-      end
-
-      def config_profile = @config_profile ||= get_config_profile
-
-      private def get_config_profile
-        return unless configprofilename
-
-        CCU::Profile.new(profile: configprofilename, rectypes: [])
       end
 
       def to_s
