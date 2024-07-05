@@ -12,8 +12,6 @@ module CspaceConfigUntangler
     #   connection config file" section for more info on configuring
     #   such connections
     class Vocabs < CCU::Cli::SubcommandBase
-      # include CCU::Cli::Helpers
-
       remove_class_option :rectypes
 
       class_option :env,
