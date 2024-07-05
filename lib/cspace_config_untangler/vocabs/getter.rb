@@ -11,10 +11,11 @@ module CspaceConfigUntangler
           client = get_client(profilename)
           if client.is_a?(CollectionSpace::Client)
             configprofilename = CCU.profile_for(profilename)
+            configprofile = CCU::Profile.new(profile: configprofilename)
             client.all("vocabularies")
               .map do |vocab|
                 CCU::Vocabs::Vocab.new(vocab, profilename,
-                  client, configprofilename)
+                  client, configprofile)
               end.to_a
           else
             puts client
