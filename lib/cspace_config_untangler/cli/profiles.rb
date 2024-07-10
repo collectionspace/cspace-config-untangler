@@ -8,9 +8,11 @@ module CspaceConfigUntangler
   module Cli
     class Profiles < SubcommandBase
       remove_class_option :rectypes
+      remove_class_option :profiles
 
       desc "by_extension",
         "List all extensions used in profiles, and list which profile uses each"
+      method_option(*profiles_option)
       def by_extension
         exts = {}
         get_profiles.each do |p|
@@ -30,6 +32,7 @@ module CspaceConfigUntangler
 
       desc "check",
         "Prints to screen the names of profiles that will be processed"
+      method_option(*profiles_option)
       def check
         profiles = get_profiles
         say(profiles.join("\n"))
@@ -57,6 +60,7 @@ module CspaceConfigUntangler
         > $ exe/ccu profiles compare -p core_6_1_0,anthro_4_1_2
         >   -o /Users/you/files
       LONGDESC
+      method_option(*profiles_option)
       option :output_dir,
         desc: "Path to directory in which to output file. Name of the file "\
         "is hardcoded, using the names of the profiles.",
@@ -83,6 +87,7 @@ module CspaceConfigUntangler
       desc "readable",
         "REFORMATS (in place) JSON profile configs so that they are not one "\
         "very long line. Non-destructive if run over JSON multiple times."
+      method_option(*profiles_option)
       def readable
         message = []
         get_profiles.each do |p|
@@ -94,8 +99,6 @@ module CspaceConfigUntangler
         end
         say(message.join("\n"))
       end
-
-      remove_class_option :profiles
 
       desc "all", "Print the names of all known profiles to screen"
       def all
