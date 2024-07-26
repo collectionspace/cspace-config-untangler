@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require_relative "../namespace"
+require_relative "../fields/definition/namespace"
 require_relative "iterator"
 
 module CspaceConfigUntangler
