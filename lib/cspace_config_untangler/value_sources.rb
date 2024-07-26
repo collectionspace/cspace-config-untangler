@@ -5,7 +5,6 @@ require_relative "value_sources/authority"
 require_relative "value_sources/no_source"
 require_relative "value_sources/option_list"
 require_relative "value_sources/refname"
-require_relative "value_sources/reportable"
 require_relative "value_sources/vocabulary"
 
 module CspaceConfigUntangler
