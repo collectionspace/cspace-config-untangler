@@ -73,7 +73,7 @@ RSpec.describe CCU::Cli::Profiles do
     end
 
     context "with only one profile specified" do
-      let(:opts) { {"output" => fixtures} }
+      let(:opts) { {"profiles" => "core_7-0-0", "output" => fixtures} }
       let(:msg) { "Needs two profiles to compare" }
       it "returns warning message" do
         allow(subject.shell).to receive(:say)
