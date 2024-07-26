@@ -39,8 +39,8 @@ module CspaceConfigUntangler
 
         def csv_header
           %w[profile record_type namespace field_id field_name
-            schema_path required repeats group_repeats data_type data_source
-            option_list_values]
+            schema_path required repeats group_repeats data_type
+            data_source_type data_source_name option_list_values]
         end
 
         def rectype
@@ -56,10 +56,11 @@ module CspaceConfigUntangler
           arr << (@repeats || "")
           arr << (@in_repeating_group || "")
           arr << (@data_type || "")
-          arr << if @value_source
-            @value_source.map(&:fields_csv_label).compact.join(", ")
+          if @value_source
+            arr << @value_source.map(&:csv_type).compact.uniq.join(", ")
+            arr << @value_source.map(&:csv_name).compact.uniq.join(", ")
           else
-            ""
+            2.times { arr << "" }
           end
           arr << (@value_list ? @value_list.join(", ") : "")
           arr

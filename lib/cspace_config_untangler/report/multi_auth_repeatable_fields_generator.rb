@@ -20,7 +20,7 @@ module CspaceConfigUntangler
       end
 
       def call
-        res = source.select { |row| multi_auth?(row) && repeatable?(row) }
+        res = source.select { |row| repeatable_multi_auth?(row) }
           .map { |row| simplify(row) }
 
         headers = res.first.headers
@@ -43,31 +43,35 @@ module CspaceConfigUntangler
         CCU::Report.get_all_fields(release: release, outmode: :friendly)
       end
 
+      def repeatable_multi_auth?(row) = multi_auth?(row) && repeatable?(row)
+
+      def multi_auth?(row)
+        type = row["data_source_type"]
+        return false if type.blank?
+        return false unless type == "authority"
+
+        name = row["data_source_name"]
+        return true if name.split(";").length > 1
+
+        false
+      end
+
+      def repeatable?(row) = repeats?(row) || in_repeatable_group?(row)
+
       def in_repeatable_group?(row)
         val = row["group_repeats"]
         return false if val.blank?
+        return true if ["as part of larger repeating group", "y"].any?(val)
 
-        true if ["as part of larger repeating group", "y"].any?(val)
-      end
-
-      def multi_auth?(row)
-        val = row["data_source"]
-        return false if val.blank?
-        return false unless val["authority"]
-
-        vals = val.split(";")
-        true if vals.length > 1
-      end
-
-      def repeatable?(row)
-        repeats?(row) || in_repeatable_group?(row)
+        false
       end
 
       def repeats?(row)
         val = row["repeats"]
         return false if val.blank?
+        return true if val == "y"
 
-        true if val == "y"
+        false
       end
 
       def simplify(row)

@@ -13,6 +13,10 @@ module CspaceConfigUntangler
         @config = profile.config.dig("recordTypes", type)
       end
 
+      def csv_type = source_type unless name == "citation/shared"
+
+      def csv_name = name unless name == "citation/shared"
+
       def column_header_consistent(fieldname)
         "#{fieldname}#{type.capitalize}#{subtype.capitalize}"
       end

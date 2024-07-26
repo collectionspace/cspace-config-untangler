@@ -1,599 +1,599 @@
-profile,record_type,field,record_section,path_to_field,data_type,required,repeats,group_repeats,data_source,option_list_values,record_type_machine_name,field_machine_name
-materials_4-0-0,Acquisition,Reference number,Acquisition Information,"",string,y,n,n/a,"","",acquisition,acquisitionReferenceNumber
-materials_4-0-0,Acquisition,Accession date,Acquisition Information,"",structured date group,n,n,n/a,"","",acquisition,accessionDateGroup
-materials_4-0-0,Acquisition,Authorizer,Acquisition Information,Authorization,string,n,n,n/a,authority: person/local,"",acquisition,acquisitionAuthorizer
-materials_4-0-0,Acquisition,Authorization date,Acquisition Information,Authorization,date,n,n,n/a,"","",acquisition,acquisitionAuthorizerDate
-materials_4-0-0,Acquisition,Acquisition date,Acquisition Information,"",structured date group,n,y,n,"","",acquisition,acquisitionDateGroup
-materials_4-0-0,Acquisition,Acquisition method,Acquisition Information,"",string,n,n,n/a,option list: acquisitionMethods,"bequest, commission, exchange, found in collection, gift, purchase, transfer, treasure, unknown",acquisition,acquisitionMethod
-materials_4-0-0,Acquisition,Acquisition source,Acquisition Information,"",string,n,y,n,authority: person/local; authority: person/shared; authority: organization/local; authority: organization/shared,"",acquisition,acquisitionSource
-materials_4-0-0,Acquisition,Group purchase price currency,Acquisition Information,Price Information > Group purchase price,string,n,n,n/a,vocabulary: currency,"",acquisition,groupPurchasePriceCurrency
-materials_4-0-0,Acquisition,Group purchase price value,Acquisition Information,Price Information > Group purchase price,float,n,n,n/a,"","",acquisition,groupPurchasePriceValue
-materials_4-0-0,Acquisition,Object offer price currency,Acquisition Information,Price Information > Object offer price,string,n,n,n/a,vocabulary: currency,"",acquisition,objectOfferPriceCurrency
-materials_4-0-0,Acquisition,Object offer price value,Acquisition Information,Price Information > Object offer price,float,n,n,n/a,"","",acquisition,objectOfferPriceValue
-materials_4-0-0,Acquisition,Object purchaser offer price currency,Acquisition Information,Price Information > Object purchaser offer price,string,n,n,n/a,vocabulary: currency,"",acquisition,objectPurchaseOfferPriceCurrency
-materials_4-0-0,Acquisition,Object purchaser offer price value,Acquisition Information,Price Information > Object purchaser offer price,float,n,n,n/a,"","",acquisition,objectPurchaseOfferPriceValue
-materials_4-0-0,Acquisition,Object purchase price currency,Acquisition Information,Price Information > Object purchase price,string,n,n,n/a,vocabulary: currency,"",acquisition,objectPurchasePriceCurrency
-materials_4-0-0,Acquisition,Object purchase price value,Acquisition Information,Price Information > Object purchase price,float,n,n,n/a,"","",acquisition,objectPurchasePriceValue
-materials_4-0-0,Acquisition,Original object purchase price currency,Acquisition Information,Price Information > Original object purchase price,string,n,n,n/a,vocabulary: currency,"",acquisition,originalObjectPurchasePriceCurrency
-materials_4-0-0,Acquisition,Original object purchase price value,Acquisition Information,Price Information > Original object purchase price,float,n,n,n/a,"","",acquisition,originalObjectPurchasePriceValue
-materials_4-0-0,Acquisition,Credit line,Acquisition Information,"",string,n,n,n/a,"","",acquisition,creditLine
-materials_4-0-0,Acquisition,Acquisition reason,Acquisition Information,"",string,n,n,n/a,"","",acquisition,acquisitionReason
-materials_4-0-0,Acquisition,Note,Acquisition Information,"",string,n,n,n/a,"","",acquisition,acquisitionNote
-materials_4-0-0,Acquisition,Provisos,Acquisition Information,"",string,n,n,n/a,"","",acquisition,acquisitionProvisos
-materials_4-0-0,Acquisition,Field collection event name,Object Collection Information,"",string,n,y,n,"","",acquisition,fieldCollectionEventName
-materials_4-0-0,Citation,Term display name,Citation Information,Term,string,y,n,y,"","",citation,termDisplayName
-materials_4-0-0,Citation,Term status,Citation Information,Term,string,n,n,y,option list: citationTermStatuses,"accepted, provisional, rejected, under review",citation,termStatus
-materials_4-0-0,Citation,Term type,Citation Information,Term,string,n,n,y,vocabulary: citationtermtype,"",citation,termType
-materials_4-0-0,Citation,Term flag,Citation Information,Term,string,n,n,y,vocabulary: citationtermflag,"",citation,termFlag
-materials_4-0-0,Citation,Term language,Citation Information,Term,string,n,n,y,vocabulary: languages,"",citation,termLanguage
-materials_4-0-0,Citation,Term preferred for lang,Citation Information,Term,boolean,n,n,y,"","",citation,termPrefForLang
-materials_4-0-0,Citation,Term full citation,Citation Information,Term,string,n,n,y,"","",citation,termFullCitation
-materials_4-0-0,Citation,Term title,Citation Information,Term,string,n,n,y,"","",citation,termTitle
-materials_4-0-0,Citation,Term subtitle,Citation Information,Term,string,n,n,y,"","",citation,termSubTitle
-materials_4-0-0,Citation,Term section title,Citation Information,Term,string,n,n,y,"","",citation,termSectionTitle
-materials_4-0-0,Citation,Term volume,Citation Information,Term,string,n,n,y,"","",citation,termVolume
-materials_4-0-0,Citation,Term issue,Citation Information,Term,string,n,n,y,"","",citation,termIssue
-materials_4-0-0,Citation,Term source name,Citation Information,Term > Source,string,n,n,y,authority: citation/local,"",citation,termSource
-materials_4-0-0,Citation,Term source detail,Citation Information,Term > Source,string,n,n,y,"","",citation,termSourceDetail
-materials_4-0-0,Citation,Term source ID,Citation Information,Term > Source,string,n,n,y,"","",citation,termSourceID
-materials_4-0-0,Citation,Term source note,Citation Information,Term > Source,string,n,n,y,"","",citation,termSourceNote
-materials_4-0-0,Citation,Publisher,Citation Information,Publication,string,n,n,y,authority: organization/local,"",citation,publisher
-materials_4-0-0,Citation,Publication place,Citation Information,Publication,string,n,n,y,authority: place/local,"",citation,publicationPlace
-materials_4-0-0,Citation,Publication date,Citation Information,Publication,structured date group,n,n,y,"","",citation,publicationDate
-materials_4-0-0,Citation,Publication edition,Citation Information,Publication,string,n,n,y,"","",citation,edition
-materials_4-0-0,Citation,Publication page(s),Citation Information,Publication,string,n,n,y,"","",citation,pages
-materials_4-0-0,Citation,Agent name,Citation Information,Agent,string,n,n,y,authority: person/local; authority: organization/local,"",citation,agent
-materials_4-0-0,Citation,Agent role,Citation Information,Agent,string,n,n,y,vocabulary: agentinfotype,"",citation,role
-materials_4-0-0,Citation,Agent note,Citation Information,Agent,string,n,n,y,"","",citation,note
-materials_4-0-0,Citation,Note,Citation Information,"",string,n,n,n/a,"","",citation,citationNote
-materials_4-0-0,Citation,Resource identifier,Citation Information,Resource identifier,string,n,n,y,"","",citation,resourceIdent
-materials_4-0-0,Citation,Resource identifier type,Citation Information,Resource identifier,string,n,n,y,vocabulary: resourceidtype,"",citation,type
-materials_4-0-0,Citation,Resource identifier capture date,Citation Information,Resource identifier,structured date group,n,n,y,"","",citation,captureDate
-materials_4-0-0,Citation,Related term,Citation Information,Related term,string,n,n,y,"","",citation,relatedTerm
-materials_4-0-0,Citation,Related term type,Citation Information,Related term,string,n,n,y,vocabulary: relationtypetype,"",citation,relationType
-materials_4-0-0,Object,Accession number,Object Identification Information,"",string,y,n,n/a,"","",collectionobject,objectNumber
-materials_4-0-0,Object,Number of objects,Object Identification Information,"",integer,n,n,n,"","",collectionobject,objectCount
-materials_4-0-0,Object,Other number value,Object Identification Information,Other number,string,n,n,y,"","",collectionobject,numberValue
-materials_4-0-0,Object,Other number type,Object Identification Information,Other number,string,n,n,y,option list: numberTypes,"QR code, barcode, callnumber, lender, obsolete, previous, serial, unknown",collectionobject,numberType
-materials_4-0-0,Object,Collection,Object Identification Information,"",string,n,n,n/a,option list: collections,"circulating, non_circulating",collectionobject,collection
-materials_4-0-0,Object,Named collection,Object Identification Information,"",string,n,y,n,authority: work/local,"",collectionobject,namedCollection
-materials_4-0-0,Object,Record status,Object Identification Information,"",string,n,n,n/a,option list: recordStatuses,"approved, in-process, new, temporary",collectionobject,recordStatus
-materials_4-0-0,Object,Publish to,Object Identification Information,"",string,n,y,n,vocabulary: publishto,"",collectionobject,publishTo
-materials_4-0-0,Object,Inventory status,Object Identification Information,"",string,n,y,n,vocabulary: inventorystatus,"",collectionobject,inventoryStatus
-materials_4-0-0,Object,Production description,Object Identification Information,"",string,n,y,n,"","",collectionobject,briefDescription
-materials_4-0-0,Object,Material,Object Identification Information,Material,string,n,y,n,authority: material/local; authority: material/shared,"",collectionobject,material
-materials_4-0-0,Object,Handling,Object Identification Information,Handling,string,n,n,y,vocabulary: materialhandling,"",collectionobject,handling
-materials_4-0-0,Object,Handling note,Object Identification Information,Handling,string,n,n,y,"","",collectionobject,handlingNote
-materials_4-0-0,Object,Container,Object Identification Information,Container,string,n,n,y,vocabulary: materialcontainer,"",collectionobject,container
-materials_4-0-0,Object,Container note,Object Identification Information,Container,string,n,n,y,"","",collectionobject,containerNote
-materials_4-0-0,Object,Condition,Object Identification Information,Condition,string,n,n,y,vocabulary: materialcondition,"",collectionobject,condition
-materials_4-0-0,Object,Condition note,Object Identification Information,Condition,string,n,n,y,"","",collectionobject,conditionNote
-materials_4-0-0,Object,Computed current location,Object Identification Information,"",string,n,n,n/a,authority: location/local; authority: location/offsite; authority: organization/local; authority: organization/shared,"",collectionobject,computedCurrentLocation
-materials_4-0-0,Object,Annotation type,Object Identification Information,Annotation,string,n,n,y,vocabulary: annotationtype,"",collectionobject,annotationType
-materials_4-0-0,Object,Annotation date,Object Identification Information,Annotation,date,n,n,y,"","",collectionobject,annotationDate
-materials_4-0-0,Object,Annotation author,Object Identification Information,Annotation,string,n,n,y,authority: person/local; authority: person/shared,"",collectionobject,annotationAuthor
-materials_4-0-0,Object,Annotation note,Object Identification Information,Annotation,string,n,n,y,"","",collectionobject,annotationNote
-materials_4-0-0,Object,Object type,Object Description Information,"",string,n,y,n,option list: objectTypes,"fragment, mock_up, product, prototype, sample",collectionobject,objectStatus
-materials_4-0-0,Object,Finish,Object Description Information,Finish,string,n,n,y,vocabulary: materialfinish,"",collectionobject,finish
-materials_4-0-0,Object,Finish note,Object Description Information,Finish,string,n,n,y,"","",collectionobject,finishNote
-materials_4-0-0,Object,Color,Object Description Information,"",string,n,y,n,"","",collectionobject,color
-materials_4-0-0,Object,Generic color,Object Description Information,"",string,n,y,n,vocabulary: materialgenericcolor,"",collectionobject,materialGenericColor
-materials_4-0-0,Object,Physical description,Object Description Information,"",string,n,y,n,"","",collectionobject,materialPhysicalDescription
-materials_4-0-0,Object,Sample size,Object Description Information,Dimensions,string,n,n,y,"","",collectionobject,dimensionSummary
-materials_4-0-0,Object,Measurement dimension,Object Description Information,Dimensions > Measurement,string,n,n,y,option list: dimensions,"area, base, circumference, count, depth, diameter, height, intended duration, length, running-time, screen resolution, target, volume, weight, width",collectionobject,dimension
-materials_4-0-0,Object,Measurement value,Object Description Information,Dimensions > Measurement,float,n,n,y,"","",collectionobject,value
-materials_4-0-0,Object,Measurement unit,Object Description Information,Dimensions > Measurement,string,n,n,y,option list: measurementUnits,"carats, centimeters, cubic-centimeters, dpi, feet, hours, inches, kilograms, liters, meters, millimeters, milliseconds, minutes, ounces, pixels, pounds, ppi, seconds, square-feet, stories, tons",collectionobject,measurementUnit
-materials_4-0-0,Concept,Term display name,Concept Information,Term,string,y,n,y,"","",concept,termDisplayName
-materials_4-0-0,Concept,Term name,Concept Information,Term,string,n,n,y,"","",concept,termName
-materials_4-0-0,Concept,Term qualifier,Concept Information,Term,string,n,n,y,"","",concept,termQualifier
-materials_4-0-0,Concept,Term status,Concept Information,Term,string,n,n,y,option list: conceptTermStatuses,"accepted, provisional, rejected, under review",concept,termStatus
-materials_4-0-0,Concept,Term type,Concept Information,Term,string,n,n,y,option list: conceptTermTypes,"alternate descriptor, descriptor, used for term",concept,termType
-materials_4-0-0,Concept,Term flag,Concept Information,Term,string,n,n,y,vocabulary: concepttermflag,"",concept,termFlag
-materials_4-0-0,Concept,Term historical status,Concept Information,Term,string,n,n,y,option list: conceptHistoricalStatuses,"both, current, historical, unknown",concept,historicalStatus
-materials_4-0-0,Concept,Term language,Concept Information,Term,string,n,n,y,vocabulary: languages,"",concept,termLanguage
-materials_4-0-0,Concept,Term preferred for lang,Concept Information,Term,boolean,n,n,y,"","",concept,termPrefForLang
-materials_4-0-0,Concept,Term source name,Concept Information,Term > Source,string,n,n,y,authority: citation/local,"",concept,termSource
-materials_4-0-0,Concept,Term source detail,Concept Information,Term > Source,string,n,n,y,"","",concept,termSourceDetail
-materials_4-0-0,Concept,Term source ID,Concept Information,Term > Source,string,n,n,y,"","",concept,termSourceID
-materials_4-0-0,Concept,Term source note,Concept Information,Term > Source,string,n,n,y,"","",concept,termSourceNote
-materials_4-0-0,Concept,Concept type,Concept Information,"",string,n,y,n,vocabulary: concepttype,"",concept,conceptRecordType
-materials_4-0-0,Concept,Scope note,Concept Information,Scope note,string,n,n,n/a,"","",concept,scopeNote
-materials_4-0-0,Concept,Scope note source,Concept Information,Scope note,string,n,n,n/a,"","",concept,scopeNoteSource
-materials_4-0-0,Concept,Scope note source detail,Concept Information,Scope note,string,n,n,n/a,"","",concept,scopeNoteSourceDetail
-materials_4-0-0,Concept,Citation source,Concept Information,Citation,string,n,n,y,"","",concept,citationSource
-materials_4-0-0,Concept,Citation source detail,Concept Information,Citation,string,n,n,y,"","",concept,citationSourceDetail
-materials_4-0-0,Concept,Additional source,Concept Information,Additional source,string,n,n,y,"","",concept,additionalSource
-materials_4-0-0,Concept,Additional source detail,Concept Information,Additional source,string,n,n,y,"","",concept,additionalSourceDetail
-materials_4-0-0,Concept,Additional source ID,Concept Information,Additional source,string,n,n,y,"","",concept,additionalSourceID
-materials_4-0-0,Concept,Additional source note,Concept Information,Additional source,string,n,n,y,"","",concept,additionalSourceNote
-materials_4-0-0,Conservation,Reference number,Conservation Treatment Information,"",string,y,n,n/a,"","",conservation,conservationNumber
-materials_4-0-0,Conservation,Procedural status,Conservation Treatment Information,Procedural status,string,n,n,y,vocabulary: conservationstatus,"",conservation,status
-materials_4-0-0,Conservation,Procedural status date,Conservation Treatment Information,Procedural status,date,n,n,y,"","",conservation,statusDate
-materials_4-0-0,Conservation,Treatment purpose,Conservation Treatment Information,"",string,n,n,n/a,vocabulary: treatmentpurpose,"",conservation,treatmentPurpose
-materials_4-0-0,Conservation,Conservator,Conservation Treatment Information,"",string,n,y,n,authority: person/local; authority: person/shared; authority: organization/local; authority: organization/shared,"",conservation,conservator
-materials_4-0-0,Conservation,Other treatment party name,Conservation Treatment Information,Other treatment party,string,n,n,y,authority: person/local; authority: person/shared; authority: organization/local; authority: organization/shared,"",conservation,otherParty
-materials_4-0-0,Conservation,Other treatment party role,Conservation Treatment Information,Other treatment party,string,n,n,y,vocabulary: otherpartyrole,"",conservation,otherPartyRole
-materials_4-0-0,Conservation,Other treatment party note,Conservation Treatment Information,Other treatment party,string,n,n,y,"","",conservation,otherPartyNote
-materials_4-0-0,Conservation,Examination staff,Conservation Treatment Information,Examination,string,n,n,y,authority: person/local; authority: person/shared,"",conservation,examinationStaff
-materials_4-0-0,Conservation,Examination phase of treatment,Conservation Treatment Information,Examination,string,n,n,y,vocabulary: examinationphase,"",conservation,examinationPhase
-materials_4-0-0,Conservation,Examination date,Conservation Treatment Information,Examination,date,n,n,y,"","",conservation,examinationDate
-materials_4-0-0,Conservation,Examination note,Conservation Treatment Information,Examination,string,n,n,y,"","",conservation,examinationNote
-materials_4-0-0,Conservation,Fabrication note,Conservation Treatment Information,"",string,n,n,n/a,"","",conservation,fabricationNote
-materials_4-0-0,Conservation,Proposed treatment,Conservation Treatment Information,"",string,n,n,n/a,"","",conservation,proposedTreatment
-materials_4-0-0,Conservation,Approved by,Conservation Treatment Information,"",string,n,n,n/a,authority: person/local; authority: person/shared,"",conservation,approvedBy
-materials_4-0-0,Conservation,Approval date,Conservation Treatment Information,"",date,n,n,n/a,"","",conservation,approvedDate
-materials_4-0-0,Conservation,Treatment start date,Conservation Treatment Information,"",date,n,n,n/a,"","",conservation,treatmentStartDate
-materials_4-0-0,Conservation,Treatment end date,Conservation Treatment Information,"",date,n,n,n/a,"","",conservation,treatmentEndDate
-materials_4-0-0,Conservation,Treatment summary,Conservation Treatment Information,"",string,n,n,n/a,"","",conservation,treatmentSummary
-materials_4-0-0,Conservation,Proposed analysis,Object Analysis Information,"",string,n,n,n/a,"","",conservation,proposedAnalysis
-materials_4-0-0,Conservation,Analysis researcher,Object Analysis Information,"",string,n,n,n/a,authority: person/local; authority: person/shared,"",conservation,researcher
-materials_4-0-0,Conservation,Analysis proposal date,Object Analysis Information,"",date,n,n,n/a,"","",conservation,proposedAnalysisDate
-materials_4-0-0,Conservation,Destructive analysis approval date,Object Analysis Information,Destructive analysis,date,n,n,y,"","",conservation,destAnalysisApprovedDate
-materials_4-0-0,Conservation,Destructive analysis approval note,Object Analysis Information,Destructive analysis,string,n,n,y,"","",conservation,destAnalysisApprovalNote
-materials_4-0-0,Conservation,Destructive analysis sample taken by,Object Analysis Information,Destructive analysis,string,n,n,y,authority: person/local; authority: person/shared,"",conservation,sampleBy
-materials_4-0-0,Conservation,Destructive analysis sample date,Object Analysis Information,Destructive analysis,date,n,n,y,"","",conservation,sampleDate
-materials_4-0-0,Conservation,Destructive analysis sample description,Object Analysis Information,Destructive analysis,string,n,n,y,"","",conservation,sampleDescription
-materials_4-0-0,Conservation,Destructive analysis sample returned,Object Analysis Information,Destructive analysis,boolean,n,n,y,"","",conservation,sampleReturned
-materials_4-0-0,Conservation,Destructive analysis sample returned location,Object Analysis Information,Destructive analysis,string,n,n,y,"","",conservation,sampleReturnedLocation
-materials_4-0-0,Conservation,Analytical methodology,Object Analysis Information,"",string,n,n,n/a,"","",conservation,analysisMethod
-materials_4-0-0,Conservation,Analytical result,Object Analysis Information,"",string,n,n,n/a,"","",conservation,analysisResults
-materials_4-0-0,Group,Title,Group Information,"",string,y,n,n/a,"","",group,title
-materials_4-0-0,Group,Responsible department,Group Information,"",string,n,n,n/a,option list: departments,"antiquities, architecture-design, decorative-arts, ethnography, herpetology, media-performance-art, paintings-sculpture, paleobotany, photographs, prints-drawings",group,responsibleDepartment
-materials_4-0-0,Group,Group owner,Group Information,"",string,n,n,n/a,authority: person/local,"",group,owner
-materials_4-0-0,Group,Earliest/single date,Group Information,"",date,n,n,n/a,"","",group,groupEarliestSingleDate
-materials_4-0-0,Group,Latest date,Group Information,"",date,n,n,n/a,"","",group,groupLatestDate
-materials_4-0-0,Group,Scope note,Group Information,"",string,n,n,n/a,"","",group,scopeNote
-materials_4-0-0,Insurance/Indemnity,Reference number,Insurance and Indemnity Information,"",string,y,n,n/a,"","",insurance,insuranceIndemnityReferenceNumber
-materials_4-0-0,Insurance/Indemnity,Type,Insurance and Indemnity Information,"",string,n,n,n/a,vocabulary: insurancetype,"",insurance,insuranceIndemnityType
-materials_4-0-0,Insurance/Indemnity,Insurer/indemnifier,Insurance and Indemnity Information,"",string,n,n,n/a,authority: person/local; authority: person/shared; authority: organization/local; authority: organization/shared,"",insurance,insurerIndemnifier
-materials_4-0-0,Insurance/Indemnity,Policy number,Insurance and Indemnity Information,"",string,n,n,n/a,"","",insurance,insuranceIndemnityPolicyNumber
-materials_4-0-0,Insurance/Indemnity,Insurance/indemnity price currency,Insurance and Indemnity Information,Insurance/indemnity price,string,n,n,n/a,vocabulary: currency,"",insurance,insuranceIndemnityCurrency
-materials_4-0-0,Insurance/Indemnity,Insurance/indemnity price value,Insurance and Indemnity Information,Insurance/indemnity price,float,n,n,n/a,"","",insurance,insuranceIndemnityValue
-materials_4-0-0,Insurance/Indemnity,Minimum liability price currency,Insurance and Indemnity Information,Minimum liability price,string,n,n,n/a,vocabulary: currency,"",insurance,minimumLiabilityCurrency
-materials_4-0-0,Insurance/Indemnity,Minimum liability price value,Insurance and Indemnity Information,Minimum liability price,float,n,n,n/a,"","",insurance,minimumLiabilityValue
-materials_4-0-0,Insurance/Indemnity,Authorizer,Insurance and Indemnity Information,Authorization,string,n,n,n/a,authority: person/local; authority: person/shared,"",insurance,insuranceIndemnityAuthorizer
-materials_4-0-0,Insurance/Indemnity,Authorization date,Insurance and Indemnity Information,Authorization,date,n,n,n/a,"","",insurance,insuranceIndemnityAuthorizationDate
-materials_4-0-0,Insurance/Indemnity,Status type,Insurance and Indemnity Information,Status,string,n,n,y,vocabulary: insurancestatus,"",insurance,insuranceIndemnityStatus
-materials_4-0-0,Insurance/Indemnity,Status date,Insurance and Indemnity Information,Status,date,n,n,y,"","",insurance,insuranceIndemnityStatusDate
-materials_4-0-0,Insurance/Indemnity,Status note,Insurance and Indemnity Information,Status,string,n,n,y,"","",insurance,insuranceIndemnityStatusNote
-materials_4-0-0,Insurance/Indemnity,Note,Insurance and Indemnity Information,"",string,n,n,n/a,"","",insurance,insuranceIndemnityNote
-materials_4-0-0,Insurance/Indemnity,Quote provider,Insurance and Indemnity Information,Quote,string,n,n,y,authority: person/local; authority: person/shared; authority: organization/local; authority: organization/shared,"",insurance,insuranceIndemnityQuoteProvider
-materials_4-0-0,Insurance/Indemnity,Quote currency,Insurance and Indemnity Information,Quote,string,n,n,y,vocabulary: currency,"",insurance,insuranceIndemnityQuoteCurrency
-materials_4-0-0,Insurance/Indemnity,Quote value,Insurance and Indemnity Information,Quote,float,n,n,y,"","",insurance,insuranceIndemnityQuoteValue
-materials_4-0-0,Insurance/Indemnity,Quote date,Insurance and Indemnity Information,Quote,date,n,n,y,"","",insurance,insuranceIndemnityQuoteDate
-materials_4-0-0,Loan Out,Loan out number,Loan Out Information,"",string,y,n,n/a,"","",loanout,loanOutNumber
-materials_4-0-0,Loan Out,Lender authorizer,Loan Out Information,"",string,n,n,n/a,authority: person/local; authority: person/shared,"",loanout,lendersAuthorizer
-materials_4-0-0,Loan Out,Conditions of loan,Loan Out Information,"",string,n,n,n/a,"","",loanout,specialConditionsOfLoan
-materials_4-0-0,Loan Out,Loan purpose,Loan Out Information,"",string,n,n,n/a,option list: loanPurposes,"analysis, conservationotherrequestedservices, exhibition, longtermcollectionsmanagementandstorage, photography, research, scientificorexhibitpreparation",loanout,loanPurpose
-materials_4-0-0,Loan Out,Borrower,Loan Out Information,"",string,n,n,n/a,authority: person/local; authority: person/shared; authority: organization/local; authority: organization/shared,"",loanout,borrower
-materials_4-0-0,Loan Out,Note,Loan Out Information,"",string,n,n,n/a,"","",loanout,loanOutNote
-materials_4-0-0,Loan Out,Loan status group,Loan Out Information,Loan status,string,n,n,y,vocabulary: deaccessionapprovalgroup,"",loanout,loanGroup
-materials_4-0-0,Loan Out,Loan status individual,Loan Out Information,Loan status,string,n,n,y,authority: person/local; authority: person/shared,"",loanout,loanIndividual
-materials_4-0-0,Loan Out,Loan status,Loan Out Information,Loan status,string,n,n,y,vocabulary: loanoutstatus,"",loanout,loanStatus
-materials_4-0-0,Loan Out,Loan status date,Loan Out Information,Loan status,date,n,n,y,"","",loanout,loanStatusDate
-materials_4-0-0,Loan Out,Loan status note,Loan Out Information,Loan status,string,n,n,y,"","",loanout,loanStatusNote
-materials_4-0-0,Loan Out,Loan out date,Loan Out Information,"",date,n,n,n/a,"","",loanout,loanOutDate
-materials_4-0-0,Loan Out,Loan return date,Loan Out Information,"",date,n,n,n/a,"","",loanout,loanReturnDate
-materials_4-0-0,Loan Out,Loan renewal application date,Loan Out Information,"",date,n,n,n/a,"","",loanout,loanRenewalApplicationDate
-materials_4-0-0,Loan Out,Credit line,Loan Out Information,"",string,n,n,n/a,"","",loanout,creditLine
-materials_4-0-0,Storage Location,Term display name,Storage Location Information,Term,string,y,n,y,"","",location,termDisplayName
-materials_4-0-0,Storage Location,Term name,Storage Location Information,Term,string,n,n,y,"","",location,termName
-materials_4-0-0,Storage Location,Term qualifier,Storage Location Information,Term,string,n,n,y,"","",location,termQualifier
-materials_4-0-0,Storage Location,Term status,Storage Location Information,Term,string,n,n,y,option list: locationTermStatuses,"accepted, provisional, rejected, under review",location,termStatus
-materials_4-0-0,Storage Location,Term type,Storage Location Information,Term,string,n,n,y,option list: locationTermTypes,"alternate descriptor, descriptor, used for term",location,termType
-materials_4-0-0,Storage Location,Term flag,Storage Location Information,Term,string,n,n,y,vocabulary: locationtermflag,"",location,termFlag
-materials_4-0-0,Storage Location,Term language,Storage Location Information,Term,string,n,n,y,vocabulary: languages,"",location,termLanguage
-materials_4-0-0,Storage Location,Term preferred for lang,Storage Location Information,Term,boolean,n,n,y,"","",location,termPrefForLang
-materials_4-0-0,Storage Location,Term source name,Storage Location Information,Term > Source,string,n,n,y,authority: citation/local,"",location,termSource
-materials_4-0-0,Storage Location,Term source detail,Storage Location Information,Term > Source,string,n,n,y,"","",location,termSourceDetail
-materials_4-0-0,Storage Location,Term source ID,Storage Location Information,Term > Source,string,n,n,y,"","",location,termSourceID
-materials_4-0-0,Storage Location,Term source note,Storage Location Information,Term > Source,string,n,n,y,"","",location,termSourceNote
-materials_4-0-0,Storage Location,Storage location type,Storage Location Information,"",string,n,n,n/a,vocabulary: locationtype,"",location,locationType
-materials_4-0-0,Storage Location,Access note,Storage Location Information,"",string,n,n,n/a,"","",location,accessNote
-materials_4-0-0,Media Handling,Identification number,Media Handling Information,"",string,y,n,n/a,"","",media,identificationNumber
-materials_4-0-0,Media Handling,Title,Media Handling Information,"",string,n,n,n/a,"","",media,title
-materials_4-0-0,Media Handling,Publish to,Media Handling Information,"",string,n,y,n,vocabulary: publishto,"",media,publishTo
-materials_4-0-0,Media Handling,External URL,Media Handling Information,"",string,n,n,n/a,"","",media,externalUrl
-materials_4-0-0,Media Handling,Checksum value,Media Handling Information,Checksum,string,n,n,y,"","",media,checksumValue
-materials_4-0-0,Media Handling,Checksum type,Media Handling Information,Checksum,string,n,n,y,vocabulary: checksumtypes,"",media,checksumType
-materials_4-0-0,Media Handling,Checksum date,Media Handling Information,Checksum,date,n,n,y,"","",media,checksumDate
-materials_4-0-0,Media Handling,Contributor,Media Handling Information,"",string,n,n,n/a,authority: person/local; authority: person/shared; authority: organization/local; authority: organization/shared,"",media,contributor
-materials_4-0-0,Media Handling,Creator,Media Handling Information,"",string,n,n,n/a,authority: person/local; authority: person/shared; authority: organization/local; authority: organization/shared,"",media,creator
-materials_4-0-0,Media Handling,Relation,Media Handling Information,"",string,n,y,n,"","",media,relation
-materials_4-0-0,Media Handling,Type,Media Handling Information,"",string,n,y,n,option list: mediaTypes,"dataset, document, moving_image, sound, still_image",media,type
-materials_4-0-0,Media Handling,Coverage,Media Handling Information,"",string,n,n,n/a,authority: material/local; authority: material/shared; authority: place/local,"",media,coverage
-materials_4-0-0,Media Handling,Date,Media Handling Information,"",structured date group,n,y,n,"","",media,dateGroup
-materials_4-0-0,Media Handling,Source,Media Handling Information,"",string,n,n,n/a,"","",media,source
-materials_4-0-0,Media Handling,Subject,Media Handling Information,"",string,n,y,n,"","",media,subject
-materials_4-0-0,Media Handling,Copyright statement,Media Handling Information,"",string,n,n,n/a,"","",media,copyrightStatement
-materials_4-0-0,Media Handling,Rights holder,Media Handling Information,"",string,n,n,n/a,authority: person/local; authority: person/shared; authority: organization/local; authority: organization/shared,"",media,rightsHolder
-materials_4-0-0,Media Handling,Description,Media Handling Information,"",string,n,n,n/a,"","",media,description
-materials_4-0-0,Media Handling,Alt text,Media Handling Information,"",string,n,n,n/a,"","",media,altText
-materials_4-0-0,Media Handling,"","","",string,n,n,n/a,"","",media,mediaFileURI
-materials_4-0-0,Location/Movement/Inventory,Reference number,Object Location Information,"",string,n,n,n/a,"","",movement,movementReferenceNumber
-materials_4-0-0,Location/Movement/Inventory,Current location,Object Location Information,"",string,y,n,n/a,authority: location/local; authority: location/offsite; authority: organization/local; authority: organization/shared,"",movement,currentLocation
-materials_4-0-0,Location/Movement/Inventory,Normal location,Object Location Information,"",string,n,n,n/a,authority: location/local; authority: location/offsite; authority: organization/local; authority: organization/shared,"",movement,normalLocation
-materials_4-0-0,Location/Movement/Inventory,Location date,Object Location Information,"",date,n,n,n/a,"","",movement,locationDate
-materials_4-0-0,Location/Movement/Inventory,Reason for move,Movement Information,"",string,n,n,n/a,option list: moveReasons,"collections-facility-move, conservation, exhibition, inventory, loan, newstoragelocation, photography, research",movement,reasonForMove
-materials_4-0-0,Location/Movement/Inventory,Planned removal date,Movement Information,"",date,n,n,n/a,"","",movement,plannedRemovalDate
-materials_4-0-0,Location/Movement/Inventory,Removal date,Movement Information,"",date,n,n,n/a,"","",movement,removalDate
-materials_4-0-0,Location/Movement/Inventory,Movement contact,Movement Information,"",string,n,n,n/a,authority: person/local; authority: person/shared,"",movement,movementContact
-materials_4-0-0,Location/Movement/Inventory,Movement note,Movement Information,"",string,n,n,n/a,"","",movement,movementNote
-materials_4-0-0,Location/Movement/Inventory,Inventory action required,Inventory Information,"",string,n,n,n/a,option list: invActions,"conservation, preservation, re-housing",movement,inventoryActionRequired
-materials_4-0-0,Location/Movement/Inventory,Inventory frequency,Inventory Information,"",string,n,n,n/a,option list: invFreqs,"annually, daily, monthly, semi-annually, weekly",movement,frequencyForInventory
-materials_4-0-0,Location/Movement/Inventory,Inventory date,Inventory Information,"",date,n,n,n/a,"","",movement,inventoryDate
-materials_4-0-0,Location/Movement/Inventory,Next inventory date,Inventory Information,"",date,n,n,n/a,"","",movement,nextInventoryDate
-materials_4-0-0,Location/Movement/Inventory,Inventory contact,Inventory Information,"",string,n,y,n,authority: person/local; authority: person/shared,"",movement,inventoryContact
-materials_4-0-0,Location/Movement/Inventory,Inventory note,Inventory Information,"",string,n,n,n/a,"","",movement,inventoryNote
-materials_4-0-0,Object Exit,Exit number,Object Exit Information,"",string,y,n,n/a,"","",objectexit,exitNumber
-materials_4-0-0,Object Exit,Exit date,Object Exit Information,"",structured date group,n,n,n/a,"","",objectexit,exitDateGroup
-materials_4-0-0,Object Exit,Exit reason,Object Exit Information,"",string,n,n,n/a,option list: exitReasons,"deaccession, disposal, returnofloan",objectexit,exitReason
-materials_4-0-0,Object Exit,Exit method,Object Exit Information,"",string,n,y,n,option list: exitMethods,"courier, inperson, post",objectexit,exitMethod
-materials_4-0-0,Object Exit,Exit quantity,Object Exit Information,"",integer,n,n,n/a,"","",objectexit,exitQuantity
-materials_4-0-0,Object Exit,Current owner,Object Exit Information,"",string,n,n,n/a,authority: person/local; authority: person/shared; authority: organization/local; authority: organization/shared,"",objectexit,currentOwner
-materials_4-0-0,Object Exit,Depositor,Object Exit Information,"",string,n,n,n/a,authority: person/local; authority: person/shared; authority: organization/local; authority: organization/shared,"",objectexit,depositor
-materials_4-0-0,Object Exit,Exit note,Object Exit Information,"",string,n,n,n/a,"","",objectexit,exitNote
-materials_4-0-0,Object Exit,Packing note,Object Exit Information,"",string,n,n,n/a,"","",objectexit,packingNote
-materials_4-0-0,Object Exit,Disposal new object number,Deaccession and Disposal Information,"",string,n,n,n/a,"","",objectexit,displosalNewObjectNumber
-materials_4-0-0,Object Exit,Deaccession authorizer,Deaccession and Disposal Information,"",string,n,n,n/a,authority: person/local,"",objectexit,deaccessionAuthorizer
-materials_4-0-0,Object Exit,Authorization date,Deaccession and Disposal Information,"",date,n,n,n/a,"","",objectexit,authorizationDate
-materials_4-0-0,Object Exit,Deaccession approval group,Deaccession and Disposal Information,Deaccession approval,string,n,n,y,vocabulary: deaccessionapprovalgroup,"",objectexit,deaccessionApprovalGroup
-materials_4-0-0,Object Exit,Deaccession approval individual,Deaccession and Disposal Information,Deaccession approval,string,n,n,y,authority: person/local,"",objectexit,deaccessionApprovalIndividual
-materials_4-0-0,Object Exit,Deaccession approval status,Deaccession and Disposal Information,Deaccession approval,string,n,n,y,vocabulary: deaccessionapprovalstatus,"",objectexit,deaccessionApprovalStatus
-materials_4-0-0,Object Exit,Deaccession approval status date,Deaccession and Disposal Information,Deaccession approval,date,n,n,y,"","",objectexit,deaccessionApprovalDate
-materials_4-0-0,Object Exit,Deaccession approval note,Deaccession and Disposal Information,Deaccession approval,string,n,n,y,"","",objectexit,deaccessionApprovalNote
-materials_4-0-0,Object Exit,Deaccession date,Deaccession and Disposal Information,"",date,n,n,n/a,"","",objectexit,deaccessionDate
-materials_4-0-0,Object Exit,Disposal date,Deaccession and Disposal Information,"",date,n,n,n/a,"","",objectexit,disposalDate
-materials_4-0-0,Object Exit,Disposal method,Deaccession and Disposal Information,"",string,n,n,n/a,vocabulary: disposalmethod,"",objectexit,disposalMethod
-materials_4-0-0,Object Exit,Disposal reason,Deaccession and Disposal Information,"",string,n,n,n/a,"","",objectexit,displosalReason
-materials_4-0-0,Object Exit,Disposal proposed recipient,Deaccession and Disposal Information,"",string,n,n,n/a,authority: person/local; authority: person/shared; authority: organization/local; authority: organization/shared,"",objectexit,disposalProposedRecipient
-materials_4-0-0,Object Exit,Disposal recipient,Deaccession and Disposal Information,"",string,n,n,n/a,authority: person/local; authority: person/shared; authority: organization/local; authority: organization/shared,"",objectexit,disposalRecipient
-materials_4-0-0,Object Exit,Disposal currency,Deaccession and Disposal Information,Disposal,string,n,n,n/a,vocabulary: currency,"",objectexit,disposalCurrency
-materials_4-0-0,Object Exit,Disposal value,Deaccession and Disposal Information,Disposal,float,n,n,n/a,"","",objectexit,displosalValue
-materials_4-0-0,Object Exit,Group disposal currency,Deaccession and Disposal Information,Group disposal,string,n,n,n/a,vocabulary: currency,"",objectexit,groupDisposalCurrency
-materials_4-0-0,Object Exit,Group disposal value,Deaccession and Disposal Information,Group disposal,float,n,n,n/a,"","",objectexit,groupDisplosalValue
-materials_4-0-0,Object Exit,Disposal provisos,Deaccession and Disposal Information,"",string,n,n,n/a,"","",objectexit,displosalProvisos
-materials_4-0-0,Object Exit,Disposal note,Deaccession and Disposal Information,"",string,n,n,n/a,"","",objectexit,displosalNote
-materials_4-0-0,Organization,Term display name,Organization Information,Term,string,y,n,y,"","",organization,termDisplayName
-materials_4-0-0,Organization,Term name,Organization Information,Term,string,n,n,y,"","",organization,termName
-materials_4-0-0,Organization,Term qualifier,Organization Information,Term,string,n,n,y,"","",organization,termQualifier
-materials_4-0-0,Organization,Term status,Organization Information,Term,string,n,n,y,option list: orgTermStatuses,"accepted, provisional, rejected, under review",organization,termStatus
-materials_4-0-0,Organization,Term type,Organization Information,Term,string,n,n,y,option list: orgTermTypes,"alternate descriptor, descriptor, used for term",organization,termType
-materials_4-0-0,Organization,Term flag,Organization Information,Term,string,n,n,y,vocabulary: orgtermflag,"",organization,termFlag
-materials_4-0-0,Organization,Term language,Organization Information,Term,string,n,n,y,vocabulary: languages,"",organization,termLanguage
-materials_4-0-0,Organization,Term preferred for lang,Organization Information,Term,boolean,n,n,y,"","",organization,termPrefForLang
-materials_4-0-0,Organization,Term main body name,Organization Information,Term > Name detail,string,n,n,y,"","",organization,mainBodyName
-materials_4-0-0,Organization,Term name addition,Organization Information,Term > Name detail,string,n,n,y,"","",organization,additionsToName
-materials_4-0-0,Organization,Term source name,Organization Information,Term > Source,string,n,n,y,authority: citation/local,"",organization,termSource
-materials_4-0-0,Organization,Term source detail,Organization Information,Term > Source,string,n,n,y,"","",organization,termSourceDetail
-materials_4-0-0,Organization,Term source ID,Organization Information,Term > Source,string,n,n,y,"","",organization,termSourceID
-materials_4-0-0,Organization,Term source note,Organization Information,Term > Source,string,n,n,y,"","",organization,termSourceNote
-materials_4-0-0,Organization,Organization type,Organization Information,"",string,n,y,n,vocabulary: organizationtype,"",organization,organizationRecordType
-materials_4-0-0,Organization,Foundation date,Organization Information,"",structured date group,n,n,n/a,"","",organization,foundingDateGroup
-materials_4-0-0,Organization,Foundation place,Organization Information,"",string,n,n,n/a,"","",organization,foundingPlace
-materials_4-0-0,Organization,Dissolution date,Organization Information,"",structured date group,n,n,n/a,"","",organization,dissolutionDateGroup
-materials_4-0-0,Organization,Name note,Organization Information,"",string,n,n,n/a,"","",organization,nameNote
-materials_4-0-0,Organization,Group,Organization Information,"",string,n,y,n,"","",organization,group
-materials_4-0-0,Organization,Function,Organization Information,"",string,n,y,n,"","",organization,function
-materials_4-0-0,Organization,History,Organization Information,"",string,n,y,n,"","",organization,historyNote
-materials_4-0-0,Organization,Contact name,Organization Information,Contact person,string,n,n,y,authority: person/local,"",organization,contactName
-materials_4-0-0,Organization,Contact role,Organization Information,Contact person,string,n,n,y,vocabulary: contactrole,"",organization,contactRole
-materials_4-0-0,Organization,Contact date,Organization Information,Contact person,structured date group,n,n,y,"","",organization,contactDateGroup
-materials_4-0-0,Organization,Contact end date,Organization Information,Contact person,structured date group,n,n,y,"","",organization,contactEndDateGroup
-materials_4-0-0,Organization,Contact status,Organization Information,Contact person,string,n,n,y,vocabulary: contactstatus,"",organization,contactStatus
-materials_4-0-0,Organization,Address,Contact Information,Email,string,n,n,y,"","",organization,email
-materials_4-0-0,Organization,Type,Contact Information,Email,string,n,n,y,option list: emailTypes,"business, other, personal",organization,emailType
-materials_4-0-0,Organization,Number,Contact Information,Phone,string,n,n,y,"","",organization,telephoneNumber
-materials_4-0-0,Organization,Type,Contact Information,Phone,string,n,n,y,option list: telephoneNumberTypes,"business, home, mobile, other",organization,telephoneNumberType
-materials_4-0-0,Organization,Number,Contact Information,Fax,string,n,n,y,"","",organization,faxNumber
-materials_4-0-0,Organization,Type,Contact Information,Fax,string,n,n,y,option list: faxNumberTypes,"business, home, other",organization,faxNumberType
-materials_4-0-0,Organization,URL,Contact Information,Web site,string,n,n,y,"","",organization,webAddress
-materials_4-0-0,Organization,Type,Contact Information,Web site,string,n,n,y,option list: webAddressTypes,"business, other, personal",organization,webAddressType
-materials_4-0-0,Organization,Line 1,Contact Information,Address,string,n,n,y,"","",organization,addressPlace1
-materials_4-0-0,Organization,Line 2,Contact Information,Address,string,n,n,y,"","",organization,addressPlace2
-materials_4-0-0,Organization,Municipality,Contact Information,Address,string,n,n,y,"","",organization,addressMunicipality
-materials_4-0-0,Organization,State/province,Contact Information,Address,string,n,n,y,"","",organization,addressStateOrProvince
-materials_4-0-0,Organization,Postal code,Contact Information,Address,string,n,n,y,"","",organization,addressPostCode
-materials_4-0-0,Organization,Country,Contact Information,Address,string,n,n,y,option list: addressCountries,"AD, AE, AF, AG, AI, AL, AM, AO, AQ, AR, AS, AT, AU, AW, AX, AZ, BA, BB, BD, BE, BF, BG, BH, BI, BJ, BL, BM, BN, BO, BQ, BR, BS, BT, BV, BW, BY, BZ, CA, CC, CD, CF, CG, CH, CI, CK, CL, CM, CN, CO, CR, CU, CV, CW, CX, CY, CZ, DE, DJ, DK, DM, DO, DZ, EC, EE, EG, EH, ER, ES, ET, FI, FJ, FK, FM, FO, FR, GA, GB, GD, GE, GF, GG, GH, GI, GL, GM, GN, GP, GQ, GR, GS, GT, GU, GW, GY, HK, HM, HN, HR, HT, HU, ID, IE, IL, IM, IN, IO, IQ, IR, IS, IT, JE, JM, JO, JP, KE, KG, KH, KI, KM, KN, KP, KR, KW, KY, KZ, LA, LB, LC, LI, LK, LR, LS, LT, LU, LV, LY, MA, MC, MD, ME, MF, MG, MH, MK, ML, MM, MN, MO, MP, MQ, MR, MS, MT, MU, MV, MW, MX, MY, MZ, NA, NC, NE, NF, NG, NI, NL, NO, NP, NR, NU, NZ, OM, PA, PE, PF, PG, PH, PK, PL, PM, PN, PR, PS, PT, PW, PY, QA, RE, RO, RS, RU, RW, SA, SB, SC, SD, SE, SG, SH, SI, SJ, SK, SL, SM, SN, SO, SR, SS, ST, SV, SX, SY, SZ, TC, TD, TF, TG, TH, TJ, TK, TL, TM, TN, TO, TR, TT, TV, TW, TZ, UA, UG, UM, US, UY, UZ, VA, VC, VE, VG, VI, VN, VU, WF, WS, YE, YT, ZA, ZM, ZW",organization,addressCountry
-materials_4-0-0,Organization,Type,Contact Information,Address,string,n,n,y,option list: addressTypes,"business, home, other",organization,addressType
-materials_4-0-0,Person,Term display name,Person Information,Term,string,y,n,y,"","",person,termDisplayName
-materials_4-0-0,Person,Term name,Person Information,Term,string,n,n,y,"","",person,termName
-materials_4-0-0,Person,Term qualifier,Person Information,Term,string,n,n,y,"","",person,termQualifier
-materials_4-0-0,Person,Term status,Person Information,Term,string,n,n,y,option list: personTermStatuses,"accepted, provisional, rejected, under review",person,termStatus
-materials_4-0-0,Person,Term type,Person Information,Term,string,n,n,y,vocabulary: persontermtype,"",person,termType
-materials_4-0-0,Person,Term source name,Person Information,Term > Source,string,n,n,y,authority: citation/local,"",person,termSource
-materials_4-0-0,Person,Term source detail,Person Information,Term > Source,string,n,n,y,"","",person,termSourceDetail
-materials_4-0-0,Person,Term source ID,Person Information,Term > Source,string,n,n,y,"","",person,termSourceID
-materials_4-0-0,Person,Term source note,Person Information,Term > Source,string,n,n,y,"","",person,termSourceNote
-materials_4-0-0,Person,Term salutation,Person Information,Term > Name detail,string,n,n,y,option list: salutations,"dear, hello, to",person,salutation
-materials_4-0-0,Person,Term title,Person Information,Term > Name detail,string,n,n,y,option list: personTitles,"Admiral, Baron, Baroness, Captain, Commander, Commodore, Count, Countess, Dame, Dr, General, Governor, Honorable, Judge, King, Lady, Lord, Miss, Mr, Mrs, Ms, Prince, Princess, Professor, Queen, Reverend, Saint, Sir",person,title
-materials_4-0-0,Person,Term forename,Person Information,Term > Name detail,string,n,n,y,"","",person,foreName
-materials_4-0-0,Person,Term middle name,Person Information,Term > Name detail,string,n,n,y,"","",person,middleName
-materials_4-0-0,Person,Term surname,Person Information,Term > Name detail,string,n,n,y,"","",person,surName
-materials_4-0-0,Person,Term name addition,Person Information,Term > Name detail,string,n,n,y,"","",person,nameAdditions
-materials_4-0-0,Person,Term initials,Person Information,Term > Name detail,string,n,n,y,"","",person,initials
-materials_4-0-0,Person,Occupation,Person Information,"",string,n,y,n,"","",person,occupation
-materials_4-0-0,Person,Group,Person Information,"",string,n,y,n,"","",person,group
-materials_4-0-0,Person,Name note,Person Information,"",string,n,n,n/a,"","",person,nameNote
-materials_4-0-0,Person,Address,Contact Information,Email,string,n,n,y,"","",person,email
-materials_4-0-0,Person,Type,Contact Information,Email,string,n,n,y,option list: emailTypes,"business, other, personal",person,emailType
-materials_4-0-0,Person,Number,Contact Information,Phone,string,n,n,y,"","",person,telephoneNumber
-materials_4-0-0,Person,Type,Contact Information,Phone,string,n,n,y,option list: telephoneNumberTypes,"business, home, mobile, other",person,telephoneNumberType
-materials_4-0-0,Person,Number,Contact Information,Fax,string,n,n,y,"","",person,faxNumber
-materials_4-0-0,Person,Type,Contact Information,Fax,string,n,n,y,option list: faxNumberTypes,"business, home, other",person,faxNumberType
-materials_4-0-0,Person,URL,Contact Information,Web site,string,n,n,y,"","",person,webAddress
-materials_4-0-0,Person,Type,Contact Information,Web site,string,n,n,y,option list: webAddressTypes,"business, other, personal",person,webAddressType
-materials_4-0-0,Person,Line 1,Contact Information,Address,string,n,n,y,"","",person,addressPlace1
-materials_4-0-0,Person,Line 2,Contact Information,Address,string,n,n,y,"","",person,addressPlace2
-materials_4-0-0,Person,Municipality,Contact Information,Address,string,n,n,y,"","",person,addressMunicipality
-materials_4-0-0,Person,State/province,Contact Information,Address,string,n,n,y,"","",person,addressStateOrProvince
-materials_4-0-0,Person,Postal code,Contact Information,Address,string,n,n,y,"","",person,addressPostCode
-materials_4-0-0,Person,Country,Contact Information,Address,string,n,n,y,option list: addressCountries,"AD, AE, AF, AG, AI, AL, AM, AO, AQ, AR, AS, AT, AU, AW, AX, AZ, BA, BB, BD, BE, BF, BG, BH, BI, BJ, BL, BM, BN, BO, BQ, BR, BS, BT, BV, BW, BY, BZ, CA, CC, CD, CF, CG, CH, CI, CK, CL, CM, CN, CO, CR, CU, CV, CW, CX, CY, CZ, DE, DJ, DK, DM, DO, DZ, EC, EE, EG, EH, ER, ES, ET, FI, FJ, FK, FM, FO, FR, GA, GB, GD, GE, GF, GG, GH, GI, GL, GM, GN, GP, GQ, GR, GS, GT, GU, GW, GY, HK, HM, HN, HR, HT, HU, ID, IE, IL, IM, IN, IO, IQ, IR, IS, IT, JE, JM, JO, JP, KE, KG, KH, KI, KM, KN, KP, KR, KW, KY, KZ, LA, LB, LC, LI, LK, LR, LS, LT, LU, LV, LY, MA, MC, MD, ME, MF, MG, MH, MK, ML, MM, MN, MO, MP, MQ, MR, MS, MT, MU, MV, MW, MX, MY, MZ, NA, NC, NE, NF, NG, NI, NL, NO, NP, NR, NU, NZ, OM, PA, PE, PF, PG, PH, PK, PL, PM, PN, PR, PS, PT, PW, PY, QA, RE, RO, RS, RU, RW, SA, SB, SC, SD, SE, SG, SH, SI, SJ, SK, SL, SM, SN, SO, SR, SS, ST, SV, SX, SY, SZ, TC, TD, TF, TG, TH, TJ, TK, TL, TM, TN, TO, TR, TT, TV, TW, TZ, UA, UG, UM, US, UY, UZ, VA, VC, VE, VG, VI, VN, VU, WF, WS, YE, YT, ZA, ZM, ZW",person,addressCountry
-materials_4-0-0,Person,Type,Contact Information,Address,string,n,n,y,option list: addressTypes,"business, home, other",person,addressType
-materials_4-0-0,Place,Term display name,Place Information,Term,string,y,n,y,"","",place,termDisplayName
-materials_4-0-0,Place,Term name,Place Information,Term,string,n,n,y,"","",place,termName
-materials_4-0-0,Place,Term qualifier,Place Information,Term,string,n,n,y,"","",place,termQualifier
-materials_4-0-0,Place,Term status,Place Information,Term,string,n,n,y,option list: placeTermStatuses,"accepted, provisional, rejected, under review",place,termStatus
-materials_4-0-0,Place,Term type,Place Information,Term,string,n,n,y,option list: placeTermTypes,"common, descriptive, local, native, non-native, spelling-variant, technical-scientific",place,termType
-materials_4-0-0,Place,Term flag,Place Information,Term,string,n,n,y,vocabulary: placetermflag,"",place,termFlag
-materials_4-0-0,Place,Term historical status,Place Information,Term,string,n,n,y,option list: placeHistoricalStatuses,"both, current, historical",place,historicalStatus
-materials_4-0-0,Place,Term language,Place Information,Term,string,n,n,y,vocabulary: languages,"",place,termLanguage
-materials_4-0-0,Place,Term preferred for lang,Place Information,Term,boolean,n,n,y,"","",place,termPrefForLang
-materials_4-0-0,Place,Term abbreviation,Place Information,Term,string,n,n,y,"","",place,nameAbbrev
-materials_4-0-0,Place,Term note,Place Information,Term,string,n,n,y,"","",place,nameNote
-materials_4-0-0,Place,Term date,Place Information,Term,structured date group,n,n,y,"","",place,nameDateGroup
-materials_4-0-0,Place,Term source name,Place Information,Term > Source,string,n,n,y,authority: citation/local,"",place,termSource
-materials_4-0-0,Place,Term source detail,Place Information,Term > Source,string,n,n,y,"","",place,termSourceDetail
-materials_4-0-0,Place,Term source ID,Place Information,Term > Source,string,n,n,y,"","",place,termSourceID
-materials_4-0-0,Place,Term source note,Place Information,Term > Source,string,n,n,y,"","",place,termSourceNote
-materials_4-0-0,Place,Place type,Place Information,"",string,n,n,n/a,option list: placeTypes,"autonomous-region, borough, city, collection-site, continent, country, country-code, county, dependent-state, deserted-settlement, district-national, general-region, governorate, inhabited-place, island, island-group, localilty, metropolitan-area, municipality, nation, national-division, neighborhood, occupied-territory, prefecture, province, region, state, state-province, territory, township, union-territory, unitary-authority, urban-prefecture, water-body",place,placeType
-materials_4-0-0,Place,Place source,Place Information,"",string,n,n,n/a,"","",place,placeSource
-materials_4-0-0,Place,Owner,Place Information,Ownership,string,n,n,y,authority: person/local; authority: person/shared; authority: organization/local; authority: organization/shared,"",place,owner
-materials_4-0-0,Place,Ownership date,Place Information,Ownership,structured date group,n,n,y,"","",place,ownershipDateGroup
-materials_4-0-0,Place,Ownership note,Place Information,Ownership,string,n,n,y,"","",place,ownershipNote
-materials_4-0-0,Place,Place note,Place Information,"",string,n,n,n/a,"","",place,placeNote
-materials_4-0-0,Place,Address line 1,Place Information,Address,string,n,n,y,"","",place,addressPlace1
-materials_4-0-0,Place,Address line 2,Place Information,Address,string,n,n,y,"","",place,addressPlace2
-materials_4-0-0,Place,Address municipality,Place Information,Address,string,n,n,y,"","",place,addressMunicipality
-materials_4-0-0,Place,Address state/province,Place Information,Address,string,n,n,y,"","",place,addressStateOrProvince
-materials_4-0-0,Place,Address postal code,Place Information,Address,string,n,n,y,"","",place,addressPostCode
-materials_4-0-0,Place,Address country,Place Information,Address,string,n,n,y,option list: addressCountries,"AD, AE, AF, AG, AI, AL, AM, AO, AQ, AR, AS, AT, AU, AW, AX, AZ, BA, BB, BD, BE, BF, BG, BH, BI, BJ, BL, BM, BN, BO, BQ, BR, BS, BT, BV, BW, BY, BZ, CA, CC, CD, CF, CG, CH, CI, CK, CL, CM, CN, CO, CR, CU, CV, CW, CX, CY, CZ, DE, DJ, DK, DM, DO, DZ, EC, EE, EG, EH, ER, ES, ET, FI, FJ, FK, FM, FO, FR, GA, GB, GD, GE, GF, GG, GH, GI, GL, GM, GN, GP, GQ, GR, GS, GT, GU, GW, GY, HK, HM, HN, HR, HT, HU, ID, IE, IL, IM, IN, IO, IQ, IR, IS, IT, JE, JM, JO, JP, KE, KG, KH, KI, KM, KN, KP, KR, KW, KY, KZ, LA, LB, LC, LI, LK, LR, LS, LT, LU, LV, LY, MA, MC, MD, ME, MF, MG, MH, MK, ML, MM, MN, MO, MP, MQ, MR, MS, MT, MU, MV, MW, MX, MY, MZ, NA, NC, NE, NF, NG, NI, NL, NO, NP, NR, NU, NZ, OM, PA, PE, PF, PG, PH, PK, PL, PM, PN, PR, PS, PT, PW, PY, QA, RE, RO, RS, RU, RW, SA, SB, SC, SD, SE, SG, SH, SI, SJ, SK, SL, SM, SN, SO, SR, SS, ST, SV, SX, SY, SZ, TC, TD, TF, TG, TH, TJ, TK, TL, TM, TN, TO, TR, TT, TV, TW, TZ, UA, UG, UM, US, UY, UZ, VA, VC, VE, VG, VI, VN, VU, WF, WS, YE, YT, ZA, ZM, ZW",place,addressCountry
-materials_4-0-0,Place,Address type,Place Information,Address,string,n,n,y,vocabulary: addresstype,"",place,addressType
-materials_4-0-0,Place,Verbatim coords,Locality Information,"",string,n,n,n/a,"","",place,vCoordinates
-materials_4-0-0,Place,Verbatim latitude,Locality Information,"",string,n,n,n/a,"","",place,vLatitude
-materials_4-0-0,Place,Verbatim longitude,Locality Information,"",string,n,n,n/a,"","",place,vLongitude
-materials_4-0-0,Place,Coordinate system,Locality Information,"",string,n,n,n/a,option list: coordinateSystems,"altitude-depth, latitude-longitude, national-grid-reference, utm",place,vCoordSys
-materials_4-0-0,Place,Spatial ref system,Locality Information,"",string,n,n,n/a,option list: spatialRefSystems,"epsg4267-nad27, epsg4269-nad83, epsg4326-wgs84, unknown",place,vSpatialReferenceSystem
-materials_4-0-0,Place,Elevation,Locality Information,"",string,n,n,n/a,"","",place,vElevation
-materials_4-0-0,Place,Depth,Locality Information,"",string,n,n,n/a,"","",place,vDepth
-materials_4-0-0,Place,Distance above surface,Locality Information,"",string,n,n,n/a,"","",place,vDistanceAboveSurface
-materials_4-0-0,Place,Unit of measure,Locality Information,"",string,n,n,n/a,option list: localityUnits,"acres, centimeters, feet, hectares, inches, kilometers, meters, miles, millimeters, square-feet, square-meters, square-yards, stories",place,vUnitofMeasure
-materials_4-0-0,Place,Min elevation (m),Locality Information,"",float,n,n,n/a,"","",place,minElevationInMeters
-materials_4-0-0,Place,Max elevation (m),Locality Information,"",float,n,n,n/a,"","",place,maxElevationInMeters
-materials_4-0-0,Place,Min depth (m),Locality Information,"",float,n,n,n/a,"","",place,minDepthInMeters
-materials_4-0-0,Place,Max depth (m),Locality Information,"",float,n,n,n/a,"","",place,maxDepthInMeters
-materials_4-0-0,Place,Min distance above surface (m),Locality Information,"",float,n,n,n/a,"","",place,minDistanceAboveSurfaceInMeters
-materials_4-0-0,Place,Max distance above surface (m),Locality Information,"",float,n,n,n/a,"","",place,maxDistanceAboveSurfaceInMeters
-materials_4-0-0,Place,Coordinate source,Locality Information,"",string,n,n,n/a,"","",place,vCoordSource
-materials_4-0-0,Place,Coordinate source detail,Locality Information,"",string,n,n,n/a,"","",place,vCoordSourceRefId
-materials_4-0-0,Place,Georeference decimal latitude,Georeference Information,Georeference,float,n,n,y,"","",place,decimalLatitude
-materials_4-0-0,Place,Georeference decimal longitude,Georeference Information,Georeference,float,n,n,y,"","",place,decimalLongitude
-materials_4-0-0,Place,Georeference datum,Georeference Information,Georeference,string,n,n,y,option list: geodeticDatums,"epsg4267-nad27, epsg4269-nad83, epsg4326-wgs84, unknown",place,geodeticDatum
-materials_4-0-0,Place,Georeference uncertainty (m),Georeference Information,Georeference,integer,n,n,y,"","",place,coordUncertaintyInMeters
-materials_4-0-0,Place,Georeference precision,Georeference Information,Georeference,string,n,n,y,"","",place,coordPrecision
-materials_4-0-0,Place,Georeference point radius spatial fit,Georeference Information,Georeference,string,n,n,y,"","",place,pointRadiusSpatialFit
-materials_4-0-0,Place,Georeference footprint WKT,Georeference Information,Georeference,string,n,n,y,"","",place,footprintWKT
-materials_4-0-0,Place,Georeference footprint SRS,Georeference Information,Georeference,string,n,n,y,"","",place,footprintSRS
-materials_4-0-0,Place,Georeference footprint spatial fit,Georeference Information,Georeference,string,n,n,y,"","",place,footprintSpatialFit
-materials_4-0-0,Place,Georeferenced by,Georeference Information,Georeference,string,n,n,y,authority: person/local; authority: person/shared; authority: organization/local; authority: organization/shared,"",place,geoReferencedBy
-materials_4-0-0,Place,Georeference date,Georeference Information,Georeference,structured date group,n,n,y,"","",place,geoRefDateGroup
-materials_4-0-0,Place,Georeference protocol,Georeference Information,Georeference,string,n,n,y,option list: geoRefProtocols,"biogeomancer, chapman-wieczorek-2006-guide-best-practices-georeferencing, georeferencing-dummies, manis-herpnet-ornis-georeferencing-guidelines",place,geoRefProtocol
-materials_4-0-0,Place,Georeference source,Georeference Information,Georeference,string,n,n,y,"","",place,geoRefSource
-materials_4-0-0,Place,Georeference verification,Georeference Information,Georeference,string,n,n,y,option list: geoRefVerificationStatuses,"unverified, verified-contributor, verified-data-custodian",place,geoRefVerificationStatus
-materials_4-0-0,Place,Georeference remarks,Georeference Information,Georeference,string,n,n,y,"","",place,geoRefRemarks
-materials_4-0-0,Place,Georeference place name,Georeference Information,Georeference,string,n,n,y,"","",place,geoRefPlaceName
-materials_4-0-0,Transport,Transport reference number,Transport Information,"",string,y,n,n/a,"","",transport,transportReferenceNumber
-materials_4-0-0,Transport,Transport method,Transport Information,"",string,n,n,n/a,option list: transportMethodTypes,"LOFO freight, cargo aircraft, combi aircraft, common carrier, exclusive-use truck, expedited use freight, mail, non-commercial carrier, ocean freight, passenger aircraft, shuttle service",transport,transportMethod
-materials_4-0-0,Transport,Number of crates/objects,Transport Information,"",integer,n,n,n/a,"","",transport,numberOfCrates
-materials_4-0-0,Transport,Transporter name,Transport Information,Transporter,string,n,n,n/a,authority: person/local; authority: person/shared; authority: organization/local; authority: organization/shared,"",transport,transporter
-materials_4-0-0,Transport,Transporter contact,Transport Information,Transporter,string,n,n,n/a,authority: person/local; authority: person/shared,"",transport,transporterContact
-materials_4-0-0,Transport,Transporter contact number,Transport Information,Transporter,string,n,n,n/a,"","",transport,transporterContactNumber
-materials_4-0-0,Transport,Transport authorizer,Transport Information,Authorization,string,n,n,n/a,authority: person/local; authority: person/shared,"",transport,transportAuthorizer
-materials_4-0-0,Transport,Authorization date,Transport Information,Authorization,date,n,n,n/a,"","",transport,transportAuthorizationDate
-materials_4-0-0,Transport,Tracking number,Transport Information,Tracking number,string,n,n,y,"","",transport,transportTrackingNumber
-materials_4-0-0,Transport,Tracking number note,Transport Information,Tracking number,string,n,n,y,"","",transport,transportTrackingNumberNote
-materials_4-0-0,Transport,Departure point,Transport Information,Departure,string,n,n,n/a,authority: organization/local; authority: organization/shared; authority: place/local,"",transport,departurePoint
-materials_4-0-0,Transport,Departure date,Transport Information,Departure,date,n,n,n/a,"","",transport,transportDepartureDate
-materials_4-0-0,Transport,Departure time,Transport Information,Departure,string,n,n,n/a,"","",transport,transportDepartureTime
-materials_4-0-0,Transport,Arrival point,Transport Information,Arrival,string,n,n,n/a,authority: place/local; authority: place/shared; authority: organization/local; authority: organization/shared,"",transport,destination
-materials_4-0-0,Transport,Arrival date,Transport Information,Arrival,date,n,n,n/a,"","",transport,transportArrivalDate
-materials_4-0-0,Transport,Arrival time,Transport Information,Arrival,string,n,n,n/a,"","",transport,transportArrivalTime
-materials_4-0-0,Transport,Courier name,Transport Information,Courier,string,n,n,y,authority: person/local; authority: person/shared; authority: organization/local; authority: organization/shared,"",transport,courier
-materials_4-0-0,Transport,Courier contact number,Transport Information,Courier,string,n,n,y,"","",transport,courierContactNumber
-materials_4-0-0,Transport,Note,Transport Information,"",string,n,n,n/a,"","",transport,transportRemarks
-materials_4-0-0,Transport,Transport cost type,Cost Information,"",string,n,n,n/a,vocabulary: transportcosttype,"",transport,transportCostType
-materials_4-0-0,Transport,Transport cost responsible party,Cost Information,"",string,n,n,n/a,vocabulary: transportresponsibleparty,"",transport,transportCostResponsibleParty
-materials_4-0-0,Transport,Insurance/indemnity cost responsible party,Cost Information,"",string,n,n,n/a,vocabulary: transportresponsibleparty,"",transport,insuranceCostResponsibleParty
-materials_4-0-0,Transport,Final shipping cost currency,Cost Information,Final shipping cost,string,n,n,n/a,vocabulary: currency,"",transport,finalShippingCostCurrency
-materials_4-0-0,Transport,Final shipping cost value,Cost Information,Final shipping cost,float,n,n,n/a,"","",transport,finalShippingCostValue
-materials_4-0-0,Transport,Customs broker name,Cost Information,Customs broker,string,n,n,n/a,authority: person/local; authority: person/shared; authority: organization/local; authority: organization/shared,"",transport,customsBroker
-materials_4-0-0,Transport,Customs broker contact,Cost Information,Customs broker,string,n,n,n/a,authority: person/local; authority: person/shared,"",transport,customsBrokerContact
-materials_4-0-0,Transport,Declared value for customs currency,Cost Information,Declared value for customs,string,n,n,n/a,vocabulary: currency,"",transport,customsDeclaredValueCurrency
-materials_4-0-0,Transport,Declared value for customs amount,Cost Information,Declared value for customs,float,n,n,n/a,"","",transport,customsDeclaredValueAmount
-materials_4-0-0,Transport,Customs fee currency,Cost Information,Customs fee,string,n,n,n/a,vocabulary: currency,"",transport,customsFeeCurrency
-materials_4-0-0,Transport,Customs fee value,Cost Information,Customs fee,float,n,n,n/a,"","",transport,customsFeeValue
-materials_4-0-0,Transport,Customs fee note,Cost Information,Customs fee,string,n,n,n/a,"","",transport,customsFeeNote
-materials_4-0-0,Transport,Additional cost type,Cost Information,Additional cost,string,n,n,y,vocabulary: transportadditionalcosttype,"",transport,additionalCostsType
-materials_4-0-0,Transport,Additional cost currency,Cost Information,Additional cost,string,n,n,y,vocabulary: currency,"",transport,additionalCostsCurrency
-materials_4-0-0,Transport,Additional cost value,Cost Information,Additional cost,float,n,n,y,"","",transport,additionalCostsValue
-materials_4-0-0,Transport,Shipping quote provider,Cost Information,"",string,n,n,y,authority: person/local; authority: person/shared; authority: organization/local; authority: organization/shared,"",transport,shippingQuoteProvider
-materials_4-0-0,Transport,Shipping quote currency,Cost Information,"",string,n,n,y,vocabulary: currency,"",transport,shippingQuoteCurrency
-materials_4-0-0,Transport,Shipping quote value,Cost Information,"",float,n,n,y,"","",transport,shippingQuoteValue
-materials_4-0-0,Transport,Shipping quote date,Cost Information,"",date,n,n,y,"","",transport,shippingQuoteDate
-materials_4-0-0,Use of Collections,Reference number,Use of Collections Information,"",string,y,n,n/a,"","",uoc,referenceNumber
-materials_4-0-0,Use of Collections,Method,Use of Collections Information,"",string,n,y,n,vocabulary: uocmethods,"",uoc,method
-materials_4-0-0,Use of Collections,Collection type,Use of Collections Information,"",string,n,y,n,vocabulary: uoccollectiontypes,"",uoc,collectionType
-materials_4-0-0,Use of Collections,Project ID,Use of Collections Information,"",string,n,n,n/a,vocabulary: uocprojectid,"",uoc,projectId
-materials_4-0-0,Use of Collections,Subcollection,Use of Collections Information,"",string,n,n,n/a,vocabulary: uocsubcollections,"",uoc,subcollection
-materials_4-0-0,Use of Collections,Material type,Use of Collections Information,"",string,n,y,n,vocabulary: uocmaterialtypes,"",uoc,materialType
-materials_4-0-0,Use of Collections,User name,Use of Collections Information,User,string,n,n,y,authority: person/local; authority: person/shared; authority: organization/local; authority: organization/shared,"",uoc,user
-materials_4-0-0,Use of Collections,User role,Use of Collections Information,User,string,n,n,y,vocabulary: uocuserroles,"",uoc,userUocRole
-materials_4-0-0,Use of Collections,User institution,Use of Collections Information,User,string,n,n,y,authority: organization/local; authority: organization/shared,"",uoc,userInstitution
-materials_4-0-0,Use of Collections,User institution role,Use of Collections Information,User,string,n,n,y,vocabulary: uocusertypes,"",uoc,userInstitutionRole
-materials_4-0-0,Use of Collections,Title,Use of Collections Information,"",string,n,n,n/a,"","",uoc,title
-materials_4-0-0,Use of Collections,Date requested,Use of Collections Information,"",date,n,n,n/a,"","",uoc,dateRequested
-materials_4-0-0,Use of Collections,Date completed,Use of Collections Information,"",date,n,n,n/a,"","",uoc,dateCompleted
-materials_4-0-0,Use of Collections,Occasion,Use of Collections Information,"",string,n,y,n,authority: concept/occasion,"",uoc,occasion
-materials_4-0-0,Use of Collections,Project description,Use of Collections Information,"",string,n,n,n/a,"","",uoc,projectDescription
-materials_4-0-0,Use of Collections,Authorized by,Use of Collections Information,Authorization,string,n,n,y,authority: person/local; authority: person/shared; authority: organization/local; authority: organization/shared,"",uoc,authorizedBy
-materials_4-0-0,Use of Collections,Authorization date,Use of Collections Information,Authorization,date,n,n,y,"","",uoc,authorizationDate
-materials_4-0-0,Use of Collections,Authorization status,Use of Collections Information,Authorization,string,n,n,y,vocabulary: uocauthorizationstatuses,"",uoc,authorizationStatus
-materials_4-0-0,Use of Collections,Authorization note,Use of Collections Information,Authorization,string,n,n,y,"","",uoc,authorizationNote
-materials_4-0-0,Use of Collections,Start/ongoing date,Use of Collections Information,Start/ongoing date,date,n,n,y,"","",uoc,useDate
-materials_4-0-0,Use of Collections,Start/ongoing date time note,Use of Collections Information,Start/ongoing date,string,n,n,y,"","",uoc,useDateTimeNote
-materials_4-0-0,Use of Collections,Start/ongoing date no. of visitors,Use of Collections Information,Start/ongoing date,integer,n,n,y,"","",uoc,useDateNumberOfVisitors
-materials_4-0-0,Use of Collections,Start/ongoing date hours spent,Use of Collections Information,Start/ongoing date,float,n,n,y,"","",uoc,useDateHoursSpent
-materials_4-0-0,Use of Collections,Start/ongoing date visitor note,Use of Collections Information,Start/ongoing date,string,n,n,y,"","",uoc,useDateVisitorNote
-materials_4-0-0,Use of Collections,End date,Use of Collections Information,"",date,n,n,n/a,"","",uoc,endDate
-materials_4-0-0,Use of Collections,Staff name,Use of Collections Information,Staff,string,n,n,y,authority: person/local; authority: person/shared; authority: organization/local; authority: organization/shared,"",uoc,staffName
-materials_4-0-0,Use of Collections,Staff role,Use of Collections Information,Staff,string,n,n,y,vocabulary: uocstaffroles,"",uoc,staffRole
-materials_4-0-0,Use of Collections,Staff hours spent,Use of Collections Information,Staff,float,n,n,y,"","",uoc,staffHours
-materials_4-0-0,Use of Collections,Staff note,Use of Collections Information,Staff,string,n,n,y,"","",uoc,staffNote
-materials_4-0-0,Use of Collections,Location,Use of Collections Information,"",string,n,y,n,authority: organization/local; authority: organization/shared; authority: place/local; authority: place/shared; authority: location/local,"",uoc,location
-materials_4-0-0,Use of Collections,Fee currency,Use of Collections Information,Fee charged,string,n,n,y,vocabulary: currency,"",uoc,feeCurrency
-materials_4-0-0,Use of Collections,Fee value,Use of Collections Information,Fee charged,float,n,n,y,"","",uoc,feeValue
-materials_4-0-0,Use of Collections,Fee paid,Use of Collections Information,Fee charged,boolean,n,n,y,"","",uoc,feePaid
-materials_4-0-0,Use of Collections,Fee note,Use of Collections Information,Fee charged,string,n,n,y,"","",uoc,feeNote
-materials_4-0-0,Use of Collections,Note,Use of Collections Information,"",string,n,n,n/a,"","",uoc,note
-materials_4-0-0,Use of Collections,Provisos,Use of Collections Information,"",string,n,n,n/a,"","",uoc,provisos
-materials_4-0-0,Use of Collections,Obligations fulfilled,Use of Collections Information,"",boolean,n,n,n/a,"","",uoc,obligationsFulfilled
-materials_4-0-0,Use of Collections,Result,Use of Collections Information,"",string,n,n,n/a,"","",uoc,result
-materials_4-0-0,Valuation Control,Reference number,Object Valuation Information,"",string,y,n,n/a,"","",valuation,valuationcontrolRefNumber
-materials_4-0-0,Valuation Control,Amount currency,Object Valuation Information,Amount,string,n,n,y,vocabulary: currency,"",valuation,valueCurrency
-materials_4-0-0,Valuation Control,Amount value,Object Valuation Information,Amount,float,n,n,y,"","",valuation,valueAmount
-materials_4-0-0,Valuation Control,Date,Object Valuation Information,"",date,n,n,n/a,"","",valuation,valueDate
-materials_4-0-0,Valuation Control,Renewal date,Object Valuation Information,"",date,n,n,n/a,"","",valuation,valueRenewalDate
-materials_4-0-0,Valuation Control,Source,Object Valuation Information,"",string,n,n,n/a,authority: person/local; authority: person/shared; authority: organization/local; authority: organization/shared,"",valuation,valueSource
-materials_4-0-0,Valuation Control,Type,Object Valuation Information,"",string,n,n,n/a,option list: valueTypes,"Current Value, Original Value, Replacement Value",valuation,valueType
-materials_4-0-0,Valuation Control,Note,Object Valuation Information,"",string,n,n,n/a,"","",valuation,valueNote
-materials_4-0-0,Work,Term display name,Work Information,Term,string,y,n,y,"","",work,termDisplayName
-materials_4-0-0,Work,Term name,Work Information,Term,string,n,n,y,"","",work,termName
-materials_4-0-0,Work,Term qualifier,Work Information,Term,string,n,n,y,"","",work,termQualifier
-materials_4-0-0,Work,Term status,Work Information,Term,string,n,n,y,option list: workTermStatuses,"complete, inprogress, quickaddedneedsattention",work,termStatus
-materials_4-0-0,Work,Term type,Work Information,Term,string,n,n,y,"","",work,termType
-materials_4-0-0,Work,Term flag,Work Information,Term,string,n,n,y,vocabulary: worktermflag,"",work,termFlag
-materials_4-0-0,Work,Term language,Work Information,Term,string,n,n,y,vocabulary: languages,"",work,termLanguage
-materials_4-0-0,Work,Term preferred for lang,Work Information,Term,boolean,n,n,y,"","",work,termPrefForLang
-materials_4-0-0,Work,Term source name,Work Information,Term > Source,string,n,n,y,authority: citation/local,"",work,termSource
-materials_4-0-0,Work,Term source detail,Work Information,Term > Source,string,n,n,y,"","",work,termSourceDetail
-materials_4-0-0,Work,Term source ID,Work Information,Term > Source,string,n,n,y,"","",work,termSourceID
-materials_4-0-0,Work,Term source note,Work Information,Term > Source,string,n,n,y,"","",work,termSourceNote
-materials_4-0-0,Work,Work type,Work Information,"",string,n,n,n/a,vocabulary: worktype,"",work,workType
-materials_4-0-0,Work,Work date,Work Information,"",structured date group,n,y,n,"","",work,workDateGroup
-materials_4-0-0,Work,History note,Work Information,"",string,n,n,n/a,"","",work,workHistoryNote
-materials_4-0-0,Work,Creator name,Work Information,Creator,string,n,n,y,authority: person/local; authority: person/shared; authority: organization/local; authority: organization/shared,"",work,creator
-materials_4-0-0,Work,Creator type,Work Information,Creator,string,n,n,y,vocabulary: workcreatortype,"",work,creatorType
-materials_4-0-0,Work,Publisher name,Work Information,Publisher,string,n,n,y,authority: person/local; authority: person/shared; authority: organization/local; authority: organization/shared,"",work,publisher
-materials_4-0-0,Work,Publisher type,Work Information,Publisher,string,n,n,y,vocabulary: workpublishertype,"",work,publisherType
-materials_4-0-0,Work,Address line 1,Work Information,Address,string,n,n,y,"","",work,addressPlace1
-materials_4-0-0,Work,Address line 2,Work Information,Address,string,n,n,y,"","",work,addressPlace2
-materials_4-0-0,Work,Address municipality,Work Information,Address,string,n,n,y,authority: place/local,"",work,addressMunicipality
-materials_4-0-0,Work,Address state/province,Work Information,Address,string,n,n,y,authority: place/local,"",work,addressStateOrProvince
-materials_4-0-0,Work,Address postal code,Work Information,Address,string,n,n,y,"","",work,addressPostCode
-materials_4-0-0,Work,Address country,Work Information,Address,string,n,n,y,authority: place/local,"",work,addressCountry
-materials_4-0-0,Work,Address type,Work Information,Address,string,n,n,y,vocabulary: addresstype,"",work,addressType
-materials_4-0-0,Material,Term display name,Material Information,Term,string,y,n,y,"","",material,termDisplayName
-materials_4-0-0,Material,Term name,Material Information,Term,string,n,n,y,"","",material,termName
-materials_4-0-0,Material,Term qualifier,Material Information,Term,string,n,n,y,"","",material,termQualifier
-materials_4-0-0,Material,Term status,Material Information,Term,string,n,n,y,option list: materialTermStatuses,"accepted, provisional, rejected, under review",material,termStatus
-materials_4-0-0,Material,Term type,Material Information,Term,string,n,n,y,option list: materialTermTypes,"alternate descriptor, descriptor, used for term",material,termType
-materials_4-0-0,Material,Term flag,Material Information,Term,string,n,n,y,vocabulary: materialtermflag,"",material,termFlag
-materials_4-0-0,Material,Term historical status,Material Information,Term,string,n,n,y,option list: materialHistoricalStatuses,"both, current, historical, unknown",material,historicalStatus
-materials_4-0-0,Material,Term language,Material Information,Term,string,n,n,y,vocabulary: languages,"",material,termLanguage
-materials_4-0-0,Material,Term preferred for lang,Material Information,Term,boolean,n,n,y,"","",material,termPrefForLang
-materials_4-0-0,Material,Term source name,Material Information,Term > Source,string,n,n,y,authority: citation/local,"",material,termSource
-materials_4-0-0,Material,Term source detail,Material Information,Term > Source,string,n,n,y,"","",material,termSourceDetail
-materials_4-0-0,Material,Term source ID,Material Information,Term > Source,string,n,n,y,"","",material,termSourceID
-materials_4-0-0,Material,Term source note,Material Information,Term > Source,string,n,n,y,"","",material,termSourceNote
-materials_4-0-0,Material,Featured collection name,Material Information,Featured collection,string,n,n,y,authority: work/local; authority: work/shared,"",material,featuredCollection
-materials_4-0-0,Material,Featured collection note,Material Information,Featured collection,string,n,n,y,"","",material,featuredCollectionNote
-materials_4-0-0,Material,Publish to,Material Information,"",string,n,y,n,vocabulary: publishto,"",material,publishTo
-materials_4-0-0,Material,Composition family name,Material Information,Composition,string,n,n,y,authority: concept/materialclassification; authority: concept/sharedmaterialclassification,"",material,materialCompositionFamilyName
-materials_4-0-0,Material,Composition class name,Material Information,Composition,string,n,n,y,authority: concept/materialclassification; authority: concept/sharedmaterialclassification,"",material,materialCompositionClassName
-materials_4-0-0,Material,Composition generic name,Material Information,Composition,string,n,n,y,authority: concept/materialclassification; authority: concept/sharedmaterialclassification,"",material,materialCompositionGenericName
-materials_4-0-0,Material,Description,Material Information,"",string,n,n,n/a,"","",material,description
-materials_4-0-0,Material,Typical use,Material Information,"",string,n,y,n,vocabulary: materialuse,"",material,typicalUse
-materials_4-0-0,Material,Discontinued status,Material Information,Discontinued,string,n,n,n/a,option list: yesNoValues,"no, yes",material,discontinued
-materials_4-0-0,Material,Discontinued by,Material Information,Discontinued,string,n,n,n/a,authority: organization/local; authority: organization/shared,"",material,discontinuedBy
-materials_4-0-0,Material,Discontinued date,Material Information,Discontinued,structured date group,n,n,n/a,"","",material,discontinuedDate
-materials_4-0-0,Material,Production date,Material Information,"",structured date group,n,n,n/a,"","",material,productionDate
-materials_4-0-0,Material,Production note,Material Information,"",string,n,n,n/a,"","",material,productionNote
-materials_4-0-0,Material,Production organization name,Material Information,Production organization,string,n,n,y,authority: organization/local; authority: organization/shared,"",material,materialProductionOrganization
-materials_4-0-0,Material,Production organization role,Material Information,Production organization,string,n,n,y,vocabulary: materialproductionrole,"",material,materialProductionOrganizationRole
-materials_4-0-0,Material,Production person name,Material Information,Production person,string,n,n,y,authority: person/local; authority: person/shared,"",material,materialProductionPerson
-materials_4-0-0,Material,Production person role,Material Information,Production person,string,n,n,y,vocabulary: materialproductionrole,"",material,materialProductionPersonRole
-materials_4-0-0,Material,Production place name,Material Information,Production place,string,n,n,y,authority: place/local; authority: place/shared,"",material,materialProductionPlace
-materials_4-0-0,Material,Production place role,Material Information,Production place,string,n,n,y,vocabulary: materialproductionrole,"",material,materialProductionPlaceRole
-materials_4-0-0,Material,Featured application name,Material Information,Featured application,string,n,n,y,authority: work/local; authority: work/shared,"",material,featuredApplication
-materials_4-0-0,Material,Featured application note,Material Information,Featured application,string,n,n,y,"","",material,featuredApplicationNote
-materials_4-0-0,Material,Citation source,Material Information,Citation,string,n,n,y,authority: citation/local,"",material,materialCitationSource
-materials_4-0-0,Material,Citation detail,Material Information,Citation,string,n,n,y,"","",material,materialCitationSourceDetail
-materials_4-0-0,Material,External URL,Material Information,External URL,string,n,n,y,"","",material,externalUrl
-materials_4-0-0,Material,External URL note,Material Information,External URL,string,n,n,y,"","",material,externalUrlNote
-materials_4-0-0,Material,External standard name,Material Information,External standard,string,n,n,y,vocabulary: materialresource,"",material,additionalResource
-materials_4-0-0,Material,External standard note,Material Information,External standard,string,n,n,y,"","",material,additionalResourceNote
-materials_4-0-0,Material,Term creator organization,Material Information,Term creator,string,n,n,y,authority: organization/local; authority: organization/shared,"",material,materialTermAttributionContributingOrganization
-materials_4-0-0,Material,Term creator contributor,Material Information,Term creator,string,n,n,y,authority: person/local; authority: person/shared,"",material,materialTermAttributionContributingPerson
-materials_4-0-0,Material,Term creator date,Material Information,Term creator,date,n,n,y,"","",material,materialTermAttributionContributingDate
-materials_4-0-0,Material,Term editor organization,Material Information,Term editor,string,n,n,y,authority: organization/local; authority: organization/shared,"",material,materialTermAttributionEditingOrganization
-materials_4-0-0,Material,Term editor,Material Information,Term editor,string,n,n,y,authority: person/local; authority: person/shared,"",material,materialTermAttributionEditingPerson
-materials_4-0-0,Material,Term editor note,Material Information,Term editor,string,n,n,y,"","",material,materialTermAttributionEditingNote
-materials_4-0-0,Material,Term editor date,Material Information,Term editor,date,n,n,y,"","",material,materialTermAttributionEditingDate
-materials_4-0-0,Material,Common form,Form,"",string,n,n,n/a,vocabulary: materialform,"",material,commonForm
-materials_4-0-0,Material,Form type,Form,Form type,string,n,n,y,vocabulary: materialformtype,"",material,formType
-materials_4-0-0,Material,Typical size,Form,Typical size,string,n,n,y,"","",material,typicalSize
-materials_4-0-0,Material,Measurement dimension,Form,Typical size > Measurement,string,n,n,y,option list: dimensions,"area, base, circumference, count, depth, diameter, height, intended duration, length, running-time, screen resolution, target, volume, weight, width",material,dimension
-materials_4-0-0,Material,Measurement unit,Form,Typical size > Measurement,string,n,n,y,option list: measurementUnits,"carats, centimeters, cubic-centimeters, dpi, feet, hours, inches, kilograms, liters, meters, millimeters, milliseconds, minutes, ounces, pixels, pounds, ppi, seconds, square-feet, stories, tons",material,measurementUnit
-materials_4-0-0,Material,Measurement value,Form,Typical size > Measurement,float,n,n,y,"","",material,value
-materials_4-0-0,Material,Form note,Form,"",string,n,n,n/a,"","",material,formNote
-materials_4-0-0,Material,Acoustical property type,Properties,Acoustical property,string,n,n,y,vocabulary: acousticalproperties,"",material,acousticalPropertyType
-materials_4-0-0,Material,Acoustical property note,Properties,Acoustical property,string,n,n,y,"","",material,acousticalPropertyNote
-materials_4-0-0,Material,Durability property type,Properties,Durability property,string,n,n,y,vocabulary: durabilityproperties,"",material,durabilityPropertyType
-materials_4-0-0,Material,Durability property note,Properties,Durability property,string,n,n,y,"","",material,durabilityPropertyNote
-materials_4-0-0,Material,Electrical property type,Properties,Electrical property,string,n,n,y,vocabulary: electricalproperties,"",material,electricalPropertyType
-materials_4-0-0,Material,Electrical property note,Properties,Electrical property,string,n,n,y,"","",material,electricalPropertyNote
-materials_4-0-0,Material,Hygro-thermal property type,Properties,Hygro-thermal property,string,n,n,y,vocabulary: hygrothermalproperties,"",material,hygrothermalPropertyType
-materials_4-0-0,Material,Hygro-thermal property note,Properties,Hygro-thermal property,string,n,n,y,"","",material,hygrothermalPropertyNote
-materials_4-0-0,Material,Mechanical property type,Properties,Mechanical property,string,n,n,y,vocabulary: mechanicalproperties,"",material,mechanicalPropertyType
-materials_4-0-0,Material,Mechanical property note,Properties,Mechanical property,string,n,n,y,"","",material,mechanicalPropertyNote
-materials_4-0-0,Material,Optical property type,Properties,Optical property,string,n,n,y,vocabulary: opticalproperties,"",material,opticalPropertyType
-materials_4-0-0,Material,Optical property note,Properties,Optical property,string,n,n,y,"","",material,opticalPropertyNote
-materials_4-0-0,Material,Sensorial property type,Properties,Sensorial property,string,n,n,y,vocabulary: sensorialproperties,"",material,sensorialPropertyType
-materials_4-0-0,Material,Sensorial property note,Properties,Sensorial property,string,n,n,y,"","",material,sensorialPropertyNote
-materials_4-0-0,Material,Smart material property type,Properties,Smart material property,string,n,n,y,vocabulary: smartmaterialproperties,"",material,smartMaterialPropertyType
-materials_4-0-0,Material,Smart material property note,Properties,Smart material property,string,n,n,y,"","",material,smartMaterialPropertyNote
-materials_4-0-0,Material,Additional property type,Properties,Additional property,string,n,n,y,vocabulary: additionalproperties,"",material,additionalPropertyType
-materials_4-0-0,Material,Additional property note,Properties,Additional property,string,n,n,y,"","",material,additionalPropertyNote
-materials_4-0-0,Material,Property note,Properties,"",string,n,n,n/a,"","",material,propertyNote
-materials_4-0-0,Material,Recycled content % - Low,Material Ecology,Recycled content,float,n,n,y,"","",material,recycledContent
-materials_4-0-0,Material,Recycled content % - High,Material Ecology,Recycled content,float,n,n,y,"","",material,recycledContentHigh
-materials_4-0-0,Material,Recycled content qualifier,Material Ecology,Recycled content,string,n,n,y,vocabulary: recycledcontentqualifiers,"",material,recycledContentQualifier
-materials_4-0-0,Material,Lifecycle component,Material Ecology,Lifecycle component,string,n,n,y,vocabulary: lifecyclecomponents,"",material,lifecycleComponent
-materials_4-0-0,Material,Lifecycle component note,Material Ecology,Lifecycle component,string,n,n,y,"","",material,lifecycleComponentNote
-materials_4-0-0,Material,Embodied energy value - Low,Material Ecology,Embodied energy,float,n,n,y,"","",material,embodiedEnergyValue
-materials_4-0-0,Material,Embodied energy value - High,Material Ecology,Embodied energy,float,n,n,y,"","",material,embodiedEnergyValueHigh
-materials_4-0-0,Material,Embodied energy unit,Material Ecology,Embodied energy,string,n,n,y,vocabulary: energyunits,"",material,embodiedEnergyUnit
-materials_4-0-0,Material,Embodied energy note,Material Ecology,Embodied energy,string,n,n,y,"","",material,embodiedEnergyNote
-materials_4-0-0,Material,Certification credit program,Material Ecology,Certification credit,string,n,n,y,vocabulary: ecologicalcertifications,"",material,certificationProgram
-materials_4-0-0,Material,Certification credit note,Material Ecology,Certification credit,string,n,n,y,"","",material,certificationCreditNote
-materials_4-0-0,Material,Material ecology note,Material Ecology,"",string,n,n,n/a,"","",material,ecologyNote
-materials_4-0-0,Material,Casting,Process,"",string,n,y,n,vocabulary: castingprocesses,"",material,castingProcess
-materials_4-0-0,Material,Joining,Process,"",string,n,y,n,vocabulary: joiningprocesses,"",material,joiningProcess
-materials_4-0-0,Material,Molding,Process,"",string,n,y,n,vocabulary: moldingprocesses,"",material,moldingProcess
-materials_4-0-0,Material,Surfacing,Process,"",string,n,y,n,vocabulary: surfacingprocesses,"",material,surfacingProcess
-materials_4-0-0,Material,Deforming,Process,"",string,n,y,n,vocabulary: deformingprocesses,"",material,deformingProcess
-materials_4-0-0,Material,Machining,Process,"",string,n,y,n,vocabulary: machiningprocesses,"",material,machiningProcess
-materials_4-0-0,Material,Rapid prototyping,Process,"",string,n,y,n,vocabulary: rapidprototypingprocesses,"",material,rapidPrototypingProcess
-materials_4-0-0,Material,Additional process type,Process,Additional process,string,n,n,y,vocabulary: additionalprocesses,"",material,additionalProcess
-materials_4-0-0,Material,Additional process note,Process,Additional process,string,n,n,y,"","",material,additionalProcessNote
-materials_4-0-0,Material,Process note,Process,"",string,n,n,n/a,"","",material,processNote
+profile,record_type,field,record_section,path_to_field,data_type,required,repeats,group_repeats,data_source_type,data_source_name,option_list_values,record_type_machine_name,field_machine_name
+materials_4-0-0,Acquisition,Reference number,Acquisition Information,"",string,y,n,n/a,"","","",acquisition,acquisitionReferenceNumber
+materials_4-0-0,Acquisition,Accession date,Acquisition Information,"",structured date group,n,n,n/a,"","","",acquisition,accessionDateGroup
+materials_4-0-0,Acquisition,Authorizer,Acquisition Information,Authorization,string,n,n,n/a,authority,person/local,"",acquisition,acquisitionAuthorizer
+materials_4-0-0,Acquisition,Authorization date,Acquisition Information,Authorization,date,n,n,n/a,"","","",acquisition,acquisitionAuthorizerDate
+materials_4-0-0,Acquisition,Acquisition date,Acquisition Information,"",structured date group,n,y,n,"","","",acquisition,acquisitionDateGroup
+materials_4-0-0,Acquisition,Acquisition method,Acquisition Information,"",string,n,n,n/a,option list,acquisitionMethods,"bequest, commission, exchange, found in collection, gift, purchase, transfer, treasure, unknown",acquisition,acquisitionMethod
+materials_4-0-0,Acquisition,Acquisition source,Acquisition Information,"",string,n,y,n,authority,person/local; person/shared; organization/local; organization/shared,"",acquisition,acquisitionSource
+materials_4-0-0,Acquisition,Group purchase price currency,Acquisition Information,Price Information > Group purchase price,string,n,n,n/a,vocabulary,currency,"",acquisition,groupPurchasePriceCurrency
+materials_4-0-0,Acquisition,Group purchase price value,Acquisition Information,Price Information > Group purchase price,float,n,n,n/a,"","","",acquisition,groupPurchasePriceValue
+materials_4-0-0,Acquisition,Object offer price currency,Acquisition Information,Price Information > Object offer price,string,n,n,n/a,vocabulary,currency,"",acquisition,objectOfferPriceCurrency
+materials_4-0-0,Acquisition,Object offer price value,Acquisition Information,Price Information > Object offer price,float,n,n,n/a,"","","",acquisition,objectOfferPriceValue
+materials_4-0-0,Acquisition,Object purchaser offer price currency,Acquisition Information,Price Information > Object purchaser offer price,string,n,n,n/a,vocabulary,currency,"",acquisition,objectPurchaseOfferPriceCurrency
+materials_4-0-0,Acquisition,Object purchaser offer price value,Acquisition Information,Price Information > Object purchaser offer price,float,n,n,n/a,"","","",acquisition,objectPurchaseOfferPriceValue
+materials_4-0-0,Acquisition,Object purchase price currency,Acquisition Information,Price Information > Object purchase price,string,n,n,n/a,vocabulary,currency,"",acquisition,objectPurchasePriceCurrency
+materials_4-0-0,Acquisition,Object purchase price value,Acquisition Information,Price Information > Object purchase price,float,n,n,n/a,"","","",acquisition,objectPurchasePriceValue
+materials_4-0-0,Acquisition,Original object purchase price currency,Acquisition Information,Price Information > Original object purchase price,string,n,n,n/a,vocabulary,currency,"",acquisition,originalObjectPurchasePriceCurrency
+materials_4-0-0,Acquisition,Original object purchase price value,Acquisition Information,Price Information > Original object purchase price,float,n,n,n/a,"","","",acquisition,originalObjectPurchasePriceValue
+materials_4-0-0,Acquisition,Credit line,Acquisition Information,"",string,n,n,n/a,"","","",acquisition,creditLine
+materials_4-0-0,Acquisition,Acquisition reason,Acquisition Information,"",string,n,n,n/a,"","","",acquisition,acquisitionReason
+materials_4-0-0,Acquisition,Note,Acquisition Information,"",string,n,n,n/a,"","","",acquisition,acquisitionNote
+materials_4-0-0,Acquisition,Provisos,Acquisition Information,"",string,n,n,n/a,"","","",acquisition,acquisitionProvisos
+materials_4-0-0,Acquisition,Field collection event name,Object Collection Information,"",string,n,y,n,"","","",acquisition,fieldCollectionEventName
+materials_4-0-0,Citation,Term display name,Citation Information,"",string,y,n,y,"","","",citation,termDisplayName
+materials_4-0-0,Citation,Term status,Citation Information,"",string,n,n,y,option list,citationTermStatuses,"accepted, provisional, rejected, under review",citation,termStatus
+materials_4-0-0,Citation,Term type,Citation Information,"",string,n,n,y,vocabulary,citationtermtype,"",citation,termType
+materials_4-0-0,Citation,Term flag,Citation Information,"",string,n,n,y,vocabulary,citationtermflag,"",citation,termFlag
+materials_4-0-0,Citation,Term language,Citation Information,"",string,n,n,y,vocabulary,languages,"",citation,termLanguage
+materials_4-0-0,Citation,Term preferred for lang,Citation Information,"",boolean,n,n,y,"","","",citation,termPrefForLang
+materials_4-0-0,Citation,Term full citation,Citation Information,"",string,n,n,y,"","","",citation,termFullCitation
+materials_4-0-0,Citation,Term title,Citation Information,"",string,n,n,y,"","","",citation,termTitle
+materials_4-0-0,Citation,Term subtitle,Citation Information,"",string,n,n,y,"","","",citation,termSubTitle
+materials_4-0-0,Citation,Term section title,Citation Information,"",string,n,n,y,"","","",citation,termSectionTitle
+materials_4-0-0,Citation,Term volume,Citation Information,"",string,n,n,y,"","","",citation,termVolume
+materials_4-0-0,Citation,Term issue,Citation Information,"",string,n,n,y,"","","",citation,termIssue
+materials_4-0-0,Citation,Term source name,Citation Information,Source,string,n,n,y,authority,citation/local; citation/shared,"",citation,termSource
+materials_4-0-0,Citation,Term source detail,Citation Information,Source,string,n,n,y,"","","",citation,termSourceDetail
+materials_4-0-0,Citation,Term source ID,Citation Information,Source,string,n,n,y,"","","",citation,termSourceID
+materials_4-0-0,Citation,Term source note,Citation Information,Source,string,n,n,y,"","","",citation,termSourceNote
+materials_4-0-0,Citation,Publisher,Citation Information,"",string,n,n,y,authority,organization/local,"",citation,publisher
+materials_4-0-0,Citation,Publication place,Citation Information,"",string,n,n,y,authority,place/local,"",citation,publicationPlace
+materials_4-0-0,Citation,Publication date,Citation Information,"",structured date group,n,n,y,"","","",citation,publicationDate
+materials_4-0-0,Citation,Publication edition,Citation Information,"",string,n,n,y,"","","",citation,edition
+materials_4-0-0,Citation,Publication page(s),Citation Information,"",string,n,n,y,"","","",citation,pages
+materials_4-0-0,Citation,Agent name,Citation Information,"",string,n,n,y,authority,person/local; organization/local,"",citation,agent
+materials_4-0-0,Citation,Agent role,Citation Information,"",string,n,n,y,vocabulary,agentinfotype,"",citation,role
+materials_4-0-0,Citation,Agent note,Citation Information,"",string,n,n,y,"","","",citation,note
+materials_4-0-0,Citation,Note,Citation Information,"",string,n,n,n/a,"","","",citation,citationNote
+materials_4-0-0,Citation,Resource identifier,Citation Information,"",string,n,n,y,"","","",citation,resourceIdent
+materials_4-0-0,Citation,Resource identifier type,Citation Information,"",string,n,n,y,vocabulary,resourceidtype,"",citation,type
+materials_4-0-0,Citation,Resource identifier capture date,Citation Information,"",structured date group,n,n,y,"","","",citation,captureDate
+materials_4-0-0,Citation,Related term,Citation Information,"",string,n,n,y,"","","",citation,relatedTerm
+materials_4-0-0,Citation,Related term type,Citation Information,"",string,n,n,y,vocabulary,relationtypetype,"",citation,relationType
+materials_4-0-0,Object,Accession number,Object Identification Information,"",string,y,n,n/a,"","","",collectionobject,objectNumber
+materials_4-0-0,Object,Number of objects,Object Identification Information,"",integer,n,n,n,"","","",collectionobject,objectCount
+materials_4-0-0,Object,Other number value,Object Identification Information,"",string,n,n,y,"","","",collectionobject,numberValue
+materials_4-0-0,Object,Other number type,Object Identification Information,"",string,n,n,y,option list,numberTypes,"QR code, barcode, callnumber, lender, obsolete, previous, serial, unknown",collectionobject,numberType
+materials_4-0-0,Object,Collection,Object Identification Information,"",string,n,n,n/a,option list,collections,"circulating, non_circulating",collectionobject,collection
+materials_4-0-0,Object,Named collection,Object Identification Information,"",string,n,y,n,authority,work/local,"",collectionobject,namedCollection
+materials_4-0-0,Object,Record status,Object Identification Information,"",string,n,n,n/a,option list,recordStatuses,"approved, in-process, new, temporary",collectionobject,recordStatus
+materials_4-0-0,Object,Publish to,Object Identification Information,"",string,n,y,n,vocabulary,publishto,"",collectionobject,publishTo
+materials_4-0-0,Object,Inventory status,Object Identification Information,"",string,n,y,n,vocabulary,inventorystatus,"",collectionobject,inventoryStatus
+materials_4-0-0,Object,Production description,Object Identification Information,"",string,n,y,n,"","","",collectionobject,briefDescription
+materials_4-0-0,Object,Material,Object Identification Information,"",string,n,y,n,authority,material/local; material/shared,"",collectionobject,material
+materials_4-0-0,Object,Handling,Object Identification Information,"",string,n,n,y,vocabulary,materialhandling,"",collectionobject,handling
+materials_4-0-0,Object,Handling note,Object Identification Information,"",string,n,n,y,"","","",collectionobject,handlingNote
+materials_4-0-0,Object,Container,Object Identification Information,"",string,n,n,y,vocabulary,materialcontainer,"",collectionobject,container
+materials_4-0-0,Object,Container note,Object Identification Information,"",string,n,n,y,"","","",collectionobject,containerNote
+materials_4-0-0,Object,Condition,Object Identification Information,"",string,n,n,y,vocabulary,materialcondition,"",collectionobject,condition
+materials_4-0-0,Object,Condition note,Object Identification Information,"",string,n,n,y,"","","",collectionobject,conditionNote
+materials_4-0-0,Object,Computed current location,Object Identification Information,"",string,n,n,n/a,authority,location/local; location/offsite; organization/local; organization/shared,"",collectionobject,computedCurrentLocation
+materials_4-0-0,Object,Annotation type,Object Identification Information,"",string,n,n,y,vocabulary,annotationtype,"",collectionobject,annotationType
+materials_4-0-0,Object,Annotation date,Object Identification Information,"",date,n,n,y,"","","",collectionobject,annotationDate
+materials_4-0-0,Object,Annotation author,Object Identification Information,"",string,n,n,y,authority,person/local; person/shared,"",collectionobject,annotationAuthor
+materials_4-0-0,Object,Annotation note,Object Identification Information,"",string,n,n,y,"","","",collectionobject,annotationNote
+materials_4-0-0,Object,Object type,Object Description Information,"",string,n,y,n,option list,objectTypes,"fragment, mock_up, product, prototype, sample",collectionobject,objectStatus
+materials_4-0-0,Object,Finish,Object Description Information,"",string,n,n,y,vocabulary,materialfinish,"",collectionobject,finish
+materials_4-0-0,Object,Finish note,Object Description Information,"",string,n,n,y,"","","",collectionobject,finishNote
+materials_4-0-0,Object,Color,Object Description Information,"",string,n,y,n,"","","",collectionobject,color
+materials_4-0-0,Object,Generic color,Object Description Information,"",string,n,y,n,vocabulary,materialgenericcolor,"",collectionobject,materialGenericColor
+materials_4-0-0,Object,Physical description,Object Description Information,"",string,n,y,n,"","","",collectionobject,materialPhysicalDescription
+materials_4-0-0,Object,Sample size,Object Description Information,"",string,n,n,y,"","","",collectionobject,dimensionSummary
+materials_4-0-0,Object,Measurement dimension,Object Description Information,"",string,n,n,y,option list,dimensions,"area, base, circumference, count, depth, diameter, height, intended duration, length, running-time, screen resolution, target, volume, weight, width",collectionobject,dimension
+materials_4-0-0,Object,Measurement value,Object Description Information,"",float,n,n,y,"","","",collectionobject,value
+materials_4-0-0,Object,Measurement unit,Object Description Information,"",string,n,n,y,option list,measurementUnits,"carats, centimeters, cubic-centimeters, dpi, feet, hours, inches, kilograms, liters, meters, millimeters, milliseconds, minutes, ounces, pixels, pounds, ppi, seconds, square-feet, stories, tons",collectionobject,measurementUnit
+materials_4-0-0,Concept,Term display name,Concept Information,"",string,y,n,y,"","","",concept,termDisplayName
+materials_4-0-0,Concept,Term name,Concept Information,"",string,n,n,y,"","","",concept,termName
+materials_4-0-0,Concept,Term qualifier,Concept Information,"",string,n,n,y,"","","",concept,termQualifier
+materials_4-0-0,Concept,Term status,Concept Information,"",string,n,n,y,option list,conceptTermStatuses,"accepted, provisional, rejected, under review",concept,termStatus
+materials_4-0-0,Concept,Term type,Concept Information,"",string,n,n,y,option list,conceptTermTypes,"alternate descriptor, descriptor, used for term",concept,termType
+materials_4-0-0,Concept,Term flag,Concept Information,"",string,n,n,y,vocabulary,concepttermflag,"",concept,termFlag
+materials_4-0-0,Concept,Term historical status,Concept Information,"",string,n,n,y,option list,conceptHistoricalStatuses,"both, current, historical, unknown",concept,historicalStatus
+materials_4-0-0,Concept,Term language,Concept Information,"",string,n,n,y,vocabulary,languages,"",concept,termLanguage
+materials_4-0-0,Concept,Term preferred for lang,Concept Information,"",boolean,n,n,y,"","","",concept,termPrefForLang
+materials_4-0-0,Concept,Term source name,Concept Information,Source,string,n,n,y,authority,citation/local; citation/shared,"",concept,termSource
+materials_4-0-0,Concept,Term source detail,Concept Information,Source,string,n,n,y,"","","",concept,termSourceDetail
+materials_4-0-0,Concept,Term source ID,Concept Information,Source,string,n,n,y,"","","",concept,termSourceID
+materials_4-0-0,Concept,Term source note,Concept Information,Source,string,n,n,y,"","","",concept,termSourceNote
+materials_4-0-0,Concept,Concept type,Concept Information,"",string,n,y,n,vocabulary,concepttype,"",concept,conceptRecordType
+materials_4-0-0,Concept,Scope note,Concept Information,"",string,n,n,n/a,"","","",concept,scopeNote
+materials_4-0-0,Concept,Scope note source,Concept Information,Scope note,string,n,n,n/a,"","","",concept,scopeNoteSource
+materials_4-0-0,Concept,Scope note source detail,Concept Information,Scope note,string,n,n,n/a,"","","",concept,scopeNoteSourceDetail
+materials_4-0-0,Concept,Citation source,Concept Information,"",string,n,n,y,"","","",concept,citationSource
+materials_4-0-0,Concept,Citation source detail,Concept Information,"",string,n,n,y,"","","",concept,citationSourceDetail
+materials_4-0-0,Concept,Additional source,Concept Information,"",string,n,n,y,"","","",concept,additionalSource
+materials_4-0-0,Concept,Additional source detail,Concept Information,"",string,n,n,y,"","","",concept,additionalSourceDetail
+materials_4-0-0,Concept,Additional source ID,Concept Information,"",string,n,n,y,"","","",concept,additionalSourceID
+materials_4-0-0,Concept,Additional source note,Concept Information,"",string,n,n,y,"","","",concept,additionalSourceNote
+materials_4-0-0,Conservation,Reference number,Conservation Treatment Information,"",string,y,n,n/a,"","","",conservation,conservationNumber
+materials_4-0-0,Conservation,Procedural status,Conservation Treatment Information,"",string,n,n,y,vocabulary,conservationstatus,"",conservation,status
+materials_4-0-0,Conservation,Procedural status date,Conservation Treatment Information,"",date,n,n,y,"","","",conservation,statusDate
+materials_4-0-0,Conservation,Treatment purpose,Conservation Treatment Information,"",string,n,n,n/a,vocabulary,treatmentpurpose,"",conservation,treatmentPurpose
+materials_4-0-0,Conservation,Conservator,Conservation Treatment Information,"",string,n,y,n,authority,person/local; person/shared; organization/local; organization/shared,"",conservation,conservator
+materials_4-0-0,Conservation,Other treatment party name,Conservation Treatment Information,"",string,n,n,y,authority,person/local; person/shared; organization/local; organization/shared,"",conservation,otherParty
+materials_4-0-0,Conservation,Other treatment party role,Conservation Treatment Information,"",string,n,n,y,vocabulary,otherpartyrole,"",conservation,otherPartyRole
+materials_4-0-0,Conservation,Other treatment party note,Conservation Treatment Information,"",string,n,n,y,"","","",conservation,otherPartyNote
+materials_4-0-0,Conservation,Examination staff,Conservation Treatment Information,"",string,n,n,y,authority,person/local; person/shared,"",conservation,examinationStaff
+materials_4-0-0,Conservation,Examination phase of treatment,Conservation Treatment Information,"",string,n,n,y,vocabulary,examinationphase,"",conservation,examinationPhase
+materials_4-0-0,Conservation,Examination date,Conservation Treatment Information,"",date,n,n,y,"","","",conservation,examinationDate
+materials_4-0-0,Conservation,Examination note,Conservation Treatment Information,"",string,n,n,y,"","","",conservation,examinationNote
+materials_4-0-0,Conservation,Fabrication note,Conservation Treatment Information,"",string,n,n,n/a,"","","",conservation,fabricationNote
+materials_4-0-0,Conservation,Proposed treatment,Conservation Treatment Information,"",string,n,n,n/a,"","","",conservation,proposedTreatment
+materials_4-0-0,Conservation,Approved by,Conservation Treatment Information,"",string,n,n,n/a,authority,person/local; person/shared,"",conservation,approvedBy
+materials_4-0-0,Conservation,Approval date,Conservation Treatment Information,"",date,n,n,n/a,"","","",conservation,approvedDate
+materials_4-0-0,Conservation,Treatment start date,Conservation Treatment Information,"",date,n,n,n/a,"","","",conservation,treatmentStartDate
+materials_4-0-0,Conservation,Treatment end date,Conservation Treatment Information,"",date,n,n,n/a,"","","",conservation,treatmentEndDate
+materials_4-0-0,Conservation,Treatment summary,Conservation Treatment Information,"",string,n,n,n/a,"","","",conservation,treatmentSummary
+materials_4-0-0,Conservation,Proposed analysis,Object Analysis Information,"",string,n,n,n/a,"","","",conservation,proposedAnalysis
+materials_4-0-0,Conservation,Analysis researcher,Object Analysis Information,"",string,n,n,n/a,authority,person/local; person/shared,"",conservation,researcher
+materials_4-0-0,Conservation,Analysis proposal date,Object Analysis Information,"",date,n,n,n/a,"","","",conservation,proposedAnalysisDate
+materials_4-0-0,Conservation,Destructive analysis approval date,Object Analysis Information,"",date,n,n,y,"","","",conservation,destAnalysisApprovedDate
+materials_4-0-0,Conservation,Destructive analysis approval note,Object Analysis Information,"",string,n,n,y,"","","",conservation,destAnalysisApprovalNote
+materials_4-0-0,Conservation,Destructive analysis sample taken by,Object Analysis Information,"",string,n,n,y,authority,person/local; person/shared,"",conservation,sampleBy
+materials_4-0-0,Conservation,Destructive analysis sample date,Object Analysis Information,"",date,n,n,y,"","","",conservation,sampleDate
+materials_4-0-0,Conservation,Destructive analysis sample description,Object Analysis Information,"",string,n,n,y,"","","",conservation,sampleDescription
+materials_4-0-0,Conservation,Destructive analysis sample returned,Object Analysis Information,"",boolean,n,n,y,"","","",conservation,sampleReturned
+materials_4-0-0,Conservation,Destructive analysis sample returned location,Object Analysis Information,"",string,n,n,y,"","","",conservation,sampleReturnedLocation
+materials_4-0-0,Conservation,Analytical methodology,Object Analysis Information,"",string,n,n,n/a,"","","",conservation,analysisMethod
+materials_4-0-0,Conservation,Analytical result,Object Analysis Information,"",string,n,n,n/a,"","","",conservation,analysisResults
+materials_4-0-0,Group,Title,Group Information,"",string,y,n,n/a,"","","",group,title
+materials_4-0-0,Group,Responsible department,Group Information,"",string,n,n,n/a,option list,departments,"antiquities, architecture-design, decorative-arts, ethnography, herpetology, media-performance-art, paintings-sculpture, paleobotany, photographs, prints-drawings",group,responsibleDepartment
+materials_4-0-0,Group,Group owner,Group Information,"",string,n,n,n/a,authority,person/local,"",group,owner
+materials_4-0-0,Group,Earliest/single date,Group Information,"",date,n,n,n/a,"","","",group,groupEarliestSingleDate
+materials_4-0-0,Group,Latest date,Group Information,"",date,n,n,n/a,"","","",group,groupLatestDate
+materials_4-0-0,Group,Scope note,Group Information,"",string,n,n,n/a,"","","",group,scopeNote
+materials_4-0-0,Insurance/Indemnity,Reference number,Insurance and Indemnity Information,"",string,y,n,n/a,"","","",insurance,insuranceIndemnityReferenceNumber
+materials_4-0-0,Insurance/Indemnity,Type,Insurance and Indemnity Information,"",string,n,n,n/a,vocabulary,insurancetype,"",insurance,insuranceIndemnityType
+materials_4-0-0,Insurance/Indemnity,Insurer/indemnifier,Insurance and Indemnity Information,"",string,n,n,n/a,authority,person/local; person/shared; organization/local; organization/shared,"",insurance,insurerIndemnifier
+materials_4-0-0,Insurance/Indemnity,Policy number,Insurance and Indemnity Information,"",string,n,n,n/a,"","","",insurance,insuranceIndemnityPolicyNumber
+materials_4-0-0,Insurance/Indemnity,Insurance/indemnity price currency,Insurance and Indemnity Information,Insurance/indemnity price,string,n,n,n/a,vocabulary,currency,"",insurance,insuranceIndemnityCurrency
+materials_4-0-0,Insurance/Indemnity,Insurance/indemnity price value,Insurance and Indemnity Information,Insurance/indemnity price,float,n,n,n/a,"","","",insurance,insuranceIndemnityValue
+materials_4-0-0,Insurance/Indemnity,Minimum liability price currency,Insurance and Indemnity Information,Minimum liability price,string,n,n,n/a,vocabulary,currency,"",insurance,minimumLiabilityCurrency
+materials_4-0-0,Insurance/Indemnity,Minimum liability price value,Insurance and Indemnity Information,Minimum liability price,float,n,n,n/a,"","","",insurance,minimumLiabilityValue
+materials_4-0-0,Insurance/Indemnity,Authorizer,Insurance and Indemnity Information,Authorization,string,n,n,n/a,authority,person/local; person/shared,"",insurance,insuranceIndemnityAuthorizer
+materials_4-0-0,Insurance/Indemnity,Authorization date,Insurance and Indemnity Information,Authorization,date,n,n,n/a,"","","",insurance,insuranceIndemnityAuthorizationDate
+materials_4-0-0,Insurance/Indemnity,Status type,Insurance and Indemnity Information,"",string,n,n,y,vocabulary,insurancestatus,"",insurance,insuranceIndemnityStatus
+materials_4-0-0,Insurance/Indemnity,Status date,Insurance and Indemnity Information,"",date,n,n,y,"","","",insurance,insuranceIndemnityStatusDate
+materials_4-0-0,Insurance/Indemnity,Status note,Insurance and Indemnity Information,"",string,n,n,y,"","","",insurance,insuranceIndemnityStatusNote
+materials_4-0-0,Insurance/Indemnity,Note,Insurance and Indemnity Information,"",string,n,n,n/a,"","","",insurance,insuranceIndemnityNote
+materials_4-0-0,Insurance/Indemnity,Quote provider,Insurance and Indemnity Information,"",string,n,n,y,authority,person/local; person/shared; organization/local; organization/shared,"",insurance,insuranceIndemnityQuoteProvider
+materials_4-0-0,Insurance/Indemnity,Quote currency,Insurance and Indemnity Information,"",string,n,n,y,vocabulary,currency,"",insurance,insuranceIndemnityQuoteCurrency
+materials_4-0-0,Insurance/Indemnity,Quote value,Insurance and Indemnity Information,"",float,n,n,y,"","","",insurance,insuranceIndemnityQuoteValue
+materials_4-0-0,Insurance/Indemnity,Quote date,Insurance and Indemnity Information,"",date,n,n,y,"","","",insurance,insuranceIndemnityQuoteDate
+materials_4-0-0,Loan Out,Loan out number,Loan Out Information,"",string,y,n,n/a,"","","",loanout,loanOutNumber
+materials_4-0-0,Loan Out,Lender authorizer,Loan Out Information,"",string,n,n,n/a,authority,person/local; person/shared,"",loanout,lendersAuthorizer
+materials_4-0-0,Loan Out,Conditions of loan,Loan Out Information,"",string,n,n,n/a,"","","",loanout,specialConditionsOfLoan
+materials_4-0-0,Loan Out,Loan purpose,Loan Out Information,"",string,n,n,n/a,option list,loanPurposes,"analysis, conservationotherrequestedservices, exhibition, longtermcollectionsmanagementandstorage, photography, research, scientificorexhibitpreparation",loanout,loanPurpose
+materials_4-0-0,Loan Out,Borrower,Loan Out Information,"",string,n,n,n/a,authority,person/local; person/shared; organization/local; organization/shared,"",loanout,borrower
+materials_4-0-0,Loan Out,Note,Loan Out Information,"",string,n,n,n/a,"","","",loanout,loanOutNote
+materials_4-0-0,Loan Out,Loan status group,Loan Out Information,"",string,n,n,y,vocabulary,deaccessionapprovalgroup,"",loanout,loanGroup
+materials_4-0-0,Loan Out,Loan status individual,Loan Out Information,"",string,n,n,y,authority,person/local; person/shared,"",loanout,loanIndividual
+materials_4-0-0,Loan Out,Loan status,Loan Out Information,"",string,n,n,y,vocabulary,loanoutstatus,"",loanout,loanStatus
+materials_4-0-0,Loan Out,Loan status date,Loan Out Information,"",date,n,n,y,"","","",loanout,loanStatusDate
+materials_4-0-0,Loan Out,Loan status note,Loan Out Information,"",string,n,n,y,"","","",loanout,loanStatusNote
+materials_4-0-0,Loan Out,Loan out date,Loan Out Information,"",date,n,n,n/a,"","","",loanout,loanOutDate
+materials_4-0-0,Loan Out,Loan return date,Loan Out Information,"",date,n,n,n/a,"","","",loanout,loanReturnDate
+materials_4-0-0,Loan Out,Loan renewal application date,Loan Out Information,"",date,n,n,n/a,"","","",loanout,loanRenewalApplicationDate
+materials_4-0-0,Loan Out,Credit line,Loan Out Information,"",string,n,n,n/a,"","","",loanout,creditLine
+materials_4-0-0,Storage Location,Term display name,Storage Location Information,"",string,y,n,y,"","","",location,termDisplayName
+materials_4-0-0,Storage Location,Term name,Storage Location Information,"",string,n,n,y,"","","",location,termName
+materials_4-0-0,Storage Location,Term qualifier,Storage Location Information,"",string,n,n,y,"","","",location,termQualifier
+materials_4-0-0,Storage Location,Term status,Storage Location Information,"",string,n,n,y,option list,locationTermStatuses,"accepted, provisional, rejected, under review",location,termStatus
+materials_4-0-0,Storage Location,Term type,Storage Location Information,"",string,n,n,y,option list,locationTermTypes,"alternate descriptor, descriptor, used for term",location,termType
+materials_4-0-0,Storage Location,Term flag,Storage Location Information,"",string,n,n,y,vocabulary,locationtermflag,"",location,termFlag
+materials_4-0-0,Storage Location,Term language,Storage Location Information,"",string,n,n,y,vocabulary,languages,"",location,termLanguage
+materials_4-0-0,Storage Location,Term preferred for lang,Storage Location Information,"",boolean,n,n,y,"","","",location,termPrefForLang
+materials_4-0-0,Storage Location,Term source name,Storage Location Information,Source,string,n,n,y,authority,citation/local; citation/shared,"",location,termSource
+materials_4-0-0,Storage Location,Term source detail,Storage Location Information,Source,string,n,n,y,"","","",location,termSourceDetail
+materials_4-0-0,Storage Location,Term source ID,Storage Location Information,Source,string,n,n,y,"","","",location,termSourceID
+materials_4-0-0,Storage Location,Term source note,Storage Location Information,Source,string,n,n,y,"","","",location,termSourceNote
+materials_4-0-0,Storage Location,Storage location type,Storage Location Information,"",string,n,n,n/a,vocabulary,locationtype,"",location,locationType
+materials_4-0-0,Storage Location,Access note,Storage Location Information,"",string,n,n,n/a,"","","",location,accessNote
+materials_4-0-0,Media Handling,Identification number,Media Handling Information,"",string,y,n,n/a,"","","",media,identificationNumber
+materials_4-0-0,Media Handling,Title,Media Handling Information,"",string,n,n,n/a,"","","",media,title
+materials_4-0-0,Media Handling,Publish to,Media Handling Information,"",string,n,y,n,vocabulary,publishto,"",media,publishTo
+materials_4-0-0,Media Handling,External URL,Media Handling Information,"",string,n,n,n/a,"","","",media,externalUrl
+materials_4-0-0,Media Handling,Checksum value,Media Handling Information,"",string,n,n,y,"","","",media,checksumValue
+materials_4-0-0,Media Handling,Checksum type,Media Handling Information,"",string,n,n,y,vocabulary,checksumtypes,"",media,checksumType
+materials_4-0-0,Media Handling,Checksum date,Media Handling Information,"",date,n,n,y,"","","",media,checksumDate
+materials_4-0-0,Media Handling,Contributor,Media Handling Information,"",string,n,n,n/a,authority,person/local; person/shared; organization/local; organization/shared,"",media,contributor
+materials_4-0-0,Media Handling,Creator,Media Handling Information,"",string,n,n,n/a,authority,person/local; person/shared; organization/local; organization/shared,"",media,creator
+materials_4-0-0,Media Handling,Relation,Media Handling Information,"",string,n,y,n,"","","",media,relation
+materials_4-0-0,Media Handling,Type,Media Handling Information,"",string,n,y,n,option list,mediaTypes,"dataset, document, moving_image, sound, still_image",media,type
+materials_4-0-0,Media Handling,Coverage,Media Handling Information,"",string,n,n,n/a,authority,material/local; material/shared; place/local,"",media,coverage
+materials_4-0-0,Media Handling,Date,Media Handling Information,"",structured date group,n,y,n,"","","",media,dateGroup
+materials_4-0-0,Media Handling,Source,Media Handling Information,"",string,n,n,n/a,"","","",media,source
+materials_4-0-0,Media Handling,Subject,Media Handling Information,"",string,n,y,n,"","","",media,subject
+materials_4-0-0,Media Handling,Copyright statement,Media Handling Information,"",string,n,n,n/a,"","","",media,copyrightStatement
+materials_4-0-0,Media Handling,Rights holder,Media Handling Information,"",string,n,n,n/a,authority,person/local; person/shared; organization/local; organization/shared,"",media,rightsHolder
+materials_4-0-0,Media Handling,Description,Media Handling Information,"",string,n,n,n/a,"","","",media,description
+materials_4-0-0,Media Handling,Alt text,Media Handling Information,"",string,n,n,n/a,"","","",media,altText
+materials_4-0-0,Media Handling,"","","",string,n,n,n/a,"","","",media,mediaFileURI
+materials_4-0-0,Location/Movement/Inventory,Reference number,Object Location Information,"",string,n,n,n/a,"","","",movement,movementReferenceNumber
+materials_4-0-0,Location/Movement/Inventory,Current location,Object Location Information,"",string,y,n,n/a,authority,location/local; location/offsite; organization/local; organization/shared,"",movement,currentLocation
+materials_4-0-0,Location/Movement/Inventory,Normal location,Object Location Information,"",string,n,n,n/a,authority,location/local; location/offsite; organization/local; organization/shared,"",movement,normalLocation
+materials_4-0-0,Location/Movement/Inventory,Location date,Object Location Information,"",date,n,n,n/a,"","","",movement,locationDate
+materials_4-0-0,Location/Movement/Inventory,Reason for move,Movement Information,"",string,n,n,n/a,option list,moveReasons,"collections-facility-move, conservation, exhibition, inventory, loan, newstoragelocation, photography, research",movement,reasonForMove
+materials_4-0-0,Location/Movement/Inventory,Planned removal date,Movement Information,"",date,n,n,n/a,"","","",movement,plannedRemovalDate
+materials_4-0-0,Location/Movement/Inventory,Removal date,Movement Information,"",date,n,n,n/a,"","","",movement,removalDate
+materials_4-0-0,Location/Movement/Inventory,Movement contact,Movement Information,"",string,n,n,n/a,authority,person/local; person/shared,"",movement,movementContact
+materials_4-0-0,Location/Movement/Inventory,Movement note,Movement Information,"",string,n,n,n/a,"","","",movement,movementNote
+materials_4-0-0,Location/Movement/Inventory,Inventory action required,Inventory Information,"",string,n,n,n/a,option list,invActions,"conservation, preservation, re-housing",movement,inventoryActionRequired
+materials_4-0-0,Location/Movement/Inventory,Inventory frequency,Inventory Information,"",string,n,n,n/a,option list,invFreqs,"annually, daily, monthly, semi-annually, weekly",movement,frequencyForInventory
+materials_4-0-0,Location/Movement/Inventory,Inventory date,Inventory Information,"",date,n,n,n/a,"","","",movement,inventoryDate
+materials_4-0-0,Location/Movement/Inventory,Next inventory date,Inventory Information,"",date,n,n,n/a,"","","",movement,nextInventoryDate
+materials_4-0-0,Location/Movement/Inventory,Inventory contact,Inventory Information,"",string,n,y,n,authority,person/local; person/shared,"",movement,inventoryContact
+materials_4-0-0,Location/Movement/Inventory,Inventory note,Inventory Information,"",string,n,n,n/a,"","","",movement,inventoryNote
+materials_4-0-0,Object Exit,Exit number,Object Exit Information,"",string,y,n,n/a,"","","",objectexit,exitNumber
+materials_4-0-0,Object Exit,Exit date,Object Exit Information,"",structured date group,n,n,n/a,"","","",objectexit,exitDateGroup
+materials_4-0-0,Object Exit,Exit reason,Object Exit Information,"",string,n,n,n/a,option list,exitReasons,"deaccession, disposal, returnofloan",objectexit,exitReason
+materials_4-0-0,Object Exit,Exit method,Object Exit Information,"",string,n,y,n,option list,exitMethods,"courier, inperson, post",objectexit,exitMethod
+materials_4-0-0,Object Exit,Exit quantity,Object Exit Information,"",integer,n,n,n/a,"","","",objectexit,exitQuantity
+materials_4-0-0,Object Exit,Current owner,Object Exit Information,"",string,n,n,n/a,authority,person/local; person/shared; organization/local; organization/shared,"",objectexit,currentOwner
+materials_4-0-0,Object Exit,Depositor,Object Exit Information,"",string,n,n,n/a,authority,person/local; person/shared; organization/local; organization/shared,"",objectexit,depositor
+materials_4-0-0,Object Exit,Exit note,Object Exit Information,"",string,n,n,n/a,"","","",objectexit,exitNote
+materials_4-0-0,Object Exit,Packing note,Object Exit Information,"",string,n,n,n/a,"","","",objectexit,packingNote
+materials_4-0-0,Object Exit,Disposal new object number,Deaccession and Disposal Information,"",string,n,n,n/a,"","","",objectexit,displosalNewObjectNumber
+materials_4-0-0,Object Exit,Deaccession authorizer,Deaccession and Disposal Information,"",string,n,n,n/a,authority,person/local,"",objectexit,deaccessionAuthorizer
+materials_4-0-0,Object Exit,Authorization date,Deaccession and Disposal Information,"",date,n,n,n/a,"","","",objectexit,authorizationDate
+materials_4-0-0,Object Exit,Deaccession approval group,Deaccession and Disposal Information,"",string,n,n,y,vocabulary,deaccessionapprovalgroup,"",objectexit,deaccessionApprovalGroup
+materials_4-0-0,Object Exit,Deaccession approval individual,Deaccession and Disposal Information,"",string,n,n,y,authority,person/local,"",objectexit,deaccessionApprovalIndividual
+materials_4-0-0,Object Exit,Deaccession approval status,Deaccession and Disposal Information,"",string,n,n,y,vocabulary,deaccessionapprovalstatus,"",objectexit,deaccessionApprovalStatus
+materials_4-0-0,Object Exit,Deaccession approval status date,Deaccession and Disposal Information,"",date,n,n,y,"","","",objectexit,deaccessionApprovalDate
+materials_4-0-0,Object Exit,Deaccession approval note,Deaccession and Disposal Information,"",string,n,n,y,"","","",objectexit,deaccessionApprovalNote
+materials_4-0-0,Object Exit,Deaccession date,Deaccession and Disposal Information,"",date,n,n,n/a,"","","",objectexit,deaccessionDate
+materials_4-0-0,Object Exit,Disposal date,Deaccession and Disposal Information,"",date,n,n,n/a,"","","",objectexit,disposalDate
+materials_4-0-0,Object Exit,Disposal method,Deaccession and Disposal Information,"",string,n,n,n/a,vocabulary,disposalmethod,"",objectexit,disposalMethod
+materials_4-0-0,Object Exit,Disposal reason,Deaccession and Disposal Information,"",string,n,n,n/a,"","","",objectexit,displosalReason
+materials_4-0-0,Object Exit,Disposal proposed recipient,Deaccession and Disposal Information,"",string,n,n,n/a,authority,person/local; person/shared; organization/local; organization/shared,"",objectexit,disposalProposedRecipient
+materials_4-0-0,Object Exit,Disposal recipient,Deaccession and Disposal Information,"",string,n,n,n/a,authority,person/local; person/shared; organization/local; organization/shared,"",objectexit,disposalRecipient
+materials_4-0-0,Object Exit,Disposal currency,Deaccession and Disposal Information,Disposal,string,n,n,n/a,vocabulary,currency,"",objectexit,disposalCurrency
+materials_4-0-0,Object Exit,Disposal value,Deaccession and Disposal Information,Disposal,float,n,n,n/a,"","","",objectexit,displosalValue
+materials_4-0-0,Object Exit,Group disposal currency,Deaccession and Disposal Information,Group disposal,string,n,n,n/a,vocabulary,currency,"",objectexit,groupDisposalCurrency
+materials_4-0-0,Object Exit,Group disposal value,Deaccession and Disposal Information,Group disposal,float,n,n,n/a,"","","",objectexit,groupDisplosalValue
+materials_4-0-0,Object Exit,Disposal provisos,Deaccession and Disposal Information,"",string,n,n,n/a,"","","",objectexit,displosalProvisos
+materials_4-0-0,Object Exit,Disposal note,Deaccession and Disposal Information,"",string,n,n,n/a,"","","",objectexit,displosalNote
+materials_4-0-0,Organization,Term display name,Organization Information,"",string,y,n,y,"","","",organization,termDisplayName
+materials_4-0-0,Organization,Term name,Organization Information,"",string,n,n,y,"","","",organization,termName
+materials_4-0-0,Organization,Term qualifier,Organization Information,"",string,n,n,y,"","","",organization,termQualifier
+materials_4-0-0,Organization,Term status,Organization Information,"",string,n,n,y,option list,orgTermStatuses,"accepted, provisional, rejected, under review",organization,termStatus
+materials_4-0-0,Organization,Term type,Organization Information,"",string,n,n,y,option list,orgTermTypes,"alternate descriptor, descriptor, used for term",organization,termType
+materials_4-0-0,Organization,Term flag,Organization Information,"",string,n,n,y,vocabulary,orgtermflag,"",organization,termFlag
+materials_4-0-0,Organization,Term language,Organization Information,"",string,n,n,y,vocabulary,languages,"",organization,termLanguage
+materials_4-0-0,Organization,Term preferred for lang,Organization Information,"",boolean,n,n,y,"","","",organization,termPrefForLang
+materials_4-0-0,Organization,Term main body name,Organization Information,Name detail,string,n,n,y,"","","",organization,mainBodyName
+materials_4-0-0,Organization,Term name addition,Organization Information,Name detail,string,n,n,y,"","","",organization,additionsToName
+materials_4-0-0,Organization,Term source name,Organization Information,Source,string,n,n,y,authority,citation/local,"",organization,termSource
+materials_4-0-0,Organization,Term source detail,Organization Information,Source,string,n,n,y,"","","",organization,termSourceDetail
+materials_4-0-0,Organization,Term source ID,Organization Information,Source,string,n,n,y,"","","",organization,termSourceID
+materials_4-0-0,Organization,Term source note,Organization Information,Source,string,n,n,y,"","","",organization,termSourceNote
+materials_4-0-0,Organization,Organization type,Organization Information,"",string,n,y,n,vocabulary,organizationtype,"",organization,organizationRecordType
+materials_4-0-0,Organization,Foundation date,Organization Information,"",structured date group,n,n,n/a,"","","",organization,foundingDateGroup
+materials_4-0-0,Organization,Foundation place,Organization Information,"",string,n,n,n/a,"","","",organization,foundingPlace
+materials_4-0-0,Organization,Dissolution date,Organization Information,"",structured date group,n,n,n/a,"","","",organization,dissolutionDateGroup
+materials_4-0-0,Organization,Name note,Organization Information,"",string,n,n,n/a,"","","",organization,nameNote
+materials_4-0-0,Organization,Group,Organization Information,"",string,n,y,n,"","","",organization,group
+materials_4-0-0,Organization,Function,Organization Information,"",string,n,y,n,"","","",organization,function
+materials_4-0-0,Organization,History,Organization Information,"",string,n,y,n,"","","",organization,historyNote
+materials_4-0-0,Organization,Contact name,Organization Information,"",string,n,n,y,authority,person/local,"",organization,contactName
+materials_4-0-0,Organization,Contact role,Organization Information,"",string,n,n,y,vocabulary,contactrole,"",organization,contactRole
+materials_4-0-0,Organization,Contact date,Organization Information,"",structured date group,n,n,y,"","","",organization,contactDateGroup
+materials_4-0-0,Organization,Contact end date,Organization Information,"",structured date group,n,n,y,"","","",organization,contactEndDateGroup
+materials_4-0-0,Organization,Contact status,Organization Information,"",string,n,n,y,vocabulary,contactstatus,"",organization,contactStatus
+materials_4-0-0,Organization,Address,Contact Information,"",string,n,n,y,"","","",organization,email
+materials_4-0-0,Organization,Type,Contact Information,"",string,n,n,y,option list,emailTypes,"business, other, personal",organization,emailType
+materials_4-0-0,Organization,Number,Contact Information,"",string,n,n,y,"","","",organization,telephoneNumber
+materials_4-0-0,Organization,Type,Contact Information,"",string,n,n,y,option list,telephoneNumberTypes,"business, home, mobile, other",organization,telephoneNumberType
+materials_4-0-0,Organization,Number,Contact Information,"",string,n,n,y,"","","",organization,faxNumber
+materials_4-0-0,Organization,Type,Contact Information,"",string,n,n,y,option list,faxNumberTypes,"business, home, other",organization,faxNumberType
+materials_4-0-0,Organization,URL,Contact Information,"",string,n,n,y,"","","",organization,webAddress
+materials_4-0-0,Organization,Type,Contact Information,"",string,n,n,y,option list,webAddressTypes,"business, other, personal",organization,webAddressType
+materials_4-0-0,Organization,Line 1,Contact Information,"",string,n,n,y,"","","",organization,addressPlace1
+materials_4-0-0,Organization,Line 2,Contact Information,"",string,n,n,y,"","","",organization,addressPlace2
+materials_4-0-0,Organization,Municipality,Contact Information,"",string,n,n,y,"","","",organization,addressMunicipality
+materials_4-0-0,Organization,State/province,Contact Information,"",string,n,n,y,"","","",organization,addressStateOrProvince
+materials_4-0-0,Organization,Postal code,Contact Information,"",string,n,n,y,"","","",organization,addressPostCode
+materials_4-0-0,Organization,Country,Contact Information,"",string,n,n,y,option list,addressCountries,"AD, AE, AF, AG, AI, AL, AM, AO, AQ, AR, AS, AT, AU, AW, AX, AZ, BA, BB, BD, BE, BF, BG, BH, BI, BJ, BL, BM, BN, BO, BQ, BR, BS, BT, BV, BW, BY, BZ, CA, CC, CD, CF, CG, CH, CI, CK, CL, CM, CN, CO, CR, CU, CV, CW, CX, CY, CZ, DE, DJ, DK, DM, DO, DZ, EC, EE, EG, EH, ER, ES, ET, FI, FJ, FK, FM, FO, FR, GA, GB, GD, GE, GF, GG, GH, GI, GL, GM, GN, GP, GQ, GR, GS, GT, GU, GW, GY, HK, HM, HN, HR, HT, HU, ID, IE, IL, IM, IN, IO, IQ, IR, IS, IT, JE, JM, JO, JP, KE, KG, KH, KI, KM, KN, KP, KR, KW, KY, KZ, LA, LB, LC, LI, LK, LR, LS, LT, LU, LV, LY, MA, MC, MD, ME, MF, MG, MH, MK, ML, MM, MN, MO, MP, MQ, MR, MS, MT, MU, MV, MW, MX, MY, MZ, NA, NC, NE, NF, NG, NI, NL, NO, NP, NR, NU, NZ, OM, PA, PE, PF, PG, PH, PK, PL, PM, PN, PR, PS, PT, PW, PY, QA, RE, RO, RS, RU, RW, SA, SB, SC, SD, SE, SG, SH, SI, SJ, SK, SL, SM, SN, SO, SR, SS, ST, SV, SX, SY, SZ, TC, TD, TF, TG, TH, TJ, TK, TL, TM, TN, TO, TR, TT, TV, TW, TZ, UA, UG, UM, US, UY, UZ, VA, VC, VE, VG, VI, VN, VU, WF, WS, YE, YT, ZA, ZM, ZW",organization,addressCountry
+materials_4-0-0,Organization,Type,Contact Information,"",string,n,n,y,option list,addressTypes,"business, home, other",organization,addressType
+materials_4-0-0,Person,Term display name,Person Information,"",string,y,n,y,"","","",person,termDisplayName
+materials_4-0-0,Person,Term name,Person Information,"",string,n,n,y,"","","",person,termName
+materials_4-0-0,Person,Term qualifier,Person Information,"",string,n,n,y,"","","",person,termQualifier
+materials_4-0-0,Person,Term status,Person Information,"",string,n,n,y,option list,personTermStatuses,"accepted, provisional, rejected, under review",person,termStatus
+materials_4-0-0,Person,Term type,Person Information,"",string,n,n,y,vocabulary,persontermtype,"",person,termType
+materials_4-0-0,Person,Term source name,Person Information,Source,string,n,n,y,authority,citation/local; citation/shared,"",person,termSource
+materials_4-0-0,Person,Term source detail,Person Information,Source,string,n,n,y,"","","",person,termSourceDetail
+materials_4-0-0,Person,Term source ID,Person Information,Source,string,n,n,y,"","","",person,termSourceID
+materials_4-0-0,Person,Term source note,Person Information,Source,string,n,n,y,"","","",person,termSourceNote
+materials_4-0-0,Person,Term salutation,Person Information,Name detail,string,n,n,y,option list,salutations,"dear, hello, to",person,salutation
+materials_4-0-0,Person,Term title,Person Information,Name detail,string,n,n,y,option list,personTitles,"Admiral, Baron, Baroness, Captain, Commander, Commodore, Count, Countess, Dame, Dr, General, Governor, Honorable, Judge, King, Lady, Lord, Miss, Mr, Mrs, Ms, Prince, Princess, Professor, Queen, Reverend, Saint, Sir",person,title
+materials_4-0-0,Person,Term forename,Person Information,Name detail,string,n,n,y,"","","",person,foreName
+materials_4-0-0,Person,Term middle name,Person Information,Name detail,string,n,n,y,"","","",person,middleName
+materials_4-0-0,Person,Term surname,Person Information,Name detail,string,n,n,y,"","","",person,surName
+materials_4-0-0,Person,Term name addition,Person Information,Name detail,string,n,n,y,"","","",person,nameAdditions
+materials_4-0-0,Person,Term initials,Person Information,Name detail,string,n,n,y,"","","",person,initials
+materials_4-0-0,Person,Occupation,Person Information,"",string,n,y,n,"","","",person,occupation
+materials_4-0-0,Person,Group,Person Information,"",string,n,y,n,"","","",person,group
+materials_4-0-0,Person,Name note,Person Information,"",string,n,n,n/a,"","","",person,nameNote
+materials_4-0-0,Person,Address,Contact Information,"",string,n,n,y,"","","",person,email
+materials_4-0-0,Person,Type,Contact Information,"",string,n,n,y,option list,emailTypes,"business, other, personal",person,emailType
+materials_4-0-0,Person,Number,Contact Information,"",string,n,n,y,"","","",person,telephoneNumber
+materials_4-0-0,Person,Type,Contact Information,"",string,n,n,y,option list,telephoneNumberTypes,"business, home, mobile, other",person,telephoneNumberType
+materials_4-0-0,Person,Number,Contact Information,"",string,n,n,y,"","","",person,faxNumber
+materials_4-0-0,Person,Type,Contact Information,"",string,n,n,y,option list,faxNumberTypes,"business, home, other",person,faxNumberType
+materials_4-0-0,Person,URL,Contact Information,"",string,n,n,y,"","","",person,webAddress
+materials_4-0-0,Person,Type,Contact Information,"",string,n,n,y,option list,webAddressTypes,"business, other, personal",person,webAddressType
+materials_4-0-0,Person,Line 1,Contact Information,"",string,n,n,y,"","","",person,addressPlace1
+materials_4-0-0,Person,Line 2,Contact Information,"",string,n,n,y,"","","",person,addressPlace2
+materials_4-0-0,Person,Municipality,Contact Information,"",string,n,n,y,"","","",person,addressMunicipality
+materials_4-0-0,Person,State/province,Contact Information,"",string,n,n,y,"","","",person,addressStateOrProvince
+materials_4-0-0,Person,Postal code,Contact Information,"",string,n,n,y,"","","",person,addressPostCode
+materials_4-0-0,Person,Country,Contact Information,"",string,n,n,y,option list,addressCountries,"AD, AE, AF, AG, AI, AL, AM, AO, AQ, AR, AS, AT, AU, AW, AX, AZ, BA, BB, BD, BE, BF, BG, BH, BI, BJ, BL, BM, BN, BO, BQ, BR, BS, BT, BV, BW, BY, BZ, CA, CC, CD, CF, CG, CH, CI, CK, CL, CM, CN, CO, CR, CU, CV, CW, CX, CY, CZ, DE, DJ, DK, DM, DO, DZ, EC, EE, EG, EH, ER, ES, ET, FI, FJ, FK, FM, FO, FR, GA, GB, GD, GE, GF, GG, GH, GI, GL, GM, GN, GP, GQ, GR, GS, GT, GU, GW, GY, HK, HM, HN, HR, HT, HU, ID, IE, IL, IM, IN, IO, IQ, IR, IS, IT, JE, JM, JO, JP, KE, KG, KH, KI, KM, KN, KP, KR, KW, KY, KZ, LA, LB, LC, LI, LK, LR, LS, LT, LU, LV, LY, MA, MC, MD, ME, MF, MG, MH, MK, ML, MM, MN, MO, MP, MQ, MR, MS, MT, MU, MV, MW, MX, MY, MZ, NA, NC, NE, NF, NG, NI, NL, NO, NP, NR, NU, NZ, OM, PA, PE, PF, PG, PH, PK, PL, PM, PN, PR, PS, PT, PW, PY, QA, RE, RO, RS, RU, RW, SA, SB, SC, SD, SE, SG, SH, SI, SJ, SK, SL, SM, SN, SO, SR, SS, ST, SV, SX, SY, SZ, TC, TD, TF, TG, TH, TJ, TK, TL, TM, TN, TO, TR, TT, TV, TW, TZ, UA, UG, UM, US, UY, UZ, VA, VC, VE, VG, VI, VN, VU, WF, WS, YE, YT, ZA, ZM, ZW",person,addressCountry
+materials_4-0-0,Person,Type,Contact Information,"",string,n,n,y,option list,addressTypes,"business, home, other",person,addressType
+materials_4-0-0,Place,Term display name,Place Information,"",string,y,n,y,"","","",place,termDisplayName
+materials_4-0-0,Place,Term name,Place Information,"",string,n,n,y,"","","",place,termName
+materials_4-0-0,Place,Term qualifier,Place Information,"",string,n,n,y,"","","",place,termQualifier
+materials_4-0-0,Place,Term status,Place Information,"",string,n,n,y,option list,placeTermStatuses,"accepted, provisional, rejected, under review",place,termStatus
+materials_4-0-0,Place,Term type,Place Information,"",string,n,n,y,option list,placeTermTypes,"common, descriptive, local, native, non-native, spelling-variant, technical-scientific",place,termType
+materials_4-0-0,Place,Term flag,Place Information,"",string,n,n,y,vocabulary,placetermflag,"",place,termFlag
+materials_4-0-0,Place,Term historical status,Place Information,"",string,n,n,y,option list,placeHistoricalStatuses,"both, current, historical",place,historicalStatus
+materials_4-0-0,Place,Term language,Place Information,"",string,n,n,y,vocabulary,languages,"",place,termLanguage
+materials_4-0-0,Place,Term preferred for lang,Place Information,"",boolean,n,n,y,"","","",place,termPrefForLang
+materials_4-0-0,Place,Term abbreviation,Place Information,"",string,n,n,y,"","","",place,nameAbbrev
+materials_4-0-0,Place,Term note,Place Information,"",string,n,n,y,"","","",place,nameNote
+materials_4-0-0,Place,Term date,Place Information,"",structured date group,n,n,y,"","","",place,nameDateGroup
+materials_4-0-0,Place,Term source name,Place Information,Source,string,n,n,y,authority,citation/local; citation/shared,"",place,termSource
+materials_4-0-0,Place,Term source detail,Place Information,Source,string,n,n,y,"","","",place,termSourceDetail
+materials_4-0-0,Place,Term source ID,Place Information,Source,string,n,n,y,"","","",place,termSourceID
+materials_4-0-0,Place,Term source note,Place Information,Source,string,n,n,y,"","","",place,termSourceNote
+materials_4-0-0,Place,Place type,Place Information,"",string,n,n,n/a,option list,placeTypes,"autonomous-region, borough, city, collection-site, continent, country, country-code, county, dependent-state, deserted-settlement, district-national, general-region, governorate, inhabited-place, island, island-group, localilty, metropolitan-area, municipality, nation, national-division, neighborhood, occupied-territory, prefecture, province, region, state, state-province, territory, township, union-territory, unitary-authority, urban-prefecture, water-body",place,placeType
+materials_4-0-0,Place,Place source,Place Information,"",string,n,n,n/a,"","","",place,placeSource
+materials_4-0-0,Place,Owner,Place Information,"",string,n,n,y,authority,person/local; person/shared; organization/local; organization/shared,"",place,owner
+materials_4-0-0,Place,Ownership date,Place Information,"",structured date group,n,n,y,"","","",place,ownershipDateGroup
+materials_4-0-0,Place,Ownership note,Place Information,"",string,n,n,y,"","","",place,ownershipNote
+materials_4-0-0,Place,Place note,Place Information,"",string,n,n,n/a,"","","",place,placeNote
+materials_4-0-0,Place,Address line 1,Place Information,"",string,n,n,y,"","","",place,addressPlace1
+materials_4-0-0,Place,Address line 2,Place Information,"",string,n,n,y,"","","",place,addressPlace2
+materials_4-0-0,Place,Address municipality,Place Information,"",string,n,n,y,"","","",place,addressMunicipality
+materials_4-0-0,Place,Address state/province,Place Information,"",string,n,n,y,"","","",place,addressStateOrProvince
+materials_4-0-0,Place,Address postal code,Place Information,"",string,n,n,y,"","","",place,addressPostCode
+materials_4-0-0,Place,Address country,Place Information,"",string,n,n,y,option list,addressCountries,"AD, AE, AF, AG, AI, AL, AM, AO, AQ, AR, AS, AT, AU, AW, AX, AZ, BA, BB, BD, BE, BF, BG, BH, BI, BJ, BL, BM, BN, BO, BQ, BR, BS, BT, BV, BW, BY, BZ, CA, CC, CD, CF, CG, CH, CI, CK, CL, CM, CN, CO, CR, CU, CV, CW, CX, CY, CZ, DE, DJ, DK, DM, DO, DZ, EC, EE, EG, EH, ER, ES, ET, FI, FJ, FK, FM, FO, FR, GA, GB, GD, GE, GF, GG, GH, GI, GL, GM, GN, GP, GQ, GR, GS, GT, GU, GW, GY, HK, HM, HN, HR, HT, HU, ID, IE, IL, IM, IN, IO, IQ, IR, IS, IT, JE, JM, JO, JP, KE, KG, KH, KI, KM, KN, KP, KR, KW, KY, KZ, LA, LB, LC, LI, LK, LR, LS, LT, LU, LV, LY, MA, MC, MD, ME, MF, MG, MH, MK, ML, MM, MN, MO, MP, MQ, MR, MS, MT, MU, MV, MW, MX, MY, MZ, NA, NC, NE, NF, NG, NI, NL, NO, NP, NR, NU, NZ, OM, PA, PE, PF, PG, PH, PK, PL, PM, PN, PR, PS, PT, PW, PY, QA, RE, RO, RS, RU, RW, SA, SB, SC, SD, SE, SG, SH, SI, SJ, SK, SL, SM, SN, SO, SR, SS, ST, SV, SX, SY, SZ, TC, TD, TF, TG, TH, TJ, TK, TL, TM, TN, TO, TR, TT, TV, TW, TZ, UA, UG, UM, US, UY, UZ, VA, VC, VE, VG, VI, VN, VU, WF, WS, YE, YT, ZA, ZM, ZW",place,addressCountry
+materials_4-0-0,Place,Address type,Place Information,"",string,n,n,y,vocabulary,addresstype,"",place,addressType
+materials_4-0-0,Place,Verbatim coords,Locality Information,"",string,n,n,n/a,"","","",place,vCoordinates
+materials_4-0-0,Place,Verbatim latitude,Locality Information,"",string,n,n,n/a,"","","",place,vLatitude
+materials_4-0-0,Place,Verbatim longitude,Locality Information,"",string,n,n,n/a,"","","",place,vLongitude
+materials_4-0-0,Place,Coordinate system,Locality Information,"",string,n,n,n/a,option list,coordinateSystems,"altitude-depth, latitude-longitude, national-grid-reference, utm",place,vCoordSys
+materials_4-0-0,Place,Spatial ref system,Locality Information,"",string,n,n,n/a,option list,spatialRefSystems,"epsg4267-nad27, epsg4269-nad83, epsg4326-wgs84, unknown",place,vSpatialReferenceSystem
+materials_4-0-0,Place,Elevation,Locality Information,"",string,n,n,n/a,"","","",place,vElevation
+materials_4-0-0,Place,Depth,Locality Information,"",string,n,n,n/a,"","","",place,vDepth
+materials_4-0-0,Place,Distance above surface,Locality Information,"",string,n,n,n/a,"","","",place,vDistanceAboveSurface
+materials_4-0-0,Place,Unit of measure,Locality Information,"",string,n,n,n/a,option list,localityUnits,"acres, centimeters, feet, hectares, inches, kilometers, meters, miles, millimeters, square-feet, square-meters, square-yards, stories",place,vUnitofMeasure
+materials_4-0-0,Place,Min elevation (m),Locality Information,"",float,n,n,n/a,"","","",place,minElevationInMeters
+materials_4-0-0,Place,Max elevation (m),Locality Information,"",float,n,n,n/a,"","","",place,maxElevationInMeters
+materials_4-0-0,Place,Min depth (m),Locality Information,"",float,n,n,n/a,"","","",place,minDepthInMeters
+materials_4-0-0,Place,Max depth (m),Locality Information,"",float,n,n,n/a,"","","",place,maxDepthInMeters
+materials_4-0-0,Place,Min distance above surface (m),Locality Information,"",float,n,n,n/a,"","","",place,minDistanceAboveSurfaceInMeters
+materials_4-0-0,Place,Max distance above surface (m),Locality Information,"",float,n,n,n/a,"","","",place,maxDistanceAboveSurfaceInMeters
+materials_4-0-0,Place,Coordinate source,Locality Information,"",string,n,n,n/a,"","","",place,vCoordSource
+materials_4-0-0,Place,Coordinate source detail,Locality Information,"",string,n,n,n/a,"","","",place,vCoordSourceRefId
+materials_4-0-0,Place,Georeference decimal latitude,Georeference Information,"",float,n,n,y,"","","",place,decimalLatitude
+materials_4-0-0,Place,Georeference decimal longitude,Georeference Information,"",float,n,n,y,"","","",place,decimalLongitude
+materials_4-0-0,Place,Georeference datum,Georeference Information,"",string,n,n,y,option list,geodeticDatums,"epsg4267-nad27, epsg4269-nad83, epsg4326-wgs84, unknown",place,geodeticDatum
+materials_4-0-0,Place,Georeference uncertainty (m),Georeference Information,"",integer,n,n,y,"","","",place,coordUncertaintyInMeters
+materials_4-0-0,Place,Georeference precision,Georeference Information,"",string,n,n,y,"","","",place,coordPrecision
+materials_4-0-0,Place,Georeference point radius spatial fit,Georeference Information,"",string,n,n,y,"","","",place,pointRadiusSpatialFit
+materials_4-0-0,Place,Georeference footprint WKT,Georeference Information,"",string,n,n,y,"","","",place,footprintWKT
+materials_4-0-0,Place,Georeference footprint SRS,Georeference Information,"",string,n,n,y,"","","",place,footprintSRS
+materials_4-0-0,Place,Georeference footprint spatial fit,Georeference Information,"",string,n,n,y,"","","",place,footprintSpatialFit
+materials_4-0-0,Place,Georeferenced by,Georeference Information,"",string,n,n,y,authority,person/local; person/shared; organization/local; organization/shared,"",place,geoReferencedBy
+materials_4-0-0,Place,Georeference date,Georeference Information,"",structured date group,n,n,y,"","","",place,geoRefDateGroup
+materials_4-0-0,Place,Georeference protocol,Georeference Information,"",string,n,n,y,option list,geoRefProtocols,"biogeomancer, chapman-wieczorek-2006-guide-best-practices-georeferencing, georeferencing-dummies, manis-herpnet-ornis-georeferencing-guidelines",place,geoRefProtocol
+materials_4-0-0,Place,Georeference source,Georeference Information,"",string,n,n,y,"","","",place,geoRefSource
+materials_4-0-0,Place,Georeference verification,Georeference Information,"",string,n,n,y,option list,geoRefVerificationStatuses,"unverified, verified-contributor, verified-data-custodian",place,geoRefVerificationStatus
+materials_4-0-0,Place,Georeference remarks,Georeference Information,"",string,n,n,y,"","","",place,geoRefRemarks
+materials_4-0-0,Place,Georeference place name,Georeference Information,"",string,n,n,y,"","","",place,geoRefPlaceName
+materials_4-0-0,Transport,Transport reference number,Transport Information,"",string,y,n,n/a,"","","",transport,transportReferenceNumber
+materials_4-0-0,Transport,Transport method,Transport Information,"",string,n,n,n/a,option list,transportMethodTypes,"LOFO freight, cargo aircraft, combi aircraft, common carrier, exclusive-use truck, expedited use freight, mail, non-commercial carrier, ocean freight, passenger aircraft, shuttle service",transport,transportMethod
+materials_4-0-0,Transport,Number of crates/objects,Transport Information,"",integer,n,n,n/a,"","","",transport,numberOfCrates
+materials_4-0-0,Transport,Transporter name,Transport Information,Transporter,string,n,n,n/a,authority,person/local; person/shared; organization/local; organization/shared,"",transport,transporter
+materials_4-0-0,Transport,Transporter contact,Transport Information,Transporter,string,n,n,n/a,authority,person/local; person/shared,"",transport,transporterContact
+materials_4-0-0,Transport,Transporter contact number,Transport Information,Transporter,string,n,n,n/a,"","","",transport,transporterContactNumber
+materials_4-0-0,Transport,Transport authorizer,Transport Information,Authorization,string,n,n,n/a,authority,person/local; person/shared,"",transport,transportAuthorizer
+materials_4-0-0,Transport,Authorization date,Transport Information,Authorization,date,n,n,n/a,"","","",transport,transportAuthorizationDate
+materials_4-0-0,Transport,Tracking number,Transport Information,"",string,n,n,y,"","","",transport,transportTrackingNumber
+materials_4-0-0,Transport,Tracking number note,Transport Information,"",string,n,n,y,"","","",transport,transportTrackingNumberNote
+materials_4-0-0,Transport,Departure point,Transport Information,Departure,string,n,n,n/a,authority,organization/local; organization/shared; place/local,"",transport,departurePoint
+materials_4-0-0,Transport,Departure date,Transport Information,Departure,date,n,n,n/a,"","","",transport,transportDepartureDate
+materials_4-0-0,Transport,Departure time,Transport Information,Departure,string,n,n,n/a,"","","",transport,transportDepartureTime
+materials_4-0-0,Transport,Arrival point,Transport Information,Arrival,string,n,n,n/a,authority,place/local; place/shared; organization/local; organization/shared,"",transport,destination
+materials_4-0-0,Transport,Arrival date,Transport Information,Arrival,date,n,n,n/a,"","","",transport,transportArrivalDate
+materials_4-0-0,Transport,Arrival time,Transport Information,Arrival,string,n,n,n/a,"","","",transport,transportArrivalTime
+materials_4-0-0,Transport,Courier name,Transport Information,"",string,n,n,y,authority,person/local; person/shared; organization/local; organization/shared,"",transport,courier
+materials_4-0-0,Transport,Courier contact number,Transport Information,"",string,n,n,y,"","","",transport,courierContactNumber
+materials_4-0-0,Transport,Note,Transport Information,"",string,n,n,n/a,"","","",transport,transportRemarks
+materials_4-0-0,Transport,Transport cost type,Cost Information,"",string,n,n,n/a,vocabulary,transportcosttype,"",transport,transportCostType
+materials_4-0-0,Transport,Transport cost responsible party,Cost Information,"",string,n,n,n/a,vocabulary,transportresponsibleparty,"",transport,transportCostResponsibleParty
+materials_4-0-0,Transport,Insurance/indemnity cost responsible party,Cost Information,"",string,n,n,n/a,vocabulary,transportresponsibleparty,"",transport,insuranceCostResponsibleParty
+materials_4-0-0,Transport,Final shipping cost currency,Cost Information,Final shipping cost,string,n,n,n/a,vocabulary,currency,"",transport,finalShippingCostCurrency
+materials_4-0-0,Transport,Final shipping cost value,Cost Information,Final shipping cost,float,n,n,n/a,"","","",transport,finalShippingCostValue
+materials_4-0-0,Transport,Customs broker name,Cost Information,Customs broker,string,n,n,n/a,authority,person/local; person/shared; organization/local; organization/shared,"",transport,customsBroker
+materials_4-0-0,Transport,Customs broker contact,Cost Information,Customs broker,string,n,n,n/a,authority,person/local; person/shared,"",transport,customsBrokerContact
+materials_4-0-0,Transport,Declared value for customs currency,Cost Information,Declared value for customs,string,n,n,n/a,vocabulary,currency,"",transport,customsDeclaredValueCurrency
+materials_4-0-0,Transport,Declared value for customs amount,Cost Information,Declared value for customs,float,n,n,n/a,"","","",transport,customsDeclaredValueAmount
+materials_4-0-0,Transport,Customs fee currency,Cost Information,Customs fee,string,n,n,n/a,vocabulary,currency,"",transport,customsFeeCurrency
+materials_4-0-0,Transport,Customs fee value,Cost Information,Customs fee,float,n,n,n/a,"","","",transport,customsFeeValue
+materials_4-0-0,Transport,Customs fee note,Cost Information,Customs fee,string,n,n,n/a,"","","",transport,customsFeeNote
+materials_4-0-0,Transport,Additional cost type,Cost Information,"",string,n,n,y,vocabulary,transportadditionalcosttype,"",transport,additionalCostsType
+materials_4-0-0,Transport,Additional cost currency,Cost Information,"",string,n,n,y,vocabulary,currency,"",transport,additionalCostsCurrency
+materials_4-0-0,Transport,Additional cost value,Cost Information,"",float,n,n,y,"","","",transport,additionalCostsValue
+materials_4-0-0,Transport,Shipping quote provider,Cost Information,"",string,n,n,y,authority,person/local; person/shared; organization/local; organization/shared,"",transport,shippingQuoteProvider
+materials_4-0-0,Transport,Shipping quote currency,Cost Information,"",string,n,n,y,vocabulary,currency,"",transport,shippingQuoteCurrency
+materials_4-0-0,Transport,Shipping quote value,Cost Information,"",float,n,n,y,"","","",transport,shippingQuoteValue
+materials_4-0-0,Transport,Shipping quote date,Cost Information,"",date,n,n,y,"","","",transport,shippingQuoteDate
+materials_4-0-0,Use of Collections,Reference number,Use of Collections Information,"",string,y,n,n/a,"","","",uoc,referenceNumber
+materials_4-0-0,Use of Collections,Method,Use of Collections Information,"",string,n,y,n,vocabulary,uocmethods,"",uoc,method
+materials_4-0-0,Use of Collections,Collection type,Use of Collections Information,"",string,n,y,n,vocabulary,uoccollectiontypes,"",uoc,collectionType
+materials_4-0-0,Use of Collections,Project ID,Use of Collections Information,"",string,n,n,n/a,vocabulary,uocprojectid,"",uoc,projectId
+materials_4-0-0,Use of Collections,Subcollection,Use of Collections Information,"",string,n,n,n/a,vocabulary,uocsubcollections,"",uoc,subcollection
+materials_4-0-0,Use of Collections,Material type,Use of Collections Information,"",string,n,y,n,vocabulary,uocmaterialtypes,"",uoc,materialType
+materials_4-0-0,Use of Collections,User name,Use of Collections Information,"",string,n,n,y,authority,person/local; person/shared; organization/local; organization/shared,"",uoc,user
+materials_4-0-0,Use of Collections,User role,Use of Collections Information,"",string,n,n,y,vocabulary,uocuserroles,"",uoc,userUocRole
+materials_4-0-0,Use of Collections,User institution,Use of Collections Information,"",string,n,n,y,authority,organization/local; organization/shared,"",uoc,userInstitution
+materials_4-0-0,Use of Collections,User institution role,Use of Collections Information,"",string,n,n,y,vocabulary,uocusertypes,"",uoc,userInstitutionRole
+materials_4-0-0,Use of Collections,Title,Use of Collections Information,"",string,n,n,n/a,"","","",uoc,title
+materials_4-0-0,Use of Collections,Date requested,Use of Collections Information,"",date,n,n,n/a,"","","",uoc,dateRequested
+materials_4-0-0,Use of Collections,Date completed,Use of Collections Information,"",date,n,n,n/a,"","","",uoc,dateCompleted
+materials_4-0-0,Use of Collections,Occasion,Use of Collections Information,"",string,n,y,n,authority,concept/occasion,"",uoc,occasion
+materials_4-0-0,Use of Collections,Project description,Use of Collections Information,"",string,n,n,n/a,"","","",uoc,projectDescription
+materials_4-0-0,Use of Collections,Authorized by,Use of Collections Information,"",string,n,n,y,authority,person/local; person/shared; organization/local; organization/shared,"",uoc,authorizedBy
+materials_4-0-0,Use of Collections,Authorization date,Use of Collections Information,"",date,n,n,y,"","","",uoc,authorizationDate
+materials_4-0-0,Use of Collections,Authorization status,Use of Collections Information,"",string,n,n,y,vocabulary,uocauthorizationstatuses,"",uoc,authorizationStatus
+materials_4-0-0,Use of Collections,Authorization note,Use of Collections Information,"",string,n,n,y,"","","",uoc,authorizationNote
+materials_4-0-0,Use of Collections,Start/ongoing date,Use of Collections Information,"",date,n,n,y,"","","",uoc,useDate
+materials_4-0-0,Use of Collections,Start/ongoing date time note,Use of Collections Information,"",string,n,n,y,"","","",uoc,useDateTimeNote
+materials_4-0-0,Use of Collections,Start/ongoing date no. of visitors,Use of Collections Information,"",integer,n,n,y,"","","",uoc,useDateNumberOfVisitors
+materials_4-0-0,Use of Collections,Start/ongoing date hours spent,Use of Collections Information,"",float,n,n,y,"","","",uoc,useDateHoursSpent
+materials_4-0-0,Use of Collections,Start/ongoing date visitor note,Use of Collections Information,"",string,n,n,y,"","","",uoc,useDateVisitorNote
+materials_4-0-0,Use of Collections,End date,Use of Collections Information,"",date,n,n,n/a,"","","",uoc,endDate
+materials_4-0-0,Use of Collections,Staff name,Use of Collections Information,"",string,n,n,y,authority,person/local; person/shared; organization/local; organization/shared,"",uoc,staffName
+materials_4-0-0,Use of Collections,Staff role,Use of Collections Information,"",string,n,n,y,vocabulary,uocstaffroles,"",uoc,staffRole
+materials_4-0-0,Use of Collections,Staff hours spent,Use of Collections Information,"",float,n,n,y,"","","",uoc,staffHours
+materials_4-0-0,Use of Collections,Staff note,Use of Collections Information,"",string,n,n,y,"","","",uoc,staffNote
+materials_4-0-0,Use of Collections,Location,Use of Collections Information,"",string,n,y,n,authority,organization/local; organization/shared; place/local; place/shared; location/local,"",uoc,location
+materials_4-0-0,Use of Collections,Fee currency,Use of Collections Information,"",string,n,n,y,vocabulary,currency,"",uoc,feeCurrency
+materials_4-0-0,Use of Collections,Fee value,Use of Collections Information,"",float,n,n,y,"","","",uoc,feeValue
+materials_4-0-0,Use of Collections,Fee paid,Use of Collections Information,"",boolean,n,n,y,"","","",uoc,feePaid
+materials_4-0-0,Use of Collections,Fee note,Use of Collections Information,"",string,n,n,y,"","","",uoc,feeNote
+materials_4-0-0,Use of Collections,Note,Use of Collections Information,"",string,n,n,n/a,"","","",uoc,note
+materials_4-0-0,Use of Collections,Provisos,Use of Collections Information,"",string,n,n,n/a,"","","",uoc,provisos
+materials_4-0-0,Use of Collections,Obligations fulfilled,Use of Collections Information,"",boolean,n,n,n/a,"","","",uoc,obligationsFulfilled
+materials_4-0-0,Use of Collections,Result,Use of Collections Information,"",string,n,n,n/a,"","","",uoc,result
+materials_4-0-0,Valuation Control,Reference number,Object Valuation Information,"",string,y,n,n/a,"","","",valuation,valuationcontrolRefNumber
+materials_4-0-0,Valuation Control,Amount currency,Object Valuation Information,"",string,n,n,y,vocabulary,currency,"",valuation,valueCurrency
+materials_4-0-0,Valuation Control,Amount value,Object Valuation Information,"",float,n,n,y,"","","",valuation,valueAmount
+materials_4-0-0,Valuation Control,Date,Object Valuation Information,"",date,n,n,n/a,"","","",valuation,valueDate
+materials_4-0-0,Valuation Control,Renewal date,Object Valuation Information,"",date,n,n,n/a,"","","",valuation,valueRenewalDate
+materials_4-0-0,Valuation Control,Source,Object Valuation Information,"",string,n,n,n/a,authority,person/local; person/shared; organization/local; organization/shared,"",valuation,valueSource
+materials_4-0-0,Valuation Control,Type,Object Valuation Information,"",string,n,n,n/a,option list,valueTypes,"Current Value, Original Value, Replacement Value",valuation,valueType
+materials_4-0-0,Valuation Control,Note,Object Valuation Information,"",string,n,n,n/a,"","","",valuation,valueNote
+materials_4-0-0,Work,Term display name,Work Information,"",string,y,n,y,"","","",work,termDisplayName
+materials_4-0-0,Work,Term name,Work Information,"",string,n,n,y,"","","",work,termName
+materials_4-0-0,Work,Term qualifier,Work Information,"",string,n,n,y,"","","",work,termQualifier
+materials_4-0-0,Work,Term status,Work Information,"",string,n,n,y,option list,workTermStatuses,"complete, inprogress, quickaddedneedsattention",work,termStatus
+materials_4-0-0,Work,Term type,Work Information,"",string,n,n,y,"","","",work,termType
+materials_4-0-0,Work,Term flag,Work Information,"",string,n,n,y,vocabulary,worktermflag,"",work,termFlag
+materials_4-0-0,Work,Term language,Work Information,"",string,n,n,y,vocabulary,languages,"",work,termLanguage
+materials_4-0-0,Work,Term preferred for lang,Work Information,"",boolean,n,n,y,"","","",work,termPrefForLang
+materials_4-0-0,Work,Term source name,Work Information,Source,string,n,n,y,authority,citation/local; citation/shared,"",work,termSource
+materials_4-0-0,Work,Term source detail,Work Information,Source,string,n,n,y,"","","",work,termSourceDetail
+materials_4-0-0,Work,Term source ID,Work Information,Source,string,n,n,y,"","","",work,termSourceID
+materials_4-0-0,Work,Term source note,Work Information,Source,string,n,n,y,"","","",work,termSourceNote
+materials_4-0-0,Work,Work type,Work Information,"",string,n,n,n/a,vocabulary,worktype,"",work,workType
+materials_4-0-0,Work,Work date,Work Information,"",structured date group,n,y,n,"","","",work,workDateGroup
+materials_4-0-0,Work,History note,Work Information,"",string,n,n,n/a,"","","",work,workHistoryNote
+materials_4-0-0,Work,Creator name,Work Information,"",string,n,n,y,authority,person/local; person/shared; organization/local; organization/shared,"",work,creator
+materials_4-0-0,Work,Creator type,Work Information,"",string,n,n,y,vocabulary,workcreatortype,"",work,creatorType
+materials_4-0-0,Work,Publisher name,Work Information,"",string,n,n,y,authority,person/local; person/shared; organization/local; organization/shared,"",work,publisher
+materials_4-0-0,Work,Publisher type,Work Information,"",string,n,n,y,vocabulary,workpublishertype,"",work,publisherType
+materials_4-0-0,Work,Address line 1,Work Information,"",string,n,n,y,"","","",work,addressPlace1
+materials_4-0-0,Work,Address line 2,Work Information,"",string,n,n,y,"","","",work,addressPlace2
+materials_4-0-0,Work,Address municipality,Work Information,"",string,n,n,y,authority,place/local,"",work,addressMunicipality
+materials_4-0-0,Work,Address state/province,Work Information,"",string,n,n,y,authority,place/local,"",work,addressStateOrProvince
+materials_4-0-0,Work,Address postal code,Work Information,"",string,n,n,y,"","","",work,addressPostCode
+materials_4-0-0,Work,Address country,Work Information,"",string,n,n,y,authority,place/local,"",work,addressCountry
+materials_4-0-0,Work,Address type,Work Information,"",string,n,n,y,vocabulary,addresstype,"",work,addressType
+materials_4-0-0,Material,Term display name,Material Information,"",string,y,n,y,"","","",material,termDisplayName
+materials_4-0-0,Material,Term name,Material Information,"",string,n,n,y,"","","",material,termName
+materials_4-0-0,Material,Term qualifier,Material Information,"",string,n,n,y,"","","",material,termQualifier
+materials_4-0-0,Material,Term status,Material Information,"",string,n,n,y,option list,materialTermStatuses,"accepted, provisional, rejected, under review",material,termStatus
+materials_4-0-0,Material,Term type,Material Information,"",string,n,n,y,option list,materialTermTypes,"alternate descriptor, descriptor, used for term",material,termType
+materials_4-0-0,Material,Term flag,Material Information,"",string,n,n,y,vocabulary,materialtermflag,"",material,termFlag
+materials_4-0-0,Material,Term historical status,Material Information,"",string,n,n,y,option list,materialHistoricalStatuses,"both, current, historical, unknown",material,historicalStatus
+materials_4-0-0,Material,Term language,Material Information,"",string,n,n,y,vocabulary,languages,"",material,termLanguage
+materials_4-0-0,Material,Term preferred for lang,Material Information,"",boolean,n,n,y,"","","",material,termPrefForLang
+materials_4-0-0,Material,Term source name,Material Information,Source,string,n,n,y,authority,citation/local; citation/shared,"",material,termSource
+materials_4-0-0,Material,Term source detail,Material Information,Source,string,n,n,y,"","","",material,termSourceDetail
+materials_4-0-0,Material,Term source ID,Material Information,Source,string,n,n,y,"","","",material,termSourceID
+materials_4-0-0,Material,Term source note,Material Information,Source,string,n,n,y,"","","",material,termSourceNote
+materials_4-0-0,Material,Featured collection name,Material Information,"",string,n,n,y,authority,work/local; work/shared,"",material,featuredCollection
+materials_4-0-0,Material,Featured collection note,Material Information,"",string,n,n,y,"","","",material,featuredCollectionNote
+materials_4-0-0,Material,Publish to,Material Information,"",string,n,y,n,vocabulary,publishto,"",material,publishTo
+materials_4-0-0,Material,Composition family name,Material Information,"",string,n,n,y,authority,concept/materialclassification; concept/sharedmaterialclassification,"",material,materialCompositionFamilyName
+materials_4-0-0,Material,Composition class name,Material Information,"",string,n,n,y,authority,concept/materialclassification; concept/sharedmaterialclassification,"",material,materialCompositionClassName
+materials_4-0-0,Material,Composition generic name,Material Information,"",string,n,n,y,authority,concept/materialclassification; concept/sharedmaterialclassification,"",material,materialCompositionGenericName
+materials_4-0-0,Material,Description,Material Information,"",string,n,n,n/a,"","","",material,description
+materials_4-0-0,Material,Typical use,Material Information,"",string,n,y,n,vocabulary,materialuse,"",material,typicalUse
+materials_4-0-0,Material,Discontinued status,Material Information,Discontinued,string,n,n,n/a,option list,yesNoValues,"no, yes",material,discontinued
+materials_4-0-0,Material,Discontinued by,Material Information,Discontinued,string,n,n,n/a,authority,organization/local; organization/shared,"",material,discontinuedBy
+materials_4-0-0,Material,Discontinued date,Material Information,Discontinued,structured date group,n,n,n/a,"","","",material,discontinuedDate
+materials_4-0-0,Material,Production date,Material Information,"",structured date group,n,n,n/a,"","","",material,productionDate
+materials_4-0-0,Material,Production note,Material Information,"",string,n,n,n/a,"","","",material,productionNote
+materials_4-0-0,Material,Production organization name,Material Information,"",string,n,n,y,authority,organization/local; organization/shared,"",material,materialProductionOrganization
+materials_4-0-0,Material,Production organization role,Material Information,"",string,n,n,y,vocabulary,materialproductionrole,"",material,materialProductionOrganizationRole
+materials_4-0-0,Material,Production person name,Material Information,"",string,n,n,y,authority,person/local; person/shared,"",material,materialProductionPerson
+materials_4-0-0,Material,Production person role,Material Information,"",string,n,n,y,vocabulary,materialproductionrole,"",material,materialProductionPersonRole
+materials_4-0-0,Material,Production place name,Material Information,"",string,n,n,y,authority,place/local; place/shared,"",material,materialProductionPlace
+materials_4-0-0,Material,Production place role,Material Information,"",string,n,n,y,vocabulary,materialproductionrole,"",material,materialProductionPlaceRole
+materials_4-0-0,Material,Featured application name,Material Information,"",string,n,n,y,authority,work/local; work/shared,"",material,featuredApplication
+materials_4-0-0,Material,Featured application note,Material Information,"",string,n,n,y,"","","",material,featuredApplicationNote
+materials_4-0-0,Material,Citation source,Material Information,"",string,n,n,y,authority,citation/local; citation/shared,"",material,materialCitationSource
+materials_4-0-0,Material,Citation detail,Material Information,"",string,n,n,y,"","","",material,materialCitationSourceDetail
+materials_4-0-0,Material,External URL,Material Information,"",string,n,n,y,"","","",material,externalUrl
+materials_4-0-0,Material,External URL note,Material Information,"",string,n,n,y,"","","",material,externalUrlNote
+materials_4-0-0,Material,External standard name,Material Information,"",string,n,n,y,vocabulary,materialresource,"",material,additionalResource
+materials_4-0-0,Material,External standard note,Material Information,"",string,n,n,y,"","","",material,additionalResourceNote
+materials_4-0-0,Material,Term creator organization,Material Information,"",string,n,n,y,authority,organization/local; organization/shared,"",material,materialTermAttributionContributingOrganization
+materials_4-0-0,Material,Term creator contributor,Material Information,"",string,n,n,y,authority,person/local; person/shared,"",material,materialTermAttributionContributingPerson
+materials_4-0-0,Material,Term creator date,Material Information,"",date,n,n,y,"","","",material,materialTermAttributionContributingDate
+materials_4-0-0,Material,Term editor organization,Material Information,"",string,n,n,y,authority,organization/local; organization/shared,"",material,materialTermAttributionEditingOrganization
+materials_4-0-0,Material,Term editor,Material Information,"",string,n,n,y,authority,person/local; person/shared,"",material,materialTermAttributionEditingPerson
+materials_4-0-0,Material,Term editor note,Material Information,"",string,n,n,y,"","","",material,materialTermAttributionEditingNote
+materials_4-0-0,Material,Term editor date,Material Information,"",date,n,n,y,"","","",material,materialTermAttributionEditingDate
+materials_4-0-0,Material,Common form,Form,"",string,n,n,n/a,vocabulary,materialform,"",material,commonForm
+materials_4-0-0,Material,Form type,Form,"",string,n,n,y,vocabulary,materialformtype,"",material,formType
+materials_4-0-0,Material,Typical size,Form,"",string,n,n,y,"","","",material,typicalSize
+materials_4-0-0,Material,Measurement dimension,Form,"",string,n,n,y,option list,dimensions,"area, base, circumference, count, depth, diameter, height, intended duration, length, running-time, screen resolution, target, volume, weight, width",material,dimension
+materials_4-0-0,Material,Measurement unit,Form,"",string,n,n,y,option list,measurementUnits,"carats, centimeters, cubic-centimeters, dpi, feet, hours, inches, kilograms, liters, meters, millimeters, milliseconds, minutes, ounces, pixels, pounds, ppi, seconds, square-feet, stories, tons",material,measurementUnit
+materials_4-0-0,Material,Measurement value,Form,"",float,n,n,y,"","","",material,value
+materials_4-0-0,Material,Form note,Form,"",string,n,n,n/a,"","","",material,formNote
+materials_4-0-0,Material,Acoustical property type,Properties,"",string,n,n,y,vocabulary,acousticalproperties,"",material,acousticalPropertyType
+materials_4-0-0,Material,Acoustical property note,Properties,"",string,n,n,y,"","","",material,acousticalPropertyNote
+materials_4-0-0,Material,Durability property type,Properties,"",string,n,n,y,vocabulary,durabilityproperties,"",material,durabilityPropertyType
+materials_4-0-0,Material,Durability property note,Properties,"",string,n,n,y,"","","",material,durabilityPropertyNote
+materials_4-0-0,Material,Electrical property type,Properties,"",string,n,n,y,vocabulary,electricalproperties,"",material,electricalPropertyType
+materials_4-0-0,Material,Electrical property note,Properties,"",string,n,n,y,"","","",material,electricalPropertyNote
+materials_4-0-0,Material,Hygro-thermal property type,Properties,"",string,n,n,y,vocabulary,hygrothermalproperties,"",material,hygrothermalPropertyType
+materials_4-0-0,Material,Hygro-thermal property note,Properties,"",string,n,n,y,"","","",material,hygrothermalPropertyNote
+materials_4-0-0,Material,Mechanical property type,Properties,"",string,n,n,y,vocabulary,mechanicalproperties,"",material,mechanicalPropertyType
+materials_4-0-0,Material,Mechanical property note,Properties,"",string,n,n,y,"","","",material,mechanicalPropertyNote
+materials_4-0-0,Material,Optical property type,Properties,"",string,n,n,y,vocabulary,opticalproperties,"",material,opticalPropertyType
+materials_4-0-0,Material,Optical property note,Properties,"",string,n,n,y,"","","",material,opticalPropertyNote
+materials_4-0-0,Material,Sensorial property type,Properties,"",string,n,n,y,vocabulary,sensorialproperties,"",material,sensorialPropertyType
+materials_4-0-0,Material,Sensorial property note,Properties,"",string,n,n,y,"","","",material,sensorialPropertyNote
+materials_4-0-0,Material,Smart material property type,Properties,"",string,n,n,y,vocabulary,smartmaterialproperties,"",material,smartMaterialPropertyType
+materials_4-0-0,Material,Smart material property note,Properties,"",string,n,n,y,"","","",material,smartMaterialPropertyNote
+materials_4-0-0,Material,Additional property type,Properties,"",string,n,n,y,vocabulary,additionalproperties,"",material,additionalPropertyType
+materials_4-0-0,Material,Additional property note,Properties,"",string,n,n,y,"","","",material,additionalPropertyNote
+materials_4-0-0,Material,Property note,Properties,"",string,n,n,n/a,"","","",material,propertyNote
+materials_4-0-0,Material,Recycled content % - Low,Material Ecology,"",float,n,n,y,"","","",material,recycledContent
+materials_4-0-0,Material,Recycled content % - High,Material Ecology,"",float,n,n,y,"","","",material,recycledContentHigh
+materials_4-0-0,Material,Recycled content qualifier,Material Ecology,"",string,n,n,y,vocabulary,recycledcontentqualifiers,"",material,recycledContentQualifier
+materials_4-0-0,Material,Lifecycle component,Material Ecology,"",string,n,n,y,vocabulary,lifecyclecomponents,"",material,lifecycleComponent
+materials_4-0-0,Material,Lifecycle component note,Material Ecology,"",string,n,n,y,"","","",material,lifecycleComponentNote
+materials_4-0-0,Material,Embodied energy value - Low,Material Ecology,"",float,n,n,y,"","","",material,embodiedEnergyValue
+materials_4-0-0,Material,Embodied energy value - High,Material Ecology,"",float,n,n,y,"","","",material,embodiedEnergyValueHigh
+materials_4-0-0,Material,Embodied energy unit,Material Ecology,"",string,n,n,y,vocabulary,energyunits,"",material,embodiedEnergyUnit
+materials_4-0-0,Material,Embodied energy note,Material Ecology,"",string,n,n,y,"","","",material,embodiedEnergyNote
+materials_4-0-0,Material,Certification credit program,Material Ecology,"",string,n,n,y,vocabulary,ecologicalcertifications,"",material,certificationProgram
+materials_4-0-0,Material,Certification credit note,Material Ecology,"",string,n,n,y,"","","",material,certificationCreditNote
+materials_4-0-0,Material,Material ecology note,Material Ecology,"",string,n,n,n/a,"","","",material,ecologyNote
+materials_4-0-0,Material,Casting,Process,"",string,n,y,n,vocabulary,castingprocesses,"",material,castingProcess
+materials_4-0-0,Material,Joining,Process,"",string,n,y,n,vocabulary,joiningprocesses,"",material,joiningProcess
+materials_4-0-0,Material,Molding,Process,"",string,n,y,n,vocabulary,moldingprocesses,"",material,moldingProcess
+materials_4-0-0,Material,Surfacing,Process,"",string,n,y,n,vocabulary,surfacingprocesses,"",material,surfacingProcess
+materials_4-0-0,Material,Deforming,Process,"",string,n,y,n,vocabulary,deformingprocesses,"",material,deformingProcess
+materials_4-0-0,Material,Machining,Process,"",string,n,y,n,vocabulary,machiningprocesses,"",material,machiningProcess
+materials_4-0-0,Material,Rapid prototyping,Process,"",string,n,y,n,vocabulary,rapidprototypingprocesses,"",material,rapidPrototypingProcess
+materials_4-0-0,Material,Additional process type,Process,"",string,n,n,y,vocabulary,additionalprocesses,"",material,additionalProcess
+materials_4-0-0,Material,Additional process note,Process,"",string,n,n,y,"","","",material,additionalProcessNote
+materials_4-0-0,Material,Process note,Process,"",string,n,n,n/a,"","","",material,processNote

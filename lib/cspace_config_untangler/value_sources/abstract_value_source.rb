@@ -15,12 +15,11 @@ module CspaceConfigUntangler
         name <=> other.name
       end
 
-      def fields_csv_label
-        return if source_type == "na"
-        return if name == "citation/shared"
+      # Type value for CSV output. Override in subclasses
+      def csv_type = source_type
 
-        "#{source_type}: #{name}".sub("optionlist", "option list")
-      end
+      # Name value for CSV output. Override in subclasses
+      def csv_name = name
 
       def column_header_consistent(fieldname)
         fieldname
