@@ -1,13 +1,26 @@
 # frozen_string_literal: true
 
-require_relative "reportable"
+# require_relative "reportable"
 
 module CspaceConfigUntangler
   module ValueSources
     # @abstract
     class AbstractValueSource
-      include CCU::ValueSources::Reportable
+      # include CCU::ValueSources::Reportable
+      include Comparable
+
       attr_reader :name, :type, :subtype, :source_type
+
+      def <=>(other)
+        name <=> other.name
+      end
+
+      def fields_csv_label
+        return if source_type == "na"
+        return if name == "citation/shared"
+
+        "#{source_type}: #{name}".sub("optionlist", "option list")
+      end
 
       def column_header_consistent(fieldname)
         fieldname
