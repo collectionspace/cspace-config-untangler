@@ -1,17 +1,17 @@
-profile,record_type,field,record_section,path_to_field,repeats,group_repeats,record_type_machine_name,field_machine_name
-materials_4-0-0,Acquisition,Accession date,Acquisition Information,"",n,n/a,acquisition,accessionDateGroup
-materials_4-0-0,Acquisition,Acquisition date,Acquisition Information,"",y,n,acquisition,acquisitionDateGroup
-materials_4-0-0,Citation,Publication date,Citation Information,Publication,n,y,citation,publicationDate
-materials_4-0-0,Citation,Resource identifier capture date,Citation Information,Resource identifier,n,y,citation,captureDate
-materials_4-0-0,Media Handling,Date,Media Handling Information,"",y,n,media,dateGroup
-materials_4-0-0,Object Exit,Exit date,Object Exit Information,"",n,n/a,objectexit,exitDateGroup
-materials_4-0-0,Organization,Foundation date,Organization Information,"",n,n/a,organization,foundingDateGroup
-materials_4-0-0,Organization,Dissolution date,Organization Information,"",n,n/a,organization,dissolutionDateGroup
-materials_4-0-0,Organization,Contact date,Organization Information,Contact person,n,y,organization,contactDateGroup
-materials_4-0-0,Organization,Contact end date,Organization Information,Contact person,n,y,organization,contactEndDateGroup
-materials_4-0-0,Place,Term date,Place Information,Term,n,y,place,nameDateGroup
-materials_4-0-0,Place,Ownership date,Place Information,Ownership,n,y,place,ownershipDateGroup
-materials_4-0-0,Place,Georeference date,Georeference Information,Georeference,n,y,place,geoRefDateGroup
-materials_4-0-0,Work,Work date,Work Information,"",y,n,work,workDateGroup
-materials_4-0-0,Material,Discontinued date,Material Information,Discontinued,n,n/a,material,discontinuedDate
-materials_4-0-0,Material,Production date,Material Information,"",n,n/a,material,productionDate
+profile,record_type,field,record_section,path_to_field,repeats,group_repeats,data_source_type,data_source_name,record_type_machine_name,field_machine_name
+materials_4-0-0,Acquisition,Accession date,Acquisition Information,"",n,n/a,"","",acquisition,accessionDateGroup
+materials_4-0-0,Acquisition,Acquisition date,Acquisition Information,"",y,n,"","",acquisition,acquisitionDateGroup
+materials_4-0-0,Citation,Publication date,Citation Information,"",n,y,"","",citation,publicationDate
+materials_4-0-0,Citation,Resource identifier capture date,Citation Information,"",n,y,"","",citation,captureDate
+materials_4-0-0,Media Handling,Date,Media Handling Information,"",y,n,"","",media,dateGroup
+materials_4-0-0,Object Exit,Exit date,Object Exit Information,"",n,n/a,"","",objectexit,exitDateGroup
+materials_4-0-0,Organization,Foundation date,Organization Information,"",n,n/a,"","",organization,foundingDateGroup
+materials_4-0-0,Organization,Dissolution date,Organization Information,"",n,n/a,"","",organization,dissolutionDateGroup
+materials_4-0-0,Organization,Contact date,Organization Information,"",n,y,"","",organization,contactDateGroup
+materials_4-0-0,Organization,Contact end date,Organization Information,"",n,y,"","",organization,contactEndDateGroup
+materials_4-0-0,Place,Term date,Place Information,"",n,y,"","",place,nameDateGroup
+materials_4-0-0,Place,Ownership date,Place Information,"",n,y,"","",place,ownershipDateGroup
+materials_4-0-0,Place,Georeference date,Georeference Information,"",n,y,"","",place,geoRefDateGroup
+materials_4-0-0,Work,Work date,Work Information,"",y,n,"","",work,workDateGroup
+materials_4-0-0,Material,Discontinued date,Material Information,Discontinued,n,n/a,"","",material,discontinuedDate
+materials_4-0-0,Material,Production date,Material Information,"",n,n/a,"","",material,productionDate

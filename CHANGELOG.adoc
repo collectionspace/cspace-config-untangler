@@ -36,6 +36,7 @@ These changes are merged into the `main` branch, but have not been released. Aft
 
 === Changed
 
+* `data_source` column in reference reports split into `data_source_type` (e.g. authority, vocabulary, and option list) and `data_source_name` values.
 * Community-supported profile configs, mappers, mapper manifest, CSV templates, and reference documents for 8.0 release (fixed, except for UI path issue)
 
 === Bugfixes

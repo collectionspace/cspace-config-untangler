@@ -10,6 +10,10 @@ module CspaceConfigUntangler
         @name = type
         @subtype = type
       end
+
+      def csv_type = nil
+
+      def csv_name = nil
     end
   end
 end

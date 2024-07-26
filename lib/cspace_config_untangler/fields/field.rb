@@ -124,15 +124,12 @@ module CspaceConfigUntangler
           required: @required,
           repeats: @repeats,
           group_repeats: @in_repeating_group,
-          data_source: nil,
+          data_source_type: nil,
+          data_source_name: nil,
           option_list_values: nil
         }
         row[:xml_path] = @schema_path.join(" > ") if @schema_path
-        if @value_source
-          row[:data_source] = @value_source.map(&:fields_csv_label)
-            .compact
-            .join("; ")
-        end
+        set_value_source_for_csv(row)
         row[:option_list_values] = @value_list.join(", ") if @value_list
         row
       end
@@ -148,18 +145,25 @@ module CspaceConfigUntangler
           required: @required,
           repeats: @repeats,
           group_repeats: @in_repeating_group,
-          data_source: nil,
+          data_source_type: nil,
+          data_source_name: nil,
           option_list_values: nil,
           record_type_machine_name: @rectype.name,
           field_machine_name: @name
         }
-        if @value_source
-          row[:data_source] = @value_source.map(&:fields_csv_label)
-            .compact
-            .join("; ")
-        end
+        set_value_source_for_csv(row)
         row[:option_list_values] = @value_list.join(", ") if @value_list
         row
+      end
+
+      def set_value_source_for_csv(row)
+        return unless @value_source
+
+        %i[type name].each do |srcdata|
+          meth = :"csv_#{srcdata}"
+          target = :"data_source_#{srcdata}"
+          row[target] = @value_source.map(&meth).compact.uniq.join("; ")
+        end
       end
 
       def format_csv(source)

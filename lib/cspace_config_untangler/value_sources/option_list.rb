@@ -13,6 +13,8 @@ module CspaceConfigUntangler
         @type = source_type
         @subtype = nil
       end
+
+      def csv_type = "option list"
     end
   end
 end

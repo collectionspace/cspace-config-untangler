@@ -1,18 +1,18 @@
-profile,record_type,field,record_section,path_to_field,repeats,group_repeats,record_type_machine_name,field_machine_name
-publicart_6-0-0,Acquisition,Commission date,Commission Information,"",n,n/a,acquisition,commissionDate
-publicart_6-0-0,Citation,Publication date,Citation Information,Publication,n,y,citation,publicationDate
-publicart_6-0-0,Citation,Resource identifier capture date,Citation Information,Resource identifier,n,y,citation,captureDate
-publicart_6-0-0,Object,Artwork date,Object Production Information,Artwork date,n,y,collectionobject,publicartProductionDate
-publicart_6-0-0,Exhibition,Gallery rotation start date,Exhibition Information,Gallery rotation,n,y,exhibition,galleryRotationStartDateGroup
-publicart_6-0-0,Exhibition,Gallery rotation end date,Exhibition Information,Gallery rotation,n,y,exhibition,galleryRotationEndDateGroup
-publicart_6-0-0,Media Handling,Date,Media Handling Information,"",y,n,media,dateGroup
-publicart_6-0-0,Object Exit,Exit date,Object Exit Information,"",n,n/a,objectexit,exitDateGroup
-publicart_6-0-0,Organization,Foundation date,Organization Information,"",n,n/a,organization,foundingDateGroup
-publicart_6-0-0,Organization,Dissolution date,Organization Information,"",n,n/a,organization,dissolutionDateGroup
-publicart_6-0-0,Person,Birth date,Person Information,"",n,n/a,person,birthDateGroup
-publicart_6-0-0,Person,Death date,Person Information,"",n,n/a,person,deathDateGroup
-publicart_6-0-0,Person,Birth date supplied,Maker-Supplied Identity Information,Supplied birth date,n,y,person,suppliedStructuredBirthDateGroup
-publicart_6-0-0,Place,Term date,Place Information,Term > Name detail,n,y,place,nameDateGroup
-publicart_6-0-0,Place,Ownership date,Place Information,Ownership,n,y,place,ownershipDateGroup
-publicart_6-0-0,Place,Georeference date,Georeference Information,Georeference,n,y,place,geoRefDateGroup
-publicart_6-0-0,Work,Work date,Work Information,"",y,n,work,workDateGroup
+profile,record_type,field,record_section,path_to_field,repeats,group_repeats,data_source_type,data_source_name,record_type_machine_name,field_machine_name
+publicart_6-0-0,Acquisition,Commission date,Commission Information,"",n,n/a,"","",acquisition,commissionDate
+publicart_6-0-0,Citation,Publication date,Citation Information,"",n,y,"","",citation,publicationDate
+publicart_6-0-0,Citation,Resource identifier capture date,Citation Information,"",n,y,"","",citation,captureDate
+publicart_6-0-0,Object,Artwork date,Object Production Information,"",n,y,"","",collectionobject,publicartProductionDate
+publicart_6-0-0,Exhibition,Gallery rotation start date,Exhibition Information,"",n,y,"","",exhibition,galleryRotationStartDateGroup
+publicart_6-0-0,Exhibition,Gallery rotation end date,Exhibition Information,"",n,y,"","",exhibition,galleryRotationEndDateGroup
+publicart_6-0-0,Media Handling,Date,Media Handling Information,"",y,n,"","",media,dateGroup
+publicart_6-0-0,Object Exit,Exit date,Object Exit Information,"",n,n/a,"","",objectexit,exitDateGroup
+publicart_6-0-0,Organization,Foundation date,Organization Information,"",n,n/a,"","",organization,foundingDateGroup
+publicart_6-0-0,Organization,Dissolution date,Organization Information,"",n,n/a,"","",organization,dissolutionDateGroup
+publicart_6-0-0,Person,Birth date,Person Information,"",n,n/a,"","",person,birthDateGroup
+publicart_6-0-0,Person,Death date,Person Information,"",n,n/a,"","",person,deathDateGroup
+publicart_6-0-0,Person,Birth date supplied,Maker-Supplied Identity Information,"",n,y,"","",person,suppliedStructuredBirthDateGroup
+publicart_6-0-0,Place,Term date,Place Information,Name detail,n,y,"","",place,nameDateGroup
+publicart_6-0-0,Place,Ownership date,Place Information,"",n,y,"","",place,ownershipDateGroup
+publicart_6-0-0,Place,Georeference date,Georeference Information,"",n,y,"","",place,geoRefDateGroup
+publicart_6-0-0,Work,Work date,Work Information,"",y,n,"","",work,workDateGroup

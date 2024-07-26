@@ -1,62 +1,62 @@
-profile,record_type,field,record_section,path_to_field,repeats,group_repeats,data_source,record_type_machine_name,field_machine_name
-bonsai_6-0-0,Acquisition,Acquisition source,Acquisition Information,"",y,n,authority: person/local; authority: organization/local,acquisition,acquisitionSource
-bonsai_6-0-0,Acquisition,Owner,Acquisition Information,"",y,n,authority: person/local; authority: organization/local,acquisition,owner
-bonsai_6-0-0,Acquisition,Funding source,Acquisition Information,Funding,n,y,authority: person/local; authority: organization/local,acquisition,acquisitionFundingSource
-bonsai_6-0-0,Citation,Term source name,Citation Information,Term > Source,n,y,authority: citation/local; authority: citation/worldcat,citation,termSource
-bonsai_6-0-0,Citation,Publication place,Citation Information,Publication,n,y,authority: place/local; authority: place/tgn,citation,publicationPlace
-bonsai_6-0-0,Citation,Agent name,Citation Information,Agent,n,y,authority: person/local; authority: person/ulan; authority: organization/local,citation,agent
-bonsai_6-0-0,Citation,Related term,Citation Information,Related term,n,y,authority: concept/associated; authority: concept/activity; authority: concept/material,citation,relatedTerm
-bonsai_6-0-0,Object,Assigned volunteer,Object Identification Information,"",y,n,authority: person/local; authority: person/ulan,collectionobject,assignedVolunteer
-bonsai_6-0-0,Object,Measured by,Object Description Information,Dimensions > Measurement,n,y,authority: person/local; authority: organization/local,collectionobject,measuredBy
-bonsai_6-0-0,Object,Content concept,Object Description Information,Content,y,n,authority: concept/associated; authority: concept/material,collectionobject,contentConcept
-bonsai_6-0-0,Object,Content person,Object Description Information,Content,y,n,authority: person/local; authority: person/ulan,collectionobject,contentPerson
-bonsai_6-0-0,Object,Content place,Object Description Information,Content,y,n,authority: place/local; authority: place/tgn,collectionobject,contentPlace
-bonsai_6-0-0,Object,Content organization,Object Description Information,Content,y,n,authority: organization/local; authority: organization/ulan,collectionobject,contentOrganization
-bonsai_6-0-0,Object,Textual inscription inscriber,Object Description Information,Textual Inscription > Textual inscription,n,y,authority: person/local; authority: organization/local,collectionobject,inscriptionContentInscriber
-bonsai_6-0-0,Object,Non-textual inscription inscriber,Object Description Information,Non-Textual Inscription > Non-textual inscription,n,y,authority: person/local; authority: organization/local,collectionobject,inscriptionDescriptionInscriber
-bonsai_6-0-0,Object,Production place,Object Production Information,Production place,n,y,authority: place/local; authority: place/tgn,collectionobject,objectProductionPlace
-bonsai_6-0-0,Object,Owner,Object History and Association Information,Object Owner's Contribution Information,y,n,authority: person/local; authority: organization/local,collectionobject,owner
-bonsai_6-0-0,Object,Reference,Reference Information,Reference > Reference Information,n,y,authority: citation/local; authority: citation/worldcat,collectionobject,reference
-bonsai_6-0-0,Object,Field collection place,Object Collection Information,"",y,n,authority: place/local; authority: place/tgn,collectionobject,fieldCollectionPlace
-bonsai_6-0-0,Object,Field collector,Object Collection Information,"",y,n,authority: person/local; authority: organization/local,collectionobject,fieldCollector
-bonsai_6-0-0,Concept,Term source name,Concept Information,Term > Source,n,y,authority: citation/local; authority: citation/worldcat,concept,termSource
-bonsai_6-0-0,Conservation,Treatment performed by,Conservation Treatment Information,"",y,n,authority: person/local; authority: organization/local,conservation,conservator
-bonsai_6-0-0,Conservation,Other treatment party name,Conservation Treatment Information,Other treatment party,n,y,authority: person/local; authority: organization/local,conservation,otherParty
-bonsai_6-0-0,Exhibition,Sponsor,Exhibition Information,"",y,n,authority: person/local; authority: person/ulan; authority: organization/local; authority: organization/ulan,exhibition,sponsor
-bonsai_6-0-0,Exhibition,Organizer,Exhibition Information,"",y,n,authority: person/local; authority: person/ulan; authority: organization/local; authority: organization/ulan,exhibition,organizer
-bonsai_6-0-0,Exhibition,Venue name,Exhibition Information,Venue,n,y,authority: organization/local; authority: organization/ulan; authority: location/local; authority: location/offsite; authority: place/local; authority: place/tgn,exhibition,venue
-bonsai_6-0-0,Exhibition,Working group member name,Exhibition Information,Working group > Working group member,n,y,authority: person/local; authority: person/ulan; authority: organization/local; authority: organization/ulan,exhibition,exhibitionPerson
-bonsai_6-0-0,Exhibition,Bibliographic reference,Exhibition Information,Bibliographic reference,n,y,authority: citation/local; authority: citation/worldcat,exhibition,exhibitionReference
-bonsai_6-0-0,Insurance/Indemnity,Quote provider,Insurance and Indemnity Information,Quote,n,y,authority: person/local; authority: person/ulan; authority: organization/local; authority: organization/ulan,insurance,insuranceIndemnityQuoteProvider
-bonsai_6-0-0,Intake,Current owner,Object Entry Information,"",y,n,authority: person/local; authority: organization/local,intake,currentOwner
-bonsai_6-0-0,Intake,Depositor name,Object Entry Information,Depositor,n,y,authority: person/local; authority: organization/local,intake,depositor
-bonsai_6-0-0,Intake,Field collector,Object Collection Information,"",y,n,authority: person/local; authority: organization/local,intake,fieldCollector
-bonsai_6-0-0,Intake,Insurer,Insurance Information,"",y,n,authority: person/local; authority: organization/local,intake,insurer
-bonsai_6-0-0,Intake,Current location,Location Information,Current location,n,y,authority: location/local; authority: location/offsite; authority: organization/local; authority: place/local,intake,currentLocation
-bonsai_6-0-0,Intake,Condition check assessor,Condition Check Information,"",y,n,authority: person/local; authority: organization/local,intake,conditionCheckerOrAssessor
-bonsai_6-0-0,Loan In,Lender name,Loan In Information,Lender,n,y,authority: person/local; authority: organization/local,loanin,lender
-bonsai_6-0-0,Storage Location,Term source name,Storage Location Information,Term > Source,n,y,authority: citation/local; authority: citation/worldcat,location,termSource
-bonsai_6-0-0,Media Handling,Measured by,Media Handling Information,Dimensions > Measurement,n,y,authority: person/local; authority: organization/local,media,measuredBy
-bonsai_6-0-0,Organization,Term source name,Organization Information,Term > Source,n,y,authority: citation/local; authority: citation/worldcat,organization,termSource
-bonsai_6-0-0,Person,Term source name,Person Information,Term > Source,n,y,authority: citation/local; authority: citation/worldcat,person,termSource
-bonsai_6-0-0,Place,Term source name,Place Information,Term > Source,n,y,authority: citation/local; authority: citation/worldcat,place,termSource
-bonsai_6-0-0,Place,Owner,Place Information,Ownership,n,y,authority: person/local; authority: organization/local,place,owner
-bonsai_6-0-0,Place,Address municipality,Place Information,Address,n,y,authority: place/local; authority: place/tgn,place,addressMunicipality
-bonsai_6-0-0,Place,Address state/province,Place Information,Address,n,y,authority: place/local; authority: place/tgn,place,addressStateOrProvince
-bonsai_6-0-0,Place,Address country,Place Information,Address,n,y,authority: place/local; authority: place/tgn,place,addressCountry
-bonsai_6-0-0,Place,Georeferenced by,Georeference Information,Georeference,n,y,authority: person/local; authority: organization/local,place,geoReferencedBy
-bonsai_6-0-0,Transport,Courier name,Transport Information,Courier,n,y,authority: person/local; authority: organization/local,transport,courier
-bonsai_6-0-0,Transport,Shipping quote provider,Cost Information,"",n,y,authority: person/local; authority: organization/local,transport,shippingQuoteProvider
-bonsai_6-0-0,Use of Collections,User name,Use of Collections Information,User,n,y,authority: person/local; authority: organization/local,uoc,user
-bonsai_6-0-0,Use of Collections,Authorized by,Use of Collections Information,Authorization,n,y,authority: person/local; authority: organization/local,uoc,authorizedBy
-bonsai_6-0-0,Use of Collections,Staff name,Use of Collections Information,Staff,n,y,authority: person/local; authority: organization/local,uoc,staffName
-bonsai_6-0-0,Use of Collections,Location,Use of Collections Information,"",y,n,authority: organization/local; authority: place/local; authority: location/local,uoc,location
-bonsai_6-0-0,Work,Term source name,Work Information,Term > Source,n,y,authority: citation/local; authority: citation/worldcat,work,termSource
-bonsai_6-0-0,Work,Creator name,Work Information,Creator,n,y,authority: person/local; authority: organization/local,work,creator
-bonsai_6-0-0,Work,Publisher name,Work Information,Publisher,n,y,authority: person/local; authority: organization/local,work,publisher
-bonsai_6-0-0,Work,Address municipality,Work Information,Address,n,y,authority: place/local; authority: place/tgn,work,addressMunicipality
-bonsai_6-0-0,Work,Address state/province,Work Information,Address,n,y,authority: place/local; authority: place/tgn,work,addressStateOrProvince
-bonsai_6-0-0,Work,Address country,Work Information,Address,n,y,authority: place/local; authority: place/tgn,work,addressCountry
-bonsai_6-0-0,Taxon,Term source name,Taxonomic Name Information,Term > Source,n,y,authority: citation/local; authority: citation/worldcat,taxon,termSource
-bonsai_6-0-0,Taxon,Author name,Taxonomic Name Information,Author,n,y,authority: person/local; authority: organization/local,taxon,taxonAuthor
-bonsai_6-0-0,Taxon,Citation,Taxonomic Name Information,"",y,n,authority: citation/local; authority: citation/worldcat,taxon,taxonCitation
+profile,record_type,field,record_section,path_to_field,repeats,group_repeats,data_source_type,data_source_name,record_type_machine_name,field_machine_name
+bonsai_6-0-0,Acquisition,Acquisition source,Acquisition Information,"",y,n,authority,person/local; organization/local,acquisition,acquisitionSource
+bonsai_6-0-0,Acquisition,Owner,Acquisition Information,"",y,n,authority,person/local; organization/local,acquisition,owner
+bonsai_6-0-0,Acquisition,Funding source,Acquisition Information,"",n,y,authority,person/local; organization/local,acquisition,acquisitionFundingSource
+bonsai_6-0-0,Citation,Term source name,Citation Information,Source,n,y,authority,citation/local; citation/worldcat,citation,termSource
+bonsai_6-0-0,Citation,Publication place,Citation Information,"",n,y,authority,place/local; place/tgn,citation,publicationPlace
+bonsai_6-0-0,Citation,Agent name,Citation Information,"",n,y,authority,person/local; person/ulan; organization/local,citation,agent
+bonsai_6-0-0,Citation,Related term,Citation Information,"",n,y,authority,concept/associated; concept/activity; concept/material,citation,relatedTerm
+bonsai_6-0-0,Object,Assigned volunteer,Object Identification Information,"",y,n,authority,person/local; person/ulan,collectionobject,assignedVolunteer
+bonsai_6-0-0,Object,Measured by,Object Description Information,"",n,y,authority,person/local; organization/local,collectionobject,measuredBy
+bonsai_6-0-0,Object,Content concept,Object Description Information,Content,y,n,authority,concept/associated; concept/material,collectionobject,contentConcept
+bonsai_6-0-0,Object,Content person,Object Description Information,Content,y,n,authority,person/local; person/ulan,collectionobject,contentPerson
+bonsai_6-0-0,Object,Content place,Object Description Information,Content,y,n,authority,place/local; place/tgn,collectionobject,contentPlace
+bonsai_6-0-0,Object,Content organization,Object Description Information,Content,y,n,authority,organization/local; organization/ulan,collectionobject,contentOrganization
+bonsai_6-0-0,Object,Textual inscription inscriber,Object Description Information,Textual Inscription,n,y,authority,person/local; organization/local,collectionobject,inscriptionContentInscriber
+bonsai_6-0-0,Object,Non-textual inscription inscriber,Object Description Information,Non-Textual Inscription,n,y,authority,person/local; organization/local,collectionobject,inscriptionDescriptionInscriber
+bonsai_6-0-0,Object,Production place,Object Production Information,"",n,y,authority,place/local; place/tgn,collectionobject,objectProductionPlace
+bonsai_6-0-0,Object,Owner,Object History and Association Information,Object Owner's Contribution Information,y,n,authority,person/local; organization/local,collectionobject,owner
+bonsai_6-0-0,Object,Reference,Reference Information,Reference Information,n,y,authority,citation/local; citation/worldcat,collectionobject,reference
+bonsai_6-0-0,Object,Field collection place,Object Collection Information,"",y,n,authority,place/local; place/tgn,collectionobject,fieldCollectionPlace
+bonsai_6-0-0,Object,Field collector,Object Collection Information,"",y,n,authority,person/local; organization/local,collectionobject,fieldCollector
+bonsai_6-0-0,Concept,Term source name,Concept Information,Source,n,y,authority,citation/local; citation/worldcat,concept,termSource
+bonsai_6-0-0,Conservation,Treatment performed by,Conservation Treatment Information,"",y,n,authority,person/local; organization/local,conservation,conservator
+bonsai_6-0-0,Conservation,Other treatment party name,Conservation Treatment Information,"",n,y,authority,person/local; organization/local,conservation,otherParty
+bonsai_6-0-0,Exhibition,Sponsor,Exhibition Information,"",y,n,authority,person/local; person/ulan; organization/local; organization/ulan,exhibition,sponsor
+bonsai_6-0-0,Exhibition,Organizer,Exhibition Information,"",y,n,authority,person/local; person/ulan; organization/local; organization/ulan,exhibition,organizer
+bonsai_6-0-0,Exhibition,Venue name,Exhibition Information,"",n,y,authority,organization/local; organization/ulan; location/local; location/offsite; place/local; place/tgn,exhibition,venue
+bonsai_6-0-0,Exhibition,Working group member name,Exhibition Information,"",n,y,authority,person/local; person/ulan; organization/local; organization/ulan,exhibition,exhibitionPerson
+bonsai_6-0-0,Exhibition,Bibliographic reference,Exhibition Information,"",n,y,authority,citation/local; citation/worldcat,exhibition,exhibitionReference
+bonsai_6-0-0,Insurance/Indemnity,Quote provider,Insurance and Indemnity Information,"",n,y,authority,person/local; person/ulan; organization/local; organization/ulan,insurance,insuranceIndemnityQuoteProvider
+bonsai_6-0-0,Intake,Current owner,Object Entry Information,"",y,n,authority,person/local; organization/local,intake,currentOwner
+bonsai_6-0-0,Intake,Depositor name,Object Entry Information,"",n,y,authority,person/local; organization/local,intake,depositor
+bonsai_6-0-0,Intake,Field collector,Object Collection Information,"",y,n,authority,person/local; organization/local,intake,fieldCollector
+bonsai_6-0-0,Intake,Insurer,Insurance Information,"",y,n,authority,person/local; organization/local,intake,insurer
+bonsai_6-0-0,Intake,Current location,Location Information,"",n,y,authority,location/local; location/offsite; organization/local; place/local,intake,currentLocation
+bonsai_6-0-0,Intake,Condition check assessor,Condition Check Information,"",y,n,authority,person/local; organization/local,intake,conditionCheckerOrAssessor
+bonsai_6-0-0,Loan In,Lender name,Loan In Information,"",n,y,authority,person/local; organization/local,loanin,lender
+bonsai_6-0-0,Storage Location,Term source name,Storage Location Information,Source,n,y,authority,citation/local; citation/worldcat,location,termSource
+bonsai_6-0-0,Media Handling,Measured by,Media Handling Information,"",n,y,authority,person/local; organization/local,media,measuredBy
+bonsai_6-0-0,Organization,Term source name,Organization Information,Source,n,y,authority,citation/local; citation/worldcat,organization,termSource
+bonsai_6-0-0,Person,Term source name,Person Information,Source,n,y,authority,citation/local; citation/worldcat,person,termSource
+bonsai_6-0-0,Place,Term source name,Place Information,Source,n,y,authority,citation/local; citation/worldcat,place,termSource
+bonsai_6-0-0,Place,Owner,Place Information,"",n,y,authority,person/local; organization/local,place,owner
+bonsai_6-0-0,Place,Address municipality,Place Information,"",n,y,authority,place/local; place/tgn,place,addressMunicipality
+bonsai_6-0-0,Place,Address state/province,Place Information,"",n,y,authority,place/local; place/tgn,place,addressStateOrProvince
+bonsai_6-0-0,Place,Address country,Place Information,"",n,y,authority,place/local; place/tgn,place,addressCountry
+bonsai_6-0-0,Place,Georeferenced by,Georeference Information,"",n,y,authority,person/local; organization/local,place,geoReferencedBy
+bonsai_6-0-0,Transport,Courier name,Transport Information,"",n,y,authority,person/local; organization/local,transport,courier
+bonsai_6-0-0,Transport,Shipping quote provider,Cost Information,"",n,y,authority,person/local; organization/local,transport,shippingQuoteProvider
+bonsai_6-0-0,Use of Collections,User name,Use of Collections Information,"",n,y,authority,person/local; organization/local,uoc,user
+bonsai_6-0-0,Use of Collections,Authorized by,Use of Collections Information,"",n,y,authority,person/local; organization/local,uoc,authorizedBy
+bonsai_6-0-0,Use of Collections,Staff name,Use of Collections Information,"",n,y,authority,person/local; organization/local,uoc,staffName
+bonsai_6-0-0,Use of Collections,Location,Use of Collections Information,"",y,n,authority,organization/local; place/local; location/local,uoc,location
+bonsai_6-0-0,Work,Term source name,Work Information,Source,n,y,authority,citation/local; citation/worldcat,work,termSource
+bonsai_6-0-0,Work,Creator name,Work Information,"",n,y,authority,person/local; organization/local,work,creator
+bonsai_6-0-0,Work,Publisher name,Work Information,"",n,y,authority,person/local; organization/local,work,publisher
+bonsai_6-0-0,Work,Address municipality,Work Information,"",n,y,authority,place/local; place/tgn,work,addressMunicipality
+bonsai_6-0-0,Work,Address state/province,Work Information,"",n,y,authority,place/local; place/tgn,work,addressStateOrProvince
+bonsai_6-0-0,Work,Address country,Work Information,"",n,y,authority,place/local; place/tgn,work,addressCountry
+bonsai_6-0-0,Taxon,Term source name,Taxonomic Name Information,Source,n,y,authority,citation/local; citation/worldcat,taxon,termSource
+bonsai_6-0-0,Taxon,Author name,Taxonomic Name Information,"",n,y,authority,person/local; organization/local,taxon,taxonAuthor
+bonsai_6-0-0,Taxon,Citation,Taxonomic Name Information,"",y,n,authority,citation/local; citation/worldcat,taxon,taxonCitation
