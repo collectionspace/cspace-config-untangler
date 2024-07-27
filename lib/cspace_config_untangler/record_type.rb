@@ -368,10 +368,7 @@ module CspaceConfigUntangler
     end
 
     def get_namespace
-      return "ns2:dutiesofcare_common" if name == "dutyofcare"
-      return "ns2:propagations_common" if name == "propagation"
-
-      "ns2:#{service_config.document_name.downcase}_common"
+      config.dig("advancedSearch", "value", 0, "path")&.split("/")&.first
     end
   end
 end
