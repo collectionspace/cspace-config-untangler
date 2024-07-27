@@ -352,10 +352,7 @@ module CspaceConfigUntangler
     end
 
     def get_namespace
-      return "ns2:propagations_common" if name == "propagation"
-
-      docname = @config["serviceConfig"]["documentName"]
-      "ns2:#{docname}_common"
+      config.dig("advancedSearch", "value", 0, "path")&.split("/")&.first
     end
   end
 end
