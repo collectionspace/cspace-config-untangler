@@ -219,8 +219,7 @@ module CspaceConfigUntangler
     def get_panels
       panels = @rectypes.map { |rt| rt.panels }
       if @extensions.include?("contact")
-        panels << CCU::RecordType.new(self,
-          "contact").panels
+        panels << CCU::RecordType.new(self, "contact").panels
       end
       panels.flatten.sort
     end
