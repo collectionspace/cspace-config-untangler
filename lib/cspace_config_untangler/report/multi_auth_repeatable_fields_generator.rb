@@ -20,7 +20,8 @@ module CspaceConfigUntangler
       end
 
       def call
-        res = source.select { |row| repeatable_multi_auth?(row) }
+        res = source
+          .select { |row| repeatable_multi_auth?(row) }
           .map { |row| simplify(row) }
 
         headers = res.first.headers
@@ -48,10 +49,10 @@ module CspaceConfigUntangler
       def multi_auth?(row)
         type = row["data_source_type"]
         return false if type.blank?
-        return false unless type == "authority"
+        return false unless type.start_with?("authority")
 
         name = row["data_source_name"]
-        return true if name.split(";").length > 1
+        return true if name.split(";").length > 2
 
         false
       end
