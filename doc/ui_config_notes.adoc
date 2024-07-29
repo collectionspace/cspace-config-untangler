@@ -632,3 +632,189 @@ apparently those are going to be weird.
 1   ns2:exhibitions_publicart
 1   ns2:conditionchecks_publicart
 ....
+
+== Messages
+
+This section is about messageable data elements.
+
+messageable data element:: a data-relevant element of CollectionSpace with which a message or label is associated in the CollectionSpace UI.
+
+There are many other message categories, but most of them are for interactive elements in the UI (buttons, error messages, search options, etc.)
+
+Option list values are just specific messages, but they are not covered here either, as the Untangler treats them as possible field values, not messageable data elements.
+
+There's https://github.com/collectionspace/cspace-ui.js/blob/master/docs/configuration/messages.js[a page in the cspace-ui.js documentation folder] that lists "all messages used in cspace-ui, to be used as a reference for customization or translation." However, it does not appear to contain messages for non-core UI plugins, and I'm not sure if/how it is maintained.
+
+=== Message definition in `recordType` objects
+Varies per type of element for which a message is being defined.
+
+==== columns - element_type.rec_type.column_type.field_name
+
+In `recordTypes/#{recordType}/columns/#{columnsdef}`:
+
+...
+"objectNumber": {
+  "messages": {
+    "label": {
+      "id": "column.collectionobject.default.objectNumber",
+      "defaultMessage": "Identification number"
+    }
+  },
+  "order": 10,
+  "sortBy": "collectionobjects_common:objectNumber",
+  "width": 200
+},
+....
+
+==== field - element_type.namespace.field_name.message_type
+
+In `recordTypes/#{recordType}/fields/document/#{namespace}/`, where exact nesting level depends on whether field is part of group.:
+
+....
+"annotationType": {
+  "[config]": {
+    "messages": {
+      "fullName": {
+        "id": "field.collectionobjects_annotation.annotationType.fullName",
+        "defaultMessage": "Annotation type"
+      },
+      "name": {
+        "id": "field.collectionobjects_annotation.annotationType.name",
+        "defaultMessage": "Type"
+      }
+    },
+    "view": {
+      "type": "TermPickerInput",
+      "props": {
+        "source": "annotationtype"
+      }
+    }
+  }
+},
+....
+
+Note that "fields" that indicate a field grouping (not an actual field containing values) are also defined this way:
+
+....
+"annotationGroup": {
+  "[config]": {
+    "messages": {
+      "name": {
+        "id": "field.collectionobjects_annotation.annotationGroup.name",
+        "defaultMessage": "Annotation"
+      }
+    },
+    "repeating": true,
+    "view": {
+      "type": "CompoundInput"
+    }
+  },
+-fields defined-
+},
+....
+
+==== inputTable - element_type.rec_type.field_name
+
+In `recordTypes/#{recordType}/messages/inputTable`:
+
+....
+"age": {
+  "id": "inputTable.collectionobject.age",
+  "defaultMessage": "Age"
+},
+"assocEvent": {
+  "id": "inputTable.collectionobject.assocEvent",
+  "defaultMessage": "Associated event"
+},
+....
+
+==== panel - element_type.rec_type.panel_name
+
+In `recordTypes/#{recordType}/messages/panel`:
+
+....
+"id": {
+  "id": "panel.collectionobject.id",
+  "defaultMessage": "Object Identification Information"
+},
+"desc": {
+  "id": "panel.collectionobject.desc",
+  "defaultMessage": "Object Description Information"
+},
+....
+
+==== record - element_type.rec_type.message_type
+
+In `recordTypes/#{recordType}/messages/record`:
+
+....
+"name": {
+  "id": "record.collectionobject.name",
+  "defaultMessage": "Object"
+},
+"collectionName": {
+  "id": "record.collectionobject.collectionName",
+  "defaultMessage": "Objects"
+}
+....
+
+==== vocab - element_type.authority_name.vocab_name.message_type
+
+In authority record types only, in `recordTypes/#{recordType}/vocabularies`:
+
+....
+"local": {
+  "messages": {
+    "name": {
+      "id": "vocab.citation.local.name",
+      "defaultMessage": "Local"
+    },
+    "collectionName": {
+      "id": "vocab.citation.local.collectionName",
+      "defaultMessage": "Local Citations"
+    },
+    "itemName": {
+      "id": "vocab.citation.local.itemName",
+      "defaultMessage": "Local Citation"
+    }
+  },
+  "serviceConfig": {
+    "servicePath": "urn:cspace:name(citation)"
+  },
+  "sortOrder": 0,
+  "name": "local",
+  "disableAltTerms": false
+},
+....
+
+=== Known message types
+
+name:: field, record, vocab
+fullName:: field
+collectionName:: record, vocab
+itemName:: vocab
+no message type - type is name of messaged element:: inputTable, panel
+no message type - other:: column
+
+=== Profile-level overrides
+
+Any type of messagable element can be overridden at the profile level. Example from botgarden profile, top level of config JSON:
+
+....
+"messages": {
+    "about.title": "Welcome to CollectionSpace: Botanical Garden",
+    "panel.collectionobject.collect": "Field Collection Information",
+    "column.loanout.default.borrower": "Institution",
+    "field.collectionobjects_common.objectNumber.name": "Accession number",
+    "field.collectionobjects_common.recordStatus.name": "Provenance data quality",
+    "field.collectionobjects_common.briefDescription.name": "Material type",
+    "field.collectionobjects_common.comment.name": "Accession note",
+    "field.collectionobjects_common.fieldCollectionNote.name": "Habitat information",
+    "record.loanout.name": "Voucher",
+    "record.loanout.collectionName": "Vouchers",
+    "panel.loanout.info": "Voucher Information",
+    "field.loansout_common.loanOutNumber.name": "Voucher collection number",
+},
+....
+
+Such overrides must be overlaid on whatever messages have been extracted from individual record types before processing.
