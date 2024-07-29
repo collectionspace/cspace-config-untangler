@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+require_relative "../field_map/field_mapper"
 require_relative "../upgrade_warner"
 require_relative "../value_sources"
 
@@ -138,18 +139,20 @@ module CspaceConfigUntangler
         row = {
           profile: @profile.name,
           record_type: @rectype.label,
-          field: label,
+          record_type_machine_name: @rectype.name,
           record_section: get_ui_info_group,
           path_to_field: get_ui_path,
+          field: label,
+          field_machine_name: @name,
+          qualified_field_machine_name: "#{@ns}.#{@name}",
+          importer_template_headers: FieldMapper.new(field: self).column_names,
           data_type: @data_type,
           required: @required,
           repeats: @repeats,
           group_repeats: @in_repeating_group,
           data_source_type: nil,
           data_source_name: nil,
-          option_list_values: nil,
-          record_type_machine_name: @rectype.name,
-          field_machine_name: @name
+          option_list_values: nil
         }
         set_value_source_for_csv(row)
         row[:option_list_values] = @value_list.join(", ") if @value_list

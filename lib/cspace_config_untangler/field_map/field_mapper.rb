@@ -23,6 +23,9 @@ module CspaceConfigUntangler
 
       def hash = fieldhash
 
+      def column_names = sources.map { |src| get_column_name(src) }
+        .join("; ")
+
       private
 
       attr_reader :field, :sources, :column_style, :fieldhash
