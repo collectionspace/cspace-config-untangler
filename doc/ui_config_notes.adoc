@@ -715,6 +715,8 @@ Note that "fields" that indicate a field grouping (not an actual field containin
 
 ==== inputTable - element_type.rec_type.field_name
 
+inputTable:: Appears to be a (the?) mechanism for making non-repeatable, non-grouped fields display in the UI as a field group.
+
 In `recordTypes/#{recordType}/messages/inputTable`:
 
 ....
