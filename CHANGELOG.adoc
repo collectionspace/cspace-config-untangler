@@ -27,6 +27,7 @@ These changes are merged into the `main` branch, but have not been released. Aft
 
 === Added
 
+* `mappers digest` command
 * Validation of key signatures in form props, and logging (as errors) of unknown key signatures
 * `ccu vocabs all` command (leveraging REST API connections) with stdout or csv output
 * `ccu vocabs duplicate_terms` command (leveraging REST API connections) with stdout or csv output
