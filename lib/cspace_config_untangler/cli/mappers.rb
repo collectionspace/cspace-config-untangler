@@ -1,11 +1,25 @@
 # frozen_string_literal: true
 
 # rubocop:disable Layout/LineLength
+require "digest"
+
 require_relative "subcommand_base"
 
 module CspaceConfigUntangler
   module Cli
     class Mappers < SubcommandBase
+      desc "digest", "Output digest of a given mapper. Mainly useful if you "\
+        "manually update a mapper and need to add new digest to manifest."
+      option(:inputpath,
+        type: :string,
+        desc: "Path to JSON mapper file for which to output digest",
+        required: true,
+        aliases: "-i")
+      def digest
+        path = File.expand_path(options[:inputpath])
+        puts Digest::SHA256.hexdigest(File.read(path))
+      end
+
       desc "manifest",
         "Writes JSON manifest of RecordMappers, as used by cspace-batch-import"
       long_desc <<~LONGDESC
