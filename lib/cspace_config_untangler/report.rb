@@ -96,6 +96,12 @@ module CspaceConfigUntangler
       row
     end
 
+    def get_source(default_method:, path:, default_opts: {})
+      return CSV.parse(File.read(path), headers: true) if path
+
+      CCU::Report.send(default_method, **default_opts)
+    end
+
     def get_qa_table(release: CCU.release, prev: false)
       get_all_fields(release: release, prev: prev, outmode: :expert)
         .map { |row| deversion_for_qa(row) }

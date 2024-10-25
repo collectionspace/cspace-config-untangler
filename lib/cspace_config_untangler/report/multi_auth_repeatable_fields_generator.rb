@@ -15,7 +15,10 @@ module CspaceConfigUntangler
       # @param sourcefile [nil, String] path to custom allfields CSV
       def initialize(release: CCU.release, sourcefile: nil)
         @release = release
-        @source = get_source(sourcefile)
+        @source = CCU::Report.get_source(path: sourcefile,
+          default_method: :get_all_fields,
+          default_opts: {release: release,
+                         outmode: :friendly})
         @target = CCU::Report.multi_auth_report_path
       end
 
@@ -37,12 +40,6 @@ module CspaceConfigUntangler
       private
 
       attr_reader :release, :source, :target
-
-      def get_source(sourcefile)
-        return CSV.parse(File.read(sourcefile), headers: true) if sourcefile
-
-        CCU::Report.get_all_fields(release: release, outmode: :friendly)
-      end
 
       def repeatable_multi_auth?(row) = multi_auth?(row) && repeatable?(row)
 
