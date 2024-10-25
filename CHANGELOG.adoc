@@ -34,7 +34,7 @@ These changes are merged into the `main` branch, but have not been released. Aft
 * `ccu vocabs duplicate` command (leveraging REST API connections) with stdout or csv output
 * Ability connect to community-supported profile REST API by default, and configure REST API connections for other profiles
 * Mappers, manifest, templates for OHC 2.0.0 / 20240521
-
+* New UI label lookup table reference report
 === Changed
 
 * Friendly fields CSV format now includes field machine name qualified via namespace, and CSV Importer template headers for the field
