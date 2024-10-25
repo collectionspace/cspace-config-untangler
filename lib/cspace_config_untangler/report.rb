@@ -67,6 +67,7 @@ module CspaceConfigUntangler
         release: release
       )
       CCU::Report::AuthorityVocabUse.call(profiles: "all")
+      CCU::Report::UiLabelsForLookup.call(release: release)
       CCU::Report::ProfileFieldsGenerator.call(
         profiles: "all",
         release: release
