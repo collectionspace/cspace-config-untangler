@@ -266,7 +266,12 @@ module CspaceConfigUntangler
     end
 
     def get_rectypes_all
-      config["recordTypes"].keys - CCU::RecordType::IGNORED
+      all_in_config = config["recordTypes"].keys - CCU::RecordType::IGNORED
+      return all_in_config if CCU.profiles_with_8_1_nagpra_procedures.include?(
+        basename
+      )
+
+      all_in_config - CCU.nagpra_procedures_8_1
     end
 
     def get_rectypes(rectypes)
