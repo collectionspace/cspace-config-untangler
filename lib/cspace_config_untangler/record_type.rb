@@ -23,7 +23,7 @@ module CspaceConfigUntangler
       blob contact export idgenerator object procedure relation
       report reportinvocation structureddates vocabulary]
 
-    attr_reader :profile, :name, :label, :id, :config, :ns, :panels,
+    attr_reader :profile, :name, :id, :config, :ns, :panels,
       :input_tables, :forms, :structured_date_treatment,
       :service_type, :subtypes, :record_search_field
 
@@ -36,7 +36,7 @@ module CspaceConfigUntangler
       @name = rectypename
       @id = "#{@profile.name}/#{@name}"
       @config = @profile.config["recordTypes"][@name]
-      @label = config.dig("messages", "record", "name", "defaultMessage")
+
       @ns = get_namespace
       @panels = get_panels
       @input_tables = get_input_tables
@@ -45,6 +45,10 @@ module CspaceConfigUntangler
       @service_type = service_config.service_type
       @subtypes = (@service_type == "authority") ? get_subtypes : []
       @vocabularies = get_vocabularies
+    end
+
+    def label
+      @label ||= config.dig("messages", "record", "name", "defaultMessage")
     end
 
     def field_defs
