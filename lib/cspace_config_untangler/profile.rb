@@ -183,6 +183,10 @@ module CspaceConfigUntangler
 
     private
 
+    def service_groups
+      @service_groups ||= CCU::Profiles::ServiceGroupsGetter.call(basename)
+    end
+
     def get_field_defs
       fields = @rectypes.map { |rt| rt.field_defs }
       if @extensions.include?("blob")
@@ -274,7 +278,16 @@ module CspaceConfigUntangler
         rectypes_all.intersection(rectypes)
       end
 
-      types.map { |rt| CCU::RecordType.new(self, rt) }
+      rt_objs = types.map { |rt| CCU::RecordType.new(self, rt) }
+      if service_groups.empty?
+        CCU.log.warn("No API client for #{name} configured. Disabled/"\
+                     "suppressed record types not marked as such in UI config "\
+                     "cannot be excluded by checking against services "\
+                     "\servicegroups DocTypes.")
+        return rt_objs
+      end
+
+      rt_objs.select { |rt| service_groups.include?(rt.object_name) }
     end
 
     def get_extensions
