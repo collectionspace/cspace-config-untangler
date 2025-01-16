@@ -165,6 +165,14 @@ module CspaceConfigUntangler
       YAML.load_file(client_connection_config_path)
     end
 
+  setting :profiles_with_8_1_nagpra_procedures,
+    default: %w[core anthro],
+    reader: true
+
+  setting :nagpra_procedures_8_1,
+    default: %w[consultation dutyofcare heldintrust nagprainventory
+      repatriationrequest restrictedmedia summarydocumentation], reader: true
+
   def allfields_path(
     release: CCU.release,
     outmode: :expert,
