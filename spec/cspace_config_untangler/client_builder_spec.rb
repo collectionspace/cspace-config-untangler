@@ -3,6 +3,7 @@
 require "spec_helper"
 
 RSpec.describe CCU::ClientBuilder do
+  before(:each) { CCU.config.disable_api_checks = false }
   subject(:builder) { described_class.call(basename) }
 
   context "when community supported" do
