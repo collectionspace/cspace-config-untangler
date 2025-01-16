@@ -151,8 +151,7 @@ module CspaceConfigUntangler
     reader: true
 
   # @return [:demo, :qa, :dev] Used when setting up a CollectionSpace::Client
-  #   for community supported profiles. The client is only used for commands
-  #   in the `ccu vocabs` namespace
+  #   for community supported profiles.
   setting :instance_env, default: :demo, reader: true,
     constructor: ->(default) { default.to_sym }
 
@@ -165,13 +164,6 @@ module CspaceConfigUntangler
       YAML.load_file(client_connection_config_path)
     end
 
-  setting :profiles_with_8_1_nagpra_procedures,
-    default: %w[core anthro],
-    reader: true
-
-  setting :nagpra_procedures_8_1,
-    default: %w[consultation dutyofcare heldintrust nagprainventory
-      repatriationrequest restrictedmedia summarydocumentation], reader: true
 
   def allfields_path(
     release: CCU.release,
