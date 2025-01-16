@@ -51,6 +51,10 @@ module CspaceConfigUntangler
       @label ||= config.dig("messages", "record", "name", "defaultMessage")
     end
 
+    def object_name
+      service_config.object_name
+    end
+
     def field_defs
       if @config.dig("fields", "document")
         defs = CCU::Fields::Def::Parser.new(self, @config["fields"]["document"])

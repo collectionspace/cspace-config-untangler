@@ -117,14 +117,19 @@ RSpec.describe CCU::Profile do
       end
 
       context "when release 8.1" do
+        before(:each) { CCU.config.instance_env = "dev" }
         let(:release) { "8_1" }
+        let(:nagpra_rts) do
+          %w[consultation dutyofcare heldintrust nagprainventory
+            repatriationrequest restrictedmedia summarydocumentation]
+        end
 
         context "when anthro profile" do
           let(:profilename) { "anthro" }
 
           it "returns new NAGPRA procedures" do
-            overlap = prepped_result.intersection(CCU.nagpra_procedures_8_1)
-            expect(overlap).to eq(CCU.nagpra_procedures_8_1)
+            overlap = prepped_result.intersection(nagpra_rts)
+            expect(overlap).to eq(nagpra_rts)
           end
         end
 
@@ -132,7 +137,7 @@ RSpec.describe CCU::Profile do
           let(:profilename) { "bonsai" }
 
           it "removes new NAGPRA procedures" do
-            overlap = prepped_result.intersection(CCU.nagpra_procedures_8_1)
+            overlap = prepped_result.intersection(nagpra_rts)
             expect(overlap).to be_empty
           end
         end
