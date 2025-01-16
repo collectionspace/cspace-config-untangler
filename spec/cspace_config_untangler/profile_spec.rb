@@ -77,7 +77,7 @@ RSpec.describe CCU::Profile do
       uocmaterialtypes uocmethods uocprojectid uocstaffroles
       uocsubcollections uocuserroles uocusertypes workcreatortype
       workpublishertype worktermflag worktype
-      ].sort
+    ].sort
   end
 
   context "when core" do
