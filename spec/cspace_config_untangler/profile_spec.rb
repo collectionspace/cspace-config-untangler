@@ -117,7 +117,10 @@ RSpec.describe CCU::Profile do
       end
 
       context "when release 8.1" do
-        before(:each) { CCU.config.instance_env = "dev" }
+        before(:each) do
+          CCU.config.disable_api_checks = false
+          CCU.config.instance_env = "dev"
+        end
         let(:release) { "8_1" }
         let(:nagpra_rts) do
           %w[consultation dutyofcare heldintrust nagprainventory

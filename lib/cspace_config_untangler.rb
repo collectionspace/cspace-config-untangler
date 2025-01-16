@@ -164,6 +164,11 @@ module CspaceConfigUntangler
       YAML.load_file(client_connection_config_path)
     end
 
+  # @return [Boolean] mainly used to improve test performance. Most tests do
+  #   not rely on api checks and they slow down the test suite significantly.
+  #   This is set to true across the board in spec_helper and can be
+  #   overridden per-test as needed.
+  setting :disable_api_checks, default: false, reader: true
 
   def allfields_path(
     release: CCU.release,

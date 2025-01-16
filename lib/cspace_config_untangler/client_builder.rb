@@ -31,6 +31,8 @@ module CspaceConfigUntangler
     attr_reader :name, :config
 
     def clientable?
+      return false if CCU.disable_api_checks
+
       community_supported? || configured?
     end
 
