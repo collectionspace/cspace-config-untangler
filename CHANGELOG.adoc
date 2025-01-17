@@ -25,6 +25,8 @@ These changes are merged into the `main` branch, but have not been released. Aft
 
 === Breaking
 
+* Application may not work with Ruby versions earlier than 3.2. (PR#161)
+
 === Added
 
 * `mappers digest` command
