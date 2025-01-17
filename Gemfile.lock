@@ -22,6 +22,7 @@ PATH
   specs:
     cspace_config_untangler (3.0.0)
       collectionspace-client
+      csv
       dry-configurable
       facets
       nokogiri
@@ -37,7 +38,7 @@ GEM
       json
       nokogiri
     concurrent-ruby (1.2.3)
-    csv (3.3.0)
+    csv (3.3.2)
     diff-lcs (1.5.0)
     dry-configurable (1.1.0)
       dry-core (~> 1.0, < 2)
