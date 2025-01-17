@@ -12,7 +12,7 @@ module CspaceConfigUntangler
 
         # @param config [CCU::Fields::Definition::Config]
         def initialize(config)
-          super(config)
+          super
           @schema_path << config.name
 
           HashIterator.new(config, self)

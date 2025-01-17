@@ -19,7 +19,7 @@ module CspaceConfigUntangler
 
         # def initialize(fdp, name, config, parent)
         def initialize(config)
-          super(config)
+          super
           @datahash = config.hash["[config]"]
           @valsrctype = CCU::Fields::ValueSources::TypeExtractor.call(datahash)
           set_id
