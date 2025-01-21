@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require "fileutils"
+
 module CspaceConfigUntangler
   class Release
     attr_reader :version
@@ -7,7 +9,13 @@ module CspaceConfigUntangler
     # @param version [nil, String] CollectionSpace application release version
     #   in format #_# or #_#_#
     def initialize(version = nil, switch: true)
-      CCU::Validate.release(version) if version
+      if version
+        [CCU.release_configs_dir(version),
+          CCU.data_reference_dir(version)].each do |dirpath|
+          FileUtils.mkdir(dirpath) unless Dir.exist?(dirpath)
+        end
+        CCU::Validate.release(version)
+      end
       @version = version || CCU.releases.last
       @index = CCU.releases.index(@version)
       switch_release if switch
