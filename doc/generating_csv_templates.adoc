@@ -7,11 +7,11 @@ CSV templates are useful in preparing data for ingest via CspaceBatchImport, by:
 - indicating which (if any) repeatable field group each field is part of (so you can see which fields repeat together)
 - for fields populated with terms from a static list, providing a list of the allowable system values
 
-== To generate CSV templates: 
+== To generate CSV templates:
 
-This will create CSV templates for each profile in a separate subdirectory of `data/templates/release_#`:
+This will create CSV templates for each profile in a separate subdirectory of `~/data/templates/release_#`:
 
-`exe/ccu templates write -p all -o data/templates/release_# -s y`
+`exe/ccu templates write -p all -o ~/data/templates/release_# -s true`
 
 For details on the options:
 

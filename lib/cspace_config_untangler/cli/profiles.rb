@@ -7,12 +7,9 @@ require_relative "subcommand_base"
 module CspaceConfigUntangler
   module Cli
     class Profiles < SubcommandBase
-      remove_class_option :rectypes
-      remove_class_option :profiles
-
       desc "by_extension",
         "List all extensions used in profiles, and list which profile uses each"
-      method_option(*profiles_option)
+      shared_options :profiles
       def by_extension
         exts = {}
         get_profiles.each do |p|
@@ -32,7 +29,7 @@ module CspaceConfigUntangler
 
       desc "check",
         "Prints to screen the names of profiles that will be processed"
-      method_option(*profiles_option)
+      shared_options :profiles
       def check
         profiles = get_profiles
         say(profiles.join("\n"))
@@ -60,7 +57,7 @@ module CspaceConfigUntangler
         > $ exe/ccu profiles compare -p core_6_1_0,anthro_4_1_2
         >   -o /Users/you/files
       LONGDESC
-      method_option(*profiles_option)
+      shared_options :profiles
       option :output_dir,
         desc: "Path to directory in which to output file. Name of the file "\
         "is hardcoded, using the names of the profiles.",
@@ -87,7 +84,7 @@ module CspaceConfigUntangler
       desc "readable",
         "REFORMATS (in place) JSON profile configs so that they are not one "\
         "very long line. Non-destructive if run over JSON multiple times."
-      method_option(*profiles_option)
+      shared_options :profiles
       def readable
         message = []
         get_profiles.each do |p|
@@ -113,11 +110,7 @@ module CspaceConfigUntangler
 
       desc "switch_release", "Deletes configs and copies community profile "\
         "configs from specified release as current configs"
-      option :release,
-        desc: "Release (like 7_0)",
-        type: :string,
-        required: true,
-        aliases: "-r"
+      shared_options :release
       def switch_release
         CCU.config.release = options[:release]
         puts CCU::Cli::Helpers::ProfileGetter.call("all")

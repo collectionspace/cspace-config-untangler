@@ -5,8 +5,14 @@ require_relative "subcommand_base"
 module CspaceConfigUntangler
   module Cli
     class Debug < CCU::Cli::SubcommandBase
+      output_mode_settings = {
+        enum: %w[csv json],
+        default: "csv"
+      }
+
       desc "check_xpath_depth",
         "Reports fields with unusual xpath depth (i.e. not 0, 1, 2, 3, or 4)"
+      shared_options :profiles, :rectypes
       def check_xpath_depth
         field_defs = get_profiles.map do |profile|
           CCU::Profile.new(profile: profile, rectypes: parse_rectypes)
@@ -22,10 +28,10 @@ module CspaceConfigUntangler
       end
 
       desc "write_field_defs", "Write file containing field definition data"
-      option :format, desc: "Output format: csv or json", default: "csv",
-        aliases: "-f"
-      option :output, desc: "Path to output file",
-        default: "data/field_definitions.csv", aliases: "-o"
+      shared_options :profiles, :rectypes
+      shared_option :output_mode, **output_mode_settings
+      shared_option :output_path,
+        default: File.join(CCU.datadir, "field_definitions.csv")
       def write_field_defs
         field_defs = get_profiles.map do |profile|
           CCU::Profile.new(profile: profile, rectypes: parse_rectypes)
@@ -35,26 +41,24 @@ module CspaceConfigUntangler
 
         return if field_defs.empty?
 
-        case options[:format]
+        case options[:output_mode]
         when "csv"
-          CSV.open(options[:output], "wb") do |csv|
+          CSV.open(options[:output_path], "wb") do |csv|
             csv << field_defs[0].csv_header
             field_defs.each { |fd| csv << fd.to_csv }
           end
         when "json"
-          File.write(options[:output], JSON.pretty_generate(
+          File.write(options[:output_path], JSON.pretty_generate(
             field_defs.map { |fd| fd.to_h }
           ))
-        else
-          puts "Format must be csv or json"
         end
       end
 
       desc "write_form_fields", "Write file containing form field data"
-      option :format, desc: "Output format: csv or json", default: "csv",
-        aliases: "-f"
-      option :output, desc: "Path to output file",
-        default: "data/form_fields.csv", aliases: "-o"
+      shared_options :profiles, :rectypes
+      shared_option :output_mode, **output_mode_settings
+      shared_option :output_path,
+        default: File.join(CCU.datadir, "form_fields.csv")
       def write_form_fields
         form_fields = get_profiles.map do |profile|
           CCU::Profile.new(profile: profile, rectypes: parse_rectypes)
@@ -63,18 +67,16 @@ module CspaceConfigUntangler
 
         return if form_fields.empty?
 
-        case options[:format]
+        case options[:output_mode]
         when "csv"
-          CSV.open(options[:output], "wb") do |csv|
+          CSV.open(options[:output_path], "wb") do |csv|
             csv << form_fields[0].csv_header
             form_fields.each { |ff| csv << ff.to_csv }
           end
         when "json"
-          File.write(options[:output], JSON.pretty_generate(
+          File.write(options[:output_path], JSON.pretty_generate(
             form_fields.map { |ff| ff.to_h }
           ))
-        else
-          puts "Format must be csv or json"
         end
       end
     end

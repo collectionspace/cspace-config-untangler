@@ -152,7 +152,8 @@ module CspaceConfigUntangler
   # @return [:demo, :qa, :dev] Used when setting up a CollectionSpace::Client
   #   for community supported profiles. The client is only used for commands
   #   in the `ccu vocabs` namespace
-  setting :instance_env, default: :demo, reader: true
+  setting :instance_env, default: :demo, reader: true,
+    constructor: ->(default) { default.to_sym }
 
   setting :client_connection_config,
     default: nil,

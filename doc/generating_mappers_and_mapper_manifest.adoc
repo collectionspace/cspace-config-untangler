@@ -9,9 +9,9 @@ The following instructions assume:
 - the current configs for the community profiles are in your `data/configs` directory
 
 == Create the mappers
-This will create mappers for each profile in a separate subdirectory of `data/mappers/community_profiles/release_#`:
+This will create mappers for each profile in a separate subdirectory of `~/data/mappers/community_profiles/release_#`:
 
-`ccu mappers write -p all -o data/mappers/community_profiles/release_# -s y`
+`ccu mappers write -p all -o ~/data/mappers/community_profiles/release_# -s true`
 
 For details on the options:
 
@@ -23,16 +23,16 @@ See the description under `ccu mappers help validate` for what this checks.
 
 The following will recursively validate (in all the subdirectories) all the mappers created in the previous step.
 
-`ccu mappers validate -i data/mappers/community_profiles/release_#`
+`ccu mappers validate -i ~/data/mappers/community_profiles/release_#`
 
 == Create the mapper manifest
 
 The following will create a manifest listing all *valid* mappers created above:
 
-`ccu mappers manifest -i community_profiles/release_# -o data/mapper_manifests/community_profile_mappers_release_#.json`
+`ccu mappers manifest -i ~/data/mappers/community_profiles/release_# -o ~/data/mapper_manifests/community_profile_mappers_release_#.json`
 
 To create a dev manifest:
 
-`ccu mappers manifest -i community_profiles/release_# -o data/mapper_manifests/dev_mappers_{release#}.json -d true`
+`ccu mappers manifest -i ~/data/mappers/community_profiles/release_# -o ~/data/mapper_manifests/dev_mappers_{release#}.json -d true`
 
 The dev manifest is a subset of the full manifest, containing only a few mappers for use in dev/testing. To change which profile/record types are included in a dev manifest, edit the `DEV_MAPPERS` constant in `lib/cspace-config-untangler/manifest_dev.rb`
