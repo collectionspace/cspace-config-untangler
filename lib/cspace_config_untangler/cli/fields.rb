@@ -6,30 +6,22 @@ module CspaceConfigUntangler
   module Cli
     class Fields < SubcommandBase
       desc "csv", "Write CSV containing full field data"
-      option :output,
-        desc: "Path to output file",
-        default: "data/fields.csv",
-        aliases: "-o",
-        type: :string
-      option :structured_date,
-        desc: "expanded: report all individual structured date fields; "\
-              "collapsed: report the parent of individual structured "\
-              "date fields as the field",
-        default: "expanded",
-        aliases: "-d",
-        type: :string
-      option :output_mode,
-        desc: "expert: xpaths, ids, machine names; friendly: omit expert "\
-              "stuff not useful for CSV Importer use",
-        default: "expert",
-        aliases: "-m",
-        type: :string
+      long_desc <<~LONGDESC
+        Output mode `expert` includes xpaths, ids, namespaces
+
+        Output mode `friendly` omits info probably not useful for end users
+      LONGDESC
+      shared_options :profiles, :rectypes, :output_path, :structured_date
+      shared_option :output_mode,
+        enum: %w[expert friendly],
+        default: "expert"
       def csv
+        output = options[:output_path] || "data/fields.csv"
         CCU::Report::AllFieldsGenerator.call(
           datemode: options[:structured_date].to_sym,
           outmode: options[:output_mode].to_sym,
           profiles: options[:profiles],
-          target: options[:output]
+          target: output
         )
       end
 
@@ -42,6 +34,7 @@ module CspaceConfigUntangler
         fields are unexpected and the profile, record type, and schema path will
         be printed to the screen if any are found.
       LONGDESC
+      shared_options :profiles, :rectypes
       def nonunique
         CCU::Report::NonuniqueFieldPaths.call(profiles: options[:profiles])
       end
@@ -60,6 +53,7 @@ module CspaceConfigUntangler
         Known/legacy duplicates are shown separately, since it's difficult to
         change them. Look out for new ones and don't let them in, if possible!
       LONGDESC
+      shared_options :profiles, :rectypes
       def nonunique_field_names
         CCU::Report::NonuniqueFieldNames.call(profiles: options[:profiles])
       end
@@ -75,12 +69,7 @@ module CspaceConfigUntangler
         An unmappable field is identified by its field_mapping object having nil
         data_type and xpath attributes.
       DESC
-      option :structured_date,
-        desc: "explode: report all individual structured date fields; "\
-              "collapse: report the parent of individual structured date "\
-              "fields as the field",
-        default: "explode",
-        aliases: "-d"
+      shared_options :profiles, :rectypes, :structured_date
       def unmappable
         get_profiles.map do |profile|
           CCU::Profile.new(

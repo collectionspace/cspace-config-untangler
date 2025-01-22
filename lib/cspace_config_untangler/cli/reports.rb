@@ -20,11 +20,7 @@ module CspaceConfigUntangler
 
         - Changed fields report
       LONG
-      option :release,
-        desc: "Release being QAed (like 7_2)",
-        type: :string,
-        required: true,
-        aliases: "-r"
+      shared_options :release
       def qa
         CCU::Report.qa_reports(release: options[:release])
       end
@@ -45,11 +41,7 @@ module CspaceConfigUntangler
 
         - list of all structured date fields
       LONG
-      option :release,
-        desc: "Release (like 7_0)",
-        type: :string,
-        required: true,
-        aliases: "-r"
+      shared_options :release
       def ref
         CCU::Report.reference_reports(options[:release])
       end

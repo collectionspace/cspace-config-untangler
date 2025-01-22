@@ -6,6 +6,7 @@ module CspaceConfigUntangler
   module Cli
     class Forms < SubcommandBase
       desc "disabled", "List disabled forms in given profiles/record types"
+      shared_options :profiles, :rectypes
       def disabled
         get_profiles.map do |profile|
           CCU::Profile.new(profile: profile, rectypes: parse_rectypes)
@@ -18,6 +19,7 @@ module CspaceConfigUntangler
       end
 
       desc "subpaths", "Get all form props subpath values used"
+      shared_options :profiles, :rectypes
       option :mode,
         desc: "Whether to output just list of subpath values, or to "\
         "include occurrence counts",
@@ -62,6 +64,7 @@ module CspaceConfigUntangler
       end
 
       desc "props_types", "Get all values of props/type used"
+      shared_options :profiles, :rectypes
       def props_types
         props = get_profiles.map do |profile|
           p = CCU::Profile.new(profile: profile, rectypes: parse_rectypes)
@@ -86,6 +89,7 @@ module CspaceConfigUntangler
       end
 
       desc "props_key_sigs", "Get all used props key signature patterns"
+      shared_options :profiles, :rectypes
       option :keys, desc: "Key signature to find", type: :array,
         required: false, aliases: "-k"
       option :selector, desc: "CCU::Forms::Props method used to "\

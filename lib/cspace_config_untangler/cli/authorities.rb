@@ -5,9 +5,8 @@ require_relative "subcommand_base"
 module CspaceConfigUntangler
   module Cli
     class Authorities < CCU::Cli::SubcommandBase
-      remove_class_option :rectypes
-
       desc "defined", "List authority vocabularies defined in profiles"
+      shared_options :profiles
       def defined
         get_profiles.each do |profile|
           puts profile
@@ -23,15 +22,12 @@ module CspaceConfigUntangler
       end
 
       desc "report", "Write sortable/filterable CSV of authority info"
-      option :output,
-        desc: "Path to output file",
-        default: nil,
-        aliases: "-o"
+      shared_options :profiles, :output_path
       def report
         baseparam = {profiles: options[:profiles]}
-        params = if options[:output]
+        params = if options[:output_path]
           baseparam.merge(
-            {target: File.expand_path(options[:output])}
+            {target: File.expand_path(options[:output_path])}
           )
         else
           baseparam
@@ -42,6 +38,7 @@ module CspaceConfigUntangler
 
       desc "unused", "List authority vocabularies defined in profiles, "\
         "but not used to control any fields"
+      shared_options :profiles
       def unused
         get_profiles.each do |profile|
           puts profile
