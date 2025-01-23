@@ -3,6 +3,7 @@
 require_relative "helpers"
 
 require_relative "authorities"
+require_relative "configs"
 require_relative "debug"
 require_relative "fields"
 require_relative "forms"
@@ -24,6 +25,10 @@ module CspaceConfigUntangler
 
       desc "authorities SUBCOMMAND", "Get info about authority vocabularies"
       subcommand "authorities", CCU::Cli::Authorities
+
+      desc "configs SUBCOMMAND",
+        "Commands to retrieve and manipulate JSON config files"
+      subcommand "configs", CCU::Cli::Configs
 
       desc "debug SUBCOMMAND",
         "Commands useful for digging into why CCU is producing its results"
