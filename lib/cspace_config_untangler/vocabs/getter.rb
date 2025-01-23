@@ -1,14 +1,14 @@
 # frozen_string_literal: true
 
-require_relative "../client_builder"
 require_relative "vocab"
 
+# @todo write tests
 module CspaceConfigUntangler
   module Vocabs
     class Getter
       class << self
         def call(profilename)
-          client = get_client(profilename)
+          client = CCU.get_client(profilename)
           if client.is_a?(CollectionSpace::Client)
             configprofilename = CCU.profile_for(profilename)
             configprofile = CCU::Profile.new(profile: configprofilename)
@@ -21,12 +21,6 @@ module CspaceConfigUntangler
             puts client
             []
           end
-        end
-
-        private def get_client(name)
-          CCU::ClientBuilder.call(name)
-        rescue RuntimeError => err
-          "#{name}: #{err.message}"
         end
       end
     end
