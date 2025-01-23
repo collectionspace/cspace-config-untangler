@@ -117,13 +117,14 @@ module CspaceConfigUntangler
   setting :mapperdir, default: default_mapperdir, reader: true
   setting :logpath, default: default_logpath, reader: true
   setting :releases,
-    default: ["5_2", "6_0", "6_1", "7_0", "7_1", "7_2", "8_0"],
+    default: ["5_2", "6_0", "6_1", "7_0", "7_1", "7_2", "8_0", "8_1"],
     reader: true
 
   setting :release,
     default: nil,
     reader: true,
     constructor: ->(value) do
+      return value if value.is_a?(CCU::Release)
       return CCU::Release.new(value) if value
 
       CCU::Release.new(releases.last)
@@ -150,9 +151,9 @@ module CspaceConfigUntangler
     reader: true
 
   # @return [:demo, :qa, :dev] Used when setting up a CollectionSpace::Client
-  #   for community supported profiles. The client is only used for commands
-  #   in the `ccu vocabs` namespace
-  setting :instance_env, default: :demo, reader: true
+  #   for community supported profiles.
+  setting :instance_env, default: :demo, reader: true,
+    constructor: ->(default) { default.to_sym }
 
   setting :client_connection_config,
     default: nil,
@@ -162,6 +163,12 @@ module CspaceConfigUntangler
 
       YAML.load_file(client_connection_config_path)
     end
+
+  # @return [Boolean] mainly used to improve test performance. Most tests do
+  #   not rely on api checks and they slow down the test suite significantly.
+  #   This is set to true across the board in spec_helper and can be
+  #   overridden per-test as needed.
+  setting :disable_api_checks, default: false, reader: true
 
   def allfields_path(
     release: CCU.release,

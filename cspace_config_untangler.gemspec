@@ -44,5 +44,6 @@ Gem::Specification.new do |spec|
   spec.add_runtime_dependency "dry-configurable"
   spec.add_runtime_dependency "facets"
   spec.add_runtime_dependency "nokogiri"
+  spec.add_runtime_dependency "selenium-devtools"
   spec.add_runtime_dependency "thor"
 end

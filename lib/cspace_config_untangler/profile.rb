@@ -22,8 +22,6 @@ module CspaceConfigUntangler
     attr_reader :panels
     # @return [Array<CCU::RecordType>] selected/specified for processing
     attr_reader :rectypes
-    # @return [Array<String>] all non-ignored record type names in profile
-    attr_reader :rectypes_all
     # @return [:collapse, :explode]
     attr_reader :structured_date_treatment
     # @return [Array<String>] shortIdentifier values of all vocabularies defined
@@ -40,7 +38,6 @@ module CspaceConfigUntangler
       @messages = {}
       @extensions = get_extensions
       @structured_date_treatment = structured_date_treatment
-      @rectypes_all = get_rectypes_all
       @rectypes = get_rectypes(rectypes)
       @authorities = get_authorities
       @vocabularies = get_vocabularies
@@ -118,7 +115,7 @@ module CspaceConfigUntangler
     end
 
     def authority_types
-      @rectypes_all.select do |rt|
+      rectypes_all.select do |rt|
         @config.dig(
           "recordTypes", rt, "serviceConfig", "serviceType"
         ) == "authority"
@@ -128,7 +125,7 @@ module CspaceConfigUntangler
     end
 
     def authority_subtypes
-      ast = @rectypes_all.select do |rt|
+      ast = rectypes_all.select do |rt|
         @config.dig(
           "recordTypes", rt, "serviceConfig", "serviceType"
         ) == "authority"
@@ -147,7 +144,7 @@ module CspaceConfigUntangler
     end
 
     def object_and_procedures
-      op = @rectypes_all.select do |rt|
+      op = rectypes_all.select do |rt|
         @config.dig(
           "recordTypes", rt, "serviceConfig", "serviceType"
         ) == "procedure"
@@ -185,6 +182,10 @@ module CspaceConfigUntangler
     end
 
     private
+
+    def service_groups
+      @service_groups ||= CCU::Profiles::ServiceGroupsGetter.call(basename)
+    end
 
     def get_field_defs
       fields = @rectypes.map { |rt| rt.field_defs }
@@ -265,8 +266,9 @@ module CspaceConfigUntangler
       @messages[id] = {"name" => value, "fullName" => value}
     end
 
-    def get_rectypes_all
-      config["recordTypes"].keys - CCU::RecordType::IGNORED
+    def rectypes_all
+      @ui_config_rectype_names ||= config["recordTypes"].keys -
+        CCU::RecordType::IGNORED
     end
 
     def get_rectypes(rectypes)
@@ -276,7 +278,16 @@ module CspaceConfigUntangler
         rectypes_all.intersection(rectypes)
       end
 
-      types.map { |rt| CCU::RecordType.new(self, rt) }
+      rt_objs = types.map { |rt| CCU::RecordType.new(self, rt) }
+      if service_groups.empty?
+        CCU.log.warn("No API client for #{name} configured. Disabled/"\
+                     "suppressed record types not marked as such in UI config "\
+                     "cannot be excluded by checking against services "\
+                     "\servicegroups DocTypes.")
+        return rt_objs
+      end
+
+      rt_objs.select { |rt| service_groups.include?(rt.object_name) }
     end
 
     def get_extensions
@@ -290,7 +301,7 @@ module CspaceConfigUntangler
 
     def get_authorities
       authorities = []
-      @rectypes_all.each do |rt|
+      rectypes_all.each do |rt|
         c = @config["recordTypes"][rt]
         if c.dig("serviceConfig", "serviceType") == "authority"
           c["vocabularies"].keys.reject { |e| e == "all" }.each do |subtype|

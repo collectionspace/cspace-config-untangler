@@ -27,24 +27,15 @@ module CspaceConfigUntangler
 
         The manifest is used by cspace-batch-import.
 
-        Assumes that all mappers will be found in `#{CCU.mapperdir}`
-        (CCU.mapperdir) or subdirectories thereof. Base URI for raw files in
+        The base URI for raw files in
         this directory on Github in CCU.mapper_uri_base: #{CCU.mapper_uri_base}
 
         These constants can be changed in `lib/cspace_config_untangler.rb` if
         necessary.
       LONGDESC
-      option(:inputdir,
-        type: :string,
-        desc: "Path to directory containing RecordMapper JSON files. Specify "\
-          "the path relative to #{CCU.mapperdir}",
-        default: "",
-        aliases: "-i")
-      option(:output,
-        type: :string,
-        desc: "Path to output file",
-        default: "#{CCU.datadir}/mappers.json",
-        aliases: "-o")
+      shared_options :input_dir
+      shared_option :output_path,
+        default: File.join(CCU.datadir, "mapper_manifests", "manifest.json")
       option(:recursive,
         type: :boolean,
         desc: "Whether to traverse the inputdir recursively",
@@ -55,16 +46,17 @@ module CspaceConfigUntangler
         desc: "Whether to output a dev manifest",
         default: false,
         aliases: "-d")
-
       def manifest
-        indir = Pathname.new("#{CCU.mapperdir}/#{options[:inputdir]}")
+        indir = Pathname.new(File.expand_path(options[:input_dir]))
         unless indir.exist?
           puts "Directory does not exist: #{indir}"
           exit
         end
+
+        outdir = Pathname.new(File.expand_path(options[:output_path]))
+
         puts "Building manifest with options:"
-        opts = {inputdir: indir, output: options[:output],
-                recursive: options[:recursive]}
+        opts = {inputdir: indir, output: outdir, recursive: options[:recursive]}
         opts.each { |key, val| puts "  #{key}: #{val}" }
         puts "  dev: #{options[:dev]}"
         builder = if options[:dev]
@@ -77,27 +69,19 @@ module CspaceConfigUntangler
 
       desc "write",
         "Writes JSON serializations of RecordMappers for the given rectype(s) "\
-      "for the given profiles."
-      option :outputdir,
-        desc: "Path to output directory. File name will be: "\
-        "profile-rectype.json",
-        default: "data/mappers",
-        aliases: "-o"
-      option :subdirs,
-        desc: "y/n. Whether to organize into subdirectories within given "\
-        "output directory by normalized profile name. Normalized profile name "\
-        "is the profile with version info/underscores removed.",
-        default: "n",
-        aliases: "-s"
+        "for the given profiles."
+      shared_options :profiles, :rectypes, :subdirs
+      shared_option :output_dir, default: CCU.mapperdir
       def write
+        outpath = File.expand_path(options[:output_dir])
         get_profiles.each do |profile|
           puts "Writing mappers for #{profile}..."
           p = CCU::Profile.new(profile: profile, rectypes: parse_rectypes,
             structured_date_treatment: :collapse)
-          dir_path = if options[:subdirs] == "y"
-            "#{options[:outputdir]}/#{p.basename}"
+          dir_path = if options[:subdirs]
+            File.join(outpath, p.basename)
           else
-            options[:outputdir]
+            outpath
           end
           FileUtils.mkdir_p(dir_path)
           p.rectypes.each do |rt|
@@ -122,7 +106,7 @@ module CspaceConfigUntangler
       desc "validate", "Prints to screen a validation report of the JSON "\
         "mappers in a directory"
       long_desc <<-LONGDESC
-        The output directory given will be recursively traversed to find .json
+        The input directory given will be recursively traversed to find .json
         files. It is expected that all .json files in this directory structure
         will be RecordMappers.
 
@@ -131,12 +115,11 @@ module CspaceConfigUntangler
           - a URI for every namespace defined for the Mapper
           - a namespace defined for every field mapping
       LONGDESC
-      option :input, desc: "Path to input directory containing JSON mappers. "\
-        "Will be traversed recursively",
-        default: "data/mappers",
-        aliases: "-i"
+      shared_options :input_dir
       def validate
-        mapper_paths = Dir.glob("#{options[:input]}/**/*.json")
+        in_dir = File.expand_path(options[:input_dir])
+        mapper_paths = Dir.glob(File.join(in_dir, "**", "*", "*.json"))
+
         mapper_paths.each do |path|
           validator = RecordMapper::Validator.new(path)
           validator.report

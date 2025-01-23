@@ -104,12 +104,46 @@ RSpec.describe CCU::Profile do
 
     describe ".rectypes" do
       let(:rectypes) { [] }
-      it "returns array" do
-        expect(profile.rectypes).to be_instance_of(Array)
+      let(:result) { profile.rectypes }
+      let(:prepped_result) { result.map(&:name).sort }
+
+      it "returns array of RecordTypes" do
+        expect(result).to be_instance_of(Array)
+        expect(result.first).to be_instance_of(CCU::RecordType)
       end
 
       it "cleans rectype list" do
-        expect(profile.rectypes.map { |rt| rt.name }.sort).to eq(core_rectypes)
+        expect(prepped_result).to eq(core_rectypes)
+      end
+
+      context "when release 8.1" do
+        before(:each) do
+          CCU.config.disable_api_checks = false
+          CCU.config.instance_env = "dev"
+        end
+        let(:release) { "8_1" }
+        let(:nagpra_rts) do
+          %w[consultation dutyofcare heldintrust nagprainventory
+            repatriationrequest restrictedmedia summarydocumentation]
+        end
+
+        context "when anthro profile" do
+          let(:profilename) { "anthro" }
+
+          it "returns new NAGPRA procedures" do
+            overlap = prepped_result.intersection(nagpra_rts)
+            expect(overlap).to eq(nagpra_rts)
+          end
+        end
+
+        context "when bonsai profile" do
+          let(:profilename) { "bonsai" }
+
+          it "removes new NAGPRA procedures" do
+            overlap = prepped_result.intersection(nagpra_rts)
+            expect(overlap).to be_empty
+          end
+        end
       end
     end
 

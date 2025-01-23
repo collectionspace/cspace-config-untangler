@@ -6,6 +6,7 @@ module CspaceConfigUntangler
   module Cli
     class Rectypes < SubcommandBase
       desc "list", "Lists record types in each profile"
+      shared_options :profiles
       def list
         get_profiles.each do |p|
           puts "\n#{p}:"
@@ -15,6 +16,7 @@ module CspaceConfigUntangler
 
       desc "without_form", "List profiles/record types not having a form "\
         "with the given name"
+      shared_options :profiles, :rectypes
       option :form, desc: "The formname (e.g. default, public, timebased)",
         required: true, type: :string, aliases: "-f"
       def without_form

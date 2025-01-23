@@ -2,6 +2,7 @@
 
 require_relative "fields/definition/parser"
 require_relative "iterable"
+require_relative "record_types/service_config"
 
 module CspaceConfigUntangler
   class RecordType
@@ -22,7 +23,7 @@ module CspaceConfigUntangler
       blob contact export idgenerator object procedure relation
       report reportinvocation structureddates vocabulary]
 
-    attr_reader :profile, :name, :label, :id, :config, :ns, :panels,
+    attr_reader :profile, :name, :id, :config, :ns, :panels,
       :input_tables, :forms, :structured_date_treatment,
       :service_type, :subtypes, :record_search_field
 
@@ -35,15 +36,23 @@ module CspaceConfigUntangler
       @name = rectypename
       @id = "#{@profile.name}/#{@name}"
       @config = @profile.config["recordTypes"][@name]
-      @label = config.dig("messages", "record", "name", "defaultMessage")
+
       @ns = get_namespace
       @panels = get_panels
       @input_tables = get_input_tables
       @forms = get_forms
       @structured_date_treatment = @profile.structured_date_treatment
-      @service_type = @config.dig("serviceConfig", "serviceType")
+      @service_type = service_config.service_type
       @subtypes = (@service_type == "authority") ? get_subtypes : []
       @vocabularies = get_vocabularies
+    end
+
+    def label
+      @label ||= config.dig("messages", "record", "name", "defaultMessage")
+    end
+
+    def object_name
+      service_config.object_name
     end
 
     def field_defs
@@ -188,6 +197,12 @@ module CspaceConfigUntangler
     alias_method :inspect, :to_s
 
     private
+
+    def service_config
+      @service_config ||= CCU::RecordTypes::ServiceConfig.new(
+        @config.dig("serviceConfig")
+      )
+    end
 
     # @todo create a public method grouping on id and comparing fields
     #   that appear in multiple forms, to see if any are defined
@@ -354,8 +369,7 @@ module CspaceConfigUntangler
     def get_namespace
       return "ns2:propagations_common" if name == "propagation"
 
-      docname = @config["serviceConfig"]["documentName"]
-      "ns2:#{docname}_common"
+      "ns2:#{service_config.document_name}_common"
     end
   end
 end
