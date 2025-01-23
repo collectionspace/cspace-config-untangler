@@ -2,6 +2,10 @@
 
 source "https://rubygems.org"
 
+gem "collectionspace-client",
+  git: "https://github.com/collectionspace/collectionspace-client.git",
+  branch: "version-getter"
+
 group :development do
   gem "almost_standard", github: "kspurgin/almost_standard", branch: "main"
 end
