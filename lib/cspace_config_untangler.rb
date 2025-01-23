@@ -224,6 +224,12 @@ module CspaceConfigUntangler
     profiles.find { |profile| profile.start_with?(for_api_profile) }
   end
 
+  def get_client(profile_basename)
+    CCU::ClientBuilder.call(profile_basename)
+  rescue RuntimeError => err
+    "#{profile_basename}: #{err.message}"
+  end
+
   def safe_copy(hash)
     Marshal.load(Marshal.dump(hash))
   end
