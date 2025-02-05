@@ -28,9 +28,11 @@ module CspaceConfigUntangler
         File.join(CCU.data_reference_dir, "structured_date_fields.csv")
       end
 
-    def qa_reports(release:, clean: false)
+    def qa_reports(release:, env:, clean: false)
       CCU.config.release = release
       CCU.prev_release
+
+      CCU.config.instance_env = env
 
       dir = CCU.data_reference_dir
       FileUtils.mkdir_p(dir) unless Dir.exist?(dir)
@@ -47,8 +49,10 @@ module CspaceConfigUntangler
       CCU::Report::UnusedAuthorityVocabs.call
     end
 
-    def reference_reports(release, clean: false)
+    def reference_reports(release:, env:, clean: false)
       CCU.config.release = CCU::Validate.release(release)
+      CCU.config.instance_env = env
+
       dir = CCU.data_reference_dir(release)
       FileUtils.mkdir_p(dir) unless Dir.exist?(dir)
       if clean

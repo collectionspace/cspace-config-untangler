@@ -70,9 +70,11 @@ module CspaceConfigUntangler
       desc "write",
         "Writes JSON serializations of RecordMappers for the given rectype(s) "\
         "for the given profiles."
-      shared_options :profiles, :rectypes, :subdirs
+      shared_options :profiles, :rectypes, :subdirs, :env
       shared_option :output_dir, default: CCU.mapperdir
       def write
+        CCU.config.instance_env = options[:env]
+
         outpath = File.expand_path(options[:output_dir])
         get_profiles.each do |profile|
           puts "Writing mappers for #{profile}..."

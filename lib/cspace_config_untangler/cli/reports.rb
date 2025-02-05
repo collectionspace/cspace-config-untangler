@@ -20,9 +20,10 @@ module CspaceConfigUntangler
 
         - Changed fields report
       LONG
-      shared_options :release
+      shared_options :release, :env
       def qa
-        CCU::Report.qa_reports(release: options[:release])
+        CCU::Report.qa_reports(release: options[:release],
+          env: options[:env])
       end
 
       desc "ref", "Writes all reference reports to release directory"
@@ -41,9 +42,10 @@ module CspaceConfigUntangler
 
         - list of all structured date fields
       LONG
-      shared_options :release
+      shared_options :release, :env
       def ref
-        CCU::Report.reference_reports(options[:release])
+        CCU::Report.reference_reports(release: options[:release],
+          env: options[:env])
       end
     end
   end
