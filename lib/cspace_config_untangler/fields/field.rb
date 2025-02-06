@@ -192,8 +192,9 @@ module CspaceConfigUntangler
           if fd.valsrctype == "authority" &&
               fd.value_source == [CCU::ValueSources::NoSource.new]
             controlled_by_missing_authority(fd)
+          else
+            merge_from_fd(formfield, fd)
           end
-          merge_from_fd(formfield, fd)
         else
           CCU.log.error("CANNOT MATCH FORM FIELD TO FIELD DEF: "\
                         "#{formfield.form.id} #{formfield.id} "\
@@ -204,10 +205,16 @@ module CspaceConfigUntangler
 
       def controlled_by_missing_authority(field_def)
         # Don't log warnings about known and reported issues
-        if name == "relatedTerm" && rectype.name == "citation" &&
-            profile.name.start_with?("materials_")
-          CCU.upgrade_warner.call(target_version: "next version",
+        if profile.name.start_with?("materials") &&
+            rectype.name == "citation" &&
+            name == "relatedTerm"
+          CCU.upgrade_warner.call(target_version: "next release",
             issue: "DRYD-1425")
+        elsif profile.name.start_with?("materials") &&
+            rectype.name == "collectionobject" &&
+            name == "contentConcept"
+          CCU.upgrade_warner.call(target_version: "next release",
+            issue: "DRYD-1648")
         else
           CCU.log.warn(
             "DATA SOURCES: #{field_def.config.namespace_signature} - #{@id} - "\
