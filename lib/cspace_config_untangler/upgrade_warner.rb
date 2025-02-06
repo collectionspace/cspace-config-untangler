@@ -11,7 +11,8 @@ module CspaceConfigUntangler
     # @param issue [nil, String] Jira or other issue to check for information on
     #   the status of changes expected to impact this code
     def call(target_version:, issue: nil)
-      return unless CCU.release.version == target_version
+      return unless target_version == "next release" ||
+        CCU.release.version == target_version
       source = caller(1..1).first
       warned_key = "#{target_version} #{source}"
       return if warned.include?(warned_key)
