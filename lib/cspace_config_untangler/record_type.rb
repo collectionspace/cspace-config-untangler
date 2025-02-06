@@ -149,24 +149,28 @@ module CspaceConfigUntangler
     def id_field
       case @service_type
       when "object"
-        id_field = "objectNumber"
+        "objectNumber"
       when "authority"
-        id_field = "shortIdentifier"
+        "shortIdentifier"
       when "procedure"
         required_mappings = batch_mappings.select { |m| m.required == "y" }
         case required_mappings.length
         when 0
-          id_field = "potTagNumber" if @name == "pottag"
+          case name
+          when "loanout" then "loanOutNumber"
+          when "pottag" then "potTagNumber"
+          end
         when 1
-          id_field = required_mappings.first.fieldname
+          required_mappings.first.fieldname
         else
+          case name
+          when "movement" then "movementReferenceNumber"
           # osteology has 3 required fields, but only the ID is suitable for use
           # here
-          id_field = "InventoryID" if @name == "osteology"
-          id_field = "movementReferenceNumber" if @name == "movement"
+          when "osteology" then "InventoryID"
+          end
         end
       end
-      id_field
     end
 
     def search_field
