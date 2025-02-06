@@ -1,0 +1,8 @@
+"Before importing CSV, delete initial column and rows above the CSVHEADER row","","","","","","","","","","","","","","","","","",""
+REQUIRED,y,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n
+DATA TYPE,string,string,string,string,string,string,string,boolean,string,string,string,string,string,string,string,string,string,date
+REPEATABLE FIELD?,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n
+REPEATING FIELD GROUP,locTermGroupList < locTermGroup,locTermGroupList < locTermGroup,locTermGroupList < locTermGroup,locTermGroupList < locTermGroup,locTermGroupList < locTermGroup,locTermGroupList < locTermGroup,locTermGroupList < locTermGroup,locTermGroupList < locTermGroup,locTermGroupList < locTermGroup,locTermGroupList < locTermGroup,locTermGroupList < locTermGroup,locTermGroupList < locTermGroup,"","","","",conditionGroupList < conditionGroup,conditionGroupList < conditionGroup
+VALUE SOURCE TYPE,na,na,na,optionlist,optionlist,vocabulary,vocabulary,na,na,na,na,na,vocabulary,na,na,na,na,na
+VALUE SOURCE,"","","","accepted, provisional, rejected, under review","alternate descriptor, descriptor, used for term",locationtermflag,languages,"","","","","",locationtype,"","","","",""
+CSVHEADER,termDisplayName,termName,termQualifier,termStatus,termType,termFlag,termLanguage,termPrefForLang,termSource,termSourceDetail,termSourceID,termSourceNote,locationType,securityNote,address,accessNote,conditionNote,conditionNoteDate
