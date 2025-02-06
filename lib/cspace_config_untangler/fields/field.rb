@@ -13,7 +13,7 @@ module CspaceConfigUntangler
         :schema_path,
         :repeats, :in_repeating_group,
         :data_type, :value_source, :value_list,
-        :required
+        :required, :status
       attr_accessor :profile, :rectype
 
       def initialize(rectype_obj, form_field)
@@ -29,6 +29,8 @@ module CspaceConfigUntangler
         merge_field_defs(form_field)
         @fid = "#{@profile.name} #{rectype.name} #{@ns_for_id} #{@name}"
       end
+
+      def ok? = status == :ok
 
       def csv_header(mode = :expert)
         case mode
@@ -192,6 +194,7 @@ module CspaceConfigUntangler
           if fd.valsrctype == "authority" &&
               fd.value_source == [CCU::ValueSources::NoSource.new]
             controlled_by_missing_authority(fd)
+            @status = :problem
           else
             merge_from_fd(formfield, fd)
           end
@@ -200,6 +203,7 @@ module CspaceConfigUntangler
                         "#{formfield.form.id} #{formfield.id} "\
                         "(#{__FILE__}, #{__LINE__})")
           @value_source = [CCU::ValueSources::NoSource.new]
+          @status = :problem
         end
       end
 
@@ -261,6 +265,7 @@ module CspaceConfigUntangler
         @value_source = fd.value_source
         @value_list = fd.value_list
         @required = fd.required
+        @status = :ok
       end
 
       def lookup_field_label
