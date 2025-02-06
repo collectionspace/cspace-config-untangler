@@ -17,7 +17,7 @@ module CspaceConfigUntangler
           CCU::Report::AuthorityVocabUse.call(profiles: "all")
         end
         @target = File.join(CCU.data_reference_dir,
-          "qa_unused_authority_vocabs.csv")
+          "unused_authority_vocabs.csv")
       end
 
       def call
