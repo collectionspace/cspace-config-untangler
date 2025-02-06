@@ -68,6 +68,7 @@ module CspaceConfigUntangler
 
     def fields
       fields = form_fields.map { |ff| CCU::Fields::Field.new(self, ff) }
+        .select { |field| field.ok? }
       if @structured_date_treatment == :explode
         fields = explode_structured_date_fields(fields)
       end
