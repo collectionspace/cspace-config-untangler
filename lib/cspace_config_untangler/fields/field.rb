@@ -206,7 +206,7 @@ module CspaceConfigUntangler
         # Don't log warnings about known and reported issues
         if name == "relatedTerm" && rectype.name == "citation" &&
             profile.name.start_with?("materials_")
-          CCU.upgrade_warner.call(target_version: "8_1",
+          CCU.upgrade_warner.call(target_version: "next version",
             issue: "DRYD-1425")
         else
           CCU.log.warn(
@@ -264,11 +264,11 @@ module CspaceConfigUntangler
 
         altform = case id
         when "uoc_common.useDateHoursSpent"
-          CCU.upgrade_warner.call(target_version: "8_1",
+          CCU.upgrade_warner.call(target_version: "next release",
             issue: "DRYD-1269")
           "field.uoc_common.hoursSpent"
         when "collectionobjects_common.compressionStandard"
-          CCU.upgrade_warner.call(target_version: "8_1",
+          CCU.upgrade_warner.call(target_version: "next release",
             issue: "DRYD-1270")
           "field.collectionobjects_common.compressionstandard"
         end
@@ -277,7 +277,7 @@ module CspaceConfigUntangler
 
         if id == "conservation_common.sampleReturned"
           CCU.upgrade_warner.call(
-            target_version: "8_1", issue: "DRYD-1271"
+            target_version: "next release", issue: "DRYD-1271"
           )
           base = "field.conservation_common.sampleReturned"
           msgs["#{base}.fullName"] || msgs["#{base}.nadme"]

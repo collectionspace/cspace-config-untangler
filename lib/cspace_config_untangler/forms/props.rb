@@ -324,9 +324,8 @@ module CspaceConfigUntangler
       end
 
       def bad_material_public_template_field?
-        CCU.upgrade_warner.call(target_version: "8_1", issue: "DRYD-1419")
-
-        profile.name.start_with?("materials") &&
+        CCU.release.lt("8_1") &&
+          profile.name.start_with?("materials") &&
           rectype.name == "collectionobject" &&
           form.name == "public"
       end
