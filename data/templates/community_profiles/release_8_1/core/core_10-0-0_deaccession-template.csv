@@ -1,0 +1,8 @@
+"Before importing CSV, delete initial column and rows above the CSVHEADER row","","","","","","","","","","","","","",""
+REQUIRED,y,n,n,n,n,n,n,n,n,n,n,n,n,n
+DATA TYPE,string,string,date,string,string,string,string,string,date,string,date,string,string,string
+REPEATABLE FIELD?,n,y,n,n,n,n,n,n,n,n,n,y,y,y
+REPEATING FIELD GROUP,"","","","","",deaccessionApprovalGroupList < deaccessionApprovalGroup,deaccessionApprovalGroupList < deaccessionApprovalGroup,deaccessionApprovalGroupList < deaccessionApprovalGroup,deaccessionApprovalGroupList < deaccessionApprovalGroup,deaccessionApprovalGroupList < deaccessionApprovalGroup,"","","",""
+VALUE SOURCE TYPE,na,vocabulary,na,na,na,vocabulary,authority,vocabulary,na,na,na,authority,authority,vocabulary
+VALUE SOURCE,"",deaccessionreason,"","","",deaccessionapprovalgroup,person/local,deaccessionapprovalstatus,"","","",person/local,organization/local,disposalmethod
+CSVHEADER,deaccessionNumber,deaccessionReason,deaccessionDate,deaccessionRationale,deaccessionNote,deaccessionApprovalGroup,deaccessionApprovalIndividual,deaccessionApprovalStatus,deaccessionApprovalDate,deaccessionApprovalNote,exitDate,exitRecipientPerson,exitRecipientOrganization,exitMethod
