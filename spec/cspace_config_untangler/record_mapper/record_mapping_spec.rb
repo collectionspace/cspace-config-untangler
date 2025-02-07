@@ -9,7 +9,7 @@ RSpec.describe CCU::RecordMapper::RecordMapping do
   end
   let(:profilename) { "core" }
   let(:rectypes) { ["collectionobject", "concept", "movement"] }
-  let(:release) { "6_1" }
+  let(:release) { "8_1" }
   let(:profile) { generator.profile }
 
   describe RecordMapping do
