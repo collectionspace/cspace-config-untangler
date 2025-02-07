@@ -25,11 +25,27 @@ These changes are merged into the `main` branch, but have not been released. Aft
 
 === Breaking
 
-* Application may not work with Ruby versions earlier than 3.2. (PR#161)
-
 === Added
 
-* Automated download, rename, and reformat of community-supported profile configs
+=== Changed
+
+=== Bugfixes
+
+=== Deleted
+
+=== Deprecated/Will break in a future version
+
+== Releases
+
+=== 3.1.0 - 2025-02-06
+
+==== Warning
+
+* Application may not work with Ruby versions earlier than 3.2. (PR#161)
+
+==== Added
+
+* Automated download, rename, and reformat of community-supported profile configs (PR#152)
 * `mappers digest` command
 * Validation of key signatures in form props, and logging (as errors) of unknown key signatures
 * `ccu vocabs all` command (leveraging REST API connections) with stdout or csv output
@@ -38,25 +54,22 @@ These changes are merged into the `main` branch, but have not been released. Aft
 * Ability connect to community-supported profile REST API by default, and configure REST API connections for other profiles
 * Mappers, manifest, templates for OHC 2.0.0 / 20240521
 * New UI label lookup table reference report
-=== Changed
+* Community-supported profile configs, mappers, mapper manifest, CSV templates, and reference documents for 8.1 release
+
+==== Changed
 
 * Friendly fields CSV format now includes field machine name qualified via namespace, and CSV Importer template headers for the field
 * `data_source` column in reference reports split into `data_source_type` (e.g. authority, vocabulary, and option list) and `data_source_name` values.
 * Community-supported profile configs, mappers, mapper manifest, CSV templates, and reference documents for 8.0 release (fixed, except for UI path issue)
+* CLI interface and options more standardized via shared options (PR#152)
 
-=== Bugfixes
+==== Bugfixes
 
 * Remove unnecessary/redundant class options on commands in `CCU::Cli::Profiles`
 * Stop `CCU::UpgradeWarner` from emitting duplicate warnings
 * Fix variable names in `CCU::Fields::Field`
 * Do not write unused authority report CSV to an .rb file 🤣
 * Detect/log more field definition/form field mismatch issues and fix them.
-
-=== Deleted
-
-=== Deprecated/Will break in a future version
-
-== Releases
 
 === 3.0.0 - 2024-05-14
 ==== Breaking
