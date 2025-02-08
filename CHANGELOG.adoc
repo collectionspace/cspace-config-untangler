@@ -29,6 +29,8 @@ These changes are merged into the `main` branch, but have not been released. Aft
 
 === Changed
 
+* The `version` property in mapper config and mapper_manifest entries is now formatted as "10.0.0" instead of "10-0-0"
+
 === Bugfixes
 
 === Deleted
