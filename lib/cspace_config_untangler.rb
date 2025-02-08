@@ -32,7 +32,7 @@ module CspaceConfigUntangler
   # request mappers
   default_mapper_uri_base =
     "https://raw.githubusercontent.com/collectionspace/"\
-    "cspace-config-untangler/main/data/mappers"
+      "cspace-config-untangler/main/data/mappers"
 
   # The last version of each profile that should get fancy column names created.
   default_last_fancy_column_versions = {
