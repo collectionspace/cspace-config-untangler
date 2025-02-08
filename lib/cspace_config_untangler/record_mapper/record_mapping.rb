@@ -30,7 +30,7 @@ module CspaceConfigUntangler
       def build_hash
         @hash[:config] = {}
         @hash[:config][:profile_basename] = @profile.basename
-        @hash[:config][:version] = @profile.version
+        @hash[:config][:version] = @profile.readable_version
         @hash[:config][:recordtype] = @rectype.name
         @hash[:config][:document_name] =
           @config.dig("recordTypes", @rectype.name, "serviceConfig",

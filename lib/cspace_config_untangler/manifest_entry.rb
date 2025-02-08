@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require "digest"
+require "json"
 
 module CspaceConfigUntangler
   class ManifestEntry
@@ -8,26 +9,25 @@ module CspaceConfigUntangler
       @path = path.sub("//", "/")
     end
 
+    def mapper_text = @mapper_text ||= File.read(path)
+
+    def mapper_json = @mapper_json ||= JSON.parse(mapper_text)
+
     def digest
-      Digest::SHA256.hexdigest(File.read(path))
+      Digest::SHA256.hexdigest(mapper_text)
     end
 
-    def filename
-      File.basename(@path, ".json")
-    end
-
-    def filename_parts
-      filename.split("_")
-    end
+    def filename = File.basename(@path, ".json")
 
     attr_reader :path
 
-    def profile
-      filename_parts[0]
-    end
+    def profile = mapper_json.dig("config", "profile_basename")
 
     def recordtype
-      filename_parts[2]
+      [mapper_json.dig("config", "recordtype"),
+        mapper_json.dig("config", "authority_subtype")
+          &.tr("_", "-")].compact
+        .join("-")
     end
 
     def subpath
@@ -53,8 +53,6 @@ module CspaceConfigUntangler
       v.valid
     end
 
-    def version
-      filename_parts[1]
-    end
+    def version = mapper_json.dig("config", "version")
   end
 end

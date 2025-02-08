@@ -1,7 +1,7 @@
 {
   "config": {
     "profile_basename": "botgarden",
-    "version": "4-0-0",
+    "version": "4.0.0",
     "recordtype": "loanout",
     "document_name": "loansout",
     "service_name": "Loanout",
@@ -20,7 +20,6 @@
     "loansout_botgarden": {
       "collectorList": {}
     },
-    "loansout_common": {},
     "loansout_naturalhistory_extension": {}
   },
   "mappings": [
@@ -60,34 +59,6 @@
       "opt_list_values": [],
       "datacolumn": "collectorRefname",
       "required": "n"
-    },
-    {
-      "fieldname": "loanOutDate",
-      "transforms": {},
-      "source_type": "na",
-      "source_name": "na",
-      "namespace": "loansout_common",
-      "xpath": [],
-      "data_type": "date",
-      "repeats": "n",
-      "in_repeating_group": "n/a",
-      "opt_list_values": [],
-      "datacolumn": "loanOutDate",
-      "required": "n"
-    },
-    {
-      "fieldname": "loanOutNumber",
-      "transforms": {},
-      "source_type": "na",
-      "source_name": "na",
-      "namespace": "loansout_common",
-      "xpath": [],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "n/a",
-      "opt_list_values": [],
-      "datacolumn": "loanOutNumber",
-      "required": "y"
     },
     {
       "fieldname": "sterile",
@@ -230,34 +201,6 @@
       "required": "n"
     },
     {
-      "fieldname": "loanPurpose",
-      "transforms": {},
-      "source_type": "na",
-      "source_name": "na",
-      "namespace": "loansout_common",
-      "xpath": [],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "n/a",
-      "opt_list_values": [],
-      "datacolumn": "loanPurpose",
-      "required": "n"
-    },
-    {
-      "fieldname": "loanOutNote",
-      "transforms": {},
-      "source_type": "na",
-      "source_name": "na",
-      "namespace": "loansout_common",
-      "xpath": [],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "n/a",
-      "opt_list_values": [],
-      "datacolumn": "loanOutNote",
-      "required": "n"
-    },
-    {
       "fieldname": "fieldCollectionNote",
       "transforms": {},
       "source_type": "na",
@@ -286,39 +229,6 @@
       "required": "n"
     },
     {
-      "fieldname": "borrower",
-      "transforms": {
-        "authority": [
-          "orgauthorities",
-          "organization"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "organization/local",
-      "namespace": "loansout_common",
-      "xpath": [],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "n/a",
-      "opt_list_values": [],
-      "datacolumn": "borrowerOrganizationLocal",
-      "required": "n"
-    },
-    {
-      "fieldname": "borrower",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
-      "namespace": "loansout_common",
-      "xpath": [],
-      "data_type": "csrefname",
-      "repeats": "n",
-      "in_repeating_group": "n/a",
-      "opt_list_values": [],
-      "datacolumn": "borrowerRefname",
-      "required": "n"
-    },
-    {
       "fieldname": "numLent",
       "transforms": {},
       "source_type": "na",
@@ -344,39 +254,6 @@
       "in_repeating_group": "n/a",
       "opt_list_values": [],
       "datacolumn": "sheetAccessionNumber",
-      "required": "n"
-    },
-    {
-      "fieldname": "lendersAuthorizer",
-      "transforms": {
-        "authority": [
-          "personauthorities",
-          "person"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "person/local",
-      "namespace": "loansout_common",
-      "xpath": [],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "n/a",
-      "opt_list_values": [],
-      "datacolumn": "lendersAuthorizerPersonLocal",
-      "required": "n"
-    },
-    {
-      "fieldname": "lendersAuthorizer",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
-      "namespace": "loansout_common",
-      "xpath": [],
-      "data_type": "csrefname",
-      "repeats": "n",
-      "in_repeating_group": "n/a",
-      "opt_list_values": [],
-      "datacolumn": "lendersAuthorizerRefname",
       "required": "n"
     },
     {

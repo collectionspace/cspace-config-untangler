@@ -95,9 +95,10 @@ module CspaceConfigUntangler
       @name.split("_")[0]
     end
 
-    def version
-      @name.split("_")[1]
-    end
+    # return [String] version suitable for writing to file/directory paths
+    def version = @name.split("_")[1]
+
+    def readable_version = version.tr("-", ".")
 
     def special_rectypes
       arr = []
