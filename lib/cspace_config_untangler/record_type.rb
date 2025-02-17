@@ -73,9 +73,11 @@ module CspaceConfigUntangler
         fields = explode_structured_date_fields(fields)
       end
       fields = fields.flatten
-      fields << media_uri_field if @name == "media"
+      fields << media_uri_field if media?
       fields
     end
+
+    def media? = %w[media restrictedmedia].include?(name)
 
     def has_form?(formname) = forms.key?(formname)
 

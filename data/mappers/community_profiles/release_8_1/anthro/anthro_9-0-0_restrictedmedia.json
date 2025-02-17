@@ -32,7 +32,8 @@
       "typeList": {},
       "dateGroupList": {},
       "subjectList": {}
-    }
+    },
+    "not-mapped": {}
   },
   "mappings": [
     {
@@ -861,6 +862,20 @@
       "in_repeating_group": "n/a",
       "opt_list_values": [],
       "datacolumn": "altText",
+      "required": "n"
+    },
+    {
+      "fieldname": "mediaFileURI",
+      "transforms": {},
+      "source_type": "na",
+      "source_name": "na",
+      "namespace": "not-mapped",
+      "xpath": [],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [],
+      "datacolumn": "mediaFileURI",
       "required": "n"
     }
   ]
