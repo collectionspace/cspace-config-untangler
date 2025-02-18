@@ -27,21 +27,30 @@ These changes are merged into the `main` branch, but have not been released. Aft
 
 === Added
 
-* Support for blob ingest on Restricted Media record type (PR#170)
-
 === Changed
 
-* The `version` property in mapper config and mapper_manifest entries is now formatted as "10.0.0" instead of "10-0-0" (PR#167)
-
 === Bugfixes
-
-* Fix namespace extraction for record type bug introduced in commit 764008a (PR#170)
 
 === Deleted
 
 === Deprecated/Will break in a future version
 
 == Releases
+
+=== 3.1.2 - 2025-02-17
+
+==== Added
+
+* Support for blob ingest on Restricted Media record type (PR#170)
+
+==== Changed
+
+* The `version` property in mapper config and mapper_manifest entries is now formatted as "10.0.0" instead of "10-0-0" (PR#167)
+
+==== Bugfixes
+
+* Fix namespace extraction for record type bug introduced in commit 764008a (PR#170)
+
 
 === 3.1.1 - 2025-02-07
 
