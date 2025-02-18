@@ -149,6 +149,29 @@ RSpec.describe CCU::RecordType do
     end
   end
 
+  describe ".ns" do
+    let(:result) { rectype.ns }
+    let(:release) { "8_1" }
+
+    context "when botgarden profile" do
+      let(:profilename) { "botgarden" }
+
+      context "when collectionobject" do
+        it "returns correct namespace" do
+          expect(result).to eq("ns2:collectionobjects_common")
+        end
+      end
+
+      context "when loanout" do
+        let(:rectypes) { ["loanout"] }
+
+        it "returns correct namespace" do
+          expect(result).to eq("ns2:loansout_common")
+        end
+      end
+    end
+  end
+
   describe "#mappings" do
     let(:result) { rectype.mappings }
     let(:columns) do

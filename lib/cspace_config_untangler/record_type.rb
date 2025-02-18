@@ -167,8 +167,8 @@ module CspaceConfigUntangler
         else
           case name
           when "movement" then "movementReferenceNumber"
-          # osteology has 3 required fields, but only the ID is suitable for use
-          # here
+            # osteology has 3 required fields, but only the ID is
+            # suitable for use here
           when "osteology" then "InventoryID"
           end
         end
@@ -374,7 +374,15 @@ module CspaceConfigUntangler
     end
 
     def get_namespace
-      config.dig("advancedSearch", "value", 0, "path")&.split("/")&.first
+      return "ns2:contacts_common" if name == "contact"
+
+      value_idx = if profile.basename == "botgarden" && name == "loanout"
+        1
+      else
+        0
+      end
+      config.dig("advancedSearch", "value", value_idx, "path")&.split("/")
+        &.first
     end
   end
 end
