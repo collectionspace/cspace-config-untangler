@@ -27,11 +27,15 @@ These changes are merged into the `main` branch, but have not been released. Aft
 
 === Added
 
+* Support for blob ingest on Restricted Media record type (PR#170)
+
 === Changed
 
 * The `version` property in mapper config and mapper_manifest entries is now formatted as "10.0.0" instead of "10-0-0" (PR#167)
 
 === Bugfixes
+
+* Fix namespace extraction for record type bug introduced in commit 764008a (PR#170)
 
 === Deleted
 
