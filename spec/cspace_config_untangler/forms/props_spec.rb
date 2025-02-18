@@ -13,8 +13,11 @@ RSpec.describe CCU::Forms::Props do
   let(:profilename) { "anthro" }
   let(:rectypes) { ["collectionobject"] }
   let(:generator) do
-    Helpers::SetupGenerator.new(profile: profilename, rectypes:,
-      release:)
+    Helpers::SetupGenerator.new(
+      profile: profilename,
+      rectypes: rectypes,
+      release: release
+    )
   end
   let(:templatename) { "default" }
   let(:form) { generator.form(templatename) }
@@ -239,6 +242,17 @@ RSpec.describe CCU::Forms::Props do
 
       it "returns correct ns" do
         expect(result).to eq("ext.accessionattributes")
+      end
+    end
+
+    context "with botgarden loanOutNumber (8.1)" do
+      let(:release) { "8_1" }
+      let(:profilename) { "botgarden" }
+      let(:rectypes) { ["loanout"] }
+      let(:name) { "loanOutNumber" }
+
+      it "returns correct ns" do
+        expect(result).to eq("ns2:loansout_common")
       end
     end
 
