@@ -6,6 +6,7 @@ module CspaceConfigUntangler
       class ProfileGetter
         # @param opt_profiles [String]
         # @param mode [:uiconfig, :api]
+        # @return [Array<String>]
         def self.call(opt_profiles, mode = :uiconfig)
           return [CCU.main_profile] unless opt_profiles
           return [CCU.main_profile] if opt_profiles.empty?
