@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require_relative "../namespaceable"
+
 module CspaceConfigUntangler
   module Forms
     # Each form/template is a gigantic, hideously nested JSON object.
@@ -7,7 +9,7 @@ module CspaceConfigUntangler
     # exposing the known and calculated properties at that level, so
     # we can work with them
     class Props
-      NS_MATCHER = /^(?:ns2:|ext\.)/
+      include Namespaceable
 
       # name values that are not appended to ui/xml path
       NON_PATH_NAMES = %w[document propsHolder childHolder nameless].freeze
@@ -274,7 +276,7 @@ module CspaceConfigUntangler
       end
 
       def field_array_subpath?
-        subpath&.is_a?(Array) && field? && namespace_str?(subpath[0])
+        subpath&.is_a?(Array) && field? && namespace?(subpath[0])
       end
 
       # rubocop:disable Performance/InefficientHashSearch
@@ -294,13 +296,13 @@ module CspaceConfigUntangler
 
         case subpath.class.name
         when "String"
-          if namespace_str?
+          if namespace?(subpath)
             subpath
           else
             CCU.log.warn("FORM SUBPATH: non-namespace string: #{config}")
           end
         when "Array"
-          result = subpath.find { |val| namespace_str?(val) }
+          result = subpath.find { |val| namespace?(val) }
           if result.empty?
             CCU.log.warn("FORM SUBPATH: array with no namespace: #{config}")
           else
@@ -310,8 +312,6 @@ module CspaceConfigUntangler
           CCU.log.warn("FORM SUBPATH: unknown structure: #{config}")
         end
       end
-
-      def namespace_str?(val = subpath) = val.match?(NS_MATCHER)
 
       def get_repeats
         return "n" if field_array_subpath? && subpath[-1] == "0"
