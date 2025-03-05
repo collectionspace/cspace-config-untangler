@@ -27,7 +27,7 @@ module CspaceConfigUntangler
         @validator = validator
         @config = config
         @keys = config.keys.sort
-        @subpath = config["subpath"]
+        @subpath = get_subpath
         @parent = parent
         @ancestors = get_ancestors
         @rectype = form.rectype
@@ -154,6 +154,15 @@ module CspaceConfigUntangler
         "nameless"
       end
 
+      def get_subpath
+        return nil unless config.key?("subpath")
+
+        result = config["subpath"]
+        return nil if result.empty?
+
+        result
+      end
+
       def get_panel
         return "panel.#{rectype.name}.#{name}" if is_panel
         return parent.panel if parent
@@ -162,6 +171,7 @@ module CspaceConfigUntangler
       end
 
       def get_ns
+        return name if name.start_with?("ns2:")
         return subpath_ns if subpath_ns
         return parent.ns if parent
 
