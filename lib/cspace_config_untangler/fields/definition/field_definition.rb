@@ -12,8 +12,8 @@ module CspaceConfigUntangler
         include CCU::TrackAttributes
         attr_reader :name, :ns, :ns_for_id, :id,
           :schema_path,
-          :repeats, :in_repeating_group, :valsrctype,
-          :data_type, :value_source, :value_list,
+          :repeats, :in_repeating_group,
+          :data_type,
           :required,
           :profile
 
@@ -21,14 +21,17 @@ module CspaceConfigUntangler
         def initialize(config)
           super
           @datahash = config.hash["[config]"]
-          @valsrctype = CCU::Fields::ValueSources::TypeExtractor.call(datahash)
           set_id
           @data_type = set_datatype
-          @value_source = []
-          @value_list = []
-          set_value_sources
           @required = set_required
         end
+
+        def valsrctype = @valsrctype ||=
+          CCU::Fields::ValueSources::TypeExtractor.call(datahash)
+
+        def value_list = @value_list ||= set_value_list
+
+        def value_sources = @value_sources ||= set_value_sources
 
         def to_h
           attrs = attr_readers.map { |e| "@" + e.to_s }.map { |e| e.to_sym }
@@ -56,19 +59,18 @@ module CspaceConfigUntangler
           arr << (@repeats || "")
           arr << (@in_repeating_group || "")
           arr << (@data_type || "")
-          if @value_source
-            arr << @value_source.map(&:csv_type).compact.uniq.join(", ")
-            arr << @value_source.map(&:csv_name).compact.uniq.join(", ")
+          if value_sources
+            arr << value_sources.map(&:csv_type).compact.uniq.join(", ")
+            arr << value_sources.map(&:csv_name).compact.uniq.join(", ")
           else
             2.times { arr << "" }
           end
-          arr << (@value_list ? @value_list.join(", ") : "")
+          arr << (value_list ? value_list.join(", ") : "")
           arr
         end
 
         def inspect
-          omit = %i[@config @profile @hash @parent @datahash @name @ns_for_id
-            @value_source @value_list]
+          omit = %i[@config @profile @hash @parent @datahash @name @ns_for_id]
           attributes = instance_variables.unshift([])
             .inject do |info, attribute|
             if omit.include?(attribute)
@@ -94,23 +96,23 @@ module CspaceConfigUntangler
         end
 
         def set_value_sources
-          return unless valsrctype
+          return [] unless valsrctype
 
           sources = CCU::Fields::ValueSources::SourceExtractor.call(
             valsrctype, @datahash, @config.profile_object
-          ).reject do |source|
-            source.source_type == "authority" && !source.configured?
-          end
+          )
 
-          @value_source = sources
-          if valsrctype == "option list"
-            @value_list = @value_source.first.options
-            return
-          end
+          sources.select!(&:configured?) if valsrctype == "authority"
+          return [CCU::ValueSources::NoSource.new] if sources.empty?
 
-          return unless @value_source.empty?
+          sources
+        end
 
-          @value_source = [CCU::ValueSources::NoSource.new]
+        def set_value_list
+          return [] unless valsrctype == "option list" &&
+            value_sources.first.respond_to?(:options)
+
+          value_sources.first.options
         end
 
         def set_datatype
