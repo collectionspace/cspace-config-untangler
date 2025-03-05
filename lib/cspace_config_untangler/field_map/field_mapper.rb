@@ -6,12 +6,11 @@ module CspaceConfigUntangler
     # which corresponds to an incoming data key/column)
     class FieldMapper
       ::FieldMapper = CspaceConfigUntangler::FieldMap::FieldMapper
-      attr_reader :mappings, :source_type
+      attr_reader :mappings
       def initialize(field:, column_style: :fully_consistent)
         @field = field
         @sources = field.value_sources
         @column_style = column_style
-        @source_type = sources.first.source_type
         add_refname_source
         @fieldhash = populate_hash
         # @hash = structure_hash
@@ -22,6 +21,8 @@ module CspaceConfigUntangler
       end
 
       def hash = fieldhash
+
+      def source_type = @source_type ||= get_source_type
 
       def column_names = sources.map { |src| get_column_name(src) }
         .join("; ")
@@ -37,6 +38,13 @@ module CspaceConfigUntangler
 
       def populate_source(source)
         [source, source_hash(source)]
+      end
+
+      def get_source_type
+        return unless sources.respond_to?(:first) &&
+          sources.first.respond_to?(:source_type)
+
+        sources.first.source_type
       end
 
       def source_hash(source)
