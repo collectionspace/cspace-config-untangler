@@ -78,7 +78,7 @@ module CspaceConfigUntangler
         elsif hash[0] && hash[1].nil?
           cat = "not in #{profilenames[1]}"
           diff[cat] << hash[0]
-        elsif hash[0].value_source&.sort != hash[1].value_source&.sort
+        elsif hash[0].value_sources&.sort != hash[1].value_sources&.sort
           cat = "source differences"
           diff[cat] << hash
         elsif hash[0].ui_path != hash[1].ui_path
