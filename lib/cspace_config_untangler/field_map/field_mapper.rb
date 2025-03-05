@@ -9,7 +9,7 @@ module CspaceConfigUntangler
       attr_reader :mappings, :source_type
       def initialize(field:, column_style: :fully_consistent)
         @field = field
-        @sources = field.value_source
+        @sources = field.value_sources
         @column_style = column_style
         @source_type = sources.first.source_type
         add_refname_source
