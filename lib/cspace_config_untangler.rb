@@ -127,7 +127,7 @@ module CspaceConfigUntangler
       return value if value.is_a?(CCU::Release)
       return CCU::Release.new(value) if value
 
-      CCU::Release.new(releases.last)
+      CCU::Release.new(releases.last, switch: false)
     end
 
   setting :prev_release,
