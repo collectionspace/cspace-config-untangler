@@ -12,7 +12,7 @@ module CspaceConfigUntangler
       attr_reader :name, :label, :ns, :ns_for_id, :panel, :ui_path, :id,
         :schema_path,
         :repeats, :in_repeating_group,
-        :data_type, :value_source, :value_list,
+        :data_type, :value_sources, :value_list,
         :required, :status
       attr_accessor :profile, :rectype
 
@@ -45,10 +45,10 @@ module CspaceConfigUntangler
       end
 
       def freetext?
-        return true unless value_source
+        return true unless value_sources
 
-        value_source.length == 1 &&
-          value_source.first.name == "na"
+        value_sources.length == 1 &&
+          value_sources.first.name == "na"
       end
 
       def controlled?
@@ -57,24 +57,24 @@ module CspaceConfigUntangler
 
       def authority_controlled?
         controlled? &&
-          value_source.any? { |src| src.source_type == "authority" }
+          value_sources.any? { |src| src.source_type == "authority" }
       end
 
       def vocabulary_controlled?
         controlled? &&
-          value_source.any? { |src| src.source_type == "vocabulary" }
+          value_sources.any? { |src| src.source_type == "vocabulary" }
       end
 
       def optionlist_controlled?
         controlled? &&
-          value_source.any? { |src| src.source_type == "optionlist" }
+          value_sources.any? { |src| src.source_type == "optionlist" }
       end
 
       # @param name [String]
       def controlled_by?(name)
         return false unless controlled?
 
-        value_source.map { |src| src.name }
+        value_sources.map { |src| src.name }
           .include?(name)
       end
 
@@ -132,7 +132,7 @@ module CspaceConfigUntangler
           option_list_values: nil
         }
         row[:xml_path] = @schema_path.join(" > ") if @schema_path
-        set_value_source_for_csv(row)
+        set_value_sources_for_csv(row)
         row[:option_list_values] = @value_list.join(", ") if @value_list
         row
       end
@@ -156,18 +156,18 @@ module CspaceConfigUntangler
           data_source_name: nil,
           option_list_values: nil
         }
-        set_value_source_for_csv(row)
+        set_value_sources_for_csv(row)
         row[:option_list_values] = @value_list.join(", ") if @value_list
         row
       end
 
-      def set_value_source_for_csv(row)
-        return unless @value_source
+      def set_value_sources_for_csv(row)
+        return unless @value_sources
 
         %i[type name].each do |srcdata|
           meth = :"csv_#{srcdata}"
           target = :"data_source_#{srcdata}"
-          row[target] = @value_source.map(&meth).compact.uniq.join("; ")
+          row[target] = @value_sources.map(&meth).compact.uniq.join("; ")
         end
       end
 
@@ -192,7 +192,7 @@ module CspaceConfigUntangler
         fd = find_field_def
         if fd
           if fd.valsrctype == "authority" &&
-              fd.value_source == [CCU::ValueSources::NoSource.new]
+              fd.value_sources == [CCU::ValueSources::NoSource.new]
             controlled_by_missing_authority(fd)
             @status = :problem
           else
@@ -202,7 +202,7 @@ module CspaceConfigUntangler
           CCU.log.error("CANNOT MATCH FORM FIELD TO FIELD DEF: "\
                         "#{formfield.form.id} #{formfield.id} "\
                         "(#{__FILE__}, #{__LINE__})")
-          @value_source = [CCU::ValueSources::NoSource.new]
+          @value_sources = [CCU::ValueSources::NoSource.new]
           @status = :problem
         end
       end
@@ -262,7 +262,7 @@ module CspaceConfigUntangler
         @in_repeating_group = formfield.in_repeating_group ||
           fd.in_repeating_group
         @data_type = fd.data_type
-        @value_source = fd.value_source
+        @value_sources = fd.value_sources
         @value_list = fd.value_list
         @required = fd.required
         @status = :ok
