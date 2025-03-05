@@ -284,7 +284,7 @@ module CspaceConfigUntangler
         CCU.log.warn("No API client for #{name} configured. Disabled/"\
                      "suppressed record types not marked as such in UI config "\
                      "cannot be excluded by checking against services "\
-                     "\servicegroups DocTypes.")
+                     "\\servicegroups DocTypes.")
         return rt_objs
       end
 
