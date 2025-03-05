@@ -41,10 +41,10 @@ module CspaceConfigUntangler
           prefix = "field definition structure".upcase
           name = hash.dig("[config]", "messages", "name", "defaultMessage")
           message = if name
-            "Unexpected field defintion structure for "\
+            "Unexpected field definition structure for "\
               "#{config.signature} - #{name}"
           else
-            "Unexpected field defintion structure under "\
+            "Unexpected field definition structure under "\
               "#{config.signature}"
           end
           CCU.log.warn("#{prefix}: #{message}")
