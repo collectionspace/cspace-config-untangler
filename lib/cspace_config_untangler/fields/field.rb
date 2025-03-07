@@ -270,11 +270,13 @@ module CspaceConfigUntangler
       end
 
       def lookup_field_label
-        msgs = profile.messages
-        fieldid = "field.#{id}"
-        from_msg = msgs.dig(fieldid, "fullName") || msgs.dig(fieldid, "name")
-        return from_msg if from_msg
+        from_profile = label_from_profile_msgs
+        return from_profile if from_profile
 
+        from_field_def = label_from_field_def
+        return from_field_def if from_field_def
+
+        msgs = profile.messages
         altform = case id
         when "uoc_common.useDateHoursSpent"
           CCU.upgrade_warner.call(target_version: "next release",
@@ -302,6 +304,23 @@ module CspaceConfigUntangler
         else
           alt_fieldname_lookup(id)
         end
+      end
+
+
+      def label_from_profile_msgs
+        msgs = profile.messages
+        fieldid = "field.#{id}"
+        msgs.dig(fieldid, "fullName") || msgs.dig(fieldid, "name")
+      end
+
+      def label_from_field_def
+        return unless field_def
+
+        msgs = field_def.config.hash.dig("[config]", "messages")
+        return unless msgs
+
+        msgs.dig("fullName", "defaultMessage") ||
+          msgs.dig("name", "defaultMessage")
       end
 
       def lookup_display_name(val)
