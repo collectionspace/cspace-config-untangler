@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require_relative "../ucbable"
+
 module CspaceConfigUntangler
   module Forms
     # Logs any unknown/unhandled keys, and any unexpected values of known
@@ -11,6 +13,8 @@ module CspaceConfigUntangler
     #
     # @todo add more validations
     class PropsValidator
+      include Ucbable
+
       # Keys that may not be nil or empty if present
       CONTENT_KEYS = %w[children name props subpath].freeze
       EMPTY_KEYS = %w[key ref _owner].freeze
@@ -97,15 +101,17 @@ module CspaceConfigUntangler
 
             CCU.log.info("FORM STRUCTURE: EMPTY #{key.upcase}: "\
                          "#{props.warning_id} (#{__FILE__}, #{__LINE__}")
-            props.add_error(:"empty_#{key}")
+            props.add_warning(:"empty_#{key}")
           end
       end
 
       def check_keysigs(props)
-        return if KNOWN_KEYSIGS.include?(props.keys.sort)
+        keysig = props.keys.sort
+        return if KNOWN_KEYSIGS.include?(keysig)
+        return if namespace_wrapper_props?(props.config)
 
         CCU.log.error("FORM STRUCTURE: UNKNOWN PROPS KEYSIG: "\
-                      "#{props.keys.sort.inspect} in #{props.warning_id}. "\
+                      "#{keysig.inspect} in #{props.warning_id}. "\
                       "Add treatment handling in Forms::Props. "\
                     "(#{__FILE__}, #{__LINE__}")
         props.add_error(:unknown_keysig)
