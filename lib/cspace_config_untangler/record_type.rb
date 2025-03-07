@@ -55,27 +55,11 @@ module CspaceConfigUntangler
       service_config.object_name
     end
 
-    def field_defs
-      if @config.dig("fields", "document")
-        defs = CCU::Fields::Def::Parser.new(self, @config["fields"]["document"])
-        defs.field_defs
-      else
-        CCU.log.warn("#{profile.name} - #{name} has no field def hash")
-      end
-    end
+    def field_defs = @field_defs ||= get_field_defs
 
-    def form_fields = all_form_fields.uniq
+    def form_fields = @form_fields ||= all_form_fields.uniq
 
-    def fields
-      fields = form_fields.map { |ff| CCU::Fields::Field.new(self, ff) }
-        .select { |field| field.ok? }
-      if @structured_date_treatment == :explode
-        fields = explode_structured_date_fields(fields)
-      end
-      fields = fields.flatten
-      fields << media_uri_field if media?
-      fields
-    end
+    def fields = @fields ||= get_fields
 
     def media? = %w[media restrictedmedia].include?(name)
 
@@ -204,6 +188,26 @@ module CspaceConfigUntangler
     alias_method :inspect, :to_s
 
     private
+
+    def get_field_defs
+            if @config.dig("fields", "document")
+        defs = CCU::Fields::Def::Parser.new(self, @config["fields"]["document"])
+        defs.field_defs
+      else
+        CCU.log.warn("#{profile.name} - #{name} has no field def hash")
+      end
+    end
+
+    def get_fields
+            fields = form_fields.map { |ff| CCU::Fields::Field.new(self, ff) }
+        .select { |field| field.ok? }
+      if @structured_date_treatment == :explode
+        fields = explode_structured_date_fields(fields)
+      end
+      fields = fields.flatten
+      fields << media_uri_field if media?
+      fields
+    end
 
     def service_config
       @service_config ||= CCU::RecordTypes::ServiceConfig.new(
