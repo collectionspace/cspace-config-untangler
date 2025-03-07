@@ -6,7 +6,7 @@ RSpec.describe CCU::Forms::Props do
   subject(:props) do
     iter = CCU::Forms::IterativeFieldExtractor.new(form, formconfig)
     iter.call
-    iter.send(:allprops).find { |p| p.name == name && !p.skippable? }
+    iter.send(:allprops).find { |p| p.config["name"] == name && !p.skippable? }
   end
 
   let(:release) { "8_0" }
@@ -22,6 +22,20 @@ RSpec.describe CCU::Forms::Props do
   let(:templatename) { "default" }
   let(:form) { generator.form(templatename) }
   let(:formconfig) { form.field_config }
+
+  describe "#treatment" do
+    let(:result) { props.treatment }
+
+    context "when UCBG namespace-as-name" do
+      let(:release) {"lyr"}
+      let(:profilename) { "ucbg_3-0-0-rc-2" }
+      let(:name) {"ns2:collectionobjects_naturalhistory"}
+
+      it "returns namespace_container" do
+        expect(result).to eq(:content_free_parent)
+      end
+    end
+  end
 
   describe "#address?" do
     let(:rectypes) { ["place"] }

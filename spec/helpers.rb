@@ -25,10 +25,17 @@ module Helpers
     attr_reader :profile, :rectype
 
     def initialize(profile:, rectypes:, release: "7_0", dates: :collapse)
-      Helpers.set_profile_release(release)
+      if CCU.releases.include?(release)
+        Helpers.set_profile_release(release)
+      else
+        if release == "lyr"
+          CCU.config.configdir = File.join(CCU.datadir, "config_holder",
+                                           "lyrasis_hosted_profiles")
+        end
+      end
       CCU.config.main_profile_name = profile
       @profile = CCU::Profile.new(profile: CCU.main_profile,
-        rectypes:, structured_date_treatment: dates)
+                                  rectypes:, structured_date_treatment: dates)
       @rectype = @profile.rectypes.first
     end
 

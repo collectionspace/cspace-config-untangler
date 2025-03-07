@@ -1,9 +1,13 @@
 # frozen_string_literal: true
 
+require_relative "../../ucbable"
+
 module CspaceConfigUntangler
   module Fields
     module Definition
       class HashEntryTyper
+        include Ucbable
+
         # @param config [CCU::Fields::Definition::Config]
         def initialize(config)
           @config = config
@@ -38,6 +42,8 @@ module CspaceConfigUntangler
         end
 
         def warn(hash)
+          return if vestigial_annotation_author?(hash)
+
           prefix = "field definition structure".upcase
           name = hash.dig("[config]", "messages", "name", "defaultMessage")
           message = if name

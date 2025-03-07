@@ -1,11 +1,13 @@
 # frozen_string_literal: true
 
+require_relative "../ucbable"
 require_relative "iterative_field_extractor"
 
 module CspaceConfigUntangler
   module Forms
     class Form
       ::CCU::Form = CspaceConfigUntangler::Forms::Form
+      include Ucbable
       attr_reader :rectype, :profile, :name, :config, :fields
 
       # @param rectypeobj [CCU:RecordType]
@@ -35,7 +37,7 @@ module CspaceConfigUntangler
 
       def disabled?
         disabled = config.dig("disabled")
-        disabled ? true : false
+        disabled ? true : force_disabled?
       end
 
       def enabled? = !disabled?
@@ -53,6 +55,10 @@ module CspaceConfigUntangler
       private
 
       attr_reader :iterator
+
+      def force_disabled?
+        ucb_wrongly_inherited_form?(self) || false
+      end
 
       # @todo move to Props.skippable?
       def ignored?(field)

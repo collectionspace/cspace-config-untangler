@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require_relative "../namespaceable"
+require_relative "../ucbable"
 
 module CspaceConfigUntangler
   module Forms
@@ -10,12 +11,14 @@ module CspaceConfigUntangler
     # we can work with them
     class Props
       include Namespaceable
+      include Ucbable
 
       # name values that are not appended to ui/xml path
-      NON_PATH_NAMES = %w[document propsHolder childHolder nameless].freeze
+      NON_PATH_NAMES = %w[document propsHolder childHolder nameless
+                         namespaceWrapper].freeze
 
       attr_reader :form, :config, :parent, :ancestors,
-        :keys, :rectype, :profile, :name, :is_panel, :panel,
+        :keys, :rectype, :profile, :name, :subpath, :is_panel, :panel,
         :ns, :ns_for_id, :ui_path,
         :repeats, :in_repeating_group,
         :warnings, :errors
@@ -138,7 +141,7 @@ module CspaceConfigUntangler
 
       private
 
-      attr_reader :subpath, :validator, :validated
+      attr_reader :validator, :validated
 
       def get_ancestors
         if parent
@@ -149,6 +152,7 @@ module CspaceConfigUntangler
       end
 
       def get_name
+        return "namespaceWrapper" if namespace_wrapper_props?(config)
         return config["name"] if config.key?("name")
         return "propsHolder" if config.key?("props")
         return "childHolder" if config.key?("children")
@@ -173,7 +177,7 @@ module CspaceConfigUntangler
       end
 
       def get_ns
-        return name if name.start_with?("ns2:")
+        return config["name"] if namespace_wrapper_props?(config)
         return subpath_ns if subpath_ns
         return parent.ns if parent
 
@@ -226,11 +230,12 @@ module CspaceConfigUntangler
       end
 
       def content_free_has_children
+        return true if name == "namespaceWrapper"
+
         keysigs = [
           %w[children],
           %w[children style]
         ]
-
         true if keysigs.include?(keys)
       end
 

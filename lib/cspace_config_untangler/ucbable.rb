@@ -1,0 +1,47 @@
+# frozen_string_literal: true
+
+require_relative "namespaceable"
+
+# Mix in module with logic for dealing with non-standard patterns in UCB
+#   profiles
+module CspaceConfigUntangler
+  module Ucbable
+    include Namespaceable
+
+    # Reported in DRYD-1709
+    # @param config [Hash] form props object
+    def namespace_wrapper_props?(config)
+      config.key?("name") &&
+        namespace?(config["name"]) &&
+        config.key?("subpath") &&
+        config["subpath"].empty? &&
+        config.key?("children")
+    end
+
+    # Reported in DRYD-1708
+    # @param fieldconfig [Hash] field definition object
+    def vestigial_annotation_author?(fieldconfig)
+      config.ns.literal == "ns2:collectionobjects_naturalhistory" &&
+        fieldconfig.keys == ["annotationGroup"]
+    end
+
+    # Reported in DRYD-1710
+    # @param form [CCU::Forms::Form]
+    def ucb_wrongly_inherited_form?(form)
+      case form.profile.name
+      when /^ucbg/
+        %w[public timebased].include?(form.name)
+      else
+        false
+      end
+    end
+
+    def ucb_second_adv_search_ns?(rectype)
+      rectype.profile.name.start_with?("ucbg") && rectype.name == "loanout"
+    end
+
+    def ucb_third_adv_search_ns?(rectype)
+      rectype.profile.name.start_with?("ucbg") && rectype.name == "media"
+    end
+  end
+end
