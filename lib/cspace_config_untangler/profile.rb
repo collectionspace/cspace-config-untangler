@@ -12,8 +12,6 @@ module CspaceConfigUntangler
     attr_reader :config
     # @return [Array<String>] names of extensions defined in the profile
     attr_reader :extensions
-    attr_reader :field_defs
-    attr_reader :form_fields
     # @return [Hash] lookup by panel, inputTable, grouping, or field id
     # @todo refactor to Message objects
     attr_reader :messages
@@ -45,10 +43,12 @@ module CspaceConfigUntangler
       if @structured_date_treatment == :explode
         CCU::StructuredDateMessageGetter.new(self)
       end
-      get_field_defs
       apply_overrides
-      get_form_fields
     end
+
+    def field_defs = @field_defs ||= get_field_defs
+
+    def form_fields = @form_fields ||= get_form_fields
 
     def column_style
       column_name_style(basename, version)
@@ -204,17 +204,14 @@ module CspaceConfigUntangler
         end
       end
 
-      @field_defs = h
+      h
     end
 
-    def get_form_fields
-      fields = @rectypes.map { |rt| rt.form_fields }
-      @form_fields = fields.flatten
-    end
+    def get_form_fields = rectypes.map(&:form_fields).flatten
 
     def form_fields_by_id
       h = {}
-      @form_fields.each { |ff| h[ff.id] = ff }
+      form_fields.each { |ff| h[ff.id] = ff }
       h
     end
 
