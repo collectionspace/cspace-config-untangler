@@ -50,6 +50,19 @@ RSpec.describe CCU::Forms::Form do
         expect(result).to be true
       end
     end
+
+    context "when UCBG profile" do
+      let(:release) {"lyr"}
+      let(:profilename) { "ucbg_3-0-0-rc-2" }
+
+      context "when public browser template" do
+        let(:templatename) { "public" }
+
+        it "returns false" do
+          expect(result).to be false
+        end
+      end
+    end
   end
 
   describe "#id" do

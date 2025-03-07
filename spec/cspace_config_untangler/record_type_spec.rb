@@ -170,6 +170,18 @@ RSpec.describe CCU::RecordType do
         end
       end
     end
+
+    context "when UCBG profile" do
+      let(:release) {"lyr"}
+      let(:profilename) { "ucbg_3-0-0-rc-2" }
+
+      context "when loanout" do
+        let(:rectypes) { ["loanout"] }
+        it "returns correct namespace" do
+          expect(result).to eq("ns2:loansout_common")
+        end
+      end
+    end
   end
 
   describe "#mappings" do

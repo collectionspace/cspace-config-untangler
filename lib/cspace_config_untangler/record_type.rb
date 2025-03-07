@@ -3,10 +3,12 @@
 require_relative "fields/definition/parser"
 require_relative "iterable"
 require_relative "record_types/service_config"
+require_relative "ucbable"
 
 module CspaceConfigUntangler
   class RecordType
     include CCU::Iterable
+    include Ucbable
 
     # Names of record types we don't interact with as first-class data-layer
     # entities, which are thus ignored by this application.
@@ -105,7 +107,7 @@ module CspaceConfigUntangler
       checkhash = {}
       mappings = fields.map do |f|
         FieldMapper.new(field: f,
-          column_style: profile.column_style).mappings
+                        column_style: profile.column_style).mappings
       end.flatten
 
       # ensure unique datacolumn values for templates and mapper
@@ -383,13 +385,24 @@ module CspaceConfigUntangler
     def get_namespace
       return "ns2:contacts_common" if name == "contact"
 
-      value_idx = if profile.basename == "botgarden" && name == "loanout"
-        1
-      else
+      value_idx = if second_adv_search_ns?
+                    1
+                  elsif third_adv_search_ns?
+                    2
+                  else
         0
       end
       config.dig("advancedSearch", "value", value_idx, "path")&.split("/")
         &.first
+    end
+
+    def second_adv_search_ns?
+      profile.basename == "botgarden" && name == "loanout" ||
+        ucb_second_adv_search_ns?(self)
+    end
+
+    def third_adv_search_ns?
+      ucb_third_adv_search_ns?(self)
     end
   end
 end
