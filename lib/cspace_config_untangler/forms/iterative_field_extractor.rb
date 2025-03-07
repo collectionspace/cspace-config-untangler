@@ -35,6 +35,8 @@ module CspaceConfigUntangler
         when :content_bearing_parent
           process_children(props, :self)
         end
+
+        form.fields
       end
 
       def to_s
