@@ -27,15 +27,13 @@ module Helpers
     def initialize(profile:, rectypes:, release: "7_0", dates: :collapse)
       if CCU.releases.include?(release)
         Helpers.set_profile_release(release)
-      else
-        if release == "lyr"
-          CCU.config.configdir = File.join(CCU.datadir, "config_holder",
-                                           "lyrasis_hosted_profiles")
-        end
+      elsif release == "lyr"
+        CCU.config.configdir = File.join(CCU.datadir, "config_holder",
+          "lyrasis_hosted_profiles")
       end
       CCU.config.main_profile_name = profile
       @profile = CCU::Profile.new(profile: CCU.main_profile,
-                                  rectypes:, structured_date_treatment: dates)
+        rectypes:, structured_date_treatment: dates)
       @rectype = @profile.rectypes.first
     end
 
