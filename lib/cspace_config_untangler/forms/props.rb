@@ -15,7 +15,7 @@ module CspaceConfigUntangler
 
       # name values that are not appended to ui/xml path
       NON_PATH_NAMES = %w[document propsHolder childHolder nameless
-                         namespaceWrapper].freeze
+        namespaceWrapper].freeze
 
       attr_reader :form, :config, :parent, :ancestors,
         :keys, :rectype, :profile, :name, :subpath, :is_panel, :panel,

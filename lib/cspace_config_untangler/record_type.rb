@@ -107,7 +107,7 @@ module CspaceConfigUntangler
       checkhash = {}
       mappings = fields.map do |f|
         FieldMapper.new(field: f,
-                        column_style: profile.column_style).mappings
+          column_style: profile.column_style).mappings
       end.flatten
 
       # ensure unique datacolumn values for templates and mapper
@@ -192,7 +192,7 @@ module CspaceConfigUntangler
     private
 
     def get_field_defs
-            if @config.dig("fields", "document")
+      if @config.dig("fields", "document")
         defs = CCU::Fields::Def::Parser.new(self, @config["fields"]["document"])
         defs.field_defs
       else
@@ -201,7 +201,7 @@ module CspaceConfigUntangler
     end
 
     def get_fields
-            fields = form_fields.map { |ff| CCU::Fields::Field.new(self, ff) }
+      fields = form_fields.map { |ff| CCU::Fields::Field.new(self, ff) }
         .select { |field| field.ok? }
       if @structured_date_treatment == :explode
         fields = explode_structured_date_fields(fields)
@@ -386,10 +386,10 @@ module CspaceConfigUntangler
       return "ns2:contacts_common" if name == "contact"
 
       value_idx = if second_adv_search_ns?
-                    1
-                  elsif third_adv_search_ns?
-                    2
-                  else
+        1
+      elsif third_adv_search_ns?
+        2
+      else
         0
       end
       config.dig("advancedSearch", "value", value_idx, "path")&.split("/")

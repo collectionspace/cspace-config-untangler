@@ -27,7 +27,9 @@ module CspaceConfigUntangler
         end
 
         def valsrctype = @valsrctype ||=
-          CCU::Fields::ValueSources::TypeExtractor.call(datahash)
+                           CCU::Fields::ValueSources::TypeExtractor.call(
+                             datahash
+                           )
 
         def value_list = @value_list ||= set_value_list
 

@@ -52,7 +52,7 @@ RSpec.describe CCU::Forms::Form do
     end
 
     context "when UCBG profile" do
-      let(:release) {"lyr"}
+      let(:release) { "lyr" }
       let(:profilename) { "ucbg_3-0-0-rc-2" }
 
       context "when public browser template" do
