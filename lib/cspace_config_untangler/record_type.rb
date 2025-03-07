@@ -214,7 +214,10 @@ module CspaceConfigUntangler
     # @todo create a public method grouping on id and comparing fields
     #   that appear in multiple forms, to see if any are defined
     #   differently across forms
-    def all_form_fields = forms.values.map(&:fields).flatten
+    def all_form_fields = forms.values
+      .select(&:enabled?)
+      .map { |f| f.extract_fields }
+      .flatten
 
     # sets up "faux-required" fields for record types that do not have
     #   any required fields some unique ID field is required for batch

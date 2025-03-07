@@ -20,8 +20,9 @@ module CspaceConfigUntangler
 
         # CCU::Forms::Properties.new(self, field_config)
         @iterator = CCU::Forms::IterativeFieldExtractor.new(self, field_config)
-        iterator.call
       end
+
+      def extract_fields = iterator.call
 
       def field_config = config["template"]["props"]
 
