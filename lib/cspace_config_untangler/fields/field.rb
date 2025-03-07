@@ -283,15 +283,15 @@ module CspaceConfigUntangler
 
         msgs = profile.messages
         altform = case id
-                  when "uoc_common.useDateHoursSpent"
-                    CCU.upgrade_warner.call(target_version: "next release",
-                                            issue: "DRYD-1269")
-                    "field.uoc_common.hoursSpent"
-                  when "collectionobjects_common.compressionStandard"
-                    CCU.upgrade_warner.call(target_version: "next release",
-                                            issue: "DRYD-1270")
-                    "field.collectionobjects_common.compressionstandard"
-                  end
+        when "uoc_common.useDateHoursSpent"
+          CCU.upgrade_warner.call(target_version: "next release",
+            issue: "DRYD-1269")
+          "field.uoc_common.hoursSpent"
+        when "collectionobjects_common.compressionStandard"
+          CCU.upgrade_warner.call(target_version: "next release",
+            issue: "DRYD-1270")
+          "field.collectionobjects_common.compressionstandard"
+        end
         from_msg = msgs.dig(altform, "fullName") || msgs.dig(altform, "name")
         return from_msg if from_msg
 
