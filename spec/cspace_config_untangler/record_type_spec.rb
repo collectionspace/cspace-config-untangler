@@ -6,7 +6,7 @@ RSpec.describe CCU::RecordType do
   let(:release) { "7_0" }
   let(:generator) do
     Helpers::SetupGenerator.new(profile: profilename, rectypes: rectypes,
-                                release: release)
+      release: release)
   end
   let(:profilename) { "core" }
   let(:rectypes) { %w[collectionobject] }

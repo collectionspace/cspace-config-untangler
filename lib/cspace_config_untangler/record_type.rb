@@ -116,10 +116,10 @@ module CspaceConfigUntangler
 
         if checkhash.key?(mapping.datacolumn)
           add = if mapping.xpath.empty?
-                  mapping.namespace.split("_").last
-                else
-                  mapping.xpath.last
-                end
+            mapping.namespace.split("_").last
+          else
+            mapping.xpath.last
+          end
           mapping.datacolumn = "#{add}_#{mapping.datacolumn}"
         else
           checkhash[mapping.datacolumn] = nil
