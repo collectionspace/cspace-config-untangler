@@ -306,7 +306,6 @@ module CspaceConfigUntangler
         end
       end
 
-
       def label_from_profile_msgs
         msgs = profile.messages
         fieldid = "field.#{id}"

@@ -27,9 +27,9 @@ RSpec.describe CCU::Forms::Props do
     let(:result) { props.treatment }
 
     context "when UCBG namespace-as-name" do
-      let(:release) {"lyr"}
+      let(:release) { "lyr" }
       let(:profilename) { "ucbg_3-0-0-rc-2" }
-      let(:name) {"ns2:collectionobjects_naturalhistory"}
+      let(:name) { "ns2:collectionobjects_naturalhistory" }
 
       it "returns namespace_container" do
         expect(result).to eq(:content_free_parent)
