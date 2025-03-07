@@ -96,6 +96,8 @@ module CspaceConfigUntangler
 
       private
 
+      def field_def = @field_def ||= find_field_def
+
       def formatted_ui_path(orig)
         return [] unless orig
         return [] if orig.empty?
@@ -189,14 +191,13 @@ module CspaceConfigUntangler
       end
 
       def merge_field_defs(formfield)
-        fd = find_field_def
-        if fd
-          if fd.valsrctype == "authority" &&
-              fd.value_sources == [CCU::ValueSources::NoSource.new]
-            controlled_by_missing_authority(fd)
+        if field_def
+          if field_def.valsrctype == "authority" &&
+              field_def.value_sources == [CCU::ValueSources::NoSource.new]
+            controlled_by_missing_authority
             @status = :problem
           else
-            merge_from_fd(formfield, fd)
+            merge_from_field_def(formfield)
           end
         else
           CCU.log.error("CANNOT MATCH FORM FIELD TO FIELD DEF: "\
@@ -207,7 +208,7 @@ module CspaceConfigUntangler
         end
       end
 
-      def controlled_by_missing_authority(field_def)
+      def controlled_by_missing_authority
         # Don't log warnings about known and reported issues
         if profile.name.start_with?("materials") &&
             rectype.name == "citation" &&
@@ -256,15 +257,15 @@ module CspaceConfigUntangler
         end
       end
 
-      def merge_from_fd(formfield, fd)
-        @schema_path = fd.schema_path
-        @repeats = formfield.repeats || fd.repeats
+      def merge_from_field_def(formfield)
+        @schema_path = field_def.schema_path
+        @repeats = formfield.repeats || field_def.repeats
         @in_repeating_group = formfield.in_repeating_group ||
-          fd.in_repeating_group
-        @data_type = fd.data_type
-        @value_sources = fd.value_sources
-        @value_list = fd.value_list
-        @required = fd.required
+          field_def.in_repeating_group
+        @data_type = field_def.data_type
+        @value_sources = field_def.value_sources
+        @value_list = field_def.value_list
+        @required = field_def.required
         @status = :ok
       end
 
