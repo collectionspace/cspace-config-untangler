@@ -222,7 +222,7 @@ module CspaceConfigUntangler
     #   differently across forms
     def all_form_fields = forms.values
       .select(&:enabled?)
-      .map { |f| f.extract_fields }
+      .map { |f| f.fields }
       .flatten
 
     # sets up "faux-required" fields for record types that do not have

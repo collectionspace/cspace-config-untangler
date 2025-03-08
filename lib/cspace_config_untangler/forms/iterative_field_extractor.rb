@@ -36,7 +36,7 @@ module CspaceConfigUntangler
           process_children(props, :self)
         end
 
-        form.fields
+        nil
       end
 
       def to_s
@@ -64,6 +64,7 @@ module CspaceConfigUntangler
 
       def process_subrecord(props)
         subrec = CCU::Forms::Subrecord.new(props.name, form, validator, props)
+        subrec.extract_messages
         process_children(subrec, :self)
       end
 

@@ -36,6 +36,11 @@ module CspaceConfigUntangler
         subrec.dig("messages", "panel", config["name"], "id")
       end
 
+      def extract_messages
+        form.messages.add(subrec["messages"]) if subrec.key?("messages")
+        form.messages.add(subrecform["messages"]) if subrecform.key?("messages")
+      end
+
       private
 
       attr_reader :subrecname, :subrec, :subrecform
