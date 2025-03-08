@@ -22,6 +22,10 @@ module CspaceConfigUntangler
 
     def element_type = @element_type ||= set_element_type
 
+    def inspect
+      %(#<#{self.class}:#{object_id} id: #{id}>)
+    end
+
     private
 
     attr_reader :config, :parent
