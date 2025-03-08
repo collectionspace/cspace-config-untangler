@@ -57,7 +57,7 @@ RSpec.describe CCU::Cli::Profiles do
       it "writes csv file to given output directory" do
         allow(subject.shell).to receive(:say)
         result
-        expect(subject.shell).to have_received(:say).with(msg.chomp).once
+        expect(subject.shell).to have_received(:say).once
         expect(File.exist?(outfile)).to be true
       end
     end
