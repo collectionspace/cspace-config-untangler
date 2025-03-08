@@ -109,7 +109,7 @@ module CspaceConfigUntangler
         true if name == "addrGroupList"
       end
 
-      def blob? = name == "blob" && profile.extensions.include?(name)
+      def blob? = rectype.name.end_with?("media") && name == "file"
 
       def children? = config.key?("children")
 

@@ -14,10 +14,9 @@ module CspaceConfigUntangler
       # @param validator [CCU::Forms::PropsValidator]
       # @param parent [nil, CCU::Forms::Props]
       def initialize(name, form, validator, parent = nil)
-        @subrecname = name
-        @validator = validator
-        @subrec = form.profile.config.dig("recordTypes", name)
-        @subrecform = subrec.dig("forms", FORM_LOOKUP[name])
+        @subrecname = (name == "contact") ? name : "blob"
+        @subrec = form.profile.config.dig("recordTypes", subrecname)
+        @subrecform = subrec.dig("forms", FORM_LOOKUP[subrecname])
         @config = subrecform.dig("template", "props", "children", "props")
 
         super(form, validator, @config, parent)
