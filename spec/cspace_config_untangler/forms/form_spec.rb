@@ -73,4 +73,19 @@ RSpec.describe CCU::Forms::Form do
       expect(result).to eq("anthro_8-0-0 collectionobject inventory")
     end
   end
+
+  describe "#messages" do
+    let(:rectypes) { ["person"] }
+    let(:templatename) { "default" }
+    let(:result) { form.messages }
+
+    it "returns as expected" do
+      expected = ["form.contact.default.name",
+        "form.person.default.name",
+        "panel.contact.info",
+        "record.contact.name",
+        "record.contact.collectionName"].sort
+      expect(result.ids).to eq(expected)
+    end
+  end
 end
