@@ -1,0 +1,855 @@
+{
+  "config": {
+    "profile_basename": "anthro",
+    "version": "9.0.0",
+    "recordtype": "summarydocumentation",
+    "document_name": "summarydocumentations",
+    "service_name": "SummaryDocumentation",
+    "service_path": "summarydocumentations",
+    "service_type": "procedure",
+    "object_name": "SummaryDocumentation",
+    "ns_uri": {
+      "summarydocumentations_common": "http://collectionspace.org/services/summarydocumentation"
+    },
+    "identifier_field": "documentationNumber",
+    "search_field": "documentationNumber"
+  },
+  "docstructure": {
+    "summarydocumentations_common": {
+      "titles": {},
+      "types": {},
+      "consultationNotes": {},
+      "treatmentNotes": {},
+      "partiesInvolvedGroupList": {
+        "partiesInvolvedGroup": {}
+      },
+      "affiliationGroupList": {
+        "affiliationGroup": {
+          "determinedByList": {}
+        }
+      },
+      "statusGroupList": {
+        "statusGroup": {}
+      },
+      "geographicPlaceGroupList": {
+        "geographicPlaceGroup": {}
+      },
+      "culturalGroupList": {
+        "culturalGroup": {}
+      },
+      "timePeriodGroupList": {
+        "timePeriodGroup": {}
+      },
+      "archaeologicalSiteGroupList": {
+        "archaeologicalSiteGroup": {}
+      }
+    }
+  },
+  "mappings": [
+    {
+      "fieldname": "documentationNumber",
+      "transforms": {},
+      "source_type": "na",
+      "source_name": "na",
+      "namespace": "summarydocumentations_common",
+      "xpath": [],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [],
+      "datacolumn": "documentationNumber",
+      "required": "y"
+    },
+    {
+      "fieldname": "title",
+      "transforms": {},
+      "source_type": "na",
+      "source_name": "na",
+      "namespace": "summarydocumentations_common",
+      "xpath": [
+        "titles"
+      ],
+      "data_type": "string",
+      "repeats": "y",
+      "in_repeating_group": "n",
+      "opt_list_values": [],
+      "datacolumn": "title",
+      "required": "n"
+    },
+    {
+      "fieldname": "type",
+      "transforms": {
+        "vocabulary": "summarydocumentationtype"
+      },
+      "source_type": "vocabulary",
+      "source_name": "summarydocumentationtype",
+      "namespace": "summarydocumentations_common",
+      "xpath": [
+        "types"
+      ],
+      "data_type": "string",
+      "repeats": "y",
+      "in_repeating_group": "n",
+      "opt_list_values": [],
+      "datacolumn": "type",
+      "required": "n"
+    },
+    {
+      "fieldname": "type",
+      "transforms": {},
+      "source_type": "refname",
+      "source_name": "vocabulary refname",
+      "namespace": "summarydocumentations_common",
+      "xpath": [
+        "types"
+      ],
+      "data_type": "csrefname",
+      "repeats": "y",
+      "in_repeating_group": "n",
+      "opt_list_values": [],
+      "datacolumn": "typeRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "originationDate",
+      "transforms": {},
+      "source_type": "na",
+      "source_name": "na",
+      "namespace": "summarydocumentations_common",
+      "xpath": [],
+      "data_type": "date",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [],
+      "datacolumn": "originationDate",
+      "required": "n"
+    },
+    {
+      "fieldname": "consultationNote",
+      "transforms": {},
+      "source_type": "na",
+      "source_name": "na",
+      "namespace": "summarydocumentations_common",
+      "xpath": [
+        "consultationNotes"
+      ],
+      "data_type": "string",
+      "repeats": "y",
+      "in_repeating_group": "n",
+      "opt_list_values": [],
+      "datacolumn": "consultationNote",
+      "required": "n"
+    },
+    {
+      "fieldname": "treatmentNote",
+      "transforms": {},
+      "source_type": "na",
+      "source_name": "na",
+      "namespace": "summarydocumentations_common",
+      "xpath": [
+        "treatmentNotes"
+      ],
+      "data_type": "string",
+      "repeats": "y",
+      "in_repeating_group": "n",
+      "opt_list_values": [],
+      "datacolumn": "treatmentNote",
+      "required": "n"
+    },
+    {
+      "fieldname": "involvedParty",
+      "transforms": {
+        "authority": [
+          "personauthorities",
+          "person"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "person/local",
+      "namespace": "summarydocumentations_common",
+      "xpath": [
+        "partiesInvolvedGroupList",
+        "partiesInvolvedGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "involvedPartyPersonLocal",
+      "required": "n"
+    },
+    {
+      "fieldname": "involvedParty",
+      "transforms": {},
+      "source_type": "refname",
+      "source_name": "authority refname",
+      "namespace": "summarydocumentations_common",
+      "xpath": [
+        "partiesInvolvedGroupList",
+        "partiesInvolvedGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "involvedPartyRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "involvedOnBehalfOf",
+      "transforms": {
+        "authority": [
+          "orgauthorities",
+          "organization"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "organization/local",
+      "namespace": "summarydocumentations_common",
+      "xpath": [
+        "partiesInvolvedGroupList",
+        "partiesInvolvedGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "involvedOnBehalfOfOrganizationLocal",
+      "required": "n"
+    },
+    {
+      "fieldname": "involvedOnBehalfOf",
+      "transforms": {},
+      "source_type": "refname",
+      "source_name": "authority refname",
+      "namespace": "summarydocumentations_common",
+      "xpath": [
+        "partiesInvolvedGroupList",
+        "partiesInvolvedGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "involvedOnBehalfOfRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "involvedRole",
+      "transforms": {
+        "vocabulary": "nagprainvolvedrole"
+      },
+      "source_type": "vocabulary",
+      "source_name": "nagprainvolvedrole",
+      "namespace": "summarydocumentations_common",
+      "xpath": [
+        "partiesInvolvedGroupList",
+        "partiesInvolvedGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "involvedRole",
+      "required": "n"
+    },
+    {
+      "fieldname": "involvedRole",
+      "transforms": {},
+      "source_type": "refname",
+      "source_name": "vocabulary refname",
+      "namespace": "summarydocumentations_common",
+      "xpath": [
+        "partiesInvolvedGroupList",
+        "partiesInvolvedGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "involvedRoleRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "tribeOrNation",
+      "transforms": {
+        "authority": [
+          "orgauthorities",
+          "organization"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "organization/local",
+      "namespace": "summarydocumentations_common",
+      "xpath": [
+        "affiliationGroupList",
+        "affiliationGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "tribeOrNationOrganizationLocal",
+      "required": "n"
+    },
+    {
+      "fieldname": "tribeOrNation",
+      "transforms": {},
+      "source_type": "refname",
+      "source_name": "authority refname",
+      "namespace": "summarydocumentations_common",
+      "xpath": [
+        "affiliationGroupList",
+        "affiliationGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "tribeOrNationRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "includeInNotice",
+      "transforms": {
+        "vocabulary": "nagpranotice"
+      },
+      "source_type": "vocabulary",
+      "source_name": "nagpranotice",
+      "namespace": "summarydocumentations_common",
+      "xpath": [
+        "affiliationGroupList",
+        "affiliationGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "includeInNotice",
+      "required": "n"
+    },
+    {
+      "fieldname": "includeInNotice",
+      "transforms": {},
+      "source_type": "refname",
+      "source_name": "vocabulary refname",
+      "namespace": "summarydocumentations_common",
+      "xpath": [
+        "affiliationGroupList",
+        "affiliationGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "includeInNoticeRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "determinedBy",
+      "transforms": {
+        "authority": [
+          "personauthorities",
+          "person"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "person/local",
+      "namespace": "summarydocumentations_common",
+      "xpath": [
+        "affiliationGroupList",
+        "affiliationGroup",
+        "determinedByList"
+      ],
+      "data_type": "string",
+      "repeats": "y",
+      "in_repeating_group": "as part of larger repeating group",
+      "opt_list_values": [],
+      "datacolumn": "determinedByPersonLocal",
+      "required": "n"
+    },
+    {
+      "fieldname": "determinedBy",
+      "transforms": {
+        "authority": [
+          "orgauthorities",
+          "organization"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "organization/local",
+      "namespace": "summarydocumentations_common",
+      "xpath": [
+        "affiliationGroupList",
+        "affiliationGroup",
+        "determinedByList"
+      ],
+      "data_type": "string",
+      "repeats": "y",
+      "in_repeating_group": "as part of larger repeating group",
+      "opt_list_values": [],
+      "datacolumn": "determinedByOrganizationLocal",
+      "required": "n"
+    },
+    {
+      "fieldname": "determinedBy",
+      "transforms": {},
+      "source_type": "refname",
+      "source_name": "authority refname",
+      "namespace": "summarydocumentations_common",
+      "xpath": [
+        "affiliationGroupList",
+        "affiliationGroup",
+        "determinedByList"
+      ],
+      "data_type": "csrefname",
+      "repeats": "y",
+      "in_repeating_group": "as part of larger repeating group",
+      "opt_list_values": [],
+      "datacolumn": "determinedByRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "determinationDate",
+      "transforms": {},
+      "source_type": "na",
+      "source_name": "na",
+      "namespace": "summarydocumentations_common",
+      "xpath": [
+        "affiliationGroupList",
+        "affiliationGroup"
+      ],
+      "data_type": "date",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "determinationDate",
+      "required": "n"
+    },
+    {
+      "fieldname": "basisOfDetermination",
+      "transforms": {},
+      "source_type": "na",
+      "source_name": "na",
+      "namespace": "summarydocumentations_common",
+      "xpath": [
+        "affiliationGroupList",
+        "affiliationGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "basisOfDetermination",
+      "required": "n"
+    },
+    {
+      "fieldname": "determinationNote",
+      "transforms": {},
+      "source_type": "na",
+      "source_name": "na",
+      "namespace": "summarydocumentations_common",
+      "xpath": [
+        "affiliationGroupList",
+        "affiliationGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "determinationNote",
+      "required": "n"
+    },
+    {
+      "fieldname": "statusGroupType",
+      "transforms": {
+        "vocabulary": "documentationgroup"
+      },
+      "source_type": "vocabulary",
+      "source_name": "documentationgroup",
+      "namespace": "summarydocumentations_common",
+      "xpath": [
+        "statusGroupList",
+        "statusGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "statusGroupType",
+      "required": "n"
+    },
+    {
+      "fieldname": "statusGroupType",
+      "transforms": {},
+      "source_type": "refname",
+      "source_name": "vocabulary refname",
+      "namespace": "summarydocumentations_common",
+      "xpath": [
+        "statusGroupList",
+        "statusGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "statusGroupTypeRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "statusIndividual",
+      "transforms": {
+        "authority": [
+          "personauthorities",
+          "person"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "person/local",
+      "namespace": "summarydocumentations_common",
+      "xpath": [
+        "statusGroupList",
+        "statusGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "statusIndividualPersonLocal",
+      "required": "n"
+    },
+    {
+      "fieldname": "statusIndividual",
+      "transforms": {},
+      "source_type": "refname",
+      "source_name": "authority refname",
+      "namespace": "summarydocumentations_common",
+      "xpath": [
+        "statusGroupList",
+        "statusGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "statusIndividualRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "status",
+      "transforms": {
+        "vocabulary": "nagpradocumentationstatus"
+      },
+      "source_type": "vocabulary",
+      "source_name": "nagpradocumentationstatus",
+      "namespace": "summarydocumentations_common",
+      "xpath": [
+        "statusGroupList",
+        "statusGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "status",
+      "required": "n"
+    },
+    {
+      "fieldname": "status",
+      "transforms": {},
+      "source_type": "refname",
+      "source_name": "vocabulary refname",
+      "namespace": "summarydocumentations_common",
+      "xpath": [
+        "statusGroupList",
+        "statusGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "statusRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "statusDate",
+      "transforms": {},
+      "source_type": "na",
+      "source_name": "na",
+      "namespace": "summarydocumentations_common",
+      "xpath": [
+        "statusGroupList",
+        "statusGroup"
+      ],
+      "data_type": "date",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "statusDate",
+      "required": "n"
+    },
+    {
+      "fieldname": "statusNote",
+      "transforms": {},
+      "source_type": "na",
+      "source_name": "na",
+      "namespace": "summarydocumentations_common",
+      "xpath": [
+        "statusGroupList",
+        "statusGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "statusNote",
+      "required": "n"
+    },
+    {
+      "fieldname": "geographicPlace",
+      "transforms": {
+        "authority": [
+          "placeauthorities",
+          "place"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "place/local",
+      "namespace": "summarydocumentations_common",
+      "xpath": [
+        "geographicPlaceGroupList",
+        "geographicPlaceGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "geographicPlacePlaceLocal",
+      "required": "n"
+    },
+    {
+      "fieldname": "geographicPlace",
+      "transforms": {},
+      "source_type": "refname",
+      "source_name": "authority refname",
+      "namespace": "summarydocumentations_common",
+      "xpath": [
+        "geographicPlaceGroupList",
+        "geographicPlaceGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "geographicPlaceRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "geographicPlaceNote",
+      "transforms": {},
+      "source_type": "na",
+      "source_name": "na",
+      "namespace": "summarydocumentations_common",
+      "xpath": [
+        "geographicPlaceGroupList",
+        "geographicPlaceGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "geographicPlaceNote",
+      "required": "n"
+    },
+    {
+      "fieldname": "culture",
+      "transforms": {
+        "authority": [
+          "conceptauthorities",
+          "ethculture"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "concept/ethculture",
+      "namespace": "summarydocumentations_common",
+      "xpath": [
+        "culturalGroupList",
+        "culturalGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "cultureConceptEthculture",
+      "required": "n"
+    },
+    {
+      "fieldname": "culture",
+      "transforms": {
+        "authority": [
+          "conceptauthorities",
+          "archculture"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "concept/archculture",
+      "namespace": "summarydocumentations_common",
+      "xpath": [
+        "culturalGroupList",
+        "culturalGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "cultureConceptArchculture",
+      "required": "n"
+    },
+    {
+      "fieldname": "culture",
+      "transforms": {},
+      "source_type": "refname",
+      "source_name": "authority refname",
+      "namespace": "summarydocumentations_common",
+      "xpath": [
+        "culturalGroupList",
+        "culturalGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "cultureRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "cultureNote",
+      "transforms": {},
+      "source_type": "na",
+      "source_name": "na",
+      "namespace": "summarydocumentations_common",
+      "xpath": [
+        "culturalGroupList",
+        "culturalGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "cultureNote",
+      "required": "n"
+    },
+    {
+      "fieldname": "timePeriod",
+      "transforms": {
+        "authority": [
+          "chronologyauthorities",
+          "era"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "chronology/era",
+      "namespace": "summarydocumentations_common",
+      "xpath": [
+        "timePeriodGroupList",
+        "timePeriodGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "timePeriodChronologyEra",
+      "required": "n"
+    },
+    {
+      "fieldname": "timePeriod",
+      "transforms": {},
+      "source_type": "refname",
+      "source_name": "authority refname",
+      "namespace": "summarydocumentations_common",
+      "xpath": [
+        "timePeriodGroupList",
+        "timePeriodGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "timePeriodRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "timePeriodNote",
+      "transforms": {},
+      "source_type": "na",
+      "source_name": "na",
+      "namespace": "summarydocumentations_common",
+      "xpath": [
+        "timePeriodGroupList",
+        "timePeriodGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "timePeriodNote",
+      "required": "n"
+    },
+    {
+      "fieldname": "archaeologicalSite",
+      "transforms": {
+        "authority": [
+          "placeauthorities",
+          "archaeological"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "place/archaeological",
+      "namespace": "summarydocumentations_common",
+      "xpath": [
+        "archaeologicalSiteGroupList",
+        "archaeologicalSiteGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "archaeologicalSitePlaceArchaeological",
+      "required": "n"
+    },
+    {
+      "fieldname": "archaeologicalSite",
+      "transforms": {},
+      "source_type": "refname",
+      "source_name": "authority refname",
+      "namespace": "summarydocumentations_common",
+      "xpath": [
+        "archaeologicalSiteGroupList",
+        "archaeologicalSiteGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "archaeologicalSiteRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "archaeologicalSiteNote",
+      "transforms": {},
+      "source_type": "na",
+      "source_name": "na",
+      "namespace": "summarydocumentations_common",
+      "xpath": [
+        "archaeologicalSiteGroupList",
+        "archaeologicalSiteGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "archaeologicalSiteNote",
+      "required": "n"
+    }
+  ]
+}

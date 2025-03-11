@@ -1,0 +1,744 @@
+{
+  "config": {
+    "profile_basename": "anthro",
+    "version": "9.0.0",
+    "recordtype": "heldintrust",
+    "document_name": "heldintrusts",
+    "service_name": "HeldInTrust",
+    "service_path": "heldintrusts",
+    "service_type": "procedure",
+    "object_name": "HeldInTrust",
+    "ns_uri": {
+      "heldintrusts_common": "http://collectionspace.org/services/heldintrust"
+    },
+    "identifier_field": "heldInTrustNumber",
+    "search_field": "heldInTrustNumber"
+  },
+  "docstructure": {
+    "heldintrusts_common": {
+      "owners": {},
+      "plannedReturnGroupList": {
+        "plannedReturnGroup": {}
+      },
+      "agreementDescriptions": {},
+      "agreementRenewalDates": {},
+      "agreementApprovalGroupList": {
+        "agreementApprovalGroup": {}
+      },
+      "correspondenceGroupList": {
+        "correspondenceGroup": {}
+      },
+      "culturalCareNotes": {},
+      "accessLimitationsGroupList": {
+        "accessLimitationsGroup": {}
+      }
+    }
+  },
+  "mappings": [
+    {
+      "fieldname": "heldInTrustNumber",
+      "transforms": {},
+      "source_type": "na",
+      "source_name": "na",
+      "namespace": "heldintrusts_common",
+      "xpath": [],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [],
+      "datacolumn": "heldInTrustNumber",
+      "required": "y"
+    },
+    {
+      "fieldname": "owner",
+      "transforms": {
+        "authority": [
+          "personauthorities",
+          "person"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "person/local",
+      "namespace": "heldintrusts_common",
+      "xpath": [
+        "owners"
+      ],
+      "data_type": "string",
+      "repeats": "y",
+      "in_repeating_group": "n",
+      "opt_list_values": [],
+      "datacolumn": "ownerPersonLocal",
+      "required": "n"
+    },
+    {
+      "fieldname": "owner",
+      "transforms": {
+        "authority": [
+          "orgauthorities",
+          "organization"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "organization/local",
+      "namespace": "heldintrusts_common",
+      "xpath": [
+        "owners"
+      ],
+      "data_type": "string",
+      "repeats": "y",
+      "in_repeating_group": "n",
+      "opt_list_values": [],
+      "datacolumn": "ownerOrganizationLocal",
+      "required": "n"
+    },
+    {
+      "fieldname": "owner",
+      "transforms": {},
+      "source_type": "refname",
+      "source_name": "authority refname",
+      "namespace": "heldintrusts_common",
+      "xpath": [
+        "owners"
+      ],
+      "data_type": "csrefname",
+      "repeats": "y",
+      "in_repeating_group": "n",
+      "opt_list_values": [],
+      "datacolumn": "ownerRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "plannedReturnDate",
+      "transforms": {},
+      "source_type": "na",
+      "source_name": "na",
+      "namespace": "heldintrusts_common",
+      "xpath": [
+        "plannedReturnGroupList",
+        "plannedReturnGroup"
+      ],
+      "data_type": "date",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "plannedReturnDate",
+      "required": "n"
+    },
+    {
+      "fieldname": "plannedReturnNote",
+      "transforms": {},
+      "source_type": "na",
+      "source_name": "na",
+      "namespace": "heldintrusts_common",
+      "xpath": [
+        "plannedReturnGroupList",
+        "plannedReturnGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "plannedReturnNote",
+      "required": "n"
+    },
+    {
+      "fieldname": "agreementDescription",
+      "transforms": {},
+      "source_type": "na",
+      "source_name": "na",
+      "namespace": "heldintrusts_common",
+      "xpath": [
+        "agreementDescriptions"
+      ],
+      "data_type": "string",
+      "repeats": "y",
+      "in_repeating_group": "n",
+      "opt_list_values": [],
+      "datacolumn": "agreementDescription",
+      "required": "n"
+    },
+    {
+      "fieldname": "typeOfAgreement",
+      "transforms": {
+        "vocabulary": "heldintrusttype"
+      },
+      "source_type": "vocabulary",
+      "source_name": "heldintrusttype",
+      "namespace": "heldintrusts_common",
+      "xpath": [],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [],
+      "datacolumn": "typeOfAgreement",
+      "required": "n"
+    },
+    {
+      "fieldname": "typeOfAgreement",
+      "transforms": {},
+      "source_type": "refname",
+      "source_name": "vocabulary refname",
+      "namespace": "heldintrusts_common",
+      "xpath": [],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [],
+      "datacolumn": "typeOfAgreementRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "agreementRenewalDate",
+      "transforms": {},
+      "source_type": "na",
+      "source_name": "na",
+      "namespace": "heldintrusts_common",
+      "xpath": [
+        "agreementRenewalDates"
+      ],
+      "data_type": "date",
+      "repeats": "y",
+      "in_repeating_group": "n",
+      "opt_list_values": [],
+      "datacolumn": "agreementRenewalDate",
+      "required": "n"
+    },
+    {
+      "fieldname": "agreementGroup",
+      "transforms": {
+        "vocabulary": "deaccessionapprovalgroup"
+      },
+      "source_type": "vocabulary",
+      "source_name": "deaccessionapprovalgroup",
+      "namespace": "heldintrusts_common",
+      "xpath": [
+        "agreementApprovalGroupList",
+        "agreementApprovalGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "agreementGroup",
+      "required": "n"
+    },
+    {
+      "fieldname": "agreementGroup",
+      "transforms": {},
+      "source_type": "refname",
+      "source_name": "vocabulary refname",
+      "namespace": "heldintrusts_common",
+      "xpath": [
+        "agreementApprovalGroupList",
+        "agreementApprovalGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "agreementGroupRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "agreementIndividual",
+      "transforms": {
+        "authority": [
+          "personauthorities",
+          "person"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "person/local",
+      "namespace": "heldintrusts_common",
+      "xpath": [
+        "agreementApprovalGroupList",
+        "agreementApprovalGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "agreementIndividualPersonLocal",
+      "required": "n"
+    },
+    {
+      "fieldname": "agreementIndividual",
+      "transforms": {},
+      "source_type": "refname",
+      "source_name": "authority refname",
+      "namespace": "heldintrusts_common",
+      "xpath": [
+        "agreementApprovalGroupList",
+        "agreementApprovalGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "agreementIndividualRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "agreementStatus",
+      "transforms": {
+        "vocabulary": "deaccessionapprovalstatus"
+      },
+      "source_type": "vocabulary",
+      "source_name": "deaccessionapprovalstatus",
+      "namespace": "heldintrusts_common",
+      "xpath": [
+        "agreementApprovalGroupList",
+        "agreementApprovalGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "agreementStatus",
+      "required": "n"
+    },
+    {
+      "fieldname": "agreementStatus",
+      "transforms": {},
+      "source_type": "refname",
+      "source_name": "vocabulary refname",
+      "namespace": "heldintrusts_common",
+      "xpath": [
+        "agreementApprovalGroupList",
+        "agreementApprovalGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "agreementStatusRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "agreementDate",
+      "transforms": {},
+      "source_type": "na",
+      "source_name": "na",
+      "namespace": "heldintrusts_common",
+      "xpath": [
+        "agreementApprovalGroupList",
+        "agreementApprovalGroup"
+      ],
+      "data_type": "date",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "agreementDate",
+      "required": "n"
+    },
+    {
+      "fieldname": "agreementNote",
+      "transforms": {},
+      "source_type": "na",
+      "source_name": "na",
+      "namespace": "heldintrusts_common",
+      "xpath": [
+        "agreementApprovalGroupList",
+        "agreementApprovalGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "agreementNote",
+      "required": "n"
+    },
+    {
+      "fieldname": "correspondenceSender",
+      "transforms": {
+        "authority": [
+          "personauthorities",
+          "person"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "person/local",
+      "namespace": "heldintrusts_common",
+      "xpath": [
+        "correspondenceGroupList",
+        "correspondenceGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "correspondenceSenderPersonLocal",
+      "required": "n"
+    },
+    {
+      "fieldname": "correspondenceSender",
+      "transforms": {
+        "authority": [
+          "orgauthorities",
+          "organization"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "organization/local",
+      "namespace": "heldintrusts_common",
+      "xpath": [
+        "correspondenceGroupList",
+        "correspondenceGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "correspondenceSenderOrganizationLocal",
+      "required": "n"
+    },
+    {
+      "fieldname": "correspondenceSender",
+      "transforms": {},
+      "source_type": "refname",
+      "source_name": "authority refname",
+      "namespace": "heldintrusts_common",
+      "xpath": [
+        "correspondenceGroupList",
+        "correspondenceGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "correspondenceSenderRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "correspondenceRecipient",
+      "transforms": {
+        "authority": [
+          "personauthorities",
+          "person"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "person/local",
+      "namespace": "heldintrusts_common",
+      "xpath": [
+        "correspondenceGroupList",
+        "correspondenceGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "correspondenceRecipientPersonLocal",
+      "required": "n"
+    },
+    {
+      "fieldname": "correspondenceRecipient",
+      "transforms": {
+        "authority": [
+          "orgauthorities",
+          "organization"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "organization/local",
+      "namespace": "heldintrusts_common",
+      "xpath": [
+        "correspondenceGroupList",
+        "correspondenceGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "correspondenceRecipientOrganizationLocal",
+      "required": "n"
+    },
+    {
+      "fieldname": "correspondenceRecipient",
+      "transforms": {},
+      "source_type": "refname",
+      "source_name": "authority refname",
+      "namespace": "heldintrusts_common",
+      "xpath": [
+        "correspondenceGroupList",
+        "correspondenceGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "correspondenceRecipientRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "correspondenceType",
+      "transforms": {
+        "vocabulary": "correspondencetype"
+      },
+      "source_type": "vocabulary",
+      "source_name": "correspondencetype",
+      "namespace": "heldintrusts_common",
+      "xpath": [
+        "correspondenceGroupList",
+        "correspondenceGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "correspondenceType",
+      "required": "n"
+    },
+    {
+      "fieldname": "correspondenceType",
+      "transforms": {},
+      "source_type": "refname",
+      "source_name": "vocabulary refname",
+      "namespace": "heldintrusts_common",
+      "xpath": [
+        "correspondenceGroupList",
+        "correspondenceGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "correspondenceTypeRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "correspondenceDate",
+      "transforms": {},
+      "source_type": "na",
+      "source_name": "na",
+      "namespace": "heldintrusts_common",
+      "xpath": [
+        "correspondenceGroupList",
+        "correspondenceGroup"
+      ],
+      "data_type": "date",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "correspondenceDate",
+      "required": "n"
+    },
+    {
+      "fieldname": "correspondenceSummary",
+      "transforms": {},
+      "source_type": "na",
+      "source_name": "na",
+      "namespace": "heldintrusts_common",
+      "xpath": [
+        "correspondenceGroupList",
+        "correspondenceGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "correspondenceSummary",
+      "required": "n"
+    },
+    {
+      "fieldname": "culturalCareNote",
+      "transforms": {},
+      "source_type": "na",
+      "source_name": "na",
+      "namespace": "heldintrusts_common",
+      "xpath": [
+        "culturalCareNotes"
+      ],
+      "data_type": "string",
+      "repeats": "y",
+      "in_repeating_group": "n",
+      "opt_list_values": [],
+      "datacolumn": "culturalCareNote",
+      "required": "n"
+    },
+    {
+      "fieldname": "limitationType",
+      "transforms": {
+        "vocabulary": "limitationtype"
+      },
+      "source_type": "vocabulary",
+      "source_name": "limitationtype",
+      "namespace": "heldintrusts_common",
+      "xpath": [
+        "accessLimitationsGroupList",
+        "accessLimitationsGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "limitationType",
+      "required": "n"
+    },
+    {
+      "fieldname": "limitationType",
+      "transforms": {},
+      "source_type": "refname",
+      "source_name": "vocabulary refname",
+      "namespace": "heldintrusts_common",
+      "xpath": [
+        "accessLimitationsGroupList",
+        "accessLimitationsGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "limitationTypeRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "limitationLevel",
+      "transforms": {
+        "vocabulary": "limitationlevel"
+      },
+      "source_type": "vocabulary",
+      "source_name": "limitationlevel",
+      "namespace": "heldintrusts_common",
+      "xpath": [
+        "accessLimitationsGroupList",
+        "accessLimitationsGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "limitationLevel",
+      "required": "n"
+    },
+    {
+      "fieldname": "limitationLevel",
+      "transforms": {},
+      "source_type": "refname",
+      "source_name": "vocabulary refname",
+      "namespace": "heldintrusts_common",
+      "xpath": [
+        "accessLimitationsGroupList",
+        "accessLimitationsGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "limitationLevelRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "limitationDetails",
+      "transforms": {},
+      "source_type": "na",
+      "source_name": "na",
+      "namespace": "heldintrusts_common",
+      "xpath": [
+        "accessLimitationsGroupList",
+        "accessLimitationsGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "limitationDetails",
+      "required": "n"
+    },
+    {
+      "fieldname": "requester",
+      "transforms": {
+        "authority": [
+          "personauthorities",
+          "person"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "person/local",
+      "namespace": "heldintrusts_common",
+      "xpath": [
+        "accessLimitationsGroupList",
+        "accessLimitationsGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "requesterPersonLocal",
+      "required": "n"
+    },
+    {
+      "fieldname": "requester",
+      "transforms": {},
+      "source_type": "refname",
+      "source_name": "authority refname",
+      "namespace": "heldintrusts_common",
+      "xpath": [
+        "accessLimitationsGroupList",
+        "accessLimitationsGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "requesterRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "requestOnBehalfOf",
+      "transforms": {
+        "authority": [
+          "orgauthorities",
+          "organization"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "organization/local",
+      "namespace": "heldintrusts_common",
+      "xpath": [
+        "accessLimitationsGroupList",
+        "accessLimitationsGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "requestOnBehalfOfOrganizationLocal",
+      "required": "n"
+    },
+    {
+      "fieldname": "requestOnBehalfOf",
+      "transforms": {},
+      "source_type": "refname",
+      "source_name": "authority refname",
+      "namespace": "heldintrusts_common",
+      "xpath": [
+        "accessLimitationsGroupList",
+        "accessLimitationsGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "requestOnBehalfOfRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "requestDate",
+      "transforms": {},
+      "source_type": "na",
+      "source_name": "na",
+      "namespace": "heldintrusts_common",
+      "xpath": [
+        "accessLimitationsGroupList",
+        "accessLimitationsGroup"
+      ],
+      "data_type": "date",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "requestDate",
+      "required": "n"
+    }
+  ]
+}

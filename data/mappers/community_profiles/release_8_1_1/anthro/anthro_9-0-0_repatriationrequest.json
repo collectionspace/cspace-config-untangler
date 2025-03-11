@@ -1,0 +1,842 @@
+{
+  "config": {
+    "profile_basename": "anthro",
+    "version": "9.0.0",
+    "recordtype": "repatriationrequest",
+    "document_name": "repatriationrequests",
+    "service_name": "RepatriationRequest",
+    "service_path": "repatriationrequests",
+    "service_type": "procedure",
+    "object_name": "RepatriationRequest",
+    "ns_uri": {
+      "repatriationrequests_common": "http://collectionspace.org/services/repatriationrequest"
+    },
+    "identifier_field": "requestNumber",
+    "search_field": "requestNumber"
+  },
+  "docstructure": {
+    "repatriationrequests_common": {
+      "types": {},
+      "alternativeIdentifierGroupList": {
+        "alternativeIdentifierGroup": {}
+      },
+      "notes": {},
+      "treatmentNotes": {},
+      "partiesInvolvedGroupList": {
+        "partiesInvolvedGroup": {}
+      },
+      "geographicPlaceGroupList": {
+        "geographicPlaceGroup": {}
+      },
+      "culturalGroupList": {
+        "culturalGroup": {}
+      },
+      "timePeriodGroupList": {
+        "timePeriodGroup": {}
+      },
+      "archaeologicalSiteGroupList": {
+        "archaeologicalSiteGroup": {}
+      },
+      "statusGroupList": {
+        "statusGroup": {}
+      },
+      "documentationGroupList": {
+        "documentationGroup": {}
+      }
+    }
+  },
+  "mappings": [
+    {
+      "fieldname": "requestNumber",
+      "transforms": {},
+      "source_type": "na",
+      "source_name": "na",
+      "namespace": "repatriationrequests_common",
+      "xpath": [],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [],
+      "datacolumn": "requestNumber",
+      "required": "y"
+    },
+    {
+      "fieldname": "title",
+      "transforms": {},
+      "source_type": "na",
+      "source_name": "na",
+      "namespace": "repatriationrequests_common",
+      "xpath": [],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [],
+      "datacolumn": "title",
+      "required": "n"
+    },
+    {
+      "fieldname": "type",
+      "transforms": {
+        "vocabulary": "repatriationrequesttype"
+      },
+      "source_type": "vocabulary",
+      "source_name": "repatriationrequesttype",
+      "namespace": "repatriationrequests_common",
+      "xpath": [
+        "types"
+      ],
+      "data_type": "string",
+      "repeats": "y",
+      "in_repeating_group": "n",
+      "opt_list_values": [],
+      "datacolumn": "type",
+      "required": "n"
+    },
+    {
+      "fieldname": "type",
+      "transforms": {},
+      "source_type": "refname",
+      "source_name": "vocabulary refname",
+      "namespace": "repatriationrequests_common",
+      "xpath": [
+        "types"
+      ],
+      "data_type": "csrefname",
+      "repeats": "y",
+      "in_repeating_group": "n",
+      "opt_list_values": [],
+      "datacolumn": "typeRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "alternativeIdentifier",
+      "transforms": {},
+      "source_type": "na",
+      "source_name": "na",
+      "namespace": "repatriationrequests_common",
+      "xpath": [
+        "alternativeIdentifierGroupList",
+        "alternativeIdentifierGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "alternativeIdentifier",
+      "required": "n"
+    },
+    {
+      "fieldname": "alternativeIdentifierNote",
+      "transforms": {},
+      "source_type": "na",
+      "source_name": "na",
+      "namespace": "repatriationrequests_common",
+      "xpath": [
+        "alternativeIdentifierGroupList",
+        "alternativeIdentifierGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "alternativeIdentifierNote",
+      "required": "n"
+    },
+    {
+      "fieldname": "requestDate",
+      "transforms": {},
+      "source_type": "na",
+      "source_name": "na",
+      "namespace": "repatriationrequests_common",
+      "xpath": [],
+      "data_type": "date",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [],
+      "datacolumn": "requestDate",
+      "required": "n"
+    },
+    {
+      "fieldname": "note",
+      "transforms": {},
+      "source_type": "na",
+      "source_name": "na",
+      "namespace": "repatriationrequests_common",
+      "xpath": [
+        "notes"
+      ],
+      "data_type": "string",
+      "repeats": "y",
+      "in_repeating_group": "n",
+      "opt_list_values": [],
+      "datacolumn": "note",
+      "required": "n"
+    },
+    {
+      "fieldname": "treatmentNote",
+      "transforms": {},
+      "source_type": "na",
+      "source_name": "na",
+      "namespace": "repatriationrequests_common",
+      "xpath": [
+        "treatmentNotes"
+      ],
+      "data_type": "string",
+      "repeats": "y",
+      "in_repeating_group": "n",
+      "opt_list_values": [],
+      "datacolumn": "treatmentNote",
+      "required": "n"
+    },
+    {
+      "fieldname": "involvedParty",
+      "transforms": {
+        "authority": [
+          "personauthorities",
+          "person"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "person/local",
+      "namespace": "repatriationrequests_common",
+      "xpath": [
+        "partiesInvolvedGroupList",
+        "partiesInvolvedGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "involvedPartyPersonLocal",
+      "required": "n"
+    },
+    {
+      "fieldname": "involvedParty",
+      "transforms": {},
+      "source_type": "refname",
+      "source_name": "authority refname",
+      "namespace": "repatriationrequests_common",
+      "xpath": [
+        "partiesInvolvedGroupList",
+        "partiesInvolvedGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "involvedPartyRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "involvedOnBehalfOf",
+      "transforms": {
+        "authority": [
+          "orgauthorities",
+          "organization"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "organization/local",
+      "namespace": "repatriationrequests_common",
+      "xpath": [
+        "partiesInvolvedGroupList",
+        "partiesInvolvedGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "involvedOnBehalfOfOrganizationLocal",
+      "required": "n"
+    },
+    {
+      "fieldname": "involvedOnBehalfOf",
+      "transforms": {},
+      "source_type": "refname",
+      "source_name": "authority refname",
+      "namespace": "repatriationrequests_common",
+      "xpath": [
+        "partiesInvolvedGroupList",
+        "partiesInvolvedGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "involvedOnBehalfOfRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "involvedRole",
+      "transforms": {
+        "vocabulary": "nagprainvolvedrole"
+      },
+      "source_type": "vocabulary",
+      "source_name": "nagprainvolvedrole",
+      "namespace": "repatriationrequests_common",
+      "xpath": [
+        "partiesInvolvedGroupList",
+        "partiesInvolvedGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "involvedRole",
+      "required": "n"
+    },
+    {
+      "fieldname": "involvedRole",
+      "transforms": {},
+      "source_type": "refname",
+      "source_name": "vocabulary refname",
+      "namespace": "repatriationrequests_common",
+      "xpath": [
+        "partiesInvolvedGroupList",
+        "partiesInvolvedGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "involvedRoleRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "geographicPlace",
+      "transforms": {
+        "authority": [
+          "placeauthorities",
+          "place"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "place/local",
+      "namespace": "repatriationrequests_common",
+      "xpath": [
+        "geographicPlaceGroupList",
+        "geographicPlaceGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "geographicPlacePlaceLocal",
+      "required": "n"
+    },
+    {
+      "fieldname": "geographicPlace",
+      "transforms": {},
+      "source_type": "refname",
+      "source_name": "authority refname",
+      "namespace": "repatriationrequests_common",
+      "xpath": [
+        "geographicPlaceGroupList",
+        "geographicPlaceGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "geographicPlaceRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "geographicPlaceNote",
+      "transforms": {},
+      "source_type": "na",
+      "source_name": "na",
+      "namespace": "repatriationrequests_common",
+      "xpath": [
+        "geographicPlaceGroupList",
+        "geographicPlaceGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "geographicPlaceNote",
+      "required": "n"
+    },
+    {
+      "fieldname": "culture",
+      "transforms": {
+        "authority": [
+          "conceptauthorities",
+          "ethculture"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "concept/ethculture",
+      "namespace": "repatriationrequests_common",
+      "xpath": [
+        "culturalGroupList",
+        "culturalGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "cultureConceptEthculture",
+      "required": "n"
+    },
+    {
+      "fieldname": "culture",
+      "transforms": {
+        "authority": [
+          "conceptauthorities",
+          "archculture"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "concept/archculture",
+      "namespace": "repatriationrequests_common",
+      "xpath": [
+        "culturalGroupList",
+        "culturalGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "cultureConceptArchculture",
+      "required": "n"
+    },
+    {
+      "fieldname": "culture",
+      "transforms": {},
+      "source_type": "refname",
+      "source_name": "authority refname",
+      "namespace": "repatriationrequests_common",
+      "xpath": [
+        "culturalGroupList",
+        "culturalGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "cultureRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "cultureNote",
+      "transforms": {},
+      "source_type": "na",
+      "source_name": "na",
+      "namespace": "repatriationrequests_common",
+      "xpath": [
+        "culturalGroupList",
+        "culturalGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "cultureNote",
+      "required": "n"
+    },
+    {
+      "fieldname": "timePeriod",
+      "transforms": {
+        "authority": [
+          "chronologyauthorities",
+          "era"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "chronology/era",
+      "namespace": "repatriationrequests_common",
+      "xpath": [
+        "timePeriodGroupList",
+        "timePeriodGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "timePeriodChronologyEra",
+      "required": "n"
+    },
+    {
+      "fieldname": "timePeriod",
+      "transforms": {},
+      "source_type": "refname",
+      "source_name": "authority refname",
+      "namespace": "repatriationrequests_common",
+      "xpath": [
+        "timePeriodGroupList",
+        "timePeriodGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "timePeriodRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "timePeriodNote",
+      "transforms": {},
+      "source_type": "na",
+      "source_name": "na",
+      "namespace": "repatriationrequests_common",
+      "xpath": [
+        "timePeriodGroupList",
+        "timePeriodGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "timePeriodNote",
+      "required": "n"
+    },
+    {
+      "fieldname": "archaeologicalSite",
+      "transforms": {
+        "authority": [
+          "placeauthorities",
+          "archaeological"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "place/archaeological",
+      "namespace": "repatriationrequests_common",
+      "xpath": [
+        "archaeologicalSiteGroupList",
+        "archaeologicalSiteGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "archaeologicalSitePlaceArchaeological",
+      "required": "n"
+    },
+    {
+      "fieldname": "archaeologicalSite",
+      "transforms": {},
+      "source_type": "refname",
+      "source_name": "authority refname",
+      "namespace": "repatriationrequests_common",
+      "xpath": [
+        "archaeologicalSiteGroupList",
+        "archaeologicalSiteGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "archaeologicalSiteRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "archaeologicalSiteNote",
+      "transforms": {},
+      "source_type": "na",
+      "source_name": "na",
+      "namespace": "repatriationrequests_common",
+      "xpath": [
+        "archaeologicalSiteGroupList",
+        "archaeologicalSiteGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "archaeologicalSiteNote",
+      "required": "n"
+    },
+    {
+      "fieldname": "statusGroupType",
+      "transforms": {
+        "vocabulary": "deaccessionapprovalgroup"
+      },
+      "source_type": "vocabulary",
+      "source_name": "deaccessionapprovalgroup",
+      "namespace": "repatriationrequests_common",
+      "xpath": [
+        "statusGroupList",
+        "statusGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "statusGroupType",
+      "required": "n"
+    },
+    {
+      "fieldname": "statusGroupType",
+      "transforms": {},
+      "source_type": "refname",
+      "source_name": "vocabulary refname",
+      "namespace": "repatriationrequests_common",
+      "xpath": [
+        "statusGroupList",
+        "statusGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "statusGroupTypeRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "statusIndividual",
+      "transforms": {
+        "authority": [
+          "personauthorities",
+          "person"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "person/local",
+      "namespace": "repatriationrequests_common",
+      "xpath": [
+        "statusGroupList",
+        "statusGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "statusIndividualPersonLocal",
+      "required": "n"
+    },
+    {
+      "fieldname": "statusIndividual",
+      "transforms": {},
+      "source_type": "refname",
+      "source_name": "authority refname",
+      "namespace": "repatriationrequests_common",
+      "xpath": [
+        "statusGroupList",
+        "statusGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "statusIndividualRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "status",
+      "transforms": {
+        "vocabulary": "deaccessionapprovalstatus"
+      },
+      "source_type": "vocabulary",
+      "source_name": "deaccessionapprovalstatus",
+      "namespace": "repatriationrequests_common",
+      "xpath": [
+        "statusGroupList",
+        "statusGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "status",
+      "required": "n"
+    },
+    {
+      "fieldname": "status",
+      "transforms": {},
+      "source_type": "refname",
+      "source_name": "vocabulary refname",
+      "namespace": "repatriationrequests_common",
+      "xpath": [
+        "statusGroupList",
+        "statusGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "statusRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "statusDate",
+      "transforms": {},
+      "source_type": "na",
+      "source_name": "na",
+      "namespace": "repatriationrequests_common",
+      "xpath": [
+        "statusGroupList",
+        "statusGroup"
+      ],
+      "data_type": "date",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "statusDate",
+      "required": "n"
+    },
+    {
+      "fieldname": "statusNote",
+      "transforms": {},
+      "source_type": "na",
+      "source_name": "na",
+      "namespace": "repatriationrequests_common",
+      "xpath": [
+        "statusGroupList",
+        "statusGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "statusNote",
+      "required": "n"
+    },
+    {
+      "fieldname": "documentationGroupType",
+      "transforms": {
+        "vocabulary": "documentationgroup"
+      },
+      "source_type": "vocabulary",
+      "source_name": "documentationgroup",
+      "namespace": "repatriationrequests_common",
+      "xpath": [
+        "documentationGroupList",
+        "documentationGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "documentationGroupType",
+      "required": "n"
+    },
+    {
+      "fieldname": "documentationGroupType",
+      "transforms": {},
+      "source_type": "refname",
+      "source_name": "vocabulary refname",
+      "namespace": "repatriationrequests_common",
+      "xpath": [
+        "documentationGroupList",
+        "documentationGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "documentationGroupTypeRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "documentationIndividual",
+      "transforms": {
+        "authority": [
+          "personauthorities",
+          "person"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "person/local",
+      "namespace": "repatriationrequests_common",
+      "xpath": [
+        "documentationGroupList",
+        "documentationGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "documentationIndividualPersonLocal",
+      "required": "n"
+    },
+    {
+      "fieldname": "documentationIndividual",
+      "transforms": {},
+      "source_type": "refname",
+      "source_name": "authority refname",
+      "namespace": "repatriationrequests_common",
+      "xpath": [
+        "documentationGroupList",
+        "documentationGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "documentationIndividualRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "documentationStatus",
+      "transforms": {
+        "vocabulary": "nagpradocumentationstatus"
+      },
+      "source_type": "vocabulary",
+      "source_name": "nagpradocumentationstatus",
+      "namespace": "repatriationrequests_common",
+      "xpath": [
+        "documentationGroupList",
+        "documentationGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "documentationStatus",
+      "required": "n"
+    },
+    {
+      "fieldname": "documentationStatus",
+      "transforms": {},
+      "source_type": "refname",
+      "source_name": "vocabulary refname",
+      "namespace": "repatriationrequests_common",
+      "xpath": [
+        "documentationGroupList",
+        "documentationGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "documentationStatusRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "documentationDate",
+      "transforms": {},
+      "source_type": "na",
+      "source_name": "na",
+      "namespace": "repatriationrequests_common",
+      "xpath": [
+        "documentationGroupList",
+        "documentationGroup"
+      ],
+      "data_type": "date",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "documentationDate",
+      "required": "n"
+    },
+    {
+      "fieldname": "documentationNote",
+      "transforms": {},
+      "source_type": "na",
+      "source_name": "na",
+      "namespace": "repatriationrequests_common",
+      "xpath": [
+        "documentationGroupList",
+        "documentationGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "documentationNote",
+      "required": "n"
+    }
+  ]
+}

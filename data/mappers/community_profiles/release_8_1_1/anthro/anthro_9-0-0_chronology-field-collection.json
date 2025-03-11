@@ -1,0 +1,3085 @@
+{
+  "config": {
+    "profile_basename": "anthro",
+    "version": "9.0.0",
+    "recordtype": "chronology",
+    "document_name": "chronologies",
+    "service_name": "Chronologies",
+    "service_path": "chronologyauthorities",
+    "service_type": "authority",
+    "object_name": "Chronology",
+    "ns_uri": {
+      "chronologies_common": "http://collectionspace.org/services/chronology"
+    },
+    "identifier_field": "shortIdentifier",
+    "search_field": "chronologyTermGroupList/0/termDisplayName",
+    "authority_subtypes": [
+      {
+        "name": "Era",
+        "subtype": "era"
+      },
+      {
+        "name": "Event",
+        "subtype": "event"
+      },
+      {
+        "name": "Field Collection",
+        "subtype": "field_collection"
+      }
+    ],
+    "authority_type": "chronologyauthorities",
+    "authority_subtype": "field_collection"
+  },
+  "docstructure": {
+    "chronologies_common": {
+      "chronologyTermGroupList": {
+        "chronologyTermGroup": {}
+      },
+      "spatialCoverages": {},
+      "identifierGroupList": {
+        "identifierGroup": {}
+      },
+      "altDateGroupList": {
+        "altDateGroup": {
+          "altDateSpatialCoverages": {},
+          "altDateCitations": {}
+        }
+      },
+      "assocPersonAuthGroupList": {
+        "assocPersonAuthGroup": {
+          "assocPersonCitations": {}
+        }
+      },
+      "assocPeopleAuthGroupList": {
+        "assocPeopleAuthGroup": {
+          "assocPeopleCitations": {}
+        }
+      },
+      "assocOrganizationAuthGroupList": {
+        "assocOrganizationAuthGroup": {
+          "assocOrganizationCitations": {}
+        }
+      },
+      "assocConceptAuthGroupList": {
+        "assocConceptAuthGroup": {
+          "assocConceptCitations": {}
+        }
+      },
+      "assocPlaceAuthGroupList": {
+        "assocPlaceAuthGroup": {
+          "assocPlaceCitations": {}
+        }
+      },
+      "assocChronologyAuthGroupList": {
+        "assocChronologyAuthGroup": {
+          "assocChronologyCitations": {}
+        }
+      }
+    }
+  },
+  "mappings": [
+    {
+      "fieldname": "termDisplayName",
+      "transforms": {},
+      "source_type": "na",
+      "source_name": "na",
+      "namespace": "chronologies_common",
+      "xpath": [
+        "chronologyTermGroupList",
+        "chronologyTermGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "termDisplayName",
+      "required": "y"
+    },
+    {
+      "fieldname": "termName",
+      "transforms": {},
+      "source_type": "na",
+      "source_name": "na",
+      "namespace": "chronologies_common",
+      "xpath": [
+        "chronologyTermGroupList",
+        "chronologyTermGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "termName",
+      "required": "n"
+    },
+    {
+      "fieldname": "termQualifier",
+      "transforms": {},
+      "source_type": "na",
+      "source_name": "na",
+      "namespace": "chronologies_common",
+      "xpath": [
+        "chronologyTermGroupList",
+        "chronologyTermGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "termQualifier",
+      "required": "n"
+    },
+    {
+      "fieldname": "termStatus",
+      "transforms": {
+        "vocabulary": "chronologytermstatus"
+      },
+      "source_type": "vocabulary",
+      "source_name": "chronologytermstatus",
+      "namespace": "chronologies_common",
+      "xpath": [
+        "chronologyTermGroupList",
+        "chronologyTermGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "termStatus",
+      "required": "n"
+    },
+    {
+      "fieldname": "termStatus",
+      "transforms": {},
+      "source_type": "refname",
+      "source_name": "vocabulary refname",
+      "namespace": "chronologies_common",
+      "xpath": [
+        "chronologyTermGroupList",
+        "chronologyTermGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "termStatusRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "termStatus",
+      "transforms": {},
+      "source_type": "refname",
+      "source_name": "vocabulary refname",
+      "namespace": "chronologies_common",
+      "xpath": [
+        "chronologyTermGroupList",
+        "chronologyTermGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "chronologyTermGroup_termStatusRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "termStatus",
+      "transforms": {},
+      "source_type": "refname",
+      "source_name": "vocabulary refname",
+      "namespace": "chronologies_common",
+      "xpath": [
+        "chronologyTermGroupList",
+        "chronologyTermGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "chronologyTermGroup_termStatusRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "termType",
+      "transforms": {
+        "vocabulary": "chronologytermtype"
+      },
+      "source_type": "vocabulary",
+      "source_name": "chronologytermtype",
+      "namespace": "chronologies_common",
+      "xpath": [
+        "chronologyTermGroupList",
+        "chronologyTermGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "termType",
+      "required": "n"
+    },
+    {
+      "fieldname": "termType",
+      "transforms": {},
+      "source_type": "refname",
+      "source_name": "vocabulary refname",
+      "namespace": "chronologies_common",
+      "xpath": [
+        "chronologyTermGroupList",
+        "chronologyTermGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "termTypeRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "termType",
+      "transforms": {},
+      "source_type": "refname",
+      "source_name": "vocabulary refname",
+      "namespace": "chronologies_common",
+      "xpath": [
+        "chronologyTermGroupList",
+        "chronologyTermGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "chronologyTermGroup_termTypeRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "termType",
+      "transforms": {},
+      "source_type": "refname",
+      "source_name": "vocabulary refname",
+      "namespace": "chronologies_common",
+      "xpath": [
+        "chronologyTermGroupList",
+        "chronologyTermGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "chronologyTermGroup_termTypeRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "termFlag",
+      "transforms": {
+        "vocabulary": "chronologytermflag"
+      },
+      "source_type": "vocabulary",
+      "source_name": "chronologytermflag",
+      "namespace": "chronologies_common",
+      "xpath": [
+        "chronologyTermGroupList",
+        "chronologyTermGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "termFlag",
+      "required": "n"
+    },
+    {
+      "fieldname": "termFlag",
+      "transforms": {},
+      "source_type": "refname",
+      "source_name": "vocabulary refname",
+      "namespace": "chronologies_common",
+      "xpath": [
+        "chronologyTermGroupList",
+        "chronologyTermGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "termFlagRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "termFlag",
+      "transforms": {},
+      "source_type": "refname",
+      "source_name": "vocabulary refname",
+      "namespace": "chronologies_common",
+      "xpath": [
+        "chronologyTermGroupList",
+        "chronologyTermGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "chronologyTermGroup_termFlagRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "termFlag",
+      "transforms": {},
+      "source_type": "refname",
+      "source_name": "vocabulary refname",
+      "namespace": "chronologies_common",
+      "xpath": [
+        "chronologyTermGroupList",
+        "chronologyTermGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "chronologyTermGroup_termFlagRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "historicalStatus",
+      "transforms": {
+        "vocabulary": "chronologyhistoricalstatus"
+      },
+      "source_type": "vocabulary",
+      "source_name": "chronologyhistoricalstatus",
+      "namespace": "chronologies_common",
+      "xpath": [
+        "chronologyTermGroupList",
+        "chronologyTermGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "historicalStatus",
+      "required": "n"
+    },
+    {
+      "fieldname": "historicalStatus",
+      "transforms": {},
+      "source_type": "refname",
+      "source_name": "vocabulary refname",
+      "namespace": "chronologies_common",
+      "xpath": [
+        "chronologyTermGroupList",
+        "chronologyTermGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "historicalStatusRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "historicalStatus",
+      "transforms": {},
+      "source_type": "refname",
+      "source_name": "vocabulary refname",
+      "namespace": "chronologies_common",
+      "xpath": [
+        "chronologyTermGroupList",
+        "chronologyTermGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "chronologyTermGroup_historicalStatusRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "historicalStatus",
+      "transforms": {},
+      "source_type": "refname",
+      "source_name": "vocabulary refname",
+      "namespace": "chronologies_common",
+      "xpath": [
+        "chronologyTermGroupList",
+        "chronologyTermGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "chronologyTermGroup_historicalStatusRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "termLanguage",
+      "transforms": {
+        "vocabulary": "languages"
+      },
+      "source_type": "vocabulary",
+      "source_name": "languages",
+      "namespace": "chronologies_common",
+      "xpath": [
+        "chronologyTermGroupList",
+        "chronologyTermGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "termLanguage",
+      "required": "n"
+    },
+    {
+      "fieldname": "termLanguage",
+      "transforms": {},
+      "source_type": "refname",
+      "source_name": "vocabulary refname",
+      "namespace": "chronologies_common",
+      "xpath": [
+        "chronologyTermGroupList",
+        "chronologyTermGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "termLanguageRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "termLanguage",
+      "transforms": {},
+      "source_type": "refname",
+      "source_name": "vocabulary refname",
+      "namespace": "chronologies_common",
+      "xpath": [
+        "chronologyTermGroupList",
+        "chronologyTermGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "chronologyTermGroup_termLanguageRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "termLanguage",
+      "transforms": {},
+      "source_type": "refname",
+      "source_name": "vocabulary refname",
+      "namespace": "chronologies_common",
+      "xpath": [
+        "chronologyTermGroupList",
+        "chronologyTermGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "chronologyTermGroup_termLanguageRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "termPrefForLang",
+      "transforms": {
+        "special": [
+          "boolean"
+        ]
+      },
+      "source_type": "na",
+      "source_name": "na",
+      "namespace": "chronologies_common",
+      "xpath": [
+        "chronologyTermGroupList",
+        "chronologyTermGroup"
+      ],
+      "data_type": "boolean",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "termPrefForLang",
+      "required": "n"
+    },
+    {
+      "fieldname": "termSource",
+      "transforms": {
+        "authority": [
+          "citationauthorities",
+          "citation"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "citation/local",
+      "namespace": "chronologies_common",
+      "xpath": [
+        "chronologyTermGroupList",
+        "chronologyTermGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "termSourceCitationLocal",
+      "required": "n"
+    },
+    {
+      "fieldname": "termSource",
+      "transforms": {
+        "authority": [
+          "citationauthorities",
+          "worldcat"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "citation/worldcat",
+      "namespace": "chronologies_common",
+      "xpath": [
+        "chronologyTermGroupList",
+        "chronologyTermGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "termSourceCitationWorldcat",
+      "required": "n"
+    },
+    {
+      "fieldname": "termSource",
+      "transforms": {},
+      "source_type": "refname",
+      "source_name": "authority refname",
+      "namespace": "chronologies_common",
+      "xpath": [
+        "chronologyTermGroupList",
+        "chronologyTermGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "termSourceRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "termSource",
+      "transforms": {},
+      "source_type": "refname",
+      "source_name": "authority refname",
+      "namespace": "chronologies_common",
+      "xpath": [
+        "chronologyTermGroupList",
+        "chronologyTermGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "chronologyTermGroup_termSourceRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "termSource",
+      "transforms": {},
+      "source_type": "refname",
+      "source_name": "authority refname",
+      "namespace": "chronologies_common",
+      "xpath": [
+        "chronologyTermGroupList",
+        "chronologyTermGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "chronologyTermGroup_termSourceRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "termSourceDetail",
+      "transforms": {},
+      "source_type": "na",
+      "source_name": "na",
+      "namespace": "chronologies_common",
+      "xpath": [
+        "chronologyTermGroupList",
+        "chronologyTermGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "termSourceDetail",
+      "required": "n"
+    },
+    {
+      "fieldname": "termSourceID",
+      "transforms": {},
+      "source_type": "na",
+      "source_name": "na",
+      "namespace": "chronologies_common",
+      "xpath": [
+        "chronologyTermGroupList",
+        "chronologyTermGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "termSourceID",
+      "required": "n"
+    },
+    {
+      "fieldname": "termSourceNote",
+      "transforms": {},
+      "source_type": "na",
+      "source_name": "na",
+      "namespace": "chronologies_common",
+      "xpath": [
+        "chronologyTermGroupList",
+        "chronologyTermGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "termSourceNote",
+      "required": "n"
+    },
+    {
+      "fieldname": "primaryDateRangeStructuredDateGroup",
+      "transforms": {},
+      "source_type": "na",
+      "source_name": "na",
+      "namespace": "chronologies_common",
+      "xpath": [],
+      "data_type": "structured date group",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [],
+      "datacolumn": "primaryDateRangeStructuredDateGroup",
+      "required": "n"
+    },
+    {
+      "fieldname": "chronologyType",
+      "transforms": {
+        "vocabulary": "chronologytypes"
+      },
+      "source_type": "vocabulary",
+      "source_name": "chronologytypes",
+      "namespace": "chronologies_common",
+      "xpath": [],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [],
+      "datacolumn": "chronologyType",
+      "required": "n"
+    },
+    {
+      "fieldname": "chronologyType",
+      "transforms": {},
+      "source_type": "refname",
+      "source_name": "vocabulary refname",
+      "namespace": "chronologies_common",
+      "xpath": [],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [],
+      "datacolumn": "chronologyTypeRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "chronologyType",
+      "transforms": {},
+      "source_type": "refname",
+      "source_name": "vocabulary refname",
+      "namespace": "chronologies_common",
+      "xpath": [],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [],
+      "datacolumn": "common_chronologyTypeRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "chronologyType",
+      "transforms": {},
+      "source_type": "refname",
+      "source_name": "vocabulary refname",
+      "namespace": "chronologies_common",
+      "xpath": [],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [],
+      "datacolumn": "common_chronologyTypeRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "spatialCoverage",
+      "transforms": {
+        "authority": [
+          "placeauthorities",
+          "place"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "place/local",
+      "namespace": "chronologies_common",
+      "xpath": [
+        "spatialCoverages"
+      ],
+      "data_type": "string",
+      "repeats": "y",
+      "in_repeating_group": "n",
+      "opt_list_values": [],
+      "datacolumn": "spatialCoveragePlaceLocal",
+      "required": "n"
+    },
+    {
+      "fieldname": "spatialCoverage",
+      "transforms": {
+        "authority": [
+          "placeauthorities",
+          "tgn_place"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "place/tgn",
+      "namespace": "chronologies_common",
+      "xpath": [
+        "spatialCoverages"
+      ],
+      "data_type": "string",
+      "repeats": "y",
+      "in_repeating_group": "n",
+      "opt_list_values": [],
+      "datacolumn": "spatialCoveragePlaceTgn",
+      "required": "n"
+    },
+    {
+      "fieldname": "spatialCoverage",
+      "transforms": {},
+      "source_type": "refname",
+      "source_name": "authority refname",
+      "namespace": "chronologies_common",
+      "xpath": [
+        "spatialCoverages"
+      ],
+      "data_type": "csrefname",
+      "repeats": "y",
+      "in_repeating_group": "n",
+      "opt_list_values": [],
+      "datacolumn": "spatialCoverageRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "spatialCoverage",
+      "transforms": {},
+      "source_type": "refname",
+      "source_name": "authority refname",
+      "namespace": "chronologies_common",
+      "xpath": [
+        "spatialCoverages"
+      ],
+      "data_type": "csrefname",
+      "repeats": "y",
+      "in_repeating_group": "n",
+      "opt_list_values": [],
+      "datacolumn": "spatialCoverages_spatialCoverageRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "spatialCoverage",
+      "transforms": {},
+      "source_type": "refname",
+      "source_name": "authority refname",
+      "namespace": "chronologies_common",
+      "xpath": [
+        "spatialCoverages"
+      ],
+      "data_type": "csrefname",
+      "repeats": "y",
+      "in_repeating_group": "n",
+      "opt_list_values": [],
+      "datacolumn": "spatialCoverages_spatialCoverageRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "chronologyDescription",
+      "transforms": {},
+      "source_type": "na",
+      "source_name": "na",
+      "namespace": "chronologies_common",
+      "xpath": [],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [],
+      "datacolumn": "chronologyDescription",
+      "required": "n"
+    },
+    {
+      "fieldname": "chronologyNote",
+      "transforms": {},
+      "source_type": "na",
+      "source_name": "na",
+      "namespace": "chronologies_common",
+      "xpath": [],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [],
+      "datacolumn": "chronologyNote",
+      "required": "n"
+    },
+    {
+      "fieldname": "identifierValue",
+      "transforms": {},
+      "source_type": "na",
+      "source_name": "na",
+      "namespace": "chronologies_common",
+      "xpath": [
+        "identifierGroupList",
+        "identifierGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "identifierValue",
+      "required": "n"
+    },
+    {
+      "fieldname": "identifierCitation",
+      "transforms": {
+        "authority": [
+          "citationauthorities",
+          "citation"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "citation/local",
+      "namespace": "chronologies_common",
+      "xpath": [
+        "identifierGroupList",
+        "identifierGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "identifierCitationCitationLocal",
+      "required": "n"
+    },
+    {
+      "fieldname": "identifierCitation",
+      "transforms": {
+        "authority": [
+          "citationauthorities",
+          "worldcat"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "citation/worldcat",
+      "namespace": "chronologies_common",
+      "xpath": [
+        "identifierGroupList",
+        "identifierGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "identifierCitationCitationWorldcat",
+      "required": "n"
+    },
+    {
+      "fieldname": "identifierCitation",
+      "transforms": {},
+      "source_type": "refname",
+      "source_name": "authority refname",
+      "namespace": "chronologies_common",
+      "xpath": [
+        "identifierGroupList",
+        "identifierGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "identifierCitationRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "identifierCitation",
+      "transforms": {},
+      "source_type": "refname",
+      "source_name": "authority refname",
+      "namespace": "chronologies_common",
+      "xpath": [
+        "identifierGroupList",
+        "identifierGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "identifierGroup_identifierCitationRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "identifierCitation",
+      "transforms": {},
+      "source_type": "refname",
+      "source_name": "authority refname",
+      "namespace": "chronologies_common",
+      "xpath": [
+        "identifierGroupList",
+        "identifierGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "identifierGroup_identifierCitationRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "identifierDate",
+      "transforms": {},
+      "source_type": "na",
+      "source_name": "na",
+      "namespace": "chronologies_common",
+      "xpath": [
+        "identifierGroupList",
+        "identifierGroup"
+      ],
+      "data_type": "date",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "identifierDate",
+      "required": "n"
+    },
+    {
+      "fieldname": "altDateRangeStructuredDateGroup",
+      "transforms": {},
+      "source_type": "na",
+      "source_name": "na",
+      "namespace": "chronologies_common",
+      "xpath": [
+        "altDateGroupList",
+        "altDateGroup"
+      ],
+      "data_type": "structured date group",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "altDateRangeStructuredDateGroup",
+      "required": "n"
+    },
+    {
+      "fieldname": "altDateSpatialCoverage",
+      "transforms": {
+        "authority": [
+          "placeauthorities",
+          "place"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "place/local",
+      "namespace": "chronologies_common",
+      "xpath": [
+        "altDateGroupList",
+        "altDateGroup",
+        "altDateSpatialCoverages"
+      ],
+      "data_type": "string",
+      "repeats": "y",
+      "in_repeating_group": "as part of larger repeating group",
+      "opt_list_values": [],
+      "datacolumn": "altDateSpatialCoveragePlaceLocal",
+      "required": "n"
+    },
+    {
+      "fieldname": "altDateSpatialCoverage",
+      "transforms": {
+        "authority": [
+          "placeauthorities",
+          "tgn_place"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "place/tgn",
+      "namespace": "chronologies_common",
+      "xpath": [
+        "altDateGroupList",
+        "altDateGroup",
+        "altDateSpatialCoverages"
+      ],
+      "data_type": "string",
+      "repeats": "y",
+      "in_repeating_group": "as part of larger repeating group",
+      "opt_list_values": [],
+      "datacolumn": "altDateSpatialCoveragePlaceTgn",
+      "required": "n"
+    },
+    {
+      "fieldname": "altDateSpatialCoverage",
+      "transforms": {},
+      "source_type": "refname",
+      "source_name": "authority refname",
+      "namespace": "chronologies_common",
+      "xpath": [
+        "altDateGroupList",
+        "altDateGroup",
+        "altDateSpatialCoverages"
+      ],
+      "data_type": "csrefname",
+      "repeats": "y",
+      "in_repeating_group": "as part of larger repeating group",
+      "opt_list_values": [],
+      "datacolumn": "altDateSpatialCoverageRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "altDateSpatialCoverage",
+      "transforms": {},
+      "source_type": "refname",
+      "source_name": "authority refname",
+      "namespace": "chronologies_common",
+      "xpath": [
+        "altDateGroupList",
+        "altDateGroup",
+        "altDateSpatialCoverages"
+      ],
+      "data_type": "csrefname",
+      "repeats": "y",
+      "in_repeating_group": "as part of larger repeating group",
+      "opt_list_values": [],
+      "datacolumn": "altDateSpatialCoverages_altDateSpatialCoverageRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "altDateSpatialCoverage",
+      "transforms": {},
+      "source_type": "refname",
+      "source_name": "authority refname",
+      "namespace": "chronologies_common",
+      "xpath": [
+        "altDateGroupList",
+        "altDateGroup",
+        "altDateSpatialCoverages"
+      ],
+      "data_type": "csrefname",
+      "repeats": "y",
+      "in_repeating_group": "as part of larger repeating group",
+      "opt_list_values": [],
+      "datacolumn": "altDateSpatialCoverages_altDateSpatialCoverageRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "altDateCitation",
+      "transforms": {
+        "authority": [
+          "citationauthorities",
+          "citation"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "citation/local",
+      "namespace": "chronologies_common",
+      "xpath": [
+        "altDateGroupList",
+        "altDateGroup",
+        "altDateCitations"
+      ],
+      "data_type": "string",
+      "repeats": "y",
+      "in_repeating_group": "as part of larger repeating group",
+      "opt_list_values": [],
+      "datacolumn": "altDateCitationCitationLocal",
+      "required": "n"
+    },
+    {
+      "fieldname": "altDateCitation",
+      "transforms": {
+        "authority": [
+          "citationauthorities",
+          "worldcat"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "citation/worldcat",
+      "namespace": "chronologies_common",
+      "xpath": [
+        "altDateGroupList",
+        "altDateGroup",
+        "altDateCitations"
+      ],
+      "data_type": "string",
+      "repeats": "y",
+      "in_repeating_group": "as part of larger repeating group",
+      "opt_list_values": [],
+      "datacolumn": "altDateCitationCitationWorldcat",
+      "required": "n"
+    },
+    {
+      "fieldname": "altDateCitation",
+      "transforms": {},
+      "source_type": "refname",
+      "source_name": "authority refname",
+      "namespace": "chronologies_common",
+      "xpath": [
+        "altDateGroupList",
+        "altDateGroup",
+        "altDateCitations"
+      ],
+      "data_type": "csrefname",
+      "repeats": "y",
+      "in_repeating_group": "as part of larger repeating group",
+      "opt_list_values": [],
+      "datacolumn": "altDateCitationRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "altDateCitation",
+      "transforms": {},
+      "source_type": "refname",
+      "source_name": "authority refname",
+      "namespace": "chronologies_common",
+      "xpath": [
+        "altDateGroupList",
+        "altDateGroup",
+        "altDateCitations"
+      ],
+      "data_type": "csrefname",
+      "repeats": "y",
+      "in_repeating_group": "as part of larger repeating group",
+      "opt_list_values": [],
+      "datacolumn": "altDateCitations_altDateCitationRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "altDateCitation",
+      "transforms": {},
+      "source_type": "refname",
+      "source_name": "authority refname",
+      "namespace": "chronologies_common",
+      "xpath": [
+        "altDateGroupList",
+        "altDateGroup",
+        "altDateCitations"
+      ],
+      "data_type": "csrefname",
+      "repeats": "y",
+      "in_repeating_group": "as part of larger repeating group",
+      "opt_list_values": [],
+      "datacolumn": "altDateCitations_altDateCitationRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "altDateNote",
+      "transforms": {},
+      "source_type": "na",
+      "source_name": "na",
+      "namespace": "chronologies_common",
+      "xpath": [
+        "altDateGroupList",
+        "altDateGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "altDateNote",
+      "required": "n"
+    },
+    {
+      "fieldname": "assocPerson",
+      "transforms": {
+        "authority": [
+          "personauthorities",
+          "person"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "person/local",
+      "namespace": "chronologies_common",
+      "xpath": [
+        "assocPersonAuthGroupList",
+        "assocPersonAuthGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "assocPersonPersonLocal",
+      "required": "n"
+    },
+    {
+      "fieldname": "assocPerson",
+      "transforms": {
+        "authority": [
+          "personauthorities",
+          "ulan_pa"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "person/ulan",
+      "namespace": "chronologies_common",
+      "xpath": [
+        "assocPersonAuthGroupList",
+        "assocPersonAuthGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "assocPersonPersonUlan",
+      "required": "n"
+    },
+    {
+      "fieldname": "assocPerson",
+      "transforms": {},
+      "source_type": "refname",
+      "source_name": "authority refname",
+      "namespace": "chronologies_common",
+      "xpath": [
+        "assocPersonAuthGroupList",
+        "assocPersonAuthGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "assocPersonRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "assocPerson",
+      "transforms": {},
+      "source_type": "refname",
+      "source_name": "authority refname",
+      "namespace": "chronologies_common",
+      "xpath": [
+        "assocPersonAuthGroupList",
+        "assocPersonAuthGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "assocPersonAuthGroup_assocPersonRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "assocPerson",
+      "transforms": {},
+      "source_type": "refname",
+      "source_name": "authority refname",
+      "namespace": "chronologies_common",
+      "xpath": [
+        "assocPersonAuthGroupList",
+        "assocPersonAuthGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "assocPersonAuthGroup_assocPersonRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "assocPersonType",
+      "transforms": {
+        "vocabulary": "assocauthorityrelationtype"
+      },
+      "source_type": "vocabulary",
+      "source_name": "assocauthorityrelationtype",
+      "namespace": "chronologies_common",
+      "xpath": [
+        "assocPersonAuthGroupList",
+        "assocPersonAuthGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "assocPersonType",
+      "required": "n"
+    },
+    {
+      "fieldname": "assocPersonType",
+      "transforms": {},
+      "source_type": "refname",
+      "source_name": "vocabulary refname",
+      "namespace": "chronologies_common",
+      "xpath": [
+        "assocPersonAuthGroupList",
+        "assocPersonAuthGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "assocPersonTypeRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "assocPersonType",
+      "transforms": {},
+      "source_type": "refname",
+      "source_name": "vocabulary refname",
+      "namespace": "chronologies_common",
+      "xpath": [
+        "assocPersonAuthGroupList",
+        "assocPersonAuthGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "assocPersonAuthGroup_assocPersonTypeRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "assocPersonType",
+      "transforms": {},
+      "source_type": "refname",
+      "source_name": "vocabulary refname",
+      "namespace": "chronologies_common",
+      "xpath": [
+        "assocPersonAuthGroupList",
+        "assocPersonAuthGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "assocPersonAuthGroup_assocPersonTypeRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "assocPersonStructuredDateGroup",
+      "transforms": {},
+      "source_type": "na",
+      "source_name": "na",
+      "namespace": "chronologies_common",
+      "xpath": [
+        "assocPersonAuthGroupList",
+        "assocPersonAuthGroup"
+      ],
+      "data_type": "structured date group",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "assocPersonStructuredDateGroup",
+      "required": "n"
+    },
+    {
+      "fieldname": "assocPersonCitation",
+      "transforms": {
+        "authority": [
+          "citationauthorities",
+          "citation"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "citation/local",
+      "namespace": "chronologies_common",
+      "xpath": [
+        "assocPersonAuthGroupList",
+        "assocPersonAuthGroup",
+        "assocPersonCitations"
+      ],
+      "data_type": "string",
+      "repeats": "y",
+      "in_repeating_group": "as part of larger repeating group",
+      "opt_list_values": [],
+      "datacolumn": "assocPersonCitationCitationLocal",
+      "required": "n"
+    },
+    {
+      "fieldname": "assocPersonCitation",
+      "transforms": {
+        "authority": [
+          "citationauthorities",
+          "worldcat"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "citation/worldcat",
+      "namespace": "chronologies_common",
+      "xpath": [
+        "assocPersonAuthGroupList",
+        "assocPersonAuthGroup",
+        "assocPersonCitations"
+      ],
+      "data_type": "string",
+      "repeats": "y",
+      "in_repeating_group": "as part of larger repeating group",
+      "opt_list_values": [],
+      "datacolumn": "assocPersonCitationCitationWorldcat",
+      "required": "n"
+    },
+    {
+      "fieldname": "assocPersonCitation",
+      "transforms": {},
+      "source_type": "refname",
+      "source_name": "authority refname",
+      "namespace": "chronologies_common",
+      "xpath": [
+        "assocPersonAuthGroupList",
+        "assocPersonAuthGroup",
+        "assocPersonCitations"
+      ],
+      "data_type": "csrefname",
+      "repeats": "y",
+      "in_repeating_group": "as part of larger repeating group",
+      "opt_list_values": [],
+      "datacolumn": "assocPersonCitationRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "assocPersonCitation",
+      "transforms": {},
+      "source_type": "refname",
+      "source_name": "authority refname",
+      "namespace": "chronologies_common",
+      "xpath": [
+        "assocPersonAuthGroupList",
+        "assocPersonAuthGroup",
+        "assocPersonCitations"
+      ],
+      "data_type": "csrefname",
+      "repeats": "y",
+      "in_repeating_group": "as part of larger repeating group",
+      "opt_list_values": [],
+      "datacolumn": "assocPersonCitations_assocPersonCitationRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "assocPersonCitation",
+      "transforms": {},
+      "source_type": "refname",
+      "source_name": "authority refname",
+      "namespace": "chronologies_common",
+      "xpath": [
+        "assocPersonAuthGroupList",
+        "assocPersonAuthGroup",
+        "assocPersonCitations"
+      ],
+      "data_type": "csrefname",
+      "repeats": "y",
+      "in_repeating_group": "as part of larger repeating group",
+      "opt_list_values": [],
+      "datacolumn": "assocPersonCitations_assocPersonCitationRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "assocPersonNote",
+      "transforms": {},
+      "source_type": "na",
+      "source_name": "na",
+      "namespace": "chronologies_common",
+      "xpath": [
+        "assocPersonAuthGroupList",
+        "assocPersonAuthGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "assocPersonNote",
+      "required": "n"
+    },
+    {
+      "fieldname": "assocPeople",
+      "transforms": {
+        "authority": [
+          "conceptauthorities",
+          "concept"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "concept/associated",
+      "namespace": "chronologies_common",
+      "xpath": [
+        "assocPeopleAuthGroupList",
+        "assocPeopleAuthGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "assocPeopleConceptAssociated",
+      "required": "n"
+    },
+    {
+      "fieldname": "assocPeople",
+      "transforms": {},
+      "source_type": "refname",
+      "source_name": "authority refname",
+      "namespace": "chronologies_common",
+      "xpath": [
+        "assocPeopleAuthGroupList",
+        "assocPeopleAuthGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "assocPeopleRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "assocPeople",
+      "transforms": {},
+      "source_type": "refname",
+      "source_name": "authority refname",
+      "namespace": "chronologies_common",
+      "xpath": [
+        "assocPeopleAuthGroupList",
+        "assocPeopleAuthGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "assocPeopleAuthGroup_assocPeopleRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "assocPeople",
+      "transforms": {},
+      "source_type": "refname",
+      "source_name": "authority refname",
+      "namespace": "chronologies_common",
+      "xpath": [
+        "assocPeopleAuthGroupList",
+        "assocPeopleAuthGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "assocPeopleAuthGroup_assocPeopleRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "assocPeopleType",
+      "transforms": {
+        "vocabulary": "assocauthorityrelationtype"
+      },
+      "source_type": "vocabulary",
+      "source_name": "assocauthorityrelationtype",
+      "namespace": "chronologies_common",
+      "xpath": [
+        "assocPeopleAuthGroupList",
+        "assocPeopleAuthGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "assocPeopleType",
+      "required": "n"
+    },
+    {
+      "fieldname": "assocPeopleType",
+      "transforms": {},
+      "source_type": "refname",
+      "source_name": "vocabulary refname",
+      "namespace": "chronologies_common",
+      "xpath": [
+        "assocPeopleAuthGroupList",
+        "assocPeopleAuthGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "assocPeopleTypeRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "assocPeopleType",
+      "transforms": {},
+      "source_type": "refname",
+      "source_name": "vocabulary refname",
+      "namespace": "chronologies_common",
+      "xpath": [
+        "assocPeopleAuthGroupList",
+        "assocPeopleAuthGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "assocPeopleAuthGroup_assocPeopleTypeRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "assocPeopleType",
+      "transforms": {},
+      "source_type": "refname",
+      "source_name": "vocabulary refname",
+      "namespace": "chronologies_common",
+      "xpath": [
+        "assocPeopleAuthGroupList",
+        "assocPeopleAuthGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "assocPeopleAuthGroup_assocPeopleTypeRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "assocPeopleStructuredDateGroup",
+      "transforms": {},
+      "source_type": "na",
+      "source_name": "na",
+      "namespace": "chronologies_common",
+      "xpath": [
+        "assocPeopleAuthGroupList",
+        "assocPeopleAuthGroup"
+      ],
+      "data_type": "structured date group",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "assocPeopleStructuredDateGroup",
+      "required": "n"
+    },
+    {
+      "fieldname": "assocPeopleCitation",
+      "transforms": {
+        "authority": [
+          "citationauthorities",
+          "citation"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "citation/local",
+      "namespace": "chronologies_common",
+      "xpath": [
+        "assocPeopleAuthGroupList",
+        "assocPeopleAuthGroup",
+        "assocPeopleCitations"
+      ],
+      "data_type": "string",
+      "repeats": "y",
+      "in_repeating_group": "as part of larger repeating group",
+      "opt_list_values": [],
+      "datacolumn": "assocPeopleCitationCitationLocal",
+      "required": "n"
+    },
+    {
+      "fieldname": "assocPeopleCitation",
+      "transforms": {
+        "authority": [
+          "citationauthorities",
+          "worldcat"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "citation/worldcat",
+      "namespace": "chronologies_common",
+      "xpath": [
+        "assocPeopleAuthGroupList",
+        "assocPeopleAuthGroup",
+        "assocPeopleCitations"
+      ],
+      "data_type": "string",
+      "repeats": "y",
+      "in_repeating_group": "as part of larger repeating group",
+      "opt_list_values": [],
+      "datacolumn": "assocPeopleCitationCitationWorldcat",
+      "required": "n"
+    },
+    {
+      "fieldname": "assocPeopleCitation",
+      "transforms": {},
+      "source_type": "refname",
+      "source_name": "authority refname",
+      "namespace": "chronologies_common",
+      "xpath": [
+        "assocPeopleAuthGroupList",
+        "assocPeopleAuthGroup",
+        "assocPeopleCitations"
+      ],
+      "data_type": "csrefname",
+      "repeats": "y",
+      "in_repeating_group": "as part of larger repeating group",
+      "opt_list_values": [],
+      "datacolumn": "assocPeopleCitationRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "assocPeopleCitation",
+      "transforms": {},
+      "source_type": "refname",
+      "source_name": "authority refname",
+      "namespace": "chronologies_common",
+      "xpath": [
+        "assocPeopleAuthGroupList",
+        "assocPeopleAuthGroup",
+        "assocPeopleCitations"
+      ],
+      "data_type": "csrefname",
+      "repeats": "y",
+      "in_repeating_group": "as part of larger repeating group",
+      "opt_list_values": [],
+      "datacolumn": "assocPeopleCitations_assocPeopleCitationRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "assocPeopleCitation",
+      "transforms": {},
+      "source_type": "refname",
+      "source_name": "authority refname",
+      "namespace": "chronologies_common",
+      "xpath": [
+        "assocPeopleAuthGroupList",
+        "assocPeopleAuthGroup",
+        "assocPeopleCitations"
+      ],
+      "data_type": "csrefname",
+      "repeats": "y",
+      "in_repeating_group": "as part of larger repeating group",
+      "opt_list_values": [],
+      "datacolumn": "assocPeopleCitations_assocPeopleCitationRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "assocPeopleNote",
+      "transforms": {},
+      "source_type": "na",
+      "source_name": "na",
+      "namespace": "chronologies_common",
+      "xpath": [
+        "assocPeopleAuthGroupList",
+        "assocPeopleAuthGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "assocPeopleNote",
+      "required": "n"
+    },
+    {
+      "fieldname": "assocOrganization",
+      "transforms": {
+        "authority": [
+          "orgauthorities",
+          "organization"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "organization/local",
+      "namespace": "chronologies_common",
+      "xpath": [
+        "assocOrganizationAuthGroupList",
+        "assocOrganizationAuthGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "assocOrganizationOrganizationLocal",
+      "required": "n"
+    },
+    {
+      "fieldname": "assocOrganization",
+      "transforms": {
+        "authority": [
+          "orgauthorities",
+          "ulan_oa"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "organization/ulan",
+      "namespace": "chronologies_common",
+      "xpath": [
+        "assocOrganizationAuthGroupList",
+        "assocOrganizationAuthGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "assocOrganizationOrganizationUlan",
+      "required": "n"
+    },
+    {
+      "fieldname": "assocOrganization",
+      "transforms": {},
+      "source_type": "refname",
+      "source_name": "authority refname",
+      "namespace": "chronologies_common",
+      "xpath": [
+        "assocOrganizationAuthGroupList",
+        "assocOrganizationAuthGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "assocOrganizationRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "assocOrganization",
+      "transforms": {},
+      "source_type": "refname",
+      "source_name": "authority refname",
+      "namespace": "chronologies_common",
+      "xpath": [
+        "assocOrganizationAuthGroupList",
+        "assocOrganizationAuthGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "assocOrganizationAuthGroup_assocOrganizationRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "assocOrganization",
+      "transforms": {},
+      "source_type": "refname",
+      "source_name": "authority refname",
+      "namespace": "chronologies_common",
+      "xpath": [
+        "assocOrganizationAuthGroupList",
+        "assocOrganizationAuthGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "assocOrganizationAuthGroup_assocOrganizationRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "assocOrganizationType",
+      "transforms": {
+        "vocabulary": "assocauthorityrelationtype"
+      },
+      "source_type": "vocabulary",
+      "source_name": "assocauthorityrelationtype",
+      "namespace": "chronologies_common",
+      "xpath": [
+        "assocOrganizationAuthGroupList",
+        "assocOrganizationAuthGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "assocOrganizationType",
+      "required": "n"
+    },
+    {
+      "fieldname": "assocOrganizationType",
+      "transforms": {},
+      "source_type": "refname",
+      "source_name": "vocabulary refname",
+      "namespace": "chronologies_common",
+      "xpath": [
+        "assocOrganizationAuthGroupList",
+        "assocOrganizationAuthGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "assocOrganizationTypeRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "assocOrganizationType",
+      "transforms": {},
+      "source_type": "refname",
+      "source_name": "vocabulary refname",
+      "namespace": "chronologies_common",
+      "xpath": [
+        "assocOrganizationAuthGroupList",
+        "assocOrganizationAuthGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "assocOrganizationAuthGroup_assocOrganizationTypeRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "assocOrganizationType",
+      "transforms": {},
+      "source_type": "refname",
+      "source_name": "vocabulary refname",
+      "namespace": "chronologies_common",
+      "xpath": [
+        "assocOrganizationAuthGroupList",
+        "assocOrganizationAuthGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "assocOrganizationAuthGroup_assocOrganizationTypeRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "assocOrganizationStructuredDateGroup",
+      "transforms": {},
+      "source_type": "na",
+      "source_name": "na",
+      "namespace": "chronologies_common",
+      "xpath": [
+        "assocOrganizationAuthGroupList",
+        "assocOrganizationAuthGroup"
+      ],
+      "data_type": "structured date group",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "assocOrganizationStructuredDateGroup",
+      "required": "n"
+    },
+    {
+      "fieldname": "assocOrganizationCitation",
+      "transforms": {
+        "authority": [
+          "citationauthorities",
+          "citation"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "citation/local",
+      "namespace": "chronologies_common",
+      "xpath": [
+        "assocOrganizationAuthGroupList",
+        "assocOrganizationAuthGroup",
+        "assocOrganizationCitations"
+      ],
+      "data_type": "string",
+      "repeats": "y",
+      "in_repeating_group": "as part of larger repeating group",
+      "opt_list_values": [],
+      "datacolumn": "assocOrganizationCitationCitationLocal",
+      "required": "n"
+    },
+    {
+      "fieldname": "assocOrganizationCitation",
+      "transforms": {
+        "authority": [
+          "citationauthorities",
+          "worldcat"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "citation/worldcat",
+      "namespace": "chronologies_common",
+      "xpath": [
+        "assocOrganizationAuthGroupList",
+        "assocOrganizationAuthGroup",
+        "assocOrganizationCitations"
+      ],
+      "data_type": "string",
+      "repeats": "y",
+      "in_repeating_group": "as part of larger repeating group",
+      "opt_list_values": [],
+      "datacolumn": "assocOrganizationCitationCitationWorldcat",
+      "required": "n"
+    },
+    {
+      "fieldname": "assocOrganizationCitation",
+      "transforms": {},
+      "source_type": "refname",
+      "source_name": "authority refname",
+      "namespace": "chronologies_common",
+      "xpath": [
+        "assocOrganizationAuthGroupList",
+        "assocOrganizationAuthGroup",
+        "assocOrganizationCitations"
+      ],
+      "data_type": "csrefname",
+      "repeats": "y",
+      "in_repeating_group": "as part of larger repeating group",
+      "opt_list_values": [],
+      "datacolumn": "assocOrganizationCitationRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "assocOrganizationCitation",
+      "transforms": {},
+      "source_type": "refname",
+      "source_name": "authority refname",
+      "namespace": "chronologies_common",
+      "xpath": [
+        "assocOrganizationAuthGroupList",
+        "assocOrganizationAuthGroup",
+        "assocOrganizationCitations"
+      ],
+      "data_type": "csrefname",
+      "repeats": "y",
+      "in_repeating_group": "as part of larger repeating group",
+      "opt_list_values": [],
+      "datacolumn": "assocOrganizationCitations_assocOrganizationCitationRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "assocOrganizationCitation",
+      "transforms": {},
+      "source_type": "refname",
+      "source_name": "authority refname",
+      "namespace": "chronologies_common",
+      "xpath": [
+        "assocOrganizationAuthGroupList",
+        "assocOrganizationAuthGroup",
+        "assocOrganizationCitations"
+      ],
+      "data_type": "csrefname",
+      "repeats": "y",
+      "in_repeating_group": "as part of larger repeating group",
+      "opt_list_values": [],
+      "datacolumn": "assocOrganizationCitations_assocOrganizationCitationRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "assocOrganizationNote",
+      "transforms": {},
+      "source_type": "na",
+      "source_name": "na",
+      "namespace": "chronologies_common",
+      "xpath": [
+        "assocOrganizationAuthGroupList",
+        "assocOrganizationAuthGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "assocOrganizationNote",
+      "required": "n"
+    },
+    {
+      "fieldname": "assocConcept",
+      "transforms": {
+        "authority": [
+          "conceptauthorities",
+          "activity"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "concept/activity",
+      "namespace": "chronologies_common",
+      "xpath": [
+        "assocConceptAuthGroupList",
+        "assocConceptAuthGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "assocConceptConceptActivity",
+      "required": "n"
+    },
+    {
+      "fieldname": "assocConcept",
+      "transforms": {
+        "authority": [
+          "conceptauthorities",
+          "concept"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "concept/associated",
+      "namespace": "chronologies_common",
+      "xpath": [
+        "assocConceptAuthGroupList",
+        "assocConceptAuthGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "assocConceptConceptAssociated",
+      "required": "n"
+    },
+    {
+      "fieldname": "assocConcept",
+      "transforms": {
+        "authority": [
+          "conceptauthorities",
+          "material_ca"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "concept/material",
+      "namespace": "chronologies_common",
+      "xpath": [
+        "assocConceptAuthGroupList",
+        "assocConceptAuthGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "assocConceptConceptMaterial",
+      "required": "n"
+    },
+    {
+      "fieldname": "assocConcept",
+      "transforms": {
+        "authority": [
+          "conceptauthorities",
+          "nomenclature"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "concept/nomenclature",
+      "namespace": "chronologies_common",
+      "xpath": [
+        "assocConceptAuthGroupList",
+        "assocConceptAuthGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "assocConceptConceptNomenclature",
+      "required": "n"
+    },
+    {
+      "fieldname": "assocConcept",
+      "transforms": {
+        "authority": [
+          "conceptauthorities",
+          "occasion"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "concept/occasion",
+      "namespace": "chronologies_common",
+      "xpath": [
+        "assocConceptAuthGroupList",
+        "assocConceptAuthGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "assocConceptConceptOccasion",
+      "required": "n"
+    },
+    {
+      "fieldname": "assocConcept",
+      "transforms": {
+        "authority": [
+          "conceptauthorities",
+          "archculture"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "concept/archculture",
+      "namespace": "chronologies_common",
+      "xpath": [
+        "assocConceptAuthGroupList",
+        "assocConceptAuthGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "assocConceptConceptArchculture",
+      "required": "n"
+    },
+    {
+      "fieldname": "assocConcept",
+      "transforms": {},
+      "source_type": "refname",
+      "source_name": "authority refname",
+      "namespace": "chronologies_common",
+      "xpath": [
+        "assocConceptAuthGroupList",
+        "assocConceptAuthGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "assocConceptRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "assocConcept",
+      "transforms": {},
+      "source_type": "refname",
+      "source_name": "authority refname",
+      "namespace": "chronologies_common",
+      "xpath": [
+        "assocConceptAuthGroupList",
+        "assocConceptAuthGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "assocConceptAuthGroup_assocConceptRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "assocConcept",
+      "transforms": {},
+      "source_type": "refname",
+      "source_name": "authority refname",
+      "namespace": "chronologies_common",
+      "xpath": [
+        "assocConceptAuthGroupList",
+        "assocConceptAuthGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "assocConceptAuthGroup_assocConceptRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "assocConceptType",
+      "transforms": {
+        "vocabulary": "assocauthorityrelationtype"
+      },
+      "source_type": "vocabulary",
+      "source_name": "assocauthorityrelationtype",
+      "namespace": "chronologies_common",
+      "xpath": [
+        "assocConceptAuthGroupList",
+        "assocConceptAuthGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "assocConceptType",
+      "required": "n"
+    },
+    {
+      "fieldname": "assocConceptType",
+      "transforms": {},
+      "source_type": "refname",
+      "source_name": "vocabulary refname",
+      "namespace": "chronologies_common",
+      "xpath": [
+        "assocConceptAuthGroupList",
+        "assocConceptAuthGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "assocConceptTypeRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "assocConceptType",
+      "transforms": {},
+      "source_type": "refname",
+      "source_name": "vocabulary refname",
+      "namespace": "chronologies_common",
+      "xpath": [
+        "assocConceptAuthGroupList",
+        "assocConceptAuthGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "assocConceptAuthGroup_assocConceptTypeRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "assocConceptType",
+      "transforms": {},
+      "source_type": "refname",
+      "source_name": "vocabulary refname",
+      "namespace": "chronologies_common",
+      "xpath": [
+        "assocConceptAuthGroupList",
+        "assocConceptAuthGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "assocConceptAuthGroup_assocConceptTypeRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "assocConceptStructuredDateGroup",
+      "transforms": {},
+      "source_type": "na",
+      "source_name": "na",
+      "namespace": "chronologies_common",
+      "xpath": [
+        "assocConceptAuthGroupList",
+        "assocConceptAuthGroup"
+      ],
+      "data_type": "structured date group",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "assocConceptStructuredDateGroup",
+      "required": "n"
+    },
+    {
+      "fieldname": "assocConceptCitation",
+      "transforms": {
+        "authority": [
+          "citationauthorities",
+          "citation"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "citation/local",
+      "namespace": "chronologies_common",
+      "xpath": [
+        "assocConceptAuthGroupList",
+        "assocConceptAuthGroup",
+        "assocConceptCitations"
+      ],
+      "data_type": "string",
+      "repeats": "y",
+      "in_repeating_group": "as part of larger repeating group",
+      "opt_list_values": [],
+      "datacolumn": "assocConceptCitationCitationLocal",
+      "required": "n"
+    },
+    {
+      "fieldname": "assocConceptCitation",
+      "transforms": {
+        "authority": [
+          "citationauthorities",
+          "worldcat"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "citation/worldcat",
+      "namespace": "chronologies_common",
+      "xpath": [
+        "assocConceptAuthGroupList",
+        "assocConceptAuthGroup",
+        "assocConceptCitations"
+      ],
+      "data_type": "string",
+      "repeats": "y",
+      "in_repeating_group": "as part of larger repeating group",
+      "opt_list_values": [],
+      "datacolumn": "assocConceptCitationCitationWorldcat",
+      "required": "n"
+    },
+    {
+      "fieldname": "assocConceptCitation",
+      "transforms": {},
+      "source_type": "refname",
+      "source_name": "authority refname",
+      "namespace": "chronologies_common",
+      "xpath": [
+        "assocConceptAuthGroupList",
+        "assocConceptAuthGroup",
+        "assocConceptCitations"
+      ],
+      "data_type": "csrefname",
+      "repeats": "y",
+      "in_repeating_group": "as part of larger repeating group",
+      "opt_list_values": [],
+      "datacolumn": "assocConceptCitationRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "assocConceptCitation",
+      "transforms": {},
+      "source_type": "refname",
+      "source_name": "authority refname",
+      "namespace": "chronologies_common",
+      "xpath": [
+        "assocConceptAuthGroupList",
+        "assocConceptAuthGroup",
+        "assocConceptCitations"
+      ],
+      "data_type": "csrefname",
+      "repeats": "y",
+      "in_repeating_group": "as part of larger repeating group",
+      "opt_list_values": [],
+      "datacolumn": "assocConceptCitations_assocConceptCitationRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "assocConceptCitation",
+      "transforms": {},
+      "source_type": "refname",
+      "source_name": "authority refname",
+      "namespace": "chronologies_common",
+      "xpath": [
+        "assocConceptAuthGroupList",
+        "assocConceptAuthGroup",
+        "assocConceptCitations"
+      ],
+      "data_type": "csrefname",
+      "repeats": "y",
+      "in_repeating_group": "as part of larger repeating group",
+      "opt_list_values": [],
+      "datacolumn": "assocConceptCitations_assocConceptCitationRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "assocConceptNote",
+      "transforms": {},
+      "source_type": "na",
+      "source_name": "na",
+      "namespace": "chronologies_common",
+      "xpath": [
+        "assocConceptAuthGroupList",
+        "assocConceptAuthGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "assocConceptNote",
+      "required": "n"
+    },
+    {
+      "fieldname": "assocPlace",
+      "transforms": {
+        "authority": [
+          "placeauthorities",
+          "place"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "place/local",
+      "namespace": "chronologies_common",
+      "xpath": [
+        "assocPlaceAuthGroupList",
+        "assocPlaceAuthGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "assocPlacePlaceLocal",
+      "required": "n"
+    },
+    {
+      "fieldname": "assocPlace",
+      "transforms": {
+        "authority": [
+          "placeauthorities",
+          "tgn_place"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "place/tgn",
+      "namespace": "chronologies_common",
+      "xpath": [
+        "assocPlaceAuthGroupList",
+        "assocPlaceAuthGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "assocPlacePlaceTgn",
+      "required": "n"
+    },
+    {
+      "fieldname": "assocPlace",
+      "transforms": {},
+      "source_type": "refname",
+      "source_name": "authority refname",
+      "namespace": "chronologies_common",
+      "xpath": [
+        "assocPlaceAuthGroupList",
+        "assocPlaceAuthGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "assocPlaceRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "assocPlace",
+      "transforms": {},
+      "source_type": "refname",
+      "source_name": "authority refname",
+      "namespace": "chronologies_common",
+      "xpath": [
+        "assocPlaceAuthGroupList",
+        "assocPlaceAuthGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "assocPlaceAuthGroup_assocPlaceRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "assocPlace",
+      "transforms": {},
+      "source_type": "refname",
+      "source_name": "authority refname",
+      "namespace": "chronologies_common",
+      "xpath": [
+        "assocPlaceAuthGroupList",
+        "assocPlaceAuthGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "assocPlaceAuthGroup_assocPlaceRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "assocPlaceType",
+      "transforms": {
+        "vocabulary": "assocauthorityrelationtype"
+      },
+      "source_type": "vocabulary",
+      "source_name": "assocauthorityrelationtype",
+      "namespace": "chronologies_common",
+      "xpath": [
+        "assocPlaceAuthGroupList",
+        "assocPlaceAuthGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "assocPlaceType",
+      "required": "n"
+    },
+    {
+      "fieldname": "assocPlaceType",
+      "transforms": {},
+      "source_type": "refname",
+      "source_name": "vocabulary refname",
+      "namespace": "chronologies_common",
+      "xpath": [
+        "assocPlaceAuthGroupList",
+        "assocPlaceAuthGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "assocPlaceTypeRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "assocPlaceType",
+      "transforms": {},
+      "source_type": "refname",
+      "source_name": "vocabulary refname",
+      "namespace": "chronologies_common",
+      "xpath": [
+        "assocPlaceAuthGroupList",
+        "assocPlaceAuthGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "assocPlaceAuthGroup_assocPlaceTypeRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "assocPlaceType",
+      "transforms": {},
+      "source_type": "refname",
+      "source_name": "vocabulary refname",
+      "namespace": "chronologies_common",
+      "xpath": [
+        "assocPlaceAuthGroupList",
+        "assocPlaceAuthGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "assocPlaceAuthGroup_assocPlaceTypeRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "assocPlaceStructuredDateGroup",
+      "transforms": {},
+      "source_type": "na",
+      "source_name": "na",
+      "namespace": "chronologies_common",
+      "xpath": [
+        "assocPlaceAuthGroupList",
+        "assocPlaceAuthGroup"
+      ],
+      "data_type": "structured date group",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "assocPlaceStructuredDateGroup",
+      "required": "n"
+    },
+    {
+      "fieldname": "assocPlaceCitation",
+      "transforms": {
+        "authority": [
+          "citationauthorities",
+          "citation"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "citation/local",
+      "namespace": "chronologies_common",
+      "xpath": [
+        "assocPlaceAuthGroupList",
+        "assocPlaceAuthGroup",
+        "assocPlaceCitations"
+      ],
+      "data_type": "string",
+      "repeats": "y",
+      "in_repeating_group": "as part of larger repeating group",
+      "opt_list_values": [],
+      "datacolumn": "assocPlaceCitationCitationLocal",
+      "required": "n"
+    },
+    {
+      "fieldname": "assocPlaceCitation",
+      "transforms": {
+        "authority": [
+          "citationauthorities",
+          "worldcat"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "citation/worldcat",
+      "namespace": "chronologies_common",
+      "xpath": [
+        "assocPlaceAuthGroupList",
+        "assocPlaceAuthGroup",
+        "assocPlaceCitations"
+      ],
+      "data_type": "string",
+      "repeats": "y",
+      "in_repeating_group": "as part of larger repeating group",
+      "opt_list_values": [],
+      "datacolumn": "assocPlaceCitationCitationWorldcat",
+      "required": "n"
+    },
+    {
+      "fieldname": "assocPlaceCitation",
+      "transforms": {},
+      "source_type": "refname",
+      "source_name": "authority refname",
+      "namespace": "chronologies_common",
+      "xpath": [
+        "assocPlaceAuthGroupList",
+        "assocPlaceAuthGroup",
+        "assocPlaceCitations"
+      ],
+      "data_type": "csrefname",
+      "repeats": "y",
+      "in_repeating_group": "as part of larger repeating group",
+      "opt_list_values": [],
+      "datacolumn": "assocPlaceCitationRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "assocPlaceCitation",
+      "transforms": {},
+      "source_type": "refname",
+      "source_name": "authority refname",
+      "namespace": "chronologies_common",
+      "xpath": [
+        "assocPlaceAuthGroupList",
+        "assocPlaceAuthGroup",
+        "assocPlaceCitations"
+      ],
+      "data_type": "csrefname",
+      "repeats": "y",
+      "in_repeating_group": "as part of larger repeating group",
+      "opt_list_values": [],
+      "datacolumn": "assocPlaceCitations_assocPlaceCitationRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "assocPlaceCitation",
+      "transforms": {},
+      "source_type": "refname",
+      "source_name": "authority refname",
+      "namespace": "chronologies_common",
+      "xpath": [
+        "assocPlaceAuthGroupList",
+        "assocPlaceAuthGroup",
+        "assocPlaceCitations"
+      ],
+      "data_type": "csrefname",
+      "repeats": "y",
+      "in_repeating_group": "as part of larger repeating group",
+      "opt_list_values": [],
+      "datacolumn": "assocPlaceCitations_assocPlaceCitationRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "assocPlaceNote",
+      "transforms": {},
+      "source_type": "na",
+      "source_name": "na",
+      "namespace": "chronologies_common",
+      "xpath": [
+        "assocPlaceAuthGroupList",
+        "assocPlaceAuthGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "assocPlaceNote",
+      "required": "n"
+    },
+    {
+      "fieldname": "assocChronology",
+      "transforms": {
+        "authority": [
+          "chronologyauthorities",
+          "era"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "chronology/era",
+      "namespace": "chronologies_common",
+      "xpath": [
+        "assocChronologyAuthGroupList",
+        "assocChronologyAuthGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "assocChronologyChronologyEra",
+      "required": "n"
+    },
+    {
+      "fieldname": "assocChronology",
+      "transforms": {
+        "authority": [
+          "chronologyauthorities",
+          "event"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "chronology/event",
+      "namespace": "chronologies_common",
+      "xpath": [
+        "assocChronologyAuthGroupList",
+        "assocChronologyAuthGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "assocChronologyChronologyEvent",
+      "required": "n"
+    },
+    {
+      "fieldname": "assocChronology",
+      "transforms": {
+        "authority": [
+          "chronologyauthorities",
+          "field_collection"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "chronology/fieldcollection",
+      "namespace": "chronologies_common",
+      "xpath": [
+        "assocChronologyAuthGroupList",
+        "assocChronologyAuthGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "assocChronologyChronologyFieldcollection",
+      "required": "n"
+    },
+    {
+      "fieldname": "assocChronology",
+      "transforms": {},
+      "source_type": "refname",
+      "source_name": "authority refname",
+      "namespace": "chronologies_common",
+      "xpath": [
+        "assocChronologyAuthGroupList",
+        "assocChronologyAuthGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "assocChronologyRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "assocChronology",
+      "transforms": {},
+      "source_type": "refname",
+      "source_name": "authority refname",
+      "namespace": "chronologies_common",
+      "xpath": [
+        "assocChronologyAuthGroupList",
+        "assocChronologyAuthGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "assocChronologyAuthGroup_assocChronologyRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "assocChronology",
+      "transforms": {},
+      "source_type": "refname",
+      "source_name": "authority refname",
+      "namespace": "chronologies_common",
+      "xpath": [
+        "assocChronologyAuthGroupList",
+        "assocChronologyAuthGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "assocChronologyAuthGroup_assocChronologyRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "assocChronologyType",
+      "transforms": {
+        "vocabulary": "assocauthorityrelationtype"
+      },
+      "source_type": "vocabulary",
+      "source_name": "assocauthorityrelationtype",
+      "namespace": "chronologies_common",
+      "xpath": [
+        "assocChronologyAuthGroupList",
+        "assocChronologyAuthGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "assocChronologyType",
+      "required": "n"
+    },
+    {
+      "fieldname": "assocChronologyType",
+      "transforms": {},
+      "source_type": "refname",
+      "source_name": "vocabulary refname",
+      "namespace": "chronologies_common",
+      "xpath": [
+        "assocChronologyAuthGroupList",
+        "assocChronologyAuthGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "assocChronologyTypeRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "assocChronologyType",
+      "transforms": {},
+      "source_type": "refname",
+      "source_name": "vocabulary refname",
+      "namespace": "chronologies_common",
+      "xpath": [
+        "assocChronologyAuthGroupList",
+        "assocChronologyAuthGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "assocChronologyAuthGroup_assocChronologyTypeRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "assocChronologyType",
+      "transforms": {},
+      "source_type": "refname",
+      "source_name": "vocabulary refname",
+      "namespace": "chronologies_common",
+      "xpath": [
+        "assocChronologyAuthGroupList",
+        "assocChronologyAuthGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "assocChronologyAuthGroup_assocChronologyTypeRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "assocChronologyStructuredDateGroup",
+      "transforms": {},
+      "source_type": "na",
+      "source_name": "na",
+      "namespace": "chronologies_common",
+      "xpath": [
+        "assocChronologyAuthGroupList",
+        "assocChronologyAuthGroup"
+      ],
+      "data_type": "structured date group",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "assocChronologyStructuredDateGroup",
+      "required": "n"
+    },
+    {
+      "fieldname": "assocChronologyCitation",
+      "transforms": {
+        "authority": [
+          "citationauthorities",
+          "citation"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "citation/local",
+      "namespace": "chronologies_common",
+      "xpath": [
+        "assocChronologyAuthGroupList",
+        "assocChronologyAuthGroup",
+        "assocChronologyCitations"
+      ],
+      "data_type": "string",
+      "repeats": "y",
+      "in_repeating_group": "as part of larger repeating group",
+      "opt_list_values": [],
+      "datacolumn": "assocChronologyCitationCitationLocal",
+      "required": "n"
+    },
+    {
+      "fieldname": "assocChronologyCitation",
+      "transforms": {
+        "authority": [
+          "citationauthorities",
+          "worldcat"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "citation/worldcat",
+      "namespace": "chronologies_common",
+      "xpath": [
+        "assocChronologyAuthGroupList",
+        "assocChronologyAuthGroup",
+        "assocChronologyCitations"
+      ],
+      "data_type": "string",
+      "repeats": "y",
+      "in_repeating_group": "as part of larger repeating group",
+      "opt_list_values": [],
+      "datacolumn": "assocChronologyCitationCitationWorldcat",
+      "required": "n"
+    },
+    {
+      "fieldname": "assocChronologyCitation",
+      "transforms": {},
+      "source_type": "refname",
+      "source_name": "authority refname",
+      "namespace": "chronologies_common",
+      "xpath": [
+        "assocChronologyAuthGroupList",
+        "assocChronologyAuthGroup",
+        "assocChronologyCitations"
+      ],
+      "data_type": "csrefname",
+      "repeats": "y",
+      "in_repeating_group": "as part of larger repeating group",
+      "opt_list_values": [],
+      "datacolumn": "assocChronologyCitationRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "assocChronologyCitation",
+      "transforms": {},
+      "source_type": "refname",
+      "source_name": "authority refname",
+      "namespace": "chronologies_common",
+      "xpath": [
+        "assocChronologyAuthGroupList",
+        "assocChronologyAuthGroup",
+        "assocChronologyCitations"
+      ],
+      "data_type": "csrefname",
+      "repeats": "y",
+      "in_repeating_group": "as part of larger repeating group",
+      "opt_list_values": [],
+      "datacolumn": "assocChronologyCitations_assocChronologyCitationRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "assocChronologyCitation",
+      "transforms": {},
+      "source_type": "refname",
+      "source_name": "authority refname",
+      "namespace": "chronologies_common",
+      "xpath": [
+        "assocChronologyAuthGroupList",
+        "assocChronologyAuthGroup",
+        "assocChronologyCitations"
+      ],
+      "data_type": "csrefname",
+      "repeats": "y",
+      "in_repeating_group": "as part of larger repeating group",
+      "opt_list_values": [],
+      "datacolumn": "assocChronologyCitations_assocChronologyCitationRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "assocChronologyNote",
+      "transforms": {},
+      "source_type": "na",
+      "source_name": "na",
+      "namespace": "chronologies_common",
+      "xpath": [
+        "assocChronologyAuthGroupList",
+        "assocChronologyAuthGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "assocChronologyNote",
+      "required": "n"
+    }
+  ]
+}
