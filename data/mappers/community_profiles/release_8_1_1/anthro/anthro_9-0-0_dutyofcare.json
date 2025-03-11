@@ -1,0 +1,369 @@
+{
+  "config": {
+    "profile_basename": "anthro",
+    "version": "9.0.0",
+    "recordtype": "dutyofcare",
+    "document_name": "dutyofcares",
+    "service_name": "Dutyofcare",
+    "service_path": "dutiesofcare",
+    "service_type": "procedure",
+    "object_name": "Dutyofcare",
+    "ns_uri": {
+      "dutiesofcare_common": "http://collectionspace.org/services/dutyofcare"
+    },
+    "identifier_field": "dutyOfCareNumber",
+    "search_field": "dutyOfCareNumber"
+  },
+  "docstructure": {
+    "dutiesofcare_common": {
+      "notes": {},
+      "partiesInvolvedGroupList": {
+        "partiesInvolvedGroup": {}
+      },
+      "detailGroupList": {
+        "detailGroup": {}
+      }
+    }
+  },
+  "mappings": [
+    {
+      "fieldname": "dutyOfCareNumber",
+      "transforms": {},
+      "source_type": "na",
+      "source_name": "na",
+      "namespace": "dutiesofcare_common",
+      "xpath": [],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [],
+      "datacolumn": "dutyOfCareNumber",
+      "required": "y"
+    },
+    {
+      "fieldname": "dutyOfCareTitle",
+      "transforms": {},
+      "source_type": "na",
+      "source_name": "na",
+      "namespace": "dutiesofcare_common",
+      "xpath": [],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [],
+      "datacolumn": "dutyOfCareTitle",
+      "required": "n"
+    },
+    {
+      "fieldname": "originationDate",
+      "transforms": {},
+      "source_type": "na",
+      "source_name": "na",
+      "namespace": "dutiesofcare_common",
+      "xpath": [],
+      "data_type": "date",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [],
+      "datacolumn": "originationDate",
+      "required": "n"
+    },
+    {
+      "fieldname": "note",
+      "transforms": {},
+      "source_type": "na",
+      "source_name": "na",
+      "namespace": "dutiesofcare_common",
+      "xpath": [
+        "notes"
+      ],
+      "data_type": "string",
+      "repeats": "y",
+      "in_repeating_group": "n",
+      "opt_list_values": [],
+      "datacolumn": "note",
+      "required": "n"
+    },
+    {
+      "fieldname": "involvedParty",
+      "transforms": {
+        "authority": [
+          "personauthorities",
+          "person"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "person/local",
+      "namespace": "dutiesofcare_common",
+      "xpath": [
+        "partiesInvolvedGroupList",
+        "partiesInvolvedGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "involvedPartyPersonLocal",
+      "required": "n"
+    },
+    {
+      "fieldname": "involvedParty",
+      "transforms": {},
+      "source_type": "refname",
+      "source_name": "authority refname",
+      "namespace": "dutiesofcare_common",
+      "xpath": [
+        "partiesInvolvedGroupList",
+        "partiesInvolvedGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "involvedPartyRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "involvedOnBehalfOf",
+      "transforms": {
+        "authority": [
+          "orgauthorities",
+          "organization"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "organization/local",
+      "namespace": "dutiesofcare_common",
+      "xpath": [
+        "partiesInvolvedGroupList",
+        "partiesInvolvedGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "involvedOnBehalfOfOrganizationLocal",
+      "required": "n"
+    },
+    {
+      "fieldname": "involvedOnBehalfOf",
+      "transforms": {},
+      "source_type": "refname",
+      "source_name": "authority refname",
+      "namespace": "dutiesofcare_common",
+      "xpath": [
+        "partiesInvolvedGroupList",
+        "partiesInvolvedGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "involvedOnBehalfOfRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "involvedRole",
+      "transforms": {
+        "vocabulary": "nagprainvolvedrole"
+      },
+      "source_type": "vocabulary",
+      "source_name": "nagprainvolvedrole",
+      "namespace": "dutiesofcare_common",
+      "xpath": [
+        "partiesInvolvedGroupList",
+        "partiesInvolvedGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "involvedRole",
+      "required": "n"
+    },
+    {
+      "fieldname": "involvedRole",
+      "transforms": {},
+      "source_type": "refname",
+      "source_name": "vocabulary refname",
+      "namespace": "dutiesofcare_common",
+      "xpath": [
+        "partiesInvolvedGroupList",
+        "partiesInvolvedGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "involvedRoleRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "detailType",
+      "transforms": {
+        "vocabulary": "nagpratype"
+      },
+      "source_type": "vocabulary",
+      "source_name": "nagpratype",
+      "namespace": "dutiesofcare_common",
+      "xpath": [
+        "detailGroupList",
+        "detailGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "detailType",
+      "required": "n"
+    },
+    {
+      "fieldname": "detailType",
+      "transforms": {},
+      "source_type": "refname",
+      "source_name": "vocabulary refname",
+      "namespace": "dutiesofcare_common",
+      "xpath": [
+        "detailGroupList",
+        "detailGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "detailTypeRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "detailLevel",
+      "transforms": {
+        "vocabulary": "nagpralevel"
+      },
+      "source_type": "vocabulary",
+      "source_name": "nagpralevel",
+      "namespace": "dutiesofcare_common",
+      "xpath": [
+        "detailGroupList",
+        "detailGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "detailLevel",
+      "required": "n"
+    },
+    {
+      "fieldname": "detailLevel",
+      "transforms": {},
+      "source_type": "refname",
+      "source_name": "vocabulary refname",
+      "namespace": "dutiesofcare_common",
+      "xpath": [
+        "detailGroupList",
+        "detailGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "detailLevelRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "detailDeterminedBy",
+      "transforms": {
+        "authority": [
+          "personauthorities",
+          "person"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "person/local",
+      "namespace": "dutiesofcare_common",
+      "xpath": [
+        "detailGroupList",
+        "detailGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "detailDeterminedByPersonLocal",
+      "required": "n"
+    },
+    {
+      "fieldname": "detailDeterminedBy",
+      "transforms": {
+        "authority": [
+          "orgauthorities",
+          "organization"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "organization/local",
+      "namespace": "dutiesofcare_common",
+      "xpath": [
+        "detailGroupList",
+        "detailGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "detailDeterminedByOrganizationLocal",
+      "required": "n"
+    },
+    {
+      "fieldname": "detailDeterminedBy",
+      "transforms": {},
+      "source_type": "refname",
+      "source_name": "authority refname",
+      "namespace": "dutiesofcare_common",
+      "xpath": [
+        "detailGroupList",
+        "detailGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "detailDeterminedByRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "detailDeterminationDate",
+      "transforms": {},
+      "source_type": "na",
+      "source_name": "na",
+      "namespace": "dutiesofcare_common",
+      "xpath": [
+        "detailGroupList",
+        "detailGroup"
+      ],
+      "data_type": "date",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "detailDeterminationDate",
+      "required": "n"
+    },
+    {
+      "fieldname": "detailNote",
+      "transforms": {},
+      "source_type": "na",
+      "source_name": "na",
+      "namespace": "dutiesofcare_common",
+      "xpath": [
+        "detailGroupList",
+        "detailGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "detailNote",
+      "required": "n"
+    }
+  ]
+}
