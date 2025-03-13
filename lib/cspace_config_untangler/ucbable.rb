@@ -25,15 +25,22 @@ module CspaceConfigUntangler
         fieldconfig.keys == ["annotationGroup"]
     end
 
-    # Reported in DRYD-1710
+    # Reported in DRYD-1710, DRYD-1723
     # @param form [CCU::Forms::Form]
     def ucb_wrongly_inherited_form?(form)
       case form.profile.name
-      when /^ucbg/
+      when /^(ucbg|ucjeps)/
         %w[public timebased].include?(form.name)
       else
         false
       end
+    end
+
+    def ucb_controlled_by_missing_authority?
+      # Reported in DRYD-1724
+      true if profile.name.start_with?("ucjeps") &&
+        name == "assocPeople" &&
+        %w[chronology person place].include?(rectype.name)
     end
 
     def ucb_second_adv_search_ns?(rectype)

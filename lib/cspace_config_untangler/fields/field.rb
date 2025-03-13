@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require_relative "../field_map/field_mapper"
+require_relative "../ucbable"
 require_relative "../upgrade_warner"
 require_relative "../value_sources"
 
@@ -9,6 +10,8 @@ module CspaceConfigUntangler
     # Merges fields configuration field definition information into forms field
     # information
     class Field
+      include Ucbable
+
       attr_reader :name, :label, :ns, :ns_for_id, :panel, :ui_path, :id,
         :schema_path,
         :repeats, :in_repeating_group,
@@ -219,7 +222,9 @@ module CspaceConfigUntangler
             rectype.name == "collectionobject" &&
             name == "contentConcept"
           CCU.upgrade_warner.call(target_version: "next release",
-            issue: "DRYD-1648")
+                                  issue: "DRYD-1648")
+        elsif ucb_controlled_by_missing_authority?
+          return
         else
           CCU.log.warn(
             "DATA SOURCES: #{field_def.config.namespace_signature} - #{@id} - "\
