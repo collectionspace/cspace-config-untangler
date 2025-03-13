@@ -152,7 +152,7 @@ module CspaceConfigUntangler
       end
 
       def get_name
-        return "namespaceWrapper" if namespace_wrapper_props?(config)
+        return "namespaceWrapper" if ucb_namespace_wrapper_props?(config)
         return config["name"] if config.key?("name")
         return "propsHolder" if config.key?("props")
         return "childHolder" if config.key?("children")
@@ -177,7 +177,7 @@ module CspaceConfigUntangler
       end
 
       def get_ns
-        return config["name"] if namespace_wrapper_props?(config)
+        return config["name"] if ucb_namespace_wrapper_props?(config)
         return subpath_ns if subpath_ns
         return parent.ns if parent
 
