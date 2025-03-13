@@ -10,7 +10,8 @@ module CspaceConfigUntangler
 
     def ucb_known_keysig?(props)
       ucb_namespace_wrapper_props?(props) ||
-        ucb_children_labelmessage_name?(props)
+        ucb_children_labelmessage_name?(props) ||
+        ucb_children_labelmessage_name_subpath?(props)
     end
 
     # Reported in DRYD-1709
@@ -29,6 +30,14 @@ module CspaceConfigUntangler
       return unless props.profile.name.match?(/^(ucjeps)/)
 
       props.config.keys.sort == %w[children labelMessage name]
+    end
+
+    # Reported in DRYD-1729
+    # @param props [CCU::Form::Props]
+    def ucb_children_labelmessage_name_subpath?(props)
+      return unless props.profile.name.match?(/^(ucjeps)/)
+
+      props.config.keys.sort == %w[children labelMessage name subpath]
     end
 
     # Reported in DRYD-1708

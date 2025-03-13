@@ -251,6 +251,7 @@ module CspaceConfigUntangler
 
         return true if keysigs.include?(keys)
         return true if ucb_children_labelmessage_name?(self)
+        return true if ucb_children_labelmessage_name_subpath?(self)
 
         false
       end
