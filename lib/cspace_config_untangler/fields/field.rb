@@ -222,9 +222,9 @@ module CspaceConfigUntangler
             rectype.name == "collectionobject" &&
             name == "contentConcept"
           CCU.upgrade_warner.call(target_version: "next release",
-                                  issue: "DRYD-1648")
+            issue: "DRYD-1648")
         elsif ucb_controlled_by_missing_authority?
-          return
+          nil
         else
           CCU.log.warn(
             "DATA SOURCES: #{field_def.config.namespace_signature} - #{@id} - "\
