@@ -108,7 +108,7 @@ module CspaceConfigUntangler
       def check_keysigs(props)
         keysig = props.keys.sort
         return if KNOWN_KEYSIGS.include?(keysig)
-        return if namespace_wrapper_props?(props.config)
+        return if ucb_namespace_wrapper_props?(props.config)
 
         CCU.log.error("FORM STRUCTURE: UNKNOWN PROPS KEYSIG: "\
                       "#{keysig.inspect} in #{props.warning_id}. "\

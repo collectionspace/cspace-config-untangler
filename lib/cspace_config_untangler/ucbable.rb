@@ -10,7 +10,7 @@ module CspaceConfigUntangler
 
     # Reported in DRYD-1709
     # @param config [Hash] form props object
-    def namespace_wrapper_props?(config)
+    def ucb_namespace_wrapper_props?(config)
       config.key?("name") &&
         namespace?(config["name"]) &&
         config.key?("subpath") &&
