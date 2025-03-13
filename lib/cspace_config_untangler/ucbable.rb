@@ -11,6 +11,11 @@ module CspaceConfigUntangler
     # Reported in DRYD-1709
     # @param config [Hash] form props object
     def ucb_namespace_wrapper_props?(config)
+      return unless respond_to?(:profile) &&
+        profile.name.match?(/^(ucbg|ucjeps)/)
+      return unless respond_to?(:props) &&
+        props.profile.name.match?(/^(ucbg|ucjeps)/)
+
       config.key?("name") &&
         namespace?(config["name"]) &&
         config.key?("subpath") &&
