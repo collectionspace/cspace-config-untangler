@@ -43,11 +43,7 @@ module CspaceConfigUntangler
       def field_config = config["template"]["props"]
 
       # param field [CCU::Forms::Field]
-      def add_field(field)
-        return if ignored?(field)
-
-        fields << field
-      end
+      def add_field(field) = fields << field
 
       def disabled?
         disabled = config.dig("disabled")
@@ -84,19 +80,6 @@ module CspaceConfigUntangler
 
       def force_disabled?
         ucb_wrongly_inherited_form?(self) || false
-      end
-
-      # @todo move to Props.skippable?
-      def ignored?(field)
-        # This logic loop prevents failure for of publicart work due to an
-        # inconsistency in the config described at
-        # https://collectionspace.atlassian.net/browse/DRYD-882. This was
-        # resolved in 7.0, but we keep it because this needs to support
-        # 6.1 as well
-        true if field.name == "addressCounty" &&
-          rectype.name == "work" &&
-          profile.name.start_with?("publicart") &&
-          CCU.release.lt("7_0")
       end
     end
   end
