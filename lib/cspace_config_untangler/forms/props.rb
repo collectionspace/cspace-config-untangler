@@ -89,6 +89,7 @@ module CspaceConfigUntangler
         return true if keys == %w[defaultMessage id values]
         return true if keys == %w[name showDetachButton]
         return true if core?
+        return true if pre_7_publicart_work_addressCounty?
 
         false
       end
@@ -347,6 +348,18 @@ module CspaceConfigUntangler
           profile.name.start_with?("materials") &&
           rectype.name == "collectionobject" &&
           form.name == "public"
+      end
+
+      def pre_7_publicart_work_addressCounty?
+        # This logic loop prevents failure for of publicart work due to an
+        # inconsistency in the config described at
+        # https://collectionspace.atlassian.net/browse/DRYD-882. This was
+        # resolved in 7.0, but we keep it because this needs to support
+        # 6.1 as well
+        true if CCU.release.lt("7_0") &&
+          profile.name.start_with?("publicart") &&
+          rectype.name == "work" &&
+          name == "addressCounty"
       end
     end
   end
