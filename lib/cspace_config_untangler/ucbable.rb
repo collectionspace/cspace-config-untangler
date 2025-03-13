@@ -21,7 +21,7 @@ module CspaceConfigUntangler
     end
 
     # Reported in DRYD-1709
-    # @param config [CCU::Form::Props]
+    # @param props [CCU::Form::Props]
     def ucb_namespace_wrapper_props?(props)
       return unless props.profile.name.match?(/^(ucbg|ucjeps)/)
 
@@ -31,7 +31,7 @@ module CspaceConfigUntangler
     end
 
     # Reported in DRYD-1726
-    # @param config [CCU::Form::Props]
+    # @param props [CCU::Form::Props]
     def ucb_children_labelmessage_name?(props)
       return unless props.profile.name.match?(/^(ucjeps)/)
 
