@@ -71,6 +71,8 @@ children
 
 |1 |["children", "labelMessage", "name"] | capture; extract message; iterate children
 
+|1 |["children", "labelMessage", "name", "subpath"] | capture; extract message; iterate children
+
 |? |["children", "name", "subpath", "tabular"] |when name is a namespace and subpath is empty: capture name as namespace; iterate children
 |===
 
@@ -265,6 +267,7 @@ Treatment detail::
 {"name"=>"info", "collapsible"=>true, "children"=>[{"key"=>nil, "ref"=>nil, "props"=>{"name"=>"title"}, "_owner"=>nil}, {"key"=>nil, "ref"=>nil, "props"=>{"children"=>[{"key"=>nil, "ref"=>nil, "props"=>{"children"=>[{"key"=>nil, "ref"=>nil, "props"=>{"name"=>"responsibleDepartment"}, "_owner"=>nil}, {"key"=>nil, "ref"=>nil, "props"=>{"name"=>"owner"}, "_owner"=>nil}]}, "_owner"=>nil}, {"key"=>nil, "ref"=>nil, "props"=>{"children"=>{"key"=>nil, "ref"=>nil, "props"=>{"children"=>[{"key"=>nil, "ref"=>nil, "props"=>{"name"=>"groupEarliestSingleDate"}, "_owner"=>nil}, {"key"=>nil, "ref"=>nil, "props"=>{"name"=>"groupLatestDate"}, "_owner"=>nil}]}, "_owner"=>nil}}, "_owner"=>nil}]}, "_owner"=>nil}, {"key"=>nil, "ref"=>nil, "props"=>{"name"=>"scopeNote"}, "_owner"=>nil}]}
 ....
 
+[#children-name-subpath]
 ==== children, name, subpath
 
 Description/understanding::
@@ -429,6 +432,16 @@ See <<a1,related Override patterns section>>.
 
 Untangler treatment: extract message data from `labelMessage`, then treat as <<children-name>>.
 
+==== children, labelMessage, name, subpath
+
+Currently used once in UCJEPS profile.
+
+See <<a1,related Override patterns section>>.
+
+`+labelMessage+` is also covered in <<ruk1,Rarely Used Keys>>.
+
+Untangler treatment: extract message data from `labelMessage`, then treat as <<children-name-subpath>>.
+
 === Override patterns
 
 ==== Field normally appears in a repeatable field group, but is displayed as a standalone repeatable field in profile
@@ -529,6 +542,24 @@ Used once in UCJEPS:
   ]
 }
 ----
+
+Used once in UCJEPS:
+
+[source,javascript]
+----
+"props": {
+  "name": "localityGroupList",
+  "subpath": "ns2:collectionobjects_naturalhistory",
+  "labelMessage": {
+    "id": "field.collectionobjects_naturalhistory.localityGroup.name",
+    "defaultMessage": "Locality"
+  },
+  "children": {
+    ...lots of fields...
+  }
+}
+----
+
 
 === Rarely used keys
 
