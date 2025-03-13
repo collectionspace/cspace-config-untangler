@@ -87,5 +87,25 @@ RSpec.describe CCU::Forms::Form do
         "record.contact.collectionName"].sort
       expect(result.ids).to eq(expected)
     end
+
+    context "when UCBG profile", skip: "to implement: extraction of message "\
+      "from labelMessage" do
+      let(:release) { "lyr" }
+      let(:profilename) { "ucjeps_3-0-0-rc-2" }
+      let(:rectypes) { ["collectionobject"] }
+
+      context "when collectorLabel template" do
+        let(:templatename) { "collectorLabel" }
+
+        it "returns as expected" do
+          expect(result.ids).to include(
+            "field.collectionobjects_naturalhistory.localityGroup.name"
+          )
+          expect(result.ids).to include(
+            "field.collectionobjects_common.referenceGroup.name"
+          )
+        end
+      end
+    end
   end
 end
