@@ -8,19 +8,27 @@ module CspaceConfigUntangler
   module Ucbable
     include Namespaceable
 
-    # Reported in DRYD-1709
-    # @param config [Hash] form props object
-    def ucb_namespace_wrapper_props?(config)
-      return unless respond_to?(:profile) &&
-        profile.name.match?(/^(ucbg|ucjeps)/)
-      return unless respond_to?(:props) &&
-        props.profile.name.match?(/^(ucbg|ucjeps)/)
+    def ucb_known_keysig?(props)
+      ucb_namespace_wrapper_props?(props) ||
+        ucb_children_labelmessage_name?(props)
+    end
 
-      config.key?("name") &&
-        namespace?(config["name"]) &&
-        config.key?("subpath") &&
-        config["subpath"].empty? &&
-        config.key?("children")
+    # Reported in DRYD-1709
+    # @param config [CCU::Form::Props]
+    def ucb_namespace_wrapper_props?(props)
+      return unless props.profile.name.match?(/^(ucbg|ucjeps)/)
+
+      props.config.keys.sort == %w[children name subpath tabular] &&
+        props.namespace?(props.config["name"]) &&
+        props.config["subpath"].empty?
+    end
+
+    # Reported in DRYD-1726
+    # @param config [CCU::Form::Props]
+    def ucb_children_labelmessage_name?(props)
+      return unless props.profile.name.match?(/^(ucjeps)/)
+
+      props.config.keys.sort == %w[children labelMessage name]
     end
 
     # Reported in DRYD-1708

@@ -109,7 +109,7 @@ module CspaceConfigUntangler
         keysig = props.keys.sort
         return if keysig.empty? #Separate empty props warning is emitted
         return if KNOWN_KEYSIGS.include?(keysig)
-        return if ucb_namespace_wrapper_props?(props.config)
+        return if ucb_known_keysig?(props)
 
         CCU.log.error("FORM STRUCTURE: UNKNOWN PROPS KEYSIG: "\
                       "#{keysig.inspect} in #{props.warning_id}. "\

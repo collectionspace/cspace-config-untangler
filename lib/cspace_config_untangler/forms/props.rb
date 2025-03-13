@@ -152,7 +152,7 @@ module CspaceConfigUntangler
       end
 
       def get_name
-        return "namespaceWrapper" if ucb_namespace_wrapper_props?(config)
+        return "namespaceWrapper" if ucb_namespace_wrapper_props?(self)
         return config["name"] if config.key?("name")
         return "propsHolder" if config.key?("props")
         return "childHolder" if config.key?("children")
@@ -177,7 +177,7 @@ module CspaceConfigUntangler
       end
 
       def get_ns
-        return config["name"] if ucb_namespace_wrapper_props?(config)
+        return config["name"] if ucb_namespace_wrapper_props?(self)
         return subpath_ns if subpath_ns
         return parent.ns if parent
 
@@ -249,7 +249,10 @@ module CspaceConfigUntangler
           %w[children name tabular]
         ]
 
-        true if keysigs.include?(keys)
+        return true if keysigs.include?(keys)
+        return true if ucb_children_labelmessage_name?(self)
+
+        false
       end
 
       def populate_ui_path
