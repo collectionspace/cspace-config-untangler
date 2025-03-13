@@ -8,6 +8,12 @@ module CspaceConfigUntangler
   module Ucbable
     include Namespaceable
 
+    def ucb_skippable_form_field?(props)
+      props.profile.name.start_with?("ucjeps") &&
+        props.rectype.name == "collectionobject" &&
+        props.name == "numberOfObjects"
+    end
+
     def ucb_known_keysig?(props)
       ucb_namespace_wrapper_props?(props) ||
         ucb_children_labelmessage_name?(props) ||

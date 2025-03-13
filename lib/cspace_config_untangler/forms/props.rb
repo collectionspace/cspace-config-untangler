@@ -90,6 +90,7 @@ module CspaceConfigUntangler
         return true if keys == %w[name showDetachButton]
         return true if core?
         return true if pre_7_publicart_work_addressCounty?
+        return true if ucb_skippable_form_field?(self)
 
         false
       end
