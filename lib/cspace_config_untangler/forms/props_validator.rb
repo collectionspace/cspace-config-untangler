@@ -107,6 +107,7 @@ module CspaceConfigUntangler
 
       def check_keysigs(props)
         keysig = props.keys.sort
+        return if keysig.empty? #Separate empty props warning is emitted
         return if KNOWN_KEYSIGS.include?(keysig)
         return if ucb_namespace_wrapper_props?(props.config)
 
