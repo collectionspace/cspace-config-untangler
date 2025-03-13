@@ -49,7 +49,10 @@ module CspaceConfigUntangler
     end
 
     def ucb_second_adv_search_ns?(rectype)
-      rectype.profile.name.start_with?("ucbg") && rectype.name == "loanout"
+      true if rectype.profile.name.start_with?("ucbg") &&
+        rectype.name == "loanout"
+      true if rectype.profile.name.start_with?("ucjeps") &&
+        rectype.name == "loanin"
     end
 
     def ucb_third_adv_search_ns?(rectype)
