@@ -69,7 +69,6 @@ children
 
 |1 |["defaultMessage", "id", "values"] |ignore
 
-
 |1 |["children", "labelMessage", "name"] | capture; extract message; iterate children
 
 |1 |["children", "labelMessage", "name", "subpath"] | capture; extract message; iterate children
@@ -413,7 +412,6 @@ Used only once. See
 ==== children, name, subpath, tabular
 
 ===== WHERE name is a namespace and subpath is empty
-
 
 Currently used once in each of the following profiles:
 
