@@ -82,15 +82,15 @@ module CspaceConfigUntangler
       end
 
       def skippable?
-        return true if name == "hierarchy"
-        return true if name == "relation-list-item"
-        return true if bad_material_public_template_field?
-        return true if keys == ["style"]
-        return true if keys == %w[defaultMessage id values]
-        return true if keys == %w[name showDetachButton]
-        return true if core?
-        return true if pre_7_publicart_work_addressCounty?
-        return true if ucb_skippable_form_field?(self)
+        return true if name == "hierarchy" ||
+          name == "relation-list-item" ||
+          bad_material_public_template_field? ||
+          keys == ["style"] ||
+          keys == %w[defaultMessage id values] ||
+          keys == %w[name showDetachButton] ||
+          core? ||
+          pre_7_publicart_work_addressCounty? ||
+          ucb_skippable_form_field?(self)
 
         false
       end
