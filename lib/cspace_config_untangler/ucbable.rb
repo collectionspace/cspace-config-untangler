@@ -65,10 +65,10 @@ module CspaceConfigUntangler
     end
 
     def ucb_controlled_by_missing_authority?
-      # Reported in DRYD-1724
-      true if profile.name.start_with?("ucjeps") &&
-        name == "assocPeople" &&
-        %w[chronology person place].include?(rectype.name)
+      # Reported in DRYD-1724, DRYD-1730
+      true if profile.name.match?(/^(ucjeps|pahma)/) &&
+        %w[chronology person place].include?(rectype.name) &&
+        name == "assocPeople"
     end
 
     def ucb_second_adv_search_ns?(rectype)
