@@ -27,6 +27,7 @@ module CspaceConfigUntangler
 
     def config
       {
+        dataConfigType: "record type",
         profile_basename: @profile.basename,
         version: @profile.readable_version,
         recordtype: name,

@@ -1,5 +1,6 @@
 {
   "config": {
+    "dataConfigType": "record type",
     "profile_basename": "bonsai",
     "version": "7.0.0",
     "recordtype": "media",
@@ -32,7 +33,8 @@
       "typeList": {},
       "dateGroupList": {},
       "subjectList": {}
-    }
+    },
+    "blobs_common": {}
   },
   "mappings": [
     {
@@ -95,6 +97,48 @@
       "in_repeating_group": "n",
       "opt_list_values": [],
       "datacolumn": "publishToRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "name",
+      "transforms": {},
+      "source_type": "na",
+      "source_name": "na",
+      "namespace": "blobs_common",
+      "xpath": [],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [],
+      "datacolumn": "name",
+      "required": "n"
+    },
+    {
+      "fieldname": "mimeType",
+      "transforms": {},
+      "source_type": "na",
+      "source_name": "na",
+      "namespace": "blobs_common",
+      "xpath": [],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [],
+      "datacolumn": "mimeType",
+      "required": "n"
+    },
+    {
+      "fieldname": "length",
+      "transforms": {},
+      "source_type": "na",
+      "source_name": "na",
+      "namespace": "blobs_common",
+      "xpath": [],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [],
+      "datacolumn": "length",
       "required": "n"
     },
     {
