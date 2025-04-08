@@ -43,7 +43,8 @@ module CspaceConfigUntangler
         "type" => recordtype,
         "digest" => digest,
         "enabled" => true,
-        "url" => "#{CCU.mapper_uri_base}/#{subpath}"
+        "url" => "#{CCU.mapper_uri_base}/#{subpath}",
+        "dataConfigType" => "record type"
       }
     end
 
