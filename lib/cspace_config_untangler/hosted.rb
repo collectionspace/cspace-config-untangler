@@ -30,6 +30,13 @@ module CspaceConfigUntangler
 
     def services_url(base) = "#{site_url(base)}/cspace-services/"
 
+    def subdomain(base)
+      return "ohiohistory" if base == "ohc"
+      return base unless base.end_with?("staging")
+
+      base.sub("staging", ".staging")
+    end
+
     def delete_staging_if_prod(sites)
       sites.select { |site| site.match?(/staging$/) }
         .each { |site| delete_if_prod(sites, site) }
@@ -40,14 +47,6 @@ module CspaceConfigUntangler
       sites.delete(site) if sites.include?(tenant_base_name(site))
     end
     private_class_method(:delete_if_prod)
-
-    def subdomain(base)
-      return "ohiohistory" if base == "ohc"
-      return base unless base.end_with?("staging")
-
-      base.sub("staging", ".staging")
-    end
-    private_class_method(:subdomain)
 
     def tenant_base_name(base)
       return base unless base.end_with?("staging")

@@ -1,0 +1,956 @@
+{
+  "config": {
+    "dataConfigType": "optlist overrides",
+    "tenant_basename": "cinefiles"
+  },
+  "optlists": {
+    "dimensions": {
+      "area": "area",
+      "base": "base",
+      "circumference": "circumference",
+      "count": "count",
+      "depth": "depth",
+      "diameter": "diameter",
+      "height": "height",
+      "intended duration": "intended duration",
+      "length": "length",
+      "running-time": "running time",
+      "screen resolution": "screen resolution",
+      "target": "target",
+      "volume": "volume",
+      "weight": "weight",
+      "width": "width"
+    },
+    "measurementUnits": {
+      "carats": "carats",
+      "centimeters": "centimeters",
+      "cubic-centimeters": "cubic centimeters",
+      "dpi": "dots per inch",
+      "feet": "feet",
+      "hours": "hours",
+      "inches": "inches",
+      "kilograms": "kilograms",
+      "liters": "liters",
+      "millimeters": "millimeters",
+      "milliseconds": "milliseconds",
+      "meters": "meters",
+      "minutes": "minutes",
+      "ounces": "ounces",
+      "pixels": "pixels",
+      "pounds": "pounds",
+      "ppi": "pixels per inch",
+      "seconds": "seconds",
+      "square-feet": "square feet",
+      "stories": "stories",
+      "tons": "tons"
+    },
+    "booleans": {
+      "true": "yes",
+      "false": "no"
+    },
+    "yesNoValues": {
+      "yes": "yes",
+      "no": "no"
+    },
+    "dateQualifiers": {
+      "+/-": "+/-",
+      "+": "+",
+      "-": "-"
+    },
+    "departments": {
+      "antiquities": "Antiquities",
+      "architecture-design": "Architecture and Design",
+      "decorative-arts": "Decorative Arts",
+      "ethnography": "Ethnography",
+      "herpetology": "Herpetology",
+      "media-performance-art": "Media and Performance Art",
+      "paintings-sculpture": "Paintings and Sculpture",
+      "paleobotany": "Paleobotany",
+      "photographs": "Photographs",
+      "prints-drawings": "Prints and Drawings"
+    },
+    "loanPurposes": {
+      "exhibition": "exhibition",
+      "research": "research",
+      "scientificorexhibitpreparation": "scientific or exhibit preparation",
+      "analysis": "analysis",
+      "photography": "photography",
+      "conservationotherrequestedservices": "conservation or other requested services",
+      "longtermcollectionsmanagementandstorage": "long-term collections management and storage"
+    },
+    "accountStatuses": {
+      "active": "active",
+      "inactive": "inactive"
+    },
+    "acquisitionMethods": {
+      "bequest": "bequest",
+      "commission": "commission",
+      "found in collection": "found in collection",
+      "gift": "gift",
+      "purchase": "purchase",
+      "exchange": "exchange",
+      "transfer": "transfer",
+      "treasure": "treasure",
+      "unknown": "unknown"
+    },
+    "citationTermStatuses": {
+      "provisional": "provisional",
+      "under review": "under review",
+      "accepted": "accepted",
+      "rejected": "rejected"
+    },
+    "ageUnits": {
+      "days": "days",
+      "months": "months",
+      "weeks": "weeks",
+      "years": "years"
+    },
+    "collections": {
+      "library-collection": "library collection",
+      "permanent-collection": "permanent collection",
+      "study-collection": "study collection",
+      "teaching-collection": "teaching collection"
+    },
+    "contentObjectTypes": {
+      "furniture": "furniture",
+      "food": "food"
+    },
+    "forms": {
+      "dry": "dry",
+      "pinned": "pinned",
+      "thin-section": "thin section",
+      "wet": "wet"
+    },
+    "inscriptionTypes": {
+      "brand": "brand",
+      "credits": "credits",
+      "decoration": "decoration",
+      "estate-stamp": "estate stamp",
+      "graffiti": "graffiti",
+      "label": "label",
+      "maker's-mark": "maker's mark",
+      "plaque": "plaque",
+      "signage": "signage"
+    },
+    "measuredParts": {
+      "base": "base",
+      "frame": "frame",
+      "framed": "framed",
+      "image-size": "image size",
+      "mount": "mount",
+      "paper-size": "paper size",
+      "plate-size": "plate size",
+      "unframed": "unframed"
+    },
+    "measurementMethods": {
+      "microscopy_reticule": "microscopy (reticule)",
+      "standard_mesh_screen": "standard mesh/screen",
+      "sliding_calipers": "sliding calipers",
+      "spreading_calipers": "spreading calipers",
+      "measuring_tape_cloth": "measuring tape (cloth)",
+      "measuring_tape_metal": "measuring tape (metal)",
+      "osteometric_board": "osteometric board",
+      "ruler": "ruler",
+      "pacing_pedometer": "pacing pedometer",
+      "odometer": "odometer",
+      "taping_chaining": "taping/chaining",
+      "stadia_transit": "stadia/transit",
+      "optical_range_finder": "optical range finder",
+      "electronic_distance_measurement": "electronic distance measurement",
+      "protractor": "protractor",
+      "goniometer": "goniometer",
+      "theodolite_total_station": "theodolite/total station",
+      "balance_beam_scale": "balance/beam scale",
+      "spring_scale": "spring scale",
+      "hydraulic_or_pneumatic_scale": "hydraulic or pneumatic scale"
+    },
+    "nameCurrencies": {
+      "current": "current",
+      "archaic": "archaic"
+    },
+    "nameLevels": {
+      "group": "group",
+      "subgroup": "subgroup"
+    },
+    "nameSystems": {
+      "art-and-architecture-thesaurus": "Art & Architecture Thesaurus",
+      "nomenclature": "nomenclature"
+    },
+    "nameTypes": {
+      "classified": "classified",
+      "denomination": "denomination",
+      "simple": "simple",
+      "taxonomic": "taxonomic",
+      "typological": "typological"
+    },
+    "numberTypes": {
+      "associated uuid": "associated uuid",
+      "barcode": "barcode",
+      "lender": "lender",
+      "obsolete": "obsolete",
+      "previous": "previous",
+      "serial": "serial",
+      "unknown": "unknown"
+    },
+    "objectComponentNames": {
+      "blade": "blade",
+      "buttonhole": "buttonhole",
+      "handle": "handle",
+      "sleeve": "sleeve"
+    },
+    "objectStatuses": {
+      "copy": "copy",
+      "forgery": "forgery",
+      "holotype": "holotype",
+      "paralectotype": "paralectotype",
+      "paratype": "paratype",
+      "type": "type"
+    },
+    "ownershipAccessLevels": {
+      "limited": "limited",
+      "open": "open",
+      "restricted": "restricted"
+    },
+    "ownershipCategories": {
+      "company": "company",
+      "public": "public",
+      "private": "private"
+    },
+    "ownershipExchangeMethods": {
+      "bequest": "bequest",
+      "exchange": "exchange",
+      "gift": "gift",
+      "purchase": "purchase",
+      "transfer": "transfer",
+      "treasure": "treasure"
+    },
+    "phases": {
+      "adult": "adult",
+      "imago": "imago",
+      "larva": "larva",
+      "nymph": "nymph",
+      "pupa": "pupa"
+    },
+    "positions": {
+      "back": "back",
+      "base": "base",
+      "bottom": "bottom",
+      "front": "front",
+      "inside": "inside",
+      "left": "left",
+      "outside": "outside",
+      "recto": "recto",
+      "right": "right",
+      "rim": "rim",
+      "top": "top",
+      "verso": "verso"
+    },
+    "recordStatuses": {
+      "approved": "approved",
+      "in-process": "in process",
+      "new": "new",
+      "temporary": "temporary",
+      "review-media": "review media"
+    },
+    "scripts": {
+      "carolingian-miniscule": "Carolingian minuscule",
+      "gothic-script": "Gothic script",
+      "palmer-method": "Palmer method",
+      "roman-cursive": "Roman cursive",
+      "rustic-capitals": "rustic capitals",
+      "spencerian-method": "Spencerian method",
+      "square-capitals": "square capitals"
+    },
+    "sexes": {
+      "female": "female",
+      "male": "male"
+    },
+    "technicalAttributes": {
+      "magnetic-tape-type": "magnetic tape type",
+      "record-speed": "record speed"
+    },
+    "technicalAttributeMeasurements": {
+      "78": "78",
+      "metal": "metal"
+    },
+    "technicalAttributeMeasurementUnits": {
+      "rpm": "rpm"
+    },
+    "titleTypes": {
+      "assigned-by-artist": "assigned by artist",
+      "collection": "collection",
+      "generic": "generic",
+      "popular": "popular",
+      "series": "series",
+      "trade": "trade"
+    },
+    "objectParentTypes": {
+      "set": "set",
+      "derivative": "work (derivative)",
+      "separable-part": "work (separable part)",
+      "non-separable-part": "work (non-separable part)",
+      "recto": "work (recto)",
+      "verso": "work (verso)"
+    },
+    "objectChildTypes": {
+      "set": "item in a set",
+      "derivative": "derivative",
+      "separable-part": "separable part",
+      "non-separable-part": "non-separable part",
+      "recto": "recto",
+      "verso": "verso"
+    },
+    "conceptTermStatuses": {
+      "provisional": "provisional",
+      "under review": "under review",
+      "accepted": "accepted",
+      "rejected": "rejected"
+    },
+    "conceptTermTypes": {
+      "descriptor": "descriptor",
+      "alternate descriptor": "alternate descriptor",
+      "used for term": "used for term"
+    },
+    "conceptHistoricalStatuses": {
+      "current": "current",
+      "historical": "historical",
+      "both": "both",
+      "unknown": "unknown"
+    },
+    "objectAuditCategories": {
+      "low": "low",
+      "medium": "medium",
+      "high": "high"
+    },
+    "completenessLevels": {
+      "complete": "complete",
+      "fragmented": "fragmented",
+      "incomplete": "incomplete"
+    },
+    "conditions": {
+      "needsnowork": "needs no work",
+      "exhibitableneedswork": "exhibitable / needs work",
+      "notexhibitablestable": "not exhibitable / stable",
+      "injeopardy": "in jeopardy"
+    },
+    "conservationTreatmentPriorities": {
+      "low": "low",
+      "medium": "medium",
+      "high": "high"
+    },
+    "hazards": {
+      "poisonous": "poisonous",
+      "radioactive": "radioactive"
+    },
+    "conditionCheckMethods": {
+      "observed": "observed",
+      "xrayed": "x-rayed"
+    },
+    "conditionCheckReasons": {
+      "conservation": "conservation",
+      "damagedintransit": "damaged in transit",
+      "exhibition": "exhibition",
+      "loanin": "loan in",
+      "newacquisition": "new acquisition"
+    },
+    "salvagePriorityCodes": {
+      "low": "low",
+      "medium": "medium",
+      "high": "high"
+    },
+    "emailTypes": {
+      "business": "business",
+      "personal": "personal",
+      "other": "other"
+    },
+    "telephoneNumberTypes": {
+      "business": "business",
+      "personal": "home",
+      "mobile": "mobile",
+      "other": "other"
+    },
+    "faxNumberTypes": {
+      "business": "business",
+      "personal": "home",
+      "other": "other"
+    },
+    "webAddressTypes": {
+      "business": "business",
+      "personal": "personal",
+      "other": "other"
+    },
+    "addressTypes": {
+      "business": "business",
+      "home": "home",
+      "other": "other"
+    },
+    "addressCountries": {
+      "AF": "Afghanistan",
+      "AX": "Åland Islands",
+      "AL": "Albania",
+      "DZ": "Algeria",
+      "AS": "American Samoa",
+      "AD": "Andorra",
+      "AO": "Angola",
+      "AI": "Anguilla",
+      "AQ": "Antarctica",
+      "AG": "Antigua and Barbuda",
+      "AR": "Argentina",
+      "AM": "Armenia",
+      "AW": "Aruba",
+      "AU": "Australia",
+      "AT": "Austria",
+      "AZ": "Azerbaijan",
+      "BS": "Bahamas (the)",
+      "BH": "Bahrain",
+      "BD": "Bangladesh",
+      "BB": "Barbados",
+      "BY": "Belarus",
+      "BE": "Belgium",
+      "BZ": "Belize",
+      "BJ": "Benin",
+      "BM": "Bermuda",
+      "BT": "Bhutan",
+      "BO": "Bolivia (Plurinational State of)",
+      "BQ": "Bonaire, Sint Eustatius and Saba",
+      "BA": "Bosnia and Herzegovina",
+      "BW": "Botswana",
+      "BV": "Bouvet Island",
+      "BR": "Brazil",
+      "IO": "British Indian Ocean Territory (the)",
+      "BN": "Brunei Darussalam",
+      "BG": "Bulgaria",
+      "BF": "Burkina Faso",
+      "BI": "Burundi",
+      "KH": "Cambodia",
+      "CM": "Cameroon",
+      "CA": "Canada",
+      "CV": "Cape Verde",
+      "KY": "Cayman Islands (the)",
+      "CF": "Central African Republic (the)",
+      "TD": "Chad",
+      "CL": "Chile",
+      "CN": "China",
+      "CX": "Christmas Island",
+      "CC": "Cocos (Keeling) Islands (the)",
+      "CO": "Colombia",
+      "KM": "Comoros (the)",
+      "CG": "Congo (the)",
+      "CD": "Congo (the Democratic Republic of the)",
+      "CK": "Cook Islands (the)",
+      "CR": "Costa Rica",
+      "CI": "Côte d'Ivoire",
+      "HR": "Croatia",
+      "CU": "Cuba",
+      "CW": "Curaçao",
+      "CY": "Cyprus",
+      "CZ": "Czechia",
+      "DK": "Denmark",
+      "DJ": "Djibouti",
+      "DM": "Dominica",
+      "DO": "Dominican Republic (the)",
+      "EC": "Ecuador",
+      "EG": "Egypt",
+      "SV": "El Salvador",
+      "GQ": "Equatorial Guinea",
+      "ER": "Eritrea",
+      "EE": "Estonia",
+      "ET": "Ethiopia",
+      "FK": "Falkland Islands (the) [Malvinas]",
+      "FO": "Faroe Islands (the)",
+      "FJ": "Fiji",
+      "FI": "Finland",
+      "FR": "France",
+      "GF": "French Guiana",
+      "PF": "French Polynesia",
+      "TF": "French Southern Territories (the)",
+      "GA": "Gabon",
+      "GM": "Gambia (the)",
+      "GE": "Georgia",
+      "DE": "Germany",
+      "GH": "Ghana",
+      "GI": "Gibraltar",
+      "GR": "Greece",
+      "GL": "Greenland",
+      "GD": "Grenada",
+      "GP": "Guadeloupe",
+      "GU": "Guam",
+      "GT": "Guatemala",
+      "GG": "Guernsey",
+      "GN": "Guinea",
+      "GW": "Guinea-Bissau",
+      "GY": "Guyana",
+      "HT": "Haiti",
+      "HM": "Heard Island and McDonald Islands",
+      "VA": "Holy See (the)",
+      "HN": "Honduras",
+      "HK": "Hong Kong",
+      "HU": "Hungary",
+      "IS": "Iceland",
+      "IN": "India",
+      "ID": "Indonesia",
+      "IR": "Iran (Islamic Republic of)",
+      "IQ": "Iraq",
+      "IE": "Ireland",
+      "IM": "Isle of Man",
+      "IL": "Israel",
+      "IT": "Italy",
+      "JM": "Jamaica",
+      "JP": "Japan",
+      "JE": "Jersey",
+      "JO": "Jordan",
+      "KZ": "Kazakhstan",
+      "KE": "Kenya",
+      "KI": "Kiribati",
+      "KP": "Korea (the Democratic People's Republic of)",
+      "KR": "Korea (the Republic of)",
+      "KW": "Kuwait",
+      "KG": "Kyrgyzstan",
+      "LA": "Lao People's Democratic Republic (the)",
+      "LV": "Latvia",
+      "LB": "Lebanon",
+      "LS": "Lesotho",
+      "LR": "Liberia",
+      "LY": "Libya",
+      "LI": "Liechtenstein",
+      "LT": "Lithuania",
+      "LU": "Luxembourg",
+      "MO": "Macao",
+      "MK": "Macedonia (the former Yugoslav Republic of)",
+      "MG": "Madagascar",
+      "MW": "Malawi",
+      "MY": "Malaysia",
+      "MV": "Maldives",
+      "ML": "Mali",
+      "MT": "Malta",
+      "MH": "Marshall Islands (the)",
+      "MQ": "Martinique",
+      "MR": "Mauritania",
+      "MU": "Mauritius",
+      "YT": "Mayotte",
+      "MX": "Mexico",
+      "FM": "Micronesia (Federated States of)",
+      "MD": "Moldova (the Republic of)",
+      "MC": "Monaco",
+      "MN": "Mongolia",
+      "ME": "Montenegro",
+      "MS": "Montserrat",
+      "MA": "Morocco",
+      "MZ": "Mozambique",
+      "MM": "Myanmar",
+      "NA": "Namibia",
+      "NR": "Nauru",
+      "NP": "Nepal",
+      "NL": "Netherlands (the)",
+      "NC": "New Caledonia",
+      "NZ": "New Zealand",
+      "NI": "Nicaragua",
+      "NE": "Niger (the)",
+      "NG": "Nigeria",
+      "NU": "Niue",
+      "NF": "Norfolk Island",
+      "MP": "Northern Mariana Islands (the)",
+      "NO": "Norway",
+      "OM": "Oman",
+      "PK": "Pakistan",
+      "PW": "Palau",
+      "PS": "Palestine, State of",
+      "PA": "Panama",
+      "PG": "Papua New Guinea",
+      "PY": "Paraguay",
+      "PE": "Peru",
+      "PH": "Philippines (the)",
+      "PN": "Pitcairn",
+      "PL": "Poland",
+      "PT": "Portugal",
+      "PR": "Puerto Rico",
+      "QA": "Qatar",
+      "RE": "Réunion",
+      "RO": "Romania",
+      "RU": "Russian Federation (the)",
+      "RW": "Rwanda",
+      "BL": "Saint Barthélemy",
+      "SH": "Saint Helena, Ascension and Tristan da Cunha",
+      "KN": "Saint Kitts and Nevis",
+      "LC": "Saint Lucia",
+      "MF": "Saint Martin (French part)",
+      "PM": "Saint Pierre and Miquelon",
+      "VC": "Saint Vincent and the Grenadines",
+      "WS": "Samoa",
+      "SM": "San Marino",
+      "ST": "Sao Tome and Principe",
+      "SA": "Saudi Arabia",
+      "SN": "Senegal",
+      "RS": "Serbia",
+      "SC": "Seychelles",
+      "SL": "Sierra Leone",
+      "SG": "Singapore",
+      "SX": "Sint Maarten (Dutch part)",
+      "SK": "Slovakia",
+      "SI": "Slovenia",
+      "SB": "Solomon Islands",
+      "SO": "Somalia",
+      "ZA": "South Africa",
+      "GS": "South Georgia and the South Sandwich Islands",
+      "SS": "South Sudan",
+      "ES": "Spain",
+      "LK": "Sri Lanka",
+      "SD": "Sudan (the)",
+      "SR": "Suriname",
+      "SJ": "Svalbard and Jan Mayen",
+      "SZ": "Swaziland",
+      "SE": "Sweden",
+      "CH": "Switzerland",
+      "SY": "Syrian Arab Republic",
+      "TW": "Taiwan (Province of China)",
+      "TJ": "Tajikistan",
+      "TZ": "Tanzania, United Republic of",
+      "TH": "Thailand",
+      "TL": "Timor-Leste",
+      "TG": "Togo",
+      "TK": "Tokelau",
+      "TO": "Tonga",
+      "TT": "Trinidad and Tobago",
+      "TN": "Tunisia",
+      "TR": "Turkey",
+      "TM": "Turkmenistan",
+      "TC": "Turks and Caicos Islands (the)",
+      "TV": "Tuvalu",
+      "UG": "Uganda",
+      "UA": "Ukraine",
+      "AE": "United Arab Emirates (the)",
+      "GB": "United Kingdom of Great Britain and Northern Ireland (the)",
+      "US": "United States of America (the)",
+      "UM": "United States Minor Outlying Islands (the)",
+      "UY": "Uruguay",
+      "UZ": "Uzbekistan",
+      "VU": "Vanuatu",
+      "VE": "Venezuela (Bolivarian Republic of)",
+      "VN": "Viet Nam",
+      "VG": "Virgin Islands (British)",
+      "VI": "Virgin Islands (U.S.)",
+      "WF": "Wallis and Futuna",
+      "EH": "Western Sahara",
+      "YE": "Yemen",
+      "ZM": "Zambia",
+      "ZW": "Zimbabwe"
+    },
+    "exhibitionConsTreatmentStatuses": {
+      "Needed": "needed",
+      "Not needed": "not needed",
+      "Done": "done"
+    },
+    "exhibitionMountStatuses": {
+      "Needed": "needed",
+      "Not needed": "not needed",
+      "Done": "done"
+    },
+    "entryReasons": {
+      "enquiry": "enquiry",
+      "consideration": "consideration",
+      "commission": "commission",
+      "loan": "loan"
+    },
+    "installationType": {
+      "installation": "installation",
+      "deinstallation": "deinstallation",
+      "exhibition": "exhibition",
+      "exhibition update": "exhibition update"
+    },
+    "iterationSuccess": {
+      "yes": "yes",
+      "no": "no",
+      "partially": "partially"
+    },
+    "locationTermTypes": {
+      "descriptor": "descriptor",
+      "alternate descriptor": "alternate descriptor",
+      "used for term": "used for term"
+    },
+    "locationTermStatuses": {
+      "provisional": "provisional",
+      "under review": "under review",
+      "accepted": "accepted",
+      "rejected": "rejected"
+    },
+    "mediaTypes": {
+      "dataset": "dataset",
+      "document": "document",
+      "moving_image": "moving image",
+      "still_image": "still image",
+      "sound": "sound"
+    },
+    "locationFitnesses": {
+      "dangerous": "dangerous",
+      "suitable": "suitable",
+      "temporary": "temporary",
+      "unsuitable": "unsuitable"
+    },
+    "moveReasons": {
+      "collections-facility-move": "collections facility move",
+      "conservation": "conservation",
+      "exhibition": "exhibition",
+      "inventory": "inventory",
+      "loan": "loan",
+      "newstoragelocation": "new storage location",
+      "photography": "photography",
+      "research": "research"
+    },
+    "moveMethods": {
+      "forklift": "forklift",
+      "handcarried": "handcarried",
+      "trolley": "trolley"
+    },
+    "invActions": {
+      "conservation": "conservation",
+      "preservation": "preservation",
+      "re-housing": "re-housing"
+    },
+    "invFreqs": {
+      "daily": "daily",
+      "weekly": "weekly",
+      "monthly": "monthly",
+      "semi-annually": "semi-annually",
+      "annually": "annually"
+    },
+    "exitReasons": {
+      "deaccession": "deaccession",
+      "disposal": "disposal",
+      "returnofloan": "return of loan"
+    },
+    "exitMethods": {
+      "courier": "courier",
+      "inperson": "in person",
+      "post": "post"
+    },
+    "orgTermTypes": {
+      "descriptor": "descriptor",
+      "alternate descriptor": "alternate descriptor",
+      "used for term": "used for term"
+    },
+    "orgTermStatuses": {
+      "provisional": "provisional",
+      "under review": "under review",
+      "accepted": "accepted",
+      "rejected": "rejected"
+    },
+    "personTermStatuses": {
+      "provisional": "provisional",
+      "under review": "under review",
+      "accepted": "accepted",
+      "rejected": "rejected"
+    },
+    "personTermTypes": {
+      "descriptor": "descriptor",
+      "alternate descriptor": "alternate descriptor",
+      "used for term": "used for term"
+    },
+    "salutations": {
+      "dear": "Dear",
+      "hello": "Hello",
+      "to": "To"
+    },
+    "personTitles": {
+      "Admiral": "Admiral",
+      "Baron": "Baron",
+      "Baroness": "Baroness",
+      "Captain": "Captain",
+      "Commander": "Commander",
+      "Commodore": "Commodore",
+      "Count": "Count",
+      "Countess": "Countess",
+      "Dame": "Dame",
+      "Dr": "Dr",
+      "General": "General",
+      "Governor": "Governor",
+      "Honorable": "Honorable",
+      "Judge": "Judge",
+      "King": "King",
+      "Lady": "Lady",
+      "Lord": "Lord",
+      "Miss": "Miss",
+      "Mr": "Mr",
+      "Mrs": "Mrs",
+      "Ms": "Ms",
+      "Prince": "Prince",
+      "Princess": "Princess",
+      "Professor": "Professor",
+      "Queen": "Queen",
+      "Reverend": "Reverend",
+      "Saint": "Saint",
+      "Sir": "Sir"
+    },
+    "genders": {
+      "agender": "agender",
+      "bigender": "bigender",
+      "dyadic": "dyadic",
+      "female": "female",
+      "feminine": "feminine",
+      "gender-fluid": "gender-fluid",
+      "gender-neutral": "gender-neutral",
+      "gender-non-binary": "gender non-binary",
+      "genderqueer": "genderqueer",
+      "intersex": "intersex",
+      "male": "male",
+      "masculine": "masculine",
+      "pansexual": "pansexual",
+      "polygender": "polygender",
+      "questioning": "questioning",
+      "transgender": "transgender",
+      "transsexual": "transsexual",
+      "two-spirit": "two-spirit"
+    },
+    "placeTermTypes": {
+      "common": "common name",
+      "technical-scientific": "technical or scientific name",
+      "native": "native name",
+      "non-native": "non-native name",
+      "local": "local name",
+      "descriptive": "descriptive name",
+      "spelling-variant": "spelling variant"
+    },
+    "placeTermStatuses": {
+      "provisional": "provisional",
+      "under review": "under review",
+      "accepted": "accepted",
+      "rejected": "rejected"
+    },
+    "placeHistoricalStatuses": {
+      "current": "current",
+      "historical": "historical",
+      "both": "both"
+    },
+    "placeTypes": {
+      "autonomous-region": "autonomous region",
+      "borough": "borough",
+      "city": "city",
+      "collection-site": "collection site",
+      "continent": "continent",
+      "country": "country",
+      "country-code": "country code",
+      "county": "county",
+      "dependent-state": "dependent state",
+      "deserted-settlement": "deserted settlement",
+      "district-national": "district (national)",
+      "general-region": "general region",
+      "governorate": "governorate",
+      "inhabited-place": "inhabited place",
+      "island": "island",
+      "island-group": "island group",
+      "localilty": "locality",
+      "metropolitan-area": "metropolitan area",
+      "municipality": "municipality",
+      "nation": "nation",
+      "national-division": "national division",
+      "neighborhood": "neighborhood",
+      "occupied-territory": "occupied territory",
+      "prefecture": "prefecture",
+      "province": "province",
+      "region": "region",
+      "state": "state",
+      "state-province": "state province",
+      "territory": "territory",
+      "township": "township",
+      "union-territory": "union territory",
+      "unitary-authority": "unitary authority",
+      "urban-prefecture": "urban prefecture",
+      "water-body": "water body"
+    },
+    "coordinateSystems": {
+      "altitude-depth": "altitude depth",
+      "latitude-longitude": "latitude and longitude",
+      "national-grid-reference": "National Grid reference",
+      "utm": "Universal Transverse Mercator (UTM)"
+    },
+    "spatialRefSystems": {
+      "epsg4326-wgs84": "EPSG:4326-WGS84",
+      "epsg4269-nad83": "EPSG:4269-NAD83",
+      "epsg4267-nad27": "EPSG:4267-NAD27",
+      "unknown": "unknown"
+    },
+    "localityUnits": {
+      "acres": "acres",
+      "centimeters": "centimeters",
+      "feet": "feet",
+      "hectares": "hectares",
+      "inches": "inches",
+      "kilometers": "kilometers",
+      "meters": "meters",
+      "miles": "miles",
+      "millimeters": "millimeters",
+      "square-feet": "square feet",
+      "square-meters": "square meters",
+      "square-yards": "square yards",
+      "stories": "stories"
+    },
+    "geodeticDatums": {
+      "epsg4326-wgs84": "EPSG:4326-WGS84",
+      "epsg4269-nad83": "EPSG:4269-NAD83",
+      "epsg4267-nad27": "EPSG:4267-NAD27",
+      "unknown": "unknown"
+    },
+    "geoRefProtocols": {
+      "chapman-wieczorek-2006-guide-best-practices-georeferencing": "Chapman, Wieczorek 2006, Guide to Best Practices for Georeferencing",
+      "manis-herpnet-ornis-georeferencing-guidelines": "MaNIS/HerpNet/ORNIS Georeferencing Guidelines",
+      "georeferencing-dummies": "Georeferencing For Dummies",
+      "biogeomancer": "BioGeomancer"
+    },
+    "geoRefVerificationStatuses": {
+      "unverified": "unverified",
+      "verified-data-custodian": "verified by data custodian",
+      "verified-contributor": "verified by contributor"
+    },
+    "transportMethodTypes": {
+      "cargo aircraft": "cargo aircraft",
+      "combi aircraft": "combi aircraft",
+      "common carrier": "common carrier",
+      "exclusive-use truck": "exclusive-use truck",
+      "expedited use freight": "expedited use freight",
+      "LOFO freight": "LOFO freight",
+      "mail": "mail",
+      "non-commercial carrier": "non-commercial carrier",
+      "ocean freight": "ocean freight",
+      "passenger aircraft": "passenger aircraft",
+      "shuttle service": "shuttle service"
+    },
+    "reportMimeTypes": {
+      "application/pdf": "PDF",
+      "text/html": "HTML",
+      "application/xml": "XML",
+      "application/vnd.ms-excel": "MS Excel (.xls)",
+      "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet": "MS Excel (.xlsx)",
+      "application/vnd.ms-powerpoint": "MS PowerPoint (.ppt)",
+      "application/vnd.openxmlformats-officedocument.presentationml.presentation": "MS PowerPoint (.pptx)",
+      "application/msword": "MS Word (.doc)",
+      "application/vnd.openxmlformats-officedocument.wordprocessingml.document": "MS Word (.docx)",
+      "text/csv": "CSV",
+      "text/tab-separated-values": "TSV"
+    },
+    "uocApprovalStatusMIMETypes": {
+      "application/pdf": "PDF",
+      "text/csv": "CSV",
+      "application/msword": "MS word"
+    },
+    "valueTypes": {
+      "Current Value": "current value",
+      "Original Value": "original value",
+      "Replacement Value": "replacement value"
+    },
+    "vocabTermStatuses": {
+      "active": "active",
+      "inactive": "inactive"
+    },
+    "workTermStatuses": {
+      "quickaddedneedsattention": "quick added, needs attention",
+      "inprogress": "in progress",
+      "complete": "complete"
+    },
+    "accessCodes": {
+      "PFA Staff Only": "PFA staff only",
+      "In House Only": "In house only",
+      "Campus (UCB)": "Campus (UCB)",
+      "Education (*.edu)": "Education (*.edu)",
+      "World": "World"
+    }
+  }
+}
