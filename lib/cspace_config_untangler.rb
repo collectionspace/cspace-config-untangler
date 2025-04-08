@@ -278,6 +278,10 @@ module CspaceConfigUntangler
     default: File.join(Bundler.root, "data", "config_holder", "temp"),
     reader: true
 
+  setting :oo_data_config_path,
+    default: File.join(datadir, "optlist_overrides"),
+    reader: true
+
   gem_agnostic_dir = $LOAD_PATH.select do |dir|
     dir["untangler"]
   end.reject { |dir| dir.end_with?("/spec") }.first

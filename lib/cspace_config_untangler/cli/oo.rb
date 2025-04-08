@@ -67,43 +67,19 @@ module CspaceConfigUntangler
       #   builder.build
       # end
 
-      # desc "write",
-      #   "Writes JSON serializations of RecordMappers for the given rectype(s) "\
-      #   "for the given profiles."
-      # shared_options :profiles, :rectypes, :subdirs, :env
-      # shared_option :output_dir, default: CCU.mapperdir
-      # def write
-      #   CCU.config.instance_env = options[:env]
-
-      #   outpath = File.expand_path(options[:output_dir])
-      #   get_profiles.each do |profile|
-      #     puts "Writing mappers for #{profile}..."
-      #     p = CCU::Profile.new(profile: profile, rectypes: parse_rectypes,
-      #       structured_date_treatment: :collapse)
-      #     dir_path = if options[:subdirs]
-      #       File.join(outpath, p.basename)
-      #     else
-      #       outpath
-      #     end
-      #     FileUtils.mkdir_p(dir_path)
-      #     p.rectypes.each do |rt|
-      #       puts "  ...#{rt.name}"
-      #       CspaceConfigUntangler::RecordMapper::Wrapper.new(profile: p,
-      #         rectype: rt,
-      #         base_path: dir_path).mappers.each do |mapper|
-      #         mapper[:mapper].to_json(data: mapper[:mapper].hash,
-      #           output: mapper[:path])
-      #       end
-      #     end
-
-      #     p.special_rectypes.each do |rt|
-      #       name = rt.name
-      #       puts "  ...#{name}"
-      #       path = "#{dir_path}/#{p.name}_#{name}.json"
-      #       rt.to_json(data: rt.mapper, output: path)
-      #     end
-      #   end
-      # end
+      desc "write",
+        "Writes JSON optlist override data configs for the configs currently "\
+        "in `CCU.oo_config_dir`"
+      shared_option :output_dir, default: CCU.oo_data_config_path
+      def write
+        Dir.new(CCU.oo_config_dir).children
+          .reject { |child| child == ".keep" }
+          .each do |tenant|
+          CCU::OptlistOverride::Writer.call(
+            File.join(CCU.oo_config_dir, tenant)
+          )
+        end
+      end
 
       # desc "validate", "Prints to screen a validation report of the JSON "\
       #   "mappers in a directory"
