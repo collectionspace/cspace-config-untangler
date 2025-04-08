@@ -29,6 +29,7 @@ module CspaceConfigUntangler
 
       def build_hash
         @hash[:config] = {}
+        @hash[:config][:dataConfigType] = "record type"
         @hash[:config][:profile_basename] = @profile.basename
         @hash[:config][:version] = @profile.readable_version
         @hash[:config][:recordtype] = @rectype.name
