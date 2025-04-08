@@ -38,6 +38,7 @@ _Note: there may be field_defs in a profile which do not match any form_fields. 
 * `bundle/install`
 * Download your configs into the appropriate `data/configs` directory or directories
 * Configure your settings https://github.com/collectionspace/cspace-config-untangler/blob/master/lib/cspace_config_untangler.rb[in `lib/cspace_config_untangler.rb`].
+** **IMPORTANT:** If you are not Lyrasis staff with access to dts-hosting Github organization and AWS profiles, set `lyrasis_staff` setting to false.
 
 === Optional: add the `exe` directory to your PATH
 
@@ -52,7 +53,7 @@ Unfortunately the UI config JSON file does not contain any information about whi
 
 For the purposes of this code base, that means using https://github.com/collectionspace/collectionspace-client[collectionspace-client] to interact with the API, and this requires, at minimum, management of authentication credentials for a user with at least the TENANT_READER role/permission. The purpose of cspace-config-untangler is solely to read available CollectionSpace configuration info, not to make any changes to any CollectionSpace instance, so we recommend against configuring connections with more than TENANT_READER permissions.
 
-*Currently, you only need to create this config file if you wish to run commands found beneath `ccu vocabs`.* If you run one of those commands on a profile without a client connection config, it will just fail gracefully, telling you that you need to configure a connection.
+*Currently, you only need to create this config file if you (a) are working with non-community-supported profiles; (b) you wish to run commands found beneath `ccu vocabs`; AND (c) you are not Lyrasis staff with access to AWS SSM parameter store.* If you run one of those commands on a profile without a client connection config, it will just fail gracefully, telling you that you need to configure a connection.
 
 *You do not need to create a client connection config file if you are working only with the community supported profiles.* The `Reader` user in those instances is set up following a pattern which works without needing configuration.
 

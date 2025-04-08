@@ -68,6 +68,12 @@ module CspaceConfigUntangler
     "publicart" => "5-0-0"
   }
 
+  # @return [Boolean] set to false if you are non-Lyrasis staff using this tool,
+  #   or are Lyrasis staff without access to dts-hosting Github resources
+  setting :lyrasis_staff,
+    default: true,
+    reader: true
+
   # rubocop:disable Layout/LineLength
 
   # @return [nil, String] path to YAML file containing credentials for
@@ -235,6 +241,19 @@ module CspaceConfigUntangler
   rescue RuntimeError => err
     "#{profile_basename}: #{err.message}"
   end
+
+  setting :ssm_client,
+    default: nil,
+    reader: true,
+    constructor: ->(default) do
+    return unless lyrasis_staff
+
+    require "aws-sdk-ssm"
+    Aws::SSM::Client.new(profile: "collectionspace")
+    rescue RuntimeError => err
+      err.message
+    end
+
 
   def safe_copy(hash)
     Marshal.load(Marshal.dump(hash))

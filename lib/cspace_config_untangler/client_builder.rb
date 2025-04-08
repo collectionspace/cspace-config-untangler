@@ -12,6 +12,7 @@ module CspaceConfigUntangler
     #   off
     def initialize(profile_basename)
       @name = profile_basename
+      @ssm = CCU.ssm_client
       @config = CCU.client_connection_config&.dig(name)
     end
 
@@ -28,12 +29,12 @@ module CspaceConfigUntangler
 
     private
 
-    attr_reader :name, :config
+    attr_reader :name, :ssm, :config
 
     def clientable?
       return false if CCU.disable_api_checks
 
-      community_supported? || configured?
+      community_supported? || ssm_params || configured?
     end
 
     def check_connection(client)
@@ -62,6 +63,7 @@ module CspaceConfigUntangler
 
     def params
       return community_supported_params if community_supported?
+      return ssm_params if ssm_params
 
       config.transform_keys(&:to_sym)
     end
@@ -83,6 +85,18 @@ module CspaceConfigUntangler
       return if env == :demo
 
       env.to_s
+    end
+
+    def ssm_params = @ssm_params ||= get_ssm_params
+
+    def get_ssm_params
+      paramname = "cspace-dcsp-production-#{name}-admin-password"
+      response = ssm.get_parameter({name: paramname, with_decryption: true})
+      @ssm_params = {base_uri: CCU::Hosted.services_url(name),
+       username: "admin@collectionspace.org",
+       password: response.parameter.value}
+    rescue Aws::SSM::Errors::ParameterNotFound
+      @ssm_params = nil
     end
   end
 end
