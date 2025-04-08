@@ -8,7 +8,7 @@ module CspaceConfigUntangler
   module Cli
     class Configs < SubcommandBase
       desc "fetch_community_supported",
-        ""
+        "Download UI configs for community supported profiles"
       shared_options :release, :env
       def fetch_community_supported
         CCU::UiConfig.fetch_community_profiles(
