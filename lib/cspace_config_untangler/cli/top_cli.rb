@@ -8,6 +8,7 @@ require_relative "debug"
 require_relative "fields"
 require_relative "forms"
 require_relative "mappers"
+require_relative "oo"
 require_relative "profiles"
 require_relative "rectypes"
 require_relative "reports"
@@ -46,6 +47,12 @@ module CspaceConfigUntangler
         "Produce or work with JSON RecordMappers, as used by "\
         "cspace-batch-import"
       subcommand "mappers", CCU::Cli::Mappers
+
+      if CCU.lyrasis_staff
+        desc "oo SUBCOMMAND",
+          "Generate/update optionlist override data configs"
+        subcommand "oo", CCU::Cli::Oo
+      end
 
       desc "profiles SUBCOMMAND",
         "Get info about and manipulate the profiles (i.e. CSpace application "\
