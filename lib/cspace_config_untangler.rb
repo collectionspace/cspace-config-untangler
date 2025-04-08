@@ -259,6 +259,25 @@ module CspaceConfigUntangler
     Marshal.load(Marshal.dump(hash))
   end
 
+
+  # The following section is relevant only to Lyrasis staff with access to the
+  #   dts-hosting Github organization
+
+  # @return [String] path to local directory for dts-hosting/deployments
+  #   Github repository
+  setting :oo_instance_repo_path,
+    default: File.expand_path("~/code/lyr/deployments"),
+    reader: true
+
+  setting :oo_site_config_path,
+    default: File.join(oo_instance_repo_path, "sites", "collectionspace",
+                       "config"),
+    reader: true
+
+  setting :oo_config_dir,
+    default: File.join(Bundler.root, "data", "config_holder", "temp"),
+    reader: true
+
   gem_agnostic_dir = $LOAD_PATH.select do |dir|
     dir["untangler"]
   end.reject { |dir| dir.end_with?("/spec") }.first

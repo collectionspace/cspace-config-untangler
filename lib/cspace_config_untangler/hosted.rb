@@ -42,6 +42,7 @@ module CspaceConfigUntangler
     private_class_method(:delete_if_prod)
 
     def subdomain(base)
+      return "ohiohistory" if base == "ohc"
       return base unless base.end_with?("staging")
 
       base.sub("staging", ".staging")

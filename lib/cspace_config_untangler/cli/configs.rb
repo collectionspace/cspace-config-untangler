@@ -16,6 +16,18 @@ module CspaceConfigUntangler
         )
       end
 
+      desc "fetch_hosted",
+        "Download UI configs for Lyrasis-hosted instances"
+      option :tenants,
+        desc: "Optional list of instance tenant names to download",
+        type: :array,
+        required: false,
+        default: nil,
+        aliases: "-t"
+      def fetch_hosted
+        CCU::UiConfig.fetch_hosted(options[:tenants])
+      end
+
       desc "readable",
         "REFORMATS (in place) JSON profile configs so that they are not one "\
         "very long line. Non-destructive if run over JSON multiple times."

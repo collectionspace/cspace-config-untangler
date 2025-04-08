@@ -11,11 +11,11 @@ module CspaceConfigUntangler
       def call(...) = new(...).call
     end
 
-    # @param profile_basename [String] profile name with version info stripped
-    #   off
+    # @param basename [String] profile name with version info stripped
+    #   off (community supported), or instance tenant name (hosted instance)
     # @param target_dir [String] path to directory where config should be saved
-    def initialize(profile_basename, target_dir = CCU.release_configs_dir)
-      @name = profile_basename
+    def initialize(basename, target_dir = CCU.release_configs_dir)
+      @name = basename
       @target_dir = target_dir
       FileUtils.mkdir(target_dir) unless Dir.exist?(target_dir)
 
@@ -34,7 +34,7 @@ module CspaceConfigUntangler
     end
 
     def call
-      driver.get(community_supported_uri)
+      driver.get(uri)
       @version = client.version.ui.joined
       puts "Retrieving #{target_name} ..."
       driver.find_element(link_text: "Save configuration as JSON").click
@@ -48,7 +48,11 @@ module CspaceConfigUntangler
 
     attr_reader :name, :target_dir, :driver, :version, :saved_name, :client
 
-    def target_name = "#{version}.json"
+    def target_name = if community_supported?
+                        "#{version}.json"
+                      else
+                        "#{name}.json"
+                      end
 
     def target_path = File.join(target_dir, target_name)
 
@@ -63,6 +67,12 @@ module CspaceConfigUntangler
 
     def community_supported?
       CCU.community_supported_profiles.include?(name)
+    end
+
+    def uri
+      return community_supported_uri if community_supported?
+
+      CCU::Hosted.config_url(name)
     end
 
     def community_supported_uri
