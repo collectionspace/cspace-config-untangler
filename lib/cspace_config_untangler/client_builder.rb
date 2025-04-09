@@ -12,7 +12,7 @@ module CspaceConfigUntangler
     #   off
     def initialize(profile_basename)
       @name = profile_basename
-      @ssm = CCU.ssm_client
+      @ssm = community_supported? ? nil : CCU.ssm_client
       @config = CCU.client_connection_config&.dig(name)
     end
 
@@ -92,6 +92,8 @@ module CspaceConfigUntangler
     def ssm_params = @ssm_params ||= get_ssm_params
 
     def get_ssm_params
+      return unless ssm
+
       paramname = "cspace-dcsp-production-#{name}-admin-password"
       response = ssm.get_parameter({name: paramname, with_decryption: true})
       @ssm_params = {base_uri: CCU::Hosted.services_url(name),

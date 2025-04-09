@@ -250,7 +250,7 @@ module CspaceConfigUntangler
     default: nil,
     reader: true,
     constructor: ->(default) do
-      return unless lyrasis_staff
+      return if !lyrasis_staff || disable_api_checks
 
       require "aws-sdk-ssm"
       Aws::SSM::Client.new(profile: "collectionspace")
