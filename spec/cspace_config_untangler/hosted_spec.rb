@@ -4,7 +4,7 @@ require "spec_helper"
 
 RSpec.describe CCU::Hosted, :aggregate_failures do
   describe ".site_url" do
-    let (:result) { CCU::Hosted.site_url(base) }
+    let(:result) { CCU::Hosted.site_url(base) }
 
     context "when staging" do
       let(:base) { "abcstaging" }

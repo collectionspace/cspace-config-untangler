@@ -17,7 +17,7 @@ module CspaceConfigUntangler
     end
 
     def fetch_hosted(tenants)
-      tenants = CCU::Hosted.tenant_names unless tenants
+      tenants ||= CCU::Hosted.tenant_names
       tenants.each do |tenant|
         CCU::ConfigFetcher.call(tenant, CCU.oo_config_dir)
       end

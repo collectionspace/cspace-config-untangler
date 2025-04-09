@@ -13,14 +13,14 @@ module CspaceConfigUntangler
       sites = Dir.new(CCU.oo_site_config_path)
         .children
         .select { |child| child.match?(".tfvars") }
-            .map { |child| child.delete_suffix(".tfvars") }
-            .reject do |child|
-              child.match?(
-              /(dev|edu|materialorder|outreachdemo|qa|sandbox|ssotest)$/
-            )
-            end
-          delete_staging_if_prod(sites)
-          sites.sort
+        .map { |child| child.delete_suffix(".tfvars") }
+        .reject do |child|
+        child.match?(
+          /(dev|edu|materialorder|outreachdemo|qa|sandbox|ssotest)$/
+        )
+      end
+      delete_staging_if_prod(sites)
+      sites.sort
     end
 
     def site_url(base) = "https://#{subdomain(base)}.collectionspace.org"

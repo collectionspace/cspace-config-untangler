@@ -250,19 +250,17 @@ module CspaceConfigUntangler
     default: nil,
     reader: true,
     constructor: ->(default) do
-    return unless lyrasis_staff
+      return unless lyrasis_staff
 
-    require "aws-sdk-ssm"
-    Aws::SSM::Client.new(profile: "collectionspace")
+      require "aws-sdk-ssm"
+      Aws::SSM::Client.new(profile: "collectionspace")
     rescue RuntimeError => err
       err.message
     end
 
-
   def safe_copy(hash)
     Marshal.load(Marshal.dump(hash))
   end
-
 
   # The following section is relevant only to Lyrasis staff with access to the
   #   dts-hosting Github organization
@@ -275,7 +273,7 @@ module CspaceConfigUntangler
 
   setting :oo_site_config_path,
     default: File.join(oo_instance_repo_path, "sites", "collectionspace",
-                       "config"),
+      "config"),
     reader: true
 
   setting :oo_config_dir,
