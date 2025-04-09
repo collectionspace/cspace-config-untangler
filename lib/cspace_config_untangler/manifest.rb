@@ -18,7 +18,7 @@ module CspaceConfigUntangler
 
     def json_hash
       {"mappers" => mapper_paths.map do |path|
-                      CCU::ManifestEntry.new(path: path)
+         CCU::ManifestEntry.new(path: path)
                     end.map(&:to_h).compact}
     end
 

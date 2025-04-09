@@ -144,6 +144,10 @@ module CspaceConfigUntangler
   setting :mapper_uri_base,
     default: default_mapper_uri_base,
     reader: true
+  setting :optlist_override_uri_base,
+    default: "https://raw.githubusercontent.com/collectionspace/"\
+    "cspace-config-untangler/main/data/optlist_overrides",
+    reader: true
 
   File.delete(logpath) if File.exist?(logpath)
 
