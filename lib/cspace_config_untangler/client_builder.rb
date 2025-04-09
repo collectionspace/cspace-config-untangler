@@ -17,6 +17,8 @@ module CspaceConfigUntangler
     end
 
     def call
+      return if CCU.disable_api_checks
+
       unless clientable?
         raise "#{name} profile not configured for services API connection"
       end
