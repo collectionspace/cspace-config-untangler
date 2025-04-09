@@ -9,6 +9,8 @@ module CspaceConfigUntangler
       class << self
         def call(profilename)
           client = CCU.get_client(profilename)
+          return [] unless client
+
           if client.is_a?(CollectionSpace::Client)
             configprofilename = CCU.profile_for(profilename)
             configprofile = CCU::Profile.new(profile: configprofilename)

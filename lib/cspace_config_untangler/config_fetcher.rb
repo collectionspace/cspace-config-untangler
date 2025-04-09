@@ -35,7 +35,7 @@ module CspaceConfigUntangler
 
     def call
       driver.get(uri)
-      @version = client.version.ui.joined
+      @version = client ? client.version.ui.joined : name
       puts "Retrieving #{target_name} ..."
       driver.find_element(link_text: "Save configuration as JSON").click
       rename_file

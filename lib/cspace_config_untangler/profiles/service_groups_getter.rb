@@ -10,7 +10,9 @@ module CspaceConfigUntangler
     class ServiceGroupsGetter
       class << self
         def call(profilename)
-          client = get_client(profilename)
+          client = CCU.get_client(profilename)
+          return [] unless client
+
           unless client.is_a?(CollectionSpace::Client)
             puts client
             return []
@@ -21,12 +23,6 @@ module CspaceConfigUntangler
         end
 
         private
-
-        def get_client(name)
-          CCU::ClientBuilder.call(name)
-        rescue RuntimeError => err
-          "#{name}: #{err.message}"
-        end
 
         def doc_types(grp, client)
           response = client.get("/servicegroups/#{grp}")
