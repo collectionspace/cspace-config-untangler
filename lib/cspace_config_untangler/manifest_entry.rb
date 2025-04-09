@@ -44,7 +44,7 @@ module CspaceConfigUntangler
         @path.delete_prefix(CCU.mapperdir)
           .sub(/^\/+/, "")
       when "optlist overrides"
-        @path.delete_prefix(CCU.oo_data_config_path)
+        @path.to_s.delete_prefix(CCU.oo_data_config_path)
           .sub(/^\/+/, "")
       end
     end

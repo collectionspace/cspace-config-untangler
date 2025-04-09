@@ -56,7 +56,12 @@ module CspaceConfigUntangler
         outdir = Pathname.new(File.expand_path(options[:output_path]))
 
         puts "Building manifest with options:"
-        opts = {inputdir: indir, output: outdir, recursive: options[:recursive]}
+        opts = {
+          inputdir: indir,
+          output: outdir,
+          recursive: options[:recursive],
+          type: "record type"
+        }
         opts.each { |key, val| puts "  #{key}: #{val}" }
         puts "  dev: #{options[:dev]}"
         builder = if options[:dev]

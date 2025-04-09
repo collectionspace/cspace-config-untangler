@@ -2,10 +2,11 @@
 
 module CspaceConfigUntangler
   class Manifest
-    def initialize(inputdir:, output:, recursive:)
+    def initialize(inputdir:, output:, recursive:, type:)
       @indir = inputdir
       @output = Pathname.new(output)
       @recurse = recursive
+      @type = type
     end
 
     def build
@@ -14,12 +15,21 @@ module CspaceConfigUntangler
 
     private
 
-    attr_reader :indir, :output, :recurse
+    attr_reader :indir, :output, :recurse, :type
 
     def json_hash
-      {"mappers" => mapper_paths.map do |path|
-                      CCU::ManifestEntry.new(path: path)
-                    end.map(&:to_h).compact}
+      {array_name => mapper_paths.map do |path|
+        CCU::ManifestEntry.new(path: path)
+      end.map(&:to_h).compact}
+    end
+
+    def array_name
+      case type
+      when "record type"
+        "mappers"
+      else
+        "data configs"
+      end
     end
 
     def mapper_paths
