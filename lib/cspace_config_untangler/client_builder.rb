@@ -93,8 +93,8 @@ module CspaceConfigUntangler
       paramname = "cspace-dcsp-production-#{name}-admin-password"
       response = ssm.get_parameter({name: paramname, with_decryption: true})
       @ssm_params = {base_uri: CCU::Hosted.services_url(name),
-       username: "admin@collectionspace.org",
-       password: response.parameter.value}
+                     username: "admin@collectionspace.org",
+                     password: response.parameter.value}
     rescue Aws::SSM::Errors::ParameterNotFound
       @ssm_params = nil
     end

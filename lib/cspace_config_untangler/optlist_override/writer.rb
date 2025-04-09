@@ -9,14 +9,14 @@ module CspaceConfigUntangler
     class Writer
       include JsonWritable
 
-      def self.call(...) = self.new(...).call
+      def self.call(...) = new(...).call
 
       # @param configpath [String] to tenant UI config
       def initialize(configpath)
         @configpath = Pathname.new(configpath)
         @hash = {
           "config" => {
-            "dataConfigType" => "optlist overrides",
+            "dataConfigType" => "optlist overrides"
           },
           "optlists" => {}
         }

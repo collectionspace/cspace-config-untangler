@@ -14,7 +14,7 @@ module CspaceConfigUntangler
     def data_config_json = @data_config_json ||= JSON.parse(data_config_text)
 
     def data_config_type = @data_config_type ||=
-      data_config_json.dig("config", "dataConfigType")
+                             data_config_json.dig("config", "dataConfigType")
 
     def digest
       Digest::SHA256.hexdigest(data_config_text)
@@ -30,8 +30,8 @@ module CspaceConfigUntangler
       case data_config_type
       when "record type"
         [data_config_json.dig("config", "recordtype"),
-         data_config_json.dig("config", "authority_subtype")
-         &.tr("_", "-")].compact
+          data_config_json.dig("config", "authority_subtype")
+            &.tr("_", "-")].compact
           .join("-")
       when "optlist overrides"
         nil
@@ -51,8 +51,8 @@ module CspaceConfigUntangler
 
     def url
       case data_config_type
-        when "record type"
-          "#{CCU.mapper_uri_base}/#{subpath}"
+      when "record type"
+        "#{CCU.mapper_uri_base}/#{subpath}"
       when "optlist overrides"
         "#{CCU.optlist_override_uri_base}/#{subpath}"
       end
@@ -62,8 +62,6 @@ module CspaceConfigUntangler
       case data_config_type
       when "record type"
         true
-      else
-        nil
       end
     end
 
