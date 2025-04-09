@@ -17,6 +17,8 @@ module CspaceConfigUntangler
                              data_config_json.dig("config", "dataConfigType")
 
     def digest
+      return unless data_config_type == "record type"
+
       Digest::SHA256.hexdigest(data_config_text)
     end
 
@@ -24,7 +26,14 @@ module CspaceConfigUntangler
 
     attr_reader :path
 
-    def profile = data_config_json.dig("config", "profile_basename")
+    def profile
+      case data_config_type
+      when "record type"
+        data_config_json.dig("config", "profile_basename")
+      when "optlist overrides"
+        data_config_json.dig("config", "tenant_basename")
+      end
+    end
 
     def recordtype
       case data_config_type
