@@ -1,0 +1,370 @@
+{
+  "config": {
+    "profile_basename": "anthro",
+    "version": "9.0.0",
+    "recordtype": "deaccession",
+    "document_name": "deaccessions",
+    "service_name": "Deaccession",
+    "service_path": "deaccessions",
+    "service_type": "procedure",
+    "object_name": "Deaccession",
+    "ns_uri": {
+      "deaccessions_common": "http://collectionspace.org/services/deaccession"
+    },
+    "identifier_field": "deaccessionNumber",
+    "search_field": "deaccessionNumber"
+  },
+  "docstructure": {
+    "deaccessions_common": {
+      "deaccessionReasons": {},
+      "deaccessionApprovalGroupList": {
+        "deaccessionApprovalGroup": {}
+      },
+      "exitRecipients": {},
+      "exitMethods": {}
+    }
+  },
+  "mappings": [
+    {
+      "fieldname": "deaccessionNumber",
+      "transforms": {},
+      "source_type": "na",
+      "source_name": "na",
+      "namespace": "deaccessions_common",
+      "xpath": [],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [],
+      "datacolumn": "deaccessionNumber",
+      "required": "y"
+    },
+    {
+      "fieldname": "deaccessionReason",
+      "transforms": {
+        "vocabulary": "deaccessionreason"
+      },
+      "source_type": "vocabulary",
+      "source_name": "deaccessionreason",
+      "namespace": "deaccessions_common",
+      "xpath": [
+        "deaccessionReasons"
+      ],
+      "data_type": "string",
+      "repeats": "y",
+      "in_repeating_group": "n",
+      "opt_list_values": [],
+      "datacolumn": "deaccessionReason",
+      "required": "n"
+    },
+    {
+      "fieldname": "deaccessionReason",
+      "transforms": {},
+      "source_type": "refname",
+      "source_name": "vocabulary refname",
+      "namespace": "deaccessions_common",
+      "xpath": [
+        "deaccessionReasons"
+      ],
+      "data_type": "csrefname",
+      "repeats": "y",
+      "in_repeating_group": "n",
+      "opt_list_values": [],
+      "datacolumn": "deaccessionReasonRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "deaccessionDate",
+      "transforms": {},
+      "source_type": "na",
+      "source_name": "na",
+      "namespace": "deaccessions_common",
+      "xpath": [],
+      "data_type": "date",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [],
+      "datacolumn": "deaccessionDate",
+      "required": "n"
+    },
+    {
+      "fieldname": "deaccessionRationale",
+      "transforms": {},
+      "source_type": "na",
+      "source_name": "na",
+      "namespace": "deaccessions_common",
+      "xpath": [],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [],
+      "datacolumn": "deaccessionRationale",
+      "required": "n"
+    },
+    {
+      "fieldname": "deaccessionNote",
+      "transforms": {},
+      "source_type": "na",
+      "source_name": "na",
+      "namespace": "deaccessions_common",
+      "xpath": [],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [],
+      "datacolumn": "deaccessionNote",
+      "required": "n"
+    },
+    {
+      "fieldname": "deaccessionApprovalGroup",
+      "transforms": {
+        "vocabulary": "deaccessionapprovalgroup"
+      },
+      "source_type": "vocabulary",
+      "source_name": "deaccessionapprovalgroup",
+      "namespace": "deaccessions_common",
+      "xpath": [
+        "deaccessionApprovalGroupList",
+        "deaccessionApprovalGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "deaccessionApprovalGroup",
+      "required": "n"
+    },
+    {
+      "fieldname": "deaccessionApprovalGroup",
+      "transforms": {},
+      "source_type": "refname",
+      "source_name": "vocabulary refname",
+      "namespace": "deaccessions_common",
+      "xpath": [
+        "deaccessionApprovalGroupList",
+        "deaccessionApprovalGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "deaccessionApprovalGroupRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "deaccessionApprovalIndividual",
+      "transforms": {
+        "authority": [
+          "personauthorities",
+          "person"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "person/local",
+      "namespace": "deaccessions_common",
+      "xpath": [
+        "deaccessionApprovalGroupList",
+        "deaccessionApprovalGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "deaccessionApprovalIndividualPersonLocal",
+      "required": "n"
+    },
+    {
+      "fieldname": "deaccessionApprovalIndividual",
+      "transforms": {},
+      "source_type": "refname",
+      "source_name": "authority refname",
+      "namespace": "deaccessions_common",
+      "xpath": [
+        "deaccessionApprovalGroupList",
+        "deaccessionApprovalGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "deaccessionApprovalIndividualRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "deaccessionApprovalStatus",
+      "transforms": {
+        "vocabulary": "deaccessionapprovalstatus"
+      },
+      "source_type": "vocabulary",
+      "source_name": "deaccessionapprovalstatus",
+      "namespace": "deaccessions_common",
+      "xpath": [
+        "deaccessionApprovalGroupList",
+        "deaccessionApprovalGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "deaccessionApprovalStatus",
+      "required": "n"
+    },
+    {
+      "fieldname": "deaccessionApprovalStatus",
+      "transforms": {},
+      "source_type": "refname",
+      "source_name": "vocabulary refname",
+      "namespace": "deaccessions_common",
+      "xpath": [
+        "deaccessionApprovalGroupList",
+        "deaccessionApprovalGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "deaccessionApprovalStatusRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "deaccessionApprovalDate",
+      "transforms": {},
+      "source_type": "na",
+      "source_name": "na",
+      "namespace": "deaccessions_common",
+      "xpath": [
+        "deaccessionApprovalGroupList",
+        "deaccessionApprovalGroup"
+      ],
+      "data_type": "date",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "deaccessionApprovalDate",
+      "required": "n"
+    },
+    {
+      "fieldname": "deaccessionApprovalNote",
+      "transforms": {},
+      "source_type": "na",
+      "source_name": "na",
+      "namespace": "deaccessions_common",
+      "xpath": [
+        "deaccessionApprovalGroupList",
+        "deaccessionApprovalGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "deaccessionApprovalNote",
+      "required": "n"
+    },
+    {
+      "fieldname": "exitDate",
+      "transforms": {},
+      "source_type": "na",
+      "source_name": "na",
+      "namespace": "deaccessions_common",
+      "xpath": [],
+      "data_type": "date",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [],
+      "datacolumn": "exitDate",
+      "required": "n"
+    },
+    {
+      "fieldname": "exitRecipient",
+      "transforms": {
+        "authority": [
+          "personauthorities",
+          "person"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "person/local",
+      "namespace": "deaccessions_common",
+      "xpath": [
+        "exitRecipients"
+      ],
+      "data_type": "string",
+      "repeats": "y",
+      "in_repeating_group": "n",
+      "opt_list_values": [],
+      "datacolumn": "exitRecipientPersonLocal",
+      "required": "n"
+    },
+    {
+      "fieldname": "exitRecipient",
+      "transforms": {
+        "authority": [
+          "orgauthorities",
+          "organization"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "organization/local",
+      "namespace": "deaccessions_common",
+      "xpath": [
+        "exitRecipients"
+      ],
+      "data_type": "string",
+      "repeats": "y",
+      "in_repeating_group": "n",
+      "opt_list_values": [],
+      "datacolumn": "exitRecipientOrganizationLocal",
+      "required": "n"
+    },
+    {
+      "fieldname": "exitRecipient",
+      "transforms": {},
+      "source_type": "refname",
+      "source_name": "authority refname",
+      "namespace": "deaccessions_common",
+      "xpath": [
+        "exitRecipients"
+      ],
+      "data_type": "csrefname",
+      "repeats": "y",
+      "in_repeating_group": "n",
+      "opt_list_values": [],
+      "datacolumn": "exitRecipientRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "exitMethod",
+      "transforms": {
+        "vocabulary": "disposalmethod"
+      },
+      "source_type": "vocabulary",
+      "source_name": "disposalmethod",
+      "namespace": "deaccessions_common",
+      "xpath": [
+        "exitMethods"
+      ],
+      "data_type": "string",
+      "repeats": "y",
+      "in_repeating_group": "n",
+      "opt_list_values": [],
+      "datacolumn": "exitMethod",
+      "required": "n"
+    },
+    {
+      "fieldname": "exitMethod",
+      "transforms": {},
+      "source_type": "refname",
+      "source_name": "vocabulary refname",
+      "namespace": "deaccessions_common",
+      "xpath": [
+        "exitMethods"
+      ],
+      "data_type": "csrefname",
+      "repeats": "y",
+      "in_repeating_group": "n",
+      "opt_list_values": [],
+      "datacolumn": "exitMethodRefname",
+      "required": "n"
+    }
+  ]
+}

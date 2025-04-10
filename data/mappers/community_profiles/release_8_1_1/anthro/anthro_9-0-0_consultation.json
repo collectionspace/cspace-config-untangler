@@ -1,0 +1,367 @@
+{
+  "config": {
+    "profile_basename": "anthro",
+    "version": "9.0.0",
+    "recordtype": "consultation",
+    "document_name": "consultations",
+    "service_name": "Consultation",
+    "service_path": "consultations",
+    "service_type": "procedure",
+    "object_name": "Consultation",
+    "ns_uri": {
+      "consultations_common": "http://collectionspace.org/services/consultation"
+    },
+    "identifier_field": "consultationNumber",
+    "search_field": "consultationNumber"
+  },
+  "docstructure": {
+    "consultations_common": {
+      "notes": {},
+      "partiesInvolvedGroupList": {
+        "partiesInvolvedGroup": {}
+      },
+      "consultationLogGroupList": {
+        "consultationLogGroup": {
+          "consultParties": {}
+        }
+      }
+    }
+  },
+  "mappings": [
+    {
+      "fieldname": "consultationNumber",
+      "transforms": {},
+      "source_type": "na",
+      "source_name": "na",
+      "namespace": "consultations_common",
+      "xpath": [],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [],
+      "datacolumn": "consultationNumber",
+      "required": "y"
+    },
+    {
+      "fieldname": "consultationDate",
+      "transforms": {},
+      "source_type": "na",
+      "source_name": "na",
+      "namespace": "consultations_common",
+      "xpath": [],
+      "data_type": "date",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [],
+      "datacolumn": "consultationDate",
+      "required": "n"
+    },
+    {
+      "fieldname": "reason",
+      "transforms": {
+        "vocabulary": "consultationreason"
+      },
+      "source_type": "vocabulary",
+      "source_name": "consultationreason",
+      "namespace": "consultations_common",
+      "xpath": [],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [],
+      "datacolumn": "reason",
+      "required": "n"
+    },
+    {
+      "fieldname": "reason",
+      "transforms": {},
+      "source_type": "refname",
+      "source_name": "vocabulary refname",
+      "namespace": "consultations_common",
+      "xpath": [],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [],
+      "datacolumn": "reasonRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "note",
+      "transforms": {},
+      "source_type": "na",
+      "source_name": "na",
+      "namespace": "consultations_common",
+      "xpath": [
+        "notes"
+      ],
+      "data_type": "string",
+      "repeats": "y",
+      "in_repeating_group": "n",
+      "opt_list_values": [],
+      "datacolumn": "note",
+      "required": "n"
+    },
+    {
+      "fieldname": "involvedParty",
+      "transforms": {
+        "authority": [
+          "personauthorities",
+          "person"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "person/local",
+      "namespace": "consultations_common",
+      "xpath": [
+        "partiesInvolvedGroupList",
+        "partiesInvolvedGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "involvedPartyPersonLocal",
+      "required": "n"
+    },
+    {
+      "fieldname": "involvedParty",
+      "transforms": {},
+      "source_type": "refname",
+      "source_name": "authority refname",
+      "namespace": "consultations_common",
+      "xpath": [
+        "partiesInvolvedGroupList",
+        "partiesInvolvedGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "involvedPartyRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "involvedOnBehalfOf",
+      "transforms": {
+        "authority": [
+          "orgauthorities",
+          "organization"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "organization/local",
+      "namespace": "consultations_common",
+      "xpath": [
+        "partiesInvolvedGroupList",
+        "partiesInvolvedGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "involvedOnBehalfOfOrganizationLocal",
+      "required": "n"
+    },
+    {
+      "fieldname": "involvedOnBehalfOf",
+      "transforms": {},
+      "source_type": "refname",
+      "source_name": "authority refname",
+      "namespace": "consultations_common",
+      "xpath": [
+        "partiesInvolvedGroupList",
+        "partiesInvolvedGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "involvedOnBehalfOfRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "involvedRole",
+      "transforms": {
+        "vocabulary": "nagprainvolvedrole"
+      },
+      "source_type": "vocabulary",
+      "source_name": "nagprainvolvedrole",
+      "namespace": "consultations_common",
+      "xpath": [
+        "partiesInvolvedGroupList",
+        "partiesInvolvedGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "involvedRole",
+      "required": "n"
+    },
+    {
+      "fieldname": "involvedRole",
+      "transforms": {},
+      "source_type": "refname",
+      "source_name": "vocabulary refname",
+      "namespace": "consultations_common",
+      "xpath": [
+        "partiesInvolvedGroupList",
+        "partiesInvolvedGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "involvedRoleRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "consultType",
+      "transforms": {
+        "vocabulary": "consultationtype"
+      },
+      "source_type": "vocabulary",
+      "source_name": "consultationtype",
+      "namespace": "consultations_common",
+      "xpath": [
+        "consultationLogGroupList",
+        "consultationLogGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "consultType",
+      "required": "n"
+    },
+    {
+      "fieldname": "consultType",
+      "transforms": {},
+      "source_type": "refname",
+      "source_name": "vocabulary refname",
+      "namespace": "consultations_common",
+      "xpath": [
+        "consultationLogGroupList",
+        "consultationLogGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "consultTypeRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "consultParty",
+      "transforms": {
+        "authority": [
+          "personauthorities",
+          "person"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "person/local",
+      "namespace": "consultations_common",
+      "xpath": [
+        "consultationLogGroupList",
+        "consultationLogGroup",
+        "consultParties"
+      ],
+      "data_type": "string",
+      "repeats": "y",
+      "in_repeating_group": "as part of larger repeating group",
+      "opt_list_values": [],
+      "datacolumn": "consultPartyPersonLocal",
+      "required": "n"
+    },
+    {
+      "fieldname": "consultParty",
+      "transforms": {},
+      "source_type": "refname",
+      "source_name": "authority refname",
+      "namespace": "consultations_common",
+      "xpath": [
+        "consultationLogGroupList",
+        "consultationLogGroup",
+        "consultParties"
+      ],
+      "data_type": "csrefname",
+      "repeats": "y",
+      "in_repeating_group": "as part of larger repeating group",
+      "opt_list_values": [],
+      "datacolumn": "consultPartyRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "consultStatus",
+      "transforms": {
+        "vocabulary": "consultationstatus"
+      },
+      "source_type": "vocabulary",
+      "source_name": "consultationstatus",
+      "namespace": "consultations_common",
+      "xpath": [
+        "consultationLogGroupList",
+        "consultationLogGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "consultStatus",
+      "required": "n"
+    },
+    {
+      "fieldname": "consultStatus",
+      "transforms": {},
+      "source_type": "refname",
+      "source_name": "vocabulary refname",
+      "namespace": "consultations_common",
+      "xpath": [
+        "consultationLogGroupList",
+        "consultationLogGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "consultStatusRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "consultDate",
+      "transforms": {},
+      "source_type": "na",
+      "source_name": "na",
+      "namespace": "consultations_common",
+      "xpath": [
+        "consultationLogGroupList",
+        "consultationLogGroup"
+      ],
+      "data_type": "date",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "consultDate",
+      "required": "n"
+    },
+    {
+      "fieldname": "consultNote",
+      "transforms": {},
+      "source_type": "na",
+      "source_name": "na",
+      "namespace": "consultations_common",
+      "xpath": [
+        "consultationLogGroupList",
+        "consultationLogGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "consultNote",
+      "required": "n"
+    }
+  ]
+}
