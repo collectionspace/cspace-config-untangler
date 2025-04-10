@@ -9,11 +9,11 @@ module CspaceConfigUntangler
 
       # profile = CCU::Profile
       # rectype = CCU::RecordType
-      def initialize(profile:, rectype:, style:, subtype: nil)
+      def initialize(profile:, rectype:, subtype: nil, style: "old")
         @profile = profile
         @rectype = rectype
-        @style = style
         @subtype = subtype
+        @style = style
         @mappings = @rectype.batch_mappings
         @config = @profile.config
         @hash = {}
