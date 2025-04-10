@@ -9,9 +9,10 @@ module CspaceConfigUntangler
 
       # profile = CCU::Profile
       # rectype = CCU::RecordType
-      def initialize(profile:, rectype:, subtype: nil)
+      def initialize(profile:, rectype:, style:, subtype: nil)
         @profile = profile
         @rectype = rectype
+        @style = style
         @subtype = subtype
         @mappings = @rectype.batch_mappings
         @config = @profile.config
@@ -29,7 +30,7 @@ module CspaceConfigUntangler
 
       def build_hash
         @hash[:config] = {}
-        @hash[:config][:dataConfigType] = "record type"
+        @hash[:config][:dataConfigType] = "record type" if @style == "new"
         @hash[:config][:profile_basename] = @profile.basename
         @hash[:config][:version] = @profile.readable_version
         @hash[:config][:recordtype] = @rectype.name

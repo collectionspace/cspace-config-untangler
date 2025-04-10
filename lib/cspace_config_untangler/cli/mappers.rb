@@ -77,6 +77,11 @@ module CspaceConfigUntangler
         "for the given profiles."
       shared_options :profiles, :rectypes, :subdirs, :env
       shared_option :output_dir, default: CCU.mapperdir
+      option(:style,
+        type: :string,
+        enum: %w[old new],
+        default: "old",
+        desc: "Old works for CSV Importer; New for data-toolkit")
       def write
         CCU.config.instance_env = options[:env]
 
@@ -95,7 +100,8 @@ module CspaceConfigUntangler
             puts "  ...#{rt.name}"
             CspaceConfigUntangler::RecordMapper::Wrapper.new(profile: p,
               rectype: rt,
-              base_path: dir_path).mappers.each do |mapper|
+              base_path: dir_path,
+              style: options[:style]).mappers.each do |mapper|
               mapper[:mapper].to_json(data: mapper[:mapper].hash,
                 output: mapper[:path])
             end

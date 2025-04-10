@@ -1,0 +1,440 @@
+{
+  "config": {
+    "profile_basename": "publicart",
+    "version": "3.0.0",
+    "recordtype": "group",
+    "document_name": "groups",
+    "service_name": "Groups",
+    "service_path": "groups",
+    "service_type": "procedure",
+    "object_name": "Group",
+    "ns_uri": {
+      "groups_common": "http://collectionspace.org/services/group",
+      "groups_checklist": "http://collectionspace.org/services/group/domain/checklist"
+    },
+    "identifier_field": "title",
+    "search_field": "title"
+  },
+  "docstructure": {
+    "groups_common": {},
+    "groups_checklist": {
+      "checklistGroupList": {
+        "checklistGroup": {
+          "checklistItemGroupList": {
+            "checklistItemGroup": {}
+          }
+        }
+      }
+    }
+  },
+  "mappings": [
+    {
+      "fieldname": "title",
+      "transforms": {},
+      "source_type": "na",
+      "source_name": "na",
+      "namespace": "groups_common",
+      "xpath": [],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [],
+      "datacolumn": "title",
+      "required": "y"
+    },
+    {
+      "fieldname": "responsibleDepartment",
+      "transforms": {
+        "vocabulary": "program"
+      },
+      "source_type": "vocabulary",
+      "source_name": "program",
+      "namespace": "groups_common",
+      "xpath": [],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [],
+      "datacolumn": "responsibleDepartment",
+      "required": "n"
+    },
+    {
+      "fieldname": "responsibleDepartment",
+      "transforms": {},
+      "source_type": "refname",
+      "source_name": "vocabulary refname",
+      "namespace": "groups_common",
+      "xpath": [],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [],
+      "datacolumn": "responsibleDepartmentRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "owner",
+      "transforms": {
+        "authority": [
+          "personauthorities",
+          "person"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "person/local",
+      "namespace": "groups_common",
+      "xpath": [],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [],
+      "datacolumn": "ownerPersonLocal",
+      "required": "n"
+    },
+    {
+      "fieldname": "owner",
+      "transforms": {
+        "authority": [
+          "personauthorities",
+          "person_shared"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "person/shared",
+      "namespace": "groups_common",
+      "xpath": [],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [],
+      "datacolumn": "ownerPersonShared",
+      "required": "n"
+    },
+    {
+      "fieldname": "owner",
+      "transforms": {
+        "authority": [
+          "orgauthorities",
+          "organization"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "organization/local",
+      "namespace": "groups_common",
+      "xpath": [],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [],
+      "datacolumn": "ownerOrganizationLocal",
+      "required": "n"
+    },
+    {
+      "fieldname": "owner",
+      "transforms": {
+        "authority": [
+          "orgauthorities",
+          "organization_shared"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "organization/shared",
+      "namespace": "groups_common",
+      "xpath": [],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [],
+      "datacolumn": "ownerOrganizationShared",
+      "required": "n"
+    },
+    {
+      "fieldname": "owner",
+      "transforms": {},
+      "source_type": "refname",
+      "source_name": "authority refname",
+      "namespace": "groups_common",
+      "xpath": [],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [],
+      "datacolumn": "ownerRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "groupEarliestSingleDate",
+      "transforms": {},
+      "source_type": "na",
+      "source_name": "na",
+      "namespace": "groups_common",
+      "xpath": [],
+      "data_type": "date",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [],
+      "datacolumn": "groupEarliestSingleDate",
+      "required": "n"
+    },
+    {
+      "fieldname": "groupLatestDate",
+      "transforms": {},
+      "source_type": "na",
+      "source_name": "na",
+      "namespace": "groups_common",
+      "xpath": [],
+      "data_type": "date",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [],
+      "datacolumn": "groupLatestDate",
+      "required": "n"
+    },
+    {
+      "fieldname": "scopeNote",
+      "transforms": {},
+      "source_type": "na",
+      "source_name": "na",
+      "namespace": "groups_common",
+      "xpath": [],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [],
+      "datacolumn": "scopeNote",
+      "required": "n"
+    },
+    {
+      "fieldname": "checklistType",
+      "transforms": {
+        "vocabulary": "checklisttype"
+      },
+      "source_type": "vocabulary",
+      "source_name": "checklisttype",
+      "namespace": "groups_checklist",
+      "xpath": [
+        "checklistGroupList",
+        "checklistGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "checklistType",
+      "required": "n"
+    },
+    {
+      "fieldname": "checklistType",
+      "transforms": {},
+      "source_type": "refname",
+      "source_name": "vocabulary refname",
+      "namespace": "groups_checklist",
+      "xpath": [
+        "checklistGroupList",
+        "checklistGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "checklistTypeRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "checklistOpenDate",
+      "transforms": {},
+      "source_type": "na",
+      "source_name": "na",
+      "namespace": "groups_checklist",
+      "xpath": [
+        "checklistGroupList",
+        "checklistGroup"
+      ],
+      "data_type": "date",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "checklistOpenDate",
+      "required": "n"
+    },
+    {
+      "fieldname": "checklistCloseDate",
+      "transforms": {},
+      "source_type": "na",
+      "source_name": "na",
+      "namespace": "groups_checklist",
+      "xpath": [
+        "checklistGroupList",
+        "checklistGroup"
+      ],
+      "data_type": "date",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "checklistCloseDate",
+      "required": "n"
+    },
+    {
+      "fieldname": "checklistNote",
+      "transforms": {},
+      "source_type": "na",
+      "source_name": "na",
+      "namespace": "groups_checklist",
+      "xpath": [
+        "checklistGroupList",
+        "checklistGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "checklistNote",
+      "required": "n"
+    },
+    {
+      "fieldname": "checklistItem",
+      "transforms": {},
+      "source_type": "na",
+      "source_name": "na",
+      "namespace": "groups_checklist",
+      "xpath": [
+        "checklistGroupList",
+        "checklistGroup",
+        "checklistItemGroupList",
+        "checklistItemGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "checklistItem",
+      "required": "n"
+    },
+    {
+      "fieldname": "checklistAssignee",
+      "transforms": {
+        "authority": [
+          "personauthorities",
+          "person"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "person/local",
+      "namespace": "groups_checklist",
+      "xpath": [
+        "checklistGroupList",
+        "checklistGroup",
+        "checklistItemGroupList",
+        "checklistItemGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "checklistAssigneePersonLocal",
+      "required": "n"
+    },
+    {
+      "fieldname": "checklistAssignee",
+      "transforms": {
+        "authority": [
+          "personauthorities",
+          "person_shared"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "person/shared",
+      "namespace": "groups_checklist",
+      "xpath": [
+        "checklistGroupList",
+        "checklistGroup",
+        "checklistItemGroupList",
+        "checklistItemGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "checklistAssigneePersonShared",
+      "required": "n"
+    },
+    {
+      "fieldname": "checklistAssignee",
+      "transforms": {},
+      "source_type": "refname",
+      "source_name": "authority refname",
+      "namespace": "groups_checklist",
+      "xpath": [
+        "checklistGroupList",
+        "checklistGroup",
+        "checklistItemGroupList",
+        "checklistItemGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "checklistAssigneeRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "checklistStatus",
+      "transforms": {
+        "vocabulary": "checkliststatus"
+      },
+      "source_type": "vocabulary",
+      "source_name": "checkliststatus",
+      "namespace": "groups_checklist",
+      "xpath": [
+        "checklistGroupList",
+        "checklistGroup",
+        "checklistItemGroupList",
+        "checklistItemGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "checklistStatus",
+      "required": "n"
+    },
+    {
+      "fieldname": "checklistStatus",
+      "transforms": {},
+      "source_type": "refname",
+      "source_name": "vocabulary refname",
+      "namespace": "groups_checklist",
+      "xpath": [
+        "checklistGroupList",
+        "checklistGroup",
+        "checklistItemGroupList",
+        "checklistItemGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "checklistStatusRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "checklistStatusDate",
+      "transforms": {},
+      "source_type": "na",
+      "source_name": "na",
+      "namespace": "groups_checklist",
+      "xpath": [
+        "checklistGroupList",
+        "checklistGroup",
+        "checklistItemGroupList",
+        "checklistItemGroup"
+      ],
+      "data_type": "date",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "checklistStatusDate",
+      "required": "n"
+    }
+  ]
+}

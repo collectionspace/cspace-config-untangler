@@ -4,10 +4,11 @@ module CspaceConfigUntangler
   module RecordMapper
     class Wrapper
       attr_reader :mappers
-      def initialize(profile:, rectype:, base_path:)
+      def initialize(profile:, rectype:, base_path:, style:)
         @profile = profile
         @rectype = rectype
         @base_path = base_path
+        @style = style
         @service_type = @rectype.service_type
         @mappers = []
 
@@ -26,7 +27,7 @@ module CspaceConfigUntangler
         if subtype
           {
             mapper: RecordMapping.new(profile: @profile, rectype: @rectype,
-              subtype: subtype),
+              subtype: subtype, style: @style),
             path: "#{@base_path}/"\
               "#{@profile.name}_#{@rectype.name}-#{subtype[:name].downcase.tr(
                 " ", "-"
@@ -34,7 +35,8 @@ module CspaceConfigUntangler
           }
         else
           {
-            mapper: RecordMapping.new(profile: @profile, rectype: @rectype),
+            mapper: RecordMapping.new(profile: @profile, rectype: @rectype,
+              style: @style),
             path: "#{@base_path}/#{@profile.name}_#{@rectype.name}.json"
           }
         end
