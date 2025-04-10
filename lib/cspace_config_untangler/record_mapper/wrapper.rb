@@ -4,7 +4,7 @@ module CspaceConfigUntangler
   module RecordMapper
     class Wrapper
       attr_reader :mappers
-      def initialize(profile:, rectype:, base_path:, style:)
+      def initialize(profile:, rectype:, base_path:, style: "old")
         @profile = profile
         @rectype = rectype
         @base_path = base_path
