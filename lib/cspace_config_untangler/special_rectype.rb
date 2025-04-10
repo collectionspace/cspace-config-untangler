@@ -7,5 +7,19 @@ module CspaceConfigUntangler
     def batch_mappings(context = :mapper)
       mappings
     end
+
+    def mapper(style = "old")
+      {
+        config: styled_config(style),
+        docstructure: docstructure,
+        mappings: mappings
+      }
+    end
+
+    def styled_config(style)
+      return config if style == "old"
+
+      config.merge({dataConfigType: "record type"})
+    end
   end
 end

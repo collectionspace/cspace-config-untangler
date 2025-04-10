@@ -111,7 +111,7 @@ module CspaceConfigUntangler
             name = rt.name
             puts "  ...#{name}"
             path = "#{dir_path}/#{p.name}_#{name}.json"
-            rt.to_json(data: rt.mapper, output: path)
+            rt.to_json(data: rt.mapper(options[:style]), output: path)
           end
         end
       end

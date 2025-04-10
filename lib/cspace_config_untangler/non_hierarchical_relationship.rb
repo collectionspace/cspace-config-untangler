@@ -11,14 +11,6 @@ module CspaceConfigUntangler
       @profile = profile
     end
 
-    def mapper
-      {
-        config: config,
-        docstructure: docstructure,
-        mappings: mappings
-      }
-    end
-
     def name
       "nonhierarchicalrelationship"
     end
@@ -27,7 +19,6 @@ module CspaceConfigUntangler
 
     def config
       {
-        dataConfigType: "record type",
         profile_basename: @profile.basename,
         version: @profile.readable_version,
         recordtype: name,

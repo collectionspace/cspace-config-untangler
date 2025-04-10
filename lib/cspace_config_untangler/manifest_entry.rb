@@ -5,16 +5,16 @@ require "json"
 
 module CspaceConfigUntangler
   class ManifestEntry
-    def initialize(path:)
+    def initialize(path:, type:)
       @path = path.sub("//", "/")
+      @type = type
     end
 
     def data_config_text = @data_config_text ||= File.read(path)
 
     def data_config_json = @data_config_json ||= JSON.parse(data_config_text)
 
-    def data_config_type = @data_config_type ||=
-                             data_config_json.dig("config", "dataConfigType")
+    def data_config_type = @type
 
     def digest
       return unless data_config_type == "record type"
