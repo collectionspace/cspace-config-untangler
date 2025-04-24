@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-require_relative "hosted"
 require "json"
 
 module CspaceConfigUntangler
@@ -17,8 +16,10 @@ module CspaceConfigUntangler
     end
 
     def fetch_hosted(tenants)
-      tenants ||= CCU::Hosted.tenant_names
-      tenants.each do |tenant|
+      return unless CCU.lyrasis_staff
+
+      to_fetch = tenants || CHIA.tenant_names
+      to_fetch.each do |tenant|
         CCU::ConfigFetcher.call(tenant, CCU.oo_config_dir)
       end
     end

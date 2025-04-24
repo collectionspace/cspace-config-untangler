@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require_relative "../hosted"
-
 require "json"
 
 module CspaceConfigUntangler
@@ -36,7 +34,8 @@ module CspaceConfigUntangler
       def configname = @configname ||= configpath.basename.to_s
 
       def set_tenant_basename
-        value = CCU::Hosted.subdomain(configname.delete_suffix(".json"))
+        value = CHIA.tenant_for(configname.delete_suffix(".json"))
+          .basename
         @hash["config"]["tenant_basename"] = value
       end
 

@@ -72,7 +72,7 @@ module CspaceConfigUntangler
     def uri
       return community_supported_uri if community_supported?
 
-      CCU::Hosted.config_url(name)
+      CHIA.tenant_for(name).config_url
     end
 
     def community_supported_uri
