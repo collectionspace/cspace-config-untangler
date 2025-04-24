@@ -34,7 +34,7 @@ These changes are merged into the `main` branch, but have not been released. Aft
 === Changed
 
 * Bump nokogiri from 1.18.2 to 1.18.3 (PR#172)
-* Replace `CCU::Hosted` module with `cspace_hosted_instance_access` dependency
+* Replace `CCU::Hosted` module with `cspace_hosted_instance_access` dependency (PR#191)
 
 === Bugfixes
 
