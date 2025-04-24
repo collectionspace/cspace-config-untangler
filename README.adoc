@@ -30,6 +30,7 @@ _Note: there may be field_defs in a profile which do not match any form_fields. 
 == Setup
 
 * Tested with Ruby 3.2 and 3.3. Use of earlier Ruby versions is not recommended
+* REQUIRED IF USING AS INTERNAL LYRASIS STAFF: Github CLI must be installed and your user authorized in that tool
 * Do `bundle --version`
 ** If the version of Bundler is lower than 2.2.29, do `gem update bundler`
 ** Bundler should come standard with Ruby 2.7.0, but may be an older version. If you get an error that you don't have Bundler installed when you try to check the version, do `gem install bundler`
@@ -38,7 +39,6 @@ _Note: there may be field_defs in a profile which do not match any form_fields. 
 * `bundle/install`
 * Download your configs into the appropriate `data/configs` directory or directories
 * Configure your settings https://github.com/collectionspace/cspace-config-untangler/blob/master/lib/cspace_config_untangler.rb[in `lib/cspace_config_untangler.rb`].
-** **IMPORTANT:** If you are not Lyrasis staff with access to dts-hosting Github organization and AWS profiles, set `lyrasis_staff` setting to false.
 
 === Optional: add the `exe` directory to your PATH
 

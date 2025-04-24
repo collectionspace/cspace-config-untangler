@@ -32,7 +32,7 @@ module CspaceConfigUntangler
   # request mappers
   default_mapper_uri_base =
     "https://raw.githubusercontent.com/collectionspace/"\
-      "cspace-config-untangler/main/data/mappers"
+    "cspace-config-untangler/main/data/mappers"
 
   # The last version of each profile that should get fancy column names created.
   default_last_fancy_column_versions = {
@@ -71,8 +71,19 @@ module CspaceConfigUntangler
   # @return [Boolean] set to false if you are non-Lyrasis staff using this tool,
   #   or are Lyrasis staff without access to dts-hosting Github resources
   setting :lyrasis_staff,
-    default: true,
-    reader: true
+    default: nil,
+    reader: true,
+    constructor: ->(default) do
+      return default unless default.nil?
+
+      ghpath = `which gh`
+      return false if ghpath.empty?
+
+      orgs = `gh org list`
+      return true if orgs.split("\n").include?("dts-hosting")
+
+      false
+    end
 
   # rubocop:disable Layout/LineLength
 
@@ -252,10 +263,7 @@ module CspaceConfigUntangler
     constructor: ->(default) do
       return if !lyrasis_staff || disable_api_checks
 
-      require "aws-sdk-ssm"
-      Aws::SSM::Client.new(profile: "collectionspace")
-    rescue RuntimeError => err
-      err.message
+      CHIA.ssm_client
     end
 
   def safe_copy(hash)
@@ -298,4 +306,23 @@ module CspaceConfigUntangler
         .delete_suffix(".rb")
       require req_file
     end
+
+  if lyrasis_staff
+    chia_path = File.join(Bundler.root, "vendor",
+      "cspace_hosted_instance_access")
+    unless Dir.exist?(chia_path)
+      FileUtils.cd(File.join(Bundler.root, "vendor")) do
+        `gh repo clone dts-hosting/cspace_hosted_instance_access`
+      end
+    end
+
+    FileUtils.cd(chia_path) do
+      unless `git status`.match?("branch is up to date")
+        `git pull`
+        `bundle install`
+      end
+    end
+
+    require File.join(chia_path, "lib", "cspace_hosted_instance_access")
+  end
 end

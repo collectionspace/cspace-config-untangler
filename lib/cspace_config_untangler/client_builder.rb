@@ -94,13 +94,13 @@ module CspaceConfigUntangler
     def get_ssm_params
       return unless ssm
 
-      paramname = "cspace-dcsp-production-#{name}-admin-password"
-      response = ssm.get_parameter({name: paramname, with_decryption: true})
-      @ssm_params = {base_uri: CCU::Hosted.services_url(name),
-                     username: "admin@collectionspace.org",
-                     password: response.parameter.value}
-    rescue Aws::SSM::Errors::ParameterNotFound
-      @ssm_params = nil
+      tenant = CHIA.tenant_for(name)
+      pw = tenant.admin_password
+      return unless pw
+
+      @ssm_params = {base_uri: tenant.services_url,
+                     username: tenant.user_name,
+                     password: pw}
     end
   end
 end
