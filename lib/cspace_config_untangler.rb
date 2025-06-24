@@ -134,7 +134,8 @@ module CspaceConfigUntangler
   setting :mapperdir, default: default_mapperdir, reader: true
   setting :logpath, default: default_logpath, reader: true
   setting :releases,
-    default: ["5_2", "6_0", "6_1", "7_0", "7_1", "7_2", "8_0", "8_1", "8_1_1"],
+    default: ["5_2", "6_0", "6_1", "7_0", "7_1", "7_2", "8_0", "8_1", "8_1_1",
+      "8_2"],
     reader: true
 
   setting :release,
