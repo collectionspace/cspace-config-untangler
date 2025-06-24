@@ -164,7 +164,7 @@ module CspaceConfigUntangler
     def used_authority_vocabs
       field_defs.values
         .flatten
-        .map { |fd| fd.value_source }
+        .map { |fd| fd.value_sources }
         .flatten
         .select { |src| src.is_a?(CCU::ValueSources::Authority) }
         .map(&:name)
