@@ -805,6 +805,9 @@ core_10-0-2,location.conditionNoteDate,Storage Location Information > Condition 
 core_10-0-2,media.identificationNumber,Media Handling Information > Identification number
 core_10-0-2,media.title,Media Handling Information > Title
 core_10-0-2,media.publishTo,Media Handling Information > Publish to
+core_10-0-2,media.name,Media Handling Information > File Information > Name
+core_10-0-2,media.mimeType,Media Handling Information > File Information > Type
+core_10-0-2,media.length,Media Handling Information > File Information > Size
 core_10-0-2,media.externalUrl,Media Handling Information > External URL
 core_10-0-2,media.measuredPart,Media Handling Information > Measured part
 core_10-0-2,media.dimensionSummary,Media Handling Information > Dimension summary
@@ -1222,6 +1225,9 @@ core_10-0-2,uoc.result,Use of Collections Information > Result
 core_10-0-2,restrictedmedia.identificationNumber,Media Handling Information > Identification number
 core_10-0-2,restrictedmedia.title,Media Handling Information > Title
 core_10-0-2,restrictedmedia.publishTo,Media Handling Information > Publish to
+core_10-0-2,restrictedmedia.name,Media Handling Information > File Information > Name
+core_10-0-2,restrictedmedia.mimeType,Media Handling Information > File Information > Type
+core_10-0-2,restrictedmedia.length,Media Handling Information > File Information > Size
 core_10-0-2,restrictedmedia.externalUrl,Media Handling Information > External URL
 core_10-0-2,restrictedmedia.measuredPart,Media Handling Information > Measured part
 core_10-0-2,restrictedmedia.dimensionSummary,Media Handling Information > Dimension summary
@@ -1824,6 +1830,9 @@ bonsai_7-0-0,location.conditionNoteDate,Storage Location Information > Condition
 bonsai_7-0-0,media.identificationNumber,Media Handling Information > Identification number
 bonsai_7-0-0,media.title,Media Handling Information > Title
 bonsai_7-0-0,media.publishTo,Media Handling Information > Publish to
+bonsai_7-0-0,media.name,Media Handling Information > File Information > Name
+bonsai_7-0-0,media.mimeType,Media Handling Information > File Information > Type
+bonsai_7-0-0,media.length,Media Handling Information > File Information > Size
 bonsai_7-0-0,media.externalUrl,Media Handling Information > External URL
 bonsai_7-0-0,media.measuredPart,Media Handling Information > Measured part
 bonsai_7-0-0,media.dimensionSummary,Media Handling Information > Dimension summary
@@ -2561,7 +2570,7 @@ herbarium_3-0-0,intake.conditionCheckerOrAssessor,Condition Check Information > 
 herbarium_3-0-0,intake.conditionCheckDate,Condition Check Information > Condition check date
 herbarium_3-0-0,intake.conditionCheckReferenceNumber,Condition Check Information > Condition check reference number
 herbarium_3-0-0,intake.conditionCheckNote,Condition Check Information > Condition check note
-herbarium_3-0-0,loanin.loanInNumber,Loan In Information > Lender's number
+herbarium_3-0-0,loanin.loanInNumber,Loan In Information > Loan in number
 herbarium_3-0-0,loanin.loanPurpose,Loan In Information > Loan purpose
 herbarium_3-0-0,loanin.lender,Loan In Information > Lender name
 herbarium_3-0-0,loanin.lendersContact,Loan In Information > Lender contact
@@ -2667,6 +2676,9 @@ herbarium_3-0-0,location.conditionNoteDate,Storage Location Information > Condit
 herbarium_3-0-0,media.identificationNumber,Media Handling Information > Identification number
 herbarium_3-0-0,media.title,Media Handling Information > Title
 herbarium_3-0-0,media.publishTo,Media Handling Information > Publish to
+herbarium_3-0-0,media.name,Media Handling Information > File Information > Name
+herbarium_3-0-0,media.mimeType,Media Handling Information > File Information > Type
+herbarium_3-0-0,media.length,Media Handling Information > File Information > Size
 herbarium_3-0-0,media.externalUrl,Media Handling Information > External URL
 herbarium_3-0-0,media.measuredPart,Media Handling Information > Measured part
 herbarium_3-0-0,media.dimensionSummary,Media Handling Information > Dimension summary
@@ -3030,13 +3042,13 @@ herbarium_3-0-0,taxon.relatedTermType,Taxonomic Name Information > Related term 
 herbarium_3-0-0,taxon.relatedTermSource,Taxonomic Name Information > Related term source
 herbarium_3-0-0,taxon.relatedTermSourceDetail,Taxonomic Name Information > Related term source detail
 lhmc_8-0-0,acquisition.acquisitionReferenceNumber,Acquisition Information > Accession number
-lhmc_8-0-0,acquisition.accessionDateGroup,Acquisition Information > Accessioned
+lhmc_8-0-0,acquisition.accessionDateGroup,Acquisition Information > Accession date
 lhmc_8-0-0,acquisition.acquisitionAuthorizer,Acquisition Information > Authorization > Authorizer
 lhmc_8-0-0,acquisition.acquisitionAuthorizerDate,Acquisition Information > Authorization > Authorization date
 lhmc_8-0-0,acquisition.receivedBy,Acquisition Information > Received by
 lhmc_8-0-0,acquisition.receivedDate,Acquisition Information > Received date
 lhmc_8-0-0,acquisition.acquisitionDateGroup,Acquisition Information > Acquisition date
-lhmc_8-0-0,acquisition.acquisitionMethod,Acquisition Information > Received as
+lhmc_8-0-0,acquisition.acquisitionMethod,Acquisition Information > Acquisition method
 lhmc_8-0-0,acquisition.acquisitionSource,Acquisition Information > Acquisition source
 lhmc_8-0-0,acquisition.owner,Acquisition Information > Owner
 lhmc_8-0-0,acquisition.transferOfTitleNumber,Acquisition Information > Transfer of title number
@@ -3051,7 +3063,7 @@ lhmc_8-0-0,acquisition.approvalStatus,Acquisition Information > Approval status
 lhmc_8-0-0,acquisition.approvalDate,Acquisition Information > Approval status date
 lhmc_8-0-0,acquisition.approvalNote,Acquisition Information > Approval note
 lhmc_8-0-0,acquisition.acquisitionNote,Acquisition Information > Note
-lhmc_8-0-0,acquisition.acquisitionProvisos,Acquisition Information > Restrictions
+lhmc_8-0-0,acquisition.acquisitionProvisos,Acquisition Information > Provisos
 lhmc_8-0-0,acquisition.acquisitionFundingCurrency,Acquisition Information > Funding currency
 lhmc_8-0-0,acquisition.acquisitionFundingValue,Acquisition Information > Funding value
 lhmc_8-0-0,acquisition.acquisitionFundingSource,Acquisition Information > Funding source
@@ -3181,7 +3193,7 @@ lhmc_8-0-0,collectionobject.objectCountCountedBy,Object Identification Informati
 lhmc_8-0-0,collectionobject.objectCountDate,Object Identification Information > Object count date
 lhmc_8-0-0,collectionobject.objectCountNote,Object Identification Information > Object count note
 lhmc_8-0-0,collectionobject.copyNumber,Object Description Information > Copy number
-lhmc_8-0-0,collectionobject.objectStatus,Object Description Information > Original/copy
+lhmc_8-0-0,collectionobject.objectStatus,Object Description Information > Object status
 lhmc_8-0-0,collectionobject.editionNumber,Object Description Information > Edition number
 lhmc_8-0-0,collectionobject.ageQualifier,Object Description Information > Age > Age qualifier
 lhmc_8-0-0,collectionobject.age,Object Description Information > Age > Age value
@@ -3211,7 +3223,7 @@ lhmc_8-0-0,collectionobject.measurementUnit,Object Description Information > Mea
 lhmc_8-0-0,collectionobject.valueQualifier,Object Description Information > Measurement qualifier
 lhmc_8-0-0,collectionobject.valueDate,Object Description Information > Measurement date
 lhmc_8-0-0,collectionobject.measuredPartNote,Object Description Information > Dimension note
-lhmc_8-0-0,collectionobject.contentDescription,Object Description Information > Content > Content description/summary/scope
+lhmc_8-0-0,collectionobject.contentDescription,Object Description Information > Content > Content description
 lhmc_8-0-0,collectionobject.contentLanguage,Object Description Information > Content > Content language
 lhmc_8-0-0,collectionobject.contentActivity,Object Description Information > Content > Content activity
 lhmc_8-0-0,collectionobject.contentConcept,Object Description Information > Content > Content concept
@@ -3228,7 +3240,7 @@ lhmc_8-0-0,collectionobject.contentEventNameType,Object Description Information 
 lhmc_8-0-0,collectionobject.contentEvent,Object Description Information > Content > Content controlled event or period/era
 lhmc_8-0-0,collectionobject.contentOther,Object Description Information > Content > Content other name
 lhmc_8-0-0,collectionobject.contentOtherType,Object Description Information > Content > Content other type
-lhmc_8-0-0,collectionobject.contentNote,Object Description Information > Content > Content abstract
+lhmc_8-0-0,collectionobject.contentNote,Object Description Information > Content > Content note
 lhmc_8-0-0,collectionobject.inscriptionContent,Object Description Information > Textual Inscription > Textual inscription content
 lhmc_8-0-0,collectionobject.inscriptionContentInscriber,Object Description Information > Textual Inscription > Textual inscription inscriber
 lhmc_8-0-0,collectionobject.inscriptionContentLanguage,Object Description Information > Textual Inscription > Textual inscription language
@@ -3246,7 +3258,7 @@ lhmc_8-0-0,collectionobject.inscriptionDescriptionDateGroup,Object Description I
 lhmc_8-0-0,collectionobject.inscriptionDescriptionPosition,Object Description Information > Non-Textual Inscription > Non-textual inscription position
 lhmc_8-0-0,collectionobject.inscriptionDescriptionType,Object Description Information > Non-Textual Inscription > Non-textual inscription type
 lhmc_8-0-0,collectionobject.inscriptionDescriptionMethod,Object Description Information > Non-Textual Inscription > Non-textual inscription method
-lhmc_8-0-0,collectionobject.inscriptionDescriptionInterpretation,Object Description Information > Non-Textual Inscription > Non-textual inscription maker's mark note
+lhmc_8-0-0,collectionobject.inscriptionDescriptionInterpretation,Object Description Information > Non-Textual Inscription > Non-textual inscription interpretation
 lhmc_8-0-0,collectionobject.objectProductionDateGroup,Object Production Information > Production date
 lhmc_8-0-0,collectionobject.objectProductionEra,Object Production Information > Production era
 lhmc_8-0-0,collectionobject.technique,Object Production Information > Production technique
@@ -3297,7 +3309,7 @@ lhmc_8-0-0,collectionobject.assocEventNote,Object History and Association Inform
 lhmc_8-0-0,collectionobject.assocStructuredDateGroup,Object History and Association Information > Associations > Associated date value
 lhmc_8-0-0,collectionobject.assocDateType,Object History and Association Information > Associations > Associated date type
 lhmc_8-0-0,collectionobject.assocDateNote,Object History and Association Information > Associations > Associated date note
-lhmc_8-0-0,collectionobject.objectHistoryNote,Object History and Association Information > Provenance
+lhmc_8-0-0,collectionobject.objectHistoryNote,Object History and Association Information > Object history note
 lhmc_8-0-0,collectionobject.usage,Object History and Association Information > Usage
 lhmc_8-0-0,collectionobject.usageNote,Object History and Association Information > Usage note
 lhmc_8-0-0,collectionobject.owner,Object History and Association Information > Object Owner's Contribution Information > Owner
@@ -3394,8 +3406,8 @@ lhmc_8-0-0,conditioncheck.completenessNote,Object Condition Information > Comple
 lhmc_8-0-0,conditioncheck.hazard,Object Condition Information > Hazard description
 lhmc_8-0-0,conditioncheck.hazardDate,Object Condition Information > Hazard date
 lhmc_8-0-0,conditioncheck.hazardNote,Object Condition Information > Hazard note
-lhmc_8-0-0,conditioncheck.techAssessment,Object Condition Information > Mechanism operation description
-lhmc_8-0-0,conditioncheck.techAssessmentDate,Object Condition Information > Mechanism operation date
+lhmc_8-0-0,conditioncheck.techAssessment,Object Condition Information > Technical assessment description
+lhmc_8-0-0,conditioncheck.techAssessmentDate,Object Condition Information > Technical assessment date
 lhmc_8-0-0,conditioncheck.conditionLHMC,Object Condition Information > Condition description
 lhmc_8-0-0,conditioncheck.conditionFacetLHMC,Object Condition Information > Condition facet
 lhmc_8-0-0,conditioncheck.conditionDateLHMC,Object Condition Information > Condition date
@@ -3552,12 +3564,12 @@ lhmc_8-0-0,insurance.insuranceIndemnityQuoteCurrency,Insurance and Indemnity Inf
 lhmc_8-0-0,insurance.insuranceIndemnityQuoteValue,Insurance and Indemnity Information > Quote value
 lhmc_8-0-0,insurance.insuranceIndemnityQuoteDate,Insurance and Indemnity Information > Quote date
 lhmc_8-0-0,intake.entryNumber,Object Entry Information > Entry number
-lhmc_8-0-0,intake.entryDate,Object Entry Information > Received date
+lhmc_8-0-0,intake.entryDate,Object Entry Information > Entry date
 lhmc_8-0-0,intake.receivedBy,Object Entry Information > Received by
 lhmc_8-0-0,intake.entryReason,Object Entry Information > Entry reason
-lhmc_8-0-0,intake.entryMethod,Object Entry Information > Received as
-lhmc_8-0-0,intake.returnDate,Object Entry Information > Return by
-lhmc_8-0-0,intake.currentOwner,Object Entry Information > Source
+lhmc_8-0-0,intake.entryMethod,Object Entry Information > Entry method
+lhmc_8-0-0,intake.returnDate,Object Entry Information > Return date
+lhmc_8-0-0,intake.currentOwner,Object Entry Information > Current owner
 lhmc_8-0-0,intake.depositor,Object Entry Information > Depositor name
 lhmc_8-0-0,intake.depositorsRequirements,Object Entry Information > Depositor requirements
 lhmc_8-0-0,intake.intakeStatus,Object Entry Information > Intake status
@@ -3566,26 +3578,26 @@ lhmc_8-0-0,intake.approvalIndividual,Object Entry Information > Approval individ
 lhmc_8-0-0,intake.approvalStatus,Object Entry Information > Approval status
 lhmc_8-0-0,intake.approvalDate,Object Entry Information > Approval status date
 lhmc_8-0-0,intake.approvalNote,Object Entry Information > Approval note
-lhmc_8-0-0,intake.entryNote,Object Entry Information > Note
+lhmc_8-0-0,intake.entryNote,Object Entry Information > Entry note
 lhmc_8-0-0,intake.packingNote,Object Entry Information > Packing note
 lhmc_8-0-0,intake.valuer,Valuation Information > Valuer
-lhmc_8-0-0,intake.insurer,Insurance Information > Insurance company
+lhmc_8-0-0,intake.insurer,Insurance Information > Insurer
 lhmc_8-0-0,intake.insurancePolicyNumber,Insurance Information > Insurance policy number
-lhmc_8-0-0,intake.insuranceRenewalDate,Insurance Information > Insurance policy expiration date
+lhmc_8-0-0,intake.insuranceRenewalDate,Insurance Information > Insurance renewal date
 lhmc_8-0-0,intake.premiumCurrency,Insurance Information > Premium currency
 lhmc_8-0-0,intake.premiumValue,Insurance Information > Premium value
 lhmc_8-0-0,intake.insuranceNote,Insurance Information > Insurance note
 lhmc_8-0-0,intake.insuredBy,Insurance Information > Insured by
 lhmc_8-0-0,intake.insuredValueCurrency,Insurance Information > Insured value currency
 lhmc_8-0-0,intake.insuredValue,Insurance Information > Insured value
-lhmc_8-0-0,intake.currentLocation,Location Information > Interim location
-lhmc_8-0-0,intake.currentLocationFitness,Location Information > Interim location fitness
+lhmc_8-0-0,intake.currentLocation,Location Information > Current location
+lhmc_8-0-0,intake.currentLocationFitness,Location Information > Current location fitness
 lhmc_8-0-0,intake.currentLocationNote,Location Information > Current location note
-lhmc_8-0-0,intake.locationDate,Location Information > Inventoried date
+lhmc_8-0-0,intake.locationDate,Location Information > Location date
 lhmc_8-0-0,intake.inventoriedBy,Location Information > Inventoried by
 lhmc_8-0-0,intake.conditionCheckMethod,Condition Check Information > Condition check method
 lhmc_8-0-0,intake.conditionCheckReason,Condition Check Information > Condition check reason
-lhmc_8-0-0,intake.conditionCheckerOrAssessor,Condition Check Information > Condition check by
+lhmc_8-0-0,intake.conditionCheckerOrAssessor,Condition Check Information > Condition check assessor
 lhmc_8-0-0,intake.conditionCheckDate,Condition Check Information > Condition check date
 lhmc_8-0-0,intake.conditionCheckReferenceNumber,Condition Check Information > Condition check reference number
 lhmc_8-0-0,intake.intakeCondition,Condition Check Information > Condition
@@ -3649,6 +3661,9 @@ lhmc_8-0-0,location.conditionNoteDate,Storage Location Information > Condition n
 lhmc_8-0-0,media.identificationNumber,Media Handling Information > Identification number
 lhmc_8-0-0,media.title,Media Handling Information > Title
 lhmc_8-0-0,media.publishTo,Media Handling Information > Publish to
+lhmc_8-0-0,media.name,Media Handling Information > File Information > Name
+lhmc_8-0-0,media.mimeType,Media Handling Information > File Information > Type
+lhmc_8-0-0,media.length,Media Handling Information > File Information > Size
 lhmc_8-0-0,media.externalUrl,Media Handling Information > External URL
 lhmc_8-0-0,media.measuredPart,Media Handling Information > Measured part
 lhmc_8-0-0,media.dimensionSummary,Media Handling Information > Dimension summary
@@ -3768,7 +3783,7 @@ lhmc_8-0-0,organization.addressStateOrProvince,Contact Information > State/provi
 lhmc_8-0-0,organization.addressPostCode,Contact Information > Postal code
 lhmc_8-0-0,organization.addressCountry,Contact Information > Country
 lhmc_8-0-0,organization.addressType,Contact Information > Type
-lhmc_8-0-0,person.termDisplayName,Person Information > Term full name
+lhmc_8-0-0,person.termDisplayName,Person Information > Term display name
 lhmc_8-0-0,person.termName,Person Information > Term name
 lhmc_8-0-0,person.termQualifier,Person Information > Term qualifier
 lhmc_8-0-0,person.termStatus,Person Information > Term status
@@ -3788,7 +3803,7 @@ lhmc_8-0-0,person.termSourceDetail,Person Information > Source > Term source det
 lhmc_8-0-0,person.termSourceID,Person Information > Source > Term source ID
 lhmc_8-0-0,person.termSourceNote,Person Information > Source > Term source note
 lhmc_8-0-0,person.gender,Person Information > Gender
-lhmc_8-0-0,person.occupation,Person Information > Occupation/sphere of activity
+lhmc_8-0-0,person.occupation,Person Information > Occupation
 lhmc_8-0-0,person.schoolOrStyle,Person Information > School/style
 lhmc_8-0-0,person.group,Person Information > Group
 lhmc_8-0-0,person.nationality,Person Information > Nationality
@@ -3800,11 +3815,11 @@ lhmc_8-0-0,person.relationshipType,Person Information > Related person > Related
 lhmc_8-0-0,person.relationshipNote,Person Information > Related person > Related person note
 lhmc_8-0-0,person.placeOrResidence,Person Information > Place and/or geographical area of residence > Place/geographical area of residence name
 lhmc_8-0-0,person.placeNote,Person Information > Place and/or geographical area of residence > Place/geographical area of residence note
-lhmc_8-0-0,person.birthDateGroup,Person Information > Born
+lhmc_8-0-0,person.birthDateGroup,Person Information > Birth date
 lhmc_8-0-0,person.birthPlace,Person Information > Where born
-lhmc_8-0-0,person.deathDateGroup,Person Information > Died
+lhmc_8-0-0,person.deathDateGroup,Person Information > Death date
 lhmc_8-0-0,person.deathPlace,Person Information > Where died
-lhmc_8-0-0,person.bioNote,Person Information > Note
+lhmc_8-0-0,person.bioNote,Person Information > Biographical note
 lhmc_8-0-0,person.email,Contact Information > Address
 lhmc_8-0-0,person.emailType,Contact Information > Type
 lhmc_8-0-0,person.telephoneNumber,Contact Information > Number
@@ -3898,7 +3913,7 @@ lhmc_8-0-0,place.placeSource,Place Information > Place source
 lhmc_8-0-0,place.owner,Place Information > Owner
 lhmc_8-0-0,place.ownershipDateGroup,Place Information > Ownership date
 lhmc_8-0-0,place.ownershipNote,Place Information > Ownership note
-lhmc_8-0-0,place.placeNote,Place Information > Legal description
+lhmc_8-0-0,place.placeNote,Place Information > Place note
 lhmc_8-0-0,place.addressPlace1,Place Information > Address line 1
 lhmc_8-0-0,place.addressPlace2,Place Information > Address line 2
 lhmc_8-0-0,place.addressMunicipality,Place Information > Address municipality
@@ -4109,7 +4124,7 @@ botgarden_4-0-0,citation.type,Citation Information > Resource identifier type
 botgarden_4-0-0,citation.captureDate,Citation Information > Resource identifier capture date
 botgarden_4-0-0,citation.relatedTerm,Citation Information > Related term
 botgarden_4-0-0,citation.relationType,Citation Information > Related term type
-botgarden_4-0-0,collectionobject.objectNumber,Object Identification Information > Accession number
+botgarden_4-0-0,collectionobject.objectNumber,Object Identification Information > Identification number
 botgarden_4-0-0,collectionobject.accessionDate,Object Identification Information > Accession date
 botgarden_4-0-0,collectionobject.deadFlag,Object Identification Information > Dead flag
 botgarden_4-0-0,collectionobject.deadDate,Object Identification Information > Dead date
@@ -4128,16 +4143,16 @@ botgarden_4-0-0,collectionobject.notes,Object Identification Information > Taxon
 botgarden_4-0-0,collectionobject.identBy,Object Identification Information > Identification by > Taxonomic identification by
 botgarden_4-0-0,collectionobject.identDateGroup,Object Identification Information > Identification by > Taxonomic identification date
 botgarden_4-0-0,collectionobject.institution,Object Identification Information > Identification by > Taxonomic identification institution
-botgarden_4-0-0,collectionobject.recordStatus,Object Identification Information > Provenance data quality
+botgarden_4-0-0,collectionobject.recordStatus,Object Identification Information > Record status
 botgarden_4-0-0,collectionobject.provenanceType,Object Identification Information > Provenance type
 botgarden_4-0-0,collectionobject.rare,Object Identification Information > Rare
 botgarden_4-0-0,collectionobject.cultivated,Object Identification Information > Cultivated
 botgarden_4-0-0,collectionobject.cbdRestriction,Object Identification Information > CBD restriction
 botgarden_4-0-0,collectionobject.requestedBy,Object Identification Information > Requested by
-botgarden_4-0-0,collectionobject.briefDescription,Object Identification Information > Material type
+botgarden_4-0-0,collectionobject.briefDescription,Object Identification Information > Brief description
 botgarden_4-0-0,collectionobject.namedCollection,Object Identification Information > Named collection
 botgarden_4-0-0,collectionobject.source,Object Identification Information > Source
-botgarden_4-0-0,collectionobject.comment,Object Identification Information > Accession note
+botgarden_4-0-0,collectionobject.comment,Object Identification Information > Comment
 botgarden_4-0-0,collectionobject.typeSpecimenKind,Object Identification Information > Type specimen kind
 botgarden_4-0-0,collectionobject.typeSpecimenAssertionBy,Object Identification Information > Type specimen asserted by
 botgarden_4-0-0,collectionobject.typeSpecimenReference,Object Identification Information > Type specimen reference
@@ -4194,7 +4209,7 @@ botgarden_4-0-0,collectionobject.fieldCollectionNumber,Field Collection Informat
 botgarden_4-0-0,collectionobject.fieldCollectionNumberAssignor,Field Collection Information > Field collection number assignor
 botgarden_4-0-0,collectionobject.vegetationType,Field Collection Information > Vegetation type
 botgarden_4-0-0,collectionobject.fieldCollectionMethod,Field Collection Information > Field collection method
-botgarden_4-0-0,collectionobject.fieldCollectionNote,Field Collection Information > Habitat information
+botgarden_4-0-0,collectionobject.fieldCollectionNote,Field Collection Information > Field collection note
 botgarden_4-0-0,collectionobject.associatedTaxon,Field Collection Information > Associated taxon name
 botgarden_4-0-0,collectionobject.commonName,Field Collection Information > Associated taxon common name
 botgarden_4-0-0,collectionobject.interaction,Field Collection Information > Associated taxon interaction
@@ -4395,8 +4410,8 @@ botgarden_4-0-0,intake.conditionCheckDate,Condition Check Information > Conditio
 botgarden_4-0-0,intake.conditionCheckReferenceNumber,Condition Check Information > Condition check reference number
 botgarden_4-0-0,intake.conditionCheckNote,Condition Check Information > Condition check note
 botgarden_4-0-0,loanout.collector,Voucher Information > Collector
-botgarden_4-0-0,loanout.loanOutDate,Voucher Information > Voucher date
-botgarden_4-0-0,loanout.loanOutNumber,Voucher Information > Voucher collection number
+botgarden_4-0-0,loanout.loanOutDate,Voucher Information > Loan out date
+botgarden_4-0-0,loanout.loanOutNumber,Voucher Information > Loan out number
 botgarden_4-0-0,loanout.sterile,Voucher Information > Phenology > Sterile
 botgarden_4-0-0,loanout.fertile,Voucher Information > Phenology > Fertile
 botgarden_4-0-0,loanout.flowering,Voucher Information > Phenology > Flowering
@@ -4404,14 +4419,14 @@ botgarden_4-0-0,loanout.fruiting,Voucher Information > Phenology > Fruiting
 botgarden_4-0-0,loanout.inSpore,Voucher Information > Phenology > In spore
 botgarden_4-0-0,loanout.hortWild,Voucher Information > Horticultural/wild
 botgarden_4-0-0,loanout.gardenLocation,Voucher Information > Garden location
-botgarden_4-0-0,loanout.loanPurpose,Voucher Information > Voucher purpose
-botgarden_4-0-0,loanout.loanOutNote,Voucher Information > Voucher note
+botgarden_4-0-0,loanout.loanPurpose,Voucher Information > Loan purpose
+botgarden_4-0-0,loanout.loanOutNote,Voucher Information > Note
 botgarden_4-0-0,loanout.fieldCollectionNote,Voucher Information > Collection note
 botgarden_4-0-0,loanout.annotation,Voucher Information > Annotation
-botgarden_4-0-0,loanout.borrower,Voucher Information > Voucher institution
+botgarden_4-0-0,loanout.borrower,Voucher Information > Borrower name
 botgarden_4-0-0,loanout.numLent,Voucher Information > Number lent
 botgarden_4-0-0,loanout.sheetAccessionNumber,Voucher Information > Sheet accession number
-botgarden_4-0-0,loanout.lendersAuthorizer,Voucher Information > Reviewed by
+botgarden_4-0-0,loanout.lendersAuthorizer,Voucher Information > Lender authorizer
 botgarden_4-0-0,loanout.reviewComplete,Voucher Information > Review complete
 botgarden_4-0-0,loanout.labelRequested,Voucher Information > Label requested
 botgarden_4-0-0,location.termDisplayName,Storage Location Information > Term display name
@@ -4435,6 +4450,9 @@ botgarden_4-0-0,location.conditionNoteDate,Storage Location Information > Condit
 botgarden_4-0-0,media.identificationNumber,Media Handling Information > Identification number
 botgarden_4-0-0,media.title,Media Handling Information > Title
 botgarden_4-0-0,media.publishTo,Media Handling Information > Publish to
+botgarden_4-0-0,media.name,Media Handling Information > File Information > Name
+botgarden_4-0-0,media.mimeType,Media Handling Information > File Information > Type
+botgarden_4-0-0,media.length,Media Handling Information > File Information > Size
 botgarden_4-0-0,media.externalUrl,Media Handling Information > External URL
 botgarden_4-0-0,media.measuredPart,Media Handling Information > Measured part
 botgarden_4-0-0,media.dimensionSummary,Media Handling Information > Dimension summary
@@ -4464,24 +4482,24 @@ botgarden_4-0-0,media.rightsHolder,Media Handling Information > Rights holder
 botgarden_4-0-0,media.description,Media Handling Information > Description
 botgarden_4-0-0,media.altText,Media Handling Information > Alt text
 botgarden_4-0-0,media.mediaFileURI,""
-botgarden_4-0-0,movement.locationDate,Current Location Information > Action date
-botgarden_4-0-0,movement.reasonForMove,Current Location Information > Action code
-botgarden_4-0-0,movement.currentLocation,Current Location Information > Garden location
-botgarden_4-0-0,movement.movementContact,Current Location Information > Contact
+botgarden_4-0-0,movement.locationDate,Current Location Information > Location date
+botgarden_4-0-0,movement.reasonForMove,Current Location Information > Reason for move
+botgarden_4-0-0,movement.currentLocation,Current Location Information > Current location
+botgarden_4-0-0,movement.movementContact,Current Location Information > Movement contact
 botgarden_4-0-0,movement.movementReferenceNumber,Current Location Information > Reference number
 botgarden_4-0-0,movement.movementNote,Current Location Information > Movement note
 botgarden_4-0-0,movement.labelRequested,Label Information > Label requested
 botgarden_4-0-0,movement.labelSize,Label Information > Label size
 botgarden_4-0-0,movement.labelStandType,Label Information > Label stand type
 botgarden_4-0-0,movement.labelCount,Label Information > Label count
-botgarden_4-0-0,objectexit.exitNumber,Distribution Information > Distribution number
-botgarden_4-0-0,objectexit.exitDateGroup,Distribution Information > Date
-botgarden_4-0-0,objectexit.currentOwner,Distribution Information > Authorized by
-botgarden_4-0-0,objectexit.exitMethod,Distribution Information > Distribution method
-botgarden_4-0-0,objectexit.depositor,Distribution Information > Organization
-botgarden_4-0-0,objectexit.exitReason,Distribution Information > Distribution reason
+botgarden_4-0-0,objectexit.exitNumber,Distribution Information > Exit number
+botgarden_4-0-0,objectexit.exitDateGroup,Distribution Information > Exit date
+botgarden_4-0-0,objectexit.currentOwner,Distribution Information > Current owner
+botgarden_4-0-0,objectexit.exitMethod,Distribution Information > Exit method
+botgarden_4-0-0,objectexit.depositor,Distribution Information > Depositor
+botgarden_4-0-0,objectexit.exitReason,Distribution Information > Exit reason
 botgarden_4-0-0,objectexit.count,Distribution Information > Count
-botgarden_4-0-0,objectexit.exitNote,Distribution Information > Distribution note
+botgarden_4-0-0,objectexit.exitNote,Distribution Information > Exit note
 botgarden_4-0-0,objectexit.packingNote,Distribution Information > Packing note
 botgarden_4-0-0,organization.termDisplayName,Organization Information > Term display name
 botgarden_4-0-0,organization.termName,Organization Information > Term name
@@ -5146,13 +5164,13 @@ fcart_8-0-0,collectionobject.softwareTechnicalAttributeLowValue,Technical Specif
 fcart_8-0-0,collectionobject.softwareTechnicalAttributeHighValue,Technical Specifications: Software/Web > Software technical attribute high value
 fcart_8-0-0,collectionobject.softwareTechnicalAttributeUnit,Technical Specifications: Software/Web > Software technical attribute unit
 fcart_8-0-0,collectionobject.apiUrl,Technical Specifications: Software/Web > API URL
-fcart_8-0-0,concept.termDisplayName,Concept Information > Generic concept term
-fcart_8-0-0,concept.termName,Concept Information > Term
+fcart_8-0-0,concept.termDisplayName,Concept Information > Term display name
+fcart_8-0-0,concept.termName,Concept Information > Term name
 fcart_8-0-0,concept.termQualifier,Concept Information > Term qualifier
 fcart_8-0-0,concept.termStatus,Concept Information > Term status
 fcart_8-0-0,concept.termType,Concept Information > Term type
 fcart_8-0-0,concept.termFlag,Concept Information > Term flag
-fcart_8-0-0,concept.historicalStatus,Concept Information > Term historical flag
+fcart_8-0-0,concept.historicalStatus,Concept Information > Term historical status
 fcart_8-0-0,concept.termLanguage,Concept Information > Term language
 fcart_8-0-0,concept.termPrefForLang,Concept Information > Term preferred for lang
 fcart_8-0-0,concept.termSource,Concept Information > Source > Term source name
@@ -5486,6 +5504,9 @@ fcart_8-0-0,location.conditionNoteDate,Storage Location Information > Condition 
 fcart_8-0-0,media.identificationNumber,Media Handling Information > Identification number
 fcart_8-0-0,media.title,Media Handling Information > Title
 fcart_8-0-0,media.publishTo,Media Handling Information > Publish to
+fcart_8-0-0,media.name,Media Handling Information > File Information > Name
+fcart_8-0-0,media.mimeType,Media Handling Information > File Information > Type
+fcart_8-0-0,media.length,Media Handling Information > File Information > Size
 fcart_8-0-0,media.externalUrl,Media Handling Information > External URL
 fcart_8-0-0,media.measuredPart,Media Handling Information > Measured part
 fcart_8-0-0,media.dimensionSummary,Media Handling Information > Dimension summary
@@ -5964,14 +5985,14 @@ publicart_7-0-0,citation.type,Citation Information > Resource identifier type
 publicart_7-0-0,citation.captureDate,Citation Information > Resource identifier capture date
 publicart_7-0-0,citation.relatedTerm,Citation Information > Related term
 publicart_7-0-0,citation.relationType,Citation Information > Related term type
-publicart_7-0-0,collectionobject.objectNumber,Object Identification Information > Artwork ID
-publicart_7-0-0,collectionobject.responsibleDepartment,Object Identification Information > Program name
+publicart_7-0-0,collectionobject.objectNumber,Object Identification Information > Identification number
+publicart_7-0-0,collectionobject.responsibleDepartment,Object Identification Information > Responsible department
 publicart_7-0-0,collectionobject.publicartCollection,Object Identification Information > Collection
 publicart_7-0-0,collectionobject.recordStatus,Object Identification Information > Record status
 publicart_7-0-0,collectionobject.publishTo,Object Identification Information > Publish to
-publicart_7-0-0,collectionobject.inventoryStatus,Object Identification Information > Installation type
-publicart_7-0-0,collectionobject.briefDescription,Object Identification Information > Artwork description
-publicart_7-0-0,collectionobject.contentConcept,Object Identification Information > Artwork tag
+publicart_7-0-0,collectionobject.inventoryStatus,Object Identification Information > Inventory status
+publicart_7-0-0,collectionobject.briefDescription,Object Identification Information > Brief description
+publicart_7-0-0,collectionobject.contentConcept,Object Identification Information > Content concept
 publicart_7-0-0,collectionobject.distinguishingFeatures,Object Identification Information > Distinguishing features
 publicart_7-0-0,collectionobject.comment,Object Identification Information > Comment
 publicart_7-0-0,collectionobject.computedCurrentLocation,Object Identification Information > Computed current location
@@ -5980,8 +6001,8 @@ publicart_7-0-0,collectionobject.titleLanguage,Object Identification Information
 publicart_7-0-0,collectionobject.titleType,Object Identification Information > Title type
 publicart_7-0-0,collectionobject.titleTranslation,Object Identification Information > Title translation
 publicart_7-0-0,collectionobject.titleTranslationLanguage,Object Identification Information > Title translation language
-publicart_7-0-0,collectionobject.objectName,Object Identification Information > Work type
-publicart_7-0-0,collectionobject.objectNameNote,Object Identification Information > Work type note
+publicart_7-0-0,collectionobject.objectName,Object Identification Information > Object name
+publicart_7-0-0,collectionobject.objectNameNote,Object Identification Information > Object name note
 publicart_7-0-0,collectionobject.objectCount,Object Identification Information > Object count value
 publicart_7-0-0,collectionobject.objectCountUnit,Object Identification Information > Object count unit
 publicart_7-0-0,collectionobject.objectCountType,Object Identification Information > Object count type
@@ -5990,7 +6011,7 @@ publicart_7-0-0,collectionobject.objectCountDate,Object Identification Informati
 publicart_7-0-0,collectionobject.objectCountNote,Object Identification Information > Object count note
 publicart_7-0-0,collectionobject.owner,Object Identification Information > Object Owner's Contribution Information > Owner
 publicart_7-0-0,collectionobject.material,Object Description Information > Material
-publicart_7-0-0,collectionobject.materialComponentNote,Object Description Information > Material note
+publicart_7-0-0,collectionobject.materialComponentNote,Object Description Information > Material component note
 publicart_7-0-0,collectionobject.measuredPart,Object Description Information > Measured part
 publicart_7-0-0,collectionobject.dimensionSummary,Object Description Information > Dimension summary
 publicart_7-0-0,collectionobject.dimension,Object Description Information > Measurement dimension
@@ -6139,7 +6160,7 @@ publicart_7-0-0,exit.saleNumber,Sale Information > Sale/auction number
 publicart_7-0-0,exit.saleLot,Sale Information > Sale/auction lot
 publicart_7-0-0,exit.saleNote,Sale Information > Sale/auction note
 publicart_7-0-0,group.title,Group Information > Title
-publicart_7-0-0,group.responsibleDepartment,Group Information > Program Name
+publicart_7-0-0,group.responsibleDepartment,Group Information > Responsible department
 publicart_7-0-0,group.owner,Group Information > Group owner
 publicart_7-0-0,group.groupEarliestSingleDate,Group Information > Earliest/single date
 publicart_7-0-0,group.groupLatestDate,Group Information > Latest date
@@ -6242,6 +6263,9 @@ publicart_7-0-0,location.decimalLatitude,Georeference Information > Decimal lati
 publicart_7-0-0,location.decimalLongitude,Georeference Information > Decimal longitude
 publicart_7-0-0,media.identificationNumber,Media Handling Information > Identification number
 publicart_7-0-0,media.title,Media Handling Information > Title
+publicart_7-0-0,media.name,Media Handling Information > File Information > Name
+publicart_7-0-0,media.mimeType,Media Handling Information > File Information > Type
+publicart_7-0-0,media.length,Media Handling Information > File Information > Size
 publicart_7-0-0,media.externalUrl,Media Handling Information > External URL
 publicart_7-0-0,media.contributor,Media Handling Information > Contributor
 publicart_7-0-0,media.creator,Media Handling Information > Creator
@@ -6533,8 +6557,8 @@ materials_4-0-1,citation.resourceIdent,Citation Information > Resource identifie
 materials_4-0-1,citation.type,Citation Information > Resource identifier type
 materials_4-0-1,citation.captureDate,Citation Information > Resource identifier capture date
 materials_4-0-1,citation.relationType,Citation Information > Related term type
-materials_4-0-1,collectionobject.objectNumber,Object Identification Information > Accession number
-materials_4-0-1,collectionobject.objectCount,Object Identification Information > Number of objects
+materials_4-0-1,collectionobject.objectNumber,Object Identification Information > Identification number
+materials_4-0-1,collectionobject.objectCount,Object Identification Information > Object count value
 materials_4-0-1,collectionobject.numberValue,Object Identification Information > Other number value
 materials_4-0-1,collectionobject.numberType,Object Identification Information > Other number type
 materials_4-0-1,collectionobject.collection,Object Identification Information > Collection
@@ -6542,7 +6566,7 @@ materials_4-0-1,collectionobject.namedCollection,Object Identification Informati
 materials_4-0-1,collectionobject.recordStatus,Object Identification Information > Record status
 materials_4-0-1,collectionobject.publishTo,Object Identification Information > Publish to
 materials_4-0-1,collectionobject.inventoryStatus,Object Identification Information > Inventory status
-materials_4-0-1,collectionobject.briefDescription,Object Identification Information > Production description
+materials_4-0-1,collectionobject.briefDescription,Object Identification Information > Brief description
 materials_4-0-1,collectionobject.material,Object Identification Information > Material
 materials_4-0-1,collectionobject.handling,Object Identification Information > Handling
 materials_4-0-1,collectionobject.handlingNote,Object Identification Information > Handling note
@@ -6555,13 +6579,13 @@ materials_4-0-1,collectionobject.annotationType,Object Identification Informatio
 materials_4-0-1,collectionobject.annotationDate,Object Identification Information > Annotation date
 materials_4-0-1,collectionobject.annotationAuthor,Object Identification Information > Annotation author
 materials_4-0-1,collectionobject.annotationNote,Object Identification Information > Annotation note
-materials_4-0-1,collectionobject.objectStatus,Object Description Information > Object type
+materials_4-0-1,collectionobject.objectStatus,Object Description Information > Object status
 materials_4-0-1,collectionobject.finish,Object Description Information > Finish
 materials_4-0-1,collectionobject.finishNote,Object Description Information > Finish note
 materials_4-0-1,collectionobject.color,Object Description Information > Color
 materials_4-0-1,collectionobject.materialGenericColor,Object Description Information > Generic color
 materials_4-0-1,collectionobject.materialPhysicalDescription,Object Description Information > Physical description
-materials_4-0-1,collectionobject.dimensionSummary,Object Description Information > Sample size
+materials_4-0-1,collectionobject.dimensionSummary,Object Description Information > Dimension summary
 materials_4-0-1,collectionobject.dimension,Object Description Information > Measurement dimension
 materials_4-0-1,collectionobject.value,Object Description Information > Measurement value
 materials_4-0-1,collectionobject.measurementUnit,Object Description Information > Measurement unit
@@ -6655,7 +6679,7 @@ materials_4-0-1,loanout.loanOutNumber,Loan Out Information > Loan out number
 materials_4-0-1,loanout.lendersAuthorizer,Loan Out Information > Lender authorizer
 materials_4-0-1,loanout.specialConditionsOfLoan,Loan Out Information > Conditions of loan
 materials_4-0-1,loanout.loanPurpose,Loan Out Information > Loan purpose
-materials_4-0-1,loanout.borrower,Loan Out Information > Borrower
+materials_4-0-1,loanout.borrower,Loan Out Information > Borrower name
 materials_4-0-1,loanout.loanOutNote,Loan Out Information > Note
 materials_4-0-1,loanout.loanGroup,Loan Out Information > Loan status group
 materials_4-0-1,loanout.loanIndividual,Loan Out Information > Loan status individual
@@ -6683,6 +6707,9 @@ materials_4-0-1,location.accessNote,Storage Location Information > Access note
 materials_4-0-1,media.identificationNumber,Media Handling Information > Identification number
 materials_4-0-1,media.title,Media Handling Information > Title
 materials_4-0-1,media.publishTo,Media Handling Information > Publish to
+materials_4-0-1,media.name,Media Handling Information > File Information > Name
+materials_4-0-1,media.mimeType,Media Handling Information > File Information > Type
+materials_4-0-1,media.length,Media Handling Information > File Information > Size
 materials_4-0-1,media.externalUrl,Media Handling Information > External URL
 materials_4-0-1,media.checksumValue,Media Handling Information > Checksum value
 materials_4-0-1,media.checksumType,Media Handling Information > Checksum type
@@ -7227,9 +7254,9 @@ anthro_9-0-0,collectionobject.objectCountType,Object Identification Information 
 anthro_9-0-0,collectionobject.objectCountCountedBy,Object Identification Information > Object count counted by
 anthro_9-0-0,collectionobject.objectCountDate,Object Identification Information > Object count date
 anthro_9-0-0,collectionobject.objectCountNote,Object Identification Information > Object count note
-anthro_9-0-0,collectionobject.assocPeople,Object Identification Information > Associated cultural group
-anthro_9-0-0,collectionobject.assocPeopleType,Object Identification Information > Associated cultural group type of assoc.
-anthro_9-0-0,collectionobject.assocPeopleNote,Object Identification Information > Associated cultural group note
+anthro_9-0-0,collectionobject.assocPeople,Object Identification Information > Associated people
+anthro_9-0-0,collectionobject.assocPeopleType,Object Identification Information > Associated people type
+anthro_9-0-0,collectionobject.assocPeopleNote,Object Identification Information > Associated people note
 anthro_9-0-0,collectionobject.comment,Object Identification Information > Comment
 anthro_9-0-0,collectionobject.annotationType,Object Identification Information > Annotation type
 anthro_9-0-0,collectionobject.annotationDate,Object Identification Information > Annotation date
@@ -7278,8 +7305,8 @@ anthro_9-0-0,collectionobject.objectProductionPlace,Object Production Informatio
 anthro_9-0-0,collectionobject.objectProductionPlaceRole,Object Production Information > Production place role
 anthro_9-0-0,collectionobject.objectProductionPlaceVerbatim,Object Production Information > Production place (verbatim)
 anthro_9-0-0,collectionobject.objectProductionReason,Object Production Information > Production reason
-anthro_9-0-0,collectionobject.objectProductionPeople,Object Production Information > Production cultural group
-anthro_9-0-0,collectionobject.objectProductionPeopleRole,Object Production Information > Production cultural group role
+anthro_9-0-0,collectionobject.objectProductionPeople,Object Production Information > Production people
+anthro_9-0-0,collectionobject.objectProductionPeopleRole,Object Production Information > Production people role
 anthro_9-0-0,collectionobject.objectProductionPerson,Object Production Information > Production person
 anthro_9-0-0,collectionobject.objectProductionPersonRole,Object Production Information > Production person role
 anthro_9-0-0,collectionobject.objectProductionOrganization,Object Production Information > Production organization
@@ -7839,6 +7866,9 @@ anthro_9-0-0,location.conditionNoteDate,Storage Location Information > Condition
 anthro_9-0-0,media.identificationNumber,Media Handling Information > Identification number
 anthro_9-0-0,media.title,Media Handling Information > Title
 anthro_9-0-0,media.publishTo,Media Handling Information > Publish to
+anthro_9-0-0,media.name,Media Handling Information > File Information > Name
+anthro_9-0-0,media.mimeType,Media Handling Information > File Information > Type
+anthro_9-0-0,media.length,Media Handling Information > File Information > Size
 anthro_9-0-0,media.externalUrl,Media Handling Information > External URL
 anthro_9-0-0,media.measuredPart,Media Handling Information > Measured part
 anthro_9-0-0,media.dimensionSummary,Media Handling Information > Dimension summary
@@ -8274,6 +8304,9 @@ anthro_9-0-0,uoc.result,Use of Collections Information > Result
 anthro_9-0-0,restrictedmedia.identificationNumber,Media Handling Information > Identification number
 anthro_9-0-0,restrictedmedia.title,Media Handling Information > Title
 anthro_9-0-0,restrictedmedia.publishTo,Media Handling Information > Publish to
+anthro_9-0-0,restrictedmedia.name,Media Handling Information > File Information > Name
+anthro_9-0-0,restrictedmedia.mimeType,Media Handling Information > File Information > Type
+anthro_9-0-0,restrictedmedia.length,Media Handling Information > File Information > Size
 anthro_9-0-0,restrictedmedia.externalUrl,Media Handling Information > External URL
 anthro_9-0-0,restrictedmedia.measuredPart,Media Handling Information > Measured part
 anthro_9-0-0,restrictedmedia.dimensionSummary,Media Handling Information > Dimension summary
