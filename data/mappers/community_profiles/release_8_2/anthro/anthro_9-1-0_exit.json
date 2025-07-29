@@ -1,0 +1,554 @@
+{
+  "config": {
+    "profile_basename": "anthro",
+    "version": "9.1.0",
+    "recordtype": "exit",
+    "document_name": "exits",
+    "service_name": "Exit",
+    "service_path": "exits",
+    "service_type": "procedure",
+    "object_name": "Exit",
+    "ns_uri": {
+      "exits_common": "http://collectionspace.org/services/exit"
+    },
+    "identifier_field": "exitNumber",
+    "search_field": "exitNumber"
+  },
+  "docstructure": {
+    "exits_common": {
+      "methods": {},
+      "owners": {},
+      "exitAgentGroupList": {
+        "exitAgentGroup": {}
+      },
+      "approvalStatusGroupList": {
+        "approvalStatusGroup": {
+          "approvalStatusNotes": {}
+        }
+      }
+    }
+  },
+  "mappings": [
+    {
+      "fieldname": "exitNumber",
+      "transforms": {},
+      "source_type": "na",
+      "source_name": "na",
+      "namespace": "exits_common",
+      "xpath": [],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [],
+      "datacolumn": "exitNumber",
+      "required": "y"
+    },
+    {
+      "fieldname": "exitDate",
+      "transforms": {},
+      "source_type": "na",
+      "source_name": "na",
+      "namespace": "exits_common",
+      "xpath": [],
+      "data_type": "date",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [],
+      "datacolumn": "exitDate",
+      "required": "n"
+    },
+    {
+      "fieldname": "reason",
+      "transforms": {
+        "vocabulary": "objexitreason"
+      },
+      "source_type": "vocabulary",
+      "source_name": "objexitreason",
+      "namespace": "exits_common",
+      "xpath": [],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [],
+      "datacolumn": "reason",
+      "required": "n"
+    },
+    {
+      "fieldname": "reason",
+      "transforms": {},
+      "source_type": "refname",
+      "source_name": "vocabulary refname",
+      "namespace": "exits_common",
+      "xpath": [],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [],
+      "datacolumn": "reasonRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "method",
+      "transforms": {
+        "vocabulary": "objexitmethod"
+      },
+      "source_type": "vocabulary",
+      "source_name": "objexitmethod",
+      "namespace": "exits_common",
+      "xpath": [
+        "methods"
+      ],
+      "data_type": "string",
+      "repeats": "y",
+      "in_repeating_group": "n",
+      "opt_list_values": [],
+      "datacolumn": "method",
+      "required": "n"
+    },
+    {
+      "fieldname": "method",
+      "transforms": {},
+      "source_type": "refname",
+      "source_name": "vocabulary refname",
+      "namespace": "exits_common",
+      "xpath": [
+        "methods"
+      ],
+      "data_type": "csrefname",
+      "repeats": "y",
+      "in_repeating_group": "n",
+      "opt_list_values": [],
+      "datacolumn": "methodRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "owner",
+      "transforms": {
+        "authority": [
+          "personauthorities",
+          "person"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "person/local",
+      "namespace": "exits_common",
+      "xpath": [
+        "owners"
+      ],
+      "data_type": "string",
+      "repeats": "y",
+      "in_repeating_group": "n",
+      "opt_list_values": [],
+      "datacolumn": "ownerPersonLocal",
+      "required": "n"
+    },
+    {
+      "fieldname": "owner",
+      "transforms": {
+        "authority": [
+          "orgauthorities",
+          "organization"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "organization/local",
+      "namespace": "exits_common",
+      "xpath": [
+        "owners"
+      ],
+      "data_type": "string",
+      "repeats": "y",
+      "in_repeating_group": "n",
+      "opt_list_values": [],
+      "datacolumn": "ownerOrganizationLocal",
+      "required": "n"
+    },
+    {
+      "fieldname": "owner",
+      "transforms": {},
+      "source_type": "refname",
+      "source_name": "authority refname",
+      "namespace": "exits_common",
+      "xpath": [
+        "owners"
+      ],
+      "data_type": "csrefname",
+      "repeats": "y",
+      "in_repeating_group": "n",
+      "opt_list_values": [],
+      "datacolumn": "ownerRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "agent",
+      "transforms": {
+        "authority": [
+          "personauthorities",
+          "person"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "person/local",
+      "namespace": "exits_common",
+      "xpath": [
+        "exitAgentGroupList",
+        "exitAgentGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "agentPersonLocal",
+      "required": "n"
+    },
+    {
+      "fieldname": "agent",
+      "transforms": {
+        "authority": [
+          "orgauthorities",
+          "organization"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "organization/local",
+      "namespace": "exits_common",
+      "xpath": [
+        "exitAgentGroupList",
+        "exitAgentGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "agentOrganizationLocal",
+      "required": "n"
+    },
+    {
+      "fieldname": "agent",
+      "transforms": {},
+      "source_type": "refname",
+      "source_name": "authority refname",
+      "namespace": "exits_common",
+      "xpath": [
+        "exitAgentGroupList",
+        "exitAgentGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "agentRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "role",
+      "transforms": {
+        "vocabulary": "objexitagentrole"
+      },
+      "source_type": "vocabulary",
+      "source_name": "objexitagentrole",
+      "namespace": "exits_common",
+      "xpath": [
+        "exitAgentGroupList",
+        "exitAgentGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "role",
+      "required": "n"
+    },
+    {
+      "fieldname": "role",
+      "transforms": {},
+      "source_type": "refname",
+      "source_name": "vocabulary refname",
+      "namespace": "exits_common",
+      "xpath": [
+        "exitAgentGroupList",
+        "exitAgentGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "roleRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "exitCountNote",
+      "transforms": {},
+      "source_type": "na",
+      "source_name": "na",
+      "namespace": "exits_common",
+      "xpath": [],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [],
+      "datacolumn": "exitCountNote",
+      "required": "n"
+    },
+    {
+      "fieldname": "note",
+      "transforms": {},
+      "source_type": "na",
+      "source_name": "na",
+      "namespace": "exits_common",
+      "xpath": [],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [],
+      "datacolumn": "note",
+      "required": "n"
+    },
+    {
+      "fieldname": "group",
+      "transforms": {
+        "vocabulary": "deaccessionapprovalgroup"
+      },
+      "source_type": "vocabulary",
+      "source_name": "deaccessionapprovalgroup",
+      "namespace": "exits_common",
+      "xpath": [
+        "approvalStatusGroupList",
+        "approvalStatusGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "group",
+      "required": "n"
+    },
+    {
+      "fieldname": "group",
+      "transforms": {},
+      "source_type": "refname",
+      "source_name": "vocabulary refname",
+      "namespace": "exits_common",
+      "xpath": [
+        "approvalStatusGroupList",
+        "approvalStatusGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "groupRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "individual",
+      "transforms": {
+        "authority": [
+          "personauthorities",
+          "person"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "person/local",
+      "namespace": "exits_common",
+      "xpath": [
+        "approvalStatusGroupList",
+        "approvalStatusGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "individualPersonLocal",
+      "required": "n"
+    },
+    {
+      "fieldname": "individual",
+      "transforms": {},
+      "source_type": "refname",
+      "source_name": "authority refname",
+      "namespace": "exits_common",
+      "xpath": [
+        "approvalStatusGroupList",
+        "approvalStatusGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "individualRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "status",
+      "transforms": {
+        "vocabulary": "deaccessionapprovalstatus"
+      },
+      "source_type": "vocabulary",
+      "source_name": "deaccessionapprovalstatus",
+      "namespace": "exits_common",
+      "xpath": [
+        "approvalStatusGroupList",
+        "approvalStatusGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "status",
+      "required": "n"
+    },
+    {
+      "fieldname": "status",
+      "transforms": {},
+      "source_type": "refname",
+      "source_name": "vocabulary refname",
+      "namespace": "exits_common",
+      "xpath": [
+        "approvalStatusGroupList",
+        "approvalStatusGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "statusRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "date",
+      "transforms": {},
+      "source_type": "na",
+      "source_name": "na",
+      "namespace": "exits_common",
+      "xpath": [
+        "approvalStatusGroupList",
+        "approvalStatusGroup"
+      ],
+      "data_type": "date",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "date",
+      "required": "n"
+    },
+    {
+      "fieldname": "approvalStatusNote",
+      "transforms": {},
+      "source_type": "na",
+      "source_name": "na",
+      "namespace": "exits_common",
+      "xpath": [
+        "approvalStatusGroupList",
+        "approvalStatusGroup",
+        "approvalStatusNotes"
+      ],
+      "data_type": "string",
+      "repeats": "y",
+      "in_repeating_group": "as part of larger repeating group",
+      "opt_list_values": [],
+      "datacolumn": "approvalStatusNote",
+      "required": "n"
+    },
+    {
+      "fieldname": "saleCurrency",
+      "transforms": {
+        "vocabulary": "currency"
+      },
+      "source_type": "vocabulary",
+      "source_name": "currency",
+      "namespace": "exits_common",
+      "xpath": [],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [],
+      "datacolumn": "saleCurrency",
+      "required": "n"
+    },
+    {
+      "fieldname": "saleCurrency",
+      "transforms": {},
+      "source_type": "refname",
+      "source_name": "vocabulary refname",
+      "namespace": "exits_common",
+      "xpath": [],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [],
+      "datacolumn": "saleCurrencyRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "saleValue",
+      "transforms": {},
+      "source_type": "na",
+      "source_name": "na",
+      "namespace": "exits_common",
+      "xpath": [],
+      "data_type": "integer",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [],
+      "datacolumn": "saleValue",
+      "required": "n"
+    },
+    {
+      "fieldname": "saleDate",
+      "transforms": {},
+      "source_type": "na",
+      "source_name": "na",
+      "namespace": "exits_common",
+      "xpath": [],
+      "data_type": "structured date group",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [],
+      "datacolumn": "saleDate",
+      "required": "n"
+    },
+    {
+      "fieldname": "saleNumber",
+      "transforms": {},
+      "source_type": "na",
+      "source_name": "na",
+      "namespace": "exits_common",
+      "xpath": [],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [],
+      "datacolumn": "saleNumber",
+      "required": "n"
+    },
+    {
+      "fieldname": "saleLot",
+      "transforms": {},
+      "source_type": "na",
+      "source_name": "na",
+      "namespace": "exits_common",
+      "xpath": [],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [],
+      "datacolumn": "saleLot",
+      "required": "n"
+    },
+    {
+      "fieldname": "saleNote",
+      "transforms": {},
+      "source_type": "na",
+      "source_name": "na",
+      "namespace": "exits_common",
+      "xpath": [],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [],
+      "datacolumn": "saleNote",
+      "required": "n"
+    }
+  ]
+}
