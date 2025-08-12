@@ -28,7 +28,8 @@ module CspaceConfigUntangler
           has_ns_uris,
           has_id_field,
           has_field_mapping_namespaces,
-          term_source_types_ok
+          term_source_types_ok,
+          has_service_path
         ]
         @valid = true if results.uniq == [true]
       end
@@ -60,6 +61,15 @@ module CspaceConfigUntangler
       def has_profile_basename
         if @mapper["config"]["profile_basename"].blank?
           @errors << "Profile lacks config/profile_basename"
+          false
+        else
+          true
+        end
+      end
+
+      def has_service_path
+        if @mapper["config"]["service_path"].blank?
+          @errors << "Profile lacks config/service_path"
           false
         else
           true
