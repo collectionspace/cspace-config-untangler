@@ -118,15 +118,19 @@ module CspaceConfigUntangler
 
       desc "validate", "Prints to screen a validation report of the JSON "\
         "mappers in a directory"
-      long_desc <<-LONGDESC
+      long_desc <<~LONGDESC
         The input directory given will be recursively traversed to find .json
         files. It is expected that all .json files in this directory structure
         will be RecordMappers.
 
-        Currently the validation checks for:
-          - expected top-level keys
-          - a URI for every namespace defined for the Mapper
-          - a namespace defined for every field mapping
+        Currently the validation checks for:\n
+          - expected top-level keys\n
+          - a URI for every namespace defined for the Mapper\n
+          - presence of values for the following keys in the config section:
+            profile_basename, service_path, recordtype, version, ns_uri,
+            identifier_field\n
+          - a namespace defined for every field mapping\n
+          - term sources for all fields are of the expected types
       LONGDESC
       shared_options :input_dir
       def validate
