@@ -34,7 +34,7 @@ module CspaceConfigUntangler
 
         def call
           update_subrecord_field_hash
-          HashIterator.new(@config, self)
+          HashIterator.call(@config, self)
         end
 
         private

@@ -14,22 +14,28 @@ module CspaceConfigUntangler
         # @param config [CCU::Fields::Definition::Config]
         # @param called_from [CCU::Fields::Definition::NamespaceFieldParser,
         #   CCU::Fields::Definition::Grouping]
+        def self.call(config, called_from)
+          new(config, called_from).call
+        end
+
+        # @param config [CCU::Fields::Definition::Config]
+        # @param called_from [CCU::Fields::Definition::NamespaceFieldParser,
+        #   CCU::Fields::Definition::Grouping]
         def initialize(config, called_from)
           @config = config
           @caller = called_from
           @typer = HashEntryTyper.new(@config)
-          process
+        end
+
+        def call
+          capture_config_key
+          delete_config_key if config.hash.size > 1
+          parse_fields
         end
 
         private
 
         attr_reader :config, :caller, :typer, :namespace
-
-        def process
-          capture_config_key
-          delete_config_key if config.hash.size > 1
-          parse_fields
-        end
 
         def capture_config_key
           configkey = "[config]"

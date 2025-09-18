@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 require_relative "field_config_child"
-require_relative "field_filter"
 require_relative "hash_iterator"
 
 module CspaceConfigUntangler
@@ -15,7 +14,7 @@ module CspaceConfigUntangler
           super
           @schema_path << config.name
 
-          HashIterator.new(config, self)
+          HashIterator.call(config, self)
         end
       end
     end
