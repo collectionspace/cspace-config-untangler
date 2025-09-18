@@ -80,7 +80,7 @@ module CspaceConfigUntangler
               field_hash: ns_field_hash,
               parser: self
             )
-            CCU::Fields::Def::NamespaceFieldParser.new(namespace_field_config)
+            CCU::Fields::Def::NamespaceFieldParser.call(namespace_field_config)
           end
         end
       end

@@ -73,7 +73,7 @@ module Helpers
 
     def namespace_field_parser(namespace, config = nil)
       cfg = config || field_def_config(namespace)
-      CCU::Fields::Def::NamespaceFieldParser.new(cfg)
+      CCU::Fields::Def::NamespaceFieldParser.call(cfg)
     end
 
     def record_mapping(subtype = nil)
