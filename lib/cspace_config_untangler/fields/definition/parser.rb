@@ -27,6 +27,13 @@ module CspaceConfigUntangler
       # Otherwise we call each of the children of this level a namespace,
       # skip the skippable ones, and call {NamespaceFieldParser} on each.
       class Parser
+        # @param rectypeobj [CspaceConfigUntangler::RecordType]
+        # @param fields_config [Hash] from JSON config: record
+        #   type/fields/document
+        def self.call(rectypeobj, fields_config)
+          new(rectypeobj, fields_config).call
+        end
+
         # @return [CspaceConfigUntangler::RecordType]
         attr_reader :rectype
 
@@ -54,7 +61,13 @@ module CspaceConfigUntangler
           @ns = config["[config]"]["view"]["props"]["defaultChildSubpath"]
           @field_defs = []
           @config_keys = {}
-          namespace_field_defs
+        end
+
+        def call
+          config.each do |namespace, ns_field_hash|
+            namespace_field_defs(namespace, ns_field_hash)
+          end
+          field_defs
         end
 
         # @param field_def [CCU::Fields::Def::FieldDefinition]
@@ -70,18 +83,16 @@ module CspaceConfigUntangler
 
         private
 
-        def namespace_field_defs
-          config.each do |namespace, ns_field_hash|
-            next if SKIPPABLE_NAMESPACES.any?(namespace)
+        def namespace_field_defs(namespace, ns_field_hash)
+          return if SKIPPABLE_NAMESPACES.any?(namespace)
 
-            namespace_field_config = CCU::Fields::Def::Config.new(
-              rectype: rectype,
-              namespace: namespace,
-              field_hash: ns_field_hash,
-              parser: self
-            )
-            CCU::Fields::Def::NamespaceFieldParser.call(namespace_field_config)
-          end
+          namespace_field_config = CCU::Fields::Def::Config.new(
+            rectype: rectype,
+            namespace: namespace,
+            field_hash: ns_field_hash,
+            parser: self
+          )
+          CCU::Fields::Def::NamespaceFieldParser.call(namespace_field_config)
         end
       end
     end
