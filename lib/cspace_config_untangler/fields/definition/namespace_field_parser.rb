@@ -15,6 +15,11 @@ module CspaceConfigUntangler
       # example of past-me taking "single responsibility principle" a
       # little too literally. This is better handled in {Parser}.
       class NamespaceFieldParser
+        # @param config [CCU::Fields::Definition::Config]
+        def self.call(config)
+          new(config).call
+        end
+
         # @return [CCU::Fields::Definition::Config]
         attr_reader :config
 
@@ -25,6 +30,9 @@ module CspaceConfigUntangler
         def initialize(config)
           @config = config
           @ns = config.ns.literal
+        end
+
+        def call
           update_subrecord_field_hash
           HashIterator.new(@config, self)
         end
