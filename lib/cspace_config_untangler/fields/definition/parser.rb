@@ -59,7 +59,7 @@ module CspaceConfigUntangler
 
         # @param field_def [CCU::Fields::Def::FieldDefinition]
         def add_field_def(field_def)
-          @field_defs << field_def
+          field_defs << field_def
         end
 
         # @param configobj [CCU::Fields::Def::Config]
@@ -75,7 +75,7 @@ module CspaceConfigUntangler
             next if SKIPPABLE_NAMESPACES.any?(namespace)
 
             namespace_field_config = CCU::Fields::Def::Config.new(
-              rectype: @rectype,
+              rectype: rectype,
               namespace: namespace,
               field_hash: ns_field_hash,
               parser: self
