@@ -33,7 +33,7 @@ module Helpers
       end
       CCU.config.main_profile_name = profile
       @profile = CCU::Profile.new(profile: CCU.main_profile,
-                                  rectypes:, structured_date_treatment: dates)
+        rectypes:, structured_date_treatment: dates)
       @rectype = @profile.rectypes.first
     end
 
