@@ -27,29 +27,30 @@ module CspaceConfigUntangler
           @config = config
           @caller = called_from
           @typer = HashEntryTyper.new(@config)
+          @configkey = "[config]"
         end
 
         def call
-          capture_config_key
-          delete_config_key if config.hash.size > 1
+          unless caller.is_a?(CCU::Fields::Definition::NamespaceFieldParser)
+            return unless config.hash.key?(configkey)
+
+            capture_config_key
+            delete_config_key if config.hash.size > 1
+          end
+
           parse_fields
         end
 
         private
 
-        attr_reader :config, :caller, :typer, :namespace
+        attr_reader :config, :caller, :typer, :configkey,
+          :namespace
 
         def capture_config_key
-          configkey = "[config]"
-          return unless config.hash.key?(configkey)
-
           config.parser.add_config_key(config, config.hash[configkey])
         end
 
         def delete_config_key
-          configkey = "[config]"
-          return unless config.hash.key?(configkey)
-
           working = CCU.safe_copy(config.hash)
           working.delete(configkey)
           config.update_field_hash(working)
