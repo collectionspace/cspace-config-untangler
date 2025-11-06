@@ -76,6 +76,8 @@ module CspaceConfigUntangler
       fields
     end
 
+    def mappings = @mappings ||= derive_mappings
+
     def nonunique_fields
       h = {}
       fields.each do |f|
@@ -103,7 +105,7 @@ module CspaceConfigUntangler
       h.select { |name, paths| paths.length > 1 }
     end
 
-    def mappings
+    def derive_mappings
       checkhash = {}
       mappings = fields.map do |f|
         FieldMapper.new(field: f,
@@ -120,6 +122,7 @@ module CspaceConfigUntangler
           else
             mapping.xpath.last
           end
+
           mapping.datacolumn = "#{add}_#{mapping.datacolumn}"
         else
           checkhash[mapping.datacolumn] = nil
@@ -129,9 +132,8 @@ module CspaceConfigUntangler
     end
 
     def batch_mappings(context = :mapper)
-      mappings = remove_unimportable_fields_from(self.mappings, context)
-      mappings = faux_require_mappings(mappings)
-      faux_require_profile_specific_mappings(mappings)
+      importable = remove_unimportable_fields_from(mappings, context)
+      faux_require_profile_specific_mappings(faux_require_mappings(importable))
     end
 
     def id_field
