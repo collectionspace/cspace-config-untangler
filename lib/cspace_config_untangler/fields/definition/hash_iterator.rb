@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-require_relative "field_filter"
 require_relative "grouping"
 require_relative "hash_entry_typer"
 
@@ -11,6 +10,9 @@ module CspaceConfigUntangler
       # field grouping, or field), along with its parent, and iterates
       # through them to get all individual field definitions
       class HashIterator
+        # List of fields to omit from resulting field definitions
+        OMITTED_FIELDS = %w[csid inAuthority refName shortIdentifier]
+
         # @param config [CCU::Fields::Definition::Config]
         # @param called_from [CCU::Fields::Definition::NamespaceFieldParser,
         #   CCU::Fields::Definition::Grouping]
@@ -64,10 +66,19 @@ module CspaceConfigUntangler
           child = config.derive_child(name: name, field_hash: data,
             parent: caller)
           if type == :field || type == :structured_date
-            FieldFilter.call(child)
+            build_and_add_field(child)
           elsif type == :group
             Grouping.call(child)
           end
+        end
+
+        def build_and_add_field(child)
+          return if OMITTED_FIELDS.any?(child.name)
+
+          field_def = FieldDefinition.new(child)
+          return unless field_def
+
+          config.parser.add_field_def(field_def)
         end
       end
     end
