@@ -42,9 +42,10 @@ module Helpers
     end
 
     def field(rectype, fieldname)
-      profile.fields.find do |field|
-        field.rectype.name == rectype && field.name == fieldname
-      end
+      rt = profile.rectypes.find { |rt| rt.name == rectype }
+      raise "No #{rectype} rectype for #{profile.name}" unless rt
+
+      rt.fields.find { |field| field.name == fieldname }
     end
 
     def field_def_config(namespace)
