@@ -66,7 +66,7 @@ module CspaceConfigUntangler
           if type == :field || type == :structured_date
             FieldFilter.call(child)
           elsif type == :group
-            Grouping.new(child)
+            Grouping.call(child)
           end
         end
       end
