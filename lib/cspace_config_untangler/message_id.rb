@@ -14,6 +14,7 @@ module CspaceConfigUntangler
       about: 2,
       column: 4,
       field: 3,
+      form: 3,
       inputTable: 3,
       panel: 3,
       record: 2,
@@ -69,6 +70,8 @@ module CspaceConfigUntangler
     def set_element_name
       case element_type
       when :field
+        parts[2]
+      when :form
         parts[2]
       when :record
         parts[1]
