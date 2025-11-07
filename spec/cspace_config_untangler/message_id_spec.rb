@@ -54,6 +54,19 @@ RSpec.describe CCU::MessageId, :aggregate_failures do
     end
   end
 
+  context "when form type" do
+    let(:id) { "form.collectionobject.default.name" }
+
+    it "returns expected values" do
+      expect(subject.element_type).to eq(:form)
+      expect(subject.base_id).to eq(
+        "form.collectionobject.default"
+      )
+      expect(subject.message_type).to eq(:name)
+      expect(subject.element_name).to eq("default")
+    end
+  end
+
   context "when panel type" do
     let(:id) { "panel.loanout.info" }
 
