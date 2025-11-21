@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require_relative "config"
+require_relative "../../messages"
 
 module CspaceConfigUntangler
   module Fields
@@ -25,11 +26,18 @@ module CspaceConfigUntangler
           end
           @id = get_id
 
+          @messages = CCU::Messages.new
           get_message("name") if @id
           get_message("fullName") if @id
           @schema_path = set_schema_path
           @repeats = set_repeats
           @in_repeating_group = set_group_repeats
+          @messages_extracted = false
+        end
+
+        def messages
+          extract_messages unless messages_extracted
+          @messages
         end
 
         def is_structured_date?
@@ -40,6 +48,17 @@ module CspaceConfigUntangler
         end
 
         private
+
+        attr_reader :messages_extracted
+
+        def extract_messages
+          return unless id
+
+          msg_config = @hash.dig("[config]", "messages")
+          return unless msg_config
+
+          @messages.add(msg_config)
+        end
 
         def set_schema_path
           if @parent.is_a?(CCU::Fields::Def::NamespaceFieldParser)
