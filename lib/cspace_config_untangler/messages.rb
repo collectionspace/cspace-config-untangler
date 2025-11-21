@@ -22,7 +22,9 @@ module CspaceConfigUntangler
     end
 
     def add(config, parent: nil)
-      if simple_cfg?(config)
+      if config.is_a?(CCU::Messages)
+        @all.concat(config.all)
+      elsif simple_cfg?(config)
         @all << CCU::Message.new(config, parent: parent)
       elsif typed_cfg?(config)
         handle_typed_cfg(config)
