@@ -75,7 +75,8 @@ module CspaceConfigUntangler
         @messages_extracted = true
         return unless config.key?("messages")
 
-        messages.add(config["messages"])
+        @messages.add(config["messages"])
+        rectype.add_messages(@messages)
       end
 
       def force_disabled?
