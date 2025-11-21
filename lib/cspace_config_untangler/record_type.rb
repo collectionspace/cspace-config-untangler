@@ -207,6 +207,7 @@ module CspaceConfigUntangler
     attr_reader :messages_extracted
 
     def extract_messages
+      forms.each { |form| form.messages }
     end
 
     def get_field_defs
