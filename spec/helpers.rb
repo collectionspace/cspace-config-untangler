@@ -74,7 +74,7 @@ module Helpers
     end
 
     def form(template = "default")
-      rectype.forms[template]
+      rectype.forms.find { |form| form.name == template }
     end
 
     def namespace_field_parser(namespace, config = nil)
