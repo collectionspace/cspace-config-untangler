@@ -208,6 +208,7 @@ module CspaceConfigUntangler
 
     def extract_messages
       forms.each { |form| form.messages }
+      field_defs
     end
 
     def get_field_defs

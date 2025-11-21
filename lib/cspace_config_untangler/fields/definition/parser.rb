@@ -73,6 +73,7 @@ module CspaceConfigUntangler
         # @param field_def [CCU::Fields::Def::FieldDefinition]
         def add_field_def(field_def)
           field_defs << field_def
+          rectype.add_messages(field_def.messages)
         end
 
         # @param configobj [CCU::Fields::Def::Config]
