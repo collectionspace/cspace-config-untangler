@@ -25,7 +25,7 @@ module CspaceConfigUntangler
       blob contact export idgenerator object procedure relation
       report reportinvocation structureddates vocabulary]
 
-    attr_reader :profile, :name, :id, :config, :ns, :panels,
+    attr_reader :profile, :name, :id, :config, :ns,
       :input_tables, :structured_date_treatment,
       :service_type, :subtypes, :record_search_field
 
@@ -40,7 +40,6 @@ module CspaceConfigUntangler
       @config = @profile.config["recordTypes"][@name]
 
       @ns = get_namespace
-      @panels = get_panels
       @messages = CCU::Messages.new
       @input_tables = get_input_tables
       @structured_date_treatment = @profile.structured_date_treatment
@@ -55,6 +54,10 @@ module CspaceConfigUntangler
 
     # @return [Array<CCU::Forms::Form>]
     def forms = @forms ||= get_forms
+
+    # @return [Array<String>]
+    def panels = @panels ||= get_panels
+
     def messages
       extract_messages unless messages_extracted
 
