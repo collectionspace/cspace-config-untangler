@@ -23,7 +23,7 @@ module CspaceConfigUntangler
     def element_type = @element_type ||= set_element_type
 
     def inspect
-      %(#<#{self.class}:#{object_id} id: #{id}>)
+      %(#<#{self.class}:#{object_id} id: #{full_id}>)
     end
 
     private
