@@ -41,13 +41,20 @@ module CspaceConfigUntangler
 
       @ns = get_namespace
       @panels = get_panels
+      @messages = CCU::Messages.new
       @input_tables = get_input_tables
       @structured_date_treatment = @profile.structured_date_treatment
       @service_type = service_config.service_type
       @subtypes = (@service_type == "authority") ? get_subtypes : []
       @vocabularies = get_vocabularies
+      @messages_extracted = false
+    end
 
     def forms = @forms ||= get_forms
+    def messages
+      extract_messages unless messages_extracted
+
+      @messages
     end
 
     def label
@@ -193,6 +200,11 @@ module CspaceConfigUntangler
     alias_method :inspect, :to_s
 
     private
+
+    attr_reader :messages_extracted
+
+    def extract_messages
+    end
 
     def get_field_defs
       if @config.dig("fields", "document")
