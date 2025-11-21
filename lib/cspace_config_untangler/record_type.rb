@@ -53,6 +53,7 @@ module CspaceConfigUntangler
     # @param msgs [CCU::Messages]
     def add_messages(msgs) = @messages.add(msgs)
 
+    # @return [Array<CCU::Forms::Form>]
     def forms = @forms ||= get_forms
     def messages
       extract_messages unless messages_extracted
