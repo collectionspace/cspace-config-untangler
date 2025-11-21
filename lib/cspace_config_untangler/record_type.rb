@@ -386,21 +386,11 @@ module CspaceConfigUntangler
     end
 
     def get_panels
-      if @config.dig("messages", "panel")
-        arr = []
+      panel_cfg = config.dig("messages", "panel")
+      return [] unless panel_cfg
 
-        @config["messages"]["panel"].keys.each do |panelname|
-          arr << panelname
-
-          msgs = @profile.messages
-          id = @config["messages"]["panel"][panelname]["id"]
-          label = @config["messages"]["panel"][panelname]["defaultMessage"]
-          msgs[id] = {"name" => label, "fullName" => label}
-        end
-        arr
-      else
-        []
-      end
+      @messages.add(panel_cfg)
+      panel_cfg.keys
     end
 
     def get_namespace
