@@ -26,7 +26,7 @@ module CspaceConfigUntangler
       report reportinvocation structureddates vocabulary]
 
     attr_reader :profile, :name, :id, :config, :ns, :panels,
-      :input_tables, :forms, :structured_date_treatment,
+      :input_tables, :structured_date_treatment,
       :service_type, :subtypes, :record_search_field
 
     # @return [Array<String>] shortIdentifier values of all vocabularies defined
@@ -42,11 +42,12 @@ module CspaceConfigUntangler
       @ns = get_namespace
       @panels = get_panels
       @input_tables = get_input_tables
-      @forms = get_forms
       @structured_date_treatment = @profile.structured_date_treatment
       @service_type = service_config.service_type
       @subtypes = (@service_type == "authority") ? get_subtypes : []
       @vocabularies = get_vocabularies
+
+    def forms = @forms ||= get_forms
     end
 
     def label
@@ -65,7 +66,7 @@ module CspaceConfigUntangler
 
     def media? = %w[media restrictedmedia].include?(name)
 
-    def has_form?(formname) = forms.key?(formname)
+    def has_form?(formname) = forms.any? { |f| f.name == formname }
 
     def explode_structured_date_fields(fields)
       sd_fields = fields.select { |f| f.structured_date? }
@@ -221,8 +222,7 @@ module CspaceConfigUntangler
     # @todo create a public method grouping on id and comparing fields
     #   that appear in multiple forms, to see if any are defined
     #   differently across forms
-    def all_form_fields = forms.values
-      .select(&:enabled?)
+    def all_form_fields = forms.select(&:enabled?)
       .map { |f| f.fields }
       .flatten
 
@@ -344,8 +344,7 @@ module CspaceConfigUntangler
 
       formnames.uniq
         .reject { |fn| fn == "mini" }
-        .map { |fn| [fn, CCU::Form.new(self, fn)] }
-        .to_h
+        .map { |fn| CCU::Form.new(self, fn) }
     end
 
     def get_input_tables

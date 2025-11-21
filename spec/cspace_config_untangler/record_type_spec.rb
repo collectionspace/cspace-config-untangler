@@ -131,19 +131,17 @@ RSpec.describe CCU::RecordType do
 
   describe ".forms" do
     let(:result) { rectype.forms }
+
     context "when anthro profile" do
       let(:profilename) { "anthro" }
+
       context "when collectionobject" do
-        it "returns hash" do
-          expect(result).to be_a(Hash)
-        end
-        it "hash keys are the form names" do
-          forms = %w[default inventory photo].sort
-          expect(result.keys.sort).to eq(forms)
+        it "returns Array" do
+          expect(result).to be_a(Array)
         end
 
-        it "hash values are CCU::Form objects" do
-          expect(result["default"]).to be_a(CCU::Form)
+        it "elements are CCU::Form objects" do
+          expect(result.first).to be_a(CCU::Form)
         end
       end
     end
