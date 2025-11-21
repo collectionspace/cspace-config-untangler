@@ -22,7 +22,7 @@ module Helpers
   end
 
   class SetupGenerator
-    attr_reader :profile, :rectype
+    attr_reader :profile
 
     def initialize(profile:, rectypes:, release: "7_0", dates: :collapse)
       if CCU.releases.include?(release)
@@ -34,7 +34,12 @@ module Helpers
       CCU.config.main_profile_name = profile
       @profile = CCU::Profile.new(profile: CCU.main_profile,
         rectypes:, structured_date_treatment: dates)
-      @rectype = @profile.rectypes.first
+    end
+
+    def rectype(name = nil)
+      return profile.rectypes.first unless name
+
+      profile.rectypes.find { |rt| rt.name == name }
     end
 
     def extension(ext_name)
