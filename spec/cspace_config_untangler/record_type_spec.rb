@@ -110,20 +110,28 @@ RSpec.describe CCU::RecordType do
 
   describe ".input_tables" do
     let(:result) { rectype.input_tables }
+
     context "when anthro profile" do
       let(:profilename) { "anthro" }
+
       context "when collectionobject" do
-        it "returns hash" do
-          expect(result).to be_a(Hash)
+        it "returns Array" do
+          expect(result).to be_a(Array)
         end
+
         it "keys are the panel names for rectype" do
-          panels = [
+          input_tables = [
             "age", "assocEvent", "ownershipExchange", "behrensmeyer",
             "depth", "elevation", "distanceAboveSurface",
             "nagpraReportFiled", "taxonName", "taxonIdent",
             "taxonReference"
           ].sort
-          expect(result.keys.sort).to eq(panels)
+          expect(result.sort).to eq(input_tables)
+        end
+
+        it "sets messages" do
+          msgs = rectype.messages.by_element_type(:inputTable)
+          expect(msgs).not_to be_empty
         end
       end
     end

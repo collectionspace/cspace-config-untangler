@@ -26,7 +26,7 @@ module CspaceConfigUntangler
       report reportinvocation structureddates vocabulary]
 
     attr_reader :profile, :name, :id, :config, :ns,
-      :input_tables, :structured_date_treatment,
+      :structured_date_treatment,
       :service_type, :subtypes, :record_search_field
 
     # @return [Array<String>] shortIdentifier values of all vocabularies defined
@@ -41,7 +41,6 @@ module CspaceConfigUntangler
 
       @ns = get_namespace
       @messages = CCU::Messages.new
-      @input_tables = get_input_tables
       @structured_date_treatment = @profile.structured_date_treatment
       @service_type = service_config.service_type
       @subtypes = (@service_type == "authority") ? get_subtypes : []
@@ -54,6 +53,8 @@ module CspaceConfigUntangler
 
     # @return [Array<CCU::Forms::Form>]
     def forms = @forms ||= get_forms
+
+    def input_tables = @input_tables ||= get_input_tables
 
     # @return [Array<String>]
     def panels = @panels ||= get_panels
@@ -213,6 +214,8 @@ module CspaceConfigUntangler
     def extract_messages
       forms.each { |form| form.messages }
       field_defs
+      input_tables
+      @messages_extracted = true
     end
 
     def get_field_defs
@@ -369,20 +372,11 @@ module CspaceConfigUntangler
     end
 
     def get_input_tables
-      if @config.dig("messages", "inputTable")
-        h = {}
-        @config["messages"]["inputTable"].each do |name, hash|
-          h[name] = hash["id"]
-          unless @profile.messages.has_key?(hash["id"])
-            @profile.messages[hash["id"]] =
-              {"name" => hash["defaultMessage"],
-               "fullName" => hash["defaultMessage"]}
-          end
-        end
-        h
-      else
-        {}
-      end
+      itcfg = config.dig("messages", "inputTable")
+      return [] unless itcfg
+
+      @messages.add(itcfg)
+      itcfg.keys
     end
 
     def get_panels

@@ -136,7 +136,7 @@ module CspaceConfigUntangler
       end
 
       def input_table?
-        true if children? && rectype.input_tables.key?(name)
+        true if children? && rectype.input_tables.include?(name)
       end
 
       def subrecord? = blob? || contact?
@@ -277,12 +277,18 @@ module CspaceConfigUntangler
       end
 
       def append_to_ui_path(path)
+        return unless children?
+
         if input_table?
-          path << rectype.input_tables[name]
+          path << rectype.messages.by_element_name(:inputTable, name)
+            &.message
         elsif is_panel
           path << panel
         elsif children? && !name.empty?
           path << "#{ns&.sub("ns2:", "")}.#{name}"
+        else
+          CCU.log.warn("Cannot append to ui path #{path}: #{profile.name} "\
+                       "- #{rectype.name} - #{ns} - #{name} - #{config}")
         end
       end
 
