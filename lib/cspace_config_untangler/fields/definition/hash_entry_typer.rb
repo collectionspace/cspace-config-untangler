@@ -21,6 +21,7 @@ module CspaceConfigUntangler
           return :group if group?(hash)
 
           warn(hash)
+          nil
         end
 
         private
