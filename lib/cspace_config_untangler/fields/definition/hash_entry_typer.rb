@@ -19,6 +19,7 @@ module CspaceConfigUntangler
           return :field if field?(hash)
           return :structured_date if structured_date?(hash)
           return :group if group?(hash)
+          return :service_definition if service_definition?(hash)
 
           warn(hash)
           nil
@@ -40,6 +41,10 @@ module CspaceConfigUntangler
           true if hash.dig("[config]", "dataType") ==
             "DATA_TYPE_STRUCTURED_DATE" ||
             hash.dig("dateLatestDay")
+        end
+
+        def service_definition?(hash)
+          hash.keys == ["service"]
         end
 
         def warn(hash)
