@@ -6,6 +6,7 @@ require_relative "message_id"
 
 module CspaceConfigUntangler
   class Messages
+    # @return [Array<CCU::Message>]
     attr_reader :all
 
     SIMPLE_KEYS = %w[id defaultMessage].freeze
@@ -36,6 +37,31 @@ module CspaceConfigUntangler
     end
 
     def ids = all.map(&:full_id).sort
+
+    # @param type [Symbol] element type of Message objects to return
+    # @return [Array<CCU::Message>]
+    def by_element_type(type) = all.select { |m| m.element_type == type }
+
+    # @return [Array<Symbol>] element types of existing Message objects
+    def element_types = all.map(&:element_type).uniq.sort
+
+    def by_element_name(element_type, element_name)
+      msgs = by_element_type(element_type).select do |m|
+        m.element_name == element_name
+      end
+
+      case msgs.length
+      when 0
+        CCU.log.warning("No message found for #{element_type} #{element_name}")
+        nil
+      when 1
+        msgs.first
+      else
+        CCU.log.warning("Multiple messages found for #{element_type} "\
+                        "#{element_name}. Used first.")
+        msgs.first
+      end
+    end
 
     def inspect
       %(#<#{self.class}:#{object_id} size: #{size}>)
