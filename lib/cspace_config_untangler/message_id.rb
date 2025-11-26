@@ -35,6 +35,7 @@ module CspaceConfigUntangler
       end
       @parts = working.split(".")
       @element_type = parts.first.to_sym
+      fix_stupid_cs_inconsistencies
     end
 
     # @return [String] the ID with message type segment removed, if present
@@ -77,6 +78,17 @@ module CspaceConfigUntangler
         parts[1]
       else
         parts.last
+      end
+    end
+
+    def fix_stupid_cs_inconsistencies
+      case full_id
+      when "panel.collectionobject.flowers"
+        @element_type = :inputTable
+      when "panel.collectionobject.fruits"
+        @element_type = :inputTable
+      when "panel.ext.nagpra.nagpraReportFiled"
+        @element_type = :inputTable
       end
     end
   end
