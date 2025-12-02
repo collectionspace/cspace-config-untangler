@@ -52,6 +52,19 @@ RSpec.describe CCU::MessageId, :aggregate_failures do
         expect(subject.element_name).to eq("assocPersonType")
       end
     end
+
+    context "when from livingplant extension field definitions" do
+      let(:id) { "field.conservation_livingplant.fertilizerUsed.name" }
+
+      it "returns expected values" do
+        expect(subject.element_type).to eq(:field)
+        expect(subject.base_id).to eq(
+          "field.ext.livingplant.fertilizerUsed"
+        )
+        expect(subject.message_type).to eq(:name)
+        expect(subject.element_name).to eq("fertilizerUsed")
+      end
+    end
   end
 
   context "when form type" do
@@ -75,6 +88,17 @@ RSpec.describe CCU::MessageId, :aggregate_failures do
       expect(subject.base_id).to eq(id)
       expect(subject.message_type).to eq(:label)
       expect(subject.element_name).to eq("info")
+    end
+  end
+
+  context "when panel type, but is actually for an input table" do
+    let(:id) { "panel.collectionobject.fruits" }
+
+    it "returns expected values" do
+      expect(subject.element_type).to eq(:inputTable)
+      expect(subject.base_id).to eq("inputTable.collectionobject.fruits")
+      expect(subject.message_type).to eq(:label)
+      expect(subject.element_name).to eq("fruits")
     end
   end
 
