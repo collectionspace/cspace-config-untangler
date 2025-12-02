@@ -25,17 +25,29 @@ module CspaceConfigUntangler
     #   See the doc/ui_config_notes.adoc page for more info/examples
     NO_MESSAGE_TYPES = %i[about inputTable panel].freeze
 
+    # A category of CollectionSpace inconsistency
+    PANELS_THAT_ARE_INPUT_TABLES = %w[
+      panel.collectionobject.flowers
+      panel.collectionobject.fruits
+      panel.ext.nagpra.nagpraReportFiled
+    ]
+
     # @param id [String]
     def initialize(id)
       @full_id = id
       @working = if id.start_with?("field.") && id["ext."]
         id.sub("ext.", "ext%%DOT%%")
+      elsif id.start_with?("panel.") &&
+          PANELS_THAT_ARE_INPUT_TABLES.include?(full_id)
+        id.sub("panel.", "inputTable.")
+      elsif id.start_with?("field.conservation_livingplant")
+        id.sub("field.conservation_livingplant",
+          "field.ext%%DOT%%livingplant")
       else
         id
       end
       @parts = working.split(".")
       @element_type = parts.first.to_sym
-      fix_stupid_cs_inconsistencies
     end
 
     # @return [String] the ID with message type segment removed, if present
@@ -78,17 +90,6 @@ module CspaceConfigUntangler
         parts[1]
       else
         parts.last
-      end
-    end
-
-    def fix_stupid_cs_inconsistencies
-      case full_id
-      when "panel.collectionobject.flowers"
-        @element_type = :inputTable
-      when "panel.collectionobject.fruits"
-        @element_type = :inputTable
-      when "panel.ext.nagpra.nagpraReportFiled"
-        @element_type = :inputTable
       end
     end
   end
