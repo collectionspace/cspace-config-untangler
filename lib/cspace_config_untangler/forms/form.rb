@@ -43,7 +43,7 @@ module CspaceConfigUntangler
       def field_config = config["template"]["props"]
 
       # param field [CCU::Forms::Field]
-      def add_field(field) = fields << field
+      def add_field(field) = @fields << field
 
       def disabled?
         disabled = config.dig("disabled")
@@ -76,7 +76,7 @@ module CspaceConfigUntangler
         return unless config.key?("messages")
 
         @messages.add(config["messages"])
-        rectype.add_messages(@messages)
+        # rectype.instance_variable_get(:@messages).add(@messages)
       end
 
       def force_disabled?
