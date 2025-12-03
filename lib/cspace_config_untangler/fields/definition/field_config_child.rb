@@ -27,8 +27,8 @@ module CspaceConfigUntangler
           @id = get_id
 
           @messages = CCU::Messages.new
-          get_message("name") if @id
-          get_message("fullName") if @id
+          # get_message("name") if @id
+          # get_message("fullName") if @id
           @schema_path = set_schema_path
           @repeats = set_repeats
           @in_repeating_group = set_group_repeats
@@ -66,16 +66,6 @@ module CspaceConfigUntangler
           else
             @parent.schema_path.clone
           end
-        end
-
-        def get_message(key)
-          messages = @config.messages
-          id = "field." + @id
-
-          messages[id] = {} unless messages.has_key?(id)
-
-          messages[id][key] =
-            @hash.dig("[config]", "messages", key, "defaultMessage")
         end
 
         def get_id
