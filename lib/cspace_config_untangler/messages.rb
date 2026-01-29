@@ -38,6 +38,8 @@ module CspaceConfigUntangler
 
     def ids = all.map(&:full_id).sort
 
+    def by_id(id) = all.find { |m| m.full_id == id }
+
     # @param type [Symbol] element type of Message objects to return
     # @return [Array<CCU::Message>]
     def by_element_type(type) = all.select { |m| m.element_type == type }
