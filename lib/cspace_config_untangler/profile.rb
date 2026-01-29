@@ -1,30 +1,22 @@
 # frozen_string_literal: true
 
 require_relative "column_name_stylable"
+require_relative "messageable"
 require_relative "record_type"
 
 module CspaceConfigUntangler
   class Profile
     include CCU::ColumnNameStylable
+    include Messageable
 
-    attr_reader :authorities
-    # @return [Hash] derived from JSON config for the profile
-    attr_reader :config
-    # @return [Array<String>] names of extensions defined in the profile
-    attr_reader :extensions
-    # @return [Hash] lookup by panel, inputTable, grouping, or field id
-    # @todo refactor to Message objects
-    attr_reader :messages
     # @return [String] name of the profile
     attr_reader :name
-    attr_reader :panels
-    # @return [Array<CCU::RecordType>] selected/specified for processing
-    attr_reader :rectypes
+
     # @return [:collapse, :explode]
     attr_reader :structured_date_treatment
-    # @return [Array<String>] shortIdentifier values of all vocabularies defined
-    #   as term sources for fields used in profile
-    attr_reader :vocabularies
+
+    # @return [Hash] derived from JSON config for the profile
+    attr_reader :config
 
     # @param profile [String] profile name; must match a file in `data/configs`
     #   directory, minus `.json` file extension
@@ -32,18 +24,33 @@ module CspaceConfigUntangler
     # @param structured_date_treatment [:explode, :collapse]
     def initialize(profile:, rectypes: [], structured_date_treatment: :explode)
       @name = profile
-      @config = JSON.parse(File.read("#{CCU.configdir}/#{@name}.json"))
-      @messages = {}
-      @extensions = get_extensions
+      @rectype_names = rectypes
       @structured_date_treatment = structured_date_treatment
-      @rectypes = get_rectypes(rectypes)
-      @authorities = get_authorities
-      @vocabularies = get_vocabularies
-      @panels = get_panels
+      message_setup
+
+      @config = JSON.parse(File.read("#{CCU.configdir}/#{@name}.json"))
+
       if @structured_date_treatment == :explode
         CCU::StructuredDateMessageGetter.new(self)
       end
-      apply_overrides
+      # apply_overrides
+    end
+
+    # @return [Array<CCU::RecordType>] selected/specified for processing
+    def rectypes = @rectypes ||= get_rectypes
+
+    # @return [Array<String>] shortIdentifier values of all vocabularies defined
+    #   as term sources for fields used in profile
+    def vocabularies = @vocabularies ||= get_vocabularies
+
+    def panels = @panels ||= get_panels
+
+    # @return [Array<String>] names of extensions defined in the profile
+    def extensions = @extensions ||= get_extensions
+
+    def authorities = @authorities ||= get_authorities
+
+    def extract_messages
     end
 
     def field_defs = @field_defs ||= get_field_defs
@@ -56,7 +63,7 @@ module CspaceConfigUntangler
 
     def extensions_for(rectype)
       exts = {}
-      @extensions.map { |e| CCU::Extension.new(self, e) }.each do |ext|
+      extensions.map { |e| CCU::Extension.new(self, e) }.each do |ext|
         if ext.type == "generic"
           exts[ext.name] = ext
         elsif ext.rectypes.include?(rectype)
@@ -76,17 +83,17 @@ module CspaceConfigUntangler
     end
 
     def fields
-      @rectypes.map { |rt| rt.fields }.flatten
+      rectypes.map { |rt| rt.fields }.flatten
     end
 
     def nonunique_fields
-      @rectypes.map { |rt| [rt.name, rt.nonunique_fields] }
+      rectypes.map { |rt| [rt.name, rt.nonunique_fields] }
         .to_h
         .reject { |rt, info| info.empty? }
     end
 
     def nonunique_field_names
-      @rectypes.map { |rt| [rt.name, rt.nonunique_field_names] }
+      rectypes.map { |rt| [rt.name, rt.nonunique_field_names] }
         .to_h
         .reject { |rt, info| info.empty? }
     end
@@ -102,7 +109,7 @@ module CspaceConfigUntangler
 
     def special_rectypes
       arr = []
-      rtnames = @rectypes.map(&:name)
+      rtnames = rectype_names
       if rtnames.include?("collectionobject")
         arr << CCU::ObjectHierarchy.new(profile: self)
       end
@@ -184,13 +191,15 @@ module CspaceConfigUntangler
 
     private
 
+    attr_reader :rectype_names
+
     def service_groups
       @service_groups ||= CCU::Profiles::ServiceGroupsGetter.call(basename)
     end
 
     def get_field_defs
-      fields = @rectypes.map { |rt| rt.field_defs }
-      if @extensions.include?("blob")
+      fields = rectypes.map { |rt| rt.field_defs }
+      if extensions.include?("blob")
         fields << CCU::RecordType.new(self,
           "blob").field_defs
       end
@@ -216,8 +225,8 @@ module CspaceConfigUntangler
     end
 
     def get_panels
-      panels = @rectypes.map { |rt| rt.panels }
-      if @extensions.include?("contact")
+      panels = rectypes.map { |rt| rt.panels }
+      if extensions.include?("contact")
         panels << CCU::RecordType.new(self,
           "contact").panels
       end
@@ -225,7 +234,7 @@ module CspaceConfigUntangler
     end
 
     def get_vocabularies
-      @rectypes.map(&:vocabularies).flatten.uniq.sort
+      rectypes.map(&:vocabularies).flatten.uniq.sort
     end
 
     def apply_overrides
@@ -269,11 +278,11 @@ module CspaceConfigUntangler
         CCU::RecordType::IGNORED
     end
 
-    def get_rectypes(rectypes)
-      types = if rectypes.empty?
+    def get_rectypes
+      types = if rectype_names.empty?
         rectypes_all
       else
-        rectypes_all.intersection(rectypes)
+        rectypes_all.intersection(rectype_names)
       end
 
       rt_objs = types.map { |rt| CCU::RecordType.new(self, rt) }
@@ -313,13 +322,13 @@ module CspaceConfigUntangler
     end
 
     def rectypes_include_authorities
-      !@rectypes.select do |rt|
+      !rectypes.select do |rt|
         rt.service_type == "authority"
       end.empty?
     end
 
     def rectypes_include_procedures
-      !@rectypes.select do |rt|
+      !rectypes.select do |rt|
         rt.service_type == "procedure"
       end.empty?
     end
