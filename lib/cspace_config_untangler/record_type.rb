@@ -8,6 +8,7 @@ require_relative "ucbable"
 module CspaceConfigUntangler
   class RecordType
     include CCU::Iterable
+    include Messageable
     include Ucbable
 
     # Names of record types we don't interact with as first-class data-layer
@@ -36,20 +37,17 @@ module CspaceConfigUntangler
     def initialize(profileobj, rectypename)
       @profile = profileobj
       @name = rectypename
+      message_setup
+
       @id = "#{@profile.name}/#{@name}"
       @config = @profile.config["recordTypes"][@name]
 
       @ns = get_namespace
-      @messages = CCU::Messages.new
       @structured_date_treatment = @profile.structured_date_treatment
       @service_type = service_config.service_type
       @subtypes = (@service_type == "authority") ? get_subtypes : []
       @vocabularies = get_vocabularies
-      @messages_extracted = false
     end
-
-    # @param msgs [CCU::Messages]
-    def add_messages(msgs) = @messages.add(msgs)
 
     # @return [Array<CCU::Forms::Form>]
     def forms = @forms ||= get_forms
@@ -58,12 +56,6 @@ module CspaceConfigUntangler
 
     # @return [Array<String>]
     def panels = @panels ||= get_panels
-
-    def messages
-      extract_messages unless messages_extracted
-
-      @messages
-    end
 
     def label
       @label ||= config.dig("messages", "record", "name", "defaultMessage")
@@ -209,13 +201,34 @@ module CspaceConfigUntangler
 
     private
 
-    attr_reader :messages_extracted
-
     def extract_messages
+      recmsg = config.dig("messages", "record")
+      recmsg&.values&.each { |cfg| add_messages(cfg) }
+
       forms.each { |form| form.messages }
       field_defs
-      input_tables
-      @messages_extracted = true
+      add_messages(input_table_config) if input_table_config
+      add_messages(panel_config) if panel_config
+    end
+
+    def get_input_tables
+      return [] unless input_table_config
+
+      input_table_config.keys
+    end
+
+    def input_table_config
+      @input_table_config ||= config.dig("messages", "inputTable")
+    end
+
+    def get_panels
+      return [] unless panel_config
+
+      panel_config.keys
+    end
+
+    def panel_config
+      @panel_config ||= config.dig("messages", "panel")
     end
 
     def get_field_defs
@@ -369,22 +382,6 @@ module CspaceConfigUntangler
       formnames.uniq
         .reject { |fn| fn == "mini" }
         .map { |fn| CCU::Form.new(self, fn) }
-    end
-
-    def get_input_tables
-      itcfg = config.dig("messages", "inputTable")
-      return [] unless itcfg
-
-      @messages.add(itcfg)
-      itcfg.keys
-    end
-
-    def get_panels
-      panel_cfg = config.dig("messages", "panel")
-      return [] unless panel_cfg
-
-      @messages.add(panel_cfg)
-      panel_cfg.keys
     end
 
     def get_namespace
