@@ -33,5 +33,32 @@ RSpec.describe CCU::Messages, :aggregate_failures do
         expect(messages.size).to eq(1)
       end
     end
+
+    context "with typed config" do
+      it "adds as expected" do
+        config = {"record" =>
+                  {"name" => {
+                     "id" => "record.blob.name",
+                     "defaultMessage" => "Blob"
+                   },
+                   "collectionName" => {
+                     "id" => "record.blob.collectionName",
+                     "defaultMessage" => "Blobs"
+                   }}}
+        messages.add(config)
+        expect(messages.size).to eq(2)
+      end
+    end
+
+    context "with named config" do
+      it "adds as expected" do
+        config = {"name" => {
+          "id" => "form.acquisition.default.name",
+          "defaultMessage" => "Standard Template"
+        }}
+        messages.add(config)
+        expect(messages.size).to eq(1)
+      end
+    end
   end
 end
