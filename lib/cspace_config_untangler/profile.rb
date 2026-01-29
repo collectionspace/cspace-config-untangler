@@ -180,6 +180,10 @@ module CspaceConfigUntangler
       %(#<#{self.class}:#{object_id} name: #{@name}>)
     end
 
+    # @return [Hash] where keys are element ids and values are defaultMessages
+    #   for those ids
+    def message_overrides = config.dig("messages")
+
     private
 
     attr_reader :rectype_names
@@ -193,16 +197,15 @@ module CspaceConfigUntangler
       end
     end
 
-    def apply_overrides
-      # This applies messages defined at the profile level
-      overrides = @config.dig("messages")
-      return unless overrides
+    # def apply_overrides
+    #   # This applies messages defined at the profile level
+    #   return unless message_overrides
 
-      overrides.each do |k, v|
-        cfg = {"id" => k, "defaultMessage" => v}
-        @messages.override(cfg)
-      end
-    end
+    #   message_overrides.each do |k, v|
+    #     cfg = {"id" => k, "defaultMessage" => v}
+    #     @messages.override(cfg)
+    #   end
+    # end
 
     def service_groups
       @service_groups ||= CCU::Profiles::ServiceGroupsGetter.call(basename)
