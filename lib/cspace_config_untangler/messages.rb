@@ -52,12 +52,12 @@ module CspaceConfigUntangler
 
       case msgs.length
       when 0
-        CCU.log.warning("No message found for #{element_type} #{element_name}")
+        CCU.log.warn("No message found for #{element_type} #{element_name}")
         nil
       when 1
         msgs.first
       else
-        CCU.log.warning("Multiple messages found for #{element_type} "\
+        CCU.log.warn("Multiple messages found for #{element_type} "\
                         "#{element_name}. Used first.")
         msgs.first
       end
