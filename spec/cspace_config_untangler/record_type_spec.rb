@@ -263,6 +263,30 @@ RSpec.describe CCU::RecordType do
     end
   end
 
+  describe "#label" do
+    let(:result) { rectype.label }
+
+    context "with anthro claim" do
+      let(:release) { "8_2" }
+      let(:profilename) { "anthro" }
+      let(:rectypes) { %w[claim] }
+
+      it "returns override message from profile level" do
+        expect(result).to eq("NAGPRA Claim")
+      end
+    end
+
+    context "with anthro objectexit" do
+      let(:release) { "8_2" }
+      let(:profilename) { "anthro" }
+      let(:rectypes) { %w[objectexit] }
+
+      it "returns record type message" do
+        expect(result).to eq("Object Exit (Legacy)")
+      end
+    end
+  end
+
   describe "#batch_mappings" do
     context "with context = :mapper" do
       let(:result) { rectype.batch_mappings }

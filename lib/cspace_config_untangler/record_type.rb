@@ -2,6 +2,8 @@
 
 require_relative "fields/definition/parser"
 require_relative "iterable"
+require_relative "messageable"
+require_relative "message_overrideable"
 require_relative "record_types/service_config"
 require_relative "ucbable"
 
@@ -9,6 +11,7 @@ module CspaceConfigUntangler
   class RecordType
     include CCU::Iterable
     include Messageable
+    include MessageOverrideable
     include Ucbable
 
     # Names of record types we don't interact with as first-class data-layer
@@ -58,7 +61,7 @@ module CspaceConfigUntangler
     def panels = @panels ||= get_panels
 
     def label
-      @label ||= config.dig("messages", "record", "name", "defaultMessage")
+      @label ||= get_label
     end
 
     def object_name
@@ -211,10 +214,28 @@ module CspaceConfigUntangler
       add_messages(panel_config) if panel_config
     end
 
+    def apply_overrides
+      overrides = profile.message_overrides
+      return unless overrides
+
+      overrides.select { |k, _v| k.start_with?("record.#{name}") }
+        .each { |k, v| @messages.override(convert_to_config(k, v)) }
+    end
+
     def get_input_tables
       return [] unless input_table_config
 
       input_table_config.keys
+    end
+
+    def get_label
+      rectype_message = messages.find do |m|
+        m.element_type == :record &&
+          m.element_name == name
+      end
+      return unless rectype_message
+
+      rectype_message.message
     end
 
     def input_table_config
