@@ -10,6 +10,8 @@ module CspaceConfigUntangler
     extend Forwardable
     def_delegators :@id, :full_id, :base_id, :message_type, :element_name
 
+    include Comparable
+
     # @param config [Hash]
     # @param parent [Hash, nil] broader config hash containing the message
     #   config, if there is needed additional info there
@@ -29,6 +31,15 @@ module CspaceConfigUntangler
     def inspect
       %(#<#{self.class}:#{object_id} id: #{full_id}>)
     end
+
+    def ==(other)
+      signature == other.signature
+    end
+    alias_method :eql?, :==
+
+    def signature = [base_id, message_type, message]
+
+    def hash = [self.class, signature].hash
 
     private
 

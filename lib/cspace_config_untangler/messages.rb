@@ -19,14 +19,14 @@ module CspaceConfigUntangler
     def_delegators :@all, :size, :find
 
     def initialize
-      @all = []
+      @all = Set.new
     end
 
     def add(config, parent: nil)
       if config.is_a?(CCU::Messages)
-        @all.concat(config.all)
+        @all.merge(config.all)
       elsif simple_cfg?(config)
-        @all << CCU::Message.new(config, parent: parent)
+        @all.add?(CCU::Message.new(config, parent: parent))
       elsif typed_cfg?(config)
         handle_typed_cfg(config)
       elsif named_cfgs?(config)
