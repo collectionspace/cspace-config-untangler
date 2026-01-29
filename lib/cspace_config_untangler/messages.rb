@@ -38,6 +38,16 @@ module CspaceConfigUntangler
 
     def ids = all.map(&:full_id).sort
 
+    # @param config [Hash] with keys "id" and "defaultMessage"
+    def override(config)
+      target = by_id(config["id"])
+      if target
+        target.update_message(config["defaultMessage"])
+      else
+        add(config)
+      end
+    end
+
     def by_id(id) = all.find { |m| m.full_id == id }
 
     # @param type [Symbol] element type of Message objects to return
