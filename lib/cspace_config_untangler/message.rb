@@ -22,6 +22,10 @@ module CspaceConfigUntangler
 
     def element_type = @element_type ||= set_element_type
 
+    def update_message(newmsg)
+      @message = newmsg
+    end
+
     def inspect
       %(#<#{self.class}:#{object_id} id: #{full_id}>)
     end
