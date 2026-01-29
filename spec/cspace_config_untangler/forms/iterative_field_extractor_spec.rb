@@ -1,6 +1,6 @@
-#frozen_string_literal: true
+# frozen_string_literal: true
 
-require 'spec_helper'
+require "spec_helper"
 
 RSpec.describe CCU::Forms::IterativeFieldExtractor do
   # subject(:iterator) { described_class.new(form, formconfig) }
