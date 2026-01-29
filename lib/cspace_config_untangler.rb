@@ -15,6 +15,7 @@ require "nokogiri"
 require "pry"
 require "thor"
 
+require_relative "cspace_config_untangler/error"
 require_relative "cspace_config_untangler/upgrade_warner"
 
 module CspaceConfigUntangler
