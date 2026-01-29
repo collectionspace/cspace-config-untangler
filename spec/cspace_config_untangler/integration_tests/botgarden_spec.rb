@@ -5,7 +5,6 @@ require "spec_helper"
 RSpec.describe CCU::Profile do
   let(:release) { "8_2" }
   let(:profilename) { "botgarden" }
-  let(:rectypes) { %w[loanout movement] }
   let(:generator) do
     Helpers::SetupGenerator.new(profile: profilename, rectypes: rectypes,
       release: release)
@@ -14,12 +13,22 @@ RSpec.describe CCU::Profile do
   describe "message overrides" do
     # let(:field) { generator.field("collectionobject", "objectHistoryNote") }
 
-    it "return as expected", :aggregate_failures do
-      loan = generator.rectype("loanout")
-      expect(loan.label).to eq("Voucher")
+    context "with loanout" do
+      let(:rectypes) { %w[loanout] }
 
-      mov = generator.rectype("movement")
-      expect(mov.label).to eq("Current Location")
+      it "return as expected", :aggregate_failures do
+        loan = generator.rectype("loanout")
+        expect(loan.label).to eq("Voucher")
+      end
+    end
+
+    context "with loanout" do
+      let(:rectypes) { %w[movement] }
+
+      it "return as expected", :aggregate_failures do
+        mov = generator.rectype("movement")
+        expect(mov.label).to eq("Current Location")
+      end
     end
   end
 end

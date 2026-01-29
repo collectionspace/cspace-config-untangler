@@ -183,16 +183,18 @@ RSpec.describe CCU::Profile do
 
   context "when anthro" do
     let(:profilename) { "anthro" }
+    let(:rectypes) { ["collectionobject"] }
 
     describe "apply_panel_override" do
       it "gets panel message overrides from profile level" do
-        msg = profile.messages["panel.collectionobject.reference"]["fullName"]
-        expect(msg).to eq("Bibliographic Reference Information")
+        msg = profile.messages.by_id("panel.collectionobject.reference")
+        expect(msg.message).to eq("Bibliographic Reference Information")
       end
     end
   end
 
   context "when bonsai" do
+    let(:release) { "8_2" }
     let(:profilename) { "bonsai" }
     let(:rectypes) { ["conservation"] }
 
@@ -201,15 +203,16 @@ RSpec.describe CCU::Profile do
         "conservation_livingplant", skip: "until messages fixed" do
         expect(
           profile.messages
-            .has_key?("field.ext.livingplant.pestOrDiseaseObserved")
-        ).to be true
+            .by_id("field.ext.livingplant.pestOrDiseaseObserved.name")
+        ).not_to be_nil
       end
     end
 
     describe "apply_field_override" do
       it "gets field message overrides from profile level" do
-        msg = profile.messages["field.conservation_common.conservator"]["name"]
-        expect(msg).to eq("Performed by")
+        msg = profile.messages
+          .by_id("field.conservation_common.conservator.name")
+        expect(msg.message).to eq("Performed by")
       end
     end
   end
