@@ -24,16 +24,10 @@ module CspaceConfigUntangler
     # @param structured_date_treatment [:explode, :collapse]
     def initialize(profile:, rectypes: [], structured_date_treatment: :explode)
       @name = profile
-      @rectype_names = rectypes
       @structured_date_treatment = structured_date_treatment
-      message_setup
-
       @config = JSON.parse(File.read("#{CCU.configdir}/#{@name}.json"))
-
-      if @structured_date_treatment == :explode
-        CCU::StructuredDateMessageGetter.new(self)
-      end
-      # apply_overrides
+      @rectype_names = rectypes.empty? ? rectypes_all : rectypes
+      message_setup
     end
 
     # @return [Array<CCU::RecordType>] selected/specified for processing
@@ -49,9 +43,6 @@ module CspaceConfigUntangler
     def extensions = @extensions ||= get_extensions
 
     def authorities = @authorities ||= get_authorities
-
-    def extract_messages
-    end
 
     def field_defs = @field_defs ||= get_field_defs
 
@@ -109,14 +100,14 @@ module CspaceConfigUntangler
 
     def special_rectypes
       arr = []
-      rtnames = rectype_names
-      if rtnames.include?("collectionobject")
+      if rectype_names.include?("collectionobject")
         arr << CCU::ObjectHierarchy.new(profile: self)
       end
       if rectypes_include_authorities
         arr << CCU::AuthorityHierarchy.new(profile: self)
       end
-      if rtnames.include?("collectionobject") || rectypes_include_procedures
+      if rectype_names.include?("collectionobject") ||
+          rectypes_include_procedures
         arr << CCU::NonHierarchicalRelationship.new(profile: self)
       end
       arr
@@ -193,6 +184,26 @@ module CspaceConfigUntangler
 
     attr_reader :rectype_names
 
+    def extract_messages
+      rectypes.each { |rt| add_messages(rt.messages) }
+
+      if structured_date_treatment == :explode
+        sdconfig = config.dig("extensions", "structuredDate", "fields")
+        add_messages(CCU::StructuredDateMessageGetter.call(sdconfig))
+      end
+    end
+
+    def apply_overrides
+      # This applies messages defined at the profile level
+      overrides = @config.dig("messages")
+      return unless overrides
+
+      overrides.each do |k, v|
+        cfg = {"id" => k, "defaultMessage" => v}
+        @messages.override(cfg)
+      end
+    end
+
     def service_groups
       @service_groups ||= CCU::Profiles::ServiceGroupsGetter.call(basename)
     end
@@ -235,42 +246,6 @@ module CspaceConfigUntangler
 
     def get_vocabularies
       rectypes.map(&:vocabularies).flatten.uniq.sort
-    end
-
-    def apply_overrides
-      # This applies messages defined at the profile level
-      o = @config.dig("messages")
-      o&.each do |k, v|
-        apply_field_override(k, v) if k.start_with?("field.")
-        apply_panel_override(k, v) if k.start_with?("panel.")
-      end
-
-      # This accounts for the fact that the livingplant extension ids
-      #  don't use extension format in field definitions
-      to_update = @messages.keys.select do |e|
-        e["field.conservation_livingplant"]
-      end
-      to_update.each do |key|
-        newkey = key.sub("field.conservation_livingplant",
-          "field.ext.livingplant")
-        @messages[newkey] = @messages[key]
-        @messages.delete(key)
-      end
-    end
-
-    def apply_field_override(id, value)
-      type = id.split(".").last
-      rev_id = id.sub(".#{type}", "")
-
-      if @messages.has_key?(rev_id)
-        @messages[rev_id][type] = value
-      else
-        @messages[rev_id] = {type => value}
-      end
-    end
-
-    def apply_panel_override(id, value)
-      @messages[id] = {"name" => value, "fullName" => value}
     end
 
     def rectypes_all
