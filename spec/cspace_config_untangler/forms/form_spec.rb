@@ -85,7 +85,7 @@ RSpec.describe CCU::Forms::Form do
         "panel.contact.info",
         "record.contact.name",
         "record.contact.collectionName"].sort
-      expect(result.ids).to eq(expected)
+      expect(result.ids.sort).to eq(expected)
     end
 
     context "when UCBG profile", skip: "to implement: extraction of message "\
