@@ -36,8 +36,8 @@ module CspaceConfigUntangler
       end
 
       def extract_messages
-        form.messages.add(subrec["messages"]) if subrec.key?("messages")
-        form.messages.add(subrecform["messages"]) if subrecform.key?("messages")
+        form.add_messages(subrec["messages"]) if subrec.key?("messages")
+        form.add_messages(subrecform["messages"]) if subrecform.key?("messages")
       end
 
       private

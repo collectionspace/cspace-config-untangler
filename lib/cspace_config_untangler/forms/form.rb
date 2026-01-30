@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require_relative "../messageable"
+require_relative "../message_overrideable"
 require_relative "../ucbable"
 require_relative "iterative_field_extractor"
 
@@ -7,6 +9,8 @@ module CspaceConfigUntangler
   module Forms
     class Form
       ::CCU::Form = CspaceConfigUntangler::Forms::Form
+      include Messageable
+      include MessageOverrideable
       include Ucbable
       attr_reader :rectype, :profile, :name, :config
 
@@ -18,9 +22,8 @@ module CspaceConfigUntangler
         @name = formname
         @config = rectype.config["forms"][name]
         @fields = []
-        @messages = CCU::Messages.new
+        message_setup
         @fields_extracted = false
-        @messages_extracted = false
         return if disabled?
 
         # CCU::Forms::Properties.new(self, field_config)
@@ -28,16 +31,10 @@ module CspaceConfigUntangler
       end
 
       def fields
-        extract_fields unless disabled? || @fields_extracted
-        @fields
-      end
-
-      def messages
-        return @messages if disabled?
+        return [] if disabled?
 
         extract_fields unless @fields_extracted
-        extract_messages unless @messages_extracted
-        @messages
+        @fields
       end
 
       def field_config = config["template"]["props"]
@@ -72,11 +69,21 @@ module CspaceConfigUntangler
       end
 
       def extract_messages
-        @messages_extracted = true
+        return if disabled?
+
+        # This is required to get any field or subrecord-level messages
+        extract_fields unless @fields_extracted
         return unless config.key?("messages")
 
-        @messages.add(config["messages"])
-        # rectype.instance_variable_get(:@messages).add(@messages)
+        add_messages(config["messages"])
+      end
+
+      def apply_overrides
+        overrides = profile.message_overrides
+        return unless overrides
+
+        overrides.select { |k, _v| k.start_with?("record.#{name}") }
+          .each { |k, v| @messages.override(convert_to_config(k, v)) }
       end
 
       def force_disabled?
