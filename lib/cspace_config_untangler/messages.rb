@@ -36,7 +36,7 @@ module CspaceConfigUntangler
       end
     end
 
-    def ids = all.map(&:full_id).sort
+    def ids = all.map(&:orig_id).sort
 
     # @param config [Hash] with keys "id" and "defaultMessage"
     def override(config)
@@ -48,7 +48,12 @@ module CspaceConfigUntangler
       end
     end
 
-    def by_id(id) = all.find { |m| m.full_id == id }
+    def by_id(id)
+      exact = all.find { |m| m.id.match?(id) }
+      return exact if exact
+
+      all.find { |m| m.id.norm_match?(id) }
+    end
 
     # @param type [Symbol] element type of Message objects to return
     # @return [Array<CCU::Message>]

@@ -59,6 +59,9 @@ RSpec.describe CCU::MessageId, :aggregate_failures do
       it "returns expected values" do
         expect(subject.element_type).to eq(:field)
         expect(subject.base_id).to eq(
+          "field.conservation_livingplant.fertilizerUsed"
+        )
+        expect(subject.normalized_base_id).to eq(
           "field.ext.livingplant.fertilizerUsed"
         )
         expect(subject.message_type).to eq(:name)
@@ -96,7 +99,10 @@ RSpec.describe CCU::MessageId, :aggregate_failures do
 
     it "returns expected values" do
       expect(subject.element_type).to eq(:inputTable)
-      expect(subject.base_id).to eq("inputTable.collectionobject.fruits")
+      expect(subject.base_id).to eq("panel.collectionobject.fruits")
+      expect(subject.normalized_base_id).to eq(
+        "inputTable.collectionobject.fruits"
+      )
       expect(subject.message_type).to eq(:label)
       expect(subject.element_name).to eq("fruits")
     end
@@ -121,6 +127,106 @@ RSpec.describe CCU::MessageId, :aggregate_failures do
       expect(subject.base_id).to eq("column.chronology.termDisplayName")
       expect(subject.message_type).to eq(:default)
       expect(subject.element_name).to eq("termDisplayName")
+    end
+  end
+
+  describe "#match?" do
+    let(:id) { "field.conservation_livingplant.fertilizerUsed.name" }
+    let(:result) { subject.match?(otherid) }
+
+    context "with exact id match" do
+      let(:otherid) { "field.conservation_livingplant.fertilizerUsed.name" }
+
+      it "returns truthy" do
+        expect(result).to be_truthy
+      end
+    end
+
+    context "without exact id match" do
+      let(:otherid) { "field.ext.livingplant.fertilizerUsed.name" }
+
+      it "returns falsey" do
+        expect(result).to be_falsey
+      end
+    end
+  end
+
+  describe "#norm_match?" do
+    let(:id) { "field.conservation_livingplant.fertilizerUsed.name" }
+    let(:result) { subject.norm_match?(otherid) }
+
+    context "with exact id match" do
+      let(:otherid) { "field.conservation_livingplant.fertilizerUsed.name" }
+
+      it "returns truthy" do
+        expect(result).to be_truthy
+      end
+    end
+
+    context "with normalized id match" do
+      let(:otherid) { "field.ext.livingplant.fertilizerUsed.name" }
+
+      it "returns truthy" do
+        expect(result).to be_truthy
+      end
+    end
+
+    context "with no id match" do
+      let(:otherid) { "field.ext.livingplant.fertilizerUsed.fullName" }
+
+      it "returns falsey" do
+        expect(result).to be_falsey
+      end
+    end
+  end
+
+  describe "#base_match?" do
+    let(:id) { "field.conservation_livingplant.fertilizerUsed.name" }
+    let(:result) { subject.base_match?(otherid) }
+
+    context "with exact base id match" do
+      let(:otherid) { "field.conservation_livingplant.fertilizerUsed.fullName" }
+
+      it "returns truthy" do
+        expect(result).to be_truthy
+      end
+    end
+
+    context "without exact base id match" do
+      let(:otherid) { "field.ext.livingplant.fertilizerUsed.fullName" }
+
+      it "returns falsey" do
+        expect(result).to be_falsey
+      end
+    end
+  end
+
+  describe "#norm_base_match?" do
+    let(:id) { "field.conservation_livingplant.fertilizerUsed.name" }
+    let(:result) { subject.norm_base_match?(otherid) }
+
+    context "with exact base id match" do
+      let(:otherid) { "field.conservation_livingplant.fertilizerUsed.fullName" }
+
+      it "returns truthy" do
+        expect(result).to be_truthy
+      end
+    end
+
+    context "with normalized base id match" do
+      let(:otherid) { "field.ext.livingplant.fertilizerUsed.fullName" }
+
+      it "returns truthy" do
+        expect(result).to be_truthy
+      end
+    end
+
+    context "without normalized base id match" do
+      let(:otherid) { "field.ext.livingplant.otherFieldName.fullName" }
+
+      it "returns falsey" do
+        expect(result).to be_falsey
+      end
     end
   end
 end

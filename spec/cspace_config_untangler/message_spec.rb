@@ -16,7 +16,7 @@ RSpec.describe CCU::Message, :aggregate_failures do
     end
 
     it "returns expected values" do
-      expect(subject.full_id).to eq("record.collectionobject.name")
+      expect(subject.orig_id).to eq("record.collectionobject.name")
       expect(subject.element_type).to eq(:record)
       expect(subject.base_id).to eq("record.collectionobject")
       expect(subject.message_type).to eq(:name)

@@ -8,7 +8,7 @@ module CspaceConfigUntangler
     attr_reader :id, :message
 
     extend Forwardable
-    def_delegators :@id, :full_id, :base_id, :message_type, :element_name
+    def_delegators :@id, :orig_id, :base_id, :message_type, :element_name
 
     include Comparable
 
@@ -29,7 +29,7 @@ module CspaceConfigUntangler
     end
 
     def inspect
-      %(#<#{self.class}:#{object_id} id: #{full_id}>)
+      %(#<#{self.class}:#{object_id} id: #{orig_id}>)
     end
 
     def ==(other)
