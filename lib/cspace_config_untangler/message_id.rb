@@ -27,10 +27,10 @@ module CspaceConfigUntangler
 
     # A category of CollectionSpace inconsistency
     PANELS_THAT_ARE_INPUT_TABLES = %w[
-                                      panel.collectionobject.flowers
-                                      panel.collectionobject.fruits
-                                      panel.ext.nagpra.nagpraReportFiled
-                                     ]
+      panel.collectionobject.flowers
+      panel.collectionobject.fruits
+      panel.ext.nagpra.nagpraReportFiled
+    ]
 
     # @param id [String]
     def initialize(id)
