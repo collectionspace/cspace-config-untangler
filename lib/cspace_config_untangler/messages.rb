@@ -16,7 +16,7 @@ module CspaceConfigUntangler
       .freeze
 
     extend Forwardable
-    def_delegators :@all, :size, :find
+    def_delegators :@all, :any?, :size, :find, :empty?
 
     def initialize
       @all = Set.new
