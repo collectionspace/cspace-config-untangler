@@ -98,7 +98,13 @@ module CspaceConfigUntangler
         segment_safe_id.sub("panel.", "inputTable.")
       elsif segment_safe_id.start_with?("field.conservation_livingplant")
         segment_safe_id.sub("field.conservation_livingplant",
-                            "field.ext%%DOT%%livingplant")
+          "field.ext%%DOT%%livingplant")
+      elsif orig_id == "field.conservation_common.sampleReturned.nadme"
+        CCU.upgrade_warner.call(
+          target_version: "next release", issue: "DRYD-1271"
+        )
+
+        "field.conservation_common.sampleReturned.name"
       else
         segment_safe_id
       end
@@ -123,9 +129,9 @@ module CspaceConfigUntangler
 
     def set_message_type
       return :label if NO_MESSAGE_TYPES.include?(element_type)
-      return parts[2].to_sym if element_type == :column
+      return parts(:normalized_id)[2].to_sym if element_type == :column
 
-      parts.last.to_sym
+      parts(:normalized_id).last.to_sym
     end
 
     def set_element_name
