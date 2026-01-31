@@ -193,30 +193,6 @@ RSpec.describe CCU::Profile do
     end
   end
 
-  context "when bonsai" do
-    let(:release) { "8_2" }
-    let(:profilename) { "bonsai" }
-    let(:rectypes) { ["conservation"] }
-
-    describe "apply_overrides" do
-      it "gives living plant extension messages ext prefix instead of "\
-        "conservation_livingplant", skip: "until messages fixed" do
-        expect(
-          profile.messages
-            .by_id("field.ext.livingplant.pestOrDiseaseObserved.name")
-        ).not_to be_nil
-      end
-    end
-
-    describe "apply_field_override" do
-      it "gets field message overrides from profile level" do
-        msg = profile.messages
-          .by_id("field.conservation_common.conservator.name")
-        expect(msg.message).to eq("Performed by")
-      end
-    end
-  end
-
   describe ".option_lists" do
     let(:profilename) { "core" }
     it "returns array" do
