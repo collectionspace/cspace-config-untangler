@@ -117,6 +117,7 @@ module CspaceConfigUntangler
       end
 
       def apply_overrides
+        return unless field_def
         return if @messages.empty?
 
         overrides = profile.message_overrides
@@ -319,12 +320,6 @@ module CspaceConfigUntangler
         # end
         # from_msg = msgs.dig(altform, "fullName") || msgs.dig(altform, "name")
         # return from_msg if from_msg
-
-        # elsif id.start_with?("conservation_livingplant")
-        #   fixedval = id.sub(
-        #     "conservation_livingplant", "ext.livingplant"
-        #   )
-        #   lookup_display_name(fixedval)
         # else
         #   alt_fieldname_lookup(id)
         # end

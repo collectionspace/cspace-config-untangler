@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require_relative "field"
+require_relative "../messages"
 
 module CspaceConfigUntangler
   module Fields
@@ -16,7 +17,7 @@ module CspaceConfigUntangler
         @name = field_hash[:name]
         @ns = field_hash[:ns]
         @ns_for_id = @ns
-        @panel = ""
+        @panel = nil
         @ui_path = []
         @id = "#{@ns}.#{@name}"
         @schema_path = []
@@ -27,6 +28,7 @@ module CspaceConfigUntangler
         @value_list = field_hash[:value_list]
         @required = field_hash[:required]
         @fid = "#{@profile.name} #{rectype.name} #{@ns_for_id} #{@name}"
+        @messages = CCU::Messages.new
       end
     end
   end
