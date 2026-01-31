@@ -218,7 +218,7 @@ module CspaceConfigUntangler
       overrides = profile.message_overrides
       return unless overrides
 
-      overrides.select { |k, _v| k.start_with?("record.#{name}") }
+      overrides.select { |k, _v| k.match?(/^[a-z]+\.#{name}\./) }
         .each { |k, v| @messages.override(convert_to_config(k, v)) }
     end
 
