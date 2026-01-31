@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 require_relative "../field_map/field_mapper"
+require_relative "../messageable"
+require_relative "../message_overrideable"
 require_relative "../ucbable"
 require_relative "../upgrade_warner"
 require_relative "../value_sources"
@@ -10,9 +12,11 @@ module CspaceConfigUntangler
     # Merges fields configuration field definition information into forms field
     # information
     class Field
+      include Messageable
+      include MessageOverrideable
       include Ucbable
 
-      attr_reader :name, :label, :ns, :ns_for_id, :panel, :ui_path, :id,
+      attr_reader :name, :ns, :ns_for_id, :panel, :ui_path, :id,
         :schema_path,
         :repeats, :in_repeating_group,
         :data_type, :value_sources, :value_list,
@@ -22,16 +26,18 @@ module CspaceConfigUntangler
       def initialize(rectype_obj, form_field)
         @rectype = rectype_obj
         @profile = @rectype.profile
+        message_setup
         @name = form_field.name
         @ns = form_field.ns
         @ns_for_id = form_field.ns_for_id
         @panel = form_field.panel
         @id = form_field.id
-        @label = lookup_field_label
         @ui_path = formatted_ui_path(form_field.ui_path)
         merge_field_defs(form_field)
         @fid = "#{@profile.name} #{rectype.name} #{@ns_for_id} #{@name}"
       end
+
+      def label = @label ||= lookup_field_label
 
       def ok? = status == :ok
 
@@ -100,6 +106,25 @@ module CspaceConfigUntangler
       private
 
       def field_def = @field_def ||= find_field_def
+
+      def extract_messages
+        return unless field_def
+
+        msgs = field_def.config.hash.dig("[config]", "messages")
+        return unless msgs
+
+        add_messages(msgs)
+      end
+
+      def apply_overrides
+        return if @messages.empty?
+
+        overrides = profile.message_overrides
+        return unless overrides
+
+        overrides.select { |k, _v| @messages.any? { |m| m.id.match?(k) } }
+          .each { |k, v| @messages.override(convert_to_config(k, v)) }
+      end
 
       def formatted_ui_path(orig)
         return [] unless orig
@@ -275,46 +300,40 @@ module CspaceConfigUntangler
       end
 
       def lookup_field_label
-        from_profile = label_from_profile_msgs
-        return from_profile if from_profile
+        msg = messages.find { |m| m.message_type == :fullName } ||
+          messages.find { |m| m.message_type == :name }
+        return "" unless msg
 
-        from_field_def = label_from_field_def
-        return from_field_def if from_field_def
+        msg.message
 
-        msgs = profile.messages
-        altform = case id
-        when "uoc_common.useDateHoursSpent"
-          CCU.upgrade_warner.call(target_version: "next release",
-            issue: "DRYD-1269")
-          "field.uoc_common.hoursSpent"
-        when "collectionobjects_common.compressionStandard"
-          CCU.upgrade_warner.call(target_version: "next release",
-            issue: "DRYD-1270")
-          "field.collectionobjects_common.compressionstandard"
-        end
-        from_msg = msgs.dig(altform, "fullName") || msgs.dig(altform, "name")
-        return from_msg if from_msg
+        # msgs = profile.messages
+        # altform = case id
+        # when "uoc_common.useDateHoursSpent"
+        #   CCU.upgrade_warner.call(target_version: "next release",
+        #     issue: "DRYD-1269")
+        #   "field.uoc_common.hoursSpent"
+        # when "collectionobjects_common.compressionStandard"
+        #   CCU.upgrade_warner.call(target_version: "next release",
+        #     issue: "DRYD-1270")
+        #   "field.collectionobjects_common.compressionstandard"
+        # end
+        # from_msg = msgs.dig(altform, "fullName") || msgs.dig(altform, "name")
+        # return from_msg if from_msg
 
-        if id == "conservation_common.sampleReturned"
-          CCU.upgrade_warner.call(
-            target_version: "next release", issue: "DRYD-1271"
-          )
-          base = "field.conservation_common.sampleReturned"
-          msgs["#{base}.fullName"] || msgs["#{base}.nadme"]
-        elsif id.start_with?("conservation_livingplant")
-          fixedval = id.sub(
-            "conservation_livingplant", "ext.livingplant"
-          )
-          lookup_display_name(fixedval)
-        else
-          alt_fieldname_lookup(id)
-        end
+        # elsif id.start_with?("conservation_livingplant")
+        #   fixedval = id.sub(
+        #     "conservation_livingplant", "ext.livingplant"
+        #   )
+        #   lookup_display_name(fixedval)
+        # else
+        #   alt_fieldname_lookup(id)
+        # end
       end
 
       def label_from_profile_msgs
-        msgs = profile.messages
-        fieldid = "field.#{id}"
-        msgs.dig(fieldid, "fullName") || msgs.dig(fieldid, "name")
+        # msgs = profile.messages
+        # fieldid = "field.#{id}"
+        # msgs.dig(fieldid, "fullName") || msgs.dig(fieldid, "name")
       end
 
       def label_from_field_def
@@ -329,19 +348,19 @@ module CspaceConfigUntangler
 
       def lookup_display_name(val)
         return nil unless val
-        return nil if val["not-mapped"]
+        nil if val["not-mapped"]
 
-        msgs = @profile.messages
+        # msgs = @profile.messages
 
-        if val.start_with?("panel.")
-          if msgs.dig(val, "name")
-            msgs[val]["name"]
-          else
-            alt_panel_lookup(val)
-          end
-        elsif val.start_with?("inputTable.")
-          msgs.dig(val, "name") ? msgs[val]["name"] : val
-        end
+        # if val.start_with?("panel.")
+        #   if msgs.dig(val, "name")
+        #     msgs[val]["name"]
+        #   else
+        #     alt_panel_lookup(val)
+        #   end
+        # elsif val.start_with?("inputTable.")
+        #   msgs.dig(val, "name") ? msgs[val]["name"] : val
+        # end
       end
 
       def alt_panel_lookup(val)
@@ -365,18 +384,18 @@ module CspaceConfigUntangler
         fieldname = val.split(".").last
         msgs = profile.messages
           .select do |id, data|
-          id.start_with?("field.") && id.end_with?(".#{fieldname}")
-        end
+            id.start_with?("field.") && id.end_with?(".#{fieldname}")
+          end
 
         if msgs.empty?
           CCU.log.error("FIELD MESSAGE LOOKUP: NO MESSAGE: "\
                         "#{profile.name} #{rectype.name} #{id} "\
-                                    "#{__FILE__}, #{__LINE__})")
+                        "#{__FILE__}, #{__LINE__})")
           nil
         elsif msgs.length > 1
           CCU.log.error("FIELD MESSAGE LOOKUP: MULTIPLE MESSAGES: "\
-                            "#{profile.name} #{rectype.name} #{id} "\
-                                        "#{__FILE__}, #{__LINE__})")
+                        "#{profile.name} #{rectype.name} #{id} "\
+                        "#{__FILE__}, #{__LINE__})")
           "multiple msg matches: #{val}"
         else
           msgdata = msgs.first[1]
