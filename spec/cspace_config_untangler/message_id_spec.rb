@@ -68,6 +68,17 @@ RSpec.describe CCU::MessageId, :aggregate_failures do
         expect(subject.element_name).to eq("fertilizerUsed")
       end
     end
+
+    context "when nadme instead of name" do
+      let(:id) { "field.conservation_common.sampleReturned.nadme" }
+
+      it "returns expected values" do
+        expect(subject.normalized_id).to eq(
+          "field.conservation_common.sampleReturned.name"
+        )
+        expect(subject.message_type).to eq(:name)
+      end
+    end
   end
 
   context "when form type" do
