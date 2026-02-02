@@ -303,105 +303,30 @@ module CspaceConfigUntangler
       def lookup_field_label
         msg = messages.find { |m| m.message_type == :fullName } ||
           messages.find { |m| m.message_type == :name }
-        return "" unless msg
+        unless msg
+          CCU.log.error("FIELD MESSAGE LOOKUP: NO MESSAGE: "\
+                "#{profile.name} #{rectype.name} #{id} "\
+                "#{__FILE__}, #{__LINE__})")
+          return ""
+        end
 
         msg.message
-
-        # msgs = profile.messages
-        # altform = case id
-        # when "uoc_common.useDateHoursSpent"
-        #   CCU.upgrade_warner.call(target_version: "next release",
-        #     issue: "DRYD-1269")
-        #   "field.uoc_common.hoursSpent"
-        # when "collectionobjects_common.compressionStandard"
-        #   CCU.upgrade_warner.call(target_version: "next release",
-        #     issue: "DRYD-1270")
-        #   "field.collectionobjects_common.compressionstandard"
-        # end
-        # from_msg = msgs.dig(altform, "fullName") || msgs.dig(altform, "name")
-        # return from_msg if from_msg
-        # else
-        #   alt_fieldname_lookup(id)
-        # end
-      end
-
-      def label_from_profile_msgs
-        # msgs = profile.messages
-        # fieldid = "field.#{id}"
-        # msgs.dig(fieldid, "fullName") || msgs.dig(fieldid, "name")
-      end
-
-      def label_from_field_def
-        return unless field_def
-
-        msgs = field_def.config.hash.dig("[config]", "messages")
-        return unless msgs
-
-        msgs.dig("fullName", "defaultMessage") ||
-          msgs.dig("name", "defaultMessage")
       end
 
       def lookup_display_name(val)
-        return nil unless val
-        nil if val["not-mapped"]
+        return unless val
+        return if val["not-mapped"]
 
-        # msgs = @profile.messages
+        msg = rectype.messages&.by_id(val)&.message
 
-        # if val.start_with?("panel.")
-        #   if msgs.dig(val, "name")
-        #     msgs[val]["name"]
-        #   else
-        #     alt_panel_lookup(val)
-        #   end
-        # elsif val.start_with?("inputTable.")
-        #   msgs.dig(val, "name") ? msgs[val]["name"] : val
-        # end
-      end
-
-      def alt_panel_lookup(val)
-        trunc_lookup = {}
-        @profile.messages.select do |id, h|
-          id.start_with?("panel.")
-        end.each do |id, h|
-          name = id.split(".").last
-          trunc_lookup[name] = h
-        end
-        trunc_val = val.split(".").last
-
-        if trunc_lookup.dig(trunc_val, "name")
-          trunc_lookup[trunc_val]["name"]
-        else
-          val
-        end
-      end
-
-      def alt_fieldname_lookup(val)
-        fieldname = val.split(".").last
-        msgs = profile.messages
-          .select do |id, data|
-            id.start_with?("field.") && id.end_with?(".#{fieldname}")
-          end
-
-        if msgs.empty?
-          CCU.log.error("FIELD MESSAGE LOOKUP: NO MESSAGE: "\
-                        "#{profile.name} #{rectype.name} #{id} "\
+        unless msg
+          CCU.log.error("UI PATH MESSAGE LOOKUP: NO MESSAGE: "\
+                        "#{profile.name} #{rectype.name} #{val} "\
                         "#{__FILE__}, #{__LINE__})")
-          nil
-        elsif msgs.length > 1
-          CCU.log.error("FIELD MESSAGE LOOKUP: MULTIPLE MESSAGES: "\
-                        "#{profile.name} #{rectype.name} #{id} "\
-                        "#{__FILE__}, #{__LINE__})")
-          "multiple msg matches: #{val}"
-        else
-          msgdata = msgs.first[1]
-          fullname = msgdata["fullName"]
-          return fullname if fullname
-
-          name = msgdata["name"]
-          return name if name
-
-          val
+          return
         end
+
+        msg
       end
     end
   end
