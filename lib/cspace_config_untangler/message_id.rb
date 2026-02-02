@@ -105,6 +105,18 @@ module CspaceConfigUntangler
         )
 
         "field.conservation_common.sampleReturned.name"
+      elsif orig_id.start_with?("field.uoc_common.hoursSpent")
+        CCU.upgrade_warner.call(target_version: "next release",
+          issue: "DRYD-1269")
+
+        orig_id.sub("hoursSpent", "useDateHoursSpent")
+      elsif orig_id.start_with?(
+        "field.collectionobjects_common.compressionstandard"
+      )
+        CCU.upgrade_warner.call(target_version: "next release",
+          issue: "DRYD-1270")
+
+        orig_id.sub("compressionstandard", "compressionStandard")
       else
         segment_safe_id
       end

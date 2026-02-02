@@ -224,8 +224,28 @@ RSpec.describe CCU::MessageId, :aggregate_failures do
       end
     end
 
-    context "with normalized base id match" do
+    context "with normalized livingplant base id match" do
       let(:otherid) { "field.ext.livingplant.fertilizerUsed.fullName" }
+
+      it "returns truthy" do
+        expect(result).to be_truthy
+      end
+    end
+
+    context "with normalized hoursSpent base id match" do
+      let(:id) { "field.uoc_common.hoursSpent.name" }
+      let(:otherid) { "field.uoc_common.useDateHoursSpent.fullName" }
+
+      it "returns truthy" do
+        expect(result).to be_truthy
+      end
+    end
+
+    context "with normalized compressionstandard base id match" do
+      let(:id) { "field.collectionobjects_common.compressionstandard.name" }
+      let(:otherid) do
+        "field.collectionobjects_common.compressionStandard.fullName"
+      end
 
       it "returns truthy" do
         expect(result).to be_truthy
