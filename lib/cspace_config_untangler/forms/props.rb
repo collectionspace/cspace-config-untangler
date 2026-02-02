@@ -78,7 +78,8 @@ module CspaceConfigUntangler
       end
 
       def formatted_ui_path
-        ui_path.join(" / ")
+        ui_path.map { |s| s.respond_to?(:orig_id) ? s.orig_id : s }
+          .join(" / ")
       end
 
       def skippable?
@@ -279,17 +280,29 @@ module CspaceConfigUntangler
       def append_to_ui_path(path)
         return unless children?
 
-        if input_table?
-          path << rectype.messages.by_element_name(:inputTable, name)
-            &.message
+        segment = if input_table?
+          rectype.messages.by_element_name(:inputTable, name)
         elsif is_panel
-          path << panel
+          rectype.messages.by_id(panel)
         elsif children? && !name.empty?
-          path << "#{ns&.sub("ns2:", "")}.#{name}"
+          get_ui_segment_for_named_childhaving_props
         else
-          CCU.log.warn("Cannot append to ui path #{path}: #{profile.name} "\
-                       "- #{rectype.name} - #{ns} - #{name} - #{config}")
+          CCU.log.warn("Unknown ui path segment type: #{path}: "\
+                       "#{profile.name} - #{rectype.name} - #{ns} - "\
+                       "#{name} - #{config}")
+          nil
         end
+
+        path << segment if segment
+      end
+
+      def get_ui_segment_for_named_childhaving_props
+        id = "field.#{ns&.sub("ns2:", "")}.#{name}.name"
+        msgs = rectype.messages.by_base_id(id)
+        return id if msgs.empty?
+
+        msgs.find { |m| m.message_type == :fullName } ||
+          msgs.find { |m| m.message_type == :name }
       end
 
       def field_array_subpath?

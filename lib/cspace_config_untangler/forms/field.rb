@@ -28,7 +28,7 @@ module CspaceConfigUntangler
           CCU.log.error("FORM STRUCTURE: NAMESPACE EXTRACTION: missing or "\
                         "malformed namespace extracted for #{id}")
         end
-        @ui_path = propsobj.ui_path
+        @ui_path = propsobj.ui_path.select { |seg| seg.respond_to?(:message) }
         @repeats = propsobj.repeats
         @in_repeating_group = propsobj.in_repeating_group
         @to_csv = format_csv
@@ -64,16 +64,21 @@ module CspaceConfigUntangler
 
       attr_reader :form
 
+      def panel_label
+        segment = ui_path.find { |seg| seg.element_type == :panel }
+        segment ? segment.message : ""
+      end
+
+      def ui_path_labels
+        ui_path.reject { |seg| seg.element_type == :panel }
+          .map(&:message)
+          .join(" > ")
+      end
+
       def format_csv
         arr = [@profile, @rectype]
-        if @ui_path
-          path = @ui_path.clone
-          arr << path.shift
-          arr << path.compact.join(" > ")
-        else
-          arr << ""
-          arr << ""
-        end
+        arr << panel_label
+        arr << ui_path_labels
         arr << (@id || "")
         arr << (@name || "")
         arr

@@ -377,9 +377,11 @@ RSpec.describe CCU::Forms::Props do
       let(:name) { "objectCount" }
 
       it "returns path" do
-        expect(result).to eq("panel.collectionobject.id / "\
-                             "collectionobjects_common.objectCountGroupList / "\
-                             "collectionobjects_common.objectCountGroup")
+        expect(result).to eq(
+          "panel.collectionobject.id / "\
+            "field.collectionobjects_common.objectCountGroupList.name / "\
+            "field.collectionobjects_common.objectCountGroup.name"
+        )
       end
     end
 
@@ -398,7 +400,8 @@ RSpec.describe CCU::Forms::Props do
       let(:name) { "workDateGroup" }
 
       it "returns path" do
-        expect(result).to eq("panel.work.info / works_common.workDateGroupList")
+        expect(result).to eq("panel.work.info / "\
+                             "field.works_common.workDateGroupList.name")
       end
     end
   end

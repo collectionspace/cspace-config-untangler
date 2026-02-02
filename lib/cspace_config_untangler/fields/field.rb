@@ -130,10 +130,7 @@ module CspaceConfigUntangler
       def formatted_ui_path(orig)
         return [] unless orig
         return [] if orig.empty?
-
-        result = orig.compact
-          .map { |segment| lookup_display_name(segment) }
-          .compact
+        result = orig.compact.map(&:message).compact
         return result if result.empty?
         return result unless result.last == label
 
@@ -262,6 +259,7 @@ module CspaceConfigUntangler
 
       def find_field_def
         fd = @profile.field_defs.dig(@id)
+
         if fd.nil?
           find_field_def_alt
         elsif fd.length == 1
@@ -304,6 +302,8 @@ module CspaceConfigUntangler
         msg = messages.find { |m| m.message_type == :fullName } ||
           messages.find { |m| m.message_type == :name }
         unless msg
+          return "" if id.match?("not-mapped")
+
           CCU.log.error("FIELD MESSAGE LOOKUP: NO MESSAGE: "\
                 "#{profile.name} #{rectype.name} #{id} "\
                 "#{__FILE__}, #{__LINE__})")
@@ -313,7 +313,7 @@ module CspaceConfigUntangler
         msg.message
       end
 
-      def lookup_display_name(val)
+      def lookup_ui_path_segment_label(val)
         return unless val
         return if val["not-mapped"]
 
