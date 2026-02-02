@@ -12,7 +12,7 @@ module CspaceConfigUntangler
     # @return [String] name of the profile
     attr_reader :name
 
-    # @return [:collapse, :explode]
+    # @return [:collapsed, :expanded]
     attr_reader :structured_date_treatment
 
     # @return [Hash] derived from JSON config for the profile
@@ -21,8 +21,8 @@ module CspaceConfigUntangler
     # @param profile [String] profile name; must match a file in `data/configs`
     #   directory, minus `.json` file extension
     # @param rectypes [Array<String>] rectype names to include in processing
-    # @param structured_date_treatment [:explode, :collapse]
-    def initialize(profile:, rectypes: [], structured_date_treatment: :explode)
+    # @param structured_date_treatment [:collapsed, :expanded]
+    def initialize(profile:, rectypes: [], structured_date_treatment: :expanded)
       @name = profile
       @structured_date_treatment = structured_date_treatment
       @config = JSON.parse(File.read("#{CCU.configdir}/#{@name}.json"))
@@ -191,7 +191,7 @@ module CspaceConfigUntangler
     def extract_messages
       rectypes.each { |rt| add_messages(rt.messages) }
 
-      if structured_date_treatment == :explode
+      if structured_date_treatment == :expanded
         sdconfig = config.dig("extensions", "structuredDate", "fields")
         add_messages(CCU::StructuredDateMessageGetter.call(sdconfig))
       end

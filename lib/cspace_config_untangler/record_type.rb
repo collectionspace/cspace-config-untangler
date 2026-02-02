@@ -263,7 +263,7 @@ module CspaceConfigUntangler
     def get_fields
       fields = form_fields.map { |ff| CCU::Fields::Field.new(self, ff) }
         .select { |field| field.ok? }
-      if @structured_date_treatment == :explode
+      if @structured_date_treatment == :expanded
         fields = explode_structured_date_fields(fields)
       end
       fields = fields.flatten
