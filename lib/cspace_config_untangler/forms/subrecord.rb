@@ -32,7 +32,9 @@ module CspaceConfigUntangler
       end
 
       def panel
-        subrec.dig("messages", "panel", config["name"], "id")
+        form.messages.find do |m|
+          m.element_type == :panel && m.element_name == name
+        end
       end
 
       def extract_messages

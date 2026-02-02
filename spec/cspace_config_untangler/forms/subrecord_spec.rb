@@ -33,7 +33,7 @@ RSpec.describe CCU::Forms::Subrecord, aggregate_failures: true do
       expect(subrec.ns).to eq("ns2:contacts_common")
       expect(subrec.is_panel).to be true
       expect(subrec.extension?).to be true
-      expect(subrec.panel).to eq("panel.contact.info")
+      expect(subrec.panel.orig_id).to eq("panel.contact.info")
     end
   end
 
