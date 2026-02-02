@@ -42,5 +42,28 @@ RSpec.describe CCU::Template::CsvTemplate do
         end
       end
     end
+
+    context "media record type" do
+      let(:rectypes) { %w[media] }
+
+      describe ".csvdata" do
+        it "mediaFileURI column added" do
+          headers = template.csvdata[7]
+          expect(headers).to include("mediaFileURI")
+        end
+      end
+    end
+
+    context "restrictedmedia record type" do
+      let(:release) { "8_2" }
+      let(:rectypes) { %w[restrictedmedia] }
+
+      describe ".csvdata" do
+        it "mediaFileURI column added" do
+          headers = template.csvdata[7]
+          expect(headers).to include("mediaFileURI")
+        end
+      end
+    end
   end
 end
