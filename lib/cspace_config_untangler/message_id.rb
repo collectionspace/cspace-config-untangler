@@ -87,9 +87,9 @@ module CspaceConfigUntangler
     # `ext.` replacement is to prevent `ext.{name of extension}` from being
     #   split into 2 segments
     def prepare_segment_safe_id
-      return orig_id unless orig_id["ext."]
+      return orig_id unless orig_id[".ext."]
 
-      orig_id.sub("ext.", "ext%%DOT%%")
+      orig_id.sub(".ext.", ".ext%%DOT%%")
     end
 
     def prepare_normalized_id

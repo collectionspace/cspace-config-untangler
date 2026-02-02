@@ -40,6 +40,21 @@ RSpec.describe CCU::MessageId, :aggregate_failures do
       end
     end
 
+    context "with object assocCulturalContext" do
+      let(:id) do
+        "field.collectionobjects_common.assocCulturalContext.fullName"
+      end
+
+      it "returns expected values" do
+        expect(subject.element_type).to eq(:field)
+        expect(subject.base_id).to eq(
+          "field.collectionobjects_common.assocCulturalContext"
+        )
+        expect(subject.message_type).to eq(:fullName)
+        expect(subject.element_name).to eq("assocCulturalContext")
+      end
+    end
+
     context "with ext namespace" do
       let(:id) { "field.ext.associatedAuthority.assocPersonType.fullName" }
 
