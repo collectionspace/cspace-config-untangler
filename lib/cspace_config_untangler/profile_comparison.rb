@@ -6,7 +6,7 @@ module CspaceConfigUntangler
     def initialize(profilearray, outputdir)
       @profilenames = profilearray
       @profiles = profilearray.map do |p|
-        CCU::Profile.new(profile: p, structured_date_treatment: :collapse)
+        CCU::Profile.new(profile: p, structured_date_treatment: :collapsed)
       end
       @output = File.join(
         outputdir,
