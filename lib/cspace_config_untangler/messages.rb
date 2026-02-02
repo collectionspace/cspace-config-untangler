@@ -55,6 +55,13 @@ module CspaceConfigUntangler
       all.find { |m| m.id.norm_match?(id) }
     end
 
+    def by_base_id(id)
+      exact = all.select { |m| m.id.base_match?(id) }
+      return exact if exact
+
+      all.select { |m| m.id.norm_base_match?(id) }
+    end
+
     # @param type [Symbol] element type of Message objects to return
     # @return [Array<CCU::Message>]
     def by_element_type(type) = all.select { |m| m.element_type == type }
