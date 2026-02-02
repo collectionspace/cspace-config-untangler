@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-# rubocop:disable Layout/LineLength
 module CspaceConfigUntangler
   module Template
     class CsvTemplate
@@ -19,10 +18,13 @@ module CspaceConfigUntangler
           @mappings = @mappings.reject do |mapping|
                         mapping[:data_type] == "csrefname"
                       end
-            .reject { |mapping| mapping.key?(:to_template) && mapping[:to_template] == false }
+            .reject do |mapping|
+            mapping.key?(:to_template) && mapping[:to_template] == false
+          end
         elsif @type == "refname"
           @mappings = @mappings.reject do |mapping|
-            mapping[:source_type].match?(/authority|vocabulary/) && mapping[:data_type] == "string"
+            mapping[:source_type].match?(/authority|vocabulary/) &&
+              mapping[:data_type] == "string"
           end
         end
         @csvdata = []
@@ -31,7 +33,9 @@ module CspaceConfigUntangler
 
       def filename
         stubname = "#{@profile.name}_#{@rectype.name}"
-        (@type == "refname") ? "#{stubname}-refnames-template.csv" : "#{stubname}-template.csv"
+        return "#{stubname}-refnames-template.csv" if @type == "refname"
+
+        "#{stubname}-template.csv"
       end
 
       def write(dir)
@@ -46,7 +50,8 @@ module CspaceConfigUntangler
       def build_template
         requiredfields = @mappings.select { |m| m[:required].start_with?("y") }
         otherfields = @mappings.select { |m| m[:required] == "n" }
-        instruct = ["Before importing CSV, delete initial column and rows above the CSVHEADER row"]
+        instruct = ["Before importing CSV, delete initial column and rows "\
+                    "above the CSVHEADER row"]
         required = ["REQUIRED"]
         datatype = ["DATA TYPE"]
         repeats = ["REPEATABLE FIELD?"]
@@ -61,7 +66,11 @@ module CspaceConfigUntangler
             required << mapping[:required].sub(" in template", "")
             datatype << mapping[:data_type]
             repeats << mapping[:repeats]
-            mapping[:in_repeating_group].start_with?("n") ? group << "" : group << mapping[:xpath].join(" < ")
+            group << if mapping[:in_repeating_group].start_with?("n")
+              ""
+            else
+              mapping[:xpath].join(" < ")
+            end
             sourcetype << mapping[:source_type]
             source << case mapping[:source_type]
             when "optionlist"
@@ -92,4 +101,3 @@ module CspaceConfigUntangler
     end
   end
 end
-# rubocop:enable Layout/LineLength
