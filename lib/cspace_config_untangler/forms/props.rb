@@ -173,7 +173,12 @@ module CspaceConfigUntangler
       end
 
       def get_panel
-        return "panel.#{rectype.name}.#{name}" if is_panel
+        if is_panel
+          return rectype.messages.find do |m|
+            m.element_type == :panel && m.element_name == name
+          end
+        end
+
         return parent.panel if parent
 
         nil
@@ -283,7 +288,7 @@ module CspaceConfigUntangler
         segment = if input_table?
           rectype.messages.by_element_name(:inputTable, name)
         elsif is_panel
-          rectype.messages.by_id(panel)
+          nil
         elsif children? && !name.empty?
           get_ui_segment_for_named_childhaving_props
         else
