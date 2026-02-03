@@ -49,7 +49,11 @@ module CspaceConfigUntangler
     attr_reader :name, :target_dir, :driver, :version, :saved_name, :client
 
     def target_name = if community_supported?
-                        "#{version}.json"
+                        if CCU.instance_env == :qa
+                          "#{name}_#{CCU.release.version}.json"
+                        else
+                          "#{version}.json"
+                        end
                       else
                         "#{name}.json"
                       end
