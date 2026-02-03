@@ -136,7 +136,7 @@ module CspaceConfigUntangler
   setting :logpath, default: default_logpath, reader: true
   setting :releases,
     default: ["5_2", "6_0", "6_1", "7_0", "7_1", "7_2", "8_0", "8_1", "8_1_1",
-      "8_2"],
+      "8_2", "8_3"],
     reader: true
 
   setting :release,
