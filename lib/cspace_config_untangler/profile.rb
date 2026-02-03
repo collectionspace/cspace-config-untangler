@@ -22,7 +22,8 @@ module CspaceConfigUntangler
     #   directory, minus `.json` file extension
     # @param rectypes [Array<String>] rectype names to include in processing
     # @param structured_date_treatment [:collapsed, :expanded]
-    def initialize(profile:, rectypes: [], structured_date_treatment: :collapsed)
+    def initialize(profile:, rectypes: [],
+      structured_date_treatment: :collapsed)
       @name = profile
       @structured_date_treatment = structured_date_treatment
       @config = JSON.parse(File.read("#{CCU.configdir}/#{@name}.json"))
