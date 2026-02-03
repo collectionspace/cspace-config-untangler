@@ -37,6 +37,8 @@ module CspaceConfigUntangler
         @fid = "#{@profile.name} #{rectype.name} #{@ns_for_id} #{@name}"
       end
 
+      def config = @config ||= get_config
+
       def label = @label ||= lookup_field_label
 
       def ok? = status == :ok
@@ -106,6 +108,12 @@ module CspaceConfigUntangler
       private
 
       def field_def = @field_def ||= find_field_def
+
+      def get_config
+        return {} unless field_def
+
+        field_def.config
+      end
 
       def extract_messages
         return unless field_def
