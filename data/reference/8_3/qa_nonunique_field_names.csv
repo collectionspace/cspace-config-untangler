@@ -1,0 +1,7 @@
+profile,rectype,field,xpaths,status
+anthro_9-1-0,collectionobject,fieldLocVerbatim,"[""fieldLocVerbatim"", ""localityGroupList > localityGroup > fieldLocVerbatim""]",known
+anthro_9-1-0,collectionobject,sex,"[""sex"", ""commingledRemainsGroupList > commingledRemainsGroup > sex""]",known
+anthro_9-1-0,collectionobject,reference,"[""taxonomicIdentGroupList > taxonomicIdentGroup > reference"", ""referenceGroupList > referenceGroup > reference""]",known
+bonsai_7-1-0,conservation,futureTreatment,"[""futureTreatmentGroupList > futureTreatmentGroup > futureTreatment"", ""pestsAndDiseaseGroupList > pestsAndDiseaseGroup > futureTreatment""]",known
+bonsai_7-1-0,conservation,futureTreatmentDate,"[""futureTreatmentGroupList > futureTreatmentGroup > futureTreatmentDate"", ""pestsAndDiseaseGroupList > pestsAndDiseaseGroup > futureTreatmentDate""]",known
+botgarden_4-0-0,collectionobject,reference,"[""taxonomicIdentGroupList > taxonomicIdentGroup > reference"", ""referenceGroupList > referenceGroup > reference""]",known
