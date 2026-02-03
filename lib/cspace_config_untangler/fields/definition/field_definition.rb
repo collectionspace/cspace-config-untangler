@@ -15,7 +15,8 @@ module CspaceConfigUntangler
           :repeats, :in_repeating_group,
           :data_type,
           :required,
-          :profile
+          :profile,
+          :datahash
 
         # def initialize(fdp, name, config, parent)
         def initialize(config)
@@ -86,8 +87,6 @@ module CspaceConfigUntangler
         end
 
         private
-
-        attr_reader :datahash
 
         def set_required
           if @datahash.dig("required") && @datahash["required"] == true
