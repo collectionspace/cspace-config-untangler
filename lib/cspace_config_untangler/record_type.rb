@@ -25,8 +25,8 @@ module CspaceConfigUntangler
     # record types that may be added in the future, like procedure is the
     # superclass of all record types listed under procedures on the Create New
     # page
-    IGNORED = %w[account all audit authrole authority batch batchinvocation
-      blob contact export idgenerator object procedure relation
+    IGNORED = %w[account advancedsearch all audit authrole authority batch
+      batchinvocation blob contact export idgenerator object procedure relation
       report reportinvocation structureddates vocabulary]
 
     attr_reader :profile, :name, :id, :config, :ns,
