@@ -32,7 +32,7 @@ module CspaceConfigUntangler
         @ns_for_id = form_field.ns_for_id
         @panel = form_field.panel
         @id = form_field.id
-        @ui_path = formatted_ui_path(form_field.ui_path)
+        @ui_path = form_field.ui_path
         merge_field_defs(form_field)
         @fid = "#{@profile.name} #{rectype.name} #{@ns_for_id} #{@name}"
       end
@@ -135,16 +135,7 @@ module CspaceConfigUntangler
           .each { |k, v| @messages.override(convert_to_config(k, v)) }
       end
 
-      def formatted_ui_path(orig)
-        return [] unless orig
-        return [] if orig.empty?
-        result = orig.compact.map(&:message).compact
-        return result if result.empty?
-        return result unless result.last == label
-
-        result.pop
-        result
-      end
+      def formatted_ui_path = ui_path.map(&:message).join(" > ")
 
       def expert_csv_row
         row = {
@@ -155,7 +146,7 @@ module CspaceConfigUntangler
           namespace_for_id: @ns_for_id,
           field_id: @id,
           ui_info_group: panel&.message,
-          ui_path: get_ui_path,
+          ui_path: formatted_ui_path,
           ui_field_label: label,
           xml_path: nil,
           xml_field_name: @name,
@@ -179,7 +170,7 @@ module CspaceConfigUntangler
           record_type: @rectype.label,
           record_type_machine_name: @rectype.name,
           record_section: panel&.message,
-          path_to_field: get_ui_path,
+          path_to_field: formatted_ui_path,
           field: label,
           field_machine_name: @name,
           qualified_field_machine_name: "#{@ns}.#{@name}",
@@ -210,12 +201,6 @@ module CspaceConfigUntangler
       def format_csv(source)
         source.values
           .map { |val| val.nil? ? "" : val }
-      end
-
-      def get_ui_path
-        return if ui_path.empty?
-
-        ui_path[1..].join(" > ")
       end
 
       def merge_field_defs(formfield)

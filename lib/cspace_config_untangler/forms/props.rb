@@ -42,12 +42,13 @@ module CspaceConfigUntangler
         @panel = get_panel
         @ns = get_ns
         @ns_for_id = get_ns_for_id
-        @ui_path = populate_ui_path
+        @ui_path = parent&.ui_path&.clone || []
         @repeats = get_repeats
         @in_repeating_group = get_in_repeating_group
         @warnings = []
         @errors = []
         @validated = false
+        add_to_ui_path
       end
 
       def add_warning(warning) = @warnings << warning
@@ -173,15 +174,55 @@ module CspaceConfigUntangler
       end
 
       def get_panel
-        if is_panel
-          return rectype.messages.find do |m|
-            m.element_type == :panel && m.element_name == name
-          end
+        return parent.panel if is_panel && parent&.panel
+        return panel_message if is_panel
+
+        parent&.panel
+      end
+
+      def panel_message
+        rectype.messages.find do |m|
+          m.element_type == :panel && m.element_name == name
+        end
+      end
+
+      def add_to_ui_path
+        return if skippable?
+        return if NON_PATH_NAMES.include?(name) ||
+          bad_work_date? ||
+          field_array_subpath?
+        return unless children?
+
+        segment = ui_segment
+        ui_path << segment if segment
+      end
+
+      def ui_segment
+        if input_table?
+          return rectype.messages.by_element_name(:inputTable, name)
         end
 
-        return parent.panel if parent
+        if is_panel
+          return nil if panel&.element_name == name
+          return panel_message
+        end
 
-        nil
+        if children? && !name.empty?
+          return ui_segment_for_named_childhaving_props
+        end
+
+        CCU.log.warn("Unknown ui path segment type: #{path}: "\
+                     "#{profile.name} - #{rectype.name} - #{ns} - "\
+                     "#{name} - #{config}")
+      end
+
+      def ui_segment_for_named_childhaving_props
+        id = "field.#{ns&.sub("ns2:", "")}.#{name}.name"
+        msgs = rectype.messages.by_base_id(id)
+        return id if msgs.empty?
+
+        msgs.find { |m| m.message_type == :fullName } ||
+          msgs.find { |m| m.message_type == :name }
       end
 
       def get_ns
@@ -262,52 +303,6 @@ module CspaceConfigUntangler
         return true if ucb_children_labelmessage_name_subpath?(self)
 
         false
-      end
-
-      def populate_ui_path
-        return [] if skippable?
-
-        path = initial_ui_path
-        return path if NON_PATH_NAMES.include?(name) ||
-          bad_work_date? ||
-          field_array_subpath?
-
-        append_to_ui_path(path)
-        path
-      end
-
-      def initial_ui_path
-        return parent.ui_path.clone if parent
-
-        []
-      end
-
-      def append_to_ui_path(path)
-        return unless children?
-
-        segment = if input_table?
-          rectype.messages.by_element_name(:inputTable, name)
-        elsif is_panel
-          nil
-        elsif children? && !name.empty?
-          get_ui_segment_for_named_childhaving_props
-        else
-          CCU.log.warn("Unknown ui path segment type: #{path}: "\
-                       "#{profile.name} - #{rectype.name} - #{ns} - "\
-                       "#{name} - #{config}")
-          nil
-        end
-
-        path << segment if segment
-      end
-
-      def get_ui_segment_for_named_childhaving_props
-        id = "field.#{ns&.sub("ns2:", "")}.#{name}.name"
-        msgs = rectype.messages.by_base_id(id)
-        return id if msgs.empty?
-
-        msgs.find { |m| m.message_type == :fullName } ||
-          msgs.find { |m| m.message_type == :name }
       end
 
       def field_array_subpath?
