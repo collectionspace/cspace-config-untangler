@@ -25,7 +25,7 @@ RSpec.describe CCU::ProfileComparison do
 
   let(:expected_path) do
     File.join(fixtures, "files", "7_2",
-      "compare_anthro_7-0-0_to_ohc_1-0-18_7-2.csv")
+      "exp_compare_anthro_7-0-0_to_ohc_1-0-18_7-2.csv")
   end
   let(:profiles) { ["anthro_7-0-0", "ohc_1-0-18_7-2"] }
   let(:outputdir) { fixtures }
@@ -33,7 +33,9 @@ RSpec.describe CCU::ProfileComparison do
     File.join(fixtures, "compare_anthro_7-0-0_to_ohc_1-0-18_7-2.csv")
   end
 
-  it "generates expected csvdata", skip: "skip until form extraction fixed" do
+  it "generates expected csvdata",
+    skip: "behavior got too out of sync; keep as reference for "\
+    "full csv comparison" do
     compare.new(profiles, outputdir).write_csv
     expect(result_path).to match_csv(expected_path)
   end
