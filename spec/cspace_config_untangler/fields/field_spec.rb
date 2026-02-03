@@ -51,4 +51,23 @@ RSpec.describe CCU::Fields::Field do
       )
     end
   end
+
+  context "with core acquisition groupPurchasePriceValue" do
+    let(:release) { "8_2" }
+    let(:profilename) { "core" }
+    let(:rectypes) { ["acquisition"] }
+    let(:fieldname) { "groupPurchasePriceValue" }
+
+    it "has correct ui_info_group/panel label" do
+      expect(field.send(:expert_csv_row)[:ui_info_group]).to eq(
+        "Acquisition Information"
+      )
+      expect(field.send(:expert_csv_row)[:ui_path]).to eq(
+        "Price Information > Group purchase price"
+      )
+      expect(field.send(:expert_csv_row)[:ui_field_label]).to eq(
+        "Group purchase price value"
+      )
+    end
+  end
 end

@@ -362,6 +362,15 @@ RSpec.describe CCU::Forms::Props do
         expect(result.orig_id).to eq("panel.contact.info")
       end
     end
+
+    context "when a not-first-level panel" do
+      let(:rectypes) { ["acquisition"] }
+      let(:name) { "priceInformation" }
+
+      it "returns parent's panel id" do
+        expect(result.orig_id).to eq("panel.acquisition.info")
+      end
+    end
   end
 
   describe "#is_panel" do
@@ -381,7 +390,7 @@ RSpec.describe CCU::Forms::Props do
     context "when a not-first-level panel" do
       let(:name) { "priceInformation" }
 
-      it "returns falsey" do
+      it "returns true" do
         expect(result).to be true
       end
     end
@@ -427,6 +436,15 @@ RSpec.describe CCU::Forms::Props do
         expect(result).to eq(
           "field.works_common.workDateGroupList.name"
         )
+      end
+    end
+
+    context "when a not-first-level panel" do
+      let(:rectypes) { ["acquisition"] }
+      let(:name) { "priceInformation" }
+
+      it "result starts with 2nd level panel" do
+        expect(result).to start_with("panel.acquisition.priceInformation")
       end
     end
   end

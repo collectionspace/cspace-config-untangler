@@ -64,16 +64,9 @@ module CspaceConfigUntangler
 
       attr_reader :form
 
-      def panel_label
-        segment = ui_path.find { |seg| seg.element_type == :panel }
-        segment ? segment.message : ""
-      end
+      def panel_label = panel&.message || ""
 
-      def ui_path_labels
-        ui_path.reject { |seg| seg.element_type == :panel }
-          .map(&:message)
-          .join(" > ")
-      end
+      def ui_path_labels = ui_path.map(&:message).join(" > ")
 
       def format_csv
         arr = [@profile, @rectype]
