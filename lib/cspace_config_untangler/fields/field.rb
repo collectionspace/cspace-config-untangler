@@ -146,7 +146,7 @@ module CspaceConfigUntangler
           namespace: @ns,
           namespace_for_id: @ns_for_id,
           field_id: @id,
-          ui_info_group: get_ui_info_group,
+          ui_info_group: panel&.message,
           ui_path: get_ui_path,
           ui_field_label: label,
           xml_path: nil,
@@ -170,7 +170,7 @@ module CspaceConfigUntangler
           profile: @profile.name,
           record_type: @rectype.label,
           record_type_machine_name: @rectype.name,
-          record_section: get_ui_info_group,
+          record_section: panel&.message,
           path_to_field: get_ui_path,
           field: label,
           field_machine_name: @name,
@@ -202,12 +202,6 @@ module CspaceConfigUntangler
       def format_csv(source)
         source.values
           .map { |val| val.nil? ? "" : val }
-      end
-
-      def get_ui_info_group
-        return if ui_path.empty?
-
-        ui_path[0]
       end
 
       def get_ui_path

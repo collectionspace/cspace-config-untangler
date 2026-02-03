@@ -326,7 +326,7 @@ RSpec.describe CCU::Forms::Props do
       let(:name) { "prod" }
 
       it "returns panel id" do
-        expect(result).to eq("panel.collectionobject.prod")
+        expect(result.orig_id).to eq("panel.collectionobject.prod")
       end
     end
 
@@ -334,7 +334,32 @@ RSpec.describe CCU::Forms::Props do
       let(:name) { "objectProductionDateGroupList" }
 
       it "returns parent's panel id" do
-        expect(result).to eq("panel.collectionobject.prod")
+        expect(result.orig_id).to eq("panel.collectionobject.prod")
+      end
+    end
+
+    context "when nagpraCompliance panel" do
+      let(:name) { "nagpraCompliance" }
+
+      it "returns panel message" do
+        expect(result.orig_id).to eq("panel.ext.nagpra.nagpraCompliance")
+      end
+    end
+
+    context "when nagpraCategory" do
+      let(:name) { "nagpraCategory" }
+
+      it "returns parent's panel id" do
+        expect(result.orig_id).to eq("panel.ext.nagpra.nagpraCompliance")
+      end
+    end
+
+    context "when email" do
+      let(:rectypes) { ["organization"] }
+      let(:name) { "email" }
+
+      it "returns parent's panel id" do
+        expect(result.orig_id).to eq("panel.contact.info")
       end
     end
   end
@@ -378,8 +403,7 @@ RSpec.describe CCU::Forms::Props do
 
       it "returns path" do
         expect(result).to eq(
-          "panel.collectionobject.id / "\
-            "field.collectionobjects_common.objectCountGroupList.name / "\
+          "field.collectionobjects_common.objectCountGroupList.name / "\
             "field.collectionobjects_common.objectCountGroup.name"
         )
       end
@@ -390,7 +414,7 @@ RSpec.describe CCU::Forms::Props do
       let(:name) { "objectCount" }
 
       it "returns path" do
-        expect(result).to eq("panel.collectionobject.id")
+        expect(result).to eq("")
       end
     end
 
@@ -400,8 +424,9 @@ RSpec.describe CCU::Forms::Props do
       let(:name) { "workDateGroup" }
 
       it "returns path" do
-        expect(result).to eq("panel.work.info / "\
-                             "field.works_common.workDateGroupList.name")
+        expect(result).to eq(
+          "field.works_common.workDateGroupList.name"
+        )
       end
     end
   end

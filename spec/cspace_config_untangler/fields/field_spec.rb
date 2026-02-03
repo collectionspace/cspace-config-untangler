@@ -38,4 +38,17 @@ RSpec.describe CCU::Fields::Field do
       ).to eq("Sample returned")
     end
   end
+
+  context "with anthro collectionobject nagpraCategory" do
+    let(:release) { "7_2" }
+    let(:profilename) { "anthro" }
+    let(:rectypes) { ["collectionobject"] }
+    let(:fieldname) { "nagpraCategory" }
+
+    it "has correct ui_info_group/panel label" do
+      expect(field.send(:expert_csv_row)[:ui_info_group]).to eq(
+        "Repatriation and NAGPRA Compliance Information"
+      )
+    end
+  end
 end
