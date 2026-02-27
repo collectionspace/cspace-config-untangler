@@ -29,7 +29,7 @@ _Note: there may be field_defs in a profile which do not match any form_fields. 
 
 == Setup
 
-* Tested with Ruby 3.2 and 3.3. Use of earlier Ruby versions is not recommended
+* Tested with Ruby 3.4. Use of earlier Ruby versions is not recommended
 * REQUIRED IF USING AS INTERNAL LYRASIS STAFF: Github CLI must be installed and your user authorized in that tool
 * Do `bundle --version`
 ** If the version of Bundler is lower than 2.2.29, do `gem update bundler`

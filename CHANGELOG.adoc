@@ -42,6 +42,12 @@ These changes are merged into the `main` branch, but have not been released. Aft
 
 === Deprecated/Will break in a future version
 
+=== Dev
+
+* Use Ruby 3.4.1
+* Conditionally load CHIA-related gems for lyrasis staff only
+* Use CHIA for credentials
+
 == Releases
 
 === 3.1.2 - 2025-02-17
