@@ -259,15 +259,6 @@ module CspaceConfigUntangler
     "#{profile_basename}: #{err.message}"
   end
 
-  setting :ssm_client,
-    default: nil,
-    reader: true,
-    constructor: ->(default) do
-      return if !lyrasis_staff || disable_api_checks
-
-      CHIA.ssm_client
-    end
-
   def safe_copy(hash)
     Marshal.load(Marshal.dump(hash))
   end

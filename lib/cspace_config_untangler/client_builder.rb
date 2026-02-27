@@ -12,7 +12,7 @@ module CspaceConfigUntangler
     #   off
     def initialize(profile_basename)
       @name = profile_basename
-      @ssm = community_supported? ? nil : CCU.ssm_client
+      @ssm = community_supported? ? nil : CHIA
       @config = CCU.client_connection_config&.dig(name)
     end
 
@@ -94,12 +94,14 @@ module CspaceConfigUntangler
     def get_ssm_params
       return unless ssm
 
-      tenant = CHIA.tenant_for(name)
-      pw = tenant.admin_password
+      site = CHIA.site_for(name)
+      return unless site
+
+      pw = site.admin_password
       return unless pw
 
-      @ssm_params = {base_uri: tenant.services_url,
-                     username: tenant.user_name,
+      @ssm_params = {base_uri: site.services_url,
+                     username: site.user_name,
                      password: pw}
     end
   end
