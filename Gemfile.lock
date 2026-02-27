@@ -168,7 +168,7 @@ GEM
     rubyzip (3.2.2)
     selenium-devtools (0.143.0)
       selenium-webdriver (~> 4.2)
-    selenium-webdriver (4.40.0)
+    selenium-webdriver (4.41.0)
       base64 (~> 0.2)
       logger (~> 1.4)
       rexml (~> 3.2, >= 3.2.5)
@@ -193,7 +193,7 @@ GEM
       unicode-emoji (~> 4.1)
     unicode-emoji (4.2.0)
     websocket (1.2.11)
-    zeitwerk (2.7.4)
+    zeitwerk (2.7.5)
 
 PLATFORMS
   arm64-darwin-25
