@@ -12,6 +12,7 @@ module CspaceConfigUntangler
       include Messageable
       include MessageOverrideable
       include Ucbable
+
       attr_reader :rectype, :profile, :name, :config
 
       # @param rectypeobj [CCU:RecordType]

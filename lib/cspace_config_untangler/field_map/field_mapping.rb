@@ -18,6 +18,7 @@ module CspaceConfigUntangler
     class FieldMapping
       ::FieldMapping = CspaceConfigUntangler::FieldMap::FieldMapping
       include CCU::TrackAttributes
+
       attr_reader :fieldname, :transforms, :source_type, :source_name,
         :namespace, :xpath, :data_type,
         :repeats, :in_repeating_group, :opt_list_values

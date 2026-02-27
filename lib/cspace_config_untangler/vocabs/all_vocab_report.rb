@@ -52,7 +52,7 @@ module CspaceConfigUntangler
       private def run_stdout
         result.group_by(&:profile)
           .each do |profile, vocabs|
-          profile_stdout(profile, vocabs)
+            profile_stdout(profile, vocabs)
         end
       end
 

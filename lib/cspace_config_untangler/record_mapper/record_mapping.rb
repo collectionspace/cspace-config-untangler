@@ -5,6 +5,7 @@ module CspaceConfigUntangler
     class RecordMapping
       ::RecordMapping = CspaceConfigUntangler::RecordMapper::RecordMapping
       include JsonWritable
+
       attr_reader :hash, :mappings
 
       # profile = CCU::Profile

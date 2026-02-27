@@ -49,7 +49,7 @@ module CspaceConfigUntangler
 
           if ns.start_with?("ns2:contacts_")
             config.update_field_hash(subrecord_config_hash("contact"))
-          elsif ns == ("ns2:blobs_common")
+          elsif ns == "ns2:blobs_common"
             config.update_field_hash(subrecord_config_hash("blob"))
           end
         end

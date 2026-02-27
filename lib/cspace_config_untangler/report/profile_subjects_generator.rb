@@ -4,6 +4,7 @@ module CspaceConfigUntangler
   module Report
     class ProfileSubjectsGenerator
       include ByProfileable
+
       class << self
         def call(...)
           new(...).call

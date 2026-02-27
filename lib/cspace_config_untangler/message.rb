@@ -8,6 +8,7 @@ module CspaceConfigUntangler
     attr_reader :id, :message
 
     extend Forwardable
+
     def_delegators :@id, :orig_id, :base_id, :message_type, :element_name
 
     include Comparable

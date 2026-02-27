@@ -31,9 +31,9 @@ module CspaceConfigUntangler
         Dir.new(CCU.oo_config_dir).children
           .reject { |child| child == ".keep" }
           .each do |tenant|
-          CCU::OptlistOverride::Writer.call(
-            File.join(CCU.oo_config_dir, tenant)
-          )
+            CCU::OptlistOverride::Writer.call(
+              File.join(CCU.oo_config_dir, tenant)
+            )
         end
       end
     end
