@@ -53,8 +53,8 @@ module CspaceConfigUntangler
         @config.dig("recordTypes", @rectype, "fields", "document").keys
           .select { |k| k.start_with?("ns2") }
           .reject do |k|
-          k == "ns2:collectionspace_core" ||
-            k == "ns2:account_permission"
+            k == "ns2:collectionspace_core" ||
+              k == "ns2:account_permission"
         end
           .each { |ns| hash[ns.sub("ns2:", "")] = uri(ns) }
         hash

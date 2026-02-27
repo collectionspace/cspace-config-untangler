@@ -4,6 +4,7 @@ module CspaceConfigUntangler
   module Report
     class ProfileAuthorityUse
       include ByProfileable
+
       class << self
         def call(...)
           new(...).call

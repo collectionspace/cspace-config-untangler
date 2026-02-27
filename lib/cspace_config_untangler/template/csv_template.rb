@@ -19,7 +19,7 @@ module CspaceConfigUntangler
                         mapping[:data_type] == "csrefname"
                       end
             .reject do |mapping|
-            mapping.key?(:to_template) && mapping[:to_template] == false
+              mapping.key?(:to_template) && mapping[:to_template] == false
           end
         elsif @type == "refname"
           @mappings = @mappings.reject do |mapping|

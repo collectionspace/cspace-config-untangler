@@ -99,8 +99,8 @@ module CspaceConfigUntangler
 
         fields = configprofile.fields
           .select do |field|
-          field.vocabulary_controlled? &&
-            field.controlled_by?(short_identifier)
+            field.vocabulary_controlled? &&
+              field.controlled_by?(short_identifier)
         end
         return :not_used if fields.empty?
 

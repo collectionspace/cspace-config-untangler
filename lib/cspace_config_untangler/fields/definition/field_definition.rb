@@ -10,6 +10,7 @@ module CspaceConfigUntangler
     module Definition
       class FieldDefinition < FieldConfigChild
         include CCU::TrackAttributes
+
         attr_reader :name, :ns, :ns_for_id, :id,
           :schema_path,
           :repeats, :in_repeating_group,
@@ -76,11 +77,12 @@ module CspaceConfigUntangler
           omit = %i[@config @profile @hash @parent @datahash @name @ns_for_id]
           attributes = instance_variables.unshift([])
             .inject do |info, attribute|
-            if omit.include?(attribute)
-              info
-            else
-              info << "#{attribute}=#{instance_variable_get(attribute).inspect}"
-            end
+              if omit.include?(attribute)
+                info
+              else
+                info <<
+                  "#{attribute}=#{instance_variable_get(attribute).inspect}"
+              end
           end
 
           %(#<#{self.class}:#{object_id} #{attributes.join(", ")}>)

@@ -7,6 +7,7 @@ module CspaceConfigUntangler
   class NonHierarchicalRelationship
     include CCU::JsonWritable
     include CCU::SpecialRectype
+
     def initialize(profile:)
       @profile = profile
     end

@@ -7,6 +7,7 @@ module CspaceConfigUntangler
   class AuthorityHierarchy
     include JsonWritable
     include SpecialRectype
+
     def initialize(profile:)
       @profile = profile
     end
