@@ -1,0 +1,228 @@
+profile,authority,authority_vocab,used_in_profile,controlled_field_ct,controlled_fields
+herbarium_3-0-0,citation,citation/local,y,12,"Citation: Term source name (#<CspaceConfigUntangler::Message:0x00000001465c1740>)
+Concept: Term source name (#<CspaceConfigUntangler::Message:0x0000000129ac85d0>)
+Exhibition: Bibliographic reference
+Object: Reference
+Organization: Term source name (#<CspaceConfigUntangler::Message:0x0000000148707bc0>)
+Person: Term source name (#<CspaceConfigUntangler::Message:0x0000000147869c08>)
+Place: Term source name (#<CspaceConfigUntangler::Message:0x00000001423836d0>)
+Storage Location: Term source name (#<CspaceConfigUntangler::Message:0x000000014d729978>)
+Taxon: Citation
+Taxon: Common name source
+Taxon: Term source name (#<CspaceConfigUntangler::Message:0x000000012b218528>)
+Work: Term source name (#<CspaceConfigUntangler::Message:0x00000001342b1918>)"
+herbarium_3-0-0,citation,citation/worldcat,y,11,"Citation: Term source name (#<CspaceConfigUntangler::Message:0x00000001465c1740>)
+Concept: Term source name (#<CspaceConfigUntangler::Message:0x0000000129ac85d0>)
+Exhibition: Bibliographic reference
+Object: Reference
+Organization: Term source name (#<CspaceConfigUntangler::Message:0x0000000148707bc0>)
+Person: Term source name (#<CspaceConfigUntangler::Message:0x0000000147869c08>)
+Place: Term source name (#<CspaceConfigUntangler::Message:0x00000001423836d0>)
+Storage Location: Term source name (#<CspaceConfigUntangler::Message:0x000000014d729978>)
+Taxon: Citation
+Taxon: Term source name (#<CspaceConfigUntangler::Message:0x000000012b218528>)
+Work: Term source name (#<CspaceConfigUntangler::Message:0x00000001342b1918>)"
+herbarium_3-0-0,concept,concept/activity,y,1,Citation: Related term
+herbarium_3-0-0,concept,concept/archculture,n,0,""
+herbarium_3-0-0,concept,concept/associated,y,3,"Citation: Related term
+Object: Associated concept (#<CspaceConfigUntangler::Message:0x000000014884a5f0>)
+Object: Content concept (#<CspaceConfigUntangler::Message:0x000000014884ae10>)"
+herbarium_3-0-0,concept,concept/ethculture,y,1,Intake: Field collection source
+herbarium_3-0-0,concept,concept/labeltext,y,2,"Object: Label footer
+Object: Label header"
+herbarium_3-0-0,concept,concept/material,y,2,"Citation: Related term
+Object: Content concept (#<CspaceConfigUntangler::Message:0x000000014884ae10>)"
+herbarium_3-0-0,concept,concept/nomenclature,n,0,""
+herbarium_3-0-0,concept,concept/occasion,y,1,Use of Collections: Occasion
+herbarium_3-0-0,location,location/local,y,6,"Exhibition: Venue name
+Intake: Current location
+Intake: Normal location
+Location/Movement/Inventory: Current location (#<CspaceConfigUntangler::Message:0x000000014c5e2f48>)
+Location/Movement/Inventory: Normal location
+Use of Collections: Location"
+herbarium_3-0-0,location,location/offsite,y,5,"Exhibition: Venue name
+Intake: Current location
+Intake: Normal location
+Location/Movement/Inventory: Current location (#<CspaceConfigUntangler::Message:0x000000014c5e2f48>)
+Location/Movement/Inventory: Normal location"
+herbarium_3-0-0,organization,organization/local,y,55,"Citation: Agent name
+Citation: Publisher
+Condition Check: Checker/assessor
+Exhibition: Organizer
+Exhibition: Sponsor
+Exhibition: Venue name
+Exhibition: Working group member name
+Insurance/Indemnity: Insurer/indemnifier
+Insurance/Indemnity: Quote provider
+Intake: Condition check assessor
+Intake: Current location
+Intake: Current owner
+Intake: Depositor name
+Intake: Field collector
+Intake: Insurer
+Intake: Normal location
+Intake: Valuer
+Loan In: Item transferred out institution
+Loan In: Lender name
+Loan In: Transfer in from (#<CspaceConfigUntangler::Message:0x000000014efced98>)
+Loan Out: Borrower name (#<CspaceConfigUntangler::Message:0x000000014e5a7d10>)
+Loan Out: Transfer to institution
+Location/Movement/Inventory: Current location (#<CspaceConfigUntangler::Message:0x000000014c5e2f48>)
+Location/Movement/Inventory: Normal location
+Media Handling: Contributor
+Media Handling: Creator
+Media Handling: Measured by
+Media Handling: Publisher
+Media Handling: Rights holder
+Object: Associated event organization (#<CspaceConfigUntangler::Message:0x000000014884a5f0>)
+Object: Associated organization (#<CspaceConfigUntangler::Message:0x000000014884a5f0>)
+Object: Content organization (#<CspaceConfigUntangler::Message:0x000000014884ae10>)
+Object: Field collector
+Object: Measured by
+Object: Owner
+Object: Production organization
+Object: Taxonomic identification institution (#<CspaceConfigUntangler::Message:0x000000014884b4f0>)
+Object: Type specimen asserted by
+Place: Georeferenced by
+Place: Owner
+Taxon: Author name
+Transport: Arrival point (#<CspaceConfigUntangler::Message:0x000000013d2493f0>)
+Transport: Courier name
+Transport: Customs broker name (#<CspaceConfigUntangler::Message:0x000000013d249120>)
+Transport: Departure point (#<CspaceConfigUntangler::Message:0x000000013d2494e0>)
+Transport: Shipping quote provider
+Transport: Transporter name (#<CspaceConfigUntangler::Message:0x000000013d249710>)
+Use of Collections: Authorized by
+Use of Collections: Location
+Use of Collections: Staff name
+Use of Collections: User institution
+Use of Collections: User name
+Valuation Control: Source
+Work: Creator name
+Work: Publisher name"
+herbarium_3-0-0,organization,organization/ulan,y,7,"Exhibition: Organizer
+Exhibition: Sponsor
+Exhibition: Venue name
+Exhibition: Working group member name
+Insurance/Indemnity: Insurer/indemnifier
+Insurance/Indemnity: Quote provider
+Object: Content organization (#<CspaceConfigUntangler::Message:0x000000014884ae10>)"
+herbarium_3-0-0,person,person/local,y,68,"Citation: Agent name
+Condition Check: Checker/assessor
+Exhibition: Organizer
+Exhibition: Sponsor
+Exhibition: Working group member name
+Group: Group owner
+Insurance/Indemnity: Authorizer (#<CspaceConfigUntangler::Message:0x000000012774fbf8>)
+Insurance/Indemnity: Insurer/indemnifier
+Insurance/Indemnity: Quote provider
+Intake: Approval individual (#<CspaceConfigUntangler::Message:0x00000001473aeab0>)
+Intake: Condition check assessor
+Intake: Current owner
+Intake: Depositor name
+Intake: Field collection source
+Intake: Field collector
+Intake: Insurer
+Intake: Valuer
+Loan In: Borrower authorizer (#<CspaceConfigUntangler::Message:0x000000014efcee88>)
+Loan In: Borrower contact (#<CspaceConfigUntangler::Message:0x000000014efcee88>)
+Loan In: Item transferred out for study by
+Loan In: Item transferred out under direction of
+Loan In: Lender authorizer
+Loan In: Lender contact
+Loan In: Lender name
+Loan In: Loan status individual
+Loan In: Transfer in previous borrower (#<CspaceConfigUntangler::Message:0x000000014efced98>)
+Loan Out: Borrower authorizer (#<CspaceConfigUntangler::Message:0x000000014e5a7d10>)
+Loan Out: Borrower contact (#<CspaceConfigUntangler::Message:0x000000014e5a7d10>)
+Loan Out: Borrower name (#<CspaceConfigUntangler::Message:0x000000014e5a7d10>)
+Loan Out: Lender authorizer (#<CspaceConfigUntangler::Message:0x000000014e5a7bd0>)
+Loan Out: Lender contact (#<CspaceConfigUntangler::Message:0x000000014e5a7bd0>)
+Loan Out: Loan status individual
+Loan Out: Transfer to person
+Loan Out: Transfer under direction of
+Location/Movement/Inventory: Inventory contact
+Location/Movement/Inventory: Movement contact
+Media Handling: Contributor
+Media Handling: Creator
+Media Handling: Measured by
+Media Handling: Publisher
+Media Handling: Rights holder
+Object: Annotation author
+Object: Associated event person (#<CspaceConfigUntangler::Message:0x000000014884a5f0>)
+Object: Associated person (#<CspaceConfigUntangler::Message:0x000000014884a5f0>)
+Object: Content person (#<CspaceConfigUntangler::Message:0x000000014884ae10>)
+Object: Field collector
+Object: Measured by
+Object: Owner
+Object: Production person
+Object: Taxonomic identification by (#<CspaceConfigUntangler::Message:0x000000014884b4f0>)
+Organization: Contact name
+Person: Other information author
+Place: Georeferenced by
+Place: Owner
+Taxon: Author name
+Transport: Courier name
+Transport: Customs broker contact (#<CspaceConfigUntangler::Message:0x000000013d249120>)
+Transport: Customs broker name (#<CspaceConfigUntangler::Message:0x000000013d249120>)
+Transport: Shipping quote provider
+Transport: Transport authorizer (#<CspaceConfigUntangler::Message:0x000000013d249620>)
+Transport: Transporter contact (#<CspaceConfigUntangler::Message:0x000000013d249710>)
+Transport: Transporter name (#<CspaceConfigUntangler::Message:0x000000013d249710>)
+Use of Collections: Authorized by
+Use of Collections: Staff name
+Use of Collections: User name
+Valuation Control: Source
+Work: Creator name
+Work: Publisher name"
+herbarium_3-0-0,person,person/ulan,y,8,"Citation: Agent name
+Exhibition: Organizer
+Exhibition: Sponsor
+Exhibition: Working group member name
+Insurance/Indemnity: Authorizer (#<CspaceConfigUntangler::Message:0x000000012774fbf8>)
+Insurance/Indemnity: Insurer/indemnifier
+Insurance/Indemnity: Quote provider
+Object: Content person (#<CspaceConfigUntangler::Message:0x000000014884ae10>)"
+herbarium_3-0-0,place,place/local,y,15,"Citation: Publication place
+Exhibition: Venue name
+Intake: Current location
+Intake: Normal location
+Object: Field collection place
+Person: Birth place supplied
+Place: Address country
+Place: Address municipality
+Place: Address state/province
+Transport: Arrival point (#<CspaceConfigUntangler::Message:0x000000013d2493f0>)
+Transport: Departure point (#<CspaceConfigUntangler::Message:0x000000013d2494e0>)
+Use of Collections: Location
+Work: Address country
+Work: Address municipality
+Work: Address state/province"
+herbarium_3-0-0,place,place/tgn,y,8,"Citation: Publication place
+Exhibition: Venue name
+Place: Address country
+Place: Address municipality
+Place: Address state/province
+Work: Address country
+Work: Address municipality
+Work: Address state/province"
+herbarium_3-0-0,taxon,taxon/common,y,8,"Loan In: Taxonomy
+Loan Out: Taxonomy
+Object: Associated taxon name
+Object: Hybrid parent name
+Object: Type specimen verified basionym
+Taxon: Basionym
+Taxon: Family
+Taxon: Related term name"
+herbarium_3-0-0,taxon,taxon/local,y,10,"Loan In: Taxonomy
+Loan Out: Item returned new determination
+Loan Out: Taxonomy
+Object: Associated taxon name
+Object: Hybrid parent name
+Object: Taxonomic identification scientific name (#<CspaceConfigUntangler::Message:0x000000014884b680>)
+Object: Type specimen verified basionym
+Taxon: Basionym
+Taxon: Family
+Taxon: Related term name"
+herbarium_3-0-0,work,work/cona,n,0,""
+herbarium_3-0-0,work,work/local,y,1,Object: Named collection
