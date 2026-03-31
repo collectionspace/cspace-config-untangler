@@ -1,19 +1,19 @@
 profile,authority,authority_vocab,used_in_profile,controlled_field_ct,controlled_fields
-core_10-1-0,chronology,chronology/era,y,9,"Chronology: Associated event/era
+core_10-2-0,chronology,chronology/era,y,9,"Chronology: Associated event/era
 NAGPRA Inventory: Time period era
-Object: Associated controlled event or period/era
-Object: Content controlled event or period/era
+Object: Associated controlled event or period/era (#<CspaceConfigUntangler::Message:0x000000013d580ff0>)
+Object: Content controlled event or period/era (#<CspaceConfigUntangler::Message:0x000000013d582d50>)
 Object: Production era
 Person: Associated event/era
 Place: Associated event/era
 Repatriation Request: Time period era
 Summary Documentation: Time period era"
-core_10-1-0,chronology,chronology/event,y,5,"Chronology: Associated event/era
-Object: Associated controlled event or period/era
-Object: Content controlled event or period/era
+core_10-2-0,chronology,chronology/event,y,5,"Chronology: Associated event/era
+Object: Associated controlled event or period/era (#<CspaceConfigUntangler::Message:0x000000013d580ff0>)
+Object: Content controlled event or period/era (#<CspaceConfigUntangler::Message:0x000000013d582d50>)
 Person: Associated event/era
 Place: Associated event/era"
-core_10-1-0,citation,citation/local,y,30,"Chronology: Alternative date citation
+core_10-2-0,citation,citation/local,y,30,"Chronology: Alternative date citation
 Chronology: Associated concept citation
 Chronology: Associated event/era citation
 Chronology: Associated organization citation
@@ -21,29 +21,29 @@ Chronology: Associated people citation
 Chronology: Associated person citation
 Chronology: Associated place citation
 Chronology: Resource identifier citation
-Chronology: Term source name (Source)
-Citation: Term source name (Source)
-Concept: Term source name (Source)
+Chronology: Term source name (#<CspaceConfigUntangler::Message:0x000000013b30c230>)
+Citation: Term source name (#<CspaceConfigUntangler::Message:0x000000013a8e5248>)
+Concept: Term source name (#<CspaceConfigUntangler::Message:0x0000000128468df8>)
 Exhibition: Bibliographic reference
 Object: Reference
-Organization: Term source name (Source)
+Organization: Term source name (#<CspaceConfigUntangler::Message:0x000000013c8877b8>)
 Person: Associated concept citation
 Person: Associated event/era citation
 Person: Associated organization citation
 Person: Associated people citation
 Person: Associated person citation
 Person: Associated place citation
-Person: Term source name (Source)
+Person: Term source name (#<CspaceConfigUntangler::Message:0x000000013bb6adc8>)
 Place: Associated concept citation
 Place: Associated event/era citation
 Place: Associated organization citation
 Place: Associated people citation
 Place: Associated person citation
 Place: Associated place citation
-Place: Term source name (Source)
-Storage Location: Term source name (Source)
-Work: Term source name (Source)"
-core_10-1-0,citation,citation/worldcat,y,30,"Chronology: Alternative date citation
+Place: Term source name (#<CspaceConfigUntangler::Message:0x000000012a200b40>)
+Storage Location: Term source name (#<CspaceConfigUntangler::Message:0x000000013818dcb8>)
+Work: Term source name (#<CspaceConfigUntangler::Message:0x000000014ec6ad78>)"
+core_10-2-0,citation,citation/worldcat,y,30,"Chronology: Alternative date citation
 Chronology: Associated concept citation
 Chronology: Associated event/era citation
 Chronology: Associated organization citation
@@ -51,78 +51,79 @@ Chronology: Associated people citation
 Chronology: Associated person citation
 Chronology: Associated place citation
 Chronology: Resource identifier citation
-Chronology: Term source name (Source)
-Citation: Term source name (Source)
-Concept: Term source name (Source)
+Chronology: Term source name (#<CspaceConfigUntangler::Message:0x000000013b30c230>)
+Citation: Term source name (#<CspaceConfigUntangler::Message:0x000000013a8e5248>)
+Concept: Term source name (#<CspaceConfigUntangler::Message:0x0000000128468df8>)
 Exhibition: Bibliographic reference
 Object: Reference
-Organization: Term source name (Source)
+Organization: Term source name (#<CspaceConfigUntangler::Message:0x000000013c8877b8>)
 Person: Associated concept citation
 Person: Associated event/era citation
 Person: Associated organization citation
 Person: Associated people citation
 Person: Associated person citation
 Person: Associated place citation
-Person: Term source name (Source)
+Person: Term source name (#<CspaceConfigUntangler::Message:0x000000013bb6adc8>)
 Place: Associated concept citation
 Place: Associated event/era citation
 Place: Associated organization citation
 Place: Associated people citation
 Place: Associated person citation
 Place: Associated place citation
-Place: Term source name (Source)
-Storage Location: Term source name (Source)
-Work: Term source name (Source)"
-core_10-1-0,concept,concept/activity,y,4,"Chronology: Associated concept
+Place: Term source name (#<CspaceConfigUntangler::Message:0x000000012a200b40>)
+Storage Location: Term source name (#<CspaceConfigUntangler::Message:0x000000013818dcb8>)
+Work: Term source name (#<CspaceConfigUntangler::Message:0x000000014ec6ad78>)"
+core_10-2-0,concept,concept/activity,y,4,"Chronology: Associated concept
 Citation: Related term
 Person: Associated concept
 Place: Associated concept"
-core_10-1-0,concept,concept/archculture,y,3,"NAGPRA Inventory: Cultural group name
+core_10-2-0,concept,concept/archculture,y,3,"NAGPRA Inventory: Cultural group name
 Repatriation Request: Cultural group name
 Summary Documentation: Cultural group name"
-core_10-1-0,concept,concept/associated,y,9,"Chronology: Associated concept
+core_10-2-0,concept,concept/associated,y,9,"Chronology: Associated concept
 Chronology: Associated people
 Citation: Related term
-Object: Associated concept
-Object: Content concept
+Object: Associated concept (#<CspaceConfigUntangler::Message:0x000000013d580ff0>)
+Object: Content concept (#<CspaceConfigUntangler::Message:0x000000013d582d50>)
 Person: Associated concept
 Person: Associated people
 Place: Associated concept
 Place: Associated people"
-core_10-1-0,concept,concept/ethculture,y,4,"Intake: Field collection source
+core_10-2-0,concept,concept/ethculture,y,4,"Intake: Field collection source
 NAGPRA Inventory: Cultural group name
 Repatriation Request: Cultural group name
 Summary Documentation: Cultural group name"
-core_10-1-0,concept,concept/material,y,6,"Chronology: Associated concept
+core_10-2-0,concept,concept/material,y,6,"Chronology: Associated concept
 Citation: Related term
-Object: Content concept
+Object: Content concept (#<CspaceConfigUntangler::Message:0x000000013d582d50>)
 Object: Material controlled
 Person: Associated concept
 Place: Associated concept"
-core_10-1-0,concept,concept/nomenclature,y,4,"Chronology: Associated concept
+core_10-2-0,concept,concept/nomenclature,y,4,"Chronology: Associated concept
 Object: Object name controlled
 Person: Associated concept
 Place: Associated concept"
-core_10-1-0,concept,concept/occasion,y,4,"Chronology: Associated concept
+core_10-2-0,concept,concept/occasion,y,4,"Chronology: Associated concept
 Person: Associated concept
 Place: Associated concept
 Use of Collections: Occasion"
-core_10-1-0,location,location/local,y,7,"Exhibition: Venue name
+core_10-2-0,location,location/local,y,7,"Exhibition: Venue name
 Intake: Current location
 Intake: Normal location
-Location/Movement/Inventory: Current location
+Location/Movement/Inventory: Current location (#<CspaceConfigUntangler::Message:0x000000013938c8b0>)
 Location/Movement/Inventory: Normal location
 Object: Computed current location
 Use of Collections: Location"
-core_10-1-0,location,location/offsite,y,6,"Exhibition: Venue name
+core_10-2-0,location,location/offsite,y,6,"Exhibition: Venue name
 Intake: Current location
 Intake: Normal location
-Location/Movement/Inventory: Current location
+Location/Movement/Inventory: Current location (#<CspaceConfigUntangler::Message:0x000000013938c8b0>)
 Location/Movement/Inventory: Normal location
 Object: Computed current location"
-core_10-1-0,organization,organization/local,y,99,"Acquisitions: Acquisition source
+core_10-2-0,organization,organization/local,y,101,"Acquisitions: Acquisition source
 Acquisitions: Funding source
 Acquisitions: Owner
+Acquisitions: Parties involved on behalf of
 Chronology: Associated organization
 Citation: Agent name
 Citation: Publisher
@@ -131,8 +132,9 @@ Conservation: Conservator
 Conservation: Other treatment party name
 Consultation: Parties involved on behalf of
 Deaccession: Exit recipient
+Deaccession: Parties involved on behalf of
 Duty of Care: Duty of care detail determined by
-Duty of Care: Party involved on behalf of
+Duty of Care: Parties involved on behalf of
 Exhibition: Organizer
 Exhibition: Sponsor
 Exhibition: Venue name
@@ -160,8 +162,8 @@ Iteration Report: Security approval entity
 Iteration Report: Space, as installed approval entity
 Iteration Report: Technical setup approval entity
 Loan In: Lender name
-Loan Out: Borrower name (Borrower)
-Location/Movement/Inventory: Current location
+Loan Out: Borrower name (#<CspaceConfigUntangler::Message:0x0000000137d2f298>)
+Location/Movement/Inventory: Current location (#<CspaceConfigUntangler::Message:0x000000013938c8b0>)
 Location/Movement/Inventory: Normal location
 Media Handling: Contributor
 Media Handling: Creator
@@ -177,21 +179,21 @@ Object Exit (Legacy): Disposal proposed recipient
 Object Exit (Legacy): Disposal recipient
 Object Exit: Exit agent name
 Object Exit: Owner after exit
-Object: Associated event organization
-Object: Associated organization
+Object: Associated event organization (#<CspaceConfigUntangler::Message:0x000000013d580ff0>)
+Object: Associated organization (#<CspaceConfigUntangler::Message:0x000000013d580ff0>)
 Object: Computed current location
-Object: Content organization
+Object: Content organization (#<CspaceConfigUntangler::Message:0x000000013d582d50>)
 Object: Domain host
 Object: Domain owner
 Object: Field collection source
 Object: Field collector
 Object: Measured by
-Object: Non-textual inscription inscriber
+Object: Non-textual inscription inscriber (#<CspaceConfigUntangler::Message:0x000000013d5816d0>)
 Object: Owner
 Object: Production organization
 Object: Right holder contact
 Object: Right holder name
-Object: Textual inscription inscriber
+Object: Textual inscription inscriber (#<CspaceConfigUntangler::Message:0x000000013d581a40>)
 Person: Associated organization
 Place: Associated organization
 Place: Georeferenced by
@@ -202,15 +204,15 @@ Restricted Media Handling: Creator
 Restricted Media Handling: Measured by
 Restricted Media Handling: Publisher
 Restricted Media Handling: Rights holder
-Summary Documentation: Party involved on behalf of
+Summary Documentation: Parties involved on behalf of
 Summary Documentation: Summary affiliation determined by
 Summary Documentation: Summary affiliation tribe/nation
-Transport: Arrival point (Arrival)
+Transport: Arrival point (#<CspaceConfigUntangler::Message:0x00000001283c5248>)
 Transport: Courier name
-Transport: Customs broker name (Customs broker)
-Transport: Departure point (Departure)
+Transport: Customs broker name (#<CspaceConfigUntangler::Message:0x00000001283c4fc8>)
+Transport: Departure point (#<CspaceConfigUntangler::Message:0x00000001283c5338>)
 Transport: Shipping quote provider
-Transport: Transporter name (Transporter)
+Transport: Transporter name (#<CspaceConfigUntangler::Message:0x00000001283c5518>)
 Use of Collections: Authorized by
 Use of Collections: Location
 Use of Collections: Staff name
@@ -219,21 +221,22 @@ Use of Collections: User name
 Valuation Control: Source
 Work: Creator name
 Work: Publisher name"
-core_10-1-0,organization,organization/ulan,y,10,"Chronology: Associated organization
+core_10-2-0,organization,organization/ulan,y,10,"Chronology: Associated organization
 Exhibition: Organizer
 Exhibition: Sponsor
 Exhibition: Venue name
 Exhibition: Working group member name
 Insurance/Indemnity: Insurer/indemnifier
 Insurance/Indemnity: Quote provider
-Object: Content organization
+Object: Content organization (#<CspaceConfigUntangler::Message:0x000000013d582d50>)
 Person: Associated organization
 Place: Associated organization"
-core_10-1-0,person,person/local,y,129,"Acquisitions: Acquisition source
-Acquisitions: Approval individual (Approval group)
-Acquisitions: Authorizer (Authorization)
+core_10-2-0,person,person/local,y,131,"Acquisitions: Acquisition source
+Acquisitions: Approval individual (#<CspaceConfigUntangler::Message:0x000000014002edd8>)
+Acquisitions: Authorizer (#<CspaceConfigUntangler::Message:0x000000013fe053e0>)
 Acquisitions: Funding source
 Acquisitions: Owner
+Acquisitions: Parties involved person
 Chronology: Associated person
 Citation: Agent name
 Condition Check: Checker/assessor
@@ -245,10 +248,11 @@ Conservation: Examination staff
 Conservation: Other treatment party name
 Consultation: Consultation log recipient
 Consultation: Parties involved person
-Deaccession: Deaccession approval individual (Deaccession approval group)
+Deaccession: Deaccession approval individual (#<CspaceConfigUntangler::Message:0x000000012da79800>)
 Deaccession: Exit recipient
+Deaccession: Parties involved person
 Duty of Care: Duty of care detail determined by
-Duty of Care: Party involved person
+Duty of Care: Parties involved person
 Exhibition: Organizer
 Exhibition: Sponsor
 Exhibition: Working group member name
@@ -258,10 +262,10 @@ Held-in-Trust: Correspondence recipient
 Held-in-Trust: Correspondence sender
 Held-in-Trust: Held-in-Trust status individual
 Held-in-Trust: Owner
-Insurance/Indemnity: Authorizer (Authorization)
+Insurance/Indemnity: Authorizer (#<CspaceConfigUntangler::Message:0x000000012ac98760>)
 Insurance/Indemnity: Insurer/indemnifier
 Insurance/Indemnity: Quote provider
-Intake: Approval individual (Approval group)
+Intake: Approval individual (#<CspaceConfigUntangler::Message:0x000000012e6192a0>)
 Intake: Condition check assessor
 Intake: Current owner
 Intake: Depositor name
@@ -275,23 +279,23 @@ Iteration Report: Further installation detail approval entity
 Iteration Report: Installed equipment approval entity
 Iteration Report: Installer name
 Iteration Report: Iteration creator/supervisor name
-Iteration Report: Iteration evaluation evaluator
+Iteration Report: Iteration evaluation evaluator (#<CspaceConfigUntangler::Message:0x000000012bc1f698>)
 Iteration Report: Iteration-specific modification approval entity
 Iteration Report: Maintenance contact
 Iteration Report: Security approval entity
 Iteration Report: Space, as installed approval entity
 Iteration Report: Technical setup approval entity
-Loan In: Borrower authorizer (Borrower)
-Loan In: Borrower contact (Borrower)
+Loan In: Borrower authorizer (#<CspaceConfigUntangler::Message:0x0000000137888fc8>)
+Loan In: Borrower contact (#<CspaceConfigUntangler::Message:0x0000000137888fc8>)
 Loan In: Lender authorizer
 Loan In: Lender contact
 Loan In: Lender name
 Loan In: Loan status individual
-Loan Out: Borrower authorizer (Borrower)
-Loan Out: Borrower contact (Borrower)
-Loan Out: Borrower name (Borrower)
-Loan Out: Lender authorizer (Lender)
-Loan Out: Lender contact (Lender)
+Loan Out: Borrower authorizer (#<CspaceConfigUntangler::Message:0x0000000137d2f298>)
+Loan Out: Borrower contact (#<CspaceConfigUntangler::Message:0x0000000137d2f298>)
+Loan Out: Borrower name (#<CspaceConfigUntangler::Message:0x0000000137d2f298>)
+Loan Out: Lender authorizer (#<CspaceConfigUntangler::Message:0x0000000137d2f1a8>)
+Loan Out: Lender contact (#<CspaceConfigUntangler::Message:0x0000000137d2f1a8>)
 Loan Out: Loan status individual
 Location/Movement/Inventory: Inventory contact
 Location/Movement/Inventory: Movement contact
@@ -313,13 +317,13 @@ Object Exit: Approval status individual
 Object Exit: Exit agent name
 Object Exit: Owner after exit
 Object: Annotation author
-Object: Associated event person
-Object: Associated person
-Object: Content person
+Object: Associated event person (#<CspaceConfigUntangler::Message:0x000000013d580ff0>)
+Object: Associated person (#<CspaceConfigUntangler::Message:0x000000013d580ff0>)
+Object: Content person (#<CspaceConfigUntangler::Message:0x000000013d582d50>)
 Object: Field collection source
 Object: Field collector
 Object: Measured by
-Object: Non-textual inscription inscriber
+Object: Non-textual inscription inscriber (#<CspaceConfigUntangler::Message:0x000000013d5816d0>)
 Object: Object count counted by
 Object: Object significance assigned contact
 Object: Owner
@@ -327,7 +331,7 @@ Object: Production person
 Object: Right holder contact
 Object: Right holder name
 Object: Supplied by
-Object: Textual inscription inscriber
+Object: Textual inscription inscriber (#<CspaceConfigUntangler::Message:0x000000013d581a40>)
 Organization: Contact name
 Person: Associated person
 Person: Other information author
@@ -342,41 +346,41 @@ Restricted Media Handling: Creator
 Restricted Media Handling: Measured by
 Restricted Media Handling: Publisher
 Restricted Media Handling: Rights holder
-Summary Documentation: Party involved person
+Summary Documentation: Parties involved person
 Summary Documentation: Summary affiliation determined by
 Summary Documentation: Summary documentation status individual
 Transport: Courier name
-Transport: Customs broker contact (Customs broker)
-Transport: Customs broker name (Customs broker)
+Transport: Customs broker contact (#<CspaceConfigUntangler::Message:0x00000001283c4fc8>)
+Transport: Customs broker name (#<CspaceConfigUntangler::Message:0x00000001283c4fc8>)
 Transport: Shipping quote provider
-Transport: Transport authorizer (Authorization)
-Transport: Transporter contact (Transporter)
-Transport: Transporter name (Transporter)
+Transport: Transport authorizer (#<CspaceConfigUntangler::Message:0x00000001283c5428>)
+Transport: Transporter contact (#<CspaceConfigUntangler::Message:0x00000001283c5518>)
+Transport: Transporter name (#<CspaceConfigUntangler::Message:0x00000001283c5518>)
 Use of Collections: Authorized by
 Use of Collections: Staff name
 Use of Collections: User name
 Valuation Control: Source
 Work: Creator name
 Work: Publisher name"
-core_10-1-0,person,person/ulan,y,14,"Chronology: Associated person
+core_10-2-0,person,person/ulan,y,14,"Chronology: Associated person
 Citation: Agent name
 Exhibition: Organizer
 Exhibition: Sponsor
 Exhibition: Working group member name
-Insurance/Indemnity: Authorizer (Authorization)
+Insurance/Indemnity: Authorizer (#<CspaceConfigUntangler::Message:0x000000012ac98760>)
 Insurance/Indemnity: Insurer/indemnifier
 Insurance/Indemnity: Quote provider
-Object: Content person
+Object: Content person (#<CspaceConfigUntangler::Message:0x000000013d582d50>)
 Object: Object count counted by
 Object: Object significance assigned contact
 Object: Supplied by
 Person: Associated person
 Place: Associated person"
-core_10-1-0,place,place/archaeological,y,4,"NAGPRA Inventory: Archaeological site name
+core_10-2-0,place,place/archaeological,y,4,"NAGPRA Inventory: Archaeological site name
 Object: Field collection site
 Repatriation Request: Archaeological site name
 Summary Documentation: Archaeological site name"
-core_10-1-0,place,place/local,y,23,"Chronology: Alternative date spatial coverage
+core_10-2-0,place,place/local,y,24,"Chronology: Alternative date spatial coverage
 Chronology: Associated place
 Chronology: Spatial coverage
 Citation: Publication place
@@ -384,6 +388,7 @@ Exhibition: Venue name
 Intake: Current location
 Intake: Normal location
 NAGPRA Inventory: Place represented name
+Object: Content place (controlled) (#<CspaceConfigUntangler::Message:0x000000013d582d50>)
 Object: Field collection place
 Person: Associated place
 Person: Birth place supplied
@@ -393,13 +398,13 @@ Place: Address state/province
 Place: Associated place
 Repatriation Request: Place represented name
 Summary Documentation: Place represented name
-Transport: Arrival point (Arrival)
-Transport: Departure point (Departure)
+Transport: Arrival point (#<CspaceConfigUntangler::Message:0x00000001283c5248>)
+Transport: Departure point (#<CspaceConfigUntangler::Message:0x00000001283c5338>)
 Use of Collections: Location
 Work: Address country
 Work: Address municipality
 Work: Address state/province"
-core_10-1-0,place,place/tgn,y,14,"Chronology: Alternative date spatial coverage
+core_10-2-0,place,place/tgn,y,14,"Chronology: Alternative date spatial coverage
 Chronology: Associated place
 Chronology: Spatial coverage
 Citation: Publication place
@@ -413,20 +418,460 @@ Place: Associated place
 Work: Address country
 Work: Address municipality
 Work: Address state/province"
-core_10-1-0,work,work/cona,n,0,""
-core_10-1-0,work,work/local,y,1,Object: Named collection
-fcart_8-1-0,chronology,chronology/era,y,6,"Chronology: Associated event/era
-Object: Associated controlled event or period/era
-Object: Content controlled event or period/era
+core_10-2-0,work,work/cona,n,0,""
+core_10-2-0,work,work/local,y,1,Object: Named collection
+materials_4-1-1,citation,citation/local,y,9,"Citation: Term source name (#<CspaceConfigUntangler::Message:0x0000000147cc4488>)
+Concept: Term source name (#<CspaceConfigUntangler::Message:0x000000013d1ac550>)
+Material: Citation source
+Material: Term source name (#<CspaceConfigUntangler::Message:0x0000000148006470>)
+Organization: Term source name (#<CspaceConfigUntangler::Message:0x00000001457a28f8>)
+Person: Term source name (#<CspaceConfigUntangler::Message:0x000000014654b4a0>)
+Place: Term source name (#<CspaceConfigUntangler::Message:0x0000000146c45008>)
+Storage Location: Term source name (#<CspaceConfigUntangler::Message:0x000000013ee0b4a8>)
+Work: Term source name (#<CspaceConfigUntangler::Message:0x0000000147b08e50>)"
+materials_4-1-1,citation,citation/shared,y,8,"Citation: Term source name (#<CspaceConfigUntangler::Message:0x0000000147cc4488>)
+Concept: Term source name (#<CspaceConfigUntangler::Message:0x000000013d1ac550>)
+Material: Citation source
+Material: Term source name (#<CspaceConfigUntangler::Message:0x0000000148006470>)
+Person: Term source name (#<CspaceConfigUntangler::Message:0x000000014654b4a0>)
+Place: Term source name (#<CspaceConfigUntangler::Message:0x0000000146c45008>)
+Storage Location: Term source name (#<CspaceConfigUntangler::Message:0x000000013ee0b4a8>)
+Work: Term source name (#<CspaceConfigUntangler::Message:0x0000000147b08e50>)"
+materials_4-1-1,concept,concept/archculture,n,0,""
+materials_4-1-1,concept,concept/materialclassification,y,3,"Material: Composition class name
+Material: Composition family name
+Material: Composition generic name"
+materials_4-1-1,concept,concept/nomenclature,n,0,""
+materials_4-1-1,concept,concept/occasion,y,1,Use of Collections: Occasion
+materials_4-1-1,concept,concept/sharedmaterialclassification,y,3,"Material: Composition class name
+Material: Composition family name
+Material: Composition generic name"
+materials_4-1-1,location,location/local,y,4,"Location/Movement/Inventory: Current location
+Location/Movement/Inventory: Normal location
+Object: Computed current location
+Use of Collections: Location"
+materials_4-1-1,location,location/offsite,y,3,"Location/Movement/Inventory: Current location
+Location/Movement/Inventory: Normal location
+Object: Computed current location"
+materials_4-1-1,material,material/local,y,2,"Media Handling: Coverage
+Object: Material"
+materials_4-1-1,material,material/shared,y,2,"Media Handling: Coverage
+Object: Material"
+materials_4-1-1,organization,organization/local,y,33,"Acquisitions: Acquisition source
+Citation: Agent name
+Citation: Publisher
+Deaccession: Exit recipient
+Deaccession: Parties involved on behalf of
+Loan Out: Borrower
+Location/Movement/Inventory: Current location
+Location/Movement/Inventory: Normal location
+Material: Discontinued by (#<CspaceConfigUntangler::Message:0x0000000148006380>)
+Material: Production organization name
+Material: Term creator organization
+Material: Term editor organization
+Media Handling: Contributor
+Media Handling: Creator
+Media Handling: Rights holder
+Object Exit (Legacy): Current owner
+Object Exit (Legacy): Depositor
+Object Exit (Legacy): Disposal proposed recipient
+Object Exit (Legacy): Disposal recipient
+Object Exit: Exit agent name
+Object Exit: Owner after exit
+Object: Computed current location
+Object: Production organization
+Place: Georeferenced by
+Place: Owner
+Use of Collections: Authorized by
+Use of Collections: Location
+Use of Collections: Staff name
+Use of Collections: User institution
+Use of Collections: User name
+Valuation Control: Source
+Work: Creator name
+Work: Publisher name"
+materials_4-1-1,organization,organization/shared,y,27,"Acquisitions: Acquisition source
+Loan Out: Borrower
+Location/Movement/Inventory: Current location
+Location/Movement/Inventory: Normal location
+Material: Discontinued by (#<CspaceConfigUntangler::Message:0x0000000148006380>)
+Material: Production organization name
+Material: Term creator organization
+Material: Term editor organization
+Media Handling: Contributor
+Media Handling: Creator
+Media Handling: Rights holder
+Object Exit (Legacy): Current owner
+Object Exit (Legacy): Depositor
+Object Exit (Legacy): Disposal proposed recipient
+Object Exit (Legacy): Disposal recipient
+Object: Computed current location
+Object: Production organization
+Place: Georeferenced by
+Place: Owner
+Use of Collections: Authorized by
+Use of Collections: Location
+Use of Collections: Staff name
+Use of Collections: User institution
+Use of Collections: User name
+Valuation Control: Source
+Work: Creator name
+Work: Publisher name"
+materials_4-1-1,person,person/local,y,38,"Acquisitions: Acquisition source
+Acquisitions: Authorizer (#<CspaceConfigUntangler::Message:0x000000014e0a7590>)
+Citation: Agent name
+Deaccession: Deaccession approval individual (#<CspaceConfigUntangler::Message:0x000000014cfebc88>)
+Deaccession: Exit recipient
+Deaccession: Parties involved person
+Group: Group owner
+Loan Out: Borrower
+Loan Out: Lender authorizer
+Loan Out: Loan status individual
+Location/Movement/Inventory: Inventory contact
+Location/Movement/Inventory: Movement contact
+Material: Production person name
+Material: Term creator contributor
+Material: Term editor
+Media Handling: Contributor
+Media Handling: Creator
+Media Handling: Rights holder
+Object Exit (Legacy): Current owner
+Object Exit (Legacy): Deaccession approval individual
+Object Exit (Legacy): Deaccession authorizer
+Object Exit (Legacy): Depositor
+Object Exit (Legacy): Disposal proposed recipient
+Object Exit (Legacy): Disposal recipient
+Object Exit: Approval status individual
+Object Exit: Exit agent name
+Object Exit: Owner after exit
+Object: Annotation author
+Object: Production person
+Organization: Contact name
+Place: Georeferenced by
+Place: Owner
+Use of Collections: Authorized by
+Use of Collections: Staff name
+Use of Collections: User name
+Valuation Control: Source
+Work: Creator name
+Work: Publisher name"
+materials_4-1-1,person,person/shared,y,26,"Acquisitions: Acquisition source
+Loan Out: Borrower
+Loan Out: Lender authorizer
+Loan Out: Loan status individual
+Location/Movement/Inventory: Inventory contact
+Location/Movement/Inventory: Movement contact
+Material: Production person name
+Material: Term creator contributor
+Material: Term editor
+Media Handling: Contributor
+Media Handling: Creator
+Media Handling: Rights holder
+Object Exit (Legacy): Current owner
+Object Exit (Legacy): Depositor
+Object Exit (Legacy): Disposal proposed recipient
+Object Exit (Legacy): Disposal recipient
+Object: Annotation author
+Object: Production person
+Place: Georeferenced by
+Place: Owner
+Use of Collections: Authorized by
+Use of Collections: Staff name
+Use of Collections: User name
+Valuation Control: Source
+Work: Creator name
+Work: Publisher name"
+materials_4-1-1,place,place/local,y,7,"Citation: Publication place
+Material: Production place name
+Media Handling: Coverage
+Use of Collections: Location
+Work: Address country
+Work: Address municipality
+Work: Address state/province"
+materials_4-1-1,place,place/shared,y,2,"Material: Production place name
+Use of Collections: Location"
+materials_4-1-1,work,work/local,y,3,"Material: Featured application name
+Material: Featured collection name
+Object: Named collection"
+materials_4-1-1,work,work/shared,y,2,"Material: Featured application name
+Material: Featured collection name"
+publicart_7-1-0,citation,citation/local,y,7,"Citation: Term source name (#<CspaceConfigUntangler::Message:0x00000001285804c0>)
+Concept: Term source name (#<CspaceConfigUntangler::Message:0x000000013a5a3580>)
+Organization: Term source name (#<CspaceConfigUntangler::Message:0x000000012b158e30>)
+Person: Term source name (#<CspaceConfigUntangler::Message:0x000000012a1e2a00>)
+Place: Term source name (#<CspaceConfigUntangler::Message:0x0000000127cc4ed0>)
+Storage Location: Term source name (#<CspaceConfigUntangler::Message:0x000000012c67c870>)
+Work: Term source name (#<CspaceConfigUntangler::Message:0x00000001264e5828>)"
+publicart_7-1-0,citation,citation/worldcat,y,7,"Citation: Term source name (#<CspaceConfigUntangler::Message:0x00000001285804c0>)
+Concept: Term source name (#<CspaceConfigUntangler::Message:0x000000013a5a3580>)
+Organization: Term source name (#<CspaceConfigUntangler::Message:0x000000012b158e30>)
+Person: Term source name (#<CspaceConfigUntangler::Message:0x000000012a1e2a00>)
+Place: Term source name (#<CspaceConfigUntangler::Message:0x0000000127cc4ed0>)
+Storage Location: Term source name (#<CspaceConfigUntangler::Message:0x000000012c67c870>)
+Work: Term source name (#<CspaceConfigUntangler::Message:0x00000001264e5828>)"
+publicart_7-1-0,concept,concept/archculture,n,0,""
+publicart_7-1-0,concept,concept/associated,y,2,"Citation: Related term
+Object: Artwork tag"
+publicart_7-1-0,concept,concept/ethculture,n,0,""
+publicart_7-1-0,concept,concept/material,y,2,"Citation: Related term
+Object: Material"
+publicart_7-1-0,concept,concept/nomenclature,n,0,""
+publicart_7-1-0,concept,concept/occasion,n,0,""
+publicart_7-1-0,concept,concept/worktype,y,1,Object: Work type
+publicart_7-1-0,location,location/local,y,5,"Exhibition: Venue name
+Intake: Current location
+Intake: Normal location
+Location/Movement/Inventory: Current location (#<CspaceConfigUntangler::Message:0x000000012ba98bd0>)
+Object: Computed current location"
+publicart_7-1-0,location,location/offsite,y,5,"Exhibition: Venue name
+Intake: Current location
+Intake: Normal location
+Location/Movement/Inventory: Current location (#<CspaceConfigUntangler::Message:0x000000012ba98bd0>)
+Object: Computed current location"
+publicart_7-1-0,organization,organization/local,y,43,"Acquisitions: Acquisition source
+Acquisitions: Commissioning body
+Acquisitions: Funding source
+Acquisitions: Owner
+Citation: Agent name
+Citation: Publisher
+Condition Check: Checker/assessor
+Conservation: Conservator
+Conservation: Other treatment party name
+Deaccession: Exit recipient
+Deaccession: Parties involved on behalf of
+Exhibition: Organizer
+Exhibition: Support name
+Exhibition: Venue name
+Group: Group owner
+Intake: Condition check assessor
+Intake: Current location
+Intake: Current owner
+Intake: Depositor name
+Intake: Normal location
+Loan In: Lender name
+Loan Out: Borrower name (#<CspaceConfigUntangler::Message:0x000000012cb3efc0>)
+Location/Movement/Inventory: Current location (#<CspaceConfigUntangler::Message:0x000000012ba98bd0>)
+Media Handling: Contributor
+Media Handling: Creator
+Media Handling: Rights holder
+Object Exit (Legacy): Current owner
+Object Exit (Legacy): Depositor
+Object Exit (Legacy): Disposal proposed recipient
+Object Exit (Legacy): Disposal recipient
+Object Exit: Exit agent name
+Object Exit: Owner after exit
+Object: Artwork creator name
+Object: Collection
+Object: Computed current location
+Object: Owner
+Object: Textual inscription inscriber (#<CspaceConfigUntangler::Message:0x0000000128ca9c10>)
+Person: Person's organization
+Place: Georeferenced by
+Place: Owner
+Valuation Control: Insurer
+Valuation Control: Source
+Work: Creator name"
+publicart_7-1-0,organization,organization/shared,y,40,"Acquisitions: Acquisition source
+Acquisitions: Commissioning body
+Acquisitions: Funding source
+Acquisitions: Owner
+Condition Check: Checker/assessor
+Conservation: Conservator
+Conservation: Other treatment party name
+Deaccession: Exit recipient
+Exhibition: Organizer
+Exhibition: Support name
+Exhibition: Venue name
+Group: Group owner
+Intake: Condition check assessor
+Intake: Current location
+Intake: Current owner
+Intake: Depositor name
+Intake: Normal location
+Loan In: Lender name
+Loan Out: Borrower name (#<CspaceConfigUntangler::Message:0x000000012cb3efc0>)
+Location/Movement/Inventory: Current location (#<CspaceConfigUntangler::Message:0x000000012ba98bd0>)
+Media Handling: Contributor
+Media Handling: Creator
+Media Handling: Rights holder
+Object Exit (Legacy): Current owner
+Object Exit (Legacy): Depositor
+Object Exit (Legacy): Disposal proposed recipient
+Object Exit (Legacy): Disposal recipient
+Object Exit: Exit agent name
+Object Exit: Owner after exit
+Object: Artwork creator name
+Object: Collection
+Object: Computed current location
+Object: Owner
+Object: Textual inscription inscriber (#<CspaceConfigUntangler::Message:0x0000000128ca9c10>)
+Person: Person's organization
+Place: Georeferenced by
+Place: Owner
+Valuation Control: Insurer
+Valuation Control: Source
+Work: Creator name"
+publicart_7-1-0,person,person/local,y,57,"Acquisitions: Acquisition source
+Acquisitions: Approval individual (#<CspaceConfigUntangler::Message:0x000000014f4414c0>)
+Acquisitions: Authorizer (#<CspaceConfigUntangler::Message:0x000000014f52e018>)
+Acquisitions: Commissioning body
+Acquisitions: Funding source
+Acquisitions: Owner
+Citation: Agent name
+Condition Check: Checker/assessor
+Conservation: Analysis researcher
+Conservation: Approved by
+Conservation: Conservator
+Conservation: Examination staff
+Conservation: Other treatment party name
+Deaccession: Deaccession approval individual (#<CspaceConfigUntangler::Message:0x0000000127147990>)
+Deaccession: Exit recipient
+Deaccession: Parties involved person
+Exhibition: Organizer
+Exhibition: Support name
+Group: Checklist item assigned to
+Group: Group owner
+Intake: Approval individual (#<CspaceConfigUntangler::Message:0x00000001273aacf0>)
+Intake: Condition check assessor
+Intake: Current owner
+Intake: Depositor name
+Loan In: Lender contact
+Loan In: Lender name
+Loan In: Loan status individual
+Loan Out: Borrower authorizer (#<CspaceConfigUntangler::Message:0x000000012cb3efc0>)
+Loan Out: Borrower contact (#<CspaceConfigUntangler::Message:0x000000012cb3efc0>)
+Loan Out: Borrower name (#<CspaceConfigUntangler::Message:0x000000012cb3efc0>)
+Loan Out: Lender authorizer (#<CspaceConfigUntangler::Message:0x000000012cb3eed0>)
+Loan Out: Lender contact (#<CspaceConfigUntangler::Message:0x000000012cb3eed0>)
+Loan Out: Loan status individual
+Location/Movement/Inventory: Movement contact
+Media Handling: Contributor
+Media Handling: Creator
+Media Handling: Rights holder
+Object Exit (Legacy): Current owner
+Object Exit (Legacy): Deaccession approval individual
+Object Exit (Legacy): Deaccession authorizer
+Object Exit (Legacy): Depositor
+Object Exit (Legacy): Disposal proposed recipient
+Object Exit (Legacy): Disposal recipient
+Object Exit: Approval status individual
+Object Exit: Exit agent name
+Object Exit: Owner after exit
+Object: Annotation author
+Object: Artwork creator name
+Object: Object count counted by
+Object: Owner
+Object: Textual inscription inscriber (#<CspaceConfigUntangler::Message:0x0000000128ca9c10>)
+Person: Other information author
+Place: Georeferenced by
+Place: Owner
+Valuation Control: Insurer
+Valuation Control: Source
+Work: Creator name"
+publicart_7-1-0,person,person/shared,y,50,"Acquisitions: Acquisition source
+Acquisitions: Commissioning body
+Acquisitions: Funding source
+Acquisitions: Owner
+Condition Check: Checker/assessor
+Conservation: Analysis researcher
+Conservation: Approved by
+Conservation: Conservator
+Conservation: Examination staff
+Conservation: Other treatment party name
+Deaccession: Deaccession approval individual (#<CspaceConfigUntangler::Message:0x0000000127147990>)
+Deaccession: Exit recipient
+Exhibition: Organizer
+Exhibition: Support name
+Group: Checklist item assigned to
+Group: Group owner
+Intake: Approval individual (#<CspaceConfigUntangler::Message:0x00000001273aacf0>)
+Intake: Condition check assessor
+Intake: Current owner
+Intake: Depositor name
+Loan In: Lender contact
+Loan In: Lender name
+Loan In: Loan status individual
+Loan Out: Borrower authorizer (#<CspaceConfigUntangler::Message:0x000000012cb3efc0>)
+Loan Out: Borrower contact (#<CspaceConfigUntangler::Message:0x000000012cb3efc0>)
+Loan Out: Borrower name (#<CspaceConfigUntangler::Message:0x000000012cb3efc0>)
+Loan Out: Lender authorizer (#<CspaceConfigUntangler::Message:0x000000012cb3eed0>)
+Loan Out: Lender contact (#<CspaceConfigUntangler::Message:0x000000012cb3eed0>)
+Loan Out: Loan status individual
+Location/Movement/Inventory: Movement contact
+Media Handling: Contributor
+Media Handling: Creator
+Media Handling: Rights holder
+Object Exit (Legacy): Current owner
+Object Exit (Legacy): Depositor
+Object Exit (Legacy): Disposal proposed recipient
+Object Exit (Legacy): Disposal recipient
+Object Exit: Approval status individual
+Object Exit: Exit agent name
+Object Exit: Owner after exit
+Object: Annotation author
+Object: Artwork creator name
+Object: Object count counted by
+Object: Owner
+Person: Other information author
+Place: Georeferenced by
+Place: Owner
+Valuation Control: Insurer
+Valuation Control: Source
+Work: Creator name"
+publicart_7-1-0,place,place/local,y,21,"Citation: Publication place
+Exhibition: Venue name
+Intake: Current location
+Intake: Normal location
+Location/Movement/Inventory: Current location (#<CspaceConfigUntangler::Message:0x000000012ba98bd0>)
+Object: Computed current location
+Organization: Current place
+Organization: Foundation place
+Person: Birth place supplied
+Place: Address country
+Place: Address county
+Place: Address municipality
+Place: Address state/province
+Storage Location: Address country
+Storage Location: Address county
+Storage Location: Address municipality
+Storage Location: Address state/province
+Work: Address country
+Work: Address county
+Work: Address municipality
+Work: Address state/province"
+publicart_7-1-0,place,place/shared,y,20,"Exhibition: Venue name
+Intake: Current location
+Intake: Normal location
+Location/Movement/Inventory: Current location (#<CspaceConfigUntangler::Message:0x000000012ba98bd0>)
+Object: Computed current location
+Organization: Current place
+Organization: Foundation place
+Person: Birth place supplied
+Place: Address country
+Place: Address county
+Place: Address municipality
+Place: Address state/province
+Storage Location: Address country
+Storage Location: Address county
+Storage Location: Address municipality
+Storage Location: Address state/province
+Work: Address country
+Work: Address county
+Work: Address municipality
+Work: Address state/province"
+publicart_7-1-0,work,work/local,n,0,""
+lhmc_8-2-0,chronology,chronology/era,y,6,"Chronology: Associated event/era
+Object: Associated controlled event or period/era (#<CspaceConfigUntangler::Message:0x0000000145643d40>)
+Object: Content controlled event or period/era (#<CspaceConfigUntangler::Message:0x00000001456445b0>)
 Object: Production era
 Person: Associated event/era
 Place: Associated event/era"
-fcart_8-1-0,chronology,chronology/event,y,5,"Chronology: Associated event/era
-Object: Associated controlled event or period/era
-Object: Content controlled event or period/era
+lhmc_8-2-0,chronology,chronology/event,y,5,"Chronology: Associated event/era
+Object: Associated controlled event or period/era (#<CspaceConfigUntangler::Message:0x0000000145643d40>)
+Object: Content controlled event or period/era (#<CspaceConfigUntangler::Message:0x00000001456445b0>)
 Person: Associated event/era
 Place: Associated event/era"
-fcart_8-1-0,citation,citation/local,y,30,"Chronology: Alternative date citation
+lhmc_8-2-0,citation,citation/local,y,31,"Chronology: Alternative date citation
 Chronology: Associated concept citation
 Chronology: Associated event/era citation
 Chronology: Associated organization citation
@@ -434,29 +879,30 @@ Chronology: Associated people citation
 Chronology: Associated person citation
 Chronology: Associated place citation
 Chronology: Resource identifier citation
-Chronology: Term source name (Source)
-Citation: Term source name (Source)
-Concept: Term source name (Source)
+Chronology: Term source name (#<CspaceConfigUntangler::Message:0x0000000147364438>)
+Citation: Term source name (#<CspaceConfigUntangler::Message:0x0000000147ac1dc0>)
+Concept: Term source name (#<CspaceConfigUntangler::Message:0x000000012786a650>)
 Exhibition: Bibliographic reference
 Object: Reference
-Organization: Term source name (Source)
+Organization: Term source name (#<CspaceConfigUntangler::Message:0x0000000146364e70>)
 Person: Associated concept citation
 Person: Associated event/era citation
 Person: Associated organization citation
 Person: Associated people citation
 Person: Associated person citation
 Person: Associated place citation
-Person: Term source name (Source)
+Person: Publication name
+Person: Term source name (#<CspaceConfigUntangler::Message:0x0000000141fa2868>)
 Place: Associated concept citation
 Place: Associated event/era citation
 Place: Associated organization citation
 Place: Associated people citation
 Place: Associated person citation
 Place: Associated place citation
-Place: Term source name (Source)
-Storage Location: Term source name (Source)
-Work: Term source name (Source)"
-fcart_8-1-0,citation,citation/worldcat,y,30,"Chronology: Alternative date citation
+Place: Term source name (#<CspaceConfigUntangler::Message:0x000000012872b130>)
+Storage Location: Term source name (#<CspaceConfigUntangler::Message:0x0000000147480a60>)
+Work: Term source name (#<CspaceConfigUntangler::Message:0x000000013d8a01e0>)"
+lhmc_8-2-0,citation,citation/worldcat,y,31,"Chronology: Alternative date citation
 Chronology: Associated concept citation
 Chronology: Associated event/era citation
 Chronology: Associated organization citation
@@ -464,78 +910,73 @@ Chronology: Associated people citation
 Chronology: Associated person citation
 Chronology: Associated place citation
 Chronology: Resource identifier citation
-Chronology: Term source name (Source)
-Citation: Term source name (Source)
-Concept: Term source name (Source)
+Chronology: Term source name (#<CspaceConfigUntangler::Message:0x0000000147364438>)
+Citation: Term source name (#<CspaceConfigUntangler::Message:0x0000000147ac1dc0>)
+Concept: Term source name (#<CspaceConfigUntangler::Message:0x000000012786a650>)
 Exhibition: Bibliographic reference
 Object: Reference
-Organization: Term source name (Source)
+Organization: Term source name (#<CspaceConfigUntangler::Message:0x0000000146364e70>)
 Person: Associated concept citation
 Person: Associated event/era citation
 Person: Associated organization citation
 Person: Associated people citation
 Person: Associated person citation
 Person: Associated place citation
-Person: Term source name (Source)
+Person: Publication name
+Person: Term source name (#<CspaceConfigUntangler::Message:0x0000000141fa2868>)
 Place: Associated concept citation
 Place: Associated event/era citation
 Place: Associated organization citation
 Place: Associated people citation
 Place: Associated person citation
 Place: Associated place citation
-Place: Term source name (Source)
-Storage Location: Term source name (Source)
-Work: Term source name (Source)"
-fcart_8-1-0,concept,concept/activity,y,6,"Chronology: Associated concept
+Place: Term source name (#<CspaceConfigUntangler::Message:0x000000012872b130>)
+Storage Location: Term source name (#<CspaceConfigUntangler::Message:0x0000000147480a60>)
+Work: Term source name (#<CspaceConfigUntangler::Message:0x000000013d8a01e0>)"
+lhmc_8-2-0,concept,concept/activity,y,4,"Chronology: Associated concept
 Citation: Related term
-Object: Associated activity
-Object: Content activity
 Person: Associated concept
 Place: Associated concept"
-fcart_8-1-0,concept,concept/archculture,n,0,""
-fcart_8-1-0,concept,concept/associated,y,10,"Chronology: Associated concept
+lhmc_8-2-0,concept,concept/archculture,n,0,""
+lhmc_8-2-0,concept,concept/associated,y,9,"Chronology: Associated concept
 Chronology: Associated people
 Citation: Related term
-Concept: Related concept
-Object: Associated concept
-Object: Content concept
+Object: Associated concept (#<CspaceConfigUntangler::Message:0x0000000145643d40>)
+Object: Content concept (#<CspaceConfigUntangler::Message:0x00000001456445b0>)
 Person: Associated concept
 Person: Associated people
 Place: Associated concept
 Place: Associated people"
-fcart_8-1-0,concept,concept/ethculture,y,3,"Object: Associated event people
-Object: Associated people
-Object: Content people"
-fcart_8-1-0,concept,concept/material,y,6,"Chronology: Associated concept
+lhmc_8-2-0,concept,concept/ethculture,n,0,""
+lhmc_8-2-0,concept,concept/material,y,6,"Chronology: Associated concept
 Citation: Related term
-Object: Content concept
+Object: Content concept (#<CspaceConfigUntangler::Message:0x00000001456445b0>)
 Object: Material controlled
 Person: Associated concept
 Place: Associated concept"
-fcart_8-1-0,concept,concept/nomenclature,y,4,"Chronology: Associated concept
+lhmc_8-2-0,concept,concept/nomenclature,y,4,"Chronology: Associated concept
 Object: Object name controlled
 Person: Associated concept
 Place: Associated concept"
-fcart_8-1-0,concept,concept/occasion,y,4,"Chronology: Associated concept
+lhmc_8-2-0,concept,concept/occasion,y,4,"Chronology: Associated concept
 Person: Associated concept
 Place: Associated concept
 Use of Collections: Occasion"
-fcart_8-1-0,location,location/local,y,7,"Exhibition: Venue name
-Intake: Current location
-Intake: Normal location
-Location/Movement/Inventory: Current location
+lhmc_8-2-0,location,location/local,y,6,"Exhibition: Venue name
+Intake: Interim location
+Location/Movement/Inventory: Current location (#<CspaceConfigUntangler::Message:0x0000000146a4b310>)
 Location/Movement/Inventory: Normal location
 Object: Computed current location
 Use of Collections: Location"
-fcart_8-1-0,location,location/offsite,y,6,"Exhibition: Venue name
-Intake: Current location
-Intake: Normal location
-Location/Movement/Inventory: Current location
+lhmc_8-2-0,location,location/offsite,y,5,"Exhibition: Venue name
+Intake: Interim location
+Location/Movement/Inventory: Current location (#<CspaceConfigUntangler::Message:0x0000000146a4b310>)
 Location/Movement/Inventory: Normal location
 Object: Computed current location"
-fcart_8-1-0,organization,organization/local,y,77,"Acquisitions: Acquisition source
+lhmc_8-2-0,organization,organization/local,y,73,"Acquisitions: Acquisition source
 Acquisitions: Funding source
 Acquisitions: Owner
+Acquisitions: Parties involved on behalf of
 Chronology: Associated organization
 Citation: Agent name
 Citation: Publisher
@@ -543,30 +984,24 @@ Condition Check: Checker/assessor
 Conservation: Conservator
 Conservation: Other treatment party name
 Deaccession: Exit recipient
+Deaccession: Parties involved on behalf of
 Exhibition: Organizer
 Exhibition: Sponsor
 Exhibition: Venue name
 Exhibition: Working group member name
 Insurance/Indemnity: Insurer/indemnifier
 Insurance/Indemnity: Quote provider
-Intake: Condition check assessor
-Intake: Current location
-Intake: Current owner
+Intake: Condition check by
 Intake: Depositor name
-Intake: Insurer
-Intake: Normal location
+Intake: Insurance company
+Intake: Interim location
+Intake: Received by
+Intake: Source
 Intake: Valuer
-Iteration Report: Exhibition approval entity
-Iteration Report: Further installation detail approval entity
-Iteration Report: Installed equipment approval entity
-Iteration Report: Iteration creator/supervisor name
-Iteration Report: Iteration-specific modification approval entity
-Iteration Report: Security approval entity
-Iteration Report: Space, as installed approval entity
-Iteration Report: Technical setup approval entity
 Loan In: Lender name
-Loan Out: Borrower name (Borrower)
-Location/Movement/Inventory: Current location
+Loan Out: Borrower name (#<CspaceConfigUntangler::Message:0x0000000147746830>)
+Loan Out: Loan status authorizer
+Location/Movement/Inventory: Current location (#<CspaceConfigUntangler::Message:0x0000000146a4b310>)
 Location/Movement/Inventory: Normal location
 Media Handling: Contributor
 Media Handling: Creator
@@ -579,29 +1014,30 @@ Object Exit (Legacy): Disposal proposed recipient
 Object Exit (Legacy): Disposal recipient
 Object Exit: Exit agent name
 Object Exit: Owner after exit
-Object: Associated event organization
-Object: Associated organization
+Object: Access limitation requested on behalf of
+Object: Associated event organization (#<CspaceConfigUntangler::Message:0x0000000145643d40>)
+Object: Associated organization (#<CspaceConfigUntangler::Message:0x0000000145643d40>)
 Object: Computed current location
-Object: Content organization
-Object: Domain host
-Object: Domain owner
+Object: Content organization (#<CspaceConfigUntangler::Message:0x00000001456445b0>)
+Object: Field collection source
+Object: Field collector
 Object: Measured by
-Object: Non-textual inscription inscriber
+Object: Non-textual inscription inscriber (#<CspaceConfigUntangler::Message:0x0000000145644290>)
 Object: Owner
 Object: Production organization
 Object: Right holder contact
 Object: Right holder name
-Object: Textual inscription inscriber
+Object: Textual inscription inscriber (#<CspaceConfigUntangler::Message:0x0000000145644420>)
 Person: Associated organization
 Place: Associated organization
 Place: Georeferenced by
 Place: Owner
-Transport: Arrival point (Arrival)
+Transport: Arrival point (#<CspaceConfigUntangler::Message:0x000000013b84e928>)
 Transport: Courier name
-Transport: Customs broker name (Customs broker)
-Transport: Departure point (Departure)
+Transport: Customs broker name (#<CspaceConfigUntangler::Message:0x000000013b84e6a8>)
+Transport: Departure point (#<CspaceConfigUntangler::Message:0x000000013b84ea18>)
 Transport: Shipping quote provider
-Transport: Transporter name (Transporter)
+Transport: Transporter name (#<CspaceConfigUntangler::Message:0x000000013b84ebf8>)
 Use of Collections: Authorized by
 Use of Collections: Location
 Use of Collections: Staff name
@@ -610,21 +1046,23 @@ Use of Collections: User name
 Valuation Control: Source
 Work: Creator name
 Work: Publisher name"
-fcart_8-1-0,organization,organization/ulan,y,10,"Chronology: Associated organization
+lhmc_8-2-0,organization,organization/ulan,y,10,"Chronology: Associated organization
 Exhibition: Organizer
 Exhibition: Sponsor
 Exhibition: Venue name
 Exhibition: Working group member name
 Insurance/Indemnity: Insurer/indemnifier
 Insurance/Indemnity: Quote provider
-Object: Content organization
+Object: Content organization (#<CspaceConfigUntangler::Message:0x00000001456445b0>)
 Person: Associated organization
 Place: Associated organization"
-fcart_8-1-0,person,person/local,y,102,"Acquisitions: Acquisition source
-Acquisitions: Approval individual (Approval group)
-Acquisitions: Authorizer (Authorization)
+lhmc_8-2-0,person,person/local,y,98,"Acquisitions: Acquisition source
+Acquisitions: Approval individual (#<CspaceConfigUntangler::Message:0x000000014f1a7098>)
+Acquisitions: Authorizer (#<CspaceConfigUntangler::Message:0x000000014f0aeec0>)
 Acquisitions: Funding source
 Acquisitions: Owner
+Acquisitions: Parties involved person
+Acquisitions: Received by
 Chronology: Associated person
 Citation: Agent name
 Condition Check: Checker/assessor
@@ -634,46 +1072,38 @@ Conservation: Conservator
 Conservation: Destructive analysis sample taken by
 Conservation: Examination staff
 Conservation: Other treatment party name
-Deaccession: Deaccession approval individual (Deaccession approval group)
+Deaccession: Deaccession approval individual (#<CspaceConfigUntangler::Message:0x000000014d4064a8>)
 Deaccession: Exit recipient
+Deaccession: Parties involved person
 Exhibition: Organizer
 Exhibition: Sponsor
 Exhibition: Working group member name
 Group: Group owner
-Insurance/Indemnity: Authorizer (Authorization)
+Insurance/Indemnity: Authorizer (#<CspaceConfigUntangler::Message:0x000000014cf46378>)
 Insurance/Indemnity: Insurer/indemnifier
 Insurance/Indemnity: Quote provider
-Intake: Approval individual (Approval group)
-Intake: Condition check assessor
-Intake: Current owner
+Intake: Approval individual (#<CspaceConfigUntangler::Message:0x000000014cfe9bb8>)
+Intake: Condition check by
 Intake: Depositor name
-Intake: Insurer
+Intake: Insurance company
+Intake: Inventoried by
+Intake: Received by
+Intake: Source
 Intake: Valuer
-Iteration Report: Artist or representative
-Iteration Report: Exhibition approval entity
-Iteration Report: Further installation detail approval entity
-Iteration Report: Installed equipment approval entity
-Iteration Report: Installer name
-Iteration Report: Iteration creator/supervisor name
-Iteration Report: Iteration evaluation evaluator
-Iteration Report: Iteration-specific modification approval entity
-Iteration Report: Maintenance contact
-Iteration Report: Security approval entity
-Iteration Report: Space, as installed approval entity
-Iteration Report: Technical setup approval entity
-Loan In: Borrower authorizer (Borrower)
-Loan In: Borrower contact (Borrower)
+Loan In: Borrower authorizer (#<CspaceConfigUntangler::Message:0x0000000147a27950>)
+Loan In: Borrower contact (#<CspaceConfigUntangler::Message:0x0000000147a27950>)
 Loan In: Lender authorizer
 Loan In: Lender contact
 Loan In: Lender name
-Loan In: Loan status individual
-Loan Out: Borrower authorizer (Borrower)
-Loan Out: Borrower contact (Borrower)
-Loan Out: Borrower name (Borrower)
-Loan Out: Lender authorizer (Lender)
-Loan Out: Lender contact (Lender)
-Loan Out: Loan status individual
+Loan In: Loan status authorizer
+Loan Out: Borrower authorizer (#<CspaceConfigUntangler::Message:0x0000000147746830>)
+Loan Out: Borrower contact (#<CspaceConfigUntangler::Message:0x0000000147746830>)
+Loan Out: Borrower name (#<CspaceConfigUntangler::Message:0x0000000147746830>)
+Loan Out: Lender authorizer (#<CspaceConfigUntangler::Message:0x0000000147746740>)
+Loan Out: Lender contact (#<CspaceConfigUntangler::Message:0x0000000147746740>)
+Loan Out: Loan status authorizer
 Location/Movement/Inventory: Inventory contact
+Location/Movement/Inventory: Location authorized by
 Location/Movement/Inventory: Movement contact
 Media Handling: Contributor
 Media Handling: Creator
@@ -689,85 +1119,100 @@ Object Exit (Legacy): Disposal recipient
 Object Exit: Approval status individual
 Object Exit: Exit agent name
 Object Exit: Owner after exit
+Object: Access limitation requestor
 Object: Annotation author
-Object: Associated event person
-Object: Associated person
-Object: Content person
+Object: Associated event person (#<CspaceConfigUntangler::Message:0x0000000145643d40>)
+Object: Associated person (#<CspaceConfigUntangler::Message:0x0000000145643d40>)
+Object: Content person (#<CspaceConfigUntangler::Message:0x00000001456445b0>)
+Object: Field collection source
+Object: Field collector
 Object: Measured by
-Object: Non-textual inscription inscriber
+Object: Non-textual inscription inscriber (#<CspaceConfigUntangler::Message:0x0000000145644290>)
 Object: Object count counted by
-Object: Object significance assigned contact
 Object: Owner
 Object: Production person
 Object: Right holder contact
 Object: Right holder name
-Object: Supplied by
-Object: Textual inscription inscriber
+Object: Textual inscription inscriber (#<CspaceConfigUntangler::Message:0x0000000145644420>)
 Organization: Contact name
 Person: Associated person
 Person: Other information author
+Person: Related person name (#<CspaceConfigUntangler::Message:0x0000000141fa2688>)
 Place: Associated person
 Place: Georeferenced by
 Place: Owner
 Transport: Courier name
-Transport: Customs broker contact (Customs broker)
-Transport: Customs broker name (Customs broker)
+Transport: Customs broker contact (#<CspaceConfigUntangler::Message:0x000000013b84e6a8>)
+Transport: Customs broker name (#<CspaceConfigUntangler::Message:0x000000013b84e6a8>)
 Transport: Shipping quote provider
-Transport: Transport authorizer (Authorization)
-Transport: Transporter contact (Transporter)
-Transport: Transporter name (Transporter)
+Transport: Transport authorizer (#<CspaceConfigUntangler::Message:0x000000013b84eb08>)
+Transport: Transporter contact (#<CspaceConfigUntangler::Message:0x000000013b84ebf8>)
+Transport: Transporter name (#<CspaceConfigUntangler::Message:0x000000013b84ebf8>)
 Use of Collections: Authorized by
 Use of Collections: Staff name
 Use of Collections: User name
 Valuation Control: Source
 Work: Creator name
 Work: Publisher name"
-fcart_8-1-0,person,person/ulan,y,14,"Chronology: Associated person
+lhmc_8-2-0,person,person/ulan,y,19,"Acquisitions: Received by
+Chronology: Associated person
 Citation: Agent name
 Exhibition: Organizer
 Exhibition: Sponsor
 Exhibition: Working group member name
-Insurance/Indemnity: Authorizer (Authorization)
+Insurance/Indemnity: Authorizer (#<CspaceConfigUntangler::Message:0x000000014cf46378>)
 Insurance/Indemnity: Insurer/indemnifier
 Insurance/Indemnity: Quote provider
-Object: Content person
+Intake: Inventoried by
+Intake: Received by
+Loan In: Loan status authorizer
+Loan Out: Loan status authorizer
+Location/Movement/Inventory: Location authorized by
+Object: Content person (#<CspaceConfigUntangler::Message:0x00000001456445b0>)
 Object: Object count counted by
-Object: Object significance assigned contact
-Object: Supplied by
 Person: Associated person
+Person: Related person name (#<CspaceConfigUntangler::Message:0x0000000141fa2688>)
 Place: Associated person"
-fcart_8-1-0,place,place/local,y,26,"Chronology: Alternative date spatial coverage
+lhmc_8-2-0,place,place/local,y,26,"Chronology: Alternative date spatial coverage
 Chronology: Associated place
 Chronology: Spatial coverage
 Citation: Publication place
 Exhibition: Venue name
-Intake: Current location
-Intake: Normal location
-Location/Movement/Inventory: Current location
-Location/Movement/Inventory: Normal location
-Object: Associated event place
-Object: Associated place
-Object: Content place
+Intake: Interim location
+Object: Associated place (#<CspaceConfigUntangler::Message:0x0000000145643d40>)
+Object: Content place (#<CspaceConfigUntangler::Message:0x00000001456445b0>)
+Object: Field collection place
 Object: Ownership place
 Object: Production place
 Person: Associated place
 Person: Birth place supplied
+Person: Place/geographical area of residence name (#<CspaceConfigUntangler::Message:0x0000000141fa2778>)
+Person: Where born
+Person: Where died
 Place: Address country
 Place: Address municipality
 Place: Address state/province
 Place: Associated place
-Transport: Arrival point (Arrival)
-Transport: Departure point (Departure)
+Transport: Arrival point (#<CspaceConfigUntangler::Message:0x000000013b84e928>)
+Transport: Departure point (#<CspaceConfigUntangler::Message:0x000000013b84ea18>)
 Use of Collections: Location
 Work: Address country
 Work: Address municipality
 Work: Address state/province"
-fcart_8-1-0,place,place/tgn,y,13,"Chronology: Alternative date spatial coverage
+lhmc_8-2-0,place,place/tgn,y,21,"Chronology: Alternative date spatial coverage
 Chronology: Associated place
 Chronology: Spatial coverage
 Citation: Publication place
 Exhibition: Venue name
+Object: Associated place (#<CspaceConfigUntangler::Message:0x0000000145643d40>)
+Object: Content place (#<CspaceConfigUntangler::Message:0x00000001456445b0>)
+Object: Field collection place
+Object: Ownership place
+Object: Production place
 Person: Associated place
+Person: Place/geographical area of residence name (#<CspaceConfigUntangler::Message:0x0000000141fa2778>)
+Person: Where born
+Person: Where died
 Place: Address country
 Place: Address municipality
 Place: Address state/province
@@ -775,54 +1220,53 @@ Place: Associated place
 Work: Address country
 Work: Address municipality
 Work: Address state/province"
-fcart_8-1-0,work,work/cona,y,1,Object: Content work name
-fcart_8-1-0,work,work/local,y,2,"Object: Content work name
-Object: Named collection"
-herbarium_3-0-0,citation,citation/local,y,12,"Citation: Term source name (Source)
-Concept: Term source name (Source)
+lhmc_8-2-0,work,work/cona,n,0,""
+lhmc_8-2-0,work,work/local,y,1,Object: Named collection
+herbarium_3-0-0,citation,citation/local,y,12,"Citation: Term source name (#<CspaceConfigUntangler::Message:0x00000001465c1740>)
+Concept: Term source name (#<CspaceConfigUntangler::Message:0x0000000129ac85d0>)
 Exhibition: Bibliographic reference
 Object: Reference
-Organization: Term source name (Source)
-Person: Term source name (Source)
-Place: Term source name (Source)
-Storage Location: Term source name (Source)
+Organization: Term source name (#<CspaceConfigUntangler::Message:0x0000000148707bc0>)
+Person: Term source name (#<CspaceConfigUntangler::Message:0x0000000147869c08>)
+Place: Term source name (#<CspaceConfigUntangler::Message:0x00000001423836d0>)
+Storage Location: Term source name (#<CspaceConfigUntangler::Message:0x000000014d729978>)
 Taxon: Citation
 Taxon: Common name source
-Taxon: Term source name (Source)
-Work: Term source name (Source)"
-herbarium_3-0-0,citation,citation/worldcat,y,11,"Citation: Term source name (Source)
-Concept: Term source name (Source)
+Taxon: Term source name (#<CspaceConfigUntangler::Message:0x000000012b218528>)
+Work: Term source name (#<CspaceConfigUntangler::Message:0x00000001342b1918>)"
+herbarium_3-0-0,citation,citation/worldcat,y,11,"Citation: Term source name (#<CspaceConfigUntangler::Message:0x00000001465c1740>)
+Concept: Term source name (#<CspaceConfigUntangler::Message:0x0000000129ac85d0>)
 Exhibition: Bibliographic reference
 Object: Reference
-Organization: Term source name (Source)
-Person: Term source name (Source)
-Place: Term source name (Source)
-Storage Location: Term source name (Source)
+Organization: Term source name (#<CspaceConfigUntangler::Message:0x0000000148707bc0>)
+Person: Term source name (#<CspaceConfigUntangler::Message:0x0000000147869c08>)
+Place: Term source name (#<CspaceConfigUntangler::Message:0x00000001423836d0>)
+Storage Location: Term source name (#<CspaceConfigUntangler::Message:0x000000014d729978>)
 Taxon: Citation
-Taxon: Term source name (Source)
-Work: Term source name (Source)"
+Taxon: Term source name (#<CspaceConfigUntangler::Message:0x000000012b218528>)
+Work: Term source name (#<CspaceConfigUntangler::Message:0x00000001342b1918>)"
 herbarium_3-0-0,concept,concept/activity,y,1,Citation: Related term
 herbarium_3-0-0,concept,concept/archculture,n,0,""
 herbarium_3-0-0,concept,concept/associated,y,3,"Citation: Related term
-Object: Associated concept
-Object: Content concept"
+Object: Associated concept (#<CspaceConfigUntangler::Message:0x000000014884a5f0>)
+Object: Content concept (#<CspaceConfigUntangler::Message:0x000000014884ae10>)"
 herbarium_3-0-0,concept,concept/ethculture,y,1,Intake: Field collection source
 herbarium_3-0-0,concept,concept/labeltext,y,2,"Object: Label footer
 Object: Label header"
 herbarium_3-0-0,concept,concept/material,y,2,"Citation: Related term
-Object: Content concept"
+Object: Content concept (#<CspaceConfigUntangler::Message:0x000000014884ae10>)"
 herbarium_3-0-0,concept,concept/nomenclature,n,0,""
 herbarium_3-0-0,concept,concept/occasion,y,1,Use of Collections: Occasion
 herbarium_3-0-0,location,location/local,y,6,"Exhibition: Venue name
 Intake: Current location
 Intake: Normal location
-Location/Movement/Inventory: Current location
+Location/Movement/Inventory: Current location (#<CspaceConfigUntangler::Message:0x000000014c5e2f48>)
 Location/Movement/Inventory: Normal location
 Use of Collections: Location"
 herbarium_3-0-0,location,location/offsite,y,5,"Exhibition: Venue name
 Intake: Current location
 Intake: Normal location
-Location/Movement/Inventory: Current location
+Location/Movement/Inventory: Current location (#<CspaceConfigUntangler::Message:0x000000014c5e2f48>)
 Location/Movement/Inventory: Normal location"
 herbarium_3-0-0,organization,organization/local,y,55,"Citation: Agent name
 Citation: Publisher
@@ -843,34 +1287,34 @@ Intake: Normal location
 Intake: Valuer
 Loan In: Item transferred out institution
 Loan In: Lender name
-Loan In: Transfer in from (Transfer in)
-Loan Out: Borrower name (Borrower)
+Loan In: Transfer in from (#<CspaceConfigUntangler::Message:0x000000014efced98>)
+Loan Out: Borrower name (#<CspaceConfigUntangler::Message:0x000000014e5a7d10>)
 Loan Out: Transfer to institution
-Location/Movement/Inventory: Current location
+Location/Movement/Inventory: Current location (#<CspaceConfigUntangler::Message:0x000000014c5e2f48>)
 Location/Movement/Inventory: Normal location
 Media Handling: Contributor
 Media Handling: Creator
 Media Handling: Measured by
 Media Handling: Publisher
 Media Handling: Rights holder
-Object: Associated event organization
-Object: Associated organization
-Object: Content organization
+Object: Associated event organization (#<CspaceConfigUntangler::Message:0x000000014884a5f0>)
+Object: Associated organization (#<CspaceConfigUntangler::Message:0x000000014884a5f0>)
+Object: Content organization (#<CspaceConfigUntangler::Message:0x000000014884ae10>)
 Object: Field collector
 Object: Measured by
 Object: Owner
 Object: Production organization
-Object: Taxonomic identification institution (Identification by)
+Object: Taxonomic identification institution (#<CspaceConfigUntangler::Message:0x000000014884b4f0>)
 Object: Type specimen asserted by
 Place: Georeferenced by
 Place: Owner
 Taxon: Author name
-Transport: Arrival point (Arrival)
+Transport: Arrival point (#<CspaceConfigUntangler::Message:0x000000013d2493f0>)
 Transport: Courier name
-Transport: Customs broker name (Customs broker)
-Transport: Departure point (Departure)
+Transport: Customs broker name (#<CspaceConfigUntangler::Message:0x000000013d249120>)
+Transport: Departure point (#<CspaceConfigUntangler::Message:0x000000013d2494e0>)
 Transport: Shipping quote provider
-Transport: Transporter name (Transporter)
+Transport: Transporter name (#<CspaceConfigUntangler::Message:0x000000013d249710>)
 Use of Collections: Authorized by
 Use of Collections: Location
 Use of Collections: Staff name
@@ -885,17 +1329,17 @@ Exhibition: Venue name
 Exhibition: Working group member name
 Insurance/Indemnity: Insurer/indemnifier
 Insurance/Indemnity: Quote provider
-Object: Content organization"
+Object: Content organization (#<CspaceConfigUntangler::Message:0x000000014884ae10>)"
 herbarium_3-0-0,person,person/local,y,68,"Citation: Agent name
 Condition Check: Checker/assessor
 Exhibition: Organizer
 Exhibition: Sponsor
 Exhibition: Working group member name
 Group: Group owner
-Insurance/Indemnity: Authorizer (Authorization)
+Insurance/Indemnity: Authorizer (#<CspaceConfigUntangler::Message:0x000000012774fbf8>)
 Insurance/Indemnity: Insurer/indemnifier
 Insurance/Indemnity: Quote provider
-Intake: Approval individual (Approval group)
+Intake: Approval individual (#<CspaceConfigUntangler::Message:0x00000001473aeab0>)
 Intake: Condition check assessor
 Intake: Current owner
 Intake: Depositor name
@@ -903,20 +1347,20 @@ Intake: Field collection source
 Intake: Field collector
 Intake: Insurer
 Intake: Valuer
-Loan In: Borrower authorizer (Borrower)
-Loan In: Borrower contact (Borrower)
+Loan In: Borrower authorizer (#<CspaceConfigUntangler::Message:0x000000014efcee88>)
+Loan In: Borrower contact (#<CspaceConfigUntangler::Message:0x000000014efcee88>)
 Loan In: Item transferred out for study by
 Loan In: Item transferred out under direction of
 Loan In: Lender authorizer
 Loan In: Lender contact
 Loan In: Lender name
 Loan In: Loan status individual
-Loan In: Transfer in previous borrower (Transfer in)
-Loan Out: Borrower authorizer (Borrower)
-Loan Out: Borrower contact (Borrower)
-Loan Out: Borrower name (Borrower)
-Loan Out: Lender authorizer (Lender)
-Loan Out: Lender contact (Lender)
+Loan In: Transfer in previous borrower (#<CspaceConfigUntangler::Message:0x000000014efced98>)
+Loan Out: Borrower authorizer (#<CspaceConfigUntangler::Message:0x000000014e5a7d10>)
+Loan Out: Borrower contact (#<CspaceConfigUntangler::Message:0x000000014e5a7d10>)
+Loan Out: Borrower name (#<CspaceConfigUntangler::Message:0x000000014e5a7d10>)
+Loan Out: Lender authorizer (#<CspaceConfigUntangler::Message:0x000000014e5a7bd0>)
+Loan Out: Lender contact (#<CspaceConfigUntangler::Message:0x000000014e5a7bd0>)
 Loan Out: Loan status individual
 Loan Out: Transfer to person
 Loan Out: Transfer under direction of
@@ -928,26 +1372,26 @@ Media Handling: Measured by
 Media Handling: Publisher
 Media Handling: Rights holder
 Object: Annotation author
-Object: Associated event person
-Object: Associated person
-Object: Content person
+Object: Associated event person (#<CspaceConfigUntangler::Message:0x000000014884a5f0>)
+Object: Associated person (#<CspaceConfigUntangler::Message:0x000000014884a5f0>)
+Object: Content person (#<CspaceConfigUntangler::Message:0x000000014884ae10>)
 Object: Field collector
 Object: Measured by
 Object: Owner
 Object: Production person
-Object: Taxonomic identification by (Identification by)
+Object: Taxonomic identification by (#<CspaceConfigUntangler::Message:0x000000014884b4f0>)
 Organization: Contact name
 Person: Other information author
 Place: Georeferenced by
 Place: Owner
 Taxon: Author name
 Transport: Courier name
-Transport: Customs broker contact (Customs broker)
-Transport: Customs broker name (Customs broker)
+Transport: Customs broker contact (#<CspaceConfigUntangler::Message:0x000000013d249120>)
+Transport: Customs broker name (#<CspaceConfigUntangler::Message:0x000000013d249120>)
 Transport: Shipping quote provider
-Transport: Transport authorizer (Authorization)
-Transport: Transporter contact (Transporter)
-Transport: Transporter name (Transporter)
+Transport: Transport authorizer (#<CspaceConfigUntangler::Message:0x000000013d249620>)
+Transport: Transporter contact (#<CspaceConfigUntangler::Message:0x000000013d249710>)
+Transport: Transporter name (#<CspaceConfigUntangler::Message:0x000000013d249710>)
 Use of Collections: Authorized by
 Use of Collections: Staff name
 Use of Collections: User name
@@ -958,10 +1402,10 @@ herbarium_3-0-0,person,person/ulan,y,8,"Citation: Agent name
 Exhibition: Organizer
 Exhibition: Sponsor
 Exhibition: Working group member name
-Insurance/Indemnity: Authorizer (Authorization)
+Insurance/Indemnity: Authorizer (#<CspaceConfigUntangler::Message:0x000000012774fbf8>)
 Insurance/Indemnity: Insurer/indemnifier
 Insurance/Indemnity: Quote provider
-Object: Content person"
+Object: Content person (#<CspaceConfigUntangler::Message:0x000000014884ae10>)"
 herbarium_3-0-0,place,place/local,y,15,"Citation: Publication place
 Exhibition: Venue name
 Intake: Current location
@@ -971,8 +1415,8 @@ Person: Birth place supplied
 Place: Address country
 Place: Address municipality
 Place: Address state/province
-Transport: Arrival point (Arrival)
-Transport: Departure point (Departure)
+Transport: Arrival point (#<CspaceConfigUntangler::Message:0x000000013d2493f0>)
+Transport: Departure point (#<CspaceConfigUntangler::Message:0x000000013d2494e0>)
 Use of Collections: Location
 Work: Address country
 Work: Address municipality
@@ -998,33 +1442,33 @@ Loan Out: Item returned new determination
 Loan Out: Taxonomy
 Object: Associated taxon name
 Object: Hybrid parent name
-Object: Taxonomic identification scientific name (Taxonomic identification)
+Object: Taxonomic identification scientific name (#<CspaceConfigUntangler::Message:0x000000014884b680>)
 Object: Type specimen verified basionym
 Taxon: Basionym
 Taxon: Family
 Taxon: Related term name"
 herbarium_3-0-0,work,work/cona,n,0,""
 herbarium_3-0-0,work,work/local,y,1,Object: Named collection
-anthro_9-1-0,chronology,chronology/era,y,9,"Chronology: Associated event/era
+ohc_3-0-0,chronology,chronology/era,y,9,"Chronology: Associated event/era
 NAGPRA Inventory: Time period era
-Object: Associated controlled event or period/era
-Object: Content controlled event or period/era
+Object: Associated controlled event or period/era (#<CspaceConfigUntangler::Message:0x000000014800fd90>)
+Object: Content controlled event or period/era (#<CspaceConfigUntangler::Message:0x0000000147e22320>)
 Object: Production era
 Person: Associated event/era
 Place: Associated event/era
 Repatriation Request: Time period era
 Summary Documentation: Time period era"
-anthro_9-1-0,chronology,chronology/event,y,6,"Chronology: Associated event/era
-Object: Associated controlled event or period/era
-Object: Content controlled event or period/era
+ohc_3-0-0,chronology,chronology/event,y,6,"Chronology: Associated event/era
+Object: Associated controlled event or period/era (#<CspaceConfigUntangler::Message:0x000000014800fd90>)
+Object: Content controlled event or period/era (#<CspaceConfigUntangler::Message:0x0000000147e22320>)
 Object: Field collection event
 Person: Associated event/era
 Place: Associated event/era"
-anthro_9-1-0,chronology,chronology/fieldcollection,y,4,"Chronology: Associated event/era
+ohc_3-0-0,chronology,chronology/fieldcollection,y,4,"Chronology: Associated event/era
 Object: Field collection event
 Person: Associated event/era
 Place: Associated event/era"
-anthro_9-1-0,citation,citation/local,y,36,"Chronology: Alternative date citation
+ohc_3-0-0,citation,citation/local,y,36,"Chronology: Alternative date citation
 Chronology: Associated concept citation
 Chronology: Associated event/era citation
 Chronology: Associated organization citation
@@ -1032,20 +1476,20 @@ Chronology: Associated people citation
 Chronology: Associated person citation
 Chronology: Associated place citation
 Chronology: Resource identifier citation
-Chronology: Term source name (Source)
-Citation: Term source name (Source)
-Concept: Term source name (Source)
+Chronology: Term source name (#<CspaceConfigUntangler::Message:0x0000000146b030c8>)
+Citation: Term source name (#<CspaceConfigUntangler::Message:0x0000000146864a10>)
+Concept: Term source name (#<CspaceConfigUntangler::Message:0x000000013b0889a0>)
 Exhibition: Bibliographic reference
 Object: Reference
-Organization: Term source name (Source)
+Organization: Term source name (#<CspaceConfigUntangler::Message:0x0000000125d6a4b8>)
 Person: Associated concept citation
 Person: Associated event/era citation
 Person: Associated organization citation
 Person: Associated people citation
 Person: Associated person citation
 Person: Associated place citation
-Person: Term source name (Source)
-Place: Assertion reference name
+Person: Term source name (#<CspaceConfigUntangler::Message:0x000000014ec00478>)
+Place: Assertion reference name (#<CspaceConfigUntangler::Message:0x00000001467aefd0>)
 Place: Associated concept citation
 Place: Associated event/era citation
 Place: Associated organization citation
@@ -1053,14 +1497,14 @@ Place: Associated people citation
 Place: Associated person citation
 Place: Associated place citation
 Place: Published report reference
-Place: Term source name (Source)
+Place: Term source name (#<CspaceConfigUntangler::Message:0x00000001467af7a0>)
 Place: Unpublished manuscript reference
-Storage Location: Term source name (Source)
+Storage Location: Term source name (#<CspaceConfigUntangler::Message:0x0000000129048218>)
 Taxon: Citation
 Taxon: Common name source
-Taxon: Term source name (Source)
-Work: Term source name (Source)"
-anthro_9-1-0,citation,citation/worldcat,y,33,"Chronology: Alternative date citation
+Taxon: Term source name (#<CspaceConfigUntangler::Message:0x000000013ed85ab0>)
+Work: Term source name (#<CspaceConfigUntangler::Message:0x0000000139de2530>)"
+ohc_3-0-0,citation,citation/worldcat,y,33,"Chronology: Alternative date citation
 Chronology: Associated concept citation
 Chronology: Associated event/era citation
 Chronology: Associated organization citation
@@ -1068,36 +1512,36 @@ Chronology: Associated people citation
 Chronology: Associated person citation
 Chronology: Associated place citation
 Chronology: Resource identifier citation
-Chronology: Term source name (Source)
-Citation: Term source name (Source)
-Concept: Term source name (Source)
+Chronology: Term source name (#<CspaceConfigUntangler::Message:0x0000000146b030c8>)
+Citation: Term source name (#<CspaceConfigUntangler::Message:0x0000000146864a10>)
+Concept: Term source name (#<CspaceConfigUntangler::Message:0x000000013b0889a0>)
 Exhibition: Bibliographic reference
 Object: Reference
-Organization: Term source name (Source)
+Organization: Term source name (#<CspaceConfigUntangler::Message:0x0000000125d6a4b8>)
 Person: Associated concept citation
 Person: Associated event/era citation
 Person: Associated organization citation
 Person: Associated people citation
 Person: Associated person citation
 Person: Associated place citation
-Person: Term source name (Source)
-Place: Assertion reference name
+Person: Term source name (#<CspaceConfigUntangler::Message:0x000000014ec00478>)
+Place: Assertion reference name (#<CspaceConfigUntangler::Message:0x00000001467aefd0>)
 Place: Associated concept citation
 Place: Associated event/era citation
 Place: Associated organization citation
 Place: Associated people citation
 Place: Associated person citation
 Place: Associated place citation
-Place: Term source name (Source)
-Storage Location: Term source name (Source)
+Place: Term source name (#<CspaceConfigUntangler::Message:0x00000001467af7a0>)
+Storage Location: Term source name (#<CspaceConfigUntangler::Message:0x0000000129048218>)
 Taxon: Citation
-Taxon: Term source name (Source)
-Work: Term source name (Source)"
-anthro_9-1-0,concept,concept/activity,y,4,"Chronology: Associated concept
+Taxon: Term source name (#<CspaceConfigUntangler::Message:0x000000013ed85ab0>)
+Work: Term source name (#<CspaceConfigUntangler::Message:0x0000000139de2530>)"
+ohc_3-0-0,concept,concept/activity,y,4,"Chronology: Associated concept
 Citation: Related term
 Person: Associated concept
 Place: Associated concept"
-anthro_9-1-0,concept,concept/archculture,y,9,"Chronology: Associated concept
+ohc_3-0-0,concept,concept/archculture,y,9,"Chronology: Associated concept
 NAGPRA Claim: Cultural group involved name
 NAGPRA Inventory: Cultural group name
 Object: Cultural determination culture
@@ -1106,51 +1550,53 @@ Person: Associated concept
 Place: Associated concept
 Repatriation Request: Cultural group name
 Summary Documentation: Cultural group name"
-anthro_9-1-0,concept,concept/associated,y,9,"Chronology: Associated concept
+ohc_3-0-0,concept,concept/associated,y,9,"Chronology: Associated concept
 Chronology: Associated people
 Citation: Related term
-Object: Associated concept
-Object: Content concept
+Object: Associated concept (#<CspaceConfigUntangler::Message:0x000000014800fd90>)
+Object: Content concept (#<CspaceConfigUntangler::Message:0x0000000147e22320>)
 Person: Associated concept
 Person: Associated people
 Place: Associated concept
 Place: Associated people"
-anthro_9-1-0,concept,concept/ethculture,y,7,"Intake: Field collection source
+ohc_3-0-0,concept,concept/ethculture,y,8,"Intake: Field collection source
 NAGPRA Claim: Cultural group involved name
 NAGPRA Inventory: Cultural group name
+Object: Associated cultural group
 Object: Cultural determination culture
 Object: Production cultural group
 Repatriation Request: Cultural group name
 Summary Documentation: Cultural group name"
-anthro_9-1-0,concept,concept/ethfilecode,y,1,Object: Function
-anthro_9-1-0,concept,concept/material,y,6,"Chronology: Associated concept
+ohc_3-0-0,concept,concept/ethfilecode,y,1,Object: Function
+ohc_3-0-0,concept,concept/material,y,6,"Chronology: Associated concept
 Citation: Related term
-Object: Content concept
+Object: Material
 Object: Material controlled
 Person: Associated concept
 Place: Associated concept"
-anthro_9-1-0,concept,concept/nomenclature,y,4,"Chronology: Associated concept
+ohc_3-0-0,concept,concept/nomenclature,y,5,"Chronology: Associated concept
+Object: Object name
 Object: Object name controlled
 Person: Associated concept
 Place: Associated concept"
-anthro_9-1-0,concept,concept/occasion,y,4,"Chronology: Associated concept
+ohc_3-0-0,concept,concept/occasion,y,4,"Chronology: Associated concept
 Person: Associated concept
 Place: Associated concept
 Use of Collections: Occasion"
-anthro_9-1-0,location,location/local,y,7,"Exhibition: Venue name
+ohc_3-0-0,location,location/local,y,7,"Exhibition: Venue name
 Intake: Current location
 Intake: Normal location
-Location/Movement/Inventory: Current location
+Location/Movement/Inventory: Current location (#<CspaceConfigUntangler::Message:0x00000001284a0dc0>)
 Location/Movement/Inventory: Normal location
 Object: Computed current location
 Use of Collections: Location"
-anthro_9-1-0,location,location/offsite,y,6,"Exhibition: Venue name
+ohc_3-0-0,location,location/offsite,y,6,"Exhibition: Venue name
 Intake: Current location
 Intake: Normal location
-Location/Movement/Inventory: Current location
+Location/Movement/Inventory: Current location (#<CspaceConfigUntangler::Message:0x00000001284a0dc0>)
 Location/Movement/Inventory: Normal location
 Object: Computed current location"
-anthro_9-1-0,organization,organization/local,y,99,"Acquisitions: Acquisition source
+ohc_3-0-0,organization,organization/local,y,97,"Acquisitions: Acquisition source
 Acquisitions: Funding source
 Acquisitions: Owner
 Chronology: Associated organization
@@ -1182,8 +1628,8 @@ Intake: Insurer
 Intake: Normal location
 Intake: Valuer
 Loan In: Lender name
-Loan Out: Borrower name (Borrower)
-Location/Movement/Inventory: Current location
+Loan Out: Borrower name (#<CspaceConfigUntangler::Message:0x000000012934b5a0>)
+Location/Movement/Inventory: Current location (#<CspaceConfigUntangler::Message:0x00000001284a0dc0>)
 Location/Movement/Inventory: Normal location
 Media Handling: Contributor
 Media Handling: Creator
@@ -1195,33 +1641,31 @@ NAGPRA Claim: Claim filed on behalf of
 NAGPRA Inventory: Inventory cultural affiliation determined by
 NAGPRA Inventory: Inventory cultural affiliation tribe/nation
 NAGPRA Inventory: Parties involved on behalf of
-Object Exit (Legacy): Current owner
-Object Exit (Legacy): Depositor
 Object Exit (Legacy): Disposal proposed recipient
 Object Exit (Legacy): Disposal recipient
 Object Exit: Exit agent name
 Object Exit: Owner after exit
 Object: Access limitation requested on behalf of
-Object: Associated event organization
-Object: Associated organization
+Object: Associated event organization (#<CspaceConfigUntangler::Message:0x000000014800fd90>)
+Object: Associated organization (#<CspaceConfigUntangler::Message:0x000000014800fd90>)
 Object: Computed current location
-Object: Content organization
+Object: Content organization (#<CspaceConfigUntangler::Message:0x0000000147e22320>)
 Object: Cultural determination by
 Object: Field collection source
 Object: Field collector
 Object: Measured by
 Object: NAGPRA report filed by
 Object: NAGPRA report filed with
-Object: Non-textual inscription inscriber
+Object: Non-textual inscription inscriber (#<CspaceConfigUntangler::Message:0x0000000147e20ca0>)
 Object: Previous owner name
 Object: Production organization
 Object: Right holder contact
 Object: Right holder name
-Object: Taxonomic identification by (Identification by)
-Object: Taxonomic identification institution (Identification by)
-Object: Textual inscription inscriber
+Object: Taxonomic identification by (#<CspaceConfigUntangler::Message:0x000000014800e8a0>>#<CspaceConfigUntangler::Message:0x0000000147e23450>)
+Object: Taxonomic identification institution (#<CspaceConfigUntangler::Message:0x000000014800e8a0>>#<CspaceConfigUntangler::Message:0x0000000147e23450>)
+Object: Textual inscription inscriber (#<CspaceConfigUntangler::Message:0x0000000147e21ab0>)
 Person: Associated organization
-Place: Assertion by
+Place: Assertion by (#<CspaceConfigUntangler::Message:0x00000001467aefd0>)
 Place: Associated organization
 Place: Georeferenced by
 Place: Owner
@@ -1235,12 +1679,12 @@ Summary Documentation: Party involved on behalf of
 Summary Documentation: Summary affiliation determined by
 Summary Documentation: Summary affiliation tribe/nation
 Taxon: Author name
-Transport: Arrival point (Arrival)
+Transport: Arrival point (#<CspaceConfigUntangler::Message:0x000000012708a2a0>)
 Transport: Courier name
-Transport: Customs broker name (Customs broker)
-Transport: Departure point (Departure)
+Transport: Customs broker name (#<CspaceConfigUntangler::Message:0x0000000127089e40>)
+Transport: Departure point (#<CspaceConfigUntangler::Message:0x000000012708a4d0>)
 Transport: Shipping quote provider
-Transport: Transporter name (Transporter)
+Transport: Transporter name (#<CspaceConfigUntangler::Message:0x000000012708a6b0>)
 Use of Collections: Authorized by
 Use of Collections: Location
 Use of Collections: Staff name
@@ -1249,20 +1693,19 @@ Use of Collections: User name
 Valuation Control: Source
 Work: Creator name
 Work: Publisher name"
-anthro_9-1-0,organization,organization/ulan,y,11,"Chronology: Associated organization
+ohc_3-0-0,organization,organization/ulan,y,11,"Chronology: Associated organization
 Exhibition: Organizer
 Exhibition: Sponsor
 Exhibition: Venue name
 Exhibition: Working group member name
 Insurance/Indemnity: Insurer/indemnifier
 Insurance/Indemnity: Quote provider
-Object: Content organization
+Object: Content organization (#<CspaceConfigUntangler::Message:0x0000000147e22320>)
 Person: Associated organization
-Place: Assertion by
+Place: Assertion by (#<CspaceConfigUntangler::Message:0x00000001467aefd0>)
 Place: Associated organization"
-anthro_9-1-0,person,person/local,y,127,"Acquisitions: Acquisition source
-Acquisitions: Approval individual (Approval group)
-Acquisitions: Authorizer (Authorization)
+ohc_3-0-0,person,person/local,y,123,"Acquisitions: Acquisition source
+Acquisitions: Approval individual (#<CspaceConfigUntangler::Message:0x000000012612ec48>)
 Acquisitions: Funding source
 Acquisitions: Owner
 Chronology: Associated person
@@ -1276,7 +1719,7 @@ Conservation: Examination staff
 Conservation: Other treatment party name
 Consultation: Consultation log recipient
 Consultation: Parties involved person
-Deaccession: Deaccession approval individual (Deaccession approval group)
+Deaccession: Deaccession approval individual (#<CspaceConfigUntangler::Message:0x000000013c7aca50>)
 Deaccession: Exit recipient
 Duty of Care: Duty of care detail determined by
 Duty of Care: Party involved person
@@ -1289,10 +1732,10 @@ Held-in-Trust: Correspondence recipient
 Held-in-Trust: Correspondence sender
 Held-in-Trust: Held-in-Trust status individual
 Held-in-Trust: Owner
-Insurance/Indemnity: Authorizer (Authorization)
+Insurance/Indemnity: Authorizer (#<CspaceConfigUntangler::Message:0x000000012b6b1508>)
 Insurance/Indemnity: Insurer/indemnifier
 Insurance/Indemnity: Quote provider
-Intake: Approval individual (Approval group)
+Intake: Approval individual (#<CspaceConfigUntangler::Message:0x000000013d047228>)
 Intake: Condition check assessor
 Intake: Current owner
 Intake: Depositor name
@@ -1300,17 +1743,17 @@ Intake: Field collection source
 Intake: Field collector
 Intake: Insurer
 Intake: Valuer
-Loan In: Borrower authorizer (Borrower)
-Loan In: Borrower contact (Borrower)
+Loan In: Borrower authorizer (#<CspaceConfigUntangler::Message:0x000000012966a380>)
+Loan In: Borrower contact (#<CspaceConfigUntangler::Message:0x000000012966a380>)
 Loan In: Lender authorizer
 Loan In: Lender contact
 Loan In: Lender name
 Loan In: Loan status individual
-Loan Out: Borrower authorizer (Borrower)
-Loan Out: Borrower contact (Borrower)
-Loan Out: Borrower name (Borrower)
-Loan Out: Lender authorizer (Lender)
-Loan Out: Lender contact (Lender)
+Loan Out: Borrower authorizer (#<CspaceConfigUntangler::Message:0x000000012934b5a0>)
+Loan Out: Borrower contact (#<CspaceConfigUntangler::Message:0x000000012934b5a0>)
+Loan Out: Borrower name (#<CspaceConfigUntangler::Message:0x000000012934b5a0>)
+Loan Out: Lender authorizer (#<CspaceConfigUntangler::Message:0x000000012934b4b0>)
+Loan Out: Lender contact (#<CspaceConfigUntangler::Message:0x000000012934b4b0>)
 Loan Out: Loan status individual
 Location/Movement/Inventory: Inventory contact
 Location/Movement/Inventory: Movement contact
@@ -1324,10 +1767,7 @@ NAGPRA Claim: Claim filed on behalf of
 NAGPRA Inventory: Inventory cultural affiliation determined by
 NAGPRA Inventory: Inventory documentation status individual
 NAGPRA Inventory: Parties involved person
-Object Exit (Legacy): Current owner
 Object Exit (Legacy): Deaccession approval individual
-Object Exit (Legacy): Deaccession authorizer
-Object Exit (Legacy): Depositor
 Object Exit (Legacy): Disposal proposed recipient
 Object Exit (Legacy): Disposal recipient
 Object Exit: Approval status individual
@@ -1335,30 +1775,30 @@ Object Exit: Exit agent name
 Object Exit: Owner after exit
 Object: Access limitation requestor
 Object: Annotation author
-Object: Associated event person
-Object: Associated person
-Object: Content person
+Object: Associated event person (#<CspaceConfigUntangler::Message:0x000000014800fd90>)
+Object: Associated person (#<CspaceConfigUntangler::Message:0x000000014800fd90>)
+Object: Content person (#<CspaceConfigUntangler::Message:0x0000000147e22320>)
 Object: Cultural determination by
 Object: Field collection source
 Object: Field collector
 Object: Measured by
 Object: NAGPRA report filed by
 Object: NAGPRA report filed with
-Object: Non-textual inscription inscriber
+Object: Non-textual inscription inscriber (#<CspaceConfigUntangler::Message:0x0000000147e20ca0>)
 Object: Object count counted by
 Object: Previous owner name
 Object: Production person
 Object: Right holder contact
 Object: Right holder name
-Object: Taxonomic identification by (Identification by)
-Object: Textual inscription inscriber
+Object: Taxonomic identification by (#<CspaceConfigUntangler::Message:0x000000014800e8a0>>#<CspaceConfigUntangler::Message:0x0000000147e23450>)
+Object: Textual inscription inscriber (#<CspaceConfigUntangler::Message:0x0000000147e21ab0>)
 Organization: Contact name
 Osteology: Age estimate analyst
 Osteology: Inventory analyst
 Osteology: Sex determination analyst
 Person: Associated person
 Person: Other information author
-Place: Assertion by
+Place: Assertion by (#<CspaceConfigUntangler::Message:0x00000001467aefd0>)
 Place: Associated person
 Place: Georeferenced by
 Place: Owner
@@ -1375,36 +1815,36 @@ Summary Documentation: Summary affiliation determined by
 Summary Documentation: Summary documentation status individual
 Taxon: Author name
 Transport: Courier name
-Transport: Customs broker contact (Customs broker)
-Transport: Customs broker name (Customs broker)
+Transport: Customs broker contact (#<CspaceConfigUntangler::Message:0x0000000127089e40>)
+Transport: Customs broker name (#<CspaceConfigUntangler::Message:0x0000000127089e40>)
 Transport: Shipping quote provider
-Transport: Transport authorizer (Authorization)
-Transport: Transporter contact (Transporter)
-Transport: Transporter name (Transporter)
+Transport: Transport authorizer (#<CspaceConfigUntangler::Message:0x000000012708a5c0>)
+Transport: Transporter contact (#<CspaceConfigUntangler::Message:0x000000012708a6b0>)
+Transport: Transporter name (#<CspaceConfigUntangler::Message:0x000000012708a6b0>)
 Use of Collections: Authorized by
 Use of Collections: Staff name
 Use of Collections: User name
 Valuation Control: Source
 Work: Creator name
 Work: Publisher name"
-anthro_9-1-0,person,person/ulan,y,13,"Chronology: Associated person
+ohc_3-0-0,person,person/ulan,y,13,"Chronology: Associated person
 Citation: Agent name
 Exhibition: Organizer
 Exhibition: Sponsor
 Exhibition: Working group member name
-Insurance/Indemnity: Authorizer (Authorization)
+Insurance/Indemnity: Authorizer (#<CspaceConfigUntangler::Message:0x000000012b6b1508>)
 Insurance/Indemnity: Insurer/indemnifier
 Insurance/Indemnity: Quote provider
-Object: Content person
+Object: Content person (#<CspaceConfigUntangler::Message:0x0000000147e22320>)
 Object: Object count counted by
 Person: Associated person
-Place: Assertion by
+Place: Assertion by (#<CspaceConfigUntangler::Message:0x00000001467aefd0>)
 Place: Associated person"
-anthro_9-1-0,place,place/archaeological,y,4,"NAGPRA Inventory: Archaeological site name
+ohc_3-0-0,place,place/archaeological,y,4,"NAGPRA Inventory: Archaeological site name
 Object: Field collection site
 Repatriation Request: Archaeological site name
 Summary Documentation: Archaeological site name"
-anthro_9-1-0,place,place/local,y,27,"Chronology: Alternative date spatial coverage
+ohc_3-0-0,place,place/local,y,27,"Chronology: Alternative date spatial coverage
 Chronology: Associated place
 Chronology: Spatial coverage
 Citation: Publication place
@@ -1425,13 +1865,13 @@ Place: Address state/province
 Place: Associated place
 Repatriation Request: Place represented name
 Summary Documentation: Place represented name
-Transport: Arrival point (Arrival)
-Transport: Departure point (Departure)
+Transport: Arrival point (#<CspaceConfigUntangler::Message:0x000000012708a2a0>)
+Transport: Departure point (#<CspaceConfigUntangler::Message:0x000000012708a4d0>)
 Use of Collections: Location
 Work: Address country
 Work: Address municipality
 Work: Address state/province"
-anthro_9-1-0,place,place/tgn,y,15,"Chronology: Alternative date spatial coverage
+ohc_3-0-0,place,place/tgn,y,15,"Chronology: Alternative date spatial coverage
 Chronology: Associated place
 Chronology: Spatial coverage
 Citation: Publication place
@@ -1446,59 +1886,60 @@ Place: Associated place
 Work: Address country
 Work: Address municipality
 Work: Address state/province"
-anthro_9-1-0,taxon,taxon/common,n,0,""
-anthro_9-1-0,taxon,taxon/local,y,1,Object: Taxonomic identification scientific name (Taxonomic identification)
-anthro_9-1-0,work,work/cona,n,0,""
-anthro_9-1-0,work,work/local,y,1,Object: Named collection
-bonsai_7-1-0,citation,citation/local,y,12,"Citation: Term source name (Source)
-Concept: Term source name (Source)
+ohc_3-0-0,taxon,taxon/common,n,0,""
+ohc_3-0-0,taxon,taxon/local,y,1,Object: Taxonomic identification scientific name (#<CspaceConfigUntangler::Message:0x000000014800e8a0>>#<CspaceConfigUntangler::Message:0x0000000147e235e0>)
+ohc_3-0-0,work,work/cona,n,0,""
+ohc_3-0-0,work,work/local,y,1,Object: Named collection
+bonsai_7-1-0,citation,citation/local,y,12,"Citation: Term source name (#<CspaceConfigUntangler::Message:0x000000014e8078f8>)
+Concept: Term source name (#<CspaceConfigUntangler::Message:0x0000000137b0dac8>)
 Exhibition: Bibliographic reference
 Object: Reference
-Organization: Term source name (Source)
-Person: Term source name (Source)
-Place: Term source name (Source)
-Storage Location: Term source name (Source)
+Organization: Term source name (#<CspaceConfigUntangler::Message:0x000000014ec04438>)
+Person: Term source name (#<CspaceConfigUntangler::Message:0x000000014ddae118>)
+Place: Term source name (#<CspaceConfigUntangler::Message:0x0000000146facdb8>)
+Storage Location: Term source name (#<CspaceConfigUntangler::Message:0x000000012700c8a0>)
 Taxon: Citation
 Taxon: Common name source
-Taxon: Term source name (Source)
-Work: Term source name (Source)"
-bonsai_7-1-0,citation,citation/worldcat,y,11,"Citation: Term source name (Source)
-Concept: Term source name (Source)
+Taxon: Term source name (#<CspaceConfigUntangler::Message:0x0000000134ef7948>)
+Work: Term source name (#<CspaceConfigUntangler::Message:0x00000001310b74f8>)"
+bonsai_7-1-0,citation,citation/worldcat,y,11,"Citation: Term source name (#<CspaceConfigUntangler::Message:0x000000014e8078f8>)
+Concept: Term source name (#<CspaceConfigUntangler::Message:0x0000000137b0dac8>)
 Exhibition: Bibliographic reference
 Object: Reference
-Organization: Term source name (Source)
-Person: Term source name (Source)
-Place: Term source name (Source)
-Storage Location: Term source name (Source)
+Organization: Term source name (#<CspaceConfigUntangler::Message:0x000000014ec04438>)
+Person: Term source name (#<CspaceConfigUntangler::Message:0x000000014ddae118>)
+Place: Term source name (#<CspaceConfigUntangler::Message:0x0000000146facdb8>)
+Storage Location: Term source name (#<CspaceConfigUntangler::Message:0x000000012700c8a0>)
 Taxon: Citation
-Taxon: Term source name (Source)
-Work: Term source name (Source)"
+Taxon: Term source name (#<CspaceConfigUntangler::Message:0x0000000134ef7948>)
+Work: Term source name (#<CspaceConfigUntangler::Message:0x00000001310b74f8>)"
 bonsai_7-1-0,concept,concept/activity,y,1,Citation: Related term
 bonsai_7-1-0,concept,concept/archculture,n,0,""
 bonsai_7-1-0,concept,concept/associated,y,3,"Citation: Related term
-Object: Associated concept
-Object: Content concept"
+Object: Associated concept (#<CspaceConfigUntangler::Message:0x000000014e303a28>)
+Object: Content concept (#<CspaceConfigUntangler::Message:0x000000014e3043d8>)"
 bonsai_7-1-0,concept,concept/ethculture,y,1,Intake: Field collection source
 bonsai_7-1-0,concept,concept/material,y,2,"Citation: Related term
-Object: Content concept"
+Object: Content concept (#<CspaceConfigUntangler::Message:0x000000014e3043d8>)"
 bonsai_7-1-0,concept,concept/nomenclature,n,0,""
 bonsai_7-1-0,concept,concept/occasion,y,1,Use of Collections: Occasion
 bonsai_7-1-0,location,location/local,y,7,"Exhibition: Venue name
 Intake: Current location
 Intake: Normal location
-Location/Movement/Inventory: Current location
+Location/Movement/Inventory: Current location (#<CspaceConfigUntangler::Message:0x000000014f4e4350>)
 Location/Movement/Inventory: Normal location
 Object: Computed current location
 Use of Collections: Location"
 bonsai_7-1-0,location,location/offsite,y,6,"Exhibition: Venue name
 Intake: Current location
 Intake: Normal location
-Location/Movement/Inventory: Current location
+Location/Movement/Inventory: Current location (#<CspaceConfigUntangler::Message:0x000000014f4e4350>)
 Location/Movement/Inventory: Normal location
 Object: Computed current location"
-bonsai_7-1-0,organization,organization/local,y,63,"Acquisitions: Acquisition source
+bonsai_7-1-0,organization,organization/local,y,64,"Acquisitions: Acquisition source
 Acquisitions: Funding source
 Acquisitions: Owner
+Acquisitions: Parties involved on behalf of
 Citation: Agent name
 Citation: Publisher
 Condition Check: Checker/assessor
@@ -1519,8 +1960,8 @@ Intake: Insurer
 Intake: Normal location
 Intake: Valuer
 Loan In: Lender name
-Loan Out: Borrower name (Borrower)
-Location/Movement/Inventory: Current location
+Loan Out: Borrower name (#<CspaceConfigUntangler::Message:0x000000012774a478>)
+Location/Movement/Inventory: Current location (#<CspaceConfigUntangler::Message:0x000000014f4e4350>)
 Location/Movement/Inventory: Normal location
 Media Handling: Contributor
 Media Handling: Creator
@@ -1531,26 +1972,26 @@ Object Exit (Legacy): Current owner
 Object Exit (Legacy): Depositor
 Object Exit (Legacy): Disposal proposed recipient
 Object Exit (Legacy): Disposal recipient
-Object: Associated event organization
-Object: Associated organization
+Object: Associated event organization (#<CspaceConfigUntangler::Message:0x000000014e303a28>)
+Object: Associated organization (#<CspaceConfigUntangler::Message:0x000000014e303a28>)
 Object: Computed current location
-Object: Content organization
+Object: Content organization (#<CspaceConfigUntangler::Message:0x000000014e3043d8>)
 Object: Field collection source
 Object: Field collector
 Object: Measured by
-Object: Non-textual inscription inscriber
+Object: Non-textual inscription inscriber (#<CspaceConfigUntangler::Message:0x000000014e304068>)
 Object: Owner
 Object: Production organization
-Object: Textual inscription inscriber
+Object: Textual inscription inscriber (#<CspaceConfigUntangler::Message:0x000000014e3041f8>)
 Place: Georeferenced by
 Place: Owner
 Taxon: Author name
-Transport: Arrival point (Arrival)
+Transport: Arrival point (#<CspaceConfigUntangler::Message:0x0000000124cec050>)
 Transport: Courier name
-Transport: Customs broker name (Customs broker)
-Transport: Departure point (Departure)
+Transport: Customs broker name (#<CspaceConfigUntangler::Message:0x0000000124cebdd0>)
+Transport: Departure point (#<CspaceConfigUntangler::Message:0x0000000124cec140>)
 Transport: Shipping quote provider
-Transport: Transporter name (Transporter)
+Transport: Transporter name (#<CspaceConfigUntangler::Message:0x0000000124cec320>)
 Use of Collections: Authorized by
 Use of Collections: Location
 Use of Collections: Staff name
@@ -1565,30 +2006,31 @@ Exhibition: Venue name
 Exhibition: Working group member name
 Insurance/Indemnity: Insurer/indemnifier
 Insurance/Indemnity: Quote provider
-Object: Content organization"
-bonsai_7-1-0,person,person/local,y,85,"Acquisitions: Acquisition source
-Acquisitions: Approval individual (Approval group)
-Acquisitions: Authorizer (Authorization)
+Object: Content organization (#<CspaceConfigUntangler::Message:0x000000014e3043d8>)"
+bonsai_7-1-0,person,person/local,y,86,"Acquisitions: Acquisition source
+Acquisitions: Approval individual (#<CspaceConfigUntangler::Message:0x000000014758c6c0>)
+Acquisitions: Authorizer (#<CspaceConfigUntangler::Message:0x00000001476c5460>)
 Acquisitions: Funding source
 Acquisitions: Owner
+Acquisitions: Parties involved person
 Citation: Agent name
 Condition Check: Checker/assessor
 Conservation: Approved by
 Conservation: Destructive analysis sample taken by
-Conservation: Fertilizer applied by
+Conservation: Fertilizer applied by (#<CspaceConfigUntangler::Message:0x000000012bc9df70>)
 Conservation: Other treatment party name
-Conservation: Pest/disease identified by
-Conservation: Pest/disease treated by
-Conservation: Repotting performed by
+Conservation: Pest/disease identified by (#<CspaceConfigUntangler::Message:0x000000012bc9de80>)
+Conservation: Pest/disease treated by (#<CspaceConfigUntangler::Message:0x000000012bc9de80>)
+Conservation: Repotting performed by (#<CspaceConfigUntangler::Message:0x000000012bc9dd90>)
 Conservation: Treatment performed by
 Exhibition: Organizer
 Exhibition: Sponsor
 Exhibition: Working group member name
 Group: Group owner
-Insurance/Indemnity: Authorizer (Authorization)
+Insurance/Indemnity: Authorizer (#<CspaceConfigUntangler::Message:0x00000001294e23f0>)
 Insurance/Indemnity: Insurer/indemnifier
 Insurance/Indemnity: Quote provider
-Intake: Approval individual (Approval group)
+Intake: Approval individual (#<CspaceConfigUntangler::Message:0x000000014ce69dd8>)
 Intake: Condition check assessor
 Intake: Current owner
 Intake: Depositor name
@@ -1596,17 +2038,17 @@ Intake: Field collection source
 Intake: Field collector
 Intake: Insurer
 Intake: Valuer
-Loan In: Borrower authorizer (Borrower)
-Loan In: Borrower contact (Borrower)
+Loan In: Borrower authorizer (#<CspaceConfigUntangler::Message:0x0000000127d85748>)
+Loan In: Borrower contact (#<CspaceConfigUntangler::Message:0x0000000127d85748>)
 Loan In: Lender authorizer
 Loan In: Lender contact
 Loan In: Lender name
 Loan In: Loan status individual
-Loan Out: Borrower authorizer (Borrower)
-Loan Out: Borrower contact (Borrower)
-Loan Out: Borrower name (Borrower)
-Loan Out: Lender authorizer (Lender)
-Loan Out: Lender contact (Lender)
+Loan Out: Borrower authorizer (#<CspaceConfigUntangler::Message:0x000000012774a478>)
+Loan Out: Borrower contact (#<CspaceConfigUntangler::Message:0x000000012774a478>)
+Loan Out: Borrower name (#<CspaceConfigUntangler::Message:0x000000012774a478>)
+Loan Out: Lender authorizer (#<CspaceConfigUntangler::Message:0x000000012774a338>)
+Loan Out: Lender contact (#<CspaceConfigUntangler::Message:0x000000012774a338>)
 Loan Out: Loan status individual
 Location/Movement/Inventory: Inventory contact
 Location/Movement/Inventory: Movement contact
@@ -1623,28 +2065,28 @@ Object Exit (Legacy): Disposal proposed recipient
 Object Exit (Legacy): Disposal recipient
 Object: Annotation author
 Object: Assigned volunteer
-Object: Associated event person
-Object: Associated person
-Object: Content person
+Object: Associated event person (#<CspaceConfigUntangler::Message:0x000000014e303a28>)
+Object: Associated person (#<CspaceConfigUntangler::Message:0x000000014e303a28>)
+Object: Content person (#<CspaceConfigUntangler::Message:0x000000014e3043d8>)
 Object: Field collection source
 Object: Field collector
 Object: Measured by
-Object: Non-textual inscription inscriber
+Object: Non-textual inscription inscriber (#<CspaceConfigUntangler::Message:0x000000014e304068>)
 Object: Owner
 Object: Production person
-Object: Textual inscription inscriber
+Object: Textual inscription inscriber (#<CspaceConfigUntangler::Message:0x000000014e3041f8>)
 Organization: Contact name
 Person: Other information author
 Place: Georeferenced by
 Place: Owner
 Taxon: Author name
 Transport: Courier name
-Transport: Customs broker contact (Customs broker)
-Transport: Customs broker name (Customs broker)
+Transport: Customs broker contact (#<CspaceConfigUntangler::Message:0x0000000124cebdd0>)
+Transport: Customs broker name (#<CspaceConfigUntangler::Message:0x0000000124cebdd0>)
 Transport: Shipping quote provider
-Transport: Transport authorizer (Authorization)
-Transport: Transporter contact (Transporter)
-Transport: Transporter name (Transporter)
+Transport: Transport authorizer (#<CspaceConfigUntangler::Message:0x0000000124cec230>)
+Transport: Transporter contact (#<CspaceConfigUntangler::Message:0x0000000124cec320>)
+Transport: Transporter name (#<CspaceConfigUntangler::Message:0x0000000124cec320>)
 Use of Collections: Authorized by
 Use of Collections: Staff name
 Use of Collections: User name
@@ -1655,31 +2097,31 @@ bonsai_7-1-0,person,person/ulan,y,9,"Citation: Agent name
 Exhibition: Organizer
 Exhibition: Sponsor
 Exhibition: Working group member name
-Insurance/Indemnity: Authorizer (Authorization)
+Insurance/Indemnity: Authorizer (#<CspaceConfigUntangler::Message:0x00000001294e23f0>)
 Insurance/Indemnity: Insurer/indemnifier
 Insurance/Indemnity: Quote provider
 Object: Assigned volunteer
-Object: Content person"
+Object: Content person (#<CspaceConfigUntangler::Message:0x000000014e3043d8>)"
 bonsai_7-1-0,place,place/local,y,17,"Citation: Publication place
 Exhibition: Venue name
 Intake: Current location
 Intake: Normal location
-Object: Content place
+Object: Content place (#<CspaceConfigUntangler::Message:0x000000014e3043d8>)
 Object: Field collection place
 Object: Production place
 Person: Birth place supplied
 Place: Address country
 Place: Address municipality
 Place: Address state/province
-Transport: Arrival point (Arrival)
-Transport: Departure point (Departure)
+Transport: Arrival point (#<CspaceConfigUntangler::Message:0x0000000124cec050>)
+Transport: Departure point (#<CspaceConfigUntangler::Message:0x0000000124cec140>)
 Use of Collections: Location
 Work: Address country
 Work: Address municipality
 Work: Address state/province"
 bonsai_7-1-0,place,place/tgn,y,11,"Citation: Publication place
 Exhibition: Venue name
-Object: Content place
+Object: Content place (#<CspaceConfigUntangler::Message:0x000000014e3043d8>)
 Object: Field collection place
 Object: Production place
 Place: Address country
@@ -1692,63 +2134,165 @@ bonsai_7-1-0,taxon,taxon/common,y,1,Object: Scientific name
 bonsai_7-1-0,taxon,taxon/local,y,1,Object: Scientific name
 bonsai_7-1-0,work,work/cona,n,0,""
 bonsai_7-1-0,work,work/local,y,1,Object: Named collection
-publicart_7-0-1,citation,citation/local,y,7,"Citation: Term source name (Source)
-Concept: Term source name (Source)
-Organization: Term source name (Source)
-Person: Term source name (Source)
-Place: Term source name (Source)
-Storage Location: Term source name (Source)
-Work: Term source name (Source)"
-publicart_7-0-1,citation,citation/worldcat,y,7,"Citation: Term source name (Source)
-Concept: Term source name (Source)
-Organization: Term source name (Source)
-Person: Term source name (Source)
-Place: Term source name (Source)
-Storage Location: Term source name (Source)
-Work: Term source name (Source)"
-publicart_7-0-1,concept,concept/archculture,n,0,""
-publicart_7-0-1,concept,concept/associated,y,2,"Citation: Related term
-Object: Artwork tag"
-publicart_7-0-1,concept,concept/ethculture,n,0,""
-publicart_7-0-1,concept,concept/material,y,2,"Citation: Related term
-Object: Material"
-publicart_7-0-1,concept,concept/nomenclature,n,0,""
-publicart_7-0-1,concept,concept/occasion,n,0,""
-publicart_7-0-1,concept,concept/worktype,y,1,Object: Work type
-publicart_7-0-1,location,location/local,y,5,"Exhibition: Venue name
+fcart_8-2-0,chronology,chronology/era,y,6,"Chronology: Associated event/era
+Object: Associated controlled event or period/era (#<CspaceConfigUntangler::Message:0x000000014d3c1970>)
+Object: Content controlled event or period/era (#<CspaceConfigUntangler::Message:0x000000014d3c2460>)
+Object: Production era
+Person: Associated event/era
+Place: Associated event/era"
+fcart_8-2-0,chronology,chronology/event,y,5,"Chronology: Associated event/era
+Object: Associated controlled event or period/era (#<CspaceConfigUntangler::Message:0x000000014d3c1970>)
+Object: Content controlled event or period/era (#<CspaceConfigUntangler::Message:0x000000014d3c2460>)
+Person: Associated event/era
+Place: Associated event/era"
+fcart_8-2-0,citation,citation/local,y,30,"Chronology: Alternative date citation
+Chronology: Associated concept citation
+Chronology: Associated event/era citation
+Chronology: Associated organization citation
+Chronology: Associated people citation
+Chronology: Associated person citation
+Chronology: Associated place citation
+Chronology: Resource identifier citation
+Chronology: Term source name (#<CspaceConfigUntangler::Message:0x000000014850e850>)
+Citation: Term source name (#<CspaceConfigUntangler::Message:0x0000000147f2c630>)
+Concept: Term source name (#<CspaceConfigUntangler::Message:0x000000014d765658>)
+Exhibition: Bibliographic reference
+Object: Reference
+Organization: Term source name (#<CspaceConfigUntangler::Message:0x0000000129be9298>)
+Person: Associated concept citation
+Person: Associated event/era citation
+Person: Associated organization citation
+Person: Associated people citation
+Person: Associated person citation
+Person: Associated place citation
+Person: Term source name (#<CspaceConfigUntangler::Message:0x000000012a3a1698>)
+Place: Associated concept citation
+Place: Associated event/era citation
+Place: Associated organization citation
+Place: Associated people citation
+Place: Associated person citation
+Place: Associated place citation
+Place: Term source name (#<CspaceConfigUntangler::Message:0x00000001384286d0>)
+Storage Location: Term source name (#<CspaceConfigUntangler::Message:0x0000000128ee95c0>)
+Work: Term source name (#<CspaceConfigUntangler::Message:0x0000000126aeb560>)"
+fcart_8-2-0,citation,citation/worldcat,y,30,"Chronology: Alternative date citation
+Chronology: Associated concept citation
+Chronology: Associated event/era citation
+Chronology: Associated organization citation
+Chronology: Associated people citation
+Chronology: Associated person citation
+Chronology: Associated place citation
+Chronology: Resource identifier citation
+Chronology: Term source name (#<CspaceConfigUntangler::Message:0x000000014850e850>)
+Citation: Term source name (#<CspaceConfigUntangler::Message:0x0000000147f2c630>)
+Concept: Term source name (#<CspaceConfigUntangler::Message:0x000000014d765658>)
+Exhibition: Bibliographic reference
+Object: Reference
+Organization: Term source name (#<CspaceConfigUntangler::Message:0x0000000129be9298>)
+Person: Associated concept citation
+Person: Associated event/era citation
+Person: Associated organization citation
+Person: Associated people citation
+Person: Associated person citation
+Person: Associated place citation
+Person: Term source name (#<CspaceConfigUntangler::Message:0x000000012a3a1698>)
+Place: Associated concept citation
+Place: Associated event/era citation
+Place: Associated organization citation
+Place: Associated people citation
+Place: Associated person citation
+Place: Associated place citation
+Place: Term source name (#<CspaceConfigUntangler::Message:0x00000001384286d0>)
+Storage Location: Term source name (#<CspaceConfigUntangler::Message:0x0000000128ee95c0>)
+Work: Term source name (#<CspaceConfigUntangler::Message:0x0000000126aeb560>)"
+fcart_8-2-0,concept,concept/activity,y,6,"Chronology: Associated concept
+Citation: Related term
+Object: Associated activity (#<CspaceConfigUntangler::Message:0x000000014d3c1970>)
+Object: Content activity (#<CspaceConfigUntangler::Message:0x000000014d3c2460>)
+Person: Associated concept
+Place: Associated concept"
+fcart_8-2-0,concept,concept/archculture,n,0,""
+fcart_8-2-0,concept,concept/associated,y,10,"Chronology: Associated concept
+Chronology: Associated people
+Citation: Related term
+Concept: Related concept
+Object: Associated concept (#<CspaceConfigUntangler::Message:0x000000014d3c1970>)
+Object: Content concept (#<CspaceConfigUntangler::Message:0x000000014d3c2460>)
+Person: Associated concept
+Person: Associated people
+Place: Associated concept
+Place: Associated people"
+fcart_8-2-0,concept,concept/ethculture,y,3,"Object: Associated event people (#<CspaceConfigUntangler::Message:0x000000014d3c1970>)
+Object: Associated people (#<CspaceConfigUntangler::Message:0x000000014d3c1970>)
+Object: Content people (#<CspaceConfigUntangler::Message:0x000000014d3c2460>)"
+fcart_8-2-0,concept,concept/material,y,6,"Chronology: Associated concept
+Citation: Related term
+Object: Content concept (#<CspaceConfigUntangler::Message:0x000000014d3c2460>)
+Object: Material controlled
+Person: Associated concept
+Place: Associated concept"
+fcart_8-2-0,concept,concept/nomenclature,y,4,"Chronology: Associated concept
+Object: Object name controlled
+Person: Associated concept
+Place: Associated concept"
+fcart_8-2-0,concept,concept/occasion,y,4,"Chronology: Associated concept
+Person: Associated concept
+Place: Associated concept
+Use of Collections: Occasion"
+fcart_8-2-0,location,location/local,y,7,"Exhibition: Venue name
 Intake: Current location
 Intake: Normal location
-Location/Movement/Inventory: Current location
-Object: Computed current location"
-publicart_7-0-1,location,location/offsite,y,5,"Exhibition: Venue name
+Location/Movement/Inventory: Current location (#<CspaceConfigUntangler::Message:0x000000012964f008>)
+Location/Movement/Inventory: Normal location
+Object: Computed current location
+Use of Collections: Location"
+fcart_8-2-0,location,location/offsite,y,6,"Exhibition: Venue name
 Intake: Current location
 Intake: Normal location
-Location/Movement/Inventory: Current location
+Location/Movement/Inventory: Current location (#<CspaceConfigUntangler::Message:0x000000012964f008>)
+Location/Movement/Inventory: Normal location
 Object: Computed current location"
-publicart_7-0-1,organization,organization/local,y,42,"Acquisitions: Acquisition source
-Acquisitions: Commissioning body
+fcart_8-2-0,organization,organization/local,y,79,"Acquisitions: Acquisition source
 Acquisitions: Funding source
 Acquisitions: Owner
+Acquisitions: Parties involved on behalf of
+Chronology: Associated organization
 Citation: Agent name
 Citation: Publisher
 Condition Check: Checker/assessor
 Conservation: Conservator
 Conservation: Other treatment party name
 Deaccession: Exit recipient
+Deaccession: Parties involved on behalf of
 Exhibition: Organizer
-Exhibition: Support name
+Exhibition: Sponsor
 Exhibition: Venue name
-Group: Group owner
+Exhibition: Working group member name
+Insurance/Indemnity: Insurer/indemnifier
+Insurance/Indemnity: Quote provider
 Intake: Condition check assessor
 Intake: Current location
 Intake: Current owner
 Intake: Depositor name
+Intake: Insurer
 Intake: Normal location
+Intake: Valuer
+Iteration Report: Exhibition approval entity
+Iteration Report: Further installation detail approval entity
+Iteration Report: Installed equipment approval entity
+Iteration Report: Iteration creator/supervisor name
+Iteration Report: Iteration-specific modification approval entity
+Iteration Report: Security approval entity
+Iteration Report: Space, as installed approval entity
+Iteration Report: Technical setup approval entity
 Loan In: Lender name
-Loan Out: Borrower name (Borrower)
-Location/Movement/Inventory: Current location
+Loan Out: Borrower name (#<CspaceConfigUntangler::Message:0x0000000128d2e618>)
+Location/Movement/Inventory: Current location (#<CspaceConfigUntangler::Message:0x000000012964f008>)
+Location/Movement/Inventory: Normal location
 Media Handling: Contributor
 Media Handling: Creator
+Media Handling: Measured by
+Media Handling: Publisher
 Media Handling: Rights holder
 Object Exit (Legacy): Current owner
 Object Exit (Legacy): Depositor
@@ -1756,92 +2300,108 @@ Object Exit (Legacy): Disposal proposed recipient
 Object Exit (Legacy): Disposal recipient
 Object Exit: Exit agent name
 Object Exit: Owner after exit
-Object: Artwork creator name
-Object: Collection
+Object: Associated event organization (#<CspaceConfigUntangler::Message:0x000000014d3c1970>)
+Object: Associated organization (#<CspaceConfigUntangler::Message:0x000000014d3c1970>)
 Object: Computed current location
+Object: Content organization (#<CspaceConfigUntangler::Message:0x000000014d3c2460>)
+Object: Domain host
+Object: Domain owner
+Object: Measured by
+Object: Non-textual inscription inscriber (#<CspaceConfigUntangler::Message:0x000000014d3c20f0>)
 Object: Owner
-Object: Textual inscription inscriber
-Person: Person's organization
+Object: Production organization
+Object: Right holder contact
+Object: Right holder name
+Object: Textual inscription inscriber (#<CspaceConfigUntangler::Message:0x000000014d3c2280>)
+Person: Associated organization
+Place: Associated organization
 Place: Georeferenced by
 Place: Owner
-Valuation Control: Insurer
+Transport: Arrival point (#<CspaceConfigUntangler::Message:0x0000000124c42ff0>)
+Transport: Courier name
+Transport: Customs broker name (#<CspaceConfigUntangler::Message:0x0000000124c42d70>)
+Transport: Departure point (#<CspaceConfigUntangler::Message:0x0000000124c430e0>)
+Transport: Shipping quote provider
+Transport: Transporter name (#<CspaceConfigUntangler::Message:0x0000000124c432c0>)
+Use of Collections: Authorized by
+Use of Collections: Location
+Use of Collections: Staff name
+Use of Collections: User institution
+Use of Collections: User name
 Valuation Control: Source
-Work: Creator name"
-publicart_7-0-1,organization,organization/shared,y,40,"Acquisitions: Acquisition source
-Acquisitions: Commissioning body
-Acquisitions: Funding source
-Acquisitions: Owner
-Condition Check: Checker/assessor
-Conservation: Conservator
-Conservation: Other treatment party name
-Deaccession: Exit recipient
+Work: Creator name
+Work: Publisher name"
+fcart_8-2-0,organization,organization/ulan,y,10,"Chronology: Associated organization
 Exhibition: Organizer
-Exhibition: Support name
+Exhibition: Sponsor
 Exhibition: Venue name
-Group: Group owner
-Intake: Condition check assessor
-Intake: Current location
-Intake: Current owner
-Intake: Depositor name
-Intake: Normal location
-Loan In: Lender name
-Loan Out: Borrower name (Borrower)
-Location/Movement/Inventory: Current location
-Media Handling: Contributor
-Media Handling: Creator
-Media Handling: Rights holder
-Object Exit (Legacy): Current owner
-Object Exit (Legacy): Depositor
-Object Exit (Legacy): Disposal proposed recipient
-Object Exit (Legacy): Disposal recipient
-Object Exit: Exit agent name
-Object Exit: Owner after exit
-Object: Artwork creator name
-Object: Collection
-Object: Computed current location
-Object: Owner
-Object: Textual inscription inscriber
-Person: Person's organization
-Place: Georeferenced by
-Place: Owner
-Valuation Control: Insurer
-Valuation Control: Source
-Work: Creator name"
-publicart_7-0-1,person,person/local,y,56,"Acquisitions: Acquisition source
-Acquisitions: Approval individual (Approval group)
-Acquisitions: Authorizer (Authorization)
-Acquisitions: Commissioning body
+Exhibition: Working group member name
+Insurance/Indemnity: Insurer/indemnifier
+Insurance/Indemnity: Quote provider
+Object: Content organization (#<CspaceConfigUntangler::Message:0x000000014d3c2460>)
+Person: Associated organization
+Place: Associated organization"
+fcart_8-2-0,person,person/local,y,104,"Acquisitions: Acquisition source
+Acquisitions: Approval individual (#<CspaceConfigUntangler::Message:0x000000013c80dda0>)
+Acquisitions: Authorizer (#<CspaceConfigUntangler::Message:0x000000013cca4940>)
 Acquisitions: Funding source
 Acquisitions: Owner
+Acquisitions: Parties involved person
+Chronology: Associated person
 Citation: Agent name
 Condition Check: Checker/assessor
 Conservation: Analysis researcher
 Conservation: Approved by
 Conservation: Conservator
+Conservation: Destructive analysis sample taken by
 Conservation: Examination staff
 Conservation: Other treatment party name
-Deaccession: Deaccession approval individual (Deaccession approval group)
+Deaccession: Deaccession approval individual (#<CspaceConfigUntangler::Message:0x00000001461a1ef8>)
 Deaccession: Exit recipient
+Deaccession: Parties involved person
 Exhibition: Organizer
-Exhibition: Support name
-Group: Checklist item assigned to
+Exhibition: Sponsor
+Exhibition: Working group member name
 Group: Group owner
-Intake: Approval individual (Approval group)
+Insurance/Indemnity: Authorizer (#<CspaceConfigUntangler::Message:0x00000001265683e0>)
+Insurance/Indemnity: Insurer/indemnifier
+Insurance/Indemnity: Quote provider
+Intake: Approval individual (#<CspaceConfigUntangler::Message:0x00000001466e76d8>)
 Intake: Condition check assessor
 Intake: Current owner
 Intake: Depositor name
+Intake: Insurer
+Intake: Valuer
+Iteration Report: Artist or representative
+Iteration Report: Exhibition approval entity
+Iteration Report: Further installation detail approval entity
+Iteration Report: Installed equipment approval entity
+Iteration Report: Installer name
+Iteration Report: Iteration creator/supervisor name
+Iteration Report: Iteration evaluation evaluator (#<CspaceConfigUntangler::Message:0x00000001278e9ab8>)
+Iteration Report: Iteration-specific modification approval entity
+Iteration Report: Maintenance contact
+Iteration Report: Security approval entity
+Iteration Report: Space, as installed approval entity
+Iteration Report: Technical setup approval entity
+Loan In: Borrower authorizer (#<CspaceConfigUntangler::Message:0x0000000128b6fb60>)
+Loan In: Borrower contact (#<CspaceConfigUntangler::Message:0x0000000128b6fb60>)
+Loan In: Lender authorizer
 Loan In: Lender contact
 Loan In: Lender name
 Loan In: Loan status individual
-Loan Out: Borrower authorizer (Borrower)
-Loan Out: Borrower contact (Borrower)
-Loan Out: Borrower name (Borrower)
-Loan Out: Lender authorizer (Lender)
-Loan Out: Lender contact (Lender)
+Loan Out: Borrower authorizer (#<CspaceConfigUntangler::Message:0x0000000128d2e618>)
+Loan Out: Borrower contact (#<CspaceConfigUntangler::Message:0x0000000128d2e618>)
+Loan Out: Borrower name (#<CspaceConfigUntangler::Message:0x0000000128d2e618>)
+Loan Out: Lender authorizer (#<CspaceConfigUntangler::Message:0x0000000128d2e528>)
+Loan Out: Lender contact (#<CspaceConfigUntangler::Message:0x0000000128d2e528>)
 Loan Out: Loan status individual
+Location/Movement/Inventory: Inventory contact
 Location/Movement/Inventory: Movement contact
 Media Handling: Contributor
 Media Handling: Creator
+Media Handling: Measured by
+Media Handling: Publisher
 Media Handling: Rights holder
 Object Exit (Legacy): Current owner
 Object Exit (Legacy): Deaccession approval individual
@@ -1853,129 +2413,116 @@ Object Exit: Approval status individual
 Object Exit: Exit agent name
 Object Exit: Owner after exit
 Object: Annotation author
-Object: Artwork creator name
+Object: Associated event person (#<CspaceConfigUntangler::Message:0x000000014d3c1970>)
+Object: Associated person (#<CspaceConfigUntangler::Message:0x000000014d3c1970>)
+Object: Content person (#<CspaceConfigUntangler::Message:0x000000014d3c2460>)
+Object: Measured by
+Object: Non-textual inscription inscriber (#<CspaceConfigUntangler::Message:0x000000014d3c20f0>)
 Object: Object count counted by
+Object: Object significance assigned contact
 Object: Owner
-Object: Textual inscription inscriber
+Object: Production person
+Object: Right holder contact
+Object: Right holder name
+Object: Supplied by
+Object: Textual inscription inscriber (#<CspaceConfigUntangler::Message:0x000000014d3c2280>)
+Organization: Contact name
+Person: Associated person
 Person: Other information author
+Place: Associated person
 Place: Georeferenced by
 Place: Owner
-Valuation Control: Insurer
+Transport: Courier name
+Transport: Customs broker contact (#<CspaceConfigUntangler::Message:0x0000000124c42d70>)
+Transport: Customs broker name (#<CspaceConfigUntangler::Message:0x0000000124c42d70>)
+Transport: Shipping quote provider
+Transport: Transport authorizer (#<CspaceConfigUntangler::Message:0x0000000124c431d0>)
+Transport: Transporter contact (#<CspaceConfigUntangler::Message:0x0000000124c432c0>)
+Transport: Transporter name (#<CspaceConfigUntangler::Message:0x0000000124c432c0>)
+Use of Collections: Authorized by
+Use of Collections: Staff name
+Use of Collections: User name
 Valuation Control: Source
-Work: Creator name"
-publicart_7-0-1,person,person/shared,y,50,"Acquisitions: Acquisition source
-Acquisitions: Commissioning body
-Acquisitions: Funding source
-Acquisitions: Owner
-Condition Check: Checker/assessor
-Conservation: Analysis researcher
-Conservation: Approved by
-Conservation: Conservator
-Conservation: Examination staff
-Conservation: Other treatment party name
-Deaccession: Deaccession approval individual (Deaccession approval group)
-Deaccession: Exit recipient
+Work: Creator name
+Work: Publisher name"
+fcart_8-2-0,person,person/ulan,y,14,"Chronology: Associated person
+Citation: Agent name
 Exhibition: Organizer
-Exhibition: Support name
-Group: Checklist item assigned to
-Group: Group owner
-Intake: Approval individual (Approval group)
-Intake: Condition check assessor
-Intake: Current owner
-Intake: Depositor name
-Loan In: Lender contact
-Loan In: Lender name
-Loan In: Loan status individual
-Loan Out: Borrower authorizer (Borrower)
-Loan Out: Borrower contact (Borrower)
-Loan Out: Borrower name (Borrower)
-Loan Out: Lender authorizer (Lender)
-Loan Out: Lender contact (Lender)
-Loan Out: Loan status individual
-Location/Movement/Inventory: Movement contact
-Media Handling: Contributor
-Media Handling: Creator
-Media Handling: Rights holder
-Object Exit (Legacy): Current owner
-Object Exit (Legacy): Depositor
-Object Exit (Legacy): Disposal proposed recipient
-Object Exit (Legacy): Disposal recipient
-Object Exit: Approval status individual
-Object Exit: Exit agent name
-Object Exit: Owner after exit
-Object: Annotation author
-Object: Artwork creator name
+Exhibition: Sponsor
+Exhibition: Working group member name
+Insurance/Indemnity: Authorizer (#<CspaceConfigUntangler::Message:0x00000001265683e0>)
+Insurance/Indemnity: Insurer/indemnifier
+Insurance/Indemnity: Quote provider
+Object: Content person (#<CspaceConfigUntangler::Message:0x000000014d3c2460>)
 Object: Object count counted by
-Object: Owner
-Person: Other information author
-Place: Georeferenced by
-Place: Owner
-Valuation Control: Insurer
-Valuation Control: Source
-Work: Creator name"
-publicart_7-0-1,place,place/local,y,21,"Citation: Publication place
+Object: Object significance assigned contact
+Object: Supplied by
+Person: Associated person
+Place: Associated person"
+fcart_8-2-0,place,place/local,y,27,"Chronology: Alternative date spatial coverage
+Chronology: Associated place
+Chronology: Spatial coverage
+Citation: Publication place
 Exhibition: Venue name
 Intake: Current location
 Intake: Normal location
-Location/Movement/Inventory: Current location
-Object: Computed current location
-Organization: Current place
-Organization: Foundation place
+Location/Movement/Inventory: Current location (#<CspaceConfigUntangler::Message:0x000000012964f008>)
+Location/Movement/Inventory: Normal location
+Object: Associated event place (#<CspaceConfigUntangler::Message:0x000000014d3c1970>)
+Object: Associated place (#<CspaceConfigUntangler::Message:0x000000014d3c1970>)
+Object: Content place (#<CspaceConfigUntangler::Message:0x000000014d3c2460>)
+Object: Content place (controlled) (#<CspaceConfigUntangler::Message:0x000000014d3c2460>)
+Object: Ownership place
+Object: Production place
+Person: Associated place
 Person: Birth place supplied
 Place: Address country
-Place: Address county
 Place: Address municipality
 Place: Address state/province
-Storage Location: Address country
-Storage Location: Address county
-Storage Location: Address municipality
-Storage Location: Address state/province
+Place: Associated place
+Transport: Arrival point (#<CspaceConfigUntangler::Message:0x0000000124c42ff0>)
+Transport: Departure point (#<CspaceConfigUntangler::Message:0x0000000124c430e0>)
+Use of Collections: Location
 Work: Address country
-Work: Address county
 Work: Address municipality
 Work: Address state/province"
-publicart_7-0-1,place,place/shared,y,20,"Exhibition: Venue name
-Intake: Current location
-Intake: Normal location
-Location/Movement/Inventory: Current location
-Object: Computed current location
-Organization: Current place
-Organization: Foundation place
-Person: Birth place supplied
+fcart_8-2-0,place,place/tgn,y,13,"Chronology: Alternative date spatial coverage
+Chronology: Associated place
+Chronology: Spatial coverage
+Citation: Publication place
+Exhibition: Venue name
+Person: Associated place
 Place: Address country
-Place: Address county
 Place: Address municipality
 Place: Address state/province
-Storage Location: Address country
-Storage Location: Address county
-Storage Location: Address municipality
-Storage Location: Address state/province
+Place: Associated place
 Work: Address country
-Work: Address county
 Work: Address municipality
 Work: Address state/province"
-publicart_7-0-1,work,work/local,n,0,""
-botgarden_4-0-0,citation,citation/local,y,9,"Citation: Term source name (Source)
-Concept: Term source name (Source)
-Organization: Term source name (Source)
-Person: Term source name (Source)
-Place: Term source name (Source)
+fcart_8-2-0,work,work/cona,y,1,Object: Content work name (#<CspaceConfigUntangler::Message:0x000000014d3c2460>)
+fcart_8-2-0,work,work/local,y,2,"Object: Content work name (#<CspaceConfigUntangler::Message:0x000000014d3c2460>)
+Object: Named collection"
+botgarden_4-0-0,citation,citation/local,y,9,"Citation: Term source name (#<CspaceConfigUntangler::Message:0x000000012a8117c8>)
+Concept: Term source name (#<CspaceConfigUntangler::Message:0x0000000129686dc8>)
+Organization: Term source name (#<CspaceConfigUntangler::Message:0x000000012bbf4290>)
+Person: Term source name (#<CspaceConfigUntangler::Message:0x000000012c877f80>)
+Place: Term source name (#<CspaceConfigUntangler::Message:0x000000013c8838e8>)
 Taxon: Citation
 Taxon: Common name source
-Taxon: Term source name (Source)
-Work: Term source name (Source)"
-botgarden_4-0-0,citation,citation/worldcat,y,8,"Citation: Term source name (Source)
-Concept: Term source name (Source)
-Organization: Term source name (Source)
-Person: Term source name (Source)
-Place: Term source name (Source)
+Taxon: Term source name (#<CspaceConfigUntangler::Message:0x00000001251e3130>)
+Work: Term source name (#<CspaceConfigUntangler::Message:0x000000012710d3a8>)"
+botgarden_4-0-0,citation,citation/worldcat,y,8,"Citation: Term source name (#<CspaceConfigUntangler::Message:0x000000012a8117c8>)
+Concept: Term source name (#<CspaceConfigUntangler::Message:0x0000000129686dc8>)
+Organization: Term source name (#<CspaceConfigUntangler::Message:0x000000012bbf4290>)
+Person: Term source name (#<CspaceConfigUntangler::Message:0x000000012c877f80>)
+Place: Term source name (#<CspaceConfigUntangler::Message:0x000000013c8838e8>)
 Taxon: Citation
-Taxon: Term source name (Source)
-Work: Term source name (Source)"
+Taxon: Term source name (#<CspaceConfigUntangler::Message:0x00000001251e3130>)
+Work: Term source name (#<CspaceConfigUntangler::Message:0x000000012710d3a8>)"
 botgarden_4-0-0,concept,concept/activity,y,1,Citation: Related term
 botgarden_4-0-0,concept,concept/archculture,n,0,""
 botgarden_4-0-0,concept,concept/associated,y,2,"Citation: Related term
-Propagation: Medium"
+Propagation: Medium (#<CspaceConfigUntangler::Message:0x0000000129484bb0>)"
 botgarden_4-0-0,concept,concept/class,y,1,Object: Accession used in
 botgarden_4-0-0,concept,concept/conservation,n,0,""
 botgarden_4-0-0,concept,concept/ethculture,n,0,""
@@ -1986,7 +2533,7 @@ botgarden_4-0-0,concept,concept/research,y,1,Object: Accession used in
 botgarden_4-0-0,location,location/local,y,5,"Current Location: Garden location
 Intake: Current location
 Intake: Normal location
-Propagation: Location in nursery
+Propagation: Location in nursery (#<CspaceConfigUntangler::Message:0x0000000129484bb0>)
 Voucher: Garden location"
 botgarden_4-0-0,location,location/offsite,n,0,""
 botgarden_4-0-0,organization,organization/local,y,29,"Citation: Agent name
@@ -2005,12 +2552,12 @@ Media Handling: Creator
 Media Handling: Measured by
 Media Handling: Publisher
 Media Handling: Rights holder
-Object: Associated event organization
-Object: Associated organization
+Object: Associated event organization (#<CspaceConfigUntangler::Message:0x0000000145c85370>)
+Object: Associated organization (#<CspaceConfigUntangler::Message:0x0000000145c85370>)
 Object: Field collector
 Object: Owner
-Object: Taxonomic identification by (Identification by)
-Object: Taxonomic identification institution (Identification by)
+Object: Taxonomic identification by (#<CspaceConfigUntangler::Message:0x0000000145c86310>)
+Object: Taxonomic identification institution (#<CspaceConfigUntangler::Message:0x0000000145c86310>)
 Place: Georeferenced by
 Place: Owner
 Taxon: Author name
@@ -2024,7 +2571,7 @@ Condition Check: Checker/assessor
 Current Location: Contact
 Distribution: Authorized by
 Group: Group owner
-Intake: Approval individual (Approval group)
+Intake: Approval individual (#<CspaceConfigUntangler::Message:0x000000013c086aa0>)
 Intake: Condition check assessor
 Intake: Current owner
 Intake: Depositor name
@@ -2036,13 +2583,13 @@ Media Handling: Measured by
 Media Handling: Publisher
 Media Handling: Rights holder
 Object: Annotation author
-Object: Associated event person
-Object: Associated person
+Object: Associated event person (#<CspaceConfigUntangler::Message:0x0000000145c85370>)
+Object: Associated person (#<CspaceConfigUntangler::Message:0x0000000145c85370>)
 Object: Field collection number assignor
 Object: Field collector
 Object: Owner
 Object: Requested by
-Object: Taxonomic identification by (Identification by)
+Object: Taxonomic identification by (#<CspaceConfigUntangler::Message:0x0000000145c86310>)
 Object: Type specimen asserted by
 Organization: Contact name
 Person: Other information author
@@ -2075,197 +2622,32 @@ botgarden_4-0-0,taxon,taxon/common,n,0,""
 botgarden_4-0-0,taxon,taxon/local,y,7,"Object: Affinity taxon
 Object: Associated taxon name
 Object: Hybrid parent name
-Object: Taxonomic identification scientific name (Taxonomic identification)
+Object: Taxonomic identification scientific name (#<CspaceConfigUntangler::Message:0x0000000145c864a0>)
 Object: Type specimen verified basionym
 Pot Tag: Family
 Pot Tag: Taxon name"
 botgarden_4-0-0,work,work/cona,n,0,""
 botgarden_4-0-0,work,work/local,y,1,Object: Named collection
-materials_4-0-1,citation,citation/local,y,9,"Citation: Term source name (Source)
-Concept: Term source name (Source)
-Material: Citation source
-Material: Term source name (Source)
-Organization: Term source name (Source)
-Person: Term source name (Source)
-Place: Term source name (Source)
-Storage Location: Term source name (Source)
-Work: Term source name (Source)"
-materials_4-0-1,citation,citation/shared,y,8,"Citation: Term source name (Source)
-Concept: Term source name (Source)
-Material: Citation source
-Material: Term source name (Source)
-Person: Term source name (Source)
-Place: Term source name (Source)
-Storage Location: Term source name (Source)
-Work: Term source name (Source)"
-materials_4-0-1,concept,concept/archculture,n,0,""
-materials_4-0-1,concept,concept/materialclassification,y,3,"Material: Composition class name
-Material: Composition family name
-Material: Composition generic name"
-materials_4-0-1,concept,concept/nomenclature,n,0,""
-materials_4-0-1,concept,concept/occasion,y,1,Use of Collections: Occasion
-materials_4-0-1,concept,concept/sharedmaterialclassification,y,3,"Material: Composition class name
-Material: Composition family name
-Material: Composition generic name"
-materials_4-0-1,location,location/local,y,4,"Location/Movement/Inventory: Current location
-Location/Movement/Inventory: Normal location
-Object: Computed current location
-Use of Collections: Location"
-materials_4-0-1,location,location/offsite,y,3,"Location/Movement/Inventory: Current location
-Location/Movement/Inventory: Normal location
-Object: Computed current location"
-materials_4-0-1,material,material/local,y,2,"Media Handling: Coverage
-Object: Material"
-materials_4-0-1,material,material/shared,y,2,"Media Handling: Coverage
-Object: Material"
-materials_4-0-1,organization,organization/local,y,32,"Acquisitions: Acquisition source
-Citation: Agent name
-Citation: Publisher
-Deaccession: Exit recipient
-Loan Out: Borrower
-Location/Movement/Inventory: Current location
-Location/Movement/Inventory: Normal location
-Material: Discontinued by (Discontinued)
-Material: Production organization name
-Material: Term creator organization
-Material: Term editor organization
-Media Handling: Contributor
-Media Handling: Creator
-Media Handling: Rights holder
-Object Exit (Legacy): Current owner
-Object Exit (Legacy): Depositor
-Object Exit (Legacy): Disposal proposed recipient
-Object Exit (Legacy): Disposal recipient
-Object Exit: Exit agent name
-Object Exit: Owner after exit
-Object: Computed current location
-Object: Production organization
-Place: Georeferenced by
-Place: Owner
-Use of Collections: Authorized by
-Use of Collections: Location
-Use of Collections: Staff name
-Use of Collections: User institution
-Use of Collections: User name
-Valuation Control: Source
-Work: Creator name
-Work: Publisher name"
-materials_4-0-1,organization,organization/shared,y,27,"Acquisitions: Acquisition source
-Loan Out: Borrower
-Location/Movement/Inventory: Current location
-Location/Movement/Inventory: Normal location
-Material: Discontinued by (Discontinued)
-Material: Production organization name
-Material: Term creator organization
-Material: Term editor organization
-Media Handling: Contributor
-Media Handling: Creator
-Media Handling: Rights holder
-Object Exit (Legacy): Current owner
-Object Exit (Legacy): Depositor
-Object Exit (Legacy): Disposal proposed recipient
-Object Exit (Legacy): Disposal recipient
-Object: Computed current location
-Object: Production organization
-Place: Georeferenced by
-Place: Owner
-Use of Collections: Authorized by
-Use of Collections: Location
-Use of Collections: Staff name
-Use of Collections: User institution
-Use of Collections: User name
-Valuation Control: Source
-Work: Creator name
-Work: Publisher name"
-materials_4-0-1,person,person/local,y,37,"Acquisitions: Acquisition source
-Acquisitions: Authorizer (Authorization)
-Citation: Agent name
-Deaccession: Deaccession approval individual (Deaccession approval group)
-Deaccession: Exit recipient
-Group: Group owner
-Loan Out: Borrower
-Loan Out: Lender authorizer
-Loan Out: Loan status individual
-Location/Movement/Inventory: Inventory contact
-Location/Movement/Inventory: Movement contact
-Material: Production person name
-Material: Term creator contributor
-Material: Term editor
-Media Handling: Contributor
-Media Handling: Creator
-Media Handling: Rights holder
-Object Exit (Legacy): Current owner
-Object Exit (Legacy): Deaccession approval individual
-Object Exit (Legacy): Deaccession authorizer
-Object Exit (Legacy): Depositor
-Object Exit (Legacy): Disposal proposed recipient
-Object Exit (Legacy): Disposal recipient
-Object Exit: Approval status individual
-Object Exit: Exit agent name
-Object Exit: Owner after exit
-Object: Annotation author
-Object: Production person
-Organization: Contact name
-Place: Georeferenced by
-Place: Owner
-Use of Collections: Authorized by
-Use of Collections: Staff name
-Use of Collections: User name
-Valuation Control: Source
-Work: Creator name
-Work: Publisher name"
-materials_4-0-1,person,person/shared,y,26,"Acquisitions: Acquisition source
-Loan Out: Borrower
-Loan Out: Lender authorizer
-Loan Out: Loan status individual
-Location/Movement/Inventory: Inventory contact
-Location/Movement/Inventory: Movement contact
-Material: Production person name
-Material: Term creator contributor
-Material: Term editor
-Media Handling: Contributor
-Media Handling: Creator
-Media Handling: Rights holder
-Object Exit (Legacy): Current owner
-Object Exit (Legacy): Depositor
-Object Exit (Legacy): Disposal proposed recipient
-Object Exit (Legacy): Disposal recipient
-Object: Annotation author
-Object: Production person
-Place: Georeferenced by
-Place: Owner
-Use of Collections: Authorized by
-Use of Collections: Staff name
-Use of Collections: User name
-Valuation Control: Source
-Work: Creator name
-Work: Publisher name"
-materials_4-0-1,place,place/local,y,7,"Citation: Publication place
-Material: Production place name
-Media Handling: Coverage
-Use of Collections: Location
-Work: Address country
-Work: Address municipality
-Work: Address state/province"
-materials_4-0-1,place,place/shared,y,2,"Material: Production place name
-Use of Collections: Location"
-materials_4-0-1,work,work/local,y,3,"Material: Featured application name
-Material: Featured collection name
-Object: Named collection"
-materials_4-0-1,work,work/shared,y,2,"Material: Featured application name
-Material: Featured collection name"
-lhmc_8-1-0,chronology,chronology/era,y,6,"Chronology: Associated event/era
-Object: Associated controlled event or period/era
-Object: Content controlled event or period/era
+anthro_9-2-0,chronology,chronology/era,y,9,"Chronology: Associated event/era
+NAGPRA Inventory: Time period era
+Object: Associated controlled event or period/era (#<CspaceConfigUntangler::Message:0x000000014f482e98>)
+Object: Content controlled event or period/era (#<CspaceConfigUntangler::Message:0x000000014f483848>)
 Object: Production era
 Person: Associated event/era
-Place: Associated event/era"
-lhmc_8-1-0,chronology,chronology/event,y,5,"Chronology: Associated event/era
-Object: Associated controlled event or period/era
-Object: Content controlled event or period/era
+Place: Associated event/era
+Repatriation Request: Time period era
+Summary Documentation: Time period era"
+anthro_9-2-0,chronology,chronology/event,y,6,"Chronology: Associated event/era
+Object: Associated controlled event or period/era (#<CspaceConfigUntangler::Message:0x000000014f482e98>)
+Object: Content controlled event or period/era (#<CspaceConfigUntangler::Message:0x000000014f483848>)
+Object: Field collection event
 Person: Associated event/era
 Place: Associated event/era"
-lhmc_8-1-0,citation,citation/local,y,31,"Chronology: Alternative date citation
+anthro_9-2-0,chronology,chronology/fieldcollection,y,4,"Chronology: Associated event/era
+Object: Field collection event
+Person: Associated event/era
+Place: Associated event/era"
+anthro_9-2-0,citation,citation/local,y,36,"Chronology: Alternative date citation
 Chronology: Associated concept citation
 Chronology: Associated event/era citation
 Chronology: Associated organization citation
@@ -2273,30 +2655,35 @@ Chronology: Associated people citation
 Chronology: Associated person citation
 Chronology: Associated place citation
 Chronology: Resource identifier citation
-Chronology: Term source name (Source)
-Citation: Term source name (Source)
-Concept: Term source name (Source)
+Chronology: Term source name (#<CspaceConfigUntangler::Message:0x000000014dba6280>)
+Citation: Term source name (#<CspaceConfigUntangler::Message:0x000000014d3a5478>)
+Concept: Term source name (#<CspaceConfigUntangler::Message:0x0000000137ecb598>)
 Exhibition: Bibliographic reference
 Object: Reference
-Organization: Term source name (Source)
+Organization: Term source name (#<CspaceConfigUntangler::Message:0x0000000129104080>)
 Person: Associated concept citation
 Person: Associated event/era citation
 Person: Associated organization citation
 Person: Associated people citation
 Person: Associated person citation
 Person: Associated place citation
-Person: Publication name
-Person: Term source name (Source)
+Person: Term source name (#<CspaceConfigUntangler::Message:0x000000013f401470>)
+Place: Assertion reference name (#<CspaceConfigUntangler::Message:0x0000000138e25200>)
 Place: Associated concept citation
 Place: Associated event/era citation
 Place: Associated organization citation
 Place: Associated people citation
 Place: Associated person citation
 Place: Associated place citation
-Place: Term source name (Source)
-Storage Location: Term source name (Source)
-Work: Term source name (Source)"
-lhmc_8-1-0,citation,citation/worldcat,y,31,"Chronology: Alternative date citation
+Place: Published report reference
+Place: Term source name (#<CspaceConfigUntangler::Message:0x0000000138e257f0>)
+Place: Unpublished manuscript reference
+Storage Location: Term source name (#<CspaceConfigUntangler::Message:0x000000013369aeb8>)
+Taxon: Citation
+Taxon: Common name source
+Taxon: Term source name (#<CspaceConfigUntangler::Message:0x000000013b3ec628>)
+Work: Term source name (#<CspaceConfigUntangler::Message:0x000000012e297550>)"
+anthro_9-2-0,citation,citation/worldcat,y,33,"Chronology: Alternative date citation
 Chronology: Associated concept citation
 Chronology: Associated event/era citation
 Chronology: Associated organization citation
@@ -2304,102 +2691,135 @@ Chronology: Associated people citation
 Chronology: Associated person citation
 Chronology: Associated place citation
 Chronology: Resource identifier citation
-Chronology: Term source name (Source)
-Citation: Term source name (Source)
-Concept: Term source name (Source)
+Chronology: Term source name (#<CspaceConfigUntangler::Message:0x000000014dba6280>)
+Citation: Term source name (#<CspaceConfigUntangler::Message:0x000000014d3a5478>)
+Concept: Term source name (#<CspaceConfigUntangler::Message:0x0000000137ecb598>)
 Exhibition: Bibliographic reference
 Object: Reference
-Organization: Term source name (Source)
+Organization: Term source name (#<CspaceConfigUntangler::Message:0x0000000129104080>)
 Person: Associated concept citation
 Person: Associated event/era citation
 Person: Associated organization citation
 Person: Associated people citation
 Person: Associated person citation
 Person: Associated place citation
-Person: Publication name
-Person: Term source name (Source)
+Person: Term source name (#<CspaceConfigUntangler::Message:0x000000013f401470>)
+Place: Assertion reference name (#<CspaceConfigUntangler::Message:0x0000000138e25200>)
 Place: Associated concept citation
 Place: Associated event/era citation
 Place: Associated organization citation
 Place: Associated people citation
 Place: Associated person citation
 Place: Associated place citation
-Place: Term source name (Source)
-Storage Location: Term source name (Source)
-Work: Term source name (Source)"
-lhmc_8-1-0,concept,concept/activity,y,4,"Chronology: Associated concept
+Place: Term source name (#<CspaceConfigUntangler::Message:0x0000000138e257f0>)
+Storage Location: Term source name (#<CspaceConfigUntangler::Message:0x000000013369aeb8>)
+Taxon: Citation
+Taxon: Term source name (#<CspaceConfigUntangler::Message:0x000000013b3ec628>)
+Work: Term source name (#<CspaceConfigUntangler::Message:0x000000012e297550>)"
+anthro_9-2-0,concept,concept/activity,y,4,"Chronology: Associated concept
 Citation: Related term
 Person: Associated concept
 Place: Associated concept"
-lhmc_8-1-0,concept,concept/archculture,n,0,""
-lhmc_8-1-0,concept,concept/associated,y,9,"Chronology: Associated concept
+anthro_9-2-0,concept,concept/archculture,y,9,"Chronology: Associated concept
+NAGPRA Claim: Cultural group involved name
+NAGPRA Inventory: Cultural group name
+Object: Cultural determination culture
+Object: Production cultural group
+Person: Associated concept
+Place: Associated concept
+Repatriation Request: Cultural group name
+Summary Documentation: Cultural group name"
+anthro_9-2-0,concept,concept/associated,y,9,"Chronology: Associated concept
 Chronology: Associated people
 Citation: Related term
-Object: Associated concept
-Object: Content concept
+Object: Associated concept (#<CspaceConfigUntangler::Message:0x000000014f482e98>)
+Object: Content concept (#<CspaceConfigUntangler::Message:0x000000014f483848>)
 Person: Associated concept
 Person: Associated people
 Place: Associated concept
 Place: Associated people"
-lhmc_8-1-0,concept,concept/ethculture,n,0,""
-lhmc_8-1-0,concept,concept/material,y,6,"Chronology: Associated concept
+anthro_9-2-0,concept,concept/ethculture,y,7,"Intake: Field collection source
+NAGPRA Claim: Cultural group involved name
+NAGPRA Inventory: Cultural group name
+Object: Cultural determination culture
+Object: Production cultural group
+Repatriation Request: Cultural group name
+Summary Documentation: Cultural group name"
+anthro_9-2-0,concept,concept/ethfilecode,y,1,Object: Function
+anthro_9-2-0,concept,concept/material,y,6,"Chronology: Associated concept
 Citation: Related term
-Object: Content concept
+Object: Content concept (#<CspaceConfigUntangler::Message:0x000000014f483848>)
 Object: Material controlled
 Person: Associated concept
 Place: Associated concept"
-lhmc_8-1-0,concept,concept/nomenclature,y,4,"Chronology: Associated concept
+anthro_9-2-0,concept,concept/nomenclature,y,4,"Chronology: Associated concept
 Object: Object name controlled
 Person: Associated concept
 Place: Associated concept"
-lhmc_8-1-0,concept,concept/occasion,y,4,"Chronology: Associated concept
+anthro_9-2-0,concept,concept/occasion,y,4,"Chronology: Associated concept
 Person: Associated concept
 Place: Associated concept
 Use of Collections: Occasion"
-lhmc_8-1-0,location,location/local,y,6,"Exhibition: Venue name
-Intake: Interim location
-Location/Movement/Inventory: Current location
+anthro_9-2-0,location,location/local,y,7,"Exhibition: Venue name
+Intake: Current location
+Intake: Normal location
+Location/Movement/Inventory: Current location (#<CspaceConfigUntangler::Message:0x0000000130e5bdd0>)
 Location/Movement/Inventory: Normal location
 Object: Computed current location
 Use of Collections: Location"
-lhmc_8-1-0,location,location/offsite,y,5,"Exhibition: Venue name
-Intake: Interim location
-Location/Movement/Inventory: Current location
+anthro_9-2-0,location,location/offsite,y,6,"Exhibition: Venue name
+Intake: Current location
+Intake: Normal location
+Location/Movement/Inventory: Current location (#<CspaceConfigUntangler::Message:0x0000000130e5bdd0>)
 Location/Movement/Inventory: Normal location
 Object: Computed current location"
-lhmc_8-1-0,organization,organization/local,y,71,"Acquisitions: Acquisition source
+anthro_9-2-0,organization,organization/local,y,101,"Acquisitions: Acquisition source
 Acquisitions: Funding source
 Acquisitions: Owner
+Acquisitions: Parties involved on behalf of
 Chronology: Associated organization
 Citation: Agent name
 Citation: Publisher
 Condition Check: Checker/assessor
 Conservation: Conservator
 Conservation: Other treatment party name
+Consultation: Parties involved on behalf of
 Deaccession: Exit recipient
+Deaccession: Parties involved on behalf of
+Duty of Care: Duty of care detail determined by
+Duty of Care: Parties involved on behalf of
 Exhibition: Organizer
 Exhibition: Sponsor
 Exhibition: Venue name
 Exhibition: Working group member name
+Held-in-Trust: Access limitation requested on behalf of
+Held-in-Trust: Correspondence recipient
+Held-in-Trust: Correspondence sender
+Held-in-Trust: Owner
 Insurance/Indemnity: Insurer/indemnifier
 Insurance/Indemnity: Quote provider
-Intake: Condition check by
+Intake: Condition check assessor
+Intake: Current location
+Intake: Current owner
 Intake: Depositor name
-Intake: Insurance company
-Intake: Interim location
-Intake: Received by
-Intake: Source
+Intake: Field collector
+Intake: Insurer
+Intake: Normal location
 Intake: Valuer
 Loan In: Lender name
-Loan Out: Borrower name (Borrower)
-Loan Out: Loan status authorizer
-Location/Movement/Inventory: Current location
+Loan Out: Borrower name (#<CspaceConfigUntangler::Message:0x0000000133f3cf30>)
+Location/Movement/Inventory: Current location (#<CspaceConfigUntangler::Message:0x0000000130e5bdd0>)
 Location/Movement/Inventory: Normal location
 Media Handling: Contributor
 Media Handling: Creator
 Media Handling: Measured by
 Media Handling: Publisher
 Media Handling: Rights holder
+NAGPRA Claim: Claim filed by
+NAGPRA Claim: Claim filed on behalf of
+NAGPRA Inventory: Inventory cultural affiliation determined by
+NAGPRA Inventory: Inventory cultural affiliation tribe/nation
+NAGPRA Inventory: Parties involved on behalf of
 Object Exit (Legacy): Current owner
 Object Exit (Legacy): Depositor
 Object Exit (Legacy): Disposal proposed recipient
@@ -2407,29 +2827,45 @@ Object Exit (Legacy): Disposal recipient
 Object Exit: Exit agent name
 Object Exit: Owner after exit
 Object: Access limitation requested on behalf of
-Object: Associated event organization
-Object: Associated organization
+Object: Associated event organization (#<CspaceConfigUntangler::Message:0x000000014f482e98>)
+Object: Associated organization (#<CspaceConfigUntangler::Message:0x000000014f482e98>)
 Object: Computed current location
-Object: Content organization
+Object: Content organization (#<CspaceConfigUntangler::Message:0x000000014f483848>)
+Object: Cultural determination by
 Object: Field collection source
 Object: Field collector
 Object: Measured by
-Object: Non-textual inscription inscriber
-Object: Owner
+Object: NAGPRA report filed by
+Object: NAGPRA report filed with
+Object: Non-textual inscription inscriber (#<CspaceConfigUntangler::Message:0x000000014f4834d8>)
+Object: Previous owner name
 Object: Production organization
 Object: Right holder contact
 Object: Right holder name
-Object: Textual inscription inscriber
+Object: Taxonomic identification by (#<CspaceConfigUntangler::Message:0x000000014f4819f8>>#<CspaceConfigUntangler::Message:0x000000014f484248>)
+Object: Taxonomic identification institution (#<CspaceConfigUntangler::Message:0x000000014f4819f8>>#<CspaceConfigUntangler::Message:0x000000014f484248>)
+Object: Textual inscription inscriber (#<CspaceConfigUntangler::Message:0x000000014f483668>)
 Person: Associated organization
+Place: Assertion by (#<CspaceConfigUntangler::Message:0x0000000138e25200>)
 Place: Associated organization
 Place: Georeferenced by
 Place: Owner
-Transport: Arrival point (Arrival)
+Repatriation Request: Parties involved on behalf of
+Restricted Media Handling: Contributor
+Restricted Media Handling: Creator
+Restricted Media Handling: Measured by
+Restricted Media Handling: Publisher
+Restricted Media Handling: Rights holder
+Summary Documentation: Parties involved on behalf of
+Summary Documentation: Summary affiliation determined by
+Summary Documentation: Summary affiliation tribe/nation
+Taxon: Author name
+Transport: Arrival point (#<CspaceConfigUntangler::Message:0x00000001335d2080>)
 Transport: Courier name
-Transport: Customs broker name (Customs broker)
-Transport: Departure point (Departure)
+Transport: Customs broker name (#<CspaceConfigUntangler::Message:0x00000001335d1e00>)
+Transport: Departure point (#<CspaceConfigUntangler::Message:0x00000001335d2170>)
 Transport: Shipping quote provider
-Transport: Transporter name (Transporter)
+Transport: Transporter name (#<CspaceConfigUntangler::Message:0x00000001335d2350>)
 Use of Collections: Authorized by
 Use of Collections: Location
 Use of Collections: Staff name
@@ -2438,22 +2874,23 @@ Use of Collections: User name
 Valuation Control: Source
 Work: Creator name
 Work: Publisher name"
-lhmc_8-1-0,organization,organization/ulan,y,10,"Chronology: Associated organization
+anthro_9-2-0,organization,organization/ulan,y,11,"Chronology: Associated organization
 Exhibition: Organizer
 Exhibition: Sponsor
 Exhibition: Venue name
 Exhibition: Working group member name
 Insurance/Indemnity: Insurer/indemnifier
 Insurance/Indemnity: Quote provider
-Object: Content organization
+Object: Content organization (#<CspaceConfigUntangler::Message:0x000000014f483848>)
 Person: Associated organization
+Place: Assertion by (#<CspaceConfigUntangler::Message:0x0000000138e25200>)
 Place: Associated organization"
-lhmc_8-1-0,person,person/local,y,96,"Acquisitions: Acquisition source
-Acquisitions: Approval individual (Approval group)
-Acquisitions: Authorizer (Authorization)
+anthro_9-2-0,person,person/local,y,129,"Acquisitions: Acquisition source
+Acquisitions: Approval individual (#<CspaceConfigUntangler::Message:0x000000012ab10190>)
+Acquisitions: Authorizer (#<CspaceConfigUntangler::Message:0x000000012b2702f0>)
 Acquisitions: Funding source
 Acquisitions: Owner
-Acquisitions: Received by
+Acquisitions: Parties involved person
 Chronology: Associated person
 Citation: Agent name
 Condition Check: Checker/assessor
@@ -2463,43 +2900,57 @@ Conservation: Conservator
 Conservation: Destructive analysis sample taken by
 Conservation: Examination staff
 Conservation: Other treatment party name
-Deaccession: Deaccession approval individual (Deaccession approval group)
+Consultation: Consultation log recipient
+Consultation: Parties involved person
+Deaccession: Deaccession approval individual (#<CspaceConfigUntangler::Message:0x000000013ee05328>)
 Deaccession: Exit recipient
+Deaccession: Parties involved person
+Duty of Care: Duty of care detail determined by
+Duty of Care: Parties involved person
 Exhibition: Organizer
 Exhibition: Sponsor
 Exhibition: Working group member name
 Group: Group owner
-Insurance/Indemnity: Authorizer (Authorization)
+Held-in-Trust: Access limitation requester
+Held-in-Trust: Correspondence recipient
+Held-in-Trust: Correspondence sender
+Held-in-Trust: Held-in-Trust status individual
+Held-in-Trust: Owner
+Insurance/Indemnity: Authorizer (#<CspaceConfigUntangler::Message:0x00000001381c3cf0>)
 Insurance/Indemnity: Insurer/indemnifier
 Insurance/Indemnity: Quote provider
-Intake: Approval individual (Approval group)
-Intake: Condition check by
+Intake: Approval individual (#<CspaceConfigUntangler::Message:0x000000014536a380>)
+Intake: Condition check assessor
+Intake: Current owner
 Intake: Depositor name
-Intake: Insurance company
-Intake: Inventoried by
-Intake: Received by
-Intake: Source
+Intake: Field collection source
+Intake: Field collector
+Intake: Insurer
 Intake: Valuer
-Loan In: Borrower authorizer (Borrower)
-Loan In: Borrower contact (Borrower)
+Loan In: Borrower authorizer (#<CspaceConfigUntangler::Message:0x00000001349d6fe0>)
+Loan In: Borrower contact (#<CspaceConfigUntangler::Message:0x00000001349d6fe0>)
 Loan In: Lender authorizer
 Loan In: Lender contact
 Loan In: Lender name
-Loan In: Loan status authorizer
-Loan Out: Borrower authorizer (Borrower)
-Loan Out: Borrower contact (Borrower)
-Loan Out: Borrower name (Borrower)
-Loan Out: Lender authorizer (Lender)
-Loan Out: Lender contact (Lender)
-Loan Out: Loan status authorizer
+Loan In: Loan status individual
+Loan Out: Borrower authorizer (#<CspaceConfigUntangler::Message:0x0000000133f3cf30>)
+Loan Out: Borrower contact (#<CspaceConfigUntangler::Message:0x0000000133f3cf30>)
+Loan Out: Borrower name (#<CspaceConfigUntangler::Message:0x0000000133f3cf30>)
+Loan Out: Lender authorizer (#<CspaceConfigUntangler::Message:0x0000000133f3ce40>)
+Loan Out: Lender contact (#<CspaceConfigUntangler::Message:0x0000000133f3ce40>)
+Loan Out: Loan status individual
 Location/Movement/Inventory: Inventory contact
-Location/Movement/Inventory: Location authorized by
 Location/Movement/Inventory: Movement contact
 Media Handling: Contributor
 Media Handling: Creator
 Media Handling: Measured by
 Media Handling: Publisher
 Media Handling: Rights holder
+NAGPRA Claim: Claim filed by
+NAGPRA Claim: Claim filed on behalf of
+NAGPRA Inventory: Inventory cultural affiliation determined by
+NAGPRA Inventory: Inventory documentation status individual
+NAGPRA Inventory: Parties involved person
 Object Exit (Legacy): Current owner
 Object Exit (Legacy): Deaccession approval individual
 Object Exit (Legacy): Deaccession authorizer
@@ -2511,98 +2962,111 @@ Object Exit: Exit agent name
 Object Exit: Owner after exit
 Object: Access limitation requestor
 Object: Annotation author
-Object: Associated event person
-Object: Associated person
-Object: Content person
+Object: Associated event person (#<CspaceConfigUntangler::Message:0x000000014f482e98>)
+Object: Associated person (#<CspaceConfigUntangler::Message:0x000000014f482e98>)
+Object: Content person (#<CspaceConfigUntangler::Message:0x000000014f483848>)
+Object: Cultural determination by
 Object: Field collection source
 Object: Field collector
 Object: Measured by
-Object: Non-textual inscription inscriber
+Object: NAGPRA report filed by
+Object: NAGPRA report filed with
+Object: Non-textual inscription inscriber (#<CspaceConfigUntangler::Message:0x000000014f4834d8>)
 Object: Object count counted by
-Object: Owner
+Object: Previous owner name
 Object: Production person
 Object: Right holder contact
 Object: Right holder name
-Object: Textual inscription inscriber
+Object: Taxonomic identification by (#<CspaceConfigUntangler::Message:0x000000014f4819f8>>#<CspaceConfigUntangler::Message:0x000000014f484248>)
+Object: Textual inscription inscriber (#<CspaceConfigUntangler::Message:0x000000014f483668>)
 Organization: Contact name
+Osteology: Age estimate analyst
+Osteology: Inventory analyst
+Osteology: Sex determination analyst
 Person: Associated person
 Person: Other information author
-Person: Related person name (Related person)
+Place: Assertion by (#<CspaceConfigUntangler::Message:0x0000000138e25200>)
 Place: Associated person
 Place: Georeferenced by
 Place: Owner
+Repatriation Request: Parties involved person
+Repatriation Request: Repatriation request documentation status individual
+Repatriation Request: Repatriation request status individual
+Restricted Media Handling: Contributor
+Restricted Media Handling: Creator
+Restricted Media Handling: Measured by
+Restricted Media Handling: Publisher
+Restricted Media Handling: Rights holder
+Summary Documentation: Parties involved person
+Summary Documentation: Summary affiliation determined by
+Summary Documentation: Summary documentation status individual
+Taxon: Author name
 Transport: Courier name
-Transport: Customs broker contact (Customs broker)
-Transport: Customs broker name (Customs broker)
+Transport: Customs broker contact (#<CspaceConfigUntangler::Message:0x00000001335d1e00>)
+Transport: Customs broker name (#<CspaceConfigUntangler::Message:0x00000001335d1e00>)
 Transport: Shipping quote provider
-Transport: Transport authorizer (Authorization)
-Transport: Transporter contact (Transporter)
-Transport: Transporter name (Transporter)
+Transport: Transport authorizer (#<CspaceConfigUntangler::Message:0x00000001335d2260>)
+Transport: Transporter contact (#<CspaceConfigUntangler::Message:0x00000001335d2350>)
+Transport: Transporter name (#<CspaceConfigUntangler::Message:0x00000001335d2350>)
 Use of Collections: Authorized by
 Use of Collections: Staff name
 Use of Collections: User name
 Valuation Control: Source
 Work: Creator name
 Work: Publisher name"
-lhmc_8-1-0,person,person/ulan,y,19,"Acquisitions: Received by
-Chronology: Associated person
+anthro_9-2-0,person,person/ulan,y,13,"Chronology: Associated person
 Citation: Agent name
 Exhibition: Organizer
 Exhibition: Sponsor
 Exhibition: Working group member name
-Insurance/Indemnity: Authorizer (Authorization)
+Insurance/Indemnity: Authorizer (#<CspaceConfigUntangler::Message:0x00000001381c3cf0>)
 Insurance/Indemnity: Insurer/indemnifier
 Insurance/Indemnity: Quote provider
-Intake: Inventoried by
-Intake: Received by
-Loan In: Loan status authorizer
-Loan Out: Loan status authorizer
-Location/Movement/Inventory: Location authorized by
-Object: Content person
+Object: Content person (#<CspaceConfigUntangler::Message:0x000000014f483848>)
 Object: Object count counted by
 Person: Associated person
-Person: Related person name (Related person)
+Place: Assertion by (#<CspaceConfigUntangler::Message:0x0000000138e25200>)
 Place: Associated person"
-lhmc_8-1-0,place,place/local,y,26,"Chronology: Alternative date spatial coverage
+anthro_9-2-0,place,place/archaeological,y,4,"NAGPRA Inventory: Archaeological site name
+Object: Field collection site
+Repatriation Request: Archaeological site name
+Summary Documentation: Archaeological site name"
+anthro_9-2-0,place,place/local,y,28,"Chronology: Alternative date spatial coverage
 Chronology: Associated place
 Chronology: Spatial coverage
 Citation: Publication place
 Exhibition: Venue name
-Intake: Interim location
-Object: Associated place
-Object: Content place
+Intake: Current location
+Intake: Normal location
+NAGPRA Claim: Site/place involved name
+NAGPRA Inventory: Place represented name
+Object: Content place (controlled) (#<CspaceConfigUntangler::Message:0x000000014f483848>)
 Object: Field collection place
-Object: Ownership place
+Object: Field collection place
+Object: Previous ownership place
 Object: Production place
 Person: Associated place
 Person: Birth place supplied
-Person: Place/geographical area of residence name (Place and/or geographical area of residence)
-Person: Where born
-Person: Where died
 Place: Address country
 Place: Address municipality
 Place: Address state/province
 Place: Associated place
-Transport: Arrival point (Arrival)
-Transport: Departure point (Departure)
+Repatriation Request: Place represented name
+Summary Documentation: Place represented name
+Transport: Arrival point (#<CspaceConfigUntangler::Message:0x00000001335d2080>)
+Transport: Departure point (#<CspaceConfigUntangler::Message:0x00000001335d2170>)
 Use of Collections: Location
 Work: Address country
 Work: Address municipality
 Work: Address state/province"
-lhmc_8-1-0,place,place/tgn,y,21,"Chronology: Alternative date spatial coverage
+anthro_9-2-0,place,place/tgn,y,15,"Chronology: Alternative date spatial coverage
 Chronology: Associated place
 Chronology: Spatial coverage
 Citation: Publication place
 Exhibition: Venue name
-Object: Associated place
-Object: Content place
 Object: Field collection place
-Object: Ownership place
 Object: Production place
 Person: Associated place
-Person: Place/geographical area of residence name (Place and/or geographical area of residence)
-Person: Where born
-Person: Where died
 Place: Address country
 Place: Address municipality
 Place: Address state/province
@@ -2610,5 +3074,7 @@ Place: Associated place
 Work: Address country
 Work: Address municipality
 Work: Address state/province"
-lhmc_8-1-0,work,work/cona,n,0,""
-lhmc_8-1-0,work,work/local,y,1,Object: Named collection
+anthro_9-2-0,taxon,taxon/common,n,0,""
+anthro_9-2-0,taxon,taxon/local,y,1,Object: Taxonomic identification scientific name (#<CspaceConfigUntangler::Message:0x000000014f4819f8>>#<CspaceConfigUntangler::Message:0x000000014f484478>)
+anthro_9-2-0,work,work/cona,n,0,""
+anthro_9-2-0,work,work/local,y,1,Object: Named collection
