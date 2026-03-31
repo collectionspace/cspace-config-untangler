@@ -12527,6 +12527,7 @@
         "loan",
         "newstoragelocation",
         "photography",
+        "repatriation-preparation",
         "research"
       ],
       "messages": {
@@ -12557,6 +12558,10 @@
         "photography": {
           "id": "option.moveReasons.photography",
           "defaultMessage": "photography"
+        },
+        "repatriation-preparation": {
+          "id": "option.moveReasons.repatriation-preparation",
+          "defaultMessage": "repatriation preparation"
         },
         "research": {
           "id": "option.moveReasons.research",
@@ -16610,6 +16615,22 @@
                 }
               }
             },
+            "acquisitionDescription": {
+              "[config]": {
+                "messages": {
+                  "name": {
+                    "id": "field.acquisitions_common.acquisitionDescription.name",
+                    "defaultMessage": "Acquisition description"
+                  }
+                },
+                "view": {
+                  "type": "TextInput",
+                  "props": {
+                    "multiline": true
+                  }
+                }
+              }
+            },
             "acquisitionReason": {
               "[config]": {
                 "messages": {
@@ -16774,6 +16795,90 @@
                   "repeating": true,
                   "view": {
                     "type": "TextInput"
+                  }
+                }
+              }
+            },
+            "partiesInvolvedGroupList": {
+              "[config]": {
+                "view": {
+                  "type": "CompoundInput"
+                }
+              },
+              "partiesInvolvedGroup": {
+                "[config]": {
+                  "messages": {
+                    "name": {
+                      "id": "field.acquisitions_common.partiesInvolvedGroup.name",
+                      "defaultMessage": "Parties involved"
+                    }
+                  },
+                  "repeating": true,
+                  "view": {
+                    "type": "CompoundInput",
+                    "props": {
+                      "tabular": true
+                    }
+                  }
+                },
+                "involvedParty": {
+                  "[config]": {
+                    "messages": {
+                      "fullName": {
+                        "id": "field.acquisitions_common.involvedParty.fullName",
+                        "defaultMessage": "Parties involved person"
+                      },
+                      "name": {
+                        "id": "field.acquisitions_common.involvedParty.name",
+                        "defaultMessage": "Person"
+                      }
+                    },
+                    "view": {
+                      "type": "AutocompleteInput",
+                      "props": {
+                        "source": "person/local"
+                      }
+                    }
+                  }
+                },
+                "involvedOnBehalfOf": {
+                  "[config]": {
+                    "messages": {
+                      "fullName": {
+                        "id": "field.acquisitions_common.involvedOnBehalfOf.fullName",
+                        "defaultMessage": "Parties involved on behalf of"
+                      },
+                      "name": {
+                        "id": "field.acquisitions_common.involvedOnBehalfOf.name",
+                        "defaultMessage": "On behalf of"
+                      }
+                    },
+                    "view": {
+                      "type": "AutocompleteInput",
+                      "props": {
+                        "source": "organization/local"
+                      }
+                    }
+                  }
+                },
+                "involvedRole": {
+                  "[config]": {
+                    "messages": {
+                      "fullName": {
+                        "id": "field.acquisitions_common.involvedRole.fullName",
+                        "defaultMessage": "Parties involved role"
+                      },
+                      "name": {
+                        "id": "field.acquisitions_common.involvedRole.name",
+                        "defaultMessage": "Role"
+                      }
+                    },
+                    "view": {
+                      "type": "TermPickerInput",
+                      "props": {
+                        "source": "nagprainvolvedrole"
+                      }
+                    }
                   }
                 }
               }
@@ -17902,6 +18007,15 @@
                                         },
                                         "_owner": null
                                       }
+                                    },
+                                    "_owner": null
+                                  },
+                                  {
+                                    "type": "Field",
+                                    "key": null,
+                                    "ref": null,
+                                    "props": {
+                                      "name": "acquisitionDescription"
                                     },
                                     "_owner": null
                                   },
@@ -20283,7 +20397,9 @@
             "order": 50,
             "sortBy": "collectionspace_core:updatedAt",
             "width": 150
-          }
+          },
+          "defaultSortBy": "termDisplayName",
+          "defaultSortDirection": "asc"
         }
       },
       "fields": {
@@ -26259,6 +26375,34 @@
                     "type": "AutocompleteInput",
                     "props": {
                       "source": "person/local,person/shared,person/ulan"
+                    }
+                  }
+                }
+              }
+            },
+            "controlledContentPlaces": {
+              "[config]": {
+                "view": {
+                  "type": "CompoundInput"
+                }
+              },
+              "controlledContentPlace": {
+                "[config]": {
+                  "messages": {
+                    "fullName": {
+                      "id": "field.collectionobjects_common.controlledContentPlace.fullName",
+                      "defaultMessage": "Content place (controlled)"
+                    },
+                    "name": {
+                      "id": "field.collectionobjects_common.controlledContentPlace.name",
+                      "defaultMessage": "Place (controlled)"
+                    }
+                  },
+                  "repeating": true,
+                  "view": {
+                    "type": "AutocompleteInput",
+                    "props": {
+                      "source": "place/local"
                     }
                   }
                 }
@@ -39774,6 +39918,24 @@
                                           "key": null,
                                           "ref": null,
                                           "props": {
+                                            "name": "controlledContentPlaces",
+                                            "children": {
+                                              "type": "Field",
+                                              "key": null,
+                                              "ref": null,
+                                              "props": {
+                                                "name": "controlledContentPlace"
+                                              },
+                                              "_owner": null
+                                            }
+                                          },
+                                          "_owner": null
+                                        },
+                                        {
+                                          "type": "Field",
+                                          "key": null,
+                                          "ref": null,
+                                          "props": {
                                             "name": "contentPlaces",
                                             "children": {
                                               "type": "Field",
@@ -42656,6 +42818,24 @@
                                               "ref": null,
                                               "props": {
                                                 "name": "contentPerson"
+                                              },
+                                              "_owner": null
+                                            }
+                                          },
+                                          "_owner": null
+                                        },
+                                        {
+                                          "type": "Field",
+                                          "key": null,
+                                          "ref": null,
+                                          "props": {
+                                            "name": "controlledContentPlaces",
+                                            "children": {
+                                              "type": "Field",
+                                              "key": null,
+                                              "ref": null,
+                                              "props": {
+                                                "name": "controlledContentPlace"
                                               },
                                               "_owner": null
                                             }
@@ -45933,7 +46113,9 @@
             "order": 50,
             "sortBy": "collectionspace_core:updatedAt",
             "width": 150
-          }
+          },
+          "defaultSortBy": "termDisplayName",
+          "defaultSortDirection": "asc"
         }
       },
       "fields": {
@@ -51364,6 +51546,90 @@
                   }
                 }
               }
+            },
+            "partiesInvolvedGroupList": {
+              "[config]": {
+                "view": {
+                  "type": "CompoundInput"
+                }
+              },
+              "partiesInvolvedGroup": {
+                "[config]": {
+                  "messages": {
+                    "name": {
+                      "id": "field.deaccessions_common.partiesInvolvedGroup.name",
+                      "defaultMessage": "Parties involved"
+                    }
+                  },
+                  "repeating": true,
+                  "view": {
+                    "type": "CompoundInput",
+                    "props": {
+                      "tabular": true
+                    }
+                  }
+                },
+                "involvedParty": {
+                  "[config]": {
+                    "messages": {
+                      "fullName": {
+                        "id": "field.deaccessions_common.involvedParty.fullName",
+                        "defaultMessage": "Parties involved person"
+                      },
+                      "name": {
+                        "id": "field.deaccessions_common.involvedParty.name",
+                        "defaultMessage": "Person"
+                      }
+                    },
+                    "view": {
+                      "type": "AutocompleteInput",
+                      "props": {
+                        "source": "person/local"
+                      }
+                    }
+                  }
+                },
+                "involvedOnBehalfOf": {
+                  "[config]": {
+                    "messages": {
+                      "fullName": {
+                        "id": "field.deaccessions_common.involvedOnBehalfOf.fullName",
+                        "defaultMessage": "Parties involved on behalf of"
+                      },
+                      "name": {
+                        "id": "field.deaccessions_common.involvedOnBehalfOf.name",
+                        "defaultMessage": "On behalf of"
+                      }
+                    },
+                    "view": {
+                      "type": "AutocompleteInput",
+                      "props": {
+                        "source": "organization/local"
+                      }
+                    }
+                  }
+                },
+                "involvedRole": {
+                  "[config]": {
+                    "messages": {
+                      "fullName": {
+                        "id": "field.deaccessions_common.involvedRole.fullName",
+                        "defaultMessage": "Parties involved role"
+                      },
+                      "name": {
+                        "id": "field.deaccessions_common.involvedRole.name",
+                        "defaultMessage": "Role"
+                      }
+                    },
+                    "view": {
+                      "type": "TermPickerInput",
+                      "props": {
+                        "source": "nagprainvolvedrole"
+                      }
+                    }
+                  }
+                }
+              }
             }
           }
         }
@@ -51530,6 +51796,53 @@
                                 },
                                 "_owner": null
                               }
+                            },
+                            "_owner": null
+                          }
+                        },
+                        "_owner": null
+                      },
+                      {
+                        "type": "Field",
+                        "key": null,
+                        "ref": null,
+                        "props": {
+                          "name": "partiesInvolvedGroupList",
+                          "children": {
+                            "type": "Field",
+                            "key": null,
+                            "ref": null,
+                            "props": {
+                              "name": "partiesInvolvedGroup",
+                              "children": [
+                                {
+                                  "type": "Field",
+                                  "key": null,
+                                  "ref": null,
+                                  "props": {
+                                    "name": "involvedParty"
+                                  },
+                                  "_owner": null
+                                },
+                                {
+                                  "type": "Field",
+                                  "key": null,
+                                  "ref": null,
+                                  "props": {
+                                    "name": "involvedOnBehalfOf"
+                                  },
+                                  "_owner": null
+                                },
+                                {
+                                  "type": "Field",
+                                  "key": null,
+                                  "ref": null,
+                                  "props": {
+                                    "name": "involvedRole"
+                                  },
+                                  "_owner": null
+                                }
+                              ]
                             },
                             "_owner": null
                           }
@@ -61994,7 +62307,9 @@
             "order": 50,
             "sortBy": "collectionspace_core:updatedAt",
             "width": 150
-          }
+          },
+          "defaultSortBy": "termDisplayName",
+          "defaultSortDirection": "asc"
         }
       },
       "fields": {
@@ -68308,7 +68623,9 @@
             "order": 50,
             "sortBy": "collectionspace_core:updatedAt",
             "width": 150
-          }
+          },
+          "defaultSortBy": "termDisplayName",
+          "defaultSortDirection": "asc"
         }
       },
       "fields": {
@@ -72942,7 +73259,9 @@
             "order": 60,
             "sortBy": "collectionspace_core:updatedAt",
             "width": 150
-          }
+          },
+          "defaultSortBy": "termDisplayName",
+          "defaultSortDirection": "asc"
         }
       },
       "fields": {
@@ -83931,7 +84250,9 @@
             "order": 50,
             "sortBy": "collectionspace_core:updatedAt",
             "width": 150
-          }
+          },
+          "defaultSortBy": "termDisplayName",
+          "defaultSortDirection": "asc"
         }
       },
       "fields": {
@@ -100609,7 +100930,9 @@
             "order": 50,
             "sortBy": "collectionspace_core:updatedAt",
             "width": 150
-          }
+          },
+          "defaultSortBy": "termDisplayName",
+          "defaultSortDirection": "asc"
         }
       },
       "fields": {
@@ -103223,10 +103546,10 @@
         }
       },
       "packageName": "cspace-ui-plugin-profile-publicart",
-      "packageVersion": "7.0.1",
-      "buildNum": "0a6bcdc",
+      "packageVersion": "7.1.0",
+      "buildNum": "369049d",
       "repositoryUrl": "https://github.com/collectionspace/cspace-ui-plugin-profile-publicart.js",
-      "version": "7.0.1"
+      "version": "7.1.0"
     }
   }
 }
