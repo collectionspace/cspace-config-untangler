@@ -52,7 +52,7 @@ module CspaceConfigUntangler
                         if CCU.instance_env == :qa
                           "#{name}_#{CCU.release.version}.json"
                         else
-                          "#{version}.json"
+                          "#{version.tr(" ", "_").tr(".", "-")}.json"
                         end
                       else
                         "#{name}.json"
