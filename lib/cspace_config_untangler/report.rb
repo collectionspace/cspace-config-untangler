@@ -59,7 +59,7 @@ module CspaceConfigUntangler
         FileUtils.rm_f(Dir.new(dir).children.map { |fn| File.join(dir, fn) })
       end
 
-      CCU::Report::AllFieldsGenerator.call(release: release)
+      # CCU::Report::AllFieldsGenerator.call(release: release)
       CCU::Report::AllFieldsGenerator.call(
         release: release,
         datemode: :collapsed
@@ -67,9 +67,9 @@ module CspaceConfigUntangler
       CCU::Report::MultiAuthRepeatableFieldsGenerator.call(
         release: release
       )
-      CCU::Report::StructuredDateFieldsGenerator.call(
-        release: release
-      )
+      # CCU::Report::StructuredDateFieldsGenerator.call(
+      #   release: release
+      # )
       CCU::Report::AuthorityVocabUse.call(profiles: "all")
       CCU::Report::UiLabelsForLookup.call(release: release)
       CCU::Report::ProfileFieldsGenerator.call(
@@ -80,10 +80,10 @@ module CspaceConfigUntangler
         profiles: "all",
         release: release
       )
-      CCU::Report::ProfileStructuredDateFields.call(
-        profiles: "all",
-        release: release
-      )
+      # CCU::Report::ProfileStructuredDateFields.call(
+      #   profiles: "all",
+      #   release: release
+      # )
       CCU::Report::ProfileMultiAuthFields.call(
         profiles: "all",
         release: release
