@@ -10,6 +10,8 @@ module CspaceConfigUntangler
     class ServiceGroupsGetter
       class << self
         def call(profilename)
+          return [] if CCU.disable_api_checks
+
           client = CCU.get_client(profilename)
           return [] unless client
 
