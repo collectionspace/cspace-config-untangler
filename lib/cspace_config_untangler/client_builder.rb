@@ -93,6 +93,7 @@ module CspaceConfigUntangler
 
     def get_ssm_params
       return unless ssm
+      return unless CCU.lyrasis_staff
 
       site = CHIA.site_for(name)
       return unless site
