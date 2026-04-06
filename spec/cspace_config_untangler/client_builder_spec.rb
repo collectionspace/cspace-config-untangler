@@ -4,6 +4,7 @@ require "spec_helper"
 if CCU.lyrasis_staff
   RSpec.describe CCU::ClientBuilder do
     before(:each) { CCU.config.disable_api_checks = false }
+    after(:each) { CCU.config.disable_api_checks = true }
     subject(:builder) { described_class.call(basename) }
 
     context "when community supported" do
