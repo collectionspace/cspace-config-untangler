@@ -198,16 +198,6 @@ module CspaceConfigUntangler
       end
     end
 
-    # def apply_overrides
-    #   # This applies messages defined at the profile level
-    #   return unless message_overrides
-
-    #   message_overrides.each do |k, v|
-    #     cfg = {"id" => k, "defaultMessage" => v}
-    #     @messages.override(cfg)
-    #   end
-    # end
-
     def service_groups
       @service_groups ||= CCU::Profiles::ServiceGroupsGetter.call(basename)
     end
