@@ -1,48 +1,48 @@
 profile,authority,authority_vocab,used_in_profile,controlled_field_ct,controlled_fields
-bonsai_7-1-0,citation,citation/local,y,12,"Citation: Term source name (#<CspaceConfigUntangler::Message:0x000000014ce89840>)
-Concept: Term source name (#<CspaceConfigUntangler::Message:0x000000014cfaf738>)
+bonsai_7-1-0,citation,citation/local,y,12,"Citation: Term source name (#<CspaceConfigUntangler::Message:0x000000014dfb00b0>)
+Concept: Term source name (#<CspaceConfigUntangler::Message:0x000000014433bc70>)
 Exhibition: Bibliographic reference
 Object: Reference
-Organization: Term source name (#<CspaceConfigUntangler::Message:0x000000013cfc0070>)
-Person: Term source name (#<CspaceConfigUntangler::Message:0x000000013bfa9880>)
-Place: Term source name (#<CspaceConfigUntangler::Message:0x000000012feafe18>)
-Storage Location: Term source name (#<CspaceConfigUntangler::Message:0x00000001433a78b8>)
+Organization: Term source name (#<CspaceConfigUntangler::Message:0x0000000130090b10>)
+Person: Term source name (#<CspaceConfigUntangler::Message:0x0000000126374610>)
+Place: Term source name (#<CspaceConfigUntangler::Message:0x0000000130410a60>)
+Storage Location: Term source name (#<CspaceConfigUntangler::Message:0x00000001371b8f90>)
 Taxon: Citation
 Taxon: Common name source
-Taxon: Term source name (#<CspaceConfigUntangler::Message:0x0000000126149fc0>)
-Work: Term source name (#<CspaceConfigUntangler::Message:0x00000001236248e0>)"
-bonsai_7-1-0,citation,citation/worldcat,y,11,"Citation: Term source name (#<CspaceConfigUntangler::Message:0x000000014ce89840>)
-Concept: Term source name (#<CspaceConfigUntangler::Message:0x000000014cfaf738>)
+Taxon: Term source name (#<CspaceConfigUntangler::Message:0x00000001377d4848>)
+Work: Term source name (#<CspaceConfigUntangler::Message:0x0000000136cb2000>)"
+bonsai_7-1-0,citation,citation/worldcat,y,11,"Citation: Term source name (#<CspaceConfigUntangler::Message:0x000000014dfb00b0>)
+Concept: Term source name (#<CspaceConfigUntangler::Message:0x000000014433bc70>)
 Exhibition: Bibliographic reference
 Object: Reference
-Organization: Term source name (#<CspaceConfigUntangler::Message:0x000000013cfc0070>)
-Person: Term source name (#<CspaceConfigUntangler::Message:0x000000013bfa9880>)
-Place: Term source name (#<CspaceConfigUntangler::Message:0x000000012feafe18>)
-Storage Location: Term source name (#<CspaceConfigUntangler::Message:0x00000001433a78b8>)
+Organization: Term source name (#<CspaceConfigUntangler::Message:0x0000000130090b10>)
+Person: Term source name (#<CspaceConfigUntangler::Message:0x0000000126374610>)
+Place: Term source name (#<CspaceConfigUntangler::Message:0x0000000130410a60>)
+Storage Location: Term source name (#<CspaceConfigUntangler::Message:0x00000001371b8f90>)
 Taxon: Citation
-Taxon: Term source name (#<CspaceConfigUntangler::Message:0x0000000126149fc0>)
-Work: Term source name (#<CspaceConfigUntangler::Message:0x00000001236248e0>)"
+Taxon: Term source name (#<CspaceConfigUntangler::Message:0x00000001377d4848>)
+Work: Term source name (#<CspaceConfigUntangler::Message:0x0000000136cb2000>)"
 bonsai_7-1-0,concept,concept/activity,y,1,Citation: Related term
 bonsai_7-1-0,concept,concept/archculture,n,0,""
 bonsai_7-1-0,concept,concept/associated,y,3,"Citation: Related term
-Object: Associated concept (#<CspaceConfigUntangler::Message:0x000000014d2ed210>)
-Object: Content concept (#<CspaceConfigUntangler::Message:0x000000014d2edcb0>)"
+Object: Associated concept (#<CspaceConfigUntangler::Message:0x000000014e7551a8>)
+Object: Content concept (#<CspaceConfigUntangler::Message:0x000000014e755e28>)"
 bonsai_7-1-0,concept,concept/ethculture,y,1,Intake: Field collection source
 bonsai_7-1-0,concept,concept/material,y,2,"Citation: Related term
-Object: Content concept (#<CspaceConfigUntangler::Message:0x000000014d2edcb0>)"
+Object: Content concept (#<CspaceConfigUntangler::Message:0x000000014e755e28>)"
 bonsai_7-1-0,concept,concept/nomenclature,n,0,""
 bonsai_7-1-0,concept,concept/occasion,y,1,Use of Collections: Occasion
 bonsai_7-1-0,location,location/local,y,7,"Exhibition: Venue name
 Intake: Current location
 Intake: Normal location
-Location/Movement/Inventory: Current location (#<CspaceConfigUntangler::Message:0x000000013da07538>)
+Location/Movement/Inventory: Current location (#<CspaceConfigUntangler::Message:0x00000001338f2b20>)
 Location/Movement/Inventory: Normal location
 Object: Computed current location
 Use of Collections: Location"
 bonsai_7-1-0,location,location/offsite,y,6,"Exhibition: Venue name
 Intake: Current location
 Intake: Normal location
-Location/Movement/Inventory: Current location (#<CspaceConfigUntangler::Message:0x000000013da07538>)
+Location/Movement/Inventory: Current location (#<CspaceConfigUntangler::Message:0x00000001338f2b20>)
 Location/Movement/Inventory: Normal location
 Object: Computed current location"
 bonsai_7-1-0,organization,organization/local,y,64,"Acquisitions: Acquisition source
@@ -69,8 +69,8 @@ Intake: Insurer
 Intake: Normal location
 Intake: Valuer
 Loan In: Lender name
-Loan Out: Borrower name (#<CspaceConfigUntangler::Message:0x00000001435cc940>)
-Location/Movement/Inventory: Current location (#<CspaceConfigUntangler::Message:0x000000013da07538>)
+Loan Out: Borrower name (#<CspaceConfigUntangler::Message:0x0000000137b54a18>)
+Location/Movement/Inventory: Current location (#<CspaceConfigUntangler::Message:0x00000001338f2b20>)
 Location/Movement/Inventory: Normal location
 Media Handling: Contributor
 Media Handling: Creator
@@ -81,26 +81,26 @@ Object Exit (Legacy): Current owner
 Object Exit (Legacy): Depositor
 Object Exit (Legacy): Disposal proposed recipient
 Object Exit (Legacy): Disposal recipient
-Object: Associated event organization (#<CspaceConfigUntangler::Message:0x000000014d2ed210>)
-Object: Associated organization (#<CspaceConfigUntangler::Message:0x000000014d2ed210>)
+Object: Associated event organization (#<CspaceConfigUntangler::Message:0x000000014e7551a8>)
+Object: Associated organization (#<CspaceConfigUntangler::Message:0x000000014e7551a8>)
 Object: Computed current location
-Object: Content organization (#<CspaceConfigUntangler::Message:0x000000014d2edcb0>)
+Object: Content organization (#<CspaceConfigUntangler::Message:0x000000014e755e28>)
 Object: Field collection source
 Object: Field collector
 Object: Measured by
-Object: Non-textual inscription inscriber (#<CspaceConfigUntangler::Message:0x000000014d2ed8f0>)
+Object: Non-textual inscription inscriber (#<CspaceConfigUntangler::Message:0x000000014e755928>)
 Object: Owner
 Object: Production organization
-Object: Textual inscription inscriber (#<CspaceConfigUntangler::Message:0x000000014d2eda80>)
+Object: Textual inscription inscriber (#<CspaceConfigUntangler::Message:0x000000014e755c98>)
 Place: Georeferenced by
 Place: Owner
 Taxon: Author name
-Transport: Arrival point (#<CspaceConfigUntangler::Message:0x00000001269a23c0>)
+Transport: Arrival point (#<CspaceConfigUntangler::Message:0x0000000133c7cea8>)
 Transport: Courier name
-Transport: Customs broker name (#<CspaceConfigUntangler::Message:0x00000001269a2050>)
-Transport: Departure point (#<CspaceConfigUntangler::Message:0x00000001269a24b0>)
+Transport: Customs broker name (#<CspaceConfigUntangler::Message:0x0000000133c7cc28>)
+Transport: Departure point (#<CspaceConfigUntangler::Message:0x0000000133c7cf98>)
 Transport: Shipping quote provider
-Transport: Transporter name (#<CspaceConfigUntangler::Message:0x00000001269a26e0>)
+Transport: Transporter name (#<CspaceConfigUntangler::Message:0x0000000133c7d178>)
 Use of Collections: Authorized by
 Use of Collections: Location
 Use of Collections: Staff name
@@ -115,10 +115,10 @@ Exhibition: Venue name
 Exhibition: Working group member name
 Insurance/Indemnity: Insurer/indemnifier
 Insurance/Indemnity: Quote provider
-Object: Content organization (#<CspaceConfigUntangler::Message:0x000000014d2edcb0>)"
+Object: Content organization (#<CspaceConfigUntangler::Message:0x000000014e755e28>)"
 bonsai_7-1-0,person,person/local,y,86,"Acquisitions: Acquisition source
-Acquisitions: Approval individual (#<CspaceConfigUntangler::Message:0x000000014b6a0468>)
-Acquisitions: Authorizer (#<CspaceConfigUntangler::Message:0x000000014b669d50>)
+Acquisitions: Approval individual (#<CspaceConfigUntangler::Message:0x000000014c51a0c0>)
+Acquisitions: Authorizer (#<CspaceConfigUntangler::Message:0x000000014c5dfaf0>)
 Acquisitions: Funding source
 Acquisitions: Owner
 Acquisitions: Parties involved person
@@ -126,20 +126,20 @@ Citation: Agent name
 Condition Check: Checker/assessor
 Conservation: Approved by
 Conservation: Destructive analysis sample taken by
-Conservation: Fertilizer applied by (#<CspaceConfigUntangler::Message:0x000000014c7a0060>)
+Conservation: Fertilizer applied by (#<CspaceConfigUntangler::Message:0x0000000143671878>)
 Conservation: Other treatment party name
-Conservation: Pest/disease identified by (#<CspaceConfigUntangler::Message:0x000000014c70ff10>)
-Conservation: Pest/disease treated by (#<CspaceConfigUntangler::Message:0x000000014c70ff10>)
-Conservation: Repotting performed by (#<CspaceConfigUntangler::Message:0x000000014c70fe20>)
+Conservation: Pest/disease identified by (#<CspaceConfigUntangler::Message:0x0000000143671788>)
+Conservation: Pest/disease treated by (#<CspaceConfigUntangler::Message:0x0000000143671788>)
+Conservation: Repotting performed by (#<CspaceConfigUntangler::Message:0x0000000143671698>)
 Conservation: Treatment performed by
 Exhibition: Organizer
 Exhibition: Sponsor
 Exhibition: Working group member name
 Group: Group owner
-Insurance/Indemnity: Authorizer (#<CspaceConfigUntangler::Message:0x000000014512d1d0>)
+Insurance/Indemnity: Authorizer (#<CspaceConfigUntangler::Message:0x000000013c832bc8>)
 Insurance/Indemnity: Insurer/indemnifier
 Insurance/Indemnity: Quote provider
-Intake: Approval individual (#<CspaceConfigUntangler::Message:0x000000014c567cd0>)
+Intake: Approval individual (#<CspaceConfigUntangler::Message:0x000000014d2b7318>)
 Intake: Condition check assessor
 Intake: Current owner
 Intake: Depositor name
@@ -147,17 +147,17 @@ Intake: Field collection source
 Intake: Field collector
 Intake: Insurer
 Intake: Valuer
-Loan In: Borrower authorizer (#<CspaceConfigUntangler::Message:0x0000000143984510>)
-Loan In: Borrower contact (#<CspaceConfigUntangler::Message:0x0000000143984510>)
+Loan In: Borrower authorizer (#<CspaceConfigUntangler::Message:0x000000013ae31288>)
+Loan In: Borrower contact (#<CspaceConfigUntangler::Message:0x000000013ae31288>)
 Loan In: Lender authorizer
 Loan In: Lender contact
 Loan In: Lender name
 Loan In: Loan status individual
-Loan Out: Borrower authorizer (#<CspaceConfigUntangler::Message:0x00000001435cc940>)
-Loan Out: Borrower contact (#<CspaceConfigUntangler::Message:0x00000001435cc940>)
-Loan Out: Borrower name (#<CspaceConfigUntangler::Message:0x00000001435cc940>)
-Loan Out: Lender authorizer (#<CspaceConfigUntangler::Message:0x00000001435cc850>)
-Loan Out: Lender contact (#<CspaceConfigUntangler::Message:0x00000001435cc850>)
+Loan Out: Borrower authorizer (#<CspaceConfigUntangler::Message:0x0000000137b54a18>)
+Loan Out: Borrower contact (#<CspaceConfigUntangler::Message:0x0000000137b54a18>)
+Loan Out: Borrower name (#<CspaceConfigUntangler::Message:0x0000000137b54a18>)
+Loan Out: Lender authorizer (#<CspaceConfigUntangler::Message:0x0000000137b54928>)
+Loan Out: Lender contact (#<CspaceConfigUntangler::Message:0x0000000137b54928>)
 Loan Out: Loan status individual
 Location/Movement/Inventory: Inventory contact
 Location/Movement/Inventory: Movement contact
@@ -174,28 +174,28 @@ Object Exit (Legacy): Disposal proposed recipient
 Object Exit (Legacy): Disposal recipient
 Object: Annotation author
 Object: Assigned volunteer
-Object: Associated event person (#<CspaceConfigUntangler::Message:0x000000014d2ed210>)
-Object: Associated person (#<CspaceConfigUntangler::Message:0x000000014d2ed210>)
-Object: Content person (#<CspaceConfigUntangler::Message:0x000000014d2edcb0>)
+Object: Associated event person (#<CspaceConfigUntangler::Message:0x000000014e7551a8>)
+Object: Associated person (#<CspaceConfigUntangler::Message:0x000000014e7551a8>)
+Object: Content person (#<CspaceConfigUntangler::Message:0x000000014e755e28>)
 Object: Field collection source
 Object: Field collector
 Object: Measured by
-Object: Non-textual inscription inscriber (#<CspaceConfigUntangler::Message:0x000000014d2ed8f0>)
+Object: Non-textual inscription inscriber (#<CspaceConfigUntangler::Message:0x000000014e755928>)
 Object: Owner
 Object: Production person
-Object: Textual inscription inscriber (#<CspaceConfigUntangler::Message:0x000000014d2eda80>)
+Object: Textual inscription inscriber (#<CspaceConfigUntangler::Message:0x000000014e755c98>)
 Organization: Contact name
 Person: Other information author
 Place: Georeferenced by
 Place: Owner
 Taxon: Author name
 Transport: Courier name
-Transport: Customs broker contact (#<CspaceConfigUntangler::Message:0x00000001269a2050>)
-Transport: Customs broker name (#<CspaceConfigUntangler::Message:0x00000001269a2050>)
+Transport: Customs broker contact (#<CspaceConfigUntangler::Message:0x0000000133c7cc28>)
+Transport: Customs broker name (#<CspaceConfigUntangler::Message:0x0000000133c7cc28>)
 Transport: Shipping quote provider
-Transport: Transport authorizer (#<CspaceConfigUntangler::Message:0x00000001269a25a0>)
-Transport: Transporter contact (#<CspaceConfigUntangler::Message:0x00000001269a26e0>)
-Transport: Transporter name (#<CspaceConfigUntangler::Message:0x00000001269a26e0>)
+Transport: Transport authorizer (#<CspaceConfigUntangler::Message:0x0000000133c7d088>)
+Transport: Transporter contact (#<CspaceConfigUntangler::Message:0x0000000133c7d178>)
+Transport: Transporter name (#<CspaceConfigUntangler::Message:0x0000000133c7d178>)
 Use of Collections: Authorized by
 Use of Collections: Staff name
 Use of Collections: User name
@@ -206,31 +206,31 @@ bonsai_7-1-0,person,person/ulan,y,9,"Citation: Agent name
 Exhibition: Organizer
 Exhibition: Sponsor
 Exhibition: Working group member name
-Insurance/Indemnity: Authorizer (#<CspaceConfigUntangler::Message:0x000000014512d1d0>)
+Insurance/Indemnity: Authorizer (#<CspaceConfigUntangler::Message:0x000000013c832bc8>)
 Insurance/Indemnity: Insurer/indemnifier
 Insurance/Indemnity: Quote provider
 Object: Assigned volunteer
-Object: Content person (#<CspaceConfigUntangler::Message:0x000000014d2edcb0>)"
+Object: Content person (#<CspaceConfigUntangler::Message:0x000000014e755e28>)"
 bonsai_7-1-0,place,place/local,y,17,"Citation: Publication place
 Exhibition: Venue name
 Intake: Current location
 Intake: Normal location
-Object: Content place (#<CspaceConfigUntangler::Message:0x000000014d2edcb0>)
+Object: Content place (#<CspaceConfigUntangler::Message:0x000000014e755e28>)
 Object: Field collection place
 Object: Production place
 Person: Birth place supplied
 Place: Address country
 Place: Address municipality
 Place: Address state/province
-Transport: Arrival point (#<CspaceConfigUntangler::Message:0x00000001269a23c0>)
-Transport: Departure point (#<CspaceConfigUntangler::Message:0x00000001269a24b0>)
+Transport: Arrival point (#<CspaceConfigUntangler::Message:0x0000000133c7cea8>)
+Transport: Departure point (#<CspaceConfigUntangler::Message:0x0000000133c7cf98>)
 Use of Collections: Location
 Work: Address country
 Work: Address municipality
 Work: Address state/province"
 bonsai_7-1-0,place,place/tgn,y,11,"Citation: Publication place
 Exhibition: Venue name
-Object: Content place (#<CspaceConfigUntangler::Message:0x000000014d2edcb0>)
+Object: Content place (#<CspaceConfigUntangler::Message:0x000000014e755e28>)
 Object: Field collection place
 Object: Production place
 Place: Address country
