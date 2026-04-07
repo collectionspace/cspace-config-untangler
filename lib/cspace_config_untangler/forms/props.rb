@@ -292,6 +292,7 @@ module CspaceConfigUntangler
           %w[children name],
           %w[children collapsed collapsible name],
           %w[children collapsible name],
+          %w[children label name],
           %w[children name subpath],
           %w[children subpath tabular],
           %w[children name tabular]

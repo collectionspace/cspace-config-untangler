@@ -29,6 +29,7 @@ module CspaceConfigUntangler
         ["_owner", "key", "props", "ref"],
         ["children", "collapsed", "collapsible", "name"],
         ["children", "collapsible", "name"],
+        ["children", "label", "name"],
         ["children", "name", "subpath"],
         ["children", "name", "tabular"],
         ["children", "name"],
