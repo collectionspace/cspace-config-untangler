@@ -81,8 +81,10 @@ module CspaceConfigUntangler
     def explode_structured_date_fields(fields)
       sd_fields = fields.select { |f| f.structured_date? }
       fields -= sd_fields
+      sd_config = profile.config.dig("extensions", "structuredDate", "fields")
       sd_fields.each do |f|
-        fields << CCU::StructuredDateFieldMaker.new(f).fields(@profile)
+        fields << CCU::StructuredDateFieldMaker.new(f,
+          sd_config).fields
       end
       fields
     end

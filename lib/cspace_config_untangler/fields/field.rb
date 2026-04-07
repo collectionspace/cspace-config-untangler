@@ -135,7 +135,9 @@ module CspaceConfigUntangler
           .each { |k, v| @messages.override(convert_to_config(k, v)) }
       end
 
-      def formatted_ui_path = ui_path.map(&:message).join(" > ")
+      def formatted_ui_path
+        ui_path.map(&:message).join(" > ")
+      end
 
       def expert_csv_row
         row = {
@@ -160,7 +162,7 @@ module CspaceConfigUntangler
         }
         row[:xml_path] = @schema_path.join(" > ") if @schema_path
         set_value_sources_for_csv(row)
-        row[:option_list_values] = @value_list.join(", ") if @value_list
+        row[:option_list_values] = value_list.join(", ") if value_list
         row
       end
 
@@ -184,17 +186,17 @@ module CspaceConfigUntangler
           option_list_values: nil
         }
         set_value_sources_for_csv(row)
-        row[:option_list_values] = @value_list.join(", ") if @value_list
+        row[:option_list_values] = value_list.join(", ") if value_list
         row
       end
 
       def set_value_sources_for_csv(row)
-        return unless @value_sources
+        return unless value_sources
 
         %i[type name].each do |srcdata|
           meth = :"csv_#{srcdata}"
           target = :"data_source_#{srcdata}"
-          row[target] = @value_sources.map(&meth).compact.uniq.join("; ")
+          row[target] = value_sources.map(&meth).compact.uniq.join("; ")
         end
       end
 

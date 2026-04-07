@@ -4,89 +4,95 @@ require_relative "fields/field"
 
 module CspaceConfigUntangler
   class StructuredDateField < CCU::Fields::Field
-    attr_reader :profile, :rectype, :name, :ns, :ns_for_id, :panel, :ui_path,
-      :id, :schema_path,
-      :repeats, :in_repeating_group,
-      :data_type, :value_source, :value_list,
+    DATA_TYPES = {
+      "dateDisplayDate" => "string",
+      "dateAssociation" => "string",
+      "datePeriod" => "string",
+      "dateNote" => "string",
+      "dateEarliestSingleCertainty" => "string",
+      "dateEarliestSingleDay" => "integer",
+      "dateEarliestSingleEra" => "string",
+      "dateEarliestSingleMonth" => "integer",
+      "dateEarliestSingleQualifier" => "string",
+      "dateEarliestSingleQualifierUnit" => "string",
+      "dateEarliestSingleQualifierValue" => "integer",
+      "dateEarliestSingleYear" => "integer",
+      "dateLatestCertainty" => "string",
+      "dateLatestDay" => "integer",
+      "dateLatestEra" => "string",
+      "dateLatestMonth" => "integer",
+      "dateLatestQualifier" => "string",
+      "dateLatestQualifierUnit" => "string",
+      "dateLatestQualifierValue" => "integer",
+      "dateLatestYear" => "integer",
+      "dateEarliestScalarValue" => "string",
+      "dateLatestScalarValue" => "string",
+      "scalarValuesComputed" => "boolean"
+    }
+
+    attr_reader :profile, :rectype, :name, :parent, :ns, :ns_for_id, :panel,
+      :ui_path, :id, :fid, :schema_path, :repeats, :in_repeating_group,
       :required
 
-    def initialize(profile_obj, structured_date_field_maker, field_id)
-      @parent = structured_date_field_maker
-      @profile = profile_obj
-      @rectype = @parent.rectype
-      @name = field_id.sub("ext.structuredDate.", "")
-      @ns = @parent.ns
-      @ns_for_id = @parent.ns_for_id
-      @panel = @parent.panel
-      @ui_path = @parent.ui_path
-      @id = field_id
-      @schema_path = @parent.schema_path
-      @repeats = @parent.repeats
-      @in_repeating_group = @parent.in_repeating_group
-      @required = @parent.required
-      @data_type = set_data_type(@name)
-      @value_source = []
-      @value_list = []
-      populate_value_data(@name)
+    # def initialize(profile_obj, structured_date_field_maker, field_id)
+    def initialize(fieldname, config, maker)
+      @name = fieldname
+      @config = config.dig("[config]")
+      @parent = maker
+      @profile = maker.profile
+      message_setup
+      @rectype = maker.rectype
+      @ns = maker.ns
+      @ns_for_id = maker.ns_for_id
+      @panel = maker.panel
+      @ui_path = maker.ui_path
+      @id = "ext.structuredDate.#{name}"
+      @fid = "#{@profile.name} #{rectype.name} #{parent.parent.name} "\
+        "#{ns_for_id} #{@name}"
+      @schema_path = maker.schema_path
+      @repeats = maker.repeats
+      @in_repeating_group = maker.in_repeating_group
+      @required = maker.required
     end
 
-    private
+    def data_type = DATA_TYPES[name]
 
-    def populate_value_data(fieldname)
-      return unless @profile.config.dig("extensions", "structuredDate",
-        "fields", fieldname, "[config]")
+    def value_sources
+      return unless value_type
 
-      datahash = @profile.config.dig("extensions", "structuredDate", "fields",
-        fieldname, "[config]")
-
-      type = CCU::Fields::ValueSources::TypeExtractor.call(datahash)
-      return unless type
-
-      @value_source = CCU::Fields::ValueSources::SourceExtractor.call(
-        type, datahash, @profile
+      src = CCU::Fields::ValueSources::SourceExtractor.call(
+        value_type, config, profile
       )
 
-      if @value_source.empty? && type == "authority"
+      if src.empty? && value_type == "authority"
         CCU.log.warn(
-          "DATA SOURCES: #{@config.namespace_signature} - #{@id} - "\
+          "DATA SOURCES: #{config.namespace_signature} - #{id} - "\
             "Autocomplete defined with no source"
         )
         return
       end
 
-      if type == "option list"
-        @value_list = @value_source.first.options
-        nil
-      end
+      src
     end
 
-    def set_data_type(fieldname)
-      h = {
-        "dateDisplayDate" => "string",
-        "dateAssociation" => "string",
-        "datePeriod" => "string",
-        "dateNote" => "string",
-        "dateEarliestSingleCertainty" => "string",
-        "dateEarliestSingleDay" => "integer",
-        "dateEarliestSingleEra" => "string",
-        "dateEarliestSingleMonth" => "integer",
-        "dateEarliestSingleQualifier" => "string",
-        "dateEarliestSingleQualifierUnit" => "string",
-        "dateEarliestSingleQualifierValue" => "integer",
-        "dateEarliestSingleYear" => "integer",
-        "dateLatestCertainty" => "string",
-        "dateLatestDay" => "integer",
-        "dateLatestEra" => "string",
-        "dateLatestMonth" => "integer",
-        "dateLatestQualifier" => "string",
-        "dateLatestQualifierUnit" => "string",
-        "dateLatestQualifierValue" => "integer",
-        "dateLatestYear" => "integer",
-        "dateEarliestScalarValue" => "string",
-        "dateLatestScalarValue" => "string",
-        "scalarValuesComputed" => "boolean"
-      }
-      h[fieldname]
+    def value_list
+      return unless value_type == "option list"
+
+      value_sources.first.options
+    end
+
+    def extract_messages
+      return unless config&.key?("messages")
+
+      add_messages(config["messages"])
+    end
+
+    private
+
+    attr_reader :config
+
+    def value_type
+      @value_type ||= CCU::Fields::ValueSources::TypeExtractor.call(config)
     end
   end # class Field
 end # module
