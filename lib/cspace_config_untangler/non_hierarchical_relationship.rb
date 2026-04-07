@@ -16,6 +16,8 @@ module CspaceConfigUntangler
       "nonhierarchicalrelationship"
     end
 
+    def display_name = "Non-hierarchical relationships"
+
     private
 
     def config

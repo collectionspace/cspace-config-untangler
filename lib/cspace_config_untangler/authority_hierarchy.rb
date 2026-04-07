@@ -16,6 +16,8 @@ module CspaceConfigUntangler
       "authorityhierarchy"
     end
 
+    def display_name = "Hierarchical relationships (Authority records)"
+
     private
 
     def config
