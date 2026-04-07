@@ -101,7 +101,7 @@ module CspaceConfigUntangler
             CspaceConfigUntangler::RecordMapper::Wrapper.new(profile: p,
               rectype: rt,
               base_path: dir_path,
-              style: options[:style]).mappers.each do |mapper|
+              style: options[:style]).call.each do |mapper|
               mapper[:mapper].to_json(data: mapper[:mapper].hash,
                 output: mapper[:path])
             end
