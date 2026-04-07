@@ -23,6 +23,7 @@ module CspaceConfigUntangler
       def call
         build_hash
         append_subtype if @subtype
+        self
       end
 
       private
@@ -38,6 +39,7 @@ module CspaceConfigUntangler
         @hash[:config][:profile_basename] = @profile.basename
         @hash[:config][:version] = @profile.readable_version
         @hash[:config][:recordtype] = @rectype.name
+        add_display_name if @style == "new"
         @hash[:config][:document_name] =
           @config.dig("recordTypes", @rectype.name, "serviceConfig",
             "documentName")
@@ -63,6 +65,21 @@ module CspaceConfigUntangler
         @hash[:docstructure] = {}
         create_hierarchy
         @hash[:mappings] = @mappings.map { |m| m.to_h }
+      end
+
+      def add_display_name
+        msg = get_display_name
+        return unless msg
+
+        @hash[:config][:display_name] = msg
+      end
+
+      def get_display_name
+        msg = @rectype.display_name
+        return unless msg
+        return msg unless @subtype
+
+        "#{msg}/#{@subtype[:name]}"
       end
 
       def create_hierarchy

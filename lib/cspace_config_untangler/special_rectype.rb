@@ -19,7 +19,10 @@ module CspaceConfigUntangler
     def styled_config(style)
       return config if style == "old"
 
-      config.merge({dataConfigType: "record type"})
+      config.merge({
+        dataConfigType: "record type",
+        display_name: display_name
+      })
     end
   end
 end

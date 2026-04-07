@@ -16,6 +16,8 @@ module CspaceConfigUntangler
       "objecthierarchy"
     end
 
+    def display_name = "Hierarchical relationships (Object records)"
+
     private
 
     def object_parent_types
