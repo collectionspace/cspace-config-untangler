@@ -1,18 +1,18 @@
 profile,authority,authority_vocab,used_in_profile,controlled_field_ct,controlled_fields
-publicart_7-1-0,citation,citation/local,y,7,"Citation: Term source name (#<CspaceConfigUntangler::Message:0x000000013ba89bc0>)
-Concept: Term source name (#<CspaceConfigUntangler::Message:0x0000000133ce1f10>)
-Organization: Term source name (#<CspaceConfigUntangler::Message:0x000000013d240ed0>)
-Person: Term source name (#<CspaceConfigUntangler::Message:0x00000001416ccb80>)
-Place: Term source name (#<CspaceConfigUntangler::Message:0x0000000143fed208>)
-Storage Location: Term source name (#<CspaceConfigUntangler::Message:0x000000013c48a250>)
-Work: Term source name (#<CspaceConfigUntangler::Message:0x0000000144c67e48>)"
-publicart_7-1-0,citation,citation/worldcat,y,7,"Citation: Term source name (#<CspaceConfigUntangler::Message:0x000000013ba89bc0>)
-Concept: Term source name (#<CspaceConfigUntangler::Message:0x0000000133ce1f10>)
-Organization: Term source name (#<CspaceConfigUntangler::Message:0x000000013d240ed0>)
-Person: Term source name (#<CspaceConfigUntangler::Message:0x00000001416ccb80>)
-Place: Term source name (#<CspaceConfigUntangler::Message:0x0000000143fed208>)
-Storage Location: Term source name (#<CspaceConfigUntangler::Message:0x000000013c48a250>)
-Work: Term source name (#<CspaceConfigUntangler::Message:0x0000000144c67e48>)"
+publicart_7-1-0,citation,citation/local,y,7,"Citation: Term source name (#<CspaceConfigUntangler::Message:0x00000001338d2550>)
+Concept: Term source name (#<CspaceConfigUntangler::Message:0x000000013a5f3f30>)
+Organization: Term source name (#<CspaceConfigUntangler::Message:0x0000000142bb6320>)
+Person: Term source name (#<CspaceConfigUntangler::Message:0x000000014321d7b8>)
+Place: Term source name (#<CspaceConfigUntangler::Message:0x0000000144a172b0>)
+Storage Location: Term source name (#<CspaceConfigUntangler::Message:0x000000013d376f98>)
+Work: Term source name (#<CspaceConfigUntangler::Message:0x0000000145affb90>)"
+publicart_7-1-0,citation,citation/worldcat,y,7,"Citation: Term source name (#<CspaceConfigUntangler::Message:0x00000001338d2550>)
+Concept: Term source name (#<CspaceConfigUntangler::Message:0x000000013a5f3f30>)
+Organization: Term source name (#<CspaceConfigUntangler::Message:0x0000000142bb6320>)
+Person: Term source name (#<CspaceConfigUntangler::Message:0x000000014321d7b8>)
+Place: Term source name (#<CspaceConfigUntangler::Message:0x0000000144a172b0>)
+Storage Location: Term source name (#<CspaceConfigUntangler::Message:0x000000013d376f98>)
+Work: Term source name (#<CspaceConfigUntangler::Message:0x0000000145affb90>)"
 publicart_7-1-0,concept,concept/archculture,n,0,""
 publicart_7-1-0,concept,concept/associated,y,2,"Citation: Related term
 Object: Artwork tag"
@@ -25,12 +25,12 @@ publicart_7-1-0,concept,concept/worktype,y,1,Object: Work type
 publicart_7-1-0,location,location/local,y,5,"Exhibition: Venue name
 Intake: Current location
 Intake: Normal location
-Location/Movement/Inventory: Current location (#<CspaceConfigUntangler::Message:0x000000013cc232f0>)
+Location/Movement/Inventory: Current location (#<CspaceConfigUntangler::Message:0x00000001415fe4d8>)
 Object: Computed current location"
 publicart_7-1-0,location,location/offsite,y,5,"Exhibition: Venue name
 Intake: Current location
 Intake: Normal location
-Location/Movement/Inventory: Current location (#<CspaceConfigUntangler::Message:0x000000013cc232f0>)
+Location/Movement/Inventory: Current location (#<CspaceConfigUntangler::Message:0x00000001415fe4d8>)
 Object: Computed current location"
 publicart_7-1-0,organization,organization/local,y,43,"Acquisitions: Acquisition source
 Acquisitions: Commissioning body
@@ -53,8 +53,8 @@ Intake: Current owner
 Intake: Depositor name
 Intake: Normal location
 Loan In: Lender name
-Loan Out: Borrower name (#<CspaceConfigUntangler::Message:0x000000013c221fe0>)
-Location/Movement/Inventory: Current location (#<CspaceConfigUntangler::Message:0x000000013cc232f0>)
+Loan Out: Borrower name (#<CspaceConfigUntangler::Message:0x000000013d0b66f0>)
+Location/Movement/Inventory: Current location (#<CspaceConfigUntangler::Message:0x00000001415fe4d8>)
 Media Handling: Contributor
 Media Handling: Creator
 Media Handling: Rights holder
@@ -68,7 +68,7 @@ Object: Artwork creator name
 Object: Collection
 Object: Computed current location
 Object: Owner
-Object: Textual inscription inscriber (#<CspaceConfigUntangler::Message:0x0000000137c4cf88>)
+Object: Textual inscription inscriber (#<CspaceConfigUntangler::Message:0x00000001301dfe80>)
 Person: Person's organization
 Place: Georeferenced by
 Place: Owner
@@ -93,8 +93,8 @@ Intake: Current owner
 Intake: Depositor name
 Intake: Normal location
 Loan In: Lender name
-Loan Out: Borrower name (#<CspaceConfigUntangler::Message:0x000000013c221fe0>)
-Location/Movement/Inventory: Current location (#<CspaceConfigUntangler::Message:0x000000013cc232f0>)
+Loan Out: Borrower name (#<CspaceConfigUntangler::Message:0x000000013d0b66f0>)
+Location/Movement/Inventory: Current location (#<CspaceConfigUntangler::Message:0x00000001415fe4d8>)
 Media Handling: Contributor
 Media Handling: Creator
 Media Handling: Rights holder
@@ -108,7 +108,7 @@ Object: Artwork creator name
 Object: Collection
 Object: Computed current location
 Object: Owner
-Object: Textual inscription inscriber (#<CspaceConfigUntangler::Message:0x0000000137c4cf88>)
+Object: Textual inscription inscriber (#<CspaceConfigUntangler::Message:0x00000001301dfe80>)
 Person: Person's organization
 Place: Georeferenced by
 Place: Owner
@@ -116,8 +116,8 @@ Valuation Control: Insurer
 Valuation Control: Source
 Work: Creator name"
 publicart_7-1-0,person,person/local,y,57,"Acquisitions: Acquisition source
-Acquisitions: Approval individual (#<CspaceConfigUntangler::Message:0x00000001437ac760>)
-Acquisitions: Authorizer (#<CspaceConfigUntangler::Message:0x000000014368faa8>)
+Acquisitions: Approval individual (#<CspaceConfigUntangler::Message:0x000000013ce32fa0>)
+Acquisitions: Authorizer (#<CspaceConfigUntangler::Message:0x000000013cd3fb48>)
 Acquisitions: Commissioning body
 Acquisitions: Funding source
 Acquisitions: Owner
@@ -128,25 +128,25 @@ Conservation: Approved by
 Conservation: Conservator
 Conservation: Examination staff
 Conservation: Other treatment party name
-Deaccession: Deaccession approval individual (#<CspaceConfigUntangler::Message:0x000000013d4056a8>)
+Deaccession: Deaccession approval individual (#<CspaceConfigUntangler::Message:0x000000013b715110>)
 Deaccession: Exit recipient
 Deaccession: Parties involved person
 Exhibition: Organizer
 Exhibition: Support name
 Group: Checklist item assigned to
 Group: Group owner
-Intake: Approval individual (#<CspaceConfigUntangler::Message:0x000000013d0e8a38>)
+Intake: Approval individual (#<CspaceConfigUntangler::Message:0x000000013ab983a0>)
 Intake: Condition check assessor
 Intake: Current owner
 Intake: Depositor name
 Loan In: Lender contact
 Loan In: Lender name
 Loan In: Loan status individual
-Loan Out: Borrower authorizer (#<CspaceConfigUntangler::Message:0x000000013c221fe0>)
-Loan Out: Borrower contact (#<CspaceConfigUntangler::Message:0x000000013c221fe0>)
-Loan Out: Borrower name (#<CspaceConfigUntangler::Message:0x000000013c221fe0>)
-Loan Out: Lender authorizer (#<CspaceConfigUntangler::Message:0x000000013c221ef0>)
-Loan Out: Lender contact (#<CspaceConfigUntangler::Message:0x000000013c221ef0>)
+Loan Out: Borrower authorizer (#<CspaceConfigUntangler::Message:0x000000013d0b66f0>)
+Loan Out: Borrower contact (#<CspaceConfigUntangler::Message:0x000000013d0b66f0>)
+Loan Out: Borrower name (#<CspaceConfigUntangler::Message:0x000000013d0b66f0>)
+Loan Out: Lender authorizer (#<CspaceConfigUntangler::Message:0x000000013d0b65b0>)
+Loan Out: Lender contact (#<CspaceConfigUntangler::Message:0x000000013d0b65b0>)
 Loan Out: Loan status individual
 Location/Movement/Inventory: Movement contact
 Media Handling: Contributor
@@ -165,7 +165,7 @@ Object: Annotation author
 Object: Artwork creator name
 Object: Object count counted by
 Object: Owner
-Object: Textual inscription inscriber (#<CspaceConfigUntangler::Message:0x0000000137c4cf88>)
+Object: Textual inscription inscriber (#<CspaceConfigUntangler::Message:0x00000001301dfe80>)
 Person: Other information author
 Place: Georeferenced by
 Place: Owner
@@ -182,24 +182,24 @@ Conservation: Approved by
 Conservation: Conservator
 Conservation: Examination staff
 Conservation: Other treatment party name
-Deaccession: Deaccession approval individual (#<CspaceConfigUntangler::Message:0x000000013d4056a8>)
+Deaccession: Deaccession approval individual (#<CspaceConfigUntangler::Message:0x000000013b715110>)
 Deaccession: Exit recipient
 Exhibition: Organizer
 Exhibition: Support name
 Group: Checklist item assigned to
 Group: Group owner
-Intake: Approval individual (#<CspaceConfigUntangler::Message:0x000000013d0e8a38>)
+Intake: Approval individual (#<CspaceConfigUntangler::Message:0x000000013ab983a0>)
 Intake: Condition check assessor
 Intake: Current owner
 Intake: Depositor name
 Loan In: Lender contact
 Loan In: Lender name
 Loan In: Loan status individual
-Loan Out: Borrower authorizer (#<CspaceConfigUntangler::Message:0x000000013c221fe0>)
-Loan Out: Borrower contact (#<CspaceConfigUntangler::Message:0x000000013c221fe0>)
-Loan Out: Borrower name (#<CspaceConfigUntangler::Message:0x000000013c221fe0>)
-Loan Out: Lender authorizer (#<CspaceConfigUntangler::Message:0x000000013c221ef0>)
-Loan Out: Lender contact (#<CspaceConfigUntangler::Message:0x000000013c221ef0>)
+Loan Out: Borrower authorizer (#<CspaceConfigUntangler::Message:0x000000013d0b66f0>)
+Loan Out: Borrower contact (#<CspaceConfigUntangler::Message:0x000000013d0b66f0>)
+Loan Out: Borrower name (#<CspaceConfigUntangler::Message:0x000000013d0b66f0>)
+Loan Out: Lender authorizer (#<CspaceConfigUntangler::Message:0x000000013d0b65b0>)
+Loan Out: Lender contact (#<CspaceConfigUntangler::Message:0x000000013d0b65b0>)
 Loan Out: Loan status individual
 Location/Movement/Inventory: Movement contact
 Media Handling: Contributor
@@ -226,7 +226,7 @@ publicart_7-1-0,place,place/local,y,21,"Citation: Publication place
 Exhibition: Venue name
 Intake: Current location
 Intake: Normal location
-Location/Movement/Inventory: Current location (#<CspaceConfigUntangler::Message:0x000000013cc232f0>)
+Location/Movement/Inventory: Current location (#<CspaceConfigUntangler::Message:0x00000001415fe4d8>)
 Object: Computed current location
 Organization: Current place
 Organization: Foundation place
@@ -246,7 +246,7 @@ Work: Address state/province"
 publicart_7-1-0,place,place/shared,y,20,"Exhibition: Venue name
 Intake: Current location
 Intake: Normal location
-Location/Movement/Inventory: Current location (#<CspaceConfigUntangler::Message:0x000000013cc232f0>)
+Location/Movement/Inventory: Current location (#<CspaceConfigUntangler::Message:0x00000001415fe4d8>)
 Object: Computed current location
 Organization: Current place
 Organization: Foundation place
