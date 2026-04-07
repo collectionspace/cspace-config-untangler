@@ -63,6 +63,8 @@ children
 
 |3 |["children", "name", "tabular"] |capture; iterate children
 
+|2 |["children", "label", "name"] |capture; iterate children
+
 |1 |["style"] |ignore
 
 |1 |["children", "style"] |iterate children
