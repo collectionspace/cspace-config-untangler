@@ -42,7 +42,9 @@ module CspaceConfigUntangler
       def get_source(sourcefile)
         return CSV.parse(File.read(sourcefile), headers: true) if sourcefile
 
-        CCU::Report.get_all_fields(release: release, outmode: :friendly)
+        CCU::Report.get_all_fields(
+          release: release, outmode: :friendly, datemode: :expanded
+        )
       end
 
       def simplify(row)

@@ -59,7 +59,7 @@ module CspaceConfigUntangler
         FileUtils.rm_f(Dir.new(dir).children.map { |fn| File.join(dir, fn) })
       end
 
-      # CCU::Report::AllFieldsGenerator.call(release: release)
+      CCU::Report::AllFieldsGenerator.call(release: release)
       CCU::Report::AllFieldsGenerator.call(
         release: release,
         datemode: :collapsed
@@ -67,9 +67,9 @@ module CspaceConfigUntangler
       CCU::Report::MultiAuthRepeatableFieldsGenerator.call(
         release: release
       )
-      # CCU::Report::StructuredDateFieldsGenerator.call(
-      #   release: release
-      # )
+      CCU::Report::StructuredDateFieldsGenerator.call(
+        release: release
+      )
       CCU::Report::AuthorityVocabUse.call(profiles: "all")
       CCU::Report::UiLabelsForLookup.call(release: release)
       CCU::Report::ProfileFieldsGenerator.call(
@@ -80,10 +80,10 @@ module CspaceConfigUntangler
         profiles: "all",
         release: release
       )
-      # CCU::Report::ProfileStructuredDateFields.call(
-      #   profiles: "all",
-      #   release: release
-      # )
+      CCU::Report::ProfileStructuredDateFields.call(
+        profiles: "all",
+        release: release
+      )
       CCU::Report::ProfileMultiAuthFields.call(
         profiles: "all",
         release: release
@@ -112,7 +112,10 @@ module CspaceConfigUntangler
         .map { |row| deversion_for_qa(row) }
     end
 
-    def get_all_fields(release: CCU.release, prev: false, outmode: :friendly)
+    def get_all_fields(
+      release: CCU.release, prev: false, outmode: :friendly,
+      datemode: :collapsed
+    )
       if prev
         current_release = release.dup
         CCU.config.release = CCU.prev_release
@@ -122,7 +125,7 @@ module CspaceConfigUntangler
       unless File.exist?(path)
         CCU::Report::AllFieldsGenerator.call(
           release: CCU.release,
-          datemode: :collapsed,
+          datemode: datemode,
           outmode: outmode
         )
       end
