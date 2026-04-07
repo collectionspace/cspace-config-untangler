@@ -52,6 +52,15 @@ module CspaceConfigUntangler
       @vocabularies = get_vocabularies
     end
 
+    def display_name
+      msg = messages.find do |m|
+        m.element_type == :record && m.message_type == :name
+      end
+      return unless msg
+
+      msg.message
+    end
+
     # @return [Array<CCU::Forms::Form>]
     def forms = @forms ||= get_forms
 
