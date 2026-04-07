@@ -84,7 +84,7 @@ module Helpers
 
     def record_mapping(subtype = nil)
       CCU::RecordMapper::RecordMapping.new(profile:, rectype:,
-        subtype:)
+        subtype:).call
     end
 
     def template_file

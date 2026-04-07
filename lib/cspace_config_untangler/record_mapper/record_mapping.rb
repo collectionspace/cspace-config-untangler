@@ -18,6 +18,9 @@ module CspaceConfigUntangler
         @mappings = @rectype.batch_mappings
         @config = @profile.config
         @hash = {}
+      end
+
+      def call
         build_hash
         append_subtype if @subtype
       end
