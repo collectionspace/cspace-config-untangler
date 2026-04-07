@@ -16,6 +16,8 @@ module CspaceConfigUntangler
 
     def data_config_type = @type
 
+    def mode = @mode ||= set_mode
+
     def digest
       return unless data_config_type == "record type"
 
@@ -25,6 +27,30 @@ module CspaceConfigUntangler
     def filename = File.basename(@path, ".json")
 
     attr_reader :path
+
+    def to_h
+      return nil unless valid?
+      h = {
+        "profile" => profile,
+        "version" => version,
+        "type" => recordtype,
+        "digest" => digest,
+        "enabled" => enabled,
+        "url" => url,
+        "dataConfigType" => data_config_type
+      }
+      h.compact
+    end
+
+    private
+
+    def set_mode
+      dataconfigtype = data_config_json.dig("config", "dataConfigType")
+      return :old unless dataconfigtype
+      return unless dataconfigtype == "record type"
+
+      :new
+    end
 
     def profile
       case data_config_type
@@ -38,10 +64,7 @@ module CspaceConfigUntangler
     def recordtype
       case data_config_type
       when "record type"
-        [data_config_json.dig("config", "recordtype"),
-          data_config_json.dig("config", "authority_subtype")
-            &.tr("_", "-")].compact
-          .join("-")
+        (mode == :old) ? get_recordtype_old : get_recordtype_new
       when "optlist overrides"
         nil
       end
@@ -74,19 +97,14 @@ module CspaceConfigUntangler
       end
     end
 
-    def to_h
-      return nil unless valid?
-      h = {
-        "profile" => profile,
-        "version" => version,
-        "type" => recordtype,
-        "digest" => digest,
-        "enabled" => enabled,
-        "url" => url,
-        "dataConfigType" => data_config_type
-      }
-      h.compact
+    def get_recordtype_old
+      [data_config_json.dig("config", "recordtype"),
+        data_config_json.dig("config", "authority_subtype")
+          &.tr("_", "-")].compact
+        .join("-")
     end
+
+    def get_recordtype_new = data_config_json.dig("config", "display_name")
 
     def valid?
       return true if data_config_type == "optlist overrides"
