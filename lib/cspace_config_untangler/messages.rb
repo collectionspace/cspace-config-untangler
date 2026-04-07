@@ -17,7 +17,7 @@ module CspaceConfigUntangler
 
     extend Forwardable
 
-    def_delegators :@all, :any?, :size, :find, :first, :empty?
+    def_delegators :@all, :any?, :empty?, :find, :first, :select, :size
 
     def initialize
       @all = Set.new
