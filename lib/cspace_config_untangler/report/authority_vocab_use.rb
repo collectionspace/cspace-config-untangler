@@ -63,7 +63,7 @@ module CspaceConfigUntangler
         base = "#{field.rectype.label}: #{field.label}"
         return base if field.ui_path.blank?
 
-        "#{base} (#{field.ui_path.join(">")})"
+        "#{base} (#{field.ui_path.map(&:message).join(">")})"
       end
 
       def to_csv(data)
