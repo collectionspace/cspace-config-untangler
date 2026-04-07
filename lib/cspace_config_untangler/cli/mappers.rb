@@ -127,13 +127,13 @@ module CspaceConfigUntangler
           - a namespace defined for every field mapping\n
           - term sources for all fields are of the expected types
       LONGDESC
-      shared_options :input_dir
+      shared_options :input_dir, :style
       def validate
         in_dir = File.expand_path(options[:input_dir])
         mapper_paths = Dir.glob(File.join(in_dir, "**", "*", "*.json"))
 
         mapper_paths.each do |path|
-          validator = RecordMapper::Validator.new(path)
+          validator = RecordMapper::Validator.new(path, options[:style])
           validator.report
         end
         puts "\n\nValidation complete. Any errors were reported above. "\

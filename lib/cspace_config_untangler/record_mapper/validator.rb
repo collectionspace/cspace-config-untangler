@@ -3,9 +3,13 @@
 module CspaceConfigUntangler
   module RecordMapper
     class Validator
-      attr_reader :path, :valid, :errors, :validated
-      def initialize(path)
+      attr_reader :path, :style, :valid, :errors, :validated
+
+      # @param path [String] to mapper to validate
+      # @param style %w[old new] style of mapper
+      def initialize(path, style = "old")
         @path = path
+        @style = style
         @valid = false
         @validated = false
         @errors = []
@@ -31,6 +35,7 @@ module CspaceConfigUntangler
           term_source_types_ok,
           has_service_path
         ]
+        results << valid_new_style if style == "new"
         @valid = true if results.uniq == [true]
       end
 
@@ -160,6 +165,16 @@ module CspaceConfigUntangler
           false
         end
       end
+
+      def valid_new_style
+        has_data_config_type? && has_display_name?
+      end
+
+      def has_data_config_type?
+        @mapper.dig("config", "dataConfigType") == "record type"
+      end
+
+      def has_display_name? = @mapper["config"].key?("display_name")
     end
   end
 end
