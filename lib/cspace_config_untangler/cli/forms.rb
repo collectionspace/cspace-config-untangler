@@ -108,10 +108,10 @@ module CspaceConfigUntangler
           p.rectypes
             .map(&:forms)
             .flatten
-            .map(&:values)
-            .flatten
             .reject(&:disabled?)
-            .map { |form| form.send(:iterator).send(:allprops) }
+            .map { |form| form.send(:iterator) }
+            .each { |iter| iter.call }
+            .map { |iter| iter.send(:allprops) }
             .flatten
         end.flatten
 
