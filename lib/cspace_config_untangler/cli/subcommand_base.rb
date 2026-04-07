@@ -74,6 +74,12 @@ module CspaceConfigUntangler
               required: true,
               aliases: "-r"
             },
+            style: {
+              desc: "Old works for CSV Importer; New for data-toolkit",
+              type: :string,
+              default: "old",
+              enum: %w[old new]
+            },
             subdirs: {
               desc: "Whether to organize into subdirectories within given "\
                 "output directory by normalized profile name. Normalized "\
