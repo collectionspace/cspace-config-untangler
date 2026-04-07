@@ -1,21 +1,21 @@
 profile,authority,authority_vocab,used_in_profile,controlled_field_ct,controlled_fields
-materials_4-1-1,citation,citation/local,y,9,"Citation: Term source name (#<CspaceConfigUntangler::Message:0x000000014ebf4c40>)
-Concept: Term source name (#<CspaceConfigUntangler::Message:0x00000001251140b0>)
+materials_4-1-1,citation,citation/local,y,9,"Citation: Term source name (Source)
+Concept: Term source name (Source)
 Material: Citation source
-Material: Term source name (#<CspaceConfigUntangler::Message:0x000000014bab1c78>)
-Organization: Term source name (#<CspaceConfigUntangler::Message:0x000000014e63fde0>)
-Person: Term source name (#<CspaceConfigUntangler::Message:0x000000014d9fe2e8>)
-Place: Term source name (#<CspaceConfigUntangler::Message:0x000000014cef6cd8>)
-Storage Location: Term source name (#<CspaceConfigUntangler::Message:0x00000001223d2188>)
-Work: Term source name (#<CspaceConfigUntangler::Message:0x000000014bebcd68>)"
-materials_4-1-1,citation,citation/shared,y,8,"Citation: Term source name (#<CspaceConfigUntangler::Message:0x000000014ebf4c40>)
-Concept: Term source name (#<CspaceConfigUntangler::Message:0x00000001251140b0>)
+Material: Term source name (Source)
+Organization: Term source name (Source)
+Person: Term source name (Source)
+Place: Term source name (Source)
+Storage Location: Term source name (Source)
+Work: Term source name (Source)"
+materials_4-1-1,citation,citation/shared,y,8,"Citation: Term source name (Source)
+Concept: Term source name (Source)
 Material: Citation source
-Material: Term source name (#<CspaceConfigUntangler::Message:0x000000014bab1c78>)
-Person: Term source name (#<CspaceConfigUntangler::Message:0x000000014d9fe2e8>)
-Place: Term source name (#<CspaceConfigUntangler::Message:0x000000014cef6cd8>)
-Storage Location: Term source name (#<CspaceConfigUntangler::Message:0x00000001223d2188>)
-Work: Term source name (#<CspaceConfigUntangler::Message:0x000000014bebcd68>)"
+Material: Term source name (Source)
+Person: Term source name (Source)
+Place: Term source name (Source)
+Storage Location: Term source name (Source)
+Work: Term source name (Source)"
 materials_4-1-1,concept,concept/archculture,n,0,""
 materials_4-1-1,concept,concept/materialclassification,y,3,"Material: Composition class name
 Material: Composition family name
@@ -44,7 +44,7 @@ Deaccession: Parties involved on behalf of
 Loan Out: Borrower
 Location/Movement/Inventory: Current location
 Location/Movement/Inventory: Normal location
-Material: Discontinued by (#<CspaceConfigUntangler::Message:0x000000014bab1b88>)
+Material: Discontinued by (Discontinued)
 Material: Production organization name
 Material: Term creator organization
 Material: Term editor organization
@@ -73,7 +73,7 @@ materials_4-1-1,organization,organization/shared,y,27,"Acquisitions: Acquisition
 Loan Out: Borrower
 Location/Movement/Inventory: Current location
 Location/Movement/Inventory: Normal location
-Material: Discontinued by (#<CspaceConfigUntangler::Message:0x000000014bab1b88>)
+Material: Discontinued by (Discontinued)
 Material: Production organization name
 Material: Term creator organization
 Material: Term editor organization
@@ -97,9 +97,9 @@ Valuation Control: Source
 Work: Creator name
 Work: Publisher name"
 materials_4-1-1,person,person/local,y,38,"Acquisitions: Acquisition source
-Acquisitions: Authorizer (#<CspaceConfigUntangler::Message:0x000000014d35d5d8>)
+Acquisitions: Authorizer (Authorization)
 Citation: Agent name
-Deaccession: Deaccession approval individual (#<CspaceConfigUntangler::Message:0x000000014dc7d7a8>)
+Deaccession: Deaccession approval individual (Deaccession approval group)
 Deaccession: Exit recipient
 Deaccession: Parties involved person
 Group: Group owner
