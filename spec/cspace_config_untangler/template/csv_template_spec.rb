@@ -3,7 +3,7 @@
 require "spec_helper"
 
 RSpec.describe CCU::Template::CsvTemplate do
-  let(:release) { "6_1" }
+  let(:release) { "8_3" }
   let(:generator) do
     Helpers::SetupGenerator.new(profile: profilename, rectypes: rectypes,
       release: release)
