@@ -87,21 +87,9 @@ module Helpers
         subtype:).call
     end
 
-    def template_file
-      csv = CSV.parse(File.read(template_file_path), headers: false)
-      csv.shift
-      csv.transpose
-    end
-
     def template_object(type = "displayname")
       CCU::Template::CsvTemplate.new(profile:, rectype:,
         type:)
-    end
-
-    def template_testable(type = "displayname")
-      csv = template_object(type).csvdata
-      csv.shift
-      csv.transpose
     end
 
     private
