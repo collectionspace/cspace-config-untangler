@@ -13,7 +13,8 @@ RSpec.describe CCU::Template::CsvTemplate do
   let(:profile) { generator.profile }
   let(:rectype) { generator.rectype }
   let(:type) { "displayname" }
-  let(:template) { generator.template_object(type) }
+  let(:format) { "csvimporter" }
+  let(:template) { generator.template_object(type, format) }
 
   context "anthro profile" do
     let(:profilename) { "anthro" }
@@ -26,6 +27,18 @@ RSpec.describe CCU::Template::CsvTemplate do
             h.start_with?("computedCurrentLocation")
           end
           expect(result).to be_empty
+        end
+
+        context "with datatoolkit format" do
+          let(:format) { "datatoolkit" }
+
+          it "outputs single auth-controlled field with paired vocab field" do
+            headers = template.csvdata[6]
+            expect(headers).not_to include("anthroOwnerPersonLocal")
+            expect(headers).not_to include("anthroOwnerOrganizationLocal")
+            expect(headers).to include("anthroOwner")
+            expect(headers).to include("anthroOwnerAuthorityVocabulary")
+          end
         end
       end
     end
