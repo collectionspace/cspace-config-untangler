@@ -25,6 +25,7 @@ module CspaceConfigUntangler
       attr_accessor :datacolumn, :required
       def initialize(field:, datacolumn:, source_type:, source_name:,
         transforms: {})
+        @field = field
         @fieldname = field.name
         @namespace = field.ns.sub("ns2:", "")
         @xpath = field.schema_path
@@ -35,7 +36,7 @@ module CspaceConfigUntangler
         @source_type = source_type
         @source_name = source_name
         @transforms = transforms
-        @opt_list_values = field.value_list
+        @opt_list_values = derive_opt_list_values
         @data_type = @datacolumn["Refname"] ? "csrefname" : field.data_type
       end
 
@@ -50,6 +51,20 @@ module CspaceConfigUntangler
           h[a.to_sym] = instance_variable_get(ivs[i])
         end
         h
+      end
+
+      private
+
+      attr_reader :field
+
+      def derive_opt_list_values
+        if source_type == "authority vocabulary indication"
+          field.value_sources
+            .reject { |src| src.source_type == "refname" }
+            .map { |src| src.name.split("/").map(&:capitalize).join("/") }
+        else
+          field.value_list
+        end
       end
     end
   end

@@ -2,6 +2,7 @@
 
 require_relative "value_sources/abstract_value_source"
 require_relative "value_sources/authority"
+require_relative "value_sources/data_toolkit_auth_vocab"
 require_relative "value_sources/no_source"
 require_relative "value_sources/option_list"
 require_relative "value_sources/refname"

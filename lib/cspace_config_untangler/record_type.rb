@@ -98,8 +98,9 @@ module CspaceConfigUntangler
       fields
     end
 
+    # @param format %w[csvimporter datatoolkit]
     # @return [Array<CCU::FieldMap::FieldMapping>]
-    def mappings = @mappings ||= derive_mappings
+    def mappings(format = "csvimporter") = @mappings ||= derive_mappings(format)
 
     def nonunique_fields
       h = {}
@@ -128,12 +129,19 @@ module CspaceConfigUntangler
       h.select { |name, paths| paths.length > 1 }
     end
 
+    # @param format %w[csvimporter datatoolkit]
     # @return [Array<CCU::FieldMap::FieldMapping>]
-    def derive_mappings
+    def derive_mappings(format = "csvimporter")
+      column_style = if format == "csvimporter"
+        profile.column_style
+      elsif format == "datatoolkit"
+        :data_toolkit
+      end
+
       checkhash = {}
       mappings = fields.map do |f|
         FieldMapper.new(field: f,
-          column_style: profile.column_style).mappings
+          column_style: column_style).mappings
       end.flatten
 
       # ensure unique datacolumn values for templates and mapper
