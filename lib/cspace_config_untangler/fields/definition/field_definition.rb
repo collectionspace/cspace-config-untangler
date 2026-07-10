@@ -77,12 +77,12 @@ module CspaceConfigUntangler
           omit = %i[@config @profile @hash @parent @datahash @name @ns_for_id]
           attributes = instance_variables.unshift([])
             .inject do |info, attribute|
-              if omit.include?(attribute)
-                info
-              else
-                info <<
-                  "#{attribute}=#{instance_variable_get(attribute).inspect}"
-              end
+            if omit.include?(attribute)
+              info
+            else
+              info <<
+                "#{attribute}=#{instance_variable_get(attribute).inspect}"
+            end
           end
 
           %(#<#{self.class}:#{object_id} #{attributes.join(", ")}>)
