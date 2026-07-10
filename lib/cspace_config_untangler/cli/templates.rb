@@ -19,7 +19,7 @@ module CspaceConfigUntangler
       CollectionSpace field, regardless of how many authorities can be used to
       populate that field.
       LONGDESC
-      shared_options :profiles, :rectypes, :subdirs
+      shared_options :profiles, :rectypes, :subdirs, :ingest_data_format
       shared_option :output_dir, default: File.join(CCU.datadir, "templates")
       option :type, desc: "Template type(s) to output",
         type: :string,
@@ -47,25 +47,31 @@ module CspaceConfigUntangler
           end
           FileUtils.mkdir_p(dir_path)
 
-          write_templates(profile, dir_path, types)
+          write_templates(
+            profile, dir_path, types, options[:ingest_data_format]
+          )
         end
       end
 
       no_commands do
-        def write_templates(profile, dir_path, types)
+        def write_templates(profile, dir_path, types, format)
           rectypes = profile.rectypes + profile.special_rectypes
           rectypes.each do |rectype|
             puts "  ...#{rectype.name}"
-            write_rectype_profiles(profile, rectype, dir_path, types)
+            write_rectype_profiles(profile, rectype, dir_path, types, format)
           end
         end
 
-        def write_rectype_profiles(profile, rectype, dir_path, types)
+        def write_rectype_profiles(profile, rectype, dir_path, types, format)
           types.each do |type|
             path = (type == "refname") ? "#{dir_path}/refname" : dir_path
             FileUtils.mkdir_p(path) if type == "refname"
-            CsvTemplate.new(profile: profile, rectype: rectype,
-              type: type).write(path)
+            CsvTemplate.new(
+              profile: profile,
+              rectype: rectype,
+              type: type,
+              ingest_data_format: format
+            ).write(path)
           end
         end
       end
