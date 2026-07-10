@@ -6,9 +6,9 @@ module CspaceConfigUntangler
       ::CsvTemplate = CspaceConfigUntangler::Template::CsvTemplate
       attr_reader :csvdata
 
-      # profile = CCU::Profile
-      # rectype = CCU::RecordType
-      def initialize(profile:, rectype:, type:)
+      # @param profile [CCU::Profile]
+      # @param rectype [CCU::RecordType]
+      # @param type %w[displayname refname]
         @profile = profile
         @rectype = rectype
         @type = type

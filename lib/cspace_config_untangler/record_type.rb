@@ -98,6 +98,7 @@ module CspaceConfigUntangler
       fields
     end
 
+    # @return [Array<CCU::FieldMap::FieldMapping>]
     def mappings = @mappings ||= derive_mappings
 
     def nonunique_fields
@@ -127,6 +128,7 @@ module CspaceConfigUntangler
       h.select { |name, paths| paths.length > 1 }
     end
 
+    # @return [Array<CCU::FieldMap::FieldMapping>]
     def derive_mappings
       checkhash = {}
       mappings = fields.map do |f|
@@ -153,6 +155,7 @@ module CspaceConfigUntangler
       mappings
     end
 
+    # @param context %i[mapper template]
     def batch_mappings(context = :mapper)
       importable = remove_unimportable_fields_from(mappings, context)
       faux_require_profile_specific_mappings(faux_require_mappings(importable))
@@ -342,8 +345,11 @@ module CspaceConfigUntangler
         .sort
     end
 
-    # get rid of mappings for fields we do not want to import via the
+    # Delete mappings for fields we do not want to import via the
     # batch import tool
+    # @param mappings [Array<CCU::FieldMap::FieldMapping>]
+    # @param context %i[mapper template]
+    # @return [Array<CCU::FieldMap::FieldMapping>]
     def remove_unimportable_fields_from(mappings, context)
       constant_instructions = {
         "collectionobject" => %w[computedCurrentLocation]
@@ -368,9 +374,9 @@ module CspaceConfigUntangler
         end
       end
 
-      # omits any fields for which workable mapping cannot be
-      # extracted this is introduced in order to output any workable
-      # template/mappers for OMCA, because they have custom namespace
+      # Omits any fields for which workable mapping cannot be
+      # extracted. This is introduced in order to output any workable
+      # template/mappers for OMCA, because they have a custom namespace
       # inside the contact subrecord which the Untangler can't deal
       # with at present
       mappings.reject { |mapping| mapping.data_type.nil? && mapping.xpath.nil? }
