@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-# rubocop:disable Layout/LineLength
 require_relative "subcommand_base"
 
 module CspaceConfigUntangler
@@ -10,9 +9,15 @@ module CspaceConfigUntangler
         "Write batch import CSV templates for given (or all) record types in "\
         "the given profiles."
       long_desc <<-LONGDESC
-    Using type = displayname creates templates assuming users want to enter human-readable name strings in the CSV. For fields populated from more than one authority or vocabulary, the template contains a separate column per term source.
+      Using type = displayname creates templates assuming users want to enter
+      human-readable name strings in the CSV. For fields populated from more
+      than one authority or vocabulary, the template contains a separate column
+      per term source.
 
-    Using type = refname creates templates assuming users will enter CollectionSpace refnames in their CSV. One column is output per CollectionSpace field, regardless of how many authorities can be used to populate that field.
+      Using type = refname creates templates assuming users will enter
+      CollectionSpace refnames in their CSV. One column is output per
+      CollectionSpace field, regardless of how many authorities can be used to
+      populate that field.
       LONGDESC
       shared_options :profiles, :rectypes, :subdirs
       shared_option :output_dir, default: File.join(CCU.datadir, "templates")
@@ -67,4 +72,3 @@ module CspaceConfigUntangler
     end
   end
 end
-# rubocop:enable Layout/LineLength
