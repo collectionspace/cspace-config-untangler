@@ -9,11 +9,15 @@ module CspaceConfigUntangler
       # @param profile [CCU::Profile]
       # @param rectype [CCU::RecordType]
       # @param type %w[displayname refname]
+      # @param format %i[csvimporter datatoolkit]
+      def initialize(profile:, rectype:, type:, format: :csvimporter)
         @profile = profile
         @rectype = rectype
         @type = type
+        @format = format
         @config = @profile.config
-        @mappings = @rectype.batch_mappings(:template).map(&:to_h)
+        @mappings = @rectype.batch_mappings(:template, format)
+          .map(&:to_h)
         if @type == "displayname"
           @mappings = @mappings.reject do |mapping|
                         mapping[:data_type] == "csrefname"
