@@ -214,8 +214,22 @@ RSpec.describe CCU::RecordType do
           #  values to be different
           it "columnnames: reference referenceCitationLocal "\
             "referenceCitationWorldcat" do
-            expect(columns).to eq(%w[reference referenceCitationLocal
-              referenceCitationWorldcat referenceRefname])
+              expect(columns).to eq(%w[reference referenceCitationLocal
+                referenceCitationWorldcat referenceRefname])
+            end
+
+          context "when format = datatoolkit" do
+            let(:release) { "8_3" }
+            let(:result) { rectype.mappings(:datatoolkit) }
+
+            it "columnnames: reference referenceAuthorityVocabulary "\
+              "taxonomicIdentGroup_reference" do
+                expect(columns).to eq(%w[
+                  reference
+                  referenceAuthorityVocabulary
+                  taxonomicIdentGroup_reference
+                ])
+              end
           end
         end
         context "fieldname = fieldLocVerbatim" do

@@ -8,7 +8,7 @@ module CspaceConfigUntangler
       ::FieldMapper = CspaceConfigUntangler::FieldMap::FieldMapper
 
       # @param field [CCU::Fields::Field]
-      # @param column_style %i[fully_consistent consistent data_toolkit fancy]
+      # @param column_style %i[fully_consistent consistent datatoolkit fancy]
       def initialize(field:, column_style: :fully_consistent)
         @field = field
         @column_style = column_style
@@ -32,13 +32,13 @@ module CspaceConfigUntangler
       attr_reader :field, :column_style
 
       def derive_sources
-        return field.value_sources if column_style == :data_toolkit
+        return field.value_sources if column_style == :datatoolkit
 
         refname_source_added
       end
 
       def derive_columns
-        return derive_data_toolkit_columns if column_style == :data_toolkit
+        return derive_data_toolkit_columns if column_style == :datatoolkit
 
         populate_columns
       end

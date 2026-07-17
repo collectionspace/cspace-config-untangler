@@ -98,9 +98,9 @@ module CspaceConfigUntangler
       fields
     end
 
-    # @param format %w[csvimporter datatoolkit]
+    # @param format %i[csvimporter datatoolkit]
     # @return [Array<CCU::FieldMap::FieldMapping>]
-    def mappings(format = "csvimporter") = @mappings ||= derive_mappings(format)
+    def mappings(format = :csvimporter) = @mappings ||= derive_mappings(format)
 
     def nonunique_fields
       h = {}
@@ -129,43 +129,82 @@ module CspaceConfigUntangler
       h.select { |name, paths| paths.length > 1 }
     end
 
-    # @param format %w[csvimporter datatoolkit]
+    # @param format %i[csvimporter datatoolkit]
     # @return [Array<CCU::FieldMap::FieldMapping>]
-    def derive_mappings(format = "csvimporter")
-      column_style = if format == "csvimporter"
+    def derive_mappings(format = :csvimporter)
+      column_style = if format == :csvimporter
         profile.column_style
-      elsif format == "datatoolkit"
-        :data_toolkit
+      elsif format == :datatoolkit
+        :datatoolkit
       end
 
-      checkhash = {}
-      mappings = fields.map do |f|
+      rawmappings = fields.map do |f|
         FieldMapper.new(field: f,
           column_style: column_style).mappings
       end.flatten
 
-      # ensure unique datacolumn values for templates and mapper
-      mappings.each do |mapping|
-        next if mapping.xpath.nil?
+      ensure_unique_datacolumns(rawmappings)
+    end
 
-        if checkhash.key?(mapping.datacolumn)
-          add = if mapping.xpath.empty?
-            mapping.namespace.split("_").last
-          else
-            mapping.xpath.last
-          end
+    def ensure_unique_datacolumns(mappings)
+      mappings.group_by { |mapping| mapping.field.name }
+        .map do |key, vals|
+          next vals if vals.length == 1
 
-          mapping.datacolumn = "#{add}_#{mapping.datacolumn}"
+          datacols = vals.map(&:datacolumn)
+          next vals if datacols == datacols.uniq
+
+          disambiguate_datacolumns(vals)
+        end.flatten
+    end
+
+    def disambiguate_datacolumns(vals)
+      grouped = vals.group_by(&:field)
+      lengths = grouped.values.map(&:length).uniq
+      if lengths.length == 1
+        hx = grouped.find { |f, v| !v.first.xpath.empty? }
+        if hx
+          disambiguate_xpath_datacolumn(grouped, hx)
         else
-          checkhash[mapping.datacolumn] = nil
+          disambiguate_first_datacolumn(grouped)
         end
+      else
+        disambiguate_min_datacolumns(grouped)
       end
-      mappings
+    end
+
+    def disambiguate_xpath_datacolumn(grouped, hx)
+      grouped.delete(hx[0])
+      subjects = hx[1]
+      prefix = subjects.first.xpath.last
+      subjects.each { |s| s.datacolumn = "#{prefix}_#{s.datacolumn}" }
+      [subjects, grouped.values]
+    end
+
+    def disambiguate_first_datacolumn(grouped)
+      # binding.pry
+    end
+
+    def disambiguate_min_datacolumns(grouped)
+      min = grouped.min_by { |f, v| v.length }
+      grouped.delete(min[0])
+      subjects = min[1]
+      prefix = if subjects.first.xpath.empty?
+        subjects.first.namespace.split("_").last
+      else
+        subjects.first.xpath.last
+      end
+
+      subjects.each { |s| s.datacolumn = "#{prefix}_#{s.datacolumn}" }
+      [subjects, grouped.values]
     end
 
     # @param context %i[mapper template]
-    def batch_mappings(context = :mapper)
-      importable = remove_unimportable_fields_from(mappings, context)
+    # @param format %i[csvimporter datatoolkit]
+    def batch_mappings(context = :mapper, format = :csvimporter)
+      importable = remove_unimportable_fields_from(
+        mappings(format), context
+      )
       faux_require_profile_specific_mappings(faux_require_mappings(importable))
     end
 

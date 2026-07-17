@@ -48,7 +48,7 @@ module CspaceConfigUntangler
           FileUtils.mkdir_p(dir_path)
 
           write_templates(
-            profile, dir_path, types, options[:ingest_data_format]
+            profile, dir_path, types, options[:ingest_data_format].to_sym
           )
         end
       end
