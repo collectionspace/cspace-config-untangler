@@ -87,7 +87,7 @@ module Helpers
         subtype:).call
     end
 
-    def template_object(type = "displayname", format = "csvimporter")
+    def template_object(type = "displayname", format = :csvimporter)
       CCU::Template::CsvTemplate.new(profile:, rectype:,
         type:, format:)
     end

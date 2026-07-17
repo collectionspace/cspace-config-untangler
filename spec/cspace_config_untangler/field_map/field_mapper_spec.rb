@@ -9,7 +9,7 @@ RSpec.describe CCU::FieldMap::FieldMapper do
   end
   let(:profilename) { "core" }
   let(:rectypes) { ["collectionobject", "concept", "movement"] }
-  let(:release) { "6_0" }
+  let(:release) { "7_0" }
   let(:profile) { generator.profile }
   let(:field) { generator.field(fieldrec, fieldname) }
   let(:column_style) { :fully_consistent }
@@ -41,7 +41,7 @@ RSpec.describe CCU::FieldMap::FieldMapper do
 
     context "and when data_toolkit for 8.3" do
       let(:release) { "8_3" }
-      let(:column_style) { :data_toolkit }
+      let(:column_style) { :datatoolkit }
 
       describe "#columns" do
         it "column is the same as field name" do
@@ -90,7 +90,7 @@ RSpec.describe CCU::FieldMap::FieldMapper do
 
     context "and when data_toolkit for 8.3" do
       let(:release) { "8_3" }
-      let(:column_style) { :data_toolkit }
+      let(:column_style) { :datatoolkit }
 
       describe "#columns" do
         it "column is the same as field name" do
@@ -151,7 +151,7 @@ RSpec.describe CCU::FieldMap::FieldMapper do
 
       context "and when data_toolkit for 8.3" do
         let(:release) { "8_3" }
-        let(:column_style) { :data_toolkit }
+        let(:column_style) { :datatoolkit }
 
         describe "#columns" do
           it "column is the same as field name" do
@@ -226,7 +226,7 @@ RSpec.describe CCU::FieldMap::FieldMapper do
 
       context "and when data_toolkit for 8.3" do
         let(:release) { "8_3" }
-        let(:column_style) { :data_toolkit }
+        let(:column_style) { :datatoolkit }
 
         describe "#columns" do
           it "merges in column name hash as expected" do

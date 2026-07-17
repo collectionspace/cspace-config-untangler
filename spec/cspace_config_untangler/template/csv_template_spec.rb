@@ -13,7 +13,7 @@ RSpec.describe CCU::Template::CsvTemplate do
   let(:profile) { generator.profile }
   let(:rectype) { generator.rectype }
   let(:type) { "displayname" }
-  let(:format) { "csvimporter" }
+  let(:format) { :csvimporter }
   let(:template) { generator.template_object(type, format) }
 
   context "anthro profile" do
