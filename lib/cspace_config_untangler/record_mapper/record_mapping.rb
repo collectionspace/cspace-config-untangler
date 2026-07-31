@@ -6,17 +6,18 @@ module CspaceConfigUntangler
       ::RecordMapping = CspaceConfigUntangler::RecordMapper::RecordMapping
       include JsonWritable
 
-      attr_reader :hash, :profile, :rectype, :subtype, :style
+      attr_reader :hash, :profile, :rectype, :subtype, :style, :path
 
       # profile = CCU::Profile
       # rectype = CCU::RecordType
-      def initialize(profile:, rectype:, subtype: nil, style: "old")
+      def initialize(profile:, rectype:, subtype: nil, style: "old", path: nil)
         @profile = profile
         @rectype = rectype
         @subtype = subtype
         @style = style
         @config = @profile.config
         @hash = {}
+        @path = path
       end
 
       def call
