@@ -41,15 +41,18 @@ module CspaceConfigUntangler
           "http://collectionspace.org/services/osteology/domain/anthropology"
       }
 
+      # @param profile_config [Hash] UI config for profile
+      # @param rectype [String]
+      # @param mapper_config [Hash]
       def initialize(profile_config:, rectype:, mapper_config:)
-        @config = profile_config
+        @pconfig = profile_config
         @rectype = rectype
         @mconfig = mapper_config
       end
 
       def hash
         hash = {}
-        @config.dig("recordTypes", @rectype, "fields", "document").keys
+        pconfig.dig("recordTypes", rectype, "fields", "document").keys
           .select { |k| k.start_with?("ns2") }
           .reject do |k|
           k == "ns2:collectionspace_core" ||
@@ -61,40 +64,42 @@ module CspaceConfigUntangler
 
       private
 
+      attr_reader :pconfig, :rectype, :mconfig
+
       def authority_ns_uri(ns)
-        @config.dig("recordTypes", @rectype, "fields", "document", ns,
+        pconfig.dig("recordTypes", rectype, "fields", "document", ns,
           "csid", "[config]", "extensionParentConfig",
           "service", "ns")
       end
 
       def extension_ns_uri(ns)
-        ext = ns.sub("ns2:#{@mconfig[:document_name]}_", "").sub("_extension",
+        ext = ns.sub("ns2:#{mconfig[:document_name]}_", "").sub("_extension",
           "")
-        @config.dig("extensions", ext, object_name, "fields", ns, "[config]",
+        pconfig.dig("extensions", ext, object_name, "fields", ns, "[config]",
           "service", "ns")
       end
 
       def object_name
-        return if @mconfig[:service_type] == "authority"
+        return if mconfig[:service_type] == "authority"
 
-        @mconfig[:object_name].downcase
+        mconfig[:object_name].downcase
       end
 
       def uri(ns)
         case ns
         when "ns2:contacts_common"
           "http://collectionspace.org/services/contact"
-        when "ns2:#{@mconfig[:document_name]}_common"
-          if @mconfig[:service_type] == "authority"
+        when "ns2:#{mconfig[:document_name]}_common"
+          if mconfig[:service_type] == "authority"
             authority_ns_uri(ns)
           else
             "http://collectionspace.org/services/#{object_name}"
           end
-        when "ns2:#{@mconfig[:document_name]}_#{@mconfig[:profile_basename]}"
+        when "ns2:#{mconfig[:document_name]}_#{mconfig[:profile_basename]}"
           ["http://collectionspace.org", "services", object_name, "domain",
-            @mconfig[:profile_basename]].join("/")
+            mconfig[:profile_basename]].join("/")
         else
-          result = @config.dig("recordTypes", @rectype, "fields", "document",
+          result = pconfig.dig("recordTypes", rectype, "fields", "document",
             ns, "[config]", "service", "ns")
 
           return result if result
