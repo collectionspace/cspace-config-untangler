@@ -9,7 +9,6 @@ module CspaceConfigUntangler
     class NamespaceUris
       ::NamespaceUris = CspaceConfigUntangler::RecordMapper::NamespaceUris
 
-      # rubocop:disable Layout/LineLength
       WEIRD_NS_LOOKUP = {
         "ns2:collectionobjects_annotation" =>
           "http://collectionspace.org/services/collectionobject/domain/"\
@@ -32,7 +31,8 @@ module CspaceConfigUntangler
         "ns2:concepts_fineart" =>
           "http://collectionspace.org/services/concept/domain/fineart",
         "ns2:conditionchecks_variablemedia" =>
-          "http://collectionspace.org/services/conditioncheck/domain/variablemedia",
+          "http://collectionspace.org/services/conditioncheck/domain/"\
+          "variablemedia",
         "ns2:acquisitions_commission" =>
           "http://collectionspace.org/services/acquisition/domain/commission",
         "ns2:propagations_common" =>
@@ -40,7 +40,6 @@ module CspaceConfigUntangler
         "ns2:osteology_anthropology" =>
           "http://collectionspace.org/services/osteology/domain/anthropology"
       }
-      # rubocop:enable Layout/LineLength
 
       def initialize(profile_config:, rectype:, mapper_config:)
         @config = profile_config
