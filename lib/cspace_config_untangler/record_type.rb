@@ -205,7 +205,7 @@ module CspaceConfigUntangler
     # @param format %i[csvimporter datatoolkit]
     def batch_mappings(context = :mapper, format = :csvimporter)
       importable = remove_unimportable_fields_from(
-        mappings(format), context
+        derive_mappings(format), context
       )
       faux_require_profile_specific_mappings(faux_require_mappings(importable))
     end
