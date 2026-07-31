@@ -84,7 +84,7 @@ module Helpers
 
     def record_mapping(subtype = nil)
       CCU::RecordMapper::RecordMapping.new(profile:, rectype:,
-        subtype:).call
+        subtype:).hash
     end
 
     def template_object(type = "displayname", format = :csvimporter)
