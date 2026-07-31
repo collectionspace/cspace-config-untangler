@@ -139,8 +139,10 @@ module CspaceConfigUntangler
       end
 
       rawmappings = fields.map do |f|
-        FieldMapper.new(field: f,
-          column_style: column_style).mappings
+        FieldMapper.new(
+          field: f,
+          column_style: column_style
+        ).mappings
       end.flatten
 
       ensure_unique_datacolumns(rawmappings)
