@@ -6,7 +6,7 @@ module CspaceConfigUntangler
       ::RecordMapping = CspaceConfigUntangler::RecordMapper::RecordMapping
       include JsonWritable
 
-      attr_reader :hash, :profile, :rectype, :subtype, :style, :path
+      attr_reader :profile, :rectype, :subtype, :style, :path
 
       # profile = CCU::Profile
       # rectype = CCU::RecordType
@@ -15,16 +15,13 @@ module CspaceConfigUntangler
         @rectype = rectype
         @subtype = subtype
         @style = style
-        @config = @profile.config
-        @hash = {}
+        @config = profile.config
         @path = path
       end
 
-      def call
-        build_hash
-        append_subtype if @subtype
-        self
-      end
+      def hash = @hash ||= build_hash
+
+      def write = to_json(data: hash, output: path)
 
       def mappings
         @mappings ||= rectype.batch_mappings
@@ -42,67 +39,69 @@ module CspaceConfigUntangler
 
       private
 
-      def append_subtype
-        @hash[:config][:authority_type] = @hash[:config][:service_path]
-        @hash[:config][:authority_subtype] = @subtype[:subtype]
-      end
+      attr_reader :config
 
       def build_hash
-        @hash[:config] = {}
-        @hash[:config][:dataConfigType] = "record type" if @style == "new"
-        @hash[:config][:profile_basename] = @profile.basename
-        @hash[:config][:version] = @profile.readable_version
-        @hash[:config][:recordtype] = @rectype.name
-        add_display_name if @style == "new"
-        @hash[:config][:document_name] =
-          @config.dig("recordTypes", @rectype.name, "serviceConfig",
+        h = {}
+        h[:config] = {}
+        h[:config][:dataConfigType] = "record type" if style == "new"
+        h[:config][:profile_basename] = profile.basename
+        h[:config][:version] = profile.readable_version
+        h[:config][:recordtype] = rectype.name
+        add_display_name if style == "new"
+        h[:config][:document_name] =
+          config.dig("recordTypes", rectype.name, "serviceConfig",
             "documentName")
-        @hash[:config][:service_name] =
-          @config.dig("recordTypes", @rectype.name, "serviceConfig",
+        h[:config][:service_name] =
+          config.dig("recordTypes", rectype.name, "serviceConfig",
             "serviceName")
-        @hash[:config][:service_path] =
-          @config.dig("recordTypes", @rectype.name, "serviceConfig",
+        h[:config][:service_path] =
+          config.dig("recordTypes", rectype.name, "serviceConfig",
             "servicePath")
-        @hash[:config][:service_type] = @rectype.service_type
-        @hash[:config][:object_name] =
-          @config.dig("recordTypes", @rectype.name, "serviceConfig",
+        h[:config][:service_type] = rectype.service_type
+        h[:config][:object_name] =
+          config.dig("recordTypes", rectype.name, "serviceConfig",
             "objectName")
-        @hash[:config][:ns_uri] = NamespaceUris.new(profile_config: @config,
-          rectype: @rectype.name,
-          mapper_config: @hash[:config]).hash
-        @hash[:config][:identifier_field] = @rectype.id_field
-        @hash[:config][:search_field] = @rectype.search_field
-        if @rectype.service_type == "authority"
-          @hash[:config][:authority_subtypes] =
-            @rectype.subtypes
+        h[:config][:ns_uri] = NamespaceUris.new(profile_config: config,
+          rectype: rectype.name,
+          mapper_config: h[:config]).hash
+        h[:config][:identifier_field] = rectype.id_field
+        h[:config][:search_field] = rectype.search_field
+        if rectype.service_type == "authority"
+          h[:config][:authority_subtypes] =
+            rectype.subtypes
         end
-        @hash[:docstructure] = {}
-        create_hierarchy
-        @hash[:mappings] = @mappings.map { |m| m.to_h }
+        h[:docstructure] = {}
+        create_hierarchy(h)
+        h[:mappings] = mappings.map { |m| m.to_h }
+
+        append_subtype(h) if subtype
+        h
       end
 
-      def add_display_name
+      def add_display_name(h)
         msg = get_display_name
         return unless msg
 
-        @hash[:config][:display_name] = msg
+        h[:config][:display_name] = msg
+        h
       end
 
       def get_display_name
-        msg = @rectype.display_name
+        msg = rectype.display_name
         return unless msg
-        return msg unless @subtype
+        return msg unless subtype
 
-        "#{msg}/#{@subtype[:name]}"
+        "#{msg}/#{subtype[:name]}"
       end
 
-      def create_hierarchy
+      def create_hierarchy(h)
         # top level keys are the namespaces
-        @mappings.each do |m|
-          @hash[:docstructure][m.namespace] = {}
+        mappings.each do |m|
+          h[:docstructure][m.namespace] = {}
         end
 
-        @mappings.each do |m|
+        mappings.each do |m|
           next if m.data_type.nil? && m.xpath.nil?
 
           levels = m.xpath.clone
@@ -110,22 +109,29 @@ module CspaceConfigUntangler
           while levels.size > 0
             thislevel = levels.shift
             path = done.clone << thislevel
-            add_key = if @hash[:docstructure][m.namespace].dig(*path)
+            add_key = if h[:docstructure][m.namespace].dig(*path)
               false
             else
               true
             end
             if add_key
               add_path = if done.empty?
-                @hash[:docstructure][m.namespace]
+                h[:docstructure][m.namespace]
               else
-                @hash[:docstructure][m.namespace].dig(*done)
+                h[:docstructure][m.namespace].dig(*done)
               end
               add_path[thislevel] = {}
             end
             done << thislevel
           end
         end
+        h
+      end
+
+      def append_subtype(h)
+        h[:config][:authority_type] = h[:config][:service_path]
+        h[:config][:authority_subtype] = subtype[:subtype]
+        h
       end
     end
   end
