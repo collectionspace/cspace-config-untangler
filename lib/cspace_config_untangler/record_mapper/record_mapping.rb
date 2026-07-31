@@ -6,7 +6,7 @@ module CspaceConfigUntangler
       ::RecordMapping = CspaceConfigUntangler::RecordMapper::RecordMapping
       include JsonWritable
 
-      attr_reader :hash, :mappings
+      attr_reader :hash, :profile, :rectype, :subtype, :style
 
       # profile = CCU::Profile
       # rectype = CCU::RecordType
@@ -15,7 +15,6 @@ module CspaceConfigUntangler
         @rectype = rectype
         @subtype = subtype
         @style = style
-        @mappings = @rectype.batch_mappings
         @config = @profile.config
         @hash = {}
       end
@@ -24,6 +23,10 @@ module CspaceConfigUntangler
         build_hash
         append_subtype if @subtype
         self
+      end
+
+      def mappings
+        @mappings ||= rectype.batch_mappings
       end
 
       def to_s
