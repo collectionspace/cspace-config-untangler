@@ -30,10 +30,10 @@ RSpec.describe CCU::Template::CsvTemplate do
         end
 
         context "with datatoolkit format" do
-          let(:format) { "datatoolkit" }
+          let(:format) { :datatoolkit }
 
           it "outputs single auth-controlled field with paired vocab field" do
-            headers = template.csvdata[6]
+            headers = template.csvdata[7]
             expect(headers).not_to include("anthroOwnerPersonLocal")
             expect(headers).not_to include("anthroOwnerOrganizationLocal")
             expect(headers).to include("anthroOwner")
