@@ -177,9 +177,10 @@ module CspaceConfigUntangler
       authorities - used_authority_vocabs
     end
 
-    def inspect
-      %(#<#{self.class}:#{object_id} name: #{@name}>)
+    def to_s
+      "<##{self.class}:#{object_id.to_s(8)} name: #{name}>"
     end
+    alias_method :inspect, :to_s
 
     # @return [Hash] where keys are element ids and values are defaultMessages
     #   for those ids

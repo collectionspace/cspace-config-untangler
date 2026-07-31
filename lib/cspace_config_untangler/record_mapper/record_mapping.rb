@@ -26,6 +26,16 @@ module CspaceConfigUntangler
         self
       end
 
+      def to_s
+        "<##{self.class}:#{object_id.to_s(8)}\n"\
+          "  profile: #{profile}\n"\
+          "  rectype: #{rectype}\n"\
+          "  subtype: #{subtype.inspect}\n"\
+          "  style: #{style.inspect}\n"\
+          "  path: #{path.inspect}>"
+      end
+      alias_method :inspect, :to_s
+
       private
 
       def append_subtype

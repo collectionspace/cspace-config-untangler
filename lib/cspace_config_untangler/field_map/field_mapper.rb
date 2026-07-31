@@ -27,6 +27,13 @@ module CspaceConfigUntangler
       def column_names = sources.map { |src| get_column_name(src) }
         .join("; ")
 
+      def to_s
+        "<##{self.class}:#{object_id.to_s(8)}\n"\
+          "  field: #{field}\n"\
+          "  column_style: #{column_style.inspect}>"
+      end
+      alias_method :inspect, :to_s
+
       private
 
       attr_reader :field, :column_style
