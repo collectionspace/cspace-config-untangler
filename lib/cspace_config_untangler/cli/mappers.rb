@@ -93,13 +93,12 @@ module CspaceConfigUntangler
           FileUtils.mkdir_p(dir_path)
           p.rectypes.each do |rt|
             puts "  ...#{rt.name}"
-            CspaceConfigUntangler::RecordMapper::Wrapper.new(profile: p,
+            CspaceConfigUntangler::RecordMapper::Writer.new(
+              profile: p,
               rectype: rt,
               base_path: dir_path,
-              style: options[:style]).call.each do |mapper|
-              mapper[:mapper].to_json(data: mapper[:mapper].hash,
-                output: mapper[:path])
-            end
+              style: options[:style]
+            ).write
           end
 
           p.special_rectypes.each do |rt|
