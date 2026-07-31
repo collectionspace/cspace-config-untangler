@@ -28,12 +28,19 @@ RSpec.describe CCU::RecordMapper::NamespaceUris do
         let(:rectypes) { ["collectionobject"] }
         let(:expected) do
           {
-            "collectionobjects_common" => "http://collectionspace.org/services/collectionobject",
-            "collectionobjects_culturalcare" => "http://collectionspace.org/services/collectionobject/domain/collectionobject",
-            "collectionobjects_annotation" => "http://collectionspace.org/services/collectionobject/domain/annotation",
-            "collectionobjects_nagpra" => "http://collectionspace.org/services/collectionobject/domain/nagpra",
-            "collectionobjects_anthro" => "http://collectionspace.org/services/collectionobject/domain/anthro",
-            "collectionobjects_naturalhistory_extension" => "http://collectionspace.org/services/collectionobject/domain/naturalhistory_extension"
+            "collectionobjects_common" => "http://collectionspace.org/"\
+              "services/collectionobject",
+            "collectionobjects_culturalcare" => "http://collectionspace.org/"\
+              "services/collectionobject/domain/collectionobject",
+            "collectionobjects_annotation" => "http://collectionspace.org/"\
+              "services/collectionobject/domain/annotation",
+            "collectionobjects_nagpra" => "http://collectionspace.org/"\
+              "services/collectionobject/domain/nagpra",
+            "collectionobjects_anthro" => "http://collectionspace.org/"\
+              "services/collectionobject/domain/anthro",
+            "collectionobjects_naturalhistory_extension" =>
+              "http://collectionspace.org/services/collectionobject/domain/"\
+              "naturalhistory_extension"
           }
         end
 
@@ -46,7 +53,8 @@ RSpec.describe CCU::RecordMapper::NamespaceUris do
         let(:rectypes) { ["claim"] }
         let(:expected) do
           {
-            "claims_nagpra" => "http://collectionspace.org/services/claim/domain/nagpra",
+            "claims_nagpra" => "http://collectionspace.org/services/claim/"\
+              "domain/nagpra",
             "claims_common" => "http://collectionspace.org/services/claim"
           }
         end
