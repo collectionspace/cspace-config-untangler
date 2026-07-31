@@ -105,7 +105,14 @@ module CspaceConfigUntangler
         "#{rectype.name.upcase}: #{ui_path.join(" > ")} > #{label}"
       end
 
+      def to_s
+        "<##{self.class}:#{object_id.to_s(8)} #{fid}"
+      end
+      alias_method :inspect, :to_s
+
       private
+
+      attr_reader :fid
 
       def field_def = @field_def ||= find_field_def
 
