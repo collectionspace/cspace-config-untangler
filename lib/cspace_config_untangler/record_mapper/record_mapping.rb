@@ -29,7 +29,7 @@ module CspaceConfigUntangler
       def write = to_json(data: hash, output: path)
 
       def mappings
-        @mappings ||= rectype.batch_mappings
+        @mappings ||= rectype.batch_mappings(:mapper, style)
       end
 
       def to_s
