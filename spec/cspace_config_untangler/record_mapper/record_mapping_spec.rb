@@ -13,7 +13,9 @@ RSpec.describe CCU::RecordMapper::RecordMapping do
   let(:profile) { generator.profile }
 
   describe RecordMapping do
-    let(:mapper) { generator.record_mapping }
+    let(:subtype) { nil }
+    let(:style) { :csvimporter }
+    let(:mapper) { generator.record_mapping(subtype, style) }
     let(:config) { mapper[:config] }
     context "when botgarden profile" do
       let(:profilename) { "botgarden" }
