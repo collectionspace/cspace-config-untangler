@@ -82,9 +82,9 @@ module Helpers
       CCU::Fields::Def::NamespaceFieldParser.call(cfg)
     end
 
-    def record_mapping(subtype = nil)
+    def record_mapping(subtype = nil, style = :csvimporter)
       CCU::RecordMapper::RecordMapping.new(profile:, rectype:,
-        subtype:).hash
+        subtype:, style:).hash
     end
 
     def template_object(type = "displayname", format = :csvimporter)

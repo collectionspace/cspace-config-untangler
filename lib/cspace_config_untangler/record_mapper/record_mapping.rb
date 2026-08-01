@@ -14,6 +14,8 @@ module CspaceConfigUntangler
       #   `{name: "Local", subtype: "person"}`
       # @param style %i[csvimporter datatoolkit]
       # @param path [String]
+      def initialize(profile:, rectype:, subtype: nil, style: :csvimporter,
+        path: nil)
         @profile = profile
         @rectype = rectype
         @subtype = subtype
@@ -47,11 +49,11 @@ module CspaceConfigUntangler
       def build_hash
         h = {}
         h[:config] = {}
-        h[:config][:dataConfigType] = "record type" if style == "new"
+        h[:config][:dataConfigType] = "record type" if style == :datatoolkit
         h[:config][:profile_basename] = profile.basename
         h[:config][:version] = profile.readable_version
         h[:config][:recordtype] = rectype.name
-        add_display_name if style == "new"
+        add_display_name(h) if style == :datatoolkit
         h[:config][:document_name] =
           config.dig("recordTypes", rectype.name, "serviceConfig",
             "documentName")
