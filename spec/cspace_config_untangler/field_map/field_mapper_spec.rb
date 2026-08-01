@@ -162,7 +162,7 @@ RSpec.describe CCU::FieldMap::FieldMapper do
         end
 
         describe "#mappings" do
-          it "returns 2 mappings" do
+          it "returns 1 mapping" do
             expect(mapper.mappings.size).to eq(1)
           end
         end
