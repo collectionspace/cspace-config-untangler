@@ -8,9 +8,12 @@ module CspaceConfigUntangler
 
       attr_reader :profile, :rectype, :subtype, :style, :path
 
-      # profile = CCU::Profile
-      # rectype = CCU::RecordType
-      def initialize(profile:, rectype:, subtype: nil, style: "old", path: nil)
+      # @param profile [CCU::Profile]
+      # @param rectype [CCU::RecordType]
+      # @param subtype [NilValue, Hash] like
+      #   `{name: "Local", subtype: "person"}`
+      # @param style %i[csvimporter datatoolkit]
+      # @param path [String]
         @profile = profile
         @rectype = rectype
         @subtype = subtype
