@@ -83,10 +83,10 @@ module CspaceConfigUntangler
               aliases: "-r"
             },
             style: {
-              desc: "Old works for CSV Importer; New for data-toolkit",
+              desc: "Ingest format style",
               type: :string,
-              default: "old",
-              enum: %w[old new]
+              default: "csvimporter",
+              enum: %w[csvimporter datatoolkit]
             },
             subdirs: {
               desc: "Whether to organize into subdirectories within given "\

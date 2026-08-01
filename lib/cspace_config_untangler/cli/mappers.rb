@@ -79,12 +79,14 @@ module CspaceConfigUntangler
       shared_option :output_dir, default: CCU.mapperdir
       def write
         CCU.config.instance_env = options[:env]
+        style = options[:style].to_sym
 
         outpath = File.expand_path(options[:output_dir])
         get_profiles.each do |profile|
           puts "Writing mappers for #{profile}..."
           p = CCU::Profile.new(profile: profile, rectypes: parse_rectypes,
-            structured_date_treatment: :collapse)
+            structured_date_treatment: :collapse,
+            ingest_format: style)
           dir_path = if options[:subdirs]
             File.join(outpath, p.basename)
           else
@@ -97,7 +99,7 @@ module CspaceConfigUntangler
               profile: p,
               rectype: rt,
               base_path: dir_path,
-              style: options[:style]
+              style: style
             ).write
           end
 
@@ -105,7 +107,7 @@ module CspaceConfigUntangler
             name = rt.name
             puts "  ...#{name}"
             path = "#{dir_path}/#{p.name}_#{name}.json"
-            rt.to_json(data: rt.mapper(options[:style]), output: path)
+            rt.to_json(data: rt.mapper(style), output: path)
           end
         end
       end
@@ -132,7 +134,7 @@ module CspaceConfigUntangler
         mapper_paths = Dir.glob(File.join(in_dir, "**", "*", "*.json"))
 
         mapper_paths.each do |path|
-          validator = RecordMapper::Validator.new(path, options[:style])
+          validator = RecordMapper::Validator.new(path, options[:style].to_sym)
           validator.report
         end
         puts "\n\nValidation complete. Any errors were reported above. "\
