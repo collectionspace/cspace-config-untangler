@@ -55,6 +55,23 @@ RSpec.describe CCU::RecordMapper::RecordMapping do
         it "identifier_field = movementReferenceNumber" do
           expect(config[:identifier_field]).to eq("movementReferenceNumber")
         end
+        it "has no display_name" do
+          expect(config.key?(:display_name)).to be false
+        end
+        it "has no dataConfigType" do
+          expect(config.key?(:dataConfigType)).to be false
+        end
+
+        context "when style == :datatoolkit" do
+          let(:style) { :datatoolkit }
+
+          it "has display_name" do
+            expect(config[:display_name]).to eq("Location/Movement/Inventory")
+          end
+          it "has dataConfigType" do
+            expect(config[:dataConfigType]).to eq("record type")
+          end
+        end
       end
     end
 
