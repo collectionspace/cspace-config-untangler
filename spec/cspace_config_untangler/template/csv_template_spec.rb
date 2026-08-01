@@ -22,7 +22,7 @@ RSpec.describe CCU::Template::CsvTemplate do
     context "object record type" do
       describe ".csvdata" do
         it "does not output computedCurrentLocation field" do
-          headers = template.csvdata[6]
+          headers = template.csvdata[7]
           result = headers.select do |h|
             h.start_with?("computedCurrentLocation")
           end
@@ -38,6 +38,13 @@ RSpec.describe CCU::Template::CsvTemplate do
             expect(headers).not_to include("anthroOwnerOrganizationLocal")
             expect(headers).to include("anthroOwner")
             expect(headers).to include("anthroOwnerAuthorityVocabulary")
+          end
+
+          it "outputs authority vocab values in paired authority field" do
+            headers = template.csvdata[7]
+            idx = headers.index("anthroOwnerAuthorityVocabulary")
+            vals = template.csvdata[6]
+            expect(vals[idx]).to eq("Person/Local, Organization/Local")
           end
         end
       end

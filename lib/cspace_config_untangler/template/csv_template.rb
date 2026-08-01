@@ -76,6 +76,7 @@ module CspaceConfigUntangler
               mapping[:xpath].join(" < ")
             end
             sourcetype << mapping[:source_type]
+
             source << case mapping[:source_type]
             when "optionlist"
               mapping[:opt_list_values].join(", ")
@@ -85,6 +86,8 @@ module CspaceConfigUntangler
               mapping[:source_name]
             when "csrefname"
               mapping[:source_name]
+            when "authority vocabulary indication"
+              mapping[:opt_list_values].join(", ")
             else
               ""
             end
