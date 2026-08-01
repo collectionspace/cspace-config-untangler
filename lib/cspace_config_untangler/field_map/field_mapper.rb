@@ -39,9 +39,12 @@ module CspaceConfigUntangler
       attr_reader :field, :column_style
 
       def derive_sources
-        return field.value_sources if column_style == :datatoolkit
+        srcs = field.value_sources
+        return srcs if column_style == :datatoolkit ||
+          !needs_refname_source?(srcs)
 
-        refname_source_added
+        srcs << CCU::ValueSources::Refname.new(srcs.first)
+        srcs
       end
 
       def derive_columns
@@ -135,18 +138,12 @@ module CspaceConfigUntangler
         end
       end
 
-      def refname_source_added
-        srcs = field.value_sources
-        src = srcs.first
-        return srcs unless needs_refname_source?(src)
+      # @param sources [Array<#source_type>]
+      def needs_refname_source?(sources)
+        return false if sources.any? { |src| src.source_type == "refname" }
 
-        srcs << CCU::ValueSources::Refname.new(src)
-        srcs
-      end
-
-      # @param sources [#source_type]
-      def needs_refname_source?(source)
-        %w[authority vocabulary].include?(source.source_type)
+        truetypes = %w[authority vocabulary]
+        true if truetypes.include?(sources.first.source_type)
       end
 
       def transforms
