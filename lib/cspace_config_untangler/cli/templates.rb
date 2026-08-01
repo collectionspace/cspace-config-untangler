@@ -19,7 +19,7 @@ module CspaceConfigUntangler
       CollectionSpace field, regardless of how many authorities can be used to
       populate that field.
       LONGDESC
-      shared_options :profiles, :rectypes, :subdirs, :ingest_data_format
+      shared_options :profiles, :rectypes, :subdirs, :style
       shared_option :output_dir, default: File.join(CCU.datadir, "templates")
       option :type, desc: "Template type(s) to output",
         type: :string,
@@ -30,6 +30,8 @@ module CspaceConfigUntangler
         outdir = File.expand_path(options[:output_dir])
         FileUtils.mkdir_p(outdir) unless Dir.exist?(outdir)
 
+        style = options[:style].to_sym
+
         types = if options[:type] == "both"
           %w[displayname refname]
         else
@@ -39,7 +41,7 @@ module CspaceConfigUntangler
         get_profiles.each do |profile|
           puts "Writing templates for #{profile}..."
           profile = CCU::Profile.new(profile: profile, rectypes: parse_rectypes,
-            structured_date_treatment: :collapse)
+            structured_date_treatment: :collapse, ingest_format: style)
           dir_path = if options[:subdirs]
             File.join(outdir, profile.basename)
           else
@@ -48,7 +50,7 @@ module CspaceConfigUntangler
           FileUtils.mkdir_p(dir_path)
 
           write_templates(
-            profile, dir_path, types, options[:ingest_data_format].to_sym
+            profile, dir_path, types, style
           )
         end
       end
@@ -70,7 +72,7 @@ module CspaceConfigUntangler
               profile: profile,
               rectype: rectype,
               type: type,
-              ingest_data_format: format
+              format: format
             ).write(path)
           end
         end
