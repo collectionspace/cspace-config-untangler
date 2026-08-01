@@ -18,14 +18,20 @@ module CspaceConfigUntangler
     # @return [Hash] derived from JSON config for the profile
     attr_reader :config
 
+    # @return %i[csvimporter datatoolkit]
+    attr_reader :ingest_format
+
     # @param profile [String] profile name; must match a file in `data/configs`
     #   directory, minus `.json` file extension
     # @param rectypes [Array<String>] rectype names to include in processing
     # @param structured_date_treatment [:collapsed, :expanded]
+    # @param ingest_format %i[csvimporter datatoolkit]
     def initialize(profile:, rectypes: [],
-      structured_date_treatment: :collapsed)
+      structured_date_treatment: :collapsed,
+      ingest_format: :csvimporter)
       @name = profile
       @structured_date_treatment = structured_date_treatment
+      @ingest_format = ingest_format
       @config = JSON.parse(File.read("#{CCU.configdir}/#{@name}.json"))
       @rectype_names = rectypes.empty? ? rectypes_all : rectypes
       message_setup

@@ -4,11 +4,11 @@ module CspaceConfigUntangler
   # methods to make special/manually created relationship rectypes act
   #  as much as real rectypes as they need to
   module SpecialRectype
-    def batch_mappings(context = :mapper)
+    def batch_mappings(context = nil, format = nil)
       mappings
     end
 
-    def mapper(style = "old")
+    def mapper(style = :csvimporter)
       {
         config: styled_config(style),
         docstructure: docstructure,
@@ -17,7 +17,7 @@ module CspaceConfigUntangler
     end
 
     def styled_config(style)
-      return config if style == "old"
+      return config if style == :csvimporter
 
       config.merge({
         dataConfigType: "record type",
