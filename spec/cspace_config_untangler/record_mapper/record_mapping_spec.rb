@@ -14,7 +14,7 @@ RSpec.describe CCU::RecordMapper::RecordMapping do
 
   describe RecordMapping do
     let(:mapper) { generator.record_mapping }
-    let(:config) { mapper.hash[:config] }
+    let(:config) { mapper[:config] }
     context "when botgarden profile" do
       let(:profilename) { "botgarden" }
 

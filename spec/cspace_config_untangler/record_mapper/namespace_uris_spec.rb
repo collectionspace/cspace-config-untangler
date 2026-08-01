@@ -16,7 +16,7 @@ RSpec.describe CCU::RecordMapper::NamespaceUris do
   let(:profile) { generator.profile }
   let(:rectype) { generator.rectype.name }
   let(:mapper) { generator.record_mapping }
-  let(:config) { mapper.hash[:config] }
+  let(:config) { mapper[:config] }
 
   describe NamespaceUris do
     let(:result) { nsuri.hash }
