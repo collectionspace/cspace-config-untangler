@@ -6,8 +6,8 @@ module CspaceConfigUntangler
       attr_reader :path, :style, :valid, :errors, :validated
 
       # @param path [String] to mapper to validate
-      # @param style %w[old new] style of mapper
-      def initialize(path, style = "old")
+      # @param style %i[csvimporter datatoolkit] style of mapper
+      def initialize(path, style = :csvimporter)
         @path = path
         @style = style
         @valid = false
@@ -35,7 +35,7 @@ module CspaceConfigUntangler
           term_source_types_ok,
           has_service_path
         ]
-        results << valid_new_style if style == "new"
+        results << valid_datatoolkit_style if style == :datatoolkit
         @valid = true if results.uniq == [true]
       end
 
@@ -166,7 +166,7 @@ module CspaceConfigUntangler
         end
       end
 
-      def valid_new_style
+      def valid_datatoolkit_style
         has_data_config_type? && has_display_name?
       end
 
