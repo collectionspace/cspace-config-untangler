@@ -184,7 +184,7 @@ module CspaceConfigUntangler
     end
 
     def disambiguate_first_datacolumn(grouped)
-      # binding.pry
+      fail("Not yet implemented")
     end
 
     def disambiguate_min_datacolumns(grouped)
