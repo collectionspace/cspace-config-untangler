@@ -17,6 +17,7 @@ RSpec.describe CCU::RecordMapper::RecordMapping do
     let(:style) { :csvimporter }
     let(:mapper) { generator.record_mapping(subtype, style) }
     let(:config) { mapper[:config] }
+    let(:mappings) { mapper[:mappings] }
     context "when botgarden profile" do
       let(:profilename) { "botgarden" }
 
@@ -61,6 +62,15 @@ RSpec.describe CCU::RecordMapper::RecordMapping do
         it "has no dataConfigType" do
           expect(config.key?(:dataConfigType)).to be false
         end
+        it "generates multi-columns for authority controlled field" do
+          res = mappings.select { |m| m[:fieldname] == "currentLocation" }
+            .map { |m| m[:datacolumn] }
+            .sort
+          exp = %w[currentLocationLocationLocal currentLocationLocationOffsite
+            currentLocationOrganizationLocal currentLocationPlaceLocal
+            currentLocationRefname].sort
+          expect(res).to eq(exp)
+        end
 
         context "when style == :datatoolkit" do
           let(:style) { :datatoolkit }
@@ -70,6 +80,21 @@ RSpec.describe CCU::RecordMapper::RecordMapping do
           end
           it "has dataConfigType" do
             expect(config[:dataConfigType]).to eq("record type")
+          end
+          it "generates column pair for authority controlled field" do
+            res = mappings.select { |m| m[:fieldname] == "currentLocation" }
+              .map { |m| m[:datacolumn] }
+              .sort
+            exp = %w[currentLocation currentLocationAuthorityVocabulary].sort
+            expect(res).to eq(exp)
+          end
+          it "paired authority vocab field indicates field value sources" do
+            res = mappings.find do |m|
+              m[:datacolumn] == "currentLocationAuthorityVocabulary"
+            end
+            exp = ["Location/Local", "Location/Offsite", "Organization/Local",
+              "Place/Local"].sort
+            expect(res[:opt_list_values].sort).to eq(exp)
           end
         end
       end
