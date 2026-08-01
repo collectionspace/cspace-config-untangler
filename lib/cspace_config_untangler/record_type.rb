@@ -161,7 +161,7 @@ module CspaceConfigUntangler
     end
 
     def disambiguate_datacolumns(vals)
-      grouped = vals.group_by(&:field)
+      grouped = vals.group_by { |val| val.field.id }
       lengths = grouped.values.map(&:length).uniq
       if lengths.length == 1
         hx = grouped.find { |f, v| !v.first.xpath.empty? }
