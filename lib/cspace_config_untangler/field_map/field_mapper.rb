@@ -168,7 +168,8 @@ module CspaceConfigUntangler
               datacolumn: h[:column_name],
               transforms: h[:transforms],
               source_type: h[:source_type],
-              source_name: h[:source_name])
+              source_name: h[:source_name],
+              column_style: column_style)
           end
         end.compact
       end
