@@ -24,7 +24,7 @@ module CspaceConfigUntangler
         :repeats, :in_repeating_group, :opt_list_values
       attr_accessor :datacolumn, :required
       def initialize(field:, datacolumn:, source_type:, source_name:,
-        transforms: {})
+        column_style:, transforms: {})
         @field = field
         @fieldname = field.name
         @namespace = field.ns.sub("ns2:", "")
@@ -38,6 +38,7 @@ module CspaceConfigUntangler
         @transforms = transforms
         @opt_list_values = derive_opt_list_values
         @data_type = @datacolumn["Refname"] ? "csrefname" : field.data_type
+        @column_style = column_style
       end
 
       def to_h
