@@ -3,6 +3,8 @@
 source "https://rubygems.org"
 
 def lyrasis_staff?
+  return false if ENV.key?("GITHUB_ACTIONS")
+
   ghpath = `which gh`
   return false if ghpath.empty?
 
