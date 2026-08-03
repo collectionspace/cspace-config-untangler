@@ -42,7 +42,7 @@ module CspaceConfigUntangler
       end
 
       def to_h
-        readable = attr_readers
+        readable = attr_readers - [:field]
         accessible = attr_accessors
         attrs = readable + accessible
 
