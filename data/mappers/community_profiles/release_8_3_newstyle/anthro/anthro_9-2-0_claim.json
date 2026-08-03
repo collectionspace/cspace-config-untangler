@@ -139,7 +139,7 @@
         ]
       },
       "source_type": "authority",
-      "source_name": "person/local",
+      "source_name": null,
       "namespace": "claims_common",
       "xpath": [
         "claimantGroupList",
@@ -149,46 +149,27 @@
       "repeats": "n",
       "in_repeating_group": "y",
       "opt_list_values": [],
-      "datacolumn": "claimFiledByPersonLocal",
-      "required": "n"
-    },
-    {
-      "fieldname": "claimFiledBy",
-      "transforms": {
-        "authority": [
-          "orgauthorities",
-          "organization"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "organization/local",
-      "namespace": "claims_common",
-      "xpath": [
-        "claimantGroupList",
-        "claimantGroup"
-      ],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "claimFiledByOrganizationLocal",
+      "datacolumn": "claimFiledBy",
       "required": "n"
     },
     {
       "fieldname": "claimFiledBy",
       "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
       "namespace": "claims_common",
       "xpath": [
         "claimantGroupList",
         "claimantGroup"
       ],
-      "data_type": "csrefname",
+      "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "claimFiledByRefname",
+      "opt_list_values": [
+        "Person/Local",
+        "Organization/Local"
+      ],
+      "datacolumn": "claimFiledByAuthorityVocabulary",
       "required": "n"
     },
     {
@@ -200,7 +181,7 @@
         ]
       },
       "source_type": "authority",
-      "source_name": "person/local",
+      "source_name": null,
       "namespace": "claims_common",
       "xpath": [
         "claimantGroupList",
@@ -210,46 +191,27 @@
       "repeats": "n",
       "in_repeating_group": "y",
       "opt_list_values": [],
-      "datacolumn": "claimFiledOnBehalfOfPersonLocal",
-      "required": "n"
-    },
-    {
-      "fieldname": "claimFiledOnBehalfOf",
-      "transforms": {
-        "authority": [
-          "orgauthorities",
-          "organization"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "organization/local",
-      "namespace": "claims_common",
-      "xpath": [
-        "claimantGroupList",
-        "claimantGroup"
-      ],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "claimFiledOnBehalfOfOrganizationLocal",
+      "datacolumn": "claimFiledOnBehalfOf",
       "required": "n"
     },
     {
       "fieldname": "claimFiledOnBehalfOf",
       "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
       "namespace": "claims_common",
       "xpath": [
         "claimantGroupList",
         "claimantGroup"
       ],
-      "data_type": "csrefname",
+      "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "claimFiledOnBehalfOfRefname",
+      "opt_list_values": [
+        "Person/Local",
+        "Organization/Local"
+      ],
+      "datacolumn": "claimFiledOnBehalfOfAuthorityVocabulary",
       "required": "n"
     },
     {
@@ -285,22 +247,6 @@
       "in_repeating_group": "n",
       "opt_list_values": [],
       "datacolumn": "nagpraClaimType",
-      "required": "n"
-    },
-    {
-      "fieldname": "nagpraClaimType",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "claims_nagpra",
-      "xpath": [
-        "nagpraClaimTypes"
-      ],
-      "data_type": "csrefname",
-      "repeats": "y",
-      "in_repeating_group": "n",
-      "opt_list_values": [],
-      "datacolumn": "nagpraClaimTypeRefname",
       "required": "n"
     },
     {
@@ -362,7 +308,7 @@
         ]
       },
       "source_type": "authority",
-      "source_name": "place/local",
+      "source_name": null,
       "namespace": "claims_nagpra",
       "xpath": [
         "nagpraClaimSiteGroupList",
@@ -372,24 +318,26 @@
       "repeats": "n",
       "in_repeating_group": "y",
       "opt_list_values": [],
-      "datacolumn": "nagpraClaimSiteNamePlaceLocal",
+      "datacolumn": "nagpraClaimSiteName",
       "required": "n"
     },
     {
       "fieldname": "nagpraClaimSiteName",
       "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
       "namespace": "claims_nagpra",
       "xpath": [
         "nagpraClaimSiteGroupList",
         "nagpraClaimSiteGroup"
       ],
-      "data_type": "csrefname",
+      "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "nagpraClaimSiteNameRefname",
+      "opt_list_values": [
+        "Place/Local"
+      ],
+      "datacolumn": "nagpraClaimSiteNameAuthorityVocabulary",
       "required": "n"
     },
     {
@@ -418,7 +366,7 @@
         ]
       },
       "source_type": "authority",
-      "source_name": "concept/ethculture",
+      "source_name": null,
       "namespace": "claims_nagpra",
       "xpath": [
         "nagpraClaimGroupGroupList",
@@ -428,46 +376,27 @@
       "repeats": "n",
       "in_repeating_group": "y",
       "opt_list_values": [],
-      "datacolumn": "nagpraClaimGroupNameConceptEthculture",
-      "required": "n"
-    },
-    {
-      "fieldname": "nagpraClaimGroupName",
-      "transforms": {
-        "authority": [
-          "conceptauthorities",
-          "archculture"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "concept/archculture",
-      "namespace": "claims_nagpra",
-      "xpath": [
-        "nagpraClaimGroupGroupList",
-        "nagpraClaimGroupGroup"
-      ],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "nagpraClaimGroupNameConceptArchculture",
+      "datacolumn": "nagpraClaimGroupName",
       "required": "n"
     },
     {
       "fieldname": "nagpraClaimGroupName",
       "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
       "namespace": "claims_nagpra",
       "xpath": [
         "nagpraClaimGroupGroupList",
         "nagpraClaimGroupGroup"
       ],
-      "data_type": "csrefname",
+      "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "nagpraClaimGroupNameRefname",
+      "opt_list_values": [
+        "Concept/Ethculture",
+        "Concept/Archculture"
+      ],
+      "datacolumn": "nagpraClaimGroupNameAuthorityVocabulary",
       "required": "n"
     },
     {

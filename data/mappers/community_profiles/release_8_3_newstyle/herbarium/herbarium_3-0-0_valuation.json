@@ -58,23 +58,6 @@
       "required": "n"
     },
     {
-      "fieldname": "valueCurrency",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "valuationcontrols_common",
-      "xpath": [
-        "valueAmountsList",
-        "valueAmounts"
-      ],
-      "data_type": "csrefname",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "valueCurrencyRefname",
-      "required": "n"
-    },
-    {
       "fieldname": "valueAmount",
       "transforms": {},
       "source_type": "na",
@@ -128,47 +111,31 @@
         ]
       },
       "source_type": "authority",
-      "source_name": "person/local",
+      "source_name": null,
       "namespace": "valuationcontrols_common",
       "xpath": [],
       "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "n/a",
       "opt_list_values": [],
-      "datacolumn": "valueSourcePersonLocal",
-      "required": "n"
-    },
-    {
-      "fieldname": "valueSource",
-      "transforms": {
-        "authority": [
-          "orgauthorities",
-          "organization"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "organization/local",
-      "namespace": "valuationcontrols_common",
-      "xpath": [],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "n/a",
-      "opt_list_values": [],
-      "datacolumn": "valueSourceOrganizationLocal",
+      "datacolumn": "valueSource",
       "required": "n"
     },
     {
       "fieldname": "valueSource",
       "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
       "namespace": "valuationcontrols_common",
       "xpath": [],
-      "data_type": "csrefname",
+      "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "n/a",
-      "opt_list_values": [],
-      "datacolumn": "valueSourceRefname",
+      "opt_list_values": [
+        "Person/Local",
+        "Organization/Local"
+      ],
+      "datacolumn": "valueSourceAuthorityVocabulary",
       "required": "n"
     },
     {

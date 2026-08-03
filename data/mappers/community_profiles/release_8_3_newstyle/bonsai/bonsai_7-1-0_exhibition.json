@@ -80,20 +80,6 @@
       "required": "n"
     },
     {
-      "fieldname": "type",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "exhibitions_common",
-      "xpath": [],
-      "data_type": "csrefname",
-      "repeats": "n",
-      "in_repeating_group": "n/a",
-      "opt_list_values": [],
-      "datacolumn": "typeRefname",
-      "required": "n"
-    },
-    {
       "fieldname": "title",
       "transforms": {},
       "source_type": "na",
@@ -116,7 +102,7 @@
         ]
       },
       "source_type": "authority",
-      "source_name": "person/local",
+      "source_name": null,
       "namespace": "exhibitions_common",
       "xpath": [
         "sponsors"
@@ -125,86 +111,28 @@
       "repeats": "y",
       "in_repeating_group": "n",
       "opt_list_values": [],
-      "datacolumn": "sponsorPersonLocal",
-      "required": "n"
-    },
-    {
-      "fieldname": "sponsor",
-      "transforms": {
-        "authority": [
-          "personauthorities",
-          "ulan_pa"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "person/ulan",
-      "namespace": "exhibitions_common",
-      "xpath": [
-        "sponsors"
-      ],
-      "data_type": "string",
-      "repeats": "y",
-      "in_repeating_group": "n",
-      "opt_list_values": [],
-      "datacolumn": "sponsorPersonUlan",
-      "required": "n"
-    },
-    {
-      "fieldname": "sponsor",
-      "transforms": {
-        "authority": [
-          "orgauthorities",
-          "organization"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "organization/local",
-      "namespace": "exhibitions_common",
-      "xpath": [
-        "sponsors"
-      ],
-      "data_type": "string",
-      "repeats": "y",
-      "in_repeating_group": "n",
-      "opt_list_values": [],
-      "datacolumn": "sponsorOrganizationLocal",
-      "required": "n"
-    },
-    {
-      "fieldname": "sponsor",
-      "transforms": {
-        "authority": [
-          "orgauthorities",
-          "ulan_oa"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "organization/ulan",
-      "namespace": "exhibitions_common",
-      "xpath": [
-        "sponsors"
-      ],
-      "data_type": "string",
-      "repeats": "y",
-      "in_repeating_group": "n",
-      "opt_list_values": [],
-      "datacolumn": "sponsorOrganizationUlan",
+      "datacolumn": "sponsor",
       "required": "n"
     },
     {
       "fieldname": "sponsor",
       "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
       "namespace": "exhibitions_common",
       "xpath": [
         "sponsors"
       ],
-      "data_type": "csrefname",
+      "data_type": "string",
       "repeats": "y",
       "in_repeating_group": "n",
-      "opt_list_values": [],
-      "datacolumn": "sponsorRefname",
+      "opt_list_values": [
+        "Person/Local",
+        "Person/Ulan",
+        "Organization/Local",
+        "Organization/Ulan"
+      ],
+      "datacolumn": "sponsorAuthorityVocabulary",
       "required": "n"
     },
     {
@@ -216,7 +144,7 @@
         ]
       },
       "source_type": "authority",
-      "source_name": "person/local",
+      "source_name": null,
       "namespace": "exhibitions_common",
       "xpath": [
         "organizers"
@@ -225,86 +153,28 @@
       "repeats": "y",
       "in_repeating_group": "n",
       "opt_list_values": [],
-      "datacolumn": "organizerPersonLocal",
-      "required": "n"
-    },
-    {
-      "fieldname": "organizer",
-      "transforms": {
-        "authority": [
-          "personauthorities",
-          "ulan_pa"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "person/ulan",
-      "namespace": "exhibitions_common",
-      "xpath": [
-        "organizers"
-      ],
-      "data_type": "string",
-      "repeats": "y",
-      "in_repeating_group": "n",
-      "opt_list_values": [],
-      "datacolumn": "organizerPersonUlan",
-      "required": "n"
-    },
-    {
-      "fieldname": "organizer",
-      "transforms": {
-        "authority": [
-          "orgauthorities",
-          "organization"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "organization/local",
-      "namespace": "exhibitions_common",
-      "xpath": [
-        "organizers"
-      ],
-      "data_type": "string",
-      "repeats": "y",
-      "in_repeating_group": "n",
-      "opt_list_values": [],
-      "datacolumn": "organizerOrganizationLocal",
-      "required": "n"
-    },
-    {
-      "fieldname": "organizer",
-      "transforms": {
-        "authority": [
-          "orgauthorities",
-          "ulan_oa"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "organization/ulan",
-      "namespace": "exhibitions_common",
-      "xpath": [
-        "organizers"
-      ],
-      "data_type": "string",
-      "repeats": "y",
-      "in_repeating_group": "n",
-      "opt_list_values": [],
-      "datacolumn": "organizerOrganizationUlan",
+      "datacolumn": "organizer",
       "required": "n"
     },
     {
       "fieldname": "organizer",
       "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
       "namespace": "exhibitions_common",
       "xpath": [
         "organizers"
       ],
-      "data_type": "csrefname",
+      "data_type": "string",
       "repeats": "y",
       "in_repeating_group": "n",
-      "opt_list_values": [],
-      "datacolumn": "organizerRefname",
+      "opt_list_values": [
+        "Person/Local",
+        "Person/Ulan",
+        "Organization/Local",
+        "Organization/Ulan"
+      ],
+      "datacolumn": "organizerAuthorityVocabulary",
       "required": "n"
     },
     {
@@ -326,22 +196,6 @@
       "required": "n"
     },
     {
-      "fieldname": "publishTo",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "exhibitions_common",
-      "xpath": [
-        "publishToList"
-      ],
-      "data_type": "csrefname",
-      "repeats": "y",
-      "in_repeating_group": "n",
-      "opt_list_values": [],
-      "datacolumn": "publishToRefname",
-      "required": "n"
-    },
-    {
       "fieldname": "venue",
       "transforms": {
         "authority": [
@@ -350,7 +204,7 @@
         ]
       },
       "source_type": "authority",
-      "source_name": "organization/local",
+      "source_name": null,
       "namespace": "exhibitions_common",
       "xpath": [
         "venueGroupList",
@@ -360,134 +214,31 @@
       "repeats": "n",
       "in_repeating_group": "y",
       "opt_list_values": [],
-      "datacolumn": "venueOrganizationLocal",
-      "required": "n"
-    },
-    {
-      "fieldname": "venue",
-      "transforms": {
-        "authority": [
-          "orgauthorities",
-          "ulan_oa"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "organization/ulan",
-      "namespace": "exhibitions_common",
-      "xpath": [
-        "venueGroupList",
-        "venueGroup"
-      ],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "venueOrganizationUlan",
-      "required": "n"
-    },
-    {
-      "fieldname": "venue",
-      "transforms": {
-        "authority": [
-          "locationauthorities",
-          "location"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "location/local",
-      "namespace": "exhibitions_common",
-      "xpath": [
-        "venueGroupList",
-        "venueGroup"
-      ],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "venueLocationLocal",
-      "required": "n"
-    },
-    {
-      "fieldname": "venue",
-      "transforms": {
-        "authority": [
-          "locationauthorities",
-          "offsite_sla"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "location/offsite",
-      "namespace": "exhibitions_common",
-      "xpath": [
-        "venueGroupList",
-        "venueGroup"
-      ],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "venueLocationOffsite",
-      "required": "n"
-    },
-    {
-      "fieldname": "venue",
-      "transforms": {
-        "authority": [
-          "placeauthorities",
-          "place"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "place/local",
-      "namespace": "exhibitions_common",
-      "xpath": [
-        "venueGroupList",
-        "venueGroup"
-      ],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "venuePlaceLocal",
-      "required": "n"
-    },
-    {
-      "fieldname": "venue",
-      "transforms": {
-        "authority": [
-          "placeauthorities",
-          "tgn_place"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "place/tgn",
-      "namespace": "exhibitions_common",
-      "xpath": [
-        "venueGroupList",
-        "venueGroup"
-      ],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "venuePlaceTgn",
+      "datacolumn": "venue",
       "required": "n"
     },
     {
       "fieldname": "venue",
       "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
       "namespace": "exhibitions_common",
       "xpath": [
         "venueGroupList",
         "venueGroup"
       ],
-      "data_type": "csrefname",
+      "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "venueRefname",
+      "opt_list_values": [
+        "Organization/Local",
+        "Organization/Ulan",
+        "Location/Local",
+        "Location/Offsite",
+        "Place/Local",
+        "Place/Tgn"
+      ],
+      "datacolumn": "venueAuthorityVocabulary",
       "required": "n"
     },
     {
@@ -601,7 +352,7 @@
         ]
       },
       "source_type": "authority",
-      "source_name": "person/local",
+      "source_name": null,
       "namespace": "exhibitions_common",
       "xpath": [
         "workingGroupList",
@@ -613,86 +364,14 @@
       "repeats": "n",
       "in_repeating_group": "y",
       "opt_list_values": [],
-      "datacolumn": "exhibitionPersonPersonLocal",
-      "required": "n"
-    },
-    {
-      "fieldname": "exhibitionPerson",
-      "transforms": {
-        "authority": [
-          "personauthorities",
-          "ulan_pa"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "person/ulan",
-      "namespace": "exhibitions_common",
-      "xpath": [
-        "workingGroupList",
-        "workingGroup",
-        "exhibitionPersonGroupList",
-        "exhibitionPersonGroup"
-      ],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "exhibitionPersonPersonUlan",
-      "required": "n"
-    },
-    {
-      "fieldname": "exhibitionPerson",
-      "transforms": {
-        "authority": [
-          "orgauthorities",
-          "organization"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "organization/local",
-      "namespace": "exhibitions_common",
-      "xpath": [
-        "workingGroupList",
-        "workingGroup",
-        "exhibitionPersonGroupList",
-        "exhibitionPersonGroup"
-      ],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "exhibitionPersonOrganizationLocal",
-      "required": "n"
-    },
-    {
-      "fieldname": "exhibitionPerson",
-      "transforms": {
-        "authority": [
-          "orgauthorities",
-          "ulan_oa"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "organization/ulan",
-      "namespace": "exhibitions_common",
-      "xpath": [
-        "workingGroupList",
-        "workingGroup",
-        "exhibitionPersonGroupList",
-        "exhibitionPersonGroup"
-      ],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "exhibitionPersonOrganizationUlan",
+      "datacolumn": "exhibitionPerson",
       "required": "n"
     },
     {
       "fieldname": "exhibitionPerson",
       "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
       "namespace": "exhibitions_common",
       "xpath": [
         "workingGroupList",
@@ -700,11 +379,16 @@
         "exhibitionPersonGroupList",
         "exhibitionPersonGroup"
       ],
-      "data_type": "csrefname",
+      "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "exhibitionPersonRefname",
+      "opt_list_values": [
+        "Person/Local",
+        "Person/Ulan",
+        "Organization/Local",
+        "Organization/Ulan"
+      ],
+      "datacolumn": "exhibitionPersonAuthorityVocabulary",
       "required": "n"
     },
     {
@@ -726,25 +410,6 @@
       "in_repeating_group": "y",
       "opt_list_values": [],
       "datacolumn": "exhibitionPersonRole",
-      "required": "n"
-    },
-    {
-      "fieldname": "exhibitionPersonRole",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "exhibitions_common",
-      "xpath": [
-        "workingGroupList",
-        "workingGroup",
-        "exhibitionPersonGroupList",
-        "exhibitionPersonGroup"
-      ],
-      "data_type": "csrefname",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "exhibitionPersonRoleRefname",
       "required": "n"
     },
     {
@@ -880,7 +545,7 @@
         ]
       },
       "source_type": "authority",
-      "source_name": "citation/local",
+      "source_name": null,
       "namespace": "exhibitions_common",
       "xpath": [
         "exhibitionReferenceGroupList",
@@ -890,46 +555,27 @@
       "repeats": "n",
       "in_repeating_group": "y",
       "opt_list_values": [],
-      "datacolumn": "exhibitionReferenceCitationLocal",
-      "required": "n"
-    },
-    {
-      "fieldname": "exhibitionReference",
-      "transforms": {
-        "authority": [
-          "citationauthorities",
-          "worldcat"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "citation/worldcat",
-      "namespace": "exhibitions_common",
-      "xpath": [
-        "exhibitionReferenceGroupList",
-        "exhibitionReferenceGroup"
-      ],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "exhibitionReferenceCitationWorldcat",
+      "datacolumn": "exhibitionReference",
       "required": "n"
     },
     {
       "fieldname": "exhibitionReference",
       "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
       "namespace": "exhibitions_common",
       "xpath": [
         "exhibitionReferenceGroupList",
         "exhibitionReferenceGroup"
       ],
-      "data_type": "csrefname",
+      "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "exhibitionReferenceRefname",
+      "opt_list_values": [
+        "Citation/Local",
+        "Citation/Worldcat"
+      ],
+      "datacolumn": "exhibitionReferenceAuthorityVocabulary",
       "required": "n"
     },
     {
@@ -949,23 +595,6 @@
       "in_repeating_group": "y",
       "opt_list_values": [],
       "datacolumn": "exhibitionReferenceType",
-      "required": "n"
-    },
-    {
-      "fieldname": "exhibitionReferenceType",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "exhibitions_common",
-      "xpath": [
-        "exhibitionReferenceGroupList",
-        "exhibitionReferenceGroup"
-      ],
-      "data_type": "csrefname",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "exhibitionReferenceTypeRefname",
       "required": "n"
     },
     {
@@ -1070,23 +699,6 @@
       "in_repeating_group": "y",
       "opt_list_values": [],
       "datacolumn": "exhibitionStatus",
-      "required": "n"
-    },
-    {
-      "fieldname": "exhibitionStatus",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "exhibitions_common",
-      "xpath": [
-        "exhibitionStatusGroupList",
-        "exhibitionStatusGroup"
-      ],
-      "data_type": "csrefname",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "exhibitionStatusRefname",
       "required": "n"
     },
     {

@@ -64,23 +64,6 @@
       "required": "n"
     },
     {
-      "fieldname": "valueCurrency",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "valuationcontrols_common",
-      "xpath": [
-        "valueAmountsList",
-        "valueAmounts"
-      ],
-      "data_type": "csrefname",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "valueCurrencyRefname",
-      "required": "n"
-    },
-    {
       "fieldname": "valueAmount",
       "transforms": {},
       "source_type": "na",
@@ -134,85 +117,33 @@
         ]
       },
       "source_type": "authority",
-      "source_name": "person/local",
+      "source_name": null,
       "namespace": "valuationcontrols_common",
       "xpath": [],
       "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "n/a",
       "opt_list_values": [],
-      "datacolumn": "valueSourcePersonLocal",
-      "required": "n"
-    },
-    {
-      "fieldname": "valueSource",
-      "transforms": {
-        "authority": [
-          "personauthorities",
-          "person_shared"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "person/shared",
-      "namespace": "valuationcontrols_common",
-      "xpath": [],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "n/a",
-      "opt_list_values": [],
-      "datacolumn": "valueSourcePersonShared",
-      "required": "n"
-    },
-    {
-      "fieldname": "valueSource",
-      "transforms": {
-        "authority": [
-          "orgauthorities",
-          "organization"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "organization/local",
-      "namespace": "valuationcontrols_common",
-      "xpath": [],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "n/a",
-      "opt_list_values": [],
-      "datacolumn": "valueSourceOrganizationLocal",
-      "required": "n"
-    },
-    {
-      "fieldname": "valueSource",
-      "transforms": {
-        "authority": [
-          "orgauthorities",
-          "organization_shared"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "organization/shared",
-      "namespace": "valuationcontrols_common",
-      "xpath": [],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "n/a",
-      "opt_list_values": [],
-      "datacolumn": "valueSourceOrganizationShared",
+      "datacolumn": "valueSource",
       "required": "n"
     },
     {
       "fieldname": "valueSource",
       "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
       "namespace": "valuationcontrols_common",
       "xpath": [],
-      "data_type": "csrefname",
+      "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "n/a",
-      "opt_list_values": [],
-      "datacolumn": "valueSourceRefname",
+      "opt_list_values": [
+        "Person/Local",
+        "Person/Shared",
+        "Organization/Local",
+        "Organization/Shared"
+      ],
+      "datacolumn": "valueSourceAuthorityVocabulary",
       "required": "n"
     },
     {
@@ -229,20 +160,6 @@
       "in_repeating_group": "n/a",
       "opt_list_values": [],
       "datacolumn": "valueSourceRole",
-      "required": "n"
-    },
-    {
-      "fieldname": "valueSourceRole",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "valuationcontrols_publicart",
-      "xpath": [],
-      "data_type": "csrefname",
-      "repeats": "n",
-      "in_repeating_group": "n/a",
-      "opt_list_values": [],
-      "datacolumn": "valueSourceRoleRefname",
       "required": "n"
     },
     {
@@ -286,7 +203,7 @@
         ]
       },
       "source_type": "authority",
-      "source_name": "person/local",
+      "source_name": null,
       "namespace": "valuationcontrols_publicart",
       "xpath": [
         "insuranceGroupList",
@@ -296,90 +213,29 @@
       "repeats": "n",
       "in_repeating_group": "y",
       "opt_list_values": [],
-      "datacolumn": "insurerPersonLocal",
-      "required": "n"
-    },
-    {
-      "fieldname": "insurer",
-      "transforms": {
-        "authority": [
-          "personauthorities",
-          "person_shared"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "person/shared",
-      "namespace": "valuationcontrols_publicart",
-      "xpath": [
-        "insuranceGroupList",
-        "insuranceGroup"
-      ],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "insurerPersonShared",
-      "required": "n"
-    },
-    {
-      "fieldname": "insurer",
-      "transforms": {
-        "authority": [
-          "orgauthorities",
-          "organization"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "organization/local",
-      "namespace": "valuationcontrols_publicart",
-      "xpath": [
-        "insuranceGroupList",
-        "insuranceGroup"
-      ],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "insurerOrganizationLocal",
-      "required": "n"
-    },
-    {
-      "fieldname": "insurer",
-      "transforms": {
-        "authority": [
-          "orgauthorities",
-          "organization_shared"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "organization/shared",
-      "namespace": "valuationcontrols_publicart",
-      "xpath": [
-        "insuranceGroupList",
-        "insuranceGroup"
-      ],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "insurerOrganizationShared",
+      "datacolumn": "insurer",
       "required": "n"
     },
     {
       "fieldname": "insurer",
       "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
       "namespace": "valuationcontrols_publicart",
       "xpath": [
         "insuranceGroupList",
         "insuranceGroup"
       ],
-      "data_type": "csrefname",
+      "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "insurerRefname",
+      "opt_list_values": [
+        "Person/Local",
+        "Person/Shared",
+        "Organization/Local",
+        "Organization/Shared"
+      ],
+      "datacolumn": "insurerAuthorityVocabulary",
       "required": "n"
     },
     {

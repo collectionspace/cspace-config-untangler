@@ -1,0 +1,8 @@
+"Before importing CSV, delete initial column and rows above the CSVHEADER row","","","","","","","","","","","","","","","","","","","","","","",""
+REQUIRED,y,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n
+DATA TYPE,string,string,string,string,string,string,string,string,string,string,string,date,date,string,string,string,string,string,string,string,structured date group,structured date group,string
+REPEATABLE FIELD?,n,n,n,n,n,n,y,y,y,n,n,n,n,n,n,n,n,n,n,n,n,n,n
+REPEATING FIELD GROUP,"","","",exhibitionSupportGroupList < exhibitionSupportGroup,exhibitionSupportGroupList < exhibitionSupportGroup,exhibitionSupportGroupList < exhibitionSupportGroup,"","","",venueGroupList < venueGroup,venueGroupList < venueGroup,venueGroupList < venueGroup,venueGroupList < venueGroup,venueGroupList < venueGroup,venueGroupList < venueGroup,"","","","",galleryRotationGroupList < galleryRotationGroup,galleryRotationGroupList < galleryRotationGroup,galleryRotationGroupList < galleryRotationGroup,galleryRotationGroupList < galleryRotationGroup
+VALUE SOURCE TYPE,na,vocabulary,na,authority,authority vocabulary indication,na,authority,authority vocabulary indication,vocabulary,authority,authority vocabulary indication,na,na,na,na,na,na,na,na,na,na,na,na
+VALUE SOURCE,"",exhibitiontype,"",,"","",,"",publishto,,"","","","","","","","","","","","",""
+CSVHEADER,exhibitionNumber,type,title,exhibitionSupport,exhibitionSupportAuthorityVocabulary,exhibitionSupportNote,organizer,organizerAuthorityVocabulary,publishTo,venue,venueAuthorityVocabulary,venueOpeningDate,venueClosingDate,venueAttendance,venueUrl,planningNote,curatorialNote,generalNote,boilerplateText,galleryRotationName,galleryRotationStartDateGroup,galleryRotationEndDateGroup,galleryRotationNote

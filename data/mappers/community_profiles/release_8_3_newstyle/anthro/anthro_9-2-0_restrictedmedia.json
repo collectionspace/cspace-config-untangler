@@ -86,22 +86,6 @@
       "required": "n"
     },
     {
-      "fieldname": "publishTo",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "restrictedmedia_common",
-      "xpath": [
-        "publishToList"
-      ],
-      "data_type": "csrefname",
-      "repeats": "y",
-      "in_repeating_group": "n",
-      "opt_list_values": [],
-      "datacolumn": "publishToRefname",
-      "required": "n"
-    },
-    {
       "fieldname": "name",
       "transforms": {},
       "source_type": "na",
@@ -244,7 +228,7 @@
         ]
       },
       "source_type": "authority",
-      "source_name": "person/local",
+      "source_name": null,
       "namespace": "restrictedmedia_common",
       "xpath": [
         "measuredPartGroupList",
@@ -256,38 +240,14 @@
       "repeats": "n",
       "in_repeating_group": "y",
       "opt_list_values": [],
-      "datacolumn": "measuredByPersonLocal",
-      "required": "n"
-    },
-    {
-      "fieldname": "measuredBy",
-      "transforms": {
-        "authority": [
-          "orgauthorities",
-          "organization"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "organization/local",
-      "namespace": "restrictedmedia_common",
-      "xpath": [
-        "measuredPartGroupList",
-        "measuredPartGroup",
-        "dimensionSubGroupList",
-        "dimensionSubGroup"
-      ],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "measuredByOrganizationLocal",
+      "datacolumn": "measuredBy",
       "required": "n"
     },
     {
       "fieldname": "measuredBy",
       "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
       "namespace": "restrictedmedia_common",
       "xpath": [
         "measuredPartGroupList",
@@ -295,11 +255,14 @@
         "dimensionSubGroupList",
         "dimensionSubGroup"
       ],
-      "data_type": "csrefname",
+      "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "measuredByRefname",
+      "opt_list_values": [
+        "Person/Local",
+        "Organization/Local"
+      ],
+      "datacolumn": "measuredByAuthorityVocabulary",
       "required": "n"
     },
     {
@@ -494,23 +457,6 @@
       "required": "n"
     },
     {
-      "fieldname": "checksumType",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "restrictedmedia_common",
-      "xpath": [
-        "checksumGroupList",
-        "checksumGroup"
-      ],
-      "data_type": "csrefname",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "checksumTypeRefname",
-      "required": "n"
-    },
-    {
       "fieldname": "checksumDate",
       "transforms": {},
       "source_type": "na",
@@ -536,47 +482,31 @@
         ]
       },
       "source_type": "authority",
-      "source_name": "person/local",
+      "source_name": null,
       "namespace": "restrictedmedia_common",
       "xpath": [],
       "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "n/a",
       "opt_list_values": [],
-      "datacolumn": "contributorPersonLocal",
-      "required": "n"
-    },
-    {
-      "fieldname": "contributor",
-      "transforms": {
-        "authority": [
-          "orgauthorities",
-          "organization"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "organization/local",
-      "namespace": "restrictedmedia_common",
-      "xpath": [],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "n/a",
-      "opt_list_values": [],
-      "datacolumn": "contributorOrganizationLocal",
+      "datacolumn": "contributor",
       "required": "n"
     },
     {
       "fieldname": "contributor",
       "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
       "namespace": "restrictedmedia_common",
       "xpath": [],
-      "data_type": "csrefname",
+      "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "n/a",
-      "opt_list_values": [],
-      "datacolumn": "contributorRefname",
+      "opt_list_values": [
+        "Person/Local",
+        "Organization/Local"
+      ],
+      "datacolumn": "contributorAuthorityVocabulary",
       "required": "n"
     },
     {
@@ -588,47 +518,31 @@
         ]
       },
       "source_type": "authority",
-      "source_name": "person/local",
+      "source_name": null,
       "namespace": "restrictedmedia_common",
       "xpath": [],
       "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "n/a",
       "opt_list_values": [],
-      "datacolumn": "creatorPersonLocal",
-      "required": "n"
-    },
-    {
-      "fieldname": "creator",
-      "transforms": {
-        "authority": [
-          "orgauthorities",
-          "organization"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "organization/local",
-      "namespace": "restrictedmedia_common",
-      "xpath": [],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "n/a",
-      "opt_list_values": [],
-      "datacolumn": "creatorOrganizationLocal",
+      "datacolumn": "creator",
       "required": "n"
     },
     {
       "fieldname": "creator",
       "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
       "namespace": "restrictedmedia_common",
       "xpath": [],
-      "data_type": "csrefname",
+      "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "n/a",
-      "opt_list_values": [],
-      "datacolumn": "creatorRefname",
+      "opt_list_values": [
+        "Person/Local",
+        "Organization/Local"
+      ],
+      "datacolumn": "creatorAuthorityVocabulary",
       "required": "n"
     },
     {
@@ -650,22 +564,6 @@
       "required": "n"
     },
     {
-      "fieldname": "language",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "restrictedmedia_common",
-      "xpath": [
-        "languageList"
-      ],
-      "data_type": "csrefname",
-      "repeats": "y",
-      "in_repeating_group": "n",
-      "opt_list_values": [],
-      "datacolumn": "languageRefname",
-      "required": "n"
-    },
-    {
       "fieldname": "publisher",
       "transforms": {
         "authority": [
@@ -674,47 +572,31 @@
         ]
       },
       "source_type": "authority",
-      "source_name": "person/local",
+      "source_name": null,
       "namespace": "restrictedmedia_common",
       "xpath": [],
       "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "n/a",
       "opt_list_values": [],
-      "datacolumn": "publisherPersonLocal",
-      "required": "n"
-    },
-    {
-      "fieldname": "publisher",
-      "transforms": {
-        "authority": [
-          "orgauthorities",
-          "organization"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "organization/local",
-      "namespace": "restrictedmedia_common",
-      "xpath": [],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "n/a",
-      "opt_list_values": [],
-      "datacolumn": "publisherOrganizationLocal",
+      "datacolumn": "publisher",
       "required": "n"
     },
     {
       "fieldname": "publisher",
       "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
       "namespace": "restrictedmedia_common",
       "xpath": [],
-      "data_type": "csrefname",
+      "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "n/a",
-      "opt_list_values": [],
-      "datacolumn": "publisherRefname",
+      "opt_list_values": [
+        "Person/Local",
+        "Organization/Local"
+      ],
+      "datacolumn": "publisherAuthorityVocabulary",
       "required": "n"
     },
     {
@@ -838,47 +720,31 @@
         ]
       },
       "source_type": "authority",
-      "source_name": "person/local",
+      "source_name": null,
       "namespace": "restrictedmedia_common",
       "xpath": [],
       "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "n/a",
       "opt_list_values": [],
-      "datacolumn": "rightsHolderPersonLocal",
-      "required": "n"
-    },
-    {
-      "fieldname": "rightsHolder",
-      "transforms": {
-        "authority": [
-          "orgauthorities",
-          "organization"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "organization/local",
-      "namespace": "restrictedmedia_common",
-      "xpath": [],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "n/a",
-      "opt_list_values": [],
-      "datacolumn": "rightsHolderOrganizationLocal",
+      "datacolumn": "rightsHolder",
       "required": "n"
     },
     {
       "fieldname": "rightsHolder",
       "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
       "namespace": "restrictedmedia_common",
       "xpath": [],
-      "data_type": "csrefname",
+      "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "n/a",
-      "opt_list_values": [],
-      "datacolumn": "rightsHolderRefname",
+      "opt_list_values": [
+        "Person/Local",
+        "Organization/Local"
+      ],
+      "datacolumn": "rightsHolderAuthorityVocabulary",
       "required": "n"
     },
     {

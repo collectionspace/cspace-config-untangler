@@ -97,22 +97,6 @@
       "required": "n"
     },
     {
-      "fieldname": "type",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "summarydocumentations_common",
-      "xpath": [
-        "types"
-      ],
-      "data_type": "csrefname",
-      "repeats": "y",
-      "in_repeating_group": "n",
-      "opt_list_values": [],
-      "datacolumn": "typeRefname",
-      "required": "n"
-    },
-    {
       "fieldname": "originationDate",
       "transforms": {},
       "source_type": "na",
@@ -181,7 +165,7 @@
         ]
       },
       "source_type": "authority",
-      "source_name": "person/local",
+      "source_name": null,
       "namespace": "summarydocumentations_common",
       "xpath": [
         "partiesInvolvedGroupList",
@@ -191,24 +175,26 @@
       "repeats": "n",
       "in_repeating_group": "y",
       "opt_list_values": [],
-      "datacolumn": "involvedPartyPersonLocal",
+      "datacolumn": "involvedParty",
       "required": "n"
     },
     {
       "fieldname": "involvedParty",
       "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
       "namespace": "summarydocumentations_common",
       "xpath": [
         "partiesInvolvedGroupList",
         "partiesInvolvedGroup"
       ],
-      "data_type": "csrefname",
+      "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "involvedPartyRefname",
+      "opt_list_values": [
+        "Person/Local"
+      ],
+      "datacolumn": "involvedPartyAuthorityVocabulary",
       "required": "n"
     },
     {
@@ -220,7 +206,7 @@
         ]
       },
       "source_type": "authority",
-      "source_name": "organization/local",
+      "source_name": null,
       "namespace": "summarydocumentations_common",
       "xpath": [
         "partiesInvolvedGroupList",
@@ -230,24 +216,26 @@
       "repeats": "n",
       "in_repeating_group": "y",
       "opt_list_values": [],
-      "datacolumn": "involvedOnBehalfOfOrganizationLocal",
+      "datacolumn": "involvedOnBehalfOf",
       "required": "n"
     },
     {
       "fieldname": "involvedOnBehalfOf",
       "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
       "namespace": "summarydocumentations_common",
       "xpath": [
         "partiesInvolvedGroupList",
         "partiesInvolvedGroup"
       ],
-      "data_type": "csrefname",
+      "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "involvedOnBehalfOfRefname",
+      "opt_list_values": [
+        "Organization/Local"
+      ],
+      "datacolumn": "involvedOnBehalfOfAuthorityVocabulary",
       "required": "n"
     },
     {
@@ -270,23 +258,6 @@
       "required": "n"
     },
     {
-      "fieldname": "involvedRole",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "summarydocumentations_common",
-      "xpath": [
-        "partiesInvolvedGroupList",
-        "partiesInvolvedGroup"
-      ],
-      "data_type": "csrefname",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "involvedRoleRefname",
-      "required": "n"
-    },
-    {
       "fieldname": "tribeOrNation",
       "transforms": {
         "authority": [
@@ -295,7 +266,7 @@
         ]
       },
       "source_type": "authority",
-      "source_name": "organization/local",
+      "source_name": null,
       "namespace": "summarydocumentations_common",
       "xpath": [
         "affiliationGroupList",
@@ -305,24 +276,26 @@
       "repeats": "n",
       "in_repeating_group": "y",
       "opt_list_values": [],
-      "datacolumn": "tribeOrNationOrganizationLocal",
+      "datacolumn": "tribeOrNation",
       "required": "n"
     },
     {
       "fieldname": "tribeOrNation",
       "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
       "namespace": "summarydocumentations_common",
       "xpath": [
         "affiliationGroupList",
         "affiliationGroup"
       ],
-      "data_type": "csrefname",
+      "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "tribeOrNationRefname",
+      "opt_list_values": [
+        "Organization/Local"
+      ],
+      "datacolumn": "tribeOrNationAuthorityVocabulary",
       "required": "n"
     },
     {
@@ -345,23 +318,6 @@
       "required": "n"
     },
     {
-      "fieldname": "includeInNotice",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "summarydocumentations_common",
-      "xpath": [
-        "affiliationGroupList",
-        "affiliationGroup"
-      ],
-      "data_type": "csrefname",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "includeInNoticeRefname",
-      "required": "n"
-    },
-    {
       "fieldname": "determinedBy",
       "transforms": {
         "authority": [
@@ -370,7 +326,7 @@
         ]
       },
       "source_type": "authority",
-      "source_name": "person/local",
+      "source_name": null,
       "namespace": "summarydocumentations_common",
       "xpath": [
         "affiliationGroupList",
@@ -381,48 +337,28 @@
       "repeats": "y",
       "in_repeating_group": "as part of larger repeating group",
       "opt_list_values": [],
-      "datacolumn": "determinedByPersonLocal",
-      "required": "n"
-    },
-    {
-      "fieldname": "determinedBy",
-      "transforms": {
-        "authority": [
-          "orgauthorities",
-          "organization"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "organization/local",
-      "namespace": "summarydocumentations_common",
-      "xpath": [
-        "affiliationGroupList",
-        "affiliationGroup",
-        "determinedByList"
-      ],
-      "data_type": "string",
-      "repeats": "y",
-      "in_repeating_group": "as part of larger repeating group",
-      "opt_list_values": [],
-      "datacolumn": "determinedByOrganizationLocal",
+      "datacolumn": "determinedBy",
       "required": "n"
     },
     {
       "fieldname": "determinedBy",
       "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
       "namespace": "summarydocumentations_common",
       "xpath": [
         "affiliationGroupList",
         "affiliationGroup",
         "determinedByList"
       ],
-      "data_type": "csrefname",
+      "data_type": "string",
       "repeats": "y",
       "in_repeating_group": "as part of larger repeating group",
-      "opt_list_values": [],
-      "datacolumn": "determinedByRefname",
+      "opt_list_values": [
+        "Person/Local",
+        "Organization/Local"
+      ],
+      "datacolumn": "determinedByAuthorityVocabulary",
       "required": "n"
     },
     {
@@ -496,23 +432,6 @@
       "required": "n"
     },
     {
-      "fieldname": "statusGroupType",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "summarydocumentations_common",
-      "xpath": [
-        "statusGroupList",
-        "statusGroup"
-      ],
-      "data_type": "csrefname",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "statusGroupTypeRefname",
-      "required": "n"
-    },
-    {
       "fieldname": "statusIndividual",
       "transforms": {
         "authority": [
@@ -521,7 +440,7 @@
         ]
       },
       "source_type": "authority",
-      "source_name": "person/local",
+      "source_name": null,
       "namespace": "summarydocumentations_common",
       "xpath": [
         "statusGroupList",
@@ -531,24 +450,26 @@
       "repeats": "n",
       "in_repeating_group": "y",
       "opt_list_values": [],
-      "datacolumn": "statusIndividualPersonLocal",
+      "datacolumn": "statusIndividual",
       "required": "n"
     },
     {
       "fieldname": "statusIndividual",
       "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
       "namespace": "summarydocumentations_common",
       "xpath": [
         "statusGroupList",
         "statusGroup"
       ],
-      "data_type": "csrefname",
+      "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "statusIndividualRefname",
+      "opt_list_values": [
+        "Person/Local"
+      ],
+      "datacolumn": "statusIndividualAuthorityVocabulary",
       "required": "n"
     },
     {
@@ -568,23 +489,6 @@
       "in_repeating_group": "y",
       "opt_list_values": [],
       "datacolumn": "status",
-      "required": "n"
-    },
-    {
-      "fieldname": "status",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "summarydocumentations_common",
-      "xpath": [
-        "statusGroupList",
-        "statusGroup"
-      ],
-      "data_type": "csrefname",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "statusRefname",
       "required": "n"
     },
     {
@@ -630,7 +534,7 @@
         ]
       },
       "source_type": "authority",
-      "source_name": "place/local",
+      "source_name": null,
       "namespace": "summarydocumentations_common",
       "xpath": [
         "geographicPlaceGroupList",
@@ -640,24 +544,26 @@
       "repeats": "n",
       "in_repeating_group": "y",
       "opt_list_values": [],
-      "datacolumn": "geographicPlacePlaceLocal",
+      "datacolumn": "geographicPlace",
       "required": "n"
     },
     {
       "fieldname": "geographicPlace",
       "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
       "namespace": "summarydocumentations_common",
       "xpath": [
         "geographicPlaceGroupList",
         "geographicPlaceGroup"
       ],
-      "data_type": "csrefname",
+      "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "geographicPlaceRefname",
+      "opt_list_values": [
+        "Place/Local"
+      ],
+      "datacolumn": "geographicPlaceAuthorityVocabulary",
       "required": "n"
     },
     {
@@ -686,7 +592,7 @@
         ]
       },
       "source_type": "authority",
-      "source_name": "concept/ethculture",
+      "source_name": null,
       "namespace": "summarydocumentations_common",
       "xpath": [
         "culturalGroupList",
@@ -696,46 +602,27 @@
       "repeats": "n",
       "in_repeating_group": "y",
       "opt_list_values": [],
-      "datacolumn": "cultureConceptEthculture",
-      "required": "n"
-    },
-    {
-      "fieldname": "culture",
-      "transforms": {
-        "authority": [
-          "conceptauthorities",
-          "archculture"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "concept/archculture",
-      "namespace": "summarydocumentations_common",
-      "xpath": [
-        "culturalGroupList",
-        "culturalGroup"
-      ],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "cultureConceptArchculture",
+      "datacolumn": "culture",
       "required": "n"
     },
     {
       "fieldname": "culture",
       "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
       "namespace": "summarydocumentations_common",
       "xpath": [
         "culturalGroupList",
         "culturalGroup"
       ],
-      "data_type": "csrefname",
+      "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "cultureRefname",
+      "opt_list_values": [
+        "Concept/Ethculture",
+        "Concept/Archculture"
+      ],
+      "datacolumn": "cultureAuthorityVocabulary",
       "required": "n"
     },
     {
@@ -764,7 +651,7 @@
         ]
       },
       "source_type": "authority",
-      "source_name": "chronology/era",
+      "source_name": null,
       "namespace": "summarydocumentations_common",
       "xpath": [
         "timePeriodGroupList",
@@ -774,24 +661,26 @@
       "repeats": "n",
       "in_repeating_group": "y",
       "opt_list_values": [],
-      "datacolumn": "timePeriodChronologyEra",
+      "datacolumn": "timePeriod",
       "required": "n"
     },
     {
       "fieldname": "timePeriod",
       "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
       "namespace": "summarydocumentations_common",
       "xpath": [
         "timePeriodGroupList",
         "timePeriodGroup"
       ],
-      "data_type": "csrefname",
+      "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "timePeriodRefname",
+      "opt_list_values": [
+        "Chronology/Era"
+      ],
+      "datacolumn": "timePeriodAuthorityVocabulary",
       "required": "n"
     },
     {
@@ -820,7 +709,7 @@
         ]
       },
       "source_type": "authority",
-      "source_name": "place/archaeological",
+      "source_name": null,
       "namespace": "summarydocumentations_common",
       "xpath": [
         "archaeologicalSiteGroupList",
@@ -830,24 +719,26 @@
       "repeats": "n",
       "in_repeating_group": "y",
       "opt_list_values": [],
-      "datacolumn": "archaeologicalSitePlaceArchaeological",
+      "datacolumn": "archaeologicalSite",
       "required": "n"
     },
     {
       "fieldname": "archaeologicalSite",
       "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
       "namespace": "summarydocumentations_common",
       "xpath": [
         "archaeologicalSiteGroupList",
         "archaeologicalSiteGroup"
       ],
-      "data_type": "csrefname",
+      "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "archaeologicalSiteRefname",
+      "opt_list_values": [
+        "Place/Archaeological"
+      ],
+      "datacolumn": "archaeologicalSiteAuthorityVocabulary",
       "required": "n"
     },
     {

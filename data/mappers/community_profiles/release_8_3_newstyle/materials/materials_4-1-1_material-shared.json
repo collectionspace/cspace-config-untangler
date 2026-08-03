@@ -244,23 +244,6 @@
       "required": "n"
     },
     {
-      "fieldname": "termFlag",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "materials_common",
-      "xpath": [
-        "materialTermGroupList",
-        "materialTermGroup"
-      ],
-      "data_type": "csrefname",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "termFlagRefname",
-      "required": "n"
-    },
-    {
       "fieldname": "historicalStatus",
       "transforms": {},
       "source_type": "optionlist",
@@ -302,23 +285,6 @@
       "required": "n"
     },
     {
-      "fieldname": "termLanguage",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "materials_common",
-      "xpath": [
-        "materialTermGroupList",
-        "materialTermGroup"
-      ],
-      "data_type": "csrefname",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "termLanguageRefname",
-      "required": "n"
-    },
-    {
       "fieldname": "termPrefForLang",
       "transforms": {
         "special": [
@@ -348,7 +314,7 @@
         ]
       },
       "source_type": "authority",
-      "source_name": "citation/local",
+      "source_name": null,
       "namespace": "materials_common",
       "xpath": [
         "materialTermGroupList",
@@ -358,46 +324,27 @@
       "repeats": "n",
       "in_repeating_group": "y",
       "opt_list_values": [],
-      "datacolumn": "termSourceCitationLocal",
-      "required": "n"
-    },
-    {
-      "fieldname": "termSource",
-      "transforms": {
-        "authority": [
-          "citationauthorities",
-          "citation_shared"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "citation/shared",
-      "namespace": "materials_common",
-      "xpath": [
-        "materialTermGroupList",
-        "materialTermGroup"
-      ],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "termSourceCitationShared",
+      "datacolumn": "termSource",
       "required": "n"
     },
     {
       "fieldname": "termSource",
       "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
       "namespace": "materials_common",
       "xpath": [
         "materialTermGroupList",
         "materialTermGroup"
       ],
-      "data_type": "csrefname",
+      "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "termSourceRefname",
+      "opt_list_values": [
+        "Citation/Local",
+        "Citation/Shared"
+      ],
+      "datacolumn": "termSourceAuthorityVocabulary",
       "required": "n"
     },
     {
@@ -460,7 +407,7 @@
         ]
       },
       "source_type": "authority",
-      "source_name": "work/local",
+      "source_name": null,
       "namespace": "materials_common",
       "xpath": [
         "featuredCollectionGroupList",
@@ -470,46 +417,27 @@
       "repeats": "n",
       "in_repeating_group": "y",
       "opt_list_values": [],
-      "datacolumn": "featuredCollectionWorkLocal",
-      "required": "n"
-    },
-    {
-      "fieldname": "featuredCollection",
-      "transforms": {
-        "authority": [
-          "workauthorities",
-          "work_shared"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "work/shared",
-      "namespace": "materials_common",
-      "xpath": [
-        "featuredCollectionGroupList",
-        "featuredCollectionGroup"
-      ],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "featuredCollectionWorkShared",
+      "datacolumn": "featuredCollection",
       "required": "n"
     },
     {
       "fieldname": "featuredCollection",
       "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
       "namespace": "materials_common",
       "xpath": [
         "featuredCollectionGroupList",
         "featuredCollectionGroup"
       ],
-      "data_type": "csrefname",
+      "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "featuredCollectionRefname",
+      "opt_list_values": [
+        "Work/Local",
+        "Work/Shared"
+      ],
+      "datacolumn": "featuredCollectionAuthorityVocabulary",
       "required": "n"
     },
     {
@@ -548,22 +476,6 @@
       "required": "n"
     },
     {
-      "fieldname": "publishTo",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "materials_common",
-      "xpath": [
-        "publishToList"
-      ],
-      "data_type": "csrefname",
-      "repeats": "y",
-      "in_repeating_group": "n",
-      "opt_list_values": [],
-      "datacolumn": "publishToRefname",
-      "required": "n"
-    },
-    {
       "fieldname": "materialCompositionFamilyName",
       "transforms": {
         "authority": [
@@ -572,7 +484,7 @@
         ]
       },
       "source_type": "authority",
-      "source_name": "concept/materialclassification",
+      "source_name": null,
       "namespace": "materials_common",
       "xpath": [
         "materialCompositionGroupList",
@@ -582,46 +494,27 @@
       "repeats": "n",
       "in_repeating_group": "y",
       "opt_list_values": [],
-      "datacolumn": "materialCompositionFamilyNameConceptMaterialclassification",
-      "required": "n"
-    },
-    {
-      "fieldname": "materialCompositionFamilyName",
-      "transforms": {
-        "authority": [
-          "conceptauthorities",
-          "materialclassification_shared"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "concept/sharedmaterialclassification",
-      "namespace": "materials_common",
-      "xpath": [
-        "materialCompositionGroupList",
-        "materialCompositionGroup"
-      ],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "materialCompositionFamilyNameConceptSharedmaterialclassification",
+      "datacolumn": "materialCompositionFamilyName",
       "required": "n"
     },
     {
       "fieldname": "materialCompositionFamilyName",
       "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
       "namespace": "materials_common",
       "xpath": [
         "materialCompositionGroupList",
         "materialCompositionGroup"
       ],
-      "data_type": "csrefname",
+      "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "materialCompositionFamilyNameRefname",
+      "opt_list_values": [
+        "Concept/Materialclassification",
+        "Concept/Sharedmaterialclassification"
+      ],
+      "datacolumn": "materialCompositionFamilyNameAuthorityVocabulary",
       "required": "n"
     },
     {
@@ -633,7 +526,7 @@
         ]
       },
       "source_type": "authority",
-      "source_name": "concept/materialclassification",
+      "source_name": null,
       "namespace": "materials_common",
       "xpath": [
         "materialCompositionGroupList",
@@ -643,46 +536,27 @@
       "repeats": "n",
       "in_repeating_group": "y",
       "opt_list_values": [],
-      "datacolumn": "materialCompositionClassNameConceptMaterialclassification",
-      "required": "n"
-    },
-    {
-      "fieldname": "materialCompositionClassName",
-      "transforms": {
-        "authority": [
-          "conceptauthorities",
-          "materialclassification_shared"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "concept/sharedmaterialclassification",
-      "namespace": "materials_common",
-      "xpath": [
-        "materialCompositionGroupList",
-        "materialCompositionGroup"
-      ],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "materialCompositionClassNameConceptSharedmaterialclassification",
+      "datacolumn": "materialCompositionClassName",
       "required": "n"
     },
     {
       "fieldname": "materialCompositionClassName",
       "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
       "namespace": "materials_common",
       "xpath": [
         "materialCompositionGroupList",
         "materialCompositionGroup"
       ],
-      "data_type": "csrefname",
+      "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "materialCompositionClassNameRefname",
+      "opt_list_values": [
+        "Concept/Materialclassification",
+        "Concept/Sharedmaterialclassification"
+      ],
+      "datacolumn": "materialCompositionClassNameAuthorityVocabulary",
       "required": "n"
     },
     {
@@ -694,7 +568,7 @@
         ]
       },
       "source_type": "authority",
-      "source_name": "concept/materialclassification",
+      "source_name": null,
       "namespace": "materials_common",
       "xpath": [
         "materialCompositionGroupList",
@@ -704,46 +578,27 @@
       "repeats": "n",
       "in_repeating_group": "y",
       "opt_list_values": [],
-      "datacolumn": "materialCompositionGenericNameConceptMaterialclassification",
-      "required": "n"
-    },
-    {
-      "fieldname": "materialCompositionGenericName",
-      "transforms": {
-        "authority": [
-          "conceptauthorities",
-          "materialclassification_shared"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "concept/sharedmaterialclassification",
-      "namespace": "materials_common",
-      "xpath": [
-        "materialCompositionGroupList",
-        "materialCompositionGroup"
-      ],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "materialCompositionGenericNameConceptSharedmaterialclassification",
+      "datacolumn": "materialCompositionGenericName",
       "required": "n"
     },
     {
       "fieldname": "materialCompositionGenericName",
       "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
       "namespace": "materials_common",
       "xpath": [
         "materialCompositionGroupList",
         "materialCompositionGroup"
       ],
-      "data_type": "csrefname",
+      "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "materialCompositionGenericNameRefname",
+      "opt_list_values": [
+        "Concept/Materialclassification",
+        "Concept/Sharedmaterialclassification"
+      ],
+      "datacolumn": "materialCompositionGenericNameAuthorityVocabulary",
       "required": "n"
     },
     {
@@ -779,22 +634,6 @@
       "required": "n"
     },
     {
-      "fieldname": "typicalUse",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "materials_common",
-      "xpath": [
-        "typicalUses"
-      ],
-      "data_type": "csrefname",
-      "repeats": "y",
-      "in_repeating_group": "n",
-      "opt_list_values": [],
-      "datacolumn": "typicalUseRefname",
-      "required": "n"
-    },
-    {
       "fieldname": "discontinued",
       "transforms": {},
       "source_type": "optionlist",
@@ -820,47 +659,31 @@
         ]
       },
       "source_type": "authority",
-      "source_name": "organization/local",
+      "source_name": null,
       "namespace": "materials_common",
       "xpath": [],
       "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "n/a",
       "opt_list_values": [],
-      "datacolumn": "discontinuedByOrganizationLocal",
-      "required": "n"
-    },
-    {
-      "fieldname": "discontinuedBy",
-      "transforms": {
-        "authority": [
-          "orgauthorities",
-          "organization_shared"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "organization/shared",
-      "namespace": "materials_common",
-      "xpath": [],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "n/a",
-      "opt_list_values": [],
-      "datacolumn": "discontinuedByOrganizationShared",
+      "datacolumn": "discontinuedBy",
       "required": "n"
     },
     {
       "fieldname": "discontinuedBy",
       "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
       "namespace": "materials_common",
       "xpath": [],
-      "data_type": "csrefname",
+      "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "n/a",
-      "opt_list_values": [],
-      "datacolumn": "discontinuedByRefname",
+      "opt_list_values": [
+        "Organization/Local",
+        "Organization/Shared"
+      ],
+      "datacolumn": "discontinuedByAuthorityVocabulary",
       "required": "n"
     },
     {
@@ -914,7 +737,7 @@
         ]
       },
       "source_type": "authority",
-      "source_name": "organization/local",
+      "source_name": null,
       "namespace": "materials_common",
       "xpath": [
         "materialProductionOrganizationGroupList",
@@ -924,46 +747,27 @@
       "repeats": "n",
       "in_repeating_group": "y",
       "opt_list_values": [],
-      "datacolumn": "materialProductionOrganizationOrganizationLocal",
-      "required": "n"
-    },
-    {
-      "fieldname": "materialProductionOrganization",
-      "transforms": {
-        "authority": [
-          "orgauthorities",
-          "organization_shared"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "organization/shared",
-      "namespace": "materials_common",
-      "xpath": [
-        "materialProductionOrganizationGroupList",
-        "materialProductionOrganizationGroup"
-      ],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "materialProductionOrganizationOrganizationShared",
+      "datacolumn": "materialProductionOrganization",
       "required": "n"
     },
     {
       "fieldname": "materialProductionOrganization",
       "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
       "namespace": "materials_common",
       "xpath": [
         "materialProductionOrganizationGroupList",
         "materialProductionOrganizationGroup"
       ],
-      "data_type": "csrefname",
+      "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "materialProductionOrganizationRefname",
+      "opt_list_values": [
+        "Organization/Local",
+        "Organization/Shared"
+      ],
+      "datacolumn": "materialProductionOrganizationAuthorityVocabulary",
       "required": "n"
     },
     {
@@ -986,23 +790,6 @@
       "required": "n"
     },
     {
-      "fieldname": "materialProductionOrganizationRole",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "materials_common",
-      "xpath": [
-        "materialProductionOrganizationGroupList",
-        "materialProductionOrganizationGroup"
-      ],
-      "data_type": "csrefname",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "materialProductionOrganizationRoleRefname",
-      "required": "n"
-    },
-    {
       "fieldname": "materialProductionPerson",
       "transforms": {
         "authority": [
@@ -1011,7 +798,7 @@
         ]
       },
       "source_type": "authority",
-      "source_name": "person/local",
+      "source_name": null,
       "namespace": "materials_common",
       "xpath": [
         "materialProductionPersonGroupList",
@@ -1021,46 +808,27 @@
       "repeats": "n",
       "in_repeating_group": "y",
       "opt_list_values": [],
-      "datacolumn": "materialProductionPersonPersonLocal",
-      "required": "n"
-    },
-    {
-      "fieldname": "materialProductionPerson",
-      "transforms": {
-        "authority": [
-          "personauthorities",
-          "person_shared"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "person/shared",
-      "namespace": "materials_common",
-      "xpath": [
-        "materialProductionPersonGroupList",
-        "materialProductionPersonGroup"
-      ],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "materialProductionPersonPersonShared",
+      "datacolumn": "materialProductionPerson",
       "required": "n"
     },
     {
       "fieldname": "materialProductionPerson",
       "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
       "namespace": "materials_common",
       "xpath": [
         "materialProductionPersonGroupList",
         "materialProductionPersonGroup"
       ],
-      "data_type": "csrefname",
+      "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "materialProductionPersonRefname",
+      "opt_list_values": [
+        "Person/Local",
+        "Person/Shared"
+      ],
+      "datacolumn": "materialProductionPersonAuthorityVocabulary",
       "required": "n"
     },
     {
@@ -1083,23 +851,6 @@
       "required": "n"
     },
     {
-      "fieldname": "materialProductionPersonRole",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "materials_common",
-      "xpath": [
-        "materialProductionPersonGroupList",
-        "materialProductionPersonGroup"
-      ],
-      "data_type": "csrefname",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "materialProductionPersonRoleRefname",
-      "required": "n"
-    },
-    {
       "fieldname": "materialProductionPlace",
       "transforms": {
         "authority": [
@@ -1108,7 +859,7 @@
         ]
       },
       "source_type": "authority",
-      "source_name": "place/local",
+      "source_name": null,
       "namespace": "materials_common",
       "xpath": [
         "materialProductionPlaceGroupList",
@@ -1118,46 +869,27 @@
       "repeats": "n",
       "in_repeating_group": "y",
       "opt_list_values": [],
-      "datacolumn": "materialProductionPlacePlaceLocal",
-      "required": "n"
-    },
-    {
-      "fieldname": "materialProductionPlace",
-      "transforms": {
-        "authority": [
-          "placeauthorities",
-          "place_shared"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "place/shared",
-      "namespace": "materials_common",
-      "xpath": [
-        "materialProductionPlaceGroupList",
-        "materialProductionPlaceGroup"
-      ],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "materialProductionPlacePlaceShared",
+      "datacolumn": "materialProductionPlace",
       "required": "n"
     },
     {
       "fieldname": "materialProductionPlace",
       "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
       "namespace": "materials_common",
       "xpath": [
         "materialProductionPlaceGroupList",
         "materialProductionPlaceGroup"
       ],
-      "data_type": "csrefname",
+      "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "materialProductionPlaceRefname",
+      "opt_list_values": [
+        "Place/Local",
+        "Place/Shared"
+      ],
+      "datacolumn": "materialProductionPlaceAuthorityVocabulary",
       "required": "n"
     },
     {
@@ -1180,23 +912,6 @@
       "required": "n"
     },
     {
-      "fieldname": "materialProductionPlaceRole",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "materials_common",
-      "xpath": [
-        "materialProductionPlaceGroupList",
-        "materialProductionPlaceGroup"
-      ],
-      "data_type": "csrefname",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "materialProductionPlaceRoleRefname",
-      "required": "n"
-    },
-    {
       "fieldname": "featuredApplication",
       "transforms": {
         "authority": [
@@ -1205,7 +920,7 @@
         ]
       },
       "source_type": "authority",
-      "source_name": "work/local",
+      "source_name": null,
       "namespace": "materials_common",
       "xpath": [
         "featuredApplicationGroupList",
@@ -1215,46 +930,27 @@
       "repeats": "n",
       "in_repeating_group": "y",
       "opt_list_values": [],
-      "datacolumn": "featuredApplicationWorkLocal",
-      "required": "n"
-    },
-    {
-      "fieldname": "featuredApplication",
-      "transforms": {
-        "authority": [
-          "workauthorities",
-          "work_shared"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "work/shared",
-      "namespace": "materials_common",
-      "xpath": [
-        "featuredApplicationGroupList",
-        "featuredApplicationGroup"
-      ],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "featuredApplicationWorkShared",
+      "datacolumn": "featuredApplication",
       "required": "n"
     },
     {
       "fieldname": "featuredApplication",
       "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
       "namespace": "materials_common",
       "xpath": [
         "featuredApplicationGroupList",
         "featuredApplicationGroup"
       ],
-      "data_type": "csrefname",
+      "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "featuredApplicationRefname",
+      "opt_list_values": [
+        "Work/Local",
+        "Work/Shared"
+      ],
+      "datacolumn": "featuredApplicationAuthorityVocabulary",
       "required": "n"
     },
     {
@@ -1283,7 +979,7 @@
         ]
       },
       "source_type": "authority",
-      "source_name": "citation/local",
+      "source_name": null,
       "namespace": "materials_common",
       "xpath": [
         "materialCitationGroupList",
@@ -1293,46 +989,27 @@
       "repeats": "n",
       "in_repeating_group": "y",
       "opt_list_values": [],
-      "datacolumn": "materialCitationSourceCitationLocal",
-      "required": "n"
-    },
-    {
-      "fieldname": "materialCitationSource",
-      "transforms": {
-        "authority": [
-          "citationauthorities",
-          "citation_shared"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "citation/shared",
-      "namespace": "materials_common",
-      "xpath": [
-        "materialCitationGroupList",
-        "materialCitationGroup"
-      ],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "materialCitationSourceCitationShared",
+      "datacolumn": "materialCitationSource",
       "required": "n"
     },
     {
       "fieldname": "materialCitationSource",
       "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
       "namespace": "materials_common",
       "xpath": [
         "materialCitationGroupList",
         "materialCitationGroup"
       ],
-      "data_type": "csrefname",
+      "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "materialCitationSourceRefname",
+      "opt_list_values": [
+        "Citation/Local",
+        "Citation/Shared"
+      ],
+      "datacolumn": "materialCitationSourceAuthorityVocabulary",
       "required": "n"
     },
     {
@@ -1406,23 +1083,6 @@
       "required": "n"
     },
     {
-      "fieldname": "additionalResource",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "materials_common",
-      "xpath": [
-        "additionalResourceGroupList",
-        "additionalResourceGroup"
-      ],
-      "data_type": "csrefname",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "additionalResourceRefname",
-      "required": "n"
-    },
-    {
       "fieldname": "additionalResourceNote",
       "transforms": {},
       "source_type": "na",
@@ -1448,7 +1108,7 @@
         ]
       },
       "source_type": "authority",
-      "source_name": "organization/local",
+      "source_name": null,
       "namespace": "materials_common",
       "xpath": [
         "materialTermAttributionContributingGroupList",
@@ -1458,46 +1118,27 @@
       "repeats": "n",
       "in_repeating_group": "y",
       "opt_list_values": [],
-      "datacolumn": "materialTermAttributionContributingOrganizationOrganizationLocal",
-      "required": "n"
-    },
-    {
-      "fieldname": "materialTermAttributionContributingOrganization",
-      "transforms": {
-        "authority": [
-          "orgauthorities",
-          "organization_shared"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "organization/shared",
-      "namespace": "materials_common",
-      "xpath": [
-        "materialTermAttributionContributingGroupList",
-        "materialTermAttributionContributingGroup"
-      ],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "materialTermAttributionContributingOrganizationOrganizationShared",
+      "datacolumn": "materialTermAttributionContributingOrganization",
       "required": "n"
     },
     {
       "fieldname": "materialTermAttributionContributingOrganization",
       "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
       "namespace": "materials_common",
       "xpath": [
         "materialTermAttributionContributingGroupList",
         "materialTermAttributionContributingGroup"
       ],
-      "data_type": "csrefname",
+      "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "materialTermAttributionContributingOrganizationRefname",
+      "opt_list_values": [
+        "Organization/Local",
+        "Organization/Shared"
+      ],
+      "datacolumn": "materialTermAttributionContributingOrganizationAuthorityVocabulary",
       "required": "n"
     },
     {
@@ -1509,7 +1150,7 @@
         ]
       },
       "source_type": "authority",
-      "source_name": "person/local",
+      "source_name": null,
       "namespace": "materials_common",
       "xpath": [
         "materialTermAttributionContributingGroupList",
@@ -1519,46 +1160,27 @@
       "repeats": "n",
       "in_repeating_group": "y",
       "opt_list_values": [],
-      "datacolumn": "materialTermAttributionContributingPersonPersonLocal",
-      "required": "n"
-    },
-    {
-      "fieldname": "materialTermAttributionContributingPerson",
-      "transforms": {
-        "authority": [
-          "personauthorities",
-          "person_shared"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "person/shared",
-      "namespace": "materials_common",
-      "xpath": [
-        "materialTermAttributionContributingGroupList",
-        "materialTermAttributionContributingGroup"
-      ],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "materialTermAttributionContributingPersonPersonShared",
+      "datacolumn": "materialTermAttributionContributingPerson",
       "required": "n"
     },
     {
       "fieldname": "materialTermAttributionContributingPerson",
       "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
       "namespace": "materials_common",
       "xpath": [
         "materialTermAttributionContributingGroupList",
         "materialTermAttributionContributingGroup"
       ],
-      "data_type": "csrefname",
+      "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "materialTermAttributionContributingPersonRefname",
+      "opt_list_values": [
+        "Person/Local",
+        "Person/Shared"
+      ],
+      "datacolumn": "materialTermAttributionContributingPersonAuthorityVocabulary",
       "required": "n"
     },
     {
@@ -1587,7 +1209,7 @@
         ]
       },
       "source_type": "authority",
-      "source_name": "organization/local",
+      "source_name": null,
       "namespace": "materials_common",
       "xpath": [
         "materialTermAttributionEditingGroupList",
@@ -1597,46 +1219,27 @@
       "repeats": "n",
       "in_repeating_group": "y",
       "opt_list_values": [],
-      "datacolumn": "materialTermAttributionEditingOrganizationOrganizationLocal",
-      "required": "n"
-    },
-    {
-      "fieldname": "materialTermAttributionEditingOrganization",
-      "transforms": {
-        "authority": [
-          "orgauthorities",
-          "organization_shared"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "organization/shared",
-      "namespace": "materials_common",
-      "xpath": [
-        "materialTermAttributionEditingGroupList",
-        "materialTermAttributionEditingGroup"
-      ],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "materialTermAttributionEditingOrganizationOrganizationShared",
+      "datacolumn": "materialTermAttributionEditingOrganization",
       "required": "n"
     },
     {
       "fieldname": "materialTermAttributionEditingOrganization",
       "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
       "namespace": "materials_common",
       "xpath": [
         "materialTermAttributionEditingGroupList",
         "materialTermAttributionEditingGroup"
       ],
-      "data_type": "csrefname",
+      "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "materialTermAttributionEditingOrganizationRefname",
+      "opt_list_values": [
+        "Organization/Local",
+        "Organization/Shared"
+      ],
+      "datacolumn": "materialTermAttributionEditingOrganizationAuthorityVocabulary",
       "required": "n"
     },
     {
@@ -1648,7 +1251,7 @@
         ]
       },
       "source_type": "authority",
-      "source_name": "person/local",
+      "source_name": null,
       "namespace": "materials_common",
       "xpath": [
         "materialTermAttributionEditingGroupList",
@@ -1658,46 +1261,27 @@
       "repeats": "n",
       "in_repeating_group": "y",
       "opt_list_values": [],
-      "datacolumn": "materialTermAttributionEditingPersonPersonLocal",
-      "required": "n"
-    },
-    {
-      "fieldname": "materialTermAttributionEditingPerson",
-      "transforms": {
-        "authority": [
-          "personauthorities",
-          "person_shared"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "person/shared",
-      "namespace": "materials_common",
-      "xpath": [
-        "materialTermAttributionEditingGroupList",
-        "materialTermAttributionEditingGroup"
-      ],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "materialTermAttributionEditingPersonPersonShared",
+      "datacolumn": "materialTermAttributionEditingPerson",
       "required": "n"
     },
     {
       "fieldname": "materialTermAttributionEditingPerson",
       "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
       "namespace": "materials_common",
       "xpath": [
         "materialTermAttributionEditingGroupList",
         "materialTermAttributionEditingGroup"
       ],
-      "data_type": "csrefname",
+      "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "materialTermAttributionEditingPersonRefname",
+      "opt_list_values": [
+        "Person/Local",
+        "Person/Shared"
+      ],
+      "datacolumn": "materialTermAttributionEditingPersonAuthorityVocabulary",
       "required": "n"
     },
     {
@@ -1751,20 +1335,6 @@
       "required": "n"
     },
     {
-      "fieldname": "commonForm",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "materials_common",
-      "xpath": [],
-      "data_type": "csrefname",
-      "repeats": "n",
-      "in_repeating_group": "n/a",
-      "opt_list_values": [],
-      "datacolumn": "commonFormRefname",
-      "required": "n"
-    },
-    {
       "fieldname": "formType",
       "transforms": {
         "vocabulary": "materialformtype"
@@ -1781,23 +1351,6 @@
       "in_repeating_group": "y",
       "opt_list_values": [],
       "datacolumn": "formType",
-      "required": "n"
-    },
-    {
-      "fieldname": "formType",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "materials_common",
-      "xpath": [
-        "formTypeGroupList",
-        "formTypeGroup"
-      ],
-      "data_type": "csrefname",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "formTypeRefname",
       "required": "n"
     },
     {
@@ -1946,23 +1499,6 @@
       "required": "n"
     },
     {
-      "fieldname": "acousticalPropertyType",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "materials_common",
-      "xpath": [
-        "acousticalPropertyGroupList",
-        "acousticalPropertyGroup"
-      ],
-      "data_type": "csrefname",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "acousticalPropertyTypeRefname",
-      "required": "n"
-    },
-    {
       "fieldname": "acousticalPropertyNote",
       "transforms": {},
       "source_type": "na",
@@ -1996,23 +1532,6 @@
       "in_repeating_group": "y",
       "opt_list_values": [],
       "datacolumn": "durabilityPropertyType",
-      "required": "n"
-    },
-    {
-      "fieldname": "durabilityPropertyType",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "materials_common",
-      "xpath": [
-        "durabilityPropertyGroupList",
-        "durabilityPropertyGroup"
-      ],
-      "data_type": "csrefname",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "durabilityPropertyTypeRefname",
       "required": "n"
     },
     {
@@ -2052,23 +1571,6 @@
       "required": "n"
     },
     {
-      "fieldname": "electricalPropertyType",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "materials_common",
-      "xpath": [
-        "electricalPropertyGroupList",
-        "electricalPropertyGroup"
-      ],
-      "data_type": "csrefname",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "electricalPropertyTypeRefname",
-      "required": "n"
-    },
-    {
       "fieldname": "electricalPropertyNote",
       "transforms": {},
       "source_type": "na",
@@ -2102,23 +1604,6 @@
       "in_repeating_group": "y",
       "opt_list_values": [],
       "datacolumn": "hygrothermalPropertyType",
-      "required": "n"
-    },
-    {
-      "fieldname": "hygrothermalPropertyType",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "materials_common",
-      "xpath": [
-        "hygrothermalPropertyGroupList",
-        "hygrothermalPropertyGroup"
-      ],
-      "data_type": "csrefname",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "hygrothermalPropertyTypeRefname",
       "required": "n"
     },
     {
@@ -2158,23 +1643,6 @@
       "required": "n"
     },
     {
-      "fieldname": "mechanicalPropertyType",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "materials_common",
-      "xpath": [
-        "mechanicalPropertyGroupList",
-        "mechanicalPropertyGroup"
-      ],
-      "data_type": "csrefname",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "mechanicalPropertyTypeRefname",
-      "required": "n"
-    },
-    {
       "fieldname": "mechanicalPropertyNote",
       "transforms": {},
       "source_type": "na",
@@ -2208,23 +1676,6 @@
       "in_repeating_group": "y",
       "opt_list_values": [],
       "datacolumn": "opticalPropertyType",
-      "required": "n"
-    },
-    {
-      "fieldname": "opticalPropertyType",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "materials_common",
-      "xpath": [
-        "opticalPropertyGroupList",
-        "opticalPropertyGroup"
-      ],
-      "data_type": "csrefname",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "opticalPropertyTypeRefname",
       "required": "n"
     },
     {
@@ -2264,23 +1715,6 @@
       "required": "n"
     },
     {
-      "fieldname": "sensorialPropertyType",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "materials_common",
-      "xpath": [
-        "sensorialPropertyGroupList",
-        "sensorialPropertyGroup"
-      ],
-      "data_type": "csrefname",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "sensorialPropertyTypeRefname",
-      "required": "n"
-    },
-    {
       "fieldname": "sensorialPropertyNote",
       "transforms": {},
       "source_type": "na",
@@ -2317,23 +1751,6 @@
       "required": "n"
     },
     {
-      "fieldname": "smartMaterialPropertyType",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "materials_common",
-      "xpath": [
-        "smartMaterialPropertyGroupList",
-        "smartMaterialPropertyGroup"
-      ],
-      "data_type": "csrefname",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "smartMaterialPropertyTypeRefname",
-      "required": "n"
-    },
-    {
       "fieldname": "smartMaterialPropertyNote",
       "transforms": {},
       "source_type": "na",
@@ -2367,23 +1784,6 @@
       "in_repeating_group": "y",
       "opt_list_values": [],
       "datacolumn": "additionalPropertyType",
-      "required": "n"
-    },
-    {
-      "fieldname": "additionalPropertyType",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "materials_common",
-      "xpath": [
-        "additionalPropertyGroupList",
-        "additionalPropertyGroup"
-      ],
-      "data_type": "csrefname",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "additionalPropertyTypeRefname",
       "required": "n"
     },
     {
@@ -2471,23 +1871,6 @@
       "required": "n"
     },
     {
-      "fieldname": "recycledContentQualifier",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "materials_common",
-      "xpath": [
-        "recycledContentGroupList",
-        "recycledContentGroup"
-      ],
-      "data_type": "csrefname",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "recycledContentQualifierRefname",
-      "required": "n"
-    },
-    {
       "fieldname": "lifecycleComponent",
       "transforms": {
         "vocabulary": "lifecyclecomponents"
@@ -2504,23 +1887,6 @@
       "in_repeating_group": "y",
       "opt_list_values": [],
       "datacolumn": "lifecycleComponent",
-      "required": "n"
-    },
-    {
-      "fieldname": "lifecycleComponent",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "materials_common",
-      "xpath": [
-        "lifecycleComponentGroupList",
-        "lifecycleComponentGroup"
-      ],
-      "data_type": "csrefname",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "lifecycleComponentRefname",
       "required": "n"
     },
     {
@@ -2594,23 +1960,6 @@
       "required": "n"
     },
     {
-      "fieldname": "embodiedEnergyUnit",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "materials_common",
-      "xpath": [
-        "embodiedEnergyGroupList",
-        "embodiedEnergyGroup"
-      ],
-      "data_type": "csrefname",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "embodiedEnergyUnitRefname",
-      "required": "n"
-    },
-    {
       "fieldname": "embodiedEnergyNote",
       "transforms": {},
       "source_type": "na",
@@ -2644,23 +1993,6 @@
       "in_repeating_group": "y",
       "opt_list_values": [],
       "datacolumn": "certificationProgram",
-      "required": "n"
-    },
-    {
-      "fieldname": "certificationProgram",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "materials_common",
-      "xpath": [
-        "certificationCreditGroupList",
-        "certificationCreditGroup"
-      ],
-      "data_type": "csrefname",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "certificationProgramRefname",
       "required": "n"
     },
     {
@@ -2713,22 +2045,6 @@
       "required": "n"
     },
     {
-      "fieldname": "castingProcess",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "materials_common",
-      "xpath": [
-        "castingProcesses"
-      ],
-      "data_type": "csrefname",
-      "repeats": "y",
-      "in_repeating_group": "n",
-      "opt_list_values": [],
-      "datacolumn": "castingProcessRefname",
-      "required": "n"
-    },
-    {
       "fieldname": "joiningProcess",
       "transforms": {
         "vocabulary": "joiningprocesses"
@@ -2744,22 +2060,6 @@
       "in_repeating_group": "n",
       "opt_list_values": [],
       "datacolumn": "joiningProcess",
-      "required": "n"
-    },
-    {
-      "fieldname": "joiningProcess",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "materials_common",
-      "xpath": [
-        "joiningProcesses"
-      ],
-      "data_type": "csrefname",
-      "repeats": "y",
-      "in_repeating_group": "n",
-      "opt_list_values": [],
-      "datacolumn": "joiningProcessRefname",
       "required": "n"
     },
     {
@@ -2781,22 +2081,6 @@
       "required": "n"
     },
     {
-      "fieldname": "moldingProcess",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "materials_common",
-      "xpath": [
-        "moldingProcesses"
-      ],
-      "data_type": "csrefname",
-      "repeats": "y",
-      "in_repeating_group": "n",
-      "opt_list_values": [],
-      "datacolumn": "moldingProcessRefname",
-      "required": "n"
-    },
-    {
       "fieldname": "surfacingProcess",
       "transforms": {
         "vocabulary": "surfacingprocesses"
@@ -2812,22 +2096,6 @@
       "in_repeating_group": "n",
       "opt_list_values": [],
       "datacolumn": "surfacingProcess",
-      "required": "n"
-    },
-    {
-      "fieldname": "surfacingProcess",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "materials_common",
-      "xpath": [
-        "surfacingProcesses"
-      ],
-      "data_type": "csrefname",
-      "repeats": "y",
-      "in_repeating_group": "n",
-      "opt_list_values": [],
-      "datacolumn": "surfacingProcessRefname",
       "required": "n"
     },
     {
@@ -2849,22 +2117,6 @@
       "required": "n"
     },
     {
-      "fieldname": "deformingProcess",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "materials_common",
-      "xpath": [
-        "deformingProcesses"
-      ],
-      "data_type": "csrefname",
-      "repeats": "y",
-      "in_repeating_group": "n",
-      "opt_list_values": [],
-      "datacolumn": "deformingProcessRefname",
-      "required": "n"
-    },
-    {
       "fieldname": "machiningProcess",
       "transforms": {
         "vocabulary": "machiningprocesses"
@@ -2880,22 +2132,6 @@
       "in_repeating_group": "n",
       "opt_list_values": [],
       "datacolumn": "machiningProcess",
-      "required": "n"
-    },
-    {
-      "fieldname": "machiningProcess",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "materials_common",
-      "xpath": [
-        "machiningProcesses"
-      ],
-      "data_type": "csrefname",
-      "repeats": "y",
-      "in_repeating_group": "n",
-      "opt_list_values": [],
-      "datacolumn": "machiningProcessRefname",
       "required": "n"
     },
     {
@@ -2917,22 +2153,6 @@
       "required": "n"
     },
     {
-      "fieldname": "rapidPrototypingProcess",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "materials_common",
-      "xpath": [
-        "rapidPrototypingProcesses"
-      ],
-      "data_type": "csrefname",
-      "repeats": "y",
-      "in_repeating_group": "n",
-      "opt_list_values": [],
-      "datacolumn": "rapidPrototypingProcessRefname",
-      "required": "n"
-    },
-    {
       "fieldname": "additionalProcess",
       "transforms": {
         "vocabulary": "additionalprocesses"
@@ -2949,23 +2169,6 @@
       "in_repeating_group": "y",
       "opt_list_values": [],
       "datacolumn": "additionalProcess",
-      "required": "n"
-    },
-    {
-      "fieldname": "additionalProcess",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "materials_common",
-      "xpath": [
-        "additionalProcessGroupList",
-        "additionalProcessGroup"
-      ],
-      "data_type": "csrefname",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "additionalProcessRefname",
       "required": "n"
     },
     {

@@ -163,23 +163,6 @@
       "required": "n"
     },
     {
-      "fieldname": "termFlag",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "places_common",
-      "xpath": [
-        "placeTermGroupList",
-        "placeTermGroup"
-      ],
-      "data_type": "csrefname",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "termFlagRefname",
-      "required": "n"
-    },
-    {
       "fieldname": "historicalStatus",
       "transforms": {},
       "source_type": "optionlist",
@@ -217,23 +200,6 @@
       "in_repeating_group": "y",
       "opt_list_values": [],
       "datacolumn": "termLanguage",
-      "required": "n"
-    },
-    {
-      "fieldname": "termLanguage",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "places_common",
-      "xpath": [
-        "placeTermGroupList",
-        "placeTermGroup"
-      ],
-      "data_type": "csrefname",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "termLanguageRefname",
       "required": "n"
     },
     {
@@ -317,7 +283,7 @@
         ]
       },
       "source_type": "authority",
-      "source_name": "citation/local",
+      "source_name": null,
       "namespace": "places_common",
       "xpath": [
         "placeTermGroupList",
@@ -327,46 +293,27 @@
       "repeats": "n",
       "in_repeating_group": "y",
       "opt_list_values": [],
-      "datacolumn": "termSourceCitationLocal",
-      "required": "n"
-    },
-    {
-      "fieldname": "termSource",
-      "transforms": {
-        "authority": [
-          "citationauthorities",
-          "citation_shared"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "citation/shared",
-      "namespace": "places_common",
-      "xpath": [
-        "placeTermGroupList",
-        "placeTermGroup"
-      ],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "termSourceCitationShared",
+      "datacolumn": "termSource",
       "required": "n"
     },
     {
       "fieldname": "termSource",
       "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
       "namespace": "places_common",
       "xpath": [
         "placeTermGroupList",
         "placeTermGroup"
       ],
-      "data_type": "csrefname",
+      "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "termSourceRefname",
+      "opt_list_values": [
+        "Citation/Local",
+        "Citation/Shared"
+      ],
+      "datacolumn": "termSourceAuthorityVocabulary",
       "required": "n"
     },
     {
@@ -492,7 +439,7 @@
         ]
       },
       "source_type": "authority",
-      "source_name": "person/local",
+      "source_name": null,
       "namespace": "places_common",
       "xpath": [
         "placeOwnerGroupList",
@@ -502,90 +449,29 @@
       "repeats": "n",
       "in_repeating_group": "y",
       "opt_list_values": [],
-      "datacolumn": "ownerPersonLocal",
-      "required": "n"
-    },
-    {
-      "fieldname": "owner",
-      "transforms": {
-        "authority": [
-          "personauthorities",
-          "person_shared"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "person/shared",
-      "namespace": "places_common",
-      "xpath": [
-        "placeOwnerGroupList",
-        "placeOwnerGroup"
-      ],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "ownerPersonShared",
-      "required": "n"
-    },
-    {
-      "fieldname": "owner",
-      "transforms": {
-        "authority": [
-          "orgauthorities",
-          "organization"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "organization/local",
-      "namespace": "places_common",
-      "xpath": [
-        "placeOwnerGroupList",
-        "placeOwnerGroup"
-      ],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "ownerOrganizationLocal",
-      "required": "n"
-    },
-    {
-      "fieldname": "owner",
-      "transforms": {
-        "authority": [
-          "orgauthorities",
-          "organization_shared"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "organization/shared",
-      "namespace": "places_common",
-      "xpath": [
-        "placeOwnerGroupList",
-        "placeOwnerGroup"
-      ],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "ownerOrganizationShared",
+      "datacolumn": "owner",
       "required": "n"
     },
     {
       "fieldname": "owner",
       "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
       "namespace": "places_common",
       "xpath": [
         "placeOwnerGroupList",
         "placeOwnerGroup"
       ],
-      "data_type": "csrefname",
+      "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "ownerRefname",
+      "opt_list_values": [
+        "Person/Local",
+        "Person/Shared",
+        "Organization/Local",
+        "Organization/Shared"
+      ],
+      "datacolumn": "ownerAuthorityVocabulary",
       "required": "n"
     },
     {
@@ -1005,23 +891,6 @@
       "in_repeating_group": "y",
       "opt_list_values": [],
       "datacolumn": "addressType",
-      "required": "n"
-    },
-    {
-      "fieldname": "addressType",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "places_common",
-      "xpath": [
-        "addrGroupList",
-        "addrGroup"
-      ],
-      "data_type": "csrefname",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "addressTypeRefname",
       "required": "n"
     },
     {
@@ -1453,7 +1322,7 @@
         ]
       },
       "source_type": "authority",
-      "source_name": "person/local",
+      "source_name": null,
       "namespace": "places_common",
       "xpath": [
         "placeGeoRefGroupList",
@@ -1463,90 +1332,29 @@
       "repeats": "n",
       "in_repeating_group": "y",
       "opt_list_values": [],
-      "datacolumn": "geoReferencedByPersonLocal",
-      "required": "n"
-    },
-    {
-      "fieldname": "geoReferencedBy",
-      "transforms": {
-        "authority": [
-          "personauthorities",
-          "person_shared"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "person/shared",
-      "namespace": "places_common",
-      "xpath": [
-        "placeGeoRefGroupList",
-        "placeGeoRefGroup"
-      ],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "geoReferencedByPersonShared",
-      "required": "n"
-    },
-    {
-      "fieldname": "geoReferencedBy",
-      "transforms": {
-        "authority": [
-          "orgauthorities",
-          "organization"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "organization/local",
-      "namespace": "places_common",
-      "xpath": [
-        "placeGeoRefGroupList",
-        "placeGeoRefGroup"
-      ],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "geoReferencedByOrganizationLocal",
-      "required": "n"
-    },
-    {
-      "fieldname": "geoReferencedBy",
-      "transforms": {
-        "authority": [
-          "orgauthorities",
-          "organization_shared"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "organization/shared",
-      "namespace": "places_common",
-      "xpath": [
-        "placeGeoRefGroupList",
-        "placeGeoRefGroup"
-      ],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "geoReferencedByOrganizationShared",
+      "datacolumn": "geoReferencedBy",
       "required": "n"
     },
     {
       "fieldname": "geoReferencedBy",
       "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
       "namespace": "places_common",
       "xpath": [
         "placeGeoRefGroupList",
         "placeGeoRefGroup"
       ],
-      "data_type": "csrefname",
+      "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "geoReferencedByRefname",
+      "opt_list_values": [
+        "Person/Local",
+        "Person/Shared",
+        "Organization/Local",
+        "Organization/Shared"
+      ],
+      "datacolumn": "geoReferencedByAuthorityVocabulary",
       "required": "n"
     },
     {

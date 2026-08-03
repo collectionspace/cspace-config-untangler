@@ -58,20 +58,6 @@
       "required": "n"
     },
     {
-      "fieldname": "propType",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "propagations_common",
-      "xpath": [],
-      "data_type": "csrefname",
-      "repeats": "n",
-      "in_repeating_group": "n/a",
-      "opt_list_values": [],
-      "datacolumn": "propTypeRefname",
-      "required": "n"
-    },
-    {
       "fieldname": "numStarted",
       "transforms": {},
       "source_type": "na",
@@ -116,20 +102,6 @@
       "required": "n"
     },
     {
-      "fieldname": "propReason",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "propagations_common",
-      "xpath": [],
-      "data_type": "csrefname",
-      "repeats": "n",
-      "in_repeating_group": "n/a",
-      "opt_list_values": [],
-      "datacolumn": "propReasonRefname",
-      "required": "n"
-    },
-    {
       "fieldname": "propComments",
       "transforms": {},
       "source_type": "na",
@@ -160,23 +132,6 @@
       "in_repeating_group": "y",
       "opt_list_values": [],
       "datacolumn": "scarStrat",
-      "required": "n"
-    },
-    {
-      "fieldname": "scarStrat",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "propagations_common",
-      "xpath": [
-        "scarStratGroupList",
-        "scarStratGroup"
-      ],
-      "data_type": "csrefname",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "scarStratRefname",
       "required": "n"
     },
     {
@@ -213,23 +168,6 @@
       "in_repeating_group": "y",
       "opt_list_values": [],
       "datacolumn": "durationUnit",
-      "required": "n"
-    },
-    {
-      "fieldname": "durationUnit",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "propagations_common",
-      "xpath": [
-        "scarStratGroupList",
-        "scarStratGroup"
-      ],
-      "data_type": "csrefname",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "durationUnitRefname",
       "required": "n"
     },
     {
@@ -285,20 +223,6 @@
       "required": "n"
     },
     {
-      "fieldname": "cuttingType",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "propagations_common",
-      "xpath": [],
-      "data_type": "csrefname",
-      "repeats": "n",
-      "in_repeating_group": "n/a",
-      "opt_list_values": [],
-      "datacolumn": "cuttingTypeRefname",
-      "required": "n"
-    },
-    {
       "fieldname": "hormone",
       "transforms": {
         "vocabulary": "propHormones"
@@ -312,20 +236,6 @@
       "in_repeating_group": "n/a",
       "opt_list_values": [],
       "datacolumn": "hormone",
-      "required": "n"
-    },
-    {
-      "fieldname": "hormone",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "propagations_common",
-      "xpath": [],
-      "data_type": "csrefname",
-      "repeats": "n",
-      "in_repeating_group": "n/a",
-      "opt_list_values": [],
-      "datacolumn": "hormoneRefname",
       "required": "n"
     },
     {
@@ -377,20 +287,6 @@
       "required": "n"
     },
     {
-      "fieldname": "plantType",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "propagations_common",
-      "xpath": [],
-      "data_type": "csrefname",
-      "repeats": "n",
-      "in_repeating_group": "n/a",
-      "opt_list_values": [],
-      "datacolumn": "plantTypeRefname",
-      "required": "n"
-    },
-    {
       "fieldname": "activityDate",
       "transforms": {},
       "source_type": "na",
@@ -427,23 +323,6 @@
       "required": "n"
     },
     {
-      "fieldname": "activityType",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "propagations_common",
-      "xpath": [
-        "propActivityGroupList",
-        "propActivityGroup"
-      ],
-      "data_type": "csrefname",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "activityTypeRefname",
-      "required": "n"
-    },
-    {
       "fieldname": "propCount",
       "transforms": {},
       "source_type": "na",
@@ -469,7 +348,7 @@
         ]
       },
       "source_type": "authority",
-      "source_name": "concept/associated",
+      "source_name": null,
       "namespace": "propagations_common",
       "xpath": [
         "propActivityGroupList",
@@ -479,24 +358,26 @@
       "repeats": "n",
       "in_repeating_group": "y",
       "opt_list_values": [],
-      "datacolumn": "mediumConceptAssociated",
+      "datacolumn": "medium",
       "required": "n"
     },
     {
       "fieldname": "medium",
       "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
       "namespace": "propagations_common",
       "xpath": [
         "propActivityGroupList",
         "propActivityGroup"
       ],
-      "data_type": "csrefname",
+      "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "mediumRefname",
+      "opt_list_values": [
+        "Concept/Associated"
+      ],
+      "datacolumn": "mediumAuthorityVocabulary",
       "required": "n"
     },
     {
@@ -519,23 +400,6 @@
       "required": "n"
     },
     {
-      "fieldname": "potSize",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "propagations_common",
-      "xpath": [
-        "propActivityGroupList",
-        "propActivityGroup"
-      ],
-      "data_type": "csrefname",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "potSizeRefname",
-      "required": "n"
-    },
-    {
       "fieldname": "nurseryLocation",
       "transforms": {
         "authority": [
@@ -544,7 +408,7 @@
         ]
       },
       "source_type": "authority",
-      "source_name": "location/local",
+      "source_name": null,
       "namespace": "propagations_common",
       "xpath": [
         "propActivityGroupList",
@@ -554,24 +418,26 @@
       "repeats": "n",
       "in_repeating_group": "y",
       "opt_list_values": [],
-      "datacolumn": "nurseryLocationLocationLocal",
+      "datacolumn": "nurseryLocation",
       "required": "n"
     },
     {
       "fieldname": "nurseryLocation",
       "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
       "namespace": "propagations_common",
       "xpath": [
         "propActivityGroupList",
         "propActivityGroup"
       ],
-      "data_type": "csrefname",
+      "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "nurseryLocationRefname",
+      "opt_list_values": [
+        "Location/Local"
+      ],
+      "datacolumn": "nurseryLocationAuthorityVocabulary",
       "required": "n"
     },
     {
@@ -594,23 +460,6 @@
       "required": "n"
     },
     {
-      "fieldname": "conditions",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "propagations_common",
-      "xpath": [
-        "propActivityGroupList",
-        "propActivityGroup"
-      ],
-      "data_type": "csrefname",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "conditionsRefname",
-      "required": "n"
-    },
-    {
       "fieldname": "chemicalApplied",
       "transforms": {
         "vocabulary": "propChemicals"
@@ -627,23 +476,6 @@
       "in_repeating_group": "y",
       "opt_list_values": [],
       "datacolumn": "chemicalApplied",
-      "required": "n"
-    },
-    {
-      "fieldname": "chemicalApplied",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "propagations_common",
-      "xpath": [
-        "propActivityGroupList",
-        "propActivityGroup"
-      ],
-      "data_type": "csrefname",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "chemicalAppliedRefname",
       "required": "n"
     },
     {

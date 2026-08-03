@@ -70,28 +70,30 @@
         ]
       },
       "source_type": "authority",
-      "source_name": "person/local",
+      "source_name": null,
       "namespace": "acquisitions_common",
       "xpath": [],
       "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "n/a",
       "opt_list_values": [],
-      "datacolumn": "acquisitionAuthorizerPersonLocal",
+      "datacolumn": "acquisitionAuthorizer",
       "required": "n"
     },
     {
       "fieldname": "acquisitionAuthorizer",
       "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
       "namespace": "acquisitions_common",
       "xpath": [],
-      "data_type": "csrefname",
+      "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "n/a",
-      "opt_list_values": [],
-      "datacolumn": "acquisitionAuthorizerRefname",
+      "opt_list_values": [
+        "Person/Local"
+      ],
+      "datacolumn": "acquisitionAuthorizerAuthorityVocabulary",
       "required": "n"
     },
     {
@@ -157,7 +159,7 @@
         ]
       },
       "source_type": "authority",
-      "source_name": "person/local",
+      "source_name": null,
       "namespace": "acquisitions_common",
       "xpath": [
         "acquisitionSources"
@@ -166,44 +168,26 @@
       "repeats": "y",
       "in_repeating_group": "n",
       "opt_list_values": [],
-      "datacolumn": "acquisitionSourcePersonLocal",
-      "required": "n"
-    },
-    {
-      "fieldname": "acquisitionSource",
-      "transforms": {
-        "authority": [
-          "orgauthorities",
-          "organization"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "organization/local",
-      "namespace": "acquisitions_common",
-      "xpath": [
-        "acquisitionSources"
-      ],
-      "data_type": "string",
-      "repeats": "y",
-      "in_repeating_group": "n",
-      "opt_list_values": [],
-      "datacolumn": "acquisitionSourceOrganizationLocal",
+      "datacolumn": "acquisitionSource",
       "required": "n"
     },
     {
       "fieldname": "acquisitionSource",
       "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
       "namespace": "acquisitions_common",
       "xpath": [
         "acquisitionSources"
       ],
-      "data_type": "csrefname",
+      "data_type": "string",
       "repeats": "y",
       "in_repeating_group": "n",
-      "opt_list_values": [],
-      "datacolumn": "acquisitionSourceRefname",
+      "opt_list_values": [
+        "Person/Local",
+        "Organization/Local"
+      ],
+      "datacolumn": "acquisitionSourceAuthorityVocabulary",
       "required": "n"
     },
     {
@@ -215,7 +199,7 @@
         ]
       },
       "source_type": "authority",
-      "source_name": "person/local",
+      "source_name": null,
       "namespace": "acquisitions_common",
       "xpath": [
         "owners"
@@ -224,44 +208,26 @@
       "repeats": "y",
       "in_repeating_group": "n",
       "opt_list_values": [],
-      "datacolumn": "ownerPersonLocal",
-      "required": "n"
-    },
-    {
-      "fieldname": "owner",
-      "transforms": {
-        "authority": [
-          "orgauthorities",
-          "organization"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "organization/local",
-      "namespace": "acquisitions_common",
-      "xpath": [
-        "owners"
-      ],
-      "data_type": "string",
-      "repeats": "y",
-      "in_repeating_group": "n",
-      "opt_list_values": [],
-      "datacolumn": "ownerOrganizationLocal",
+      "datacolumn": "owner",
       "required": "n"
     },
     {
       "fieldname": "owner",
       "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
       "namespace": "acquisitions_common",
       "xpath": [
         "owners"
       ],
-      "data_type": "csrefname",
+      "data_type": "string",
       "repeats": "y",
       "in_repeating_group": "n",
-      "opt_list_values": [],
-      "datacolumn": "ownerRefname",
+      "opt_list_values": [
+        "Person/Local",
+        "Organization/Local"
+      ],
+      "datacolumn": "ownerAuthorityVocabulary",
       "required": "n"
     },
     {
@@ -295,20 +261,6 @@
       "required": "n"
     },
     {
-      "fieldname": "groupPurchasePriceCurrency",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "acquisitions_common",
-      "xpath": [],
-      "data_type": "csrefname",
-      "repeats": "n",
-      "in_repeating_group": "n/a",
-      "opt_list_values": [],
-      "datacolumn": "groupPurchasePriceCurrencyRefname",
-      "required": "n"
-    },
-    {
       "fieldname": "groupPurchasePriceValue",
       "transforms": {},
       "source_type": "na",
@@ -336,20 +288,6 @@
       "in_repeating_group": "n/a",
       "opt_list_values": [],
       "datacolumn": "objectOfferPriceCurrency",
-      "required": "n"
-    },
-    {
-      "fieldname": "objectOfferPriceCurrency",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "acquisitions_common",
-      "xpath": [],
-      "data_type": "csrefname",
-      "repeats": "n",
-      "in_repeating_group": "n/a",
-      "opt_list_values": [],
-      "datacolumn": "objectOfferPriceCurrencyRefname",
       "required": "n"
     },
     {
@@ -383,20 +321,6 @@
       "required": "n"
     },
     {
-      "fieldname": "objectPurchaseOfferPriceCurrency",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "acquisitions_common",
-      "xpath": [],
-      "data_type": "csrefname",
-      "repeats": "n",
-      "in_repeating_group": "n/a",
-      "opt_list_values": [],
-      "datacolumn": "objectPurchaseOfferPriceCurrencyRefname",
-      "required": "n"
-    },
-    {
       "fieldname": "objectPurchaseOfferPriceValue",
       "transforms": {},
       "source_type": "na",
@@ -427,20 +351,6 @@
       "required": "n"
     },
     {
-      "fieldname": "objectPurchasePriceCurrency",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "acquisitions_common",
-      "xpath": [],
-      "data_type": "csrefname",
-      "repeats": "n",
-      "in_repeating_group": "n/a",
-      "opt_list_values": [],
-      "datacolumn": "objectPurchasePriceCurrencyRefname",
-      "required": "n"
-    },
-    {
       "fieldname": "objectPurchasePriceValue",
       "transforms": {},
       "source_type": "na",
@@ -468,20 +378,6 @@
       "in_repeating_group": "n/a",
       "opt_list_values": [],
       "datacolumn": "originalObjectPurchasePriceCurrency",
-      "required": "n"
-    },
-    {
-      "fieldname": "originalObjectPurchasePriceCurrency",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "acquisitions_common",
-      "xpath": [],
-      "data_type": "csrefname",
-      "repeats": "n",
-      "in_repeating_group": "n/a",
-      "opt_list_values": [],
-      "datacolumn": "originalObjectPurchasePriceCurrencyRefname",
       "required": "n"
     },
     {
@@ -546,23 +442,6 @@
       "required": "n"
     },
     {
-      "fieldname": "approvalGroup",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "acquisitions_common",
-      "xpath": [
-        "approvalGroupList",
-        "approvalGroup"
-      ],
-      "data_type": "csrefname",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "approvalGroupRefname",
-      "required": "n"
-    },
-    {
       "fieldname": "approvalIndividual",
       "transforms": {
         "authority": [
@@ -571,7 +450,7 @@
         ]
       },
       "source_type": "authority",
-      "source_name": "person/local",
+      "source_name": null,
       "namespace": "acquisitions_common",
       "xpath": [
         "approvalGroupList",
@@ -581,24 +460,26 @@
       "repeats": "n",
       "in_repeating_group": "y",
       "opt_list_values": [],
-      "datacolumn": "approvalIndividualPersonLocal",
+      "datacolumn": "approvalIndividual",
       "required": "n"
     },
     {
       "fieldname": "approvalIndividual",
       "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
       "namespace": "acquisitions_common",
       "xpath": [
         "approvalGroupList",
         "approvalGroup"
       ],
-      "data_type": "csrefname",
+      "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "approvalIndividualRefname",
+      "opt_list_values": [
+        "Person/Local"
+      ],
+      "datacolumn": "approvalIndividualAuthorityVocabulary",
       "required": "n"
     },
     {
@@ -618,23 +499,6 @@
       "in_repeating_group": "y",
       "opt_list_values": [],
       "datacolumn": "approvalStatus",
-      "required": "n"
-    },
-    {
-      "fieldname": "approvalStatus",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "acquisitions_common",
-      "xpath": [
-        "approvalGroupList",
-        "approvalGroup"
-      ],
-      "data_type": "csrefname",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "approvalStatusRefname",
       "required": "n"
     },
     {
@@ -719,23 +583,6 @@
       "required": "n"
     },
     {
-      "fieldname": "acquisitionFundingCurrency",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "acquisitions_common",
-      "xpath": [
-        "acquisitionFundingList",
-        "acquisitionFunding"
-      ],
-      "data_type": "csrefname",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "acquisitionFundingCurrencyRefname",
-      "required": "n"
-    },
-    {
       "fieldname": "acquisitionFundingValue",
       "transforms": {},
       "source_type": "na",
@@ -761,7 +608,7 @@
         ]
       },
       "source_type": "authority",
-      "source_name": "person/local",
+      "source_name": null,
       "namespace": "acquisitions_common",
       "xpath": [
         "acquisitionFundingList",
@@ -771,46 +618,27 @@
       "repeats": "n",
       "in_repeating_group": "y",
       "opt_list_values": [],
-      "datacolumn": "acquisitionFundingSourcePersonLocal",
-      "required": "n"
-    },
-    {
-      "fieldname": "acquisitionFundingSource",
-      "transforms": {
-        "authority": [
-          "orgauthorities",
-          "organization"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "organization/local",
-      "namespace": "acquisitions_common",
-      "xpath": [
-        "acquisitionFundingList",
-        "acquisitionFunding"
-      ],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "acquisitionFundingSourceOrganizationLocal",
+      "datacolumn": "acquisitionFundingSource",
       "required": "n"
     },
     {
       "fieldname": "acquisitionFundingSource",
       "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
       "namespace": "acquisitions_common",
       "xpath": [
         "acquisitionFundingList",
         "acquisitionFunding"
       ],
-      "data_type": "csrefname",
+      "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "acquisitionFundingSourceRefname",
+      "opt_list_values": [
+        "Person/Local",
+        "Organization/Local"
+      ],
+      "datacolumn": "acquisitionFundingSourceAuthorityVocabulary",
       "required": "n"
     },
     {
@@ -839,7 +667,7 @@
         ]
       },
       "source_type": "authority",
-      "source_name": "person/local",
+      "source_name": null,
       "namespace": "acquisitions_common",
       "xpath": [
         "partiesInvolvedGroupList",
@@ -849,24 +677,26 @@
       "repeats": "n",
       "in_repeating_group": "y",
       "opt_list_values": [],
-      "datacolumn": "involvedPartyPersonLocal",
+      "datacolumn": "involvedParty",
       "required": "n"
     },
     {
       "fieldname": "involvedParty",
       "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
       "namespace": "acquisitions_common",
       "xpath": [
         "partiesInvolvedGroupList",
         "partiesInvolvedGroup"
       ],
-      "data_type": "csrefname",
+      "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "involvedPartyRefname",
+      "opt_list_values": [
+        "Person/Local"
+      ],
+      "datacolumn": "involvedPartyAuthorityVocabulary",
       "required": "n"
     },
     {
@@ -878,7 +708,7 @@
         ]
       },
       "source_type": "authority",
-      "source_name": "organization/local",
+      "source_name": null,
       "namespace": "acquisitions_common",
       "xpath": [
         "partiesInvolvedGroupList",
@@ -888,24 +718,26 @@
       "repeats": "n",
       "in_repeating_group": "y",
       "opt_list_values": [],
-      "datacolumn": "involvedOnBehalfOfOrganizationLocal",
+      "datacolumn": "involvedOnBehalfOf",
       "required": "n"
     },
     {
       "fieldname": "involvedOnBehalfOf",
       "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
       "namespace": "acquisitions_common",
       "xpath": [
         "partiesInvolvedGroupList",
         "partiesInvolvedGroup"
       ],
-      "data_type": "csrefname",
+      "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "involvedOnBehalfOfRefname",
+      "opt_list_values": [
+        "Organization/Local"
+      ],
+      "datacolumn": "involvedOnBehalfOfAuthorityVocabulary",
       "required": "n"
     },
     {
@@ -925,23 +757,6 @@
       "in_repeating_group": "y",
       "opt_list_values": [],
       "datacolumn": "involvedRole",
-      "required": "n"
-    },
-    {
-      "fieldname": "involvedRole",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "acquisitions_common",
-      "xpath": [
-        "partiesInvolvedGroupList",
-        "partiesInvolvedGroup"
-      ],
-      "data_type": "csrefname",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "involvedRoleRefname",
       "required": "n"
     },
     {

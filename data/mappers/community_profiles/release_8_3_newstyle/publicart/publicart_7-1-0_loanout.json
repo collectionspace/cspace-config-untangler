@@ -69,47 +69,31 @@
         ]
       },
       "source_type": "authority",
-      "source_name": "person/local",
+      "source_name": null,
       "namespace": "loansout_common",
       "xpath": [],
       "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "n/a",
       "opt_list_values": [],
-      "datacolumn": "lendersAuthorizerPersonLocal",
-      "required": "n"
-    },
-    {
-      "fieldname": "lendersAuthorizer",
-      "transforms": {
-        "authority": [
-          "personauthorities",
-          "person_shared"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "person/shared",
-      "namespace": "loansout_common",
-      "xpath": [],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "n/a",
-      "opt_list_values": [],
-      "datacolumn": "lendersAuthorizerPersonShared",
+      "datacolumn": "lendersAuthorizer",
       "required": "n"
     },
     {
       "fieldname": "lendersAuthorizer",
       "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
       "namespace": "loansout_common",
       "xpath": [],
-      "data_type": "csrefname",
+      "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "n/a",
-      "opt_list_values": [],
-      "datacolumn": "lendersAuthorizerRefname",
+      "opt_list_values": [
+        "Person/Local",
+        "Person/Shared"
+      ],
+      "datacolumn": "lendersAuthorizerAuthorityVocabulary",
       "required": "n"
     },
     {
@@ -121,47 +105,31 @@
         ]
       },
       "source_type": "authority",
-      "source_name": "person/local",
+      "source_name": null,
       "namespace": "loansout_common",
       "xpath": [],
       "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "n/a",
       "opt_list_values": [],
-      "datacolumn": "lendersContactPersonLocal",
-      "required": "n"
-    },
-    {
-      "fieldname": "lendersContact",
-      "transforms": {
-        "authority": [
-          "personauthorities",
-          "person_shared"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "person/shared",
-      "namespace": "loansout_common",
-      "xpath": [],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "n/a",
-      "opt_list_values": [],
-      "datacolumn": "lendersContactPersonShared",
+      "datacolumn": "lendersContact",
       "required": "n"
     },
     {
       "fieldname": "lendersContact",
       "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
       "namespace": "loansout_common",
       "xpath": [],
-      "data_type": "csrefname",
+      "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "n/a",
-      "opt_list_values": [],
-      "datacolumn": "lendersContactRefname",
+      "opt_list_values": [
+        "Person/Local",
+        "Person/Shared"
+      ],
+      "datacolumn": "lendersContactAuthorityVocabulary",
       "required": "n"
     },
     {
@@ -187,85 +155,33 @@
         ]
       },
       "source_type": "authority",
-      "source_name": "person/local",
+      "source_name": null,
       "namespace": "loansout_common",
       "xpath": [],
       "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "n/a",
       "opt_list_values": [],
-      "datacolumn": "borrowerPersonLocal",
-      "required": "n"
-    },
-    {
-      "fieldname": "borrower",
-      "transforms": {
-        "authority": [
-          "personauthorities",
-          "person_shared"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "person/shared",
-      "namespace": "loansout_common",
-      "xpath": [],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "n/a",
-      "opt_list_values": [],
-      "datacolumn": "borrowerPersonShared",
-      "required": "n"
-    },
-    {
-      "fieldname": "borrower",
-      "transforms": {
-        "authority": [
-          "orgauthorities",
-          "organization"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "organization/local",
-      "namespace": "loansout_common",
-      "xpath": [],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "n/a",
-      "opt_list_values": [],
-      "datacolumn": "borrowerOrganizationLocal",
-      "required": "n"
-    },
-    {
-      "fieldname": "borrower",
-      "transforms": {
-        "authority": [
-          "orgauthorities",
-          "organization_shared"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "organization/shared",
-      "namespace": "loansout_common",
-      "xpath": [],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "n/a",
-      "opt_list_values": [],
-      "datacolumn": "borrowerOrganizationShared",
+      "datacolumn": "borrower",
       "required": "n"
     },
     {
       "fieldname": "borrower",
       "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
       "namespace": "loansout_common",
       "xpath": [],
-      "data_type": "csrefname",
+      "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "n/a",
-      "opt_list_values": [],
-      "datacolumn": "borrowerRefname",
+      "opt_list_values": [
+        "Person/Local",
+        "Person/Shared",
+        "Organization/Local",
+        "Organization/Shared"
+      ],
+      "datacolumn": "borrowerAuthorityVocabulary",
       "required": "n"
     },
     {
@@ -277,47 +193,31 @@
         ]
       },
       "source_type": "authority",
-      "source_name": "person/local",
+      "source_name": null,
       "namespace": "loansout_common",
       "xpath": [],
       "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "n/a",
       "opt_list_values": [],
-      "datacolumn": "borrowersContactPersonLocal",
-      "required": "n"
-    },
-    {
-      "fieldname": "borrowersContact",
-      "transforms": {
-        "authority": [
-          "personauthorities",
-          "person_shared"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "person/shared",
-      "namespace": "loansout_common",
-      "xpath": [],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "n/a",
-      "opt_list_values": [],
-      "datacolumn": "borrowersContactPersonShared",
+      "datacolumn": "borrowersContact",
       "required": "n"
     },
     {
       "fieldname": "borrowersContact",
       "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
       "namespace": "loansout_common",
       "xpath": [],
-      "data_type": "csrefname",
+      "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "n/a",
-      "opt_list_values": [],
-      "datacolumn": "borrowersContactRefname",
+      "opt_list_values": [
+        "Person/Local",
+        "Person/Shared"
+      ],
+      "datacolumn": "borrowersContactAuthorityVocabulary",
       "required": "n"
     },
     {
@@ -329,47 +229,31 @@
         ]
       },
       "source_type": "authority",
-      "source_name": "person/local",
+      "source_name": null,
       "namespace": "loansout_common",
       "xpath": [],
       "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "n/a",
       "opt_list_values": [],
-      "datacolumn": "borrowersAuthorizerPersonLocal",
-      "required": "n"
-    },
-    {
-      "fieldname": "borrowersAuthorizer",
-      "transforms": {
-        "authority": [
-          "personauthorities",
-          "person_shared"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "person/shared",
-      "namespace": "loansout_common",
-      "xpath": [],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "n/a",
-      "opt_list_values": [],
-      "datacolumn": "borrowersAuthorizerPersonShared",
+      "datacolumn": "borrowersAuthorizer",
       "required": "n"
     },
     {
       "fieldname": "borrowersAuthorizer",
       "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
       "namespace": "loansout_common",
       "xpath": [],
-      "data_type": "csrefname",
+      "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "n/a",
-      "opt_list_values": [],
-      "datacolumn": "borrowersAuthorizerRefname",
+      "opt_list_values": [
+        "Person/Local",
+        "Person/Shared"
+      ],
+      "datacolumn": "borrowersAuthorizerAuthorityVocabulary",
       "required": "n"
     },
     {
@@ -434,23 +318,6 @@
       "required": "n"
     },
     {
-      "fieldname": "loanGroup",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "loansout_common",
-      "xpath": [
-        "loanStatusGroupList",
-        "loanStatusGroup"
-      ],
-      "data_type": "csrefname",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "loanGroupRefname",
-      "required": "n"
-    },
-    {
       "fieldname": "loanIndividual",
       "transforms": {
         "authority": [
@@ -459,7 +326,7 @@
         ]
       },
       "source_type": "authority",
-      "source_name": "person/local",
+      "source_name": null,
       "namespace": "loansout_common",
       "xpath": [
         "loanStatusGroupList",
@@ -469,46 +336,27 @@
       "repeats": "n",
       "in_repeating_group": "y",
       "opt_list_values": [],
-      "datacolumn": "loanIndividualPersonLocal",
-      "required": "n"
-    },
-    {
-      "fieldname": "loanIndividual",
-      "transforms": {
-        "authority": [
-          "personauthorities",
-          "person_shared"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "person/shared",
-      "namespace": "loansout_common",
-      "xpath": [
-        "loanStatusGroupList",
-        "loanStatusGroup"
-      ],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "loanIndividualPersonShared",
+      "datacolumn": "loanIndividual",
       "required": "n"
     },
     {
       "fieldname": "loanIndividual",
       "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
       "namespace": "loansout_common",
       "xpath": [
         "loanStatusGroupList",
         "loanStatusGroup"
       ],
-      "data_type": "csrefname",
+      "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "loanIndividualRefname",
+      "opt_list_values": [
+        "Person/Local",
+        "Person/Shared"
+      ],
+      "datacolumn": "loanIndividualAuthorityVocabulary",
       "required": "n"
     },
     {
@@ -528,23 +376,6 @@
       "in_repeating_group": "y",
       "opt_list_values": [],
       "datacolumn": "loanStatus",
-      "required": "n"
-    },
-    {
-      "fieldname": "loanStatus",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "loansout_common",
-      "xpath": [
-        "loanStatusGroupList",
-        "loanStatusGroup"
-      ],
-      "data_type": "csrefname",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "loanStatusRefname",
       "required": "n"
     },
     {

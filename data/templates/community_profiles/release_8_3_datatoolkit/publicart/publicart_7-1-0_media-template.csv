@@ -1,0 +1,8 @@
+"Before importing CSV, delete initial column and rows above the CSVHEADER row","","","","","","","","","","","","","","","","","","","",""
+REQUIRED,y,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n
+DATA TYPE,string,string,string,string,string,string,string,string,string,string,string,string,string,structured date group,string,string,string,string,string,string
+REPEATABLE FIELD?,n,n,n,n,n,n,n,n,n,n,n,y,y,y,n,y,y,n,n,n
+REPEATING FIELD GROUP,"","","","","","","","","","","","","","","","","","","",""
+VALUE SOURCE TYPE,na,na,na,na,na,na,authority,authority vocabulary indication,authority,authority vocabulary indication,na,optionlist,vocabulary,na,na,authority,authority vocabulary indication,na,na,na
+VALUE SOURCE,"","","","","","",,"",,"","","dataset, document, moving_image, sound, still_image",publishto,"","",,"","","",""
+CSVHEADER,identificationNumber,title,name,mimeType,length,externalUrl,contributor,contributorAuthorityVocabulary,creator,creatorAuthorityVocabulary,copyrightStatement,type,publishTo,dateGroup,source,publicartRightsHolder,publicartRightsHolderAuthorityVocabulary,description,altText,mediaFileURI

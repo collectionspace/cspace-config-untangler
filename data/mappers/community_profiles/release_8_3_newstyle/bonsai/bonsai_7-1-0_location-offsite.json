@@ -153,23 +153,6 @@
       "required": "n"
     },
     {
-      "fieldname": "termFlag",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "locations_common",
-      "xpath": [
-        "locTermGroupList",
-        "locTermGroup"
-      ],
-      "data_type": "csrefname",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "termFlagRefname",
-      "required": "n"
-    },
-    {
       "fieldname": "termLanguage",
       "transforms": {
         "vocabulary": "languages"
@@ -186,23 +169,6 @@
       "in_repeating_group": "y",
       "opt_list_values": [],
       "datacolumn": "termLanguage",
-      "required": "n"
-    },
-    {
-      "fieldname": "termLanguage",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "locations_common",
-      "xpath": [
-        "locTermGroupList",
-        "locTermGroup"
-      ],
-      "data_type": "csrefname",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "termLanguageRefname",
       "required": "n"
     },
     {
@@ -235,7 +201,7 @@
         ]
       },
       "source_type": "authority",
-      "source_name": "citation/local",
+      "source_name": null,
       "namespace": "locations_common",
       "xpath": [
         "locTermGroupList",
@@ -245,46 +211,27 @@
       "repeats": "n",
       "in_repeating_group": "y",
       "opt_list_values": [],
-      "datacolumn": "termSourceCitationLocal",
-      "required": "n"
-    },
-    {
-      "fieldname": "termSource",
-      "transforms": {
-        "authority": [
-          "citationauthorities",
-          "worldcat"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "citation/worldcat",
-      "namespace": "locations_common",
-      "xpath": [
-        "locTermGroupList",
-        "locTermGroup"
-      ],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "termSourceCitationWorldcat",
+      "datacolumn": "termSource",
       "required": "n"
     },
     {
       "fieldname": "termSource",
       "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
       "namespace": "locations_common",
       "xpath": [
         "locTermGroupList",
         "locTermGroup"
       ],
-      "data_type": "csrefname",
+      "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "termSourceRefname",
+      "opt_list_values": [
+        "Citation/Local",
+        "Citation/Worldcat"
+      ],
+      "datacolumn": "termSourceAuthorityVocabulary",
       "required": "n"
     },
     {
@@ -352,20 +299,6 @@
       "in_repeating_group": "n/a",
       "opt_list_values": [],
       "datacolumn": "locationType",
-      "required": "n"
-    },
-    {
-      "fieldname": "locationType",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "locations_common",
-      "xpath": [],
-      "data_type": "csrefname",
-      "repeats": "n",
-      "in_repeating_group": "n/a",
-      "opt_list_values": [],
-      "datacolumn": "locationTypeRefname",
       "required": "n"
     },
     {

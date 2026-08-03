@@ -83,7 +83,7 @@
         ]
       },
       "source_type": "authority",
-      "source_name": "person/local",
+      "source_name": null,
       "namespace": "iterationreports_common",
       "xpath": [
         "iterationCreatorGroupList",
@@ -93,46 +93,27 @@
       "repeats": "n",
       "in_repeating_group": "y",
       "opt_list_values": [],
-      "datacolumn": "iterationCreatorPerson",
-      "required": "n"
-    },
-    {
-      "fieldname": "iterationCreator",
-      "transforms": {
-        "authority": [
-          "orgauthorities",
-          "organization"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "organization/local",
-      "namespace": "iterationreports_common",
-      "xpath": [
-        "iterationCreatorGroupList",
-        "iterationCreatorGroup"
-      ],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "iterationCreatorOrganization",
+      "datacolumn": "iterationCreator",
       "required": "n"
     },
     {
       "fieldname": "iterationCreator",
       "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
       "namespace": "iterationreports_common",
       "xpath": [
         "iterationCreatorGroupList",
         "iterationCreatorGroup"
       ],
-      "data_type": "csrefname",
+      "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "iterationCreatorRefname",
+      "opt_list_values": [
+        "Person/Local",
+        "Organization/Local"
+      ],
+      "datacolumn": "iterationCreatorAuthorityVocabulary",
       "required": "n"
     },
     {
@@ -152,23 +133,6 @@
       "in_repeating_group": "y",
       "opt_list_values": [],
       "datacolumn": "iterationCreatorRole",
-      "required": "n"
-    },
-    {
-      "fieldname": "iterationCreatorRole",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "iterationreports_common",
-      "xpath": [
-        "iterationCreatorGroupList",
-        "iterationCreatorGroup"
-      ],
-      "data_type": "csrefname",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "iterationCreatorRoleRefname",
       "required": "n"
     },
     {
@@ -236,7 +200,7 @@
         ]
       },
       "source_type": "authority",
-      "source_name": "person/local",
+      "source_name": null,
       "namespace": "iterationreports_common",
       "xpath": [
         "installerGroupList",
@@ -252,18 +216,20 @@
     {
       "fieldname": "installer",
       "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
       "namespace": "iterationreports_common",
       "xpath": [
         "installerGroupList",
         "installerGroup"
       ],
-      "data_type": "csrefname",
+      "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "installerRefname",
+      "opt_list_values": [
+        "Person/Local"
+      ],
+      "datacolumn": "installerAuthorityVocabulary",
       "required": "n"
     },
     {
@@ -283,23 +249,6 @@
       "in_repeating_group": "y",
       "opt_list_values": [],
       "datacolumn": "installerRole",
-      "required": "n"
-    },
-    {
-      "fieldname": "installerRole",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "iterationreports_common",
-      "xpath": [
-        "installerGroupList",
-        "installerGroup"
-      ],
-      "data_type": "csrefname",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "installerRoleRefname",
       "required": "n"
     },
     {
@@ -361,23 +310,6 @@
       "required": "n"
     },
     {
-      "fieldname": "artistPresent",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "iterationreports_common",
-      "xpath": [
-        "presenceGroupList",
-        "presenceGroup"
-      ],
-      "data_type": "csrefname",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "artistPresentRefname",
-      "required": "n"
-    },
-    {
       "fieldname": "artistOrRepresentative",
       "transforms": {
         "authority": [
@@ -386,7 +318,7 @@
         ]
       },
       "source_type": "authority",
-      "source_name": "person/local",
+      "source_name": null,
       "namespace": "iterationreports_common",
       "xpath": [
         "presenceGroupList",
@@ -402,18 +334,20 @@
     {
       "fieldname": "artistOrRepresentative",
       "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
       "namespace": "iterationreports_common",
       "xpath": [
         "presenceGroupList",
         "presenceGroup"
       ],
-      "data_type": "csrefname",
+      "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "artistOrRepresentativeRefname",
+      "opt_list_values": [
+        "Person/Local"
+      ],
+      "datacolumn": "artistOrRepresentativeAuthorityVocabulary",
       "required": "n"
     },
     {
@@ -463,7 +397,7 @@
         ]
       },
       "source_type": "authority",
-      "source_name": "person/local",
+      "source_name": null,
       "namespace": "iterationreports_common",
       "xpath": [
         "evaluationGroupList",
@@ -479,18 +413,20 @@
     {
       "fieldname": "iterationEvaluator",
       "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
       "namespace": "iterationreports_common",
       "xpath": [
         "evaluationGroupList",
         "evaluationGroup"
       ],
-      "data_type": "csrefname",
+      "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "iterationEvaluatorRefname",
+      "opt_list_values": [
+        "Person/Local"
+      ],
+      "datacolumn": "iterationEvaluatorAuthorityVocabulary",
       "required": "n"
     },
     {
@@ -563,23 +499,6 @@
       "required": "n"
     },
     {
-      "fieldname": "descriptionType",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "iterationreports_common",
-      "xpath": [
-        "spaceGroupList",
-        "spaceGroup"
-      ],
-      "data_type": "csrefname",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "descriptionTypeRefname",
-      "required": "n"
-    },
-    {
       "fieldname": "approvalEntity",
       "transforms": {
         "authority": [
@@ -588,7 +507,7 @@
         ]
       },
       "source_type": "authority",
-      "source_name": "person/local",
+      "source_name": null,
       "namespace": "iterationreports_common",
       "xpath": [
         "spaceGroupList",
@@ -598,46 +517,27 @@
       "repeats": "n",
       "in_repeating_group": "y",
       "opt_list_values": [],
-      "datacolumn": "approvalEntityPerson",
-      "required": "n"
-    },
-    {
-      "fieldname": "approvalEntity",
-      "transforms": {
-        "authority": [
-          "orgauthorities",
-          "organization"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "organization/local",
-      "namespace": "iterationreports_common",
-      "xpath": [
-        "spaceGroupList",
-        "spaceGroup"
-      ],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "approvalEntityOrganization",
+      "datacolumn": "approvalEntity",
       "required": "n"
     },
     {
       "fieldname": "approvalEntity",
       "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
       "namespace": "iterationreports_common",
       "xpath": [
         "spaceGroupList",
         "spaceGroup"
       ],
-      "data_type": "csrefname",
+      "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "approvalEntityRefname",
+      "opt_list_values": [
+        "Person/Local",
+        "Organization/Local"
+      ],
+      "datacolumn": "approvalEntityAuthorityVocabulary",
       "required": "n"
     },
     {
@@ -700,7 +600,7 @@
         ]
       },
       "source_type": "authority",
-      "source_name": "person/local",
+      "source_name": null,
       "namespace": "iterationreports_common",
       "xpath": [
         "exhibitionGroupList",
@@ -710,46 +610,27 @@
       "repeats": "n",
       "in_repeating_group": "y",
       "opt_list_values": [],
-      "datacolumn": "exhibitionApprovalEntityPerson",
-      "required": "n"
-    },
-    {
-      "fieldname": "exhibitionApprovalEntity",
-      "transforms": {
-        "authority": [
-          "orgauthorities",
-          "organization"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "organization/local",
-      "namespace": "iterationreports_common",
-      "xpath": [
-        "exhibitionGroupList",
-        "exhibitionGroup"
-      ],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "exhibitionApprovalEntityOrganization",
+      "datacolumn": "exhibitionApprovalEntity",
       "required": "n"
     },
     {
       "fieldname": "exhibitionApprovalEntity",
       "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
       "namespace": "iterationreports_common",
       "xpath": [
         "exhibitionGroupList",
         "exhibitionGroup"
       ],
-      "data_type": "csrefname",
+      "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "exhibitionApprovalEntityRefname",
+      "opt_list_values": [
+        "Person/Local",
+        "Organization/Local"
+      ],
+      "datacolumn": "exhibitionApprovalEntityAuthorityVocabulary",
       "required": "n"
     },
     {
@@ -795,7 +676,7 @@
         ]
       },
       "source_type": "authority",
-      "source_name": "person/local",
+      "source_name": null,
       "namespace": "iterationreports_common",
       "xpath": [
         "installedEquipmentGroupList",
@@ -805,46 +686,27 @@
       "repeats": "n",
       "in_repeating_group": "y",
       "opt_list_values": [],
-      "datacolumn": "installedEquipmentApprovalEntityPerson",
-      "required": "n"
-    },
-    {
-      "fieldname": "installedEquipmentApprovalEntity",
-      "transforms": {
-        "authority": [
-          "orgauthorities",
-          "organization"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "organization/local",
-      "namespace": "iterationreports_common",
-      "xpath": [
-        "installedEquipmentGroupList",
-        "installedEquipmentGroup"
-      ],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "installedEquipmentApprovalEntityOrganization",
+      "datacolumn": "installedEquipmentApprovalEntity",
       "required": "n"
     },
     {
       "fieldname": "installedEquipmentApprovalEntity",
       "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
       "namespace": "iterationreports_common",
       "xpath": [
         "installedEquipmentGroupList",
         "installedEquipmentGroup"
       ],
-      "data_type": "csrefname",
+      "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "installedEquipmentApprovalEntityRefname",
+      "opt_list_values": [
+        "Person/Local",
+        "Organization/Local"
+      ],
+      "datacolumn": "installedEquipmentApprovalEntityAuthorityVocabulary",
       "required": "n"
     },
     {
@@ -884,23 +746,6 @@
       "required": "n"
     },
     {
-      "fieldname": "technicalSetupType",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "iterationreports_common",
-      "xpath": [
-        "technicalSetupGroupList",
-        "technicalSetupGroup"
-      ],
-      "data_type": "csrefname",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "technicalSetupTypeRefname",
-      "required": "n"
-    },
-    {
       "fieldname": "technicalSetupApprovalEntity",
       "transforms": {
         "authority": [
@@ -909,7 +754,7 @@
         ]
       },
       "source_type": "authority",
-      "source_name": "person/local",
+      "source_name": null,
       "namespace": "iterationreports_common",
       "xpath": [
         "technicalSetupGroupList",
@@ -919,46 +764,27 @@
       "repeats": "n",
       "in_repeating_group": "y",
       "opt_list_values": [],
-      "datacolumn": "technicalSetupApprovalEntityPerson",
-      "required": "n"
-    },
-    {
-      "fieldname": "technicalSetupApprovalEntity",
-      "transforms": {
-        "authority": [
-          "orgauthorities",
-          "organization"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "organization/local",
-      "namespace": "iterationreports_common",
-      "xpath": [
-        "technicalSetupGroupList",
-        "technicalSetupGroup"
-      ],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "technicalSetupApprovalEntityOrganization",
+      "datacolumn": "technicalSetupApprovalEntity",
       "required": "n"
     },
     {
       "fieldname": "technicalSetupApprovalEntity",
       "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
       "namespace": "iterationreports_common",
       "xpath": [
         "technicalSetupGroupList",
         "technicalSetupGroup"
       ],
-      "data_type": "csrefname",
+      "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "technicalSetupApprovalEntityRefname",
+      "opt_list_values": [
+        "Person/Local",
+        "Organization/Local"
+      ],
+      "datacolumn": "technicalSetupApprovalEntityAuthorityVocabulary",
       "required": "n"
     },
     {
@@ -1004,7 +830,7 @@
         ]
       },
       "source_type": "authority",
-      "source_name": "person/local",
+      "source_name": null,
       "namespace": "iterationreports_common",
       "xpath": [
         "iterationSpecificGroupList",
@@ -1014,46 +840,27 @@
       "repeats": "n",
       "in_repeating_group": "y",
       "opt_list_values": [],
-      "datacolumn": "modificationApprovalEntityPerson",
-      "required": "n"
-    },
-    {
-      "fieldname": "modificationApprovalEntity",
-      "transforms": {
-        "authority": [
-          "orgauthorities",
-          "organization"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "organization/local",
-      "namespace": "iterationreports_common",
-      "xpath": [
-        "iterationSpecificGroupList",
-        "iterationSpecificGroup"
-      ],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "modificationApprovalEntityOrganization",
+      "datacolumn": "modificationApprovalEntity",
       "required": "n"
     },
     {
       "fieldname": "modificationApprovalEntity",
       "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
       "namespace": "iterationreports_common",
       "xpath": [
         "iterationSpecificGroupList",
         "iterationSpecificGroup"
       ],
-      "data_type": "csrefname",
+      "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "modificationApprovalEntityRefname",
+      "opt_list_values": [
+        "Person/Local",
+        "Organization/Local"
+      ],
+      "datacolumn": "modificationApprovalEntityAuthorityVocabulary",
       "required": "n"
     },
     {
@@ -1099,7 +906,7 @@
         ]
       },
       "source_type": "authority",
-      "source_name": "person/local",
+      "source_name": null,
       "namespace": "iterationreports_common",
       "xpath": [
         "installationGroupList",
@@ -1109,46 +916,27 @@
       "repeats": "n",
       "in_repeating_group": "y",
       "opt_list_values": [],
-      "datacolumn": "installationApprovalEntityPerson",
-      "required": "n"
-    },
-    {
-      "fieldname": "installationApprovalEntity",
-      "transforms": {
-        "authority": [
-          "orgauthorities",
-          "organization"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "organization/local",
-      "namespace": "iterationreports_common",
-      "xpath": [
-        "installationGroupList",
-        "installationGroup"
-      ],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "installationApprovalEntityOrganization",
+      "datacolumn": "installationApprovalEntity",
       "required": "n"
     },
     {
       "fieldname": "installationApprovalEntity",
       "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
       "namespace": "iterationreports_common",
       "xpath": [
         "installationGroupList",
         "installationGroup"
       ],
-      "data_type": "csrefname",
+      "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "installationApprovalEntityRefname",
+      "opt_list_values": [
+        "Person/Local",
+        "Organization/Local"
+      ],
+      "datacolumn": "installationApprovalEntityAuthorityVocabulary",
       "required": "n"
     },
     {
@@ -1205,23 +993,6 @@
       "required": "n"
     },
     {
-      "fieldname": "maintenanceType",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "iterationreports_common",
-      "xpath": [
-        "maintenanceGroupList",
-        "maintenanceGroup"
-      ],
-      "data_type": "csrefname",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "maintenanceTypeRefname",
-      "required": "n"
-    },
-    {
       "fieldname": "maintenanceContact",
       "transforms": {
         "authority": [
@@ -1230,7 +1001,7 @@
         ]
       },
       "source_type": "authority",
-      "source_name": "person/local",
+      "source_name": null,
       "namespace": "iterationreports_common",
       "xpath": [
         "maintenanceGroupList",
@@ -1246,18 +1017,20 @@
     {
       "fieldname": "maintenanceContact",
       "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
       "namespace": "iterationreports_common",
       "xpath": [
         "maintenanceGroupList",
         "maintenanceGroup"
       ],
-      "data_type": "csrefname",
+      "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "maintenanceContactRefname",
+      "opt_list_values": [
+        "Person/Local"
+      ],
+      "datacolumn": "maintenanceContactAuthorityVocabulary",
       "required": "n"
     },
     {
@@ -1314,23 +1087,6 @@
       "required": "n"
     },
     {
-      "fieldname": "securityRequirements",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "iterationreports_common",
-      "xpath": [
-        "securityGroupList",
-        "securityGroup"
-      ],
-      "data_type": "csrefname",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "securityRequirementsRefname",
-      "required": "n"
-    },
-    {
       "fieldname": "securityApprovalEntity",
       "transforms": {
         "authority": [
@@ -1339,7 +1095,7 @@
         ]
       },
       "source_type": "authority",
-      "source_name": "person/local",
+      "source_name": null,
       "namespace": "iterationreports_common",
       "xpath": [
         "securityGroupList",
@@ -1349,46 +1105,27 @@
       "repeats": "n",
       "in_repeating_group": "y",
       "opt_list_values": [],
-      "datacolumn": "securityApprovalEntityPerson",
-      "required": "n"
-    },
-    {
-      "fieldname": "securityApprovalEntity",
-      "transforms": {
-        "authority": [
-          "orgauthorities",
-          "organization"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "organization/local",
-      "namespace": "iterationreports_common",
-      "xpath": [
-        "securityGroupList",
-        "securityGroup"
-      ],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "securityApprovalEntityOrganization",
+      "datacolumn": "securityApprovalEntity",
       "required": "n"
     },
     {
       "fieldname": "securityApprovalEntity",
       "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
       "namespace": "iterationreports_common",
       "xpath": [
         "securityGroupList",
         "securityGroup"
       ],
-      "data_type": "csrefname",
+      "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "securityApprovalEntityRefname",
+      "opt_list_values": [
+        "Person/Local",
+        "Organization/Local"
+      ],
+      "datacolumn": "securityApprovalEntityAuthorityVocabulary",
       "required": "n"
     },
     {

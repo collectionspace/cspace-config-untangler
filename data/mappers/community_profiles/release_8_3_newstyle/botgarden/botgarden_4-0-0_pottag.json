@@ -43,28 +43,30 @@
         ]
       },
       "source_type": "authority",
-      "source_name": "taxon/local",
+      "source_name": null,
       "namespace": "pottags_common",
       "xpath": [],
       "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "n/a",
       "opt_list_values": [],
-      "datacolumn": "familyTaxonLocal",
+      "datacolumn": "family",
       "required": "n"
     },
     {
       "fieldname": "family",
       "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
       "namespace": "pottags_common",
       "xpath": [],
-      "data_type": "csrefname",
+      "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "n/a",
-      "opt_list_values": [],
-      "datacolumn": "familyRefname",
+      "opt_list_values": [
+        "Taxon/Local"
+      ],
+      "datacolumn": "familyAuthorityVocabulary",
       "required": "n"
     },
     {
@@ -104,28 +106,30 @@
         ]
       },
       "source_type": "authority",
-      "source_name": "taxon/local",
+      "source_name": null,
       "namespace": "pottags_common",
       "xpath": [],
       "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "n/a",
       "opt_list_values": [],
-      "datacolumn": "taxonNameTaxonLocal",
+      "datacolumn": "taxonName",
       "required": "n"
     },
     {
       "fieldname": "taxonName",
       "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
       "namespace": "pottags_common",
       "xpath": [],
-      "data_type": "csrefname",
+      "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "n/a",
-      "opt_list_values": [],
-      "datacolumn": "taxonNameRefname",
+      "opt_list_values": [
+        "Taxon/Local"
+      ],
+      "datacolumn": "taxonNameAuthorityVocabulary",
       "required": "n"
     },
     {
