@@ -185,23 +185,6 @@
       "required": "n"
     },
     {
-      "fieldname": "termType",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "persons_common",
-      "xpath": [
-        "personTermGroupList",
-        "personTermGroup"
-      ],
-      "data_type": "csrefname",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "termTypeRefname",
-      "required": "n"
-    },
-    {
       "fieldname": "termFlag",
       "transforms": {
         "vocabulary": "persontermflag"
@@ -221,23 +204,6 @@
       "required": "n"
     },
     {
-      "fieldname": "termFlag",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "persons_common",
-      "xpath": [
-        "personTermGroupList",
-        "personTermGroup"
-      ],
-      "data_type": "csrefname",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "termFlagRefname",
-      "required": "n"
-    },
-    {
       "fieldname": "termLanguage",
       "transforms": {
         "vocabulary": "languages"
@@ -254,23 +220,6 @@
       "in_repeating_group": "y",
       "opt_list_values": [],
       "datacolumn": "termLanguage",
-      "required": "n"
-    },
-    {
-      "fieldname": "termLanguage",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "persons_common",
-      "xpath": [
-        "personTermGroupList",
-        "personTermGroup"
-      ],
-      "data_type": "csrefname",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "termLanguageRefname",
       "required": "n"
     },
     {
@@ -455,7 +404,7 @@
         ]
       },
       "source_type": "authority",
-      "source_name": "citation/local",
+      "source_name": null,
       "namespace": "persons_common",
       "xpath": [
         "personTermGroupList",
@@ -465,46 +414,27 @@
       "repeats": "n",
       "in_repeating_group": "y",
       "opt_list_values": [],
-      "datacolumn": "termSourceCitationLocal",
-      "required": "n"
-    },
-    {
-      "fieldname": "termSource",
-      "transforms": {
-        "authority": [
-          "citationauthorities",
-          "worldcat"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "citation/worldcat",
-      "namespace": "persons_common",
-      "xpath": [
-        "personTermGroupList",
-        "personTermGroup"
-      ],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "termSourceCitationWorldcat",
+      "datacolumn": "termSource",
       "required": "n"
     },
     {
       "fieldname": "termSource",
       "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
       "namespace": "persons_common",
       "xpath": [
         "personTermGroupList",
         "personTermGroup"
       ],
-      "data_type": "csrefname",
+      "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "termSourceRefname",
+      "opt_list_values": [
+        "Citation/Local",
+        "Citation/Worldcat"
+      ],
+      "datacolumn": "termSourceAuthorityVocabulary",
       "required": "n"
     },
     {
@@ -1307,24 +1237,6 @@
       "required": "n"
     },
     {
-      "fieldname": "suppliedPronoun",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "persons_common",
-      "xpath": [
-        "pronounGroupList",
-        "pronounGroup",
-        "suppliedPronouns"
-      ],
-      "data_type": "csrefname",
-      "repeats": "y",
-      "in_repeating_group": "as part of larger repeating group",
-      "opt_list_values": [],
-      "datacolumn": "suppliedPronounRefname",
-      "required": "n"
-    },
-    {
       "fieldname": "useRestrictionPronoun",
       "transforms": {
         "vocabulary": "userestriction"
@@ -1341,23 +1253,6 @@
       "in_repeating_group": "y",
       "opt_list_values": [],
       "datacolumn": "useRestrictionPronoun",
-      "required": "n"
-    },
-    {
-      "fieldname": "useRestrictionPronoun",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "persons_common",
-      "xpath": [
-        "pronounGroupList",
-        "pronounGroup"
-      ],
-      "data_type": "csrefname",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "useRestrictionPronounRefname",
       "required": "n"
     },
     {
@@ -1402,24 +1297,6 @@
       "required": "n"
     },
     {
-      "fieldname": "suppliedGender",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "persons_common",
-      "xpath": [
-        "genderGroupList",
-        "genderGroup",
-        "suppliedGenders"
-      ],
-      "data_type": "csrefname",
-      "repeats": "y",
-      "in_repeating_group": "as part of larger repeating group",
-      "opt_list_values": [],
-      "datacolumn": "suppliedGenderRefname",
-      "required": "n"
-    },
-    {
       "fieldname": "useRestrictionGender",
       "transforms": {
         "vocabulary": "userestriction"
@@ -1436,23 +1313,6 @@
       "in_repeating_group": "y",
       "opt_list_values": [],
       "datacolumn": "useRestrictionGender",
-      "required": "n"
-    },
-    {
-      "fieldname": "useRestrictionGender",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "persons_common",
-      "xpath": [
-        "genderGroupList",
-        "genderGroup"
-      ],
-      "data_type": "csrefname",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "useRestrictionGenderRefname",
       "required": "n"
     },
     {
@@ -1497,24 +1357,6 @@
       "required": "n"
     },
     {
-      "fieldname": "suppliedRace",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "persons_common",
-      "xpath": [
-        "raceGroupList",
-        "raceGroup",
-        "suppliedRaces"
-      ],
-      "data_type": "csrefname",
-      "repeats": "y",
-      "in_repeating_group": "as part of larger repeating group",
-      "opt_list_values": [],
-      "datacolumn": "suppliedRaceRefname",
-      "required": "n"
-    },
-    {
       "fieldname": "useRestrictionRace",
       "transforms": {
         "vocabulary": "userestriction"
@@ -1531,23 +1373,6 @@
       "in_repeating_group": "y",
       "opt_list_values": [],
       "datacolumn": "useRestrictionRace",
-      "required": "n"
-    },
-    {
-      "fieldname": "useRestrictionRace",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "persons_common",
-      "xpath": [
-        "raceGroupList",
-        "raceGroup"
-      ],
-      "data_type": "csrefname",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "useRestrictionRaceRefname",
       "required": "n"
     },
     {
@@ -1592,24 +1417,6 @@
       "required": "n"
     },
     {
-      "fieldname": "suppliedEthnicity",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "persons_common",
-      "xpath": [
-        "ethnicityGroupList",
-        "ethnicityGroup",
-        "suppliedEthnicities"
-      ],
-      "data_type": "csrefname",
-      "repeats": "y",
-      "in_repeating_group": "as part of larger repeating group",
-      "opt_list_values": [],
-      "datacolumn": "suppliedEthnicityRefname",
-      "required": "n"
-    },
-    {
       "fieldname": "useRestrictionEthnicity",
       "transforms": {
         "vocabulary": "userestriction"
@@ -1626,23 +1433,6 @@
       "in_repeating_group": "y",
       "opt_list_values": [],
       "datacolumn": "useRestrictionEthnicity",
-      "required": "n"
-    },
-    {
-      "fieldname": "useRestrictionEthnicity",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "persons_common",
-      "xpath": [
-        "ethnicityGroupList",
-        "ethnicityGroup"
-      ],
-      "data_type": "csrefname",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "useRestrictionEthnicityRefname",
       "required": "n"
     },
     {
@@ -1687,24 +1477,6 @@
       "required": "n"
     },
     {
-      "fieldname": "suppliedSexuality",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "persons_common",
-      "xpath": [
-        "sexualityGroupList",
-        "sexualityGroup",
-        "suppliedSexualities"
-      ],
-      "data_type": "csrefname",
-      "repeats": "y",
-      "in_repeating_group": "as part of larger repeating group",
-      "opt_list_values": [],
-      "datacolumn": "suppliedSexualityRefname",
-      "required": "n"
-    },
-    {
       "fieldname": "useRestrictionSexuality",
       "transforms": {
         "vocabulary": "userestriction"
@@ -1721,23 +1493,6 @@
       "in_repeating_group": "y",
       "opt_list_values": [],
       "datacolumn": "useRestrictionSexuality",
-      "required": "n"
-    },
-    {
-      "fieldname": "useRestrictionSexuality",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "persons_common",
-      "xpath": [
-        "sexualityGroupList",
-        "sexualityGroup"
-      ],
-      "data_type": "csrefname",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "useRestrictionSexualityRefname",
       "required": "n"
     },
     {
@@ -1770,7 +1525,7 @@
         ]
       },
       "source_type": "authority",
-      "source_name": "place/local",
+      "source_name": null,
       "namespace": "persons_common",
       "xpath": [
         "birthPlaceGroupList",
@@ -1780,24 +1535,26 @@
       "repeats": "n",
       "in_repeating_group": "y",
       "opt_list_values": [],
-      "datacolumn": "suppliedBirthPlacePlaceLocal",
+      "datacolumn": "suppliedBirthPlace",
       "required": "n"
     },
     {
       "fieldname": "suppliedBirthPlace",
       "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
       "namespace": "persons_common",
       "xpath": [
         "birthPlaceGroupList",
         "birthPlaceGroup"
       ],
-      "data_type": "csrefname",
+      "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "suppliedBirthPlaceRefname",
+      "opt_list_values": [
+        "Place/Local"
+      ],
+      "datacolumn": "suppliedBirthPlaceAuthorityVocabulary",
       "required": "n"
     },
     {
@@ -1817,23 +1574,6 @@
       "in_repeating_group": "y",
       "opt_list_values": [],
       "datacolumn": "useRestrictionBirthPlace",
-      "required": "n"
-    },
-    {
-      "fieldname": "useRestrictionBirthPlace",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "persons_common",
-      "xpath": [
-        "birthPlaceGroupList",
-        "birthPlaceGroup"
-      ],
-      "data_type": "csrefname",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "useRestrictionBirthPlaceRefname",
       "required": "n"
     },
     {
@@ -1894,23 +1634,6 @@
       "required": "n"
     },
     {
-      "fieldname": "useRestrictionBirthDate",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "persons_common",
-      "xpath": [
-        "suppliedBirthDateGroupList",
-        "suppliedBirthDateGroup"
-      ],
-      "data_type": "csrefname",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "useRestrictionBirthDateRefname",
-      "required": "n"
-    },
-    {
       "fieldname": "informationAuthor",
       "transforms": {
         "authority": [
@@ -1919,7 +1642,7 @@
         ]
       },
       "source_type": "authority",
-      "source_name": "person/local",
+      "source_name": null,
       "namespace": "persons_common",
       "xpath": [
         "otherGroupList",
@@ -1929,24 +1652,26 @@
       "repeats": "n",
       "in_repeating_group": "y",
       "opt_list_values": [],
-      "datacolumn": "informationAuthorPersonLocal",
+      "datacolumn": "informationAuthor",
       "required": "n"
     },
     {
       "fieldname": "informationAuthor",
       "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
       "namespace": "persons_common",
       "xpath": [
         "otherGroupList",
         "otherGroup"
       ],
-      "data_type": "csrefname",
+      "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "informationAuthorRefname",
+      "opt_list_values": [
+        "Person/Local"
+      ],
+      "datacolumn": "informationAuthorAuthorityVocabulary",
       "required": "n"
     },
     {
@@ -1983,23 +1708,6 @@
       "in_repeating_group": "y",
       "opt_list_values": [],
       "datacolumn": "informationUseRestriction",
-      "required": "n"
-    },
-    {
-      "fieldname": "informationUseRestriction",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "persons_common",
-      "xpath": [
-        "otherGroupList",
-        "otherGroup"
-      ],
-      "data_type": "csrefname",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "informationUseRestrictionRefname",
       "required": "n"
     },
     {

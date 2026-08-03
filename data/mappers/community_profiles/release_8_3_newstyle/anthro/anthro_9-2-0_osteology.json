@@ -125,7 +125,7 @@
         ]
       },
       "source_type": "authority",
-      "source_name": "person/local",
+      "source_name": null,
       "namespace": "osteology_common",
       "xpath": [
         "osteoAgeEstimateGroupList",
@@ -135,24 +135,26 @@
       "repeats": "n",
       "in_repeating_group": "y",
       "opt_list_values": [],
-      "datacolumn": "osteoAgeEstimateAnalystPersonLocal",
+      "datacolumn": "osteoAgeEstimateAnalyst",
       "required": "n"
     },
     {
       "fieldname": "osteoAgeEstimateAnalyst",
       "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
       "namespace": "osteology_common",
       "xpath": [
         "osteoAgeEstimateGroupList",
         "osteoAgeEstimateGroup"
       ],
-      "data_type": "csrefname",
+      "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "osteoAgeEstimateAnalystRefname",
+      "opt_list_values": [
+        "Person/Local"
+      ],
+      "datacolumn": "osteoAgeEstimateAnalystAuthorityVocabulary",
       "required": "n"
     },
     {
@@ -224,7 +226,7 @@
         ]
       },
       "source_type": "authority",
-      "source_name": "person/local",
+      "source_name": null,
       "namespace": "osteology_common",
       "xpath": [
         "sexDeterminationGroupList",
@@ -234,24 +236,26 @@
       "repeats": "n",
       "in_repeating_group": "y",
       "opt_list_values": [],
-      "datacolumn": "sexDeterminationAnalystPersonLocal",
+      "datacolumn": "sexDeterminationAnalyst",
       "required": "n"
     },
     {
       "fieldname": "sexDeterminationAnalyst",
       "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
       "namespace": "osteology_common",
       "xpath": [
         "sexDeterminationGroupList",
         "sexDeterminationGroup"
       ],
-      "data_type": "csrefname",
+      "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "sexDeterminationAnalystRefname",
+      "opt_list_values": [
+        "Person/Local"
+      ],
+      "datacolumn": "sexDeterminationAnalystAuthorityVocabulary",
       "required": "n"
     },
     {
@@ -285,20 +289,6 @@
       "in_repeating_group": "n/a",
       "opt_list_values": [],
       "datacolumn": "completeness",
-      "required": "n"
-    },
-    {
-      "fieldname": "completeness",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "osteology_common",
-      "xpath": [],
-      "data_type": "csrefname",
-      "repeats": "n",
-      "in_repeating_group": "n/a",
-      "opt_list_values": [],
-      "datacolumn": "completenessRefname",
       "required": "n"
     },
     {
@@ -350,20 +340,6 @@
       "required": "n"
     },
     {
-      "fieldname": "dentitionScore",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "osteology_common",
-      "xpath": [],
-      "data_type": "csrefname",
-      "repeats": "n",
-      "in_repeating_group": "n/a",
-      "opt_list_values": [],
-      "datacolumn": "dentitionScoreRefname",
-      "required": "n"
-    },
-    {
       "fieldname": "dentitionNote",
       "transforms": {},
       "source_type": "na",
@@ -391,20 +367,6 @@
       "in_repeating_group": "n/a",
       "opt_list_values": [],
       "datacolumn": "mortuaryTreatment",
-      "required": "n"
-    },
-    {
-      "fieldname": "mortuaryTreatment",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "osteology_common",
-      "xpath": [],
-      "data_type": "csrefname",
-      "repeats": "n",
-      "in_repeating_group": "n/a",
-      "opt_list_values": [],
-      "datacolumn": "mortuaryTreatmentRefname",
       "required": "n"
     },
     {
@@ -441,20 +403,6 @@
       "required": "n"
     },
     {
-      "fieldname": "behrensmeyerSingleLower",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "osteology_common",
-      "xpath": [],
-      "data_type": "csrefname",
-      "repeats": "n",
-      "in_repeating_group": "n/a",
-      "opt_list_values": [],
-      "datacolumn": "behrensmeyerSingleLowerRefname",
-      "required": "n"
-    },
-    {
       "fieldname": "behrensmeyerUpper",
       "transforms": {
         "special": [
@@ -471,20 +419,6 @@
       "in_repeating_group": "n/a",
       "opt_list_values": [],
       "datacolumn": "behrensmeyerUpper",
-      "required": "n"
-    },
-    {
-      "fieldname": "behrensmeyerUpper",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "osteology_common",
-      "xpath": [],
-      "data_type": "csrefname",
-      "repeats": "n",
-      "in_repeating_group": "n/a",
-      "opt_list_values": [],
-      "datacolumn": "behrensmeyerUpperRefname",
       "required": "n"
     },
     {
@@ -542,28 +476,30 @@
         ]
       },
       "source_type": "authority",
-      "source_name": "person/local",
+      "source_name": null,
       "namespace": "osteology_common",
       "xpath": [],
       "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "n/a",
       "opt_list_values": [],
-      "datacolumn": "inventoryAnalystPersonLocal",
+      "datacolumn": "inventoryAnalyst",
       "required": "y"
     },
     {
       "fieldname": "inventoryAnalyst",
       "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
       "namespace": "osteology_common",
       "xpath": [],
-      "data_type": "csrefname",
+      "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "n/a",
-      "opt_list_values": [],
-      "datacolumn": "inventoryAnalystRefname",
+      "opt_list_values": [
+        "Person/Local"
+      ],
+      "datacolumn": "inventoryAnalystAuthorityVocabulary",
       "required": "y"
     },
     {
@@ -701,22 +637,6 @@
       "required": "n"
     },
     {
-      "fieldname": "cranialDeformationCategory",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "osteology_anthropology",
-      "xpath": [
-        "cranialDeformationCategories"
-      ],
-      "data_type": "csrefname",
-      "repeats": "y",
-      "in_repeating_group": "n",
-      "opt_list_values": [],
-      "datacolumn": "cranialDeformationCategoryRefname",
-      "required": "n"
-    },
-    {
       "fieldname": "cranialDeformationNote",
       "transforms": {},
       "source_type": "na",
@@ -819,23 +739,6 @@
       "required": "n"
     },
     {
-      "fieldname": "trepanationTechnique",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "osteology_anthropology",
-      "xpath": [
-        "trepanationGroupList",
-        "trepanationGroup"
-      ],
-      "data_type": "csrefname",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "trepanationTechniqueRefname",
-      "required": "n"
-    },
-    {
       "fieldname": "trepanationHealing",
       "transforms": {
         "vocabulary": "trepanationhealing"
@@ -855,23 +758,6 @@
       "required": "n"
     },
     {
-      "fieldname": "trepanationHealing",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "osteology_anthropology",
-      "xpath": [
-        "trepanationGroupList",
-        "trepanationGroup"
-      ],
-      "data_type": "csrefname",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "trepanationHealingRefname",
-      "required": "n"
-    },
-    {
       "fieldname": "trepanationCertainty",
       "transforms": {
         "vocabulary": "trepanationcertainty"
@@ -888,23 +774,6 @@
       "in_repeating_group": "y",
       "opt_list_values": [],
       "datacolumn": "trepanationCertainty",
-      "required": "n"
-    },
-    {
-      "fieldname": "trepanationCertainty",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "osteology_anthropology",
-      "xpath": [
-        "trepanationGroupList",
-        "trepanationGroup"
-      ],
-      "data_type": "csrefname",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "trepanationCertaintyRefname",
       "required": "n"
     },
     {

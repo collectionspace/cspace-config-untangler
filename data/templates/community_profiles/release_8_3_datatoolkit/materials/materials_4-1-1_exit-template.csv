@@ -1,0 +1,8 @@
+"Before importing CSV, delete initial column and rows above the CSVHEADER row","","","","","","","","","","","","","","","","","","","","","","",""
+REQUIRED,y,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n
+DATA TYPE,string,date,string,string,string,string,string,string,string,string,string,string,string,string,string,date,string,string,integer,structured date group,string,string,string
+REPEATABLE FIELD?,n,n,n,y,y,y,n,n,n,n,n,n,n,n,n,n,y,n,n,n,n,n,n
+REPEATING FIELD GROUP,"","","","","","",exitAgentGroupList < exitAgentGroup,exitAgentGroupList < exitAgentGroup,exitAgentGroupList < exitAgentGroup,"","",approvalStatusGroupList < approvalStatusGroup,approvalStatusGroupList < approvalStatusGroup,approvalStatusGroupList < approvalStatusGroup,approvalStatusGroupList < approvalStatusGroup,approvalStatusGroupList < approvalStatusGroup,approvalStatusGroupList < approvalStatusGroup < approvalStatusNotes,"","","","","",""
+VALUE SOURCE TYPE,na,na,vocabulary,vocabulary,authority,authority vocabulary indication,authority,authority vocabulary indication,vocabulary,na,na,vocabulary,authority,authority vocabulary indication,vocabulary,na,na,vocabulary,na,na,na,na,na
+VALUE SOURCE,"","",objexitreason,objexitmethod,,"",,"",objexitagentrole,"","",deaccessionapprovalgroup,,"",deaccessionapprovalstatus,"","",currency,"","","","",""
+CSVHEADER,exitNumber,exitDate,reason,method,owner,ownerAuthorityVocabulary,agent,agentAuthorityVocabulary,role,exitCountNote,note,group,individual,individualAuthorityVocabulary,status,date,approvalStatusNote,saleCurrency,saleValue,saleDate,saleNumber,saleLot,saleNote

@@ -175,23 +175,6 @@
       "required": "n"
     },
     {
-      "fieldname": "termFlag",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "organizations_common",
-      "xpath": [
-        "orgTermGroupList",
-        "orgTermGroup"
-      ],
-      "data_type": "csrefname",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "termFlagRefname",
-      "required": "n"
-    },
-    {
       "fieldname": "termLanguage",
       "transforms": {
         "vocabulary": "languages"
@@ -208,23 +191,6 @@
       "in_repeating_group": "y",
       "opt_list_values": [],
       "datacolumn": "termLanguage",
-      "required": "n"
-    },
-    {
-      "fieldname": "termLanguage",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "organizations_common",
-      "xpath": [
-        "orgTermGroupList",
-        "orgTermGroup"
-      ],
-      "data_type": "csrefname",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "termLanguageRefname",
       "required": "n"
     },
     {
@@ -291,7 +257,7 @@
         ]
       },
       "source_type": "authority",
-      "source_name": "citation/local",
+      "source_name": null,
       "namespace": "organizations_common",
       "xpath": [
         "orgTermGroupList",
@@ -301,24 +267,26 @@
       "repeats": "n",
       "in_repeating_group": "y",
       "opt_list_values": [],
-      "datacolumn": "termSourceCitationLocal",
+      "datacolumn": "termSource",
       "required": "n"
     },
     {
       "fieldname": "termSource",
       "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
       "namespace": "organizations_common",
       "xpath": [
         "orgTermGroupList",
         "orgTermGroup"
       ],
-      "data_type": "csrefname",
+      "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "termSourceRefname",
+      "opt_list_values": [
+        "Citation/Local"
+      ],
+      "datacolumn": "termSourceAuthorityVocabulary",
       "required": "n"
     },
     {
@@ -388,22 +356,6 @@
       "in_repeating_group": "n",
       "opt_list_values": [],
       "datacolumn": "organizationRecordType",
-      "required": "n"
-    },
-    {
-      "fieldname": "organizationRecordType",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "organizations_common",
-      "xpath": [
-        "organizationRecordTypes"
-      ],
-      "data_type": "csrefname",
-      "repeats": "y",
-      "in_repeating_group": "n",
-      "opt_list_values": [],
-      "datacolumn": "organizationRecordTypeRefname",
       "required": "n"
     },
     {
@@ -519,7 +471,7 @@
         ]
       },
       "source_type": "authority",
-      "source_name": "person/local",
+      "source_name": null,
       "namespace": "organizations_common",
       "xpath": [
         "contactGroupList",
@@ -529,24 +481,26 @@
       "repeats": "n",
       "in_repeating_group": "y",
       "opt_list_values": [],
-      "datacolumn": "contactNamePersonLocal",
+      "datacolumn": "contactName",
       "required": "n"
     },
     {
       "fieldname": "contactName",
       "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
       "namespace": "organizations_common",
       "xpath": [
         "contactGroupList",
         "contactGroup"
       ],
-      "data_type": "csrefname",
+      "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "contactNameRefname",
+      "opt_list_values": [
+        "Person/Local"
+      ],
+      "datacolumn": "contactNameAuthorityVocabulary",
       "required": "n"
     },
     {
@@ -566,23 +520,6 @@
       "in_repeating_group": "y",
       "opt_list_values": [],
       "datacolumn": "contactRole",
-      "required": "n"
-    },
-    {
-      "fieldname": "contactRole",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "organizations_common",
-      "xpath": [
-        "contactGroupList",
-        "contactGroup"
-      ],
-      "data_type": "csrefname",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "contactRoleRefname",
       "required": "n"
     },
     {
@@ -636,23 +573,6 @@
       "in_repeating_group": "y",
       "opt_list_values": [],
       "datacolumn": "contactStatus",
-      "required": "n"
-    },
-    {
-      "fieldname": "contactStatus",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "organizations_common",
-      "xpath": [
-        "contactGroupList",
-        "contactGroup"
-      ],
-      "data_type": "csrefname",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "contactStatusRefname",
       "required": "n"
     },
     {

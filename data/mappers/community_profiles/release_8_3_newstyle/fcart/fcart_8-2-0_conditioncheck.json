@@ -122,47 +122,31 @@
         ]
       },
       "source_type": "authority",
-      "source_name": "person/local",
+      "source_name": null,
       "namespace": "conditionchecks_common",
       "xpath": [],
       "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "n/a",
       "opt_list_values": [],
-      "datacolumn": "conditionCheckerPersonLocal",
-      "required": "n"
-    },
-    {
-      "fieldname": "conditionChecker",
-      "transforms": {
-        "authority": [
-          "orgauthorities",
-          "organization"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "organization/local",
-      "namespace": "conditionchecks_common",
-      "xpath": [],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "n/a",
-      "opt_list_values": [],
-      "datacolumn": "conditionCheckerOrganizationLocal",
+      "datacolumn": "conditionChecker",
       "required": "n"
     },
     {
       "fieldname": "conditionChecker",
       "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
       "namespace": "conditionchecks_common",
       "xpath": [],
-      "data_type": "csrefname",
+      "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "n/a",
-      "opt_list_values": [],
-      "datacolumn": "conditionCheckerRefname",
+      "opt_list_values": [
+        "Person/Local",
+        "Organization/Local"
+      ],
+      "datacolumn": "conditionCheckerAuthorityVocabulary",
       "required": "n"
     },
     {
@@ -717,23 +701,6 @@
       "required": "n"
     },
     {
-      "fieldname": "technicalChange",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "conditionchecks_variablemedia",
-      "xpath": [
-        "technicalChangesGroupList",
-        "technicalChangesGroup"
-      ],
-      "data_type": "csrefname",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "technicalChangeRefname",
-      "required": "n"
-    },
-    {
       "fieldname": "technicalChangeReason",
       "transforms": {
         "vocabulary": "technicalchangereason"
@@ -750,23 +717,6 @@
       "in_repeating_group": "y",
       "opt_list_values": [],
       "datacolumn": "technicalChangeReason",
-      "required": "n"
-    },
-    {
-      "fieldname": "technicalChangeReason",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "conditionchecks_variablemedia",
-      "xpath": [
-        "technicalChangesGroupList",
-        "technicalChangesGroup"
-      ],
-      "data_type": "csrefname",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "technicalChangeReasonRefname",
       "required": "n"
     },
     {
@@ -823,23 +773,6 @@
       "required": "n"
     },
     {
-      "fieldname": "previousSupport",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "conditionchecks_variablemedia",
-      "xpath": [
-        "technicalChangesGroupList",
-        "technicalChangesGroup"
-      ],
-      "data_type": "csrefname",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "previousSupportRefname",
-      "required": "n"
-    },
-    {
       "fieldname": "newSupport",
       "transforms": {
         "vocabulary": "conditionsupport"
@@ -856,23 +789,6 @@
       "in_repeating_group": "y",
       "opt_list_values": [],
       "datacolumn": "newSupport",
-      "required": "n"
-    },
-    {
-      "fieldname": "newSupport",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "conditionchecks_variablemedia",
-      "xpath": [
-        "technicalChangesGroupList",
-        "technicalChangesGroup"
-      ],
-      "data_type": "csrefname",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "newSupportRefname",
       "required": "n"
     }
   ]

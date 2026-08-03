@@ -53,20 +53,6 @@
       "required": "n"
     },
     {
-      "fieldname": "reasonForMove",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "movements_common",
-      "xpath": [],
-      "data_type": "csrefname",
-      "repeats": "n",
-      "in_repeating_group": "n/a",
-      "opt_list_values": [],
-      "datacolumn": "reasonForMoveRefname",
-      "required": "n"
-    },
-    {
       "fieldname": "currentLocation",
       "transforms": {
         "authority": [
@@ -75,47 +61,31 @@
         ]
       },
       "source_type": "authority",
-      "source_name": "location/local",
+      "source_name": null,
       "namespace": "movements_common",
       "xpath": [],
       "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "n/a",
       "opt_list_values": [],
-      "datacolumn": "currentLocationLocationLocal",
-      "required": "n"
-    },
-    {
-      "fieldname": "currentLocation",
-      "transforms": {
-        "authority": [
-          "orgauthorities",
-          "organization"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "organization/local",
-      "namespace": "movements_common",
-      "xpath": [],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "n/a",
-      "opt_list_values": [],
-      "datacolumn": "currentLocationOrganizationLocal",
+      "datacolumn": "currentLocation",
       "required": "n"
     },
     {
       "fieldname": "currentLocation",
       "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
       "namespace": "movements_common",
       "xpath": [],
-      "data_type": "csrefname",
+      "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "n/a",
-      "opt_list_values": [],
-      "datacolumn": "currentLocationRefname",
+      "opt_list_values": [
+        "Location/Local",
+        "Organization/Local"
+      ],
+      "datacolumn": "currentLocationAuthorityVocabulary",
       "required": "n"
     },
     {
@@ -127,28 +97,30 @@
         ]
       },
       "source_type": "authority",
-      "source_name": "person/local",
+      "source_name": null,
       "namespace": "movements_common",
       "xpath": [],
       "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "n/a",
       "opt_list_values": [],
-      "datacolumn": "movementContactPersonLocal",
+      "datacolumn": "movementContact",
       "required": "n"
     },
     {
       "fieldname": "movementContact",
       "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
       "namespace": "movements_common",
       "xpath": [],
-      "data_type": "csrefname",
+      "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "n/a",
-      "opt_list_values": [],
-      "datacolumn": "movementContactRefname",
+      "opt_list_values": [
+        "Person/Local"
+      ],
+      "datacolumn": "movementContactAuthorityVocabulary",
       "required": "n"
     },
     {
@@ -213,20 +185,6 @@
       "required": "n"
     },
     {
-      "fieldname": "labelSize",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "movements_botgarden",
-      "xpath": [],
-      "data_type": "csrefname",
-      "repeats": "n",
-      "in_repeating_group": "n/a",
-      "opt_list_values": [],
-      "datacolumn": "labelSizeRefname",
-      "required": "n"
-    },
-    {
       "fieldname": "labelStandType",
       "transforms": {
         "vocabulary": "labelstandtype"
@@ -240,20 +198,6 @@
       "in_repeating_group": "n/a",
       "opt_list_values": [],
       "datacolumn": "labelStandType",
-      "required": "n"
-    },
-    {
-      "fieldname": "labelStandType",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "movements_botgarden",
-      "xpath": [],
-      "data_type": "csrefname",
-      "repeats": "n",
-      "in_repeating_group": "n/a",
-      "opt_list_values": [],
-      "datacolumn": "labelStandTypeRefname",
       "required": "n"
     },
     {

@@ -197,7 +197,7 @@
         ]
       },
       "source_type": "authority",
-      "source_name": "work/local",
+      "source_name": null,
       "namespace": "collectionobjects_common",
       "xpath": [
         "namedCollections"
@@ -206,23 +206,25 @@
       "repeats": "y",
       "in_repeating_group": "n",
       "opt_list_values": [],
-      "datacolumn": "namedCollectionWorkLocal",
+      "datacolumn": "namedCollection",
       "required": "n"
     },
     {
       "fieldname": "namedCollection",
       "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
       "namespace": "collectionobjects_common",
       "xpath": [
         "namedCollections"
       ],
-      "data_type": "csrefname",
+      "data_type": "string",
       "repeats": "y",
       "in_repeating_group": "n",
-      "opt_list_values": [],
-      "datacolumn": "namedCollectionRefname",
+      "opt_list_values": [
+        "Work/Local"
+      ],
+      "datacolumn": "namedCollectionAuthorityVocabulary",
       "required": "n"
     },
     {
@@ -234,7 +236,7 @@
         ]
       },
       "source_type": "authority",
-      "source_name": "taxon/local",
+      "source_name": null,
       "namespace": "collectionobjects_naturalhistory_extension",
       "xpath": [
         "determinationHistoryGroupList",
@@ -244,24 +246,26 @@
       "repeats": "n",
       "in_repeating_group": "y",
       "opt_list_values": [],
-      "datacolumn": "determinationTaxonTaxonLocal",
+      "datacolumn": "determinationTaxon",
       "required": "n"
     },
     {
       "fieldname": "determinationTaxon",
       "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
       "namespace": "collectionobjects_naturalhistory_extension",
       "xpath": [
         "determinationHistoryGroupList",
         "determinationHistoryGroup"
       ],
-      "data_type": "csrefname",
+      "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "determinationTaxonRefname",
+      "opt_list_values": [
+        "Taxon/Local"
+      ],
+      "datacolumn": "determinationTaxonAuthorityVocabulary",
       "required": "n"
     },
     {
@@ -284,23 +288,6 @@
       "required": "n"
     },
     {
-      "fieldname": "determinationQualifier",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "collectionobjects_naturalhistory_extension",
-      "xpath": [
-        "determinationHistoryGroupList",
-        "determinationHistoryGroup"
-      ],
-      "data_type": "csrefname",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "determinationQualifierRefname",
-      "required": "n"
-    },
-    {
       "fieldname": "determinationBy",
       "transforms": {
         "authority": [
@@ -309,7 +296,7 @@
         ]
       },
       "source_type": "authority",
-      "source_name": "person/local",
+      "source_name": null,
       "namespace": "collectionobjects_naturalhistory_extension",
       "xpath": [
         "determinationHistoryGroupList",
@@ -319,24 +306,26 @@
       "repeats": "n",
       "in_repeating_group": "y",
       "opt_list_values": [],
-      "datacolumn": "determinationByPersonLocal",
+      "datacolumn": "determinationBy",
       "required": "n"
     },
     {
       "fieldname": "determinationBy",
       "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
       "namespace": "collectionobjects_naturalhistory_extension",
       "xpath": [
         "determinationHistoryGroupList",
         "determinationHistoryGroup"
       ],
-      "data_type": "csrefname",
+      "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "determinationByRefname",
+      "opt_list_values": [
+        "Person/Local"
+      ],
+      "datacolumn": "determinationByAuthorityVocabulary",
       "required": "n"
     },
     {
@@ -365,7 +354,7 @@
         ]
       },
       "source_type": "authority",
-      "source_name": "organization/local",
+      "source_name": null,
       "namespace": "collectionobjects_naturalhistory_extension",
       "xpath": [
         "determinationHistoryGroupList",
@@ -375,24 +364,26 @@
       "repeats": "n",
       "in_repeating_group": "y",
       "opt_list_values": [],
-      "datacolumn": "determinationInstitutionOrganizationLocal",
+      "datacolumn": "determinationInstitution",
       "required": "n"
     },
     {
       "fieldname": "determinationInstitution",
       "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
       "namespace": "collectionobjects_naturalhistory_extension",
       "xpath": [
         "determinationHistoryGroupList",
         "determinationHistoryGroup"
       ],
-      "data_type": "csrefname",
+      "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "determinationInstitutionRefname",
+      "opt_list_values": [
+        "Organization/Local"
+      ],
+      "datacolumn": "determinationInstitutionAuthorityVocabulary",
       "required": "n"
     },
     {
@@ -412,23 +403,6 @@
       "in_repeating_group": "y",
       "opt_list_values": [],
       "datacolumn": "determinationKind",
-      "required": "n"
-    },
-    {
-      "fieldname": "determinationKind",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "collectionobjects_naturalhistory_extension",
-      "xpath": [
-        "determinationHistoryGroupList",
-        "determinationHistoryGroup"
-      ],
-      "data_type": "csrefname",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "determinationKindRefname",
       "required": "n"
     },
     {
@@ -519,23 +493,6 @@
       "required": "n"
     },
     {
-      "fieldname": "localNameLanguage",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "collectionobjects_herbarium",
-      "xpath": [
-        "localNameGroupList",
-        "localNameGroup"
-      ],
-      "data_type": "csrefname",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "localNameLanguageRefname",
-      "required": "n"
-    },
-    {
       "fieldname": "herbHybridParent",
       "transforms": {
         "authority": [
@@ -544,7 +501,7 @@
         ]
       },
       "source_type": "authority",
-      "source_name": "taxon/local",
+      "source_name": null,
       "namespace": "collectionobjects_herbarium",
       "xpath": [
         "herbHybridParentGroupList",
@@ -554,46 +511,27 @@
       "repeats": "n",
       "in_repeating_group": "y",
       "opt_list_values": [],
-      "datacolumn": "herbHybridParentTaxonLocal",
-      "required": "n"
-    },
-    {
-      "fieldname": "herbHybridParent",
-      "transforms": {
-        "authority": [
-          "taxonomyauthority",
-          "common_ta"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "taxon/common",
-      "namespace": "collectionobjects_herbarium",
-      "xpath": [
-        "herbHybridParentGroupList",
-        "herbHybridParentGroup"
-      ],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "herbHybridParentTaxonCommon",
+      "datacolumn": "herbHybridParent",
       "required": "n"
     },
     {
       "fieldname": "herbHybridParent",
       "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
       "namespace": "collectionobjects_herbarium",
       "xpath": [
         "herbHybridParentGroupList",
         "herbHybridParentGroup"
       ],
-      "data_type": "csrefname",
+      "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "herbHybridParentRefname",
+      "opt_list_values": [
+        "Taxon/Local",
+        "Taxon/Common"
+      ],
+      "datacolumn": "herbHybridParentAuthorityVocabulary",
       "required": "n"
     },
     {
@@ -613,23 +551,6 @@
       "in_repeating_group": "y",
       "opt_list_values": [],
       "datacolumn": "herbHybridParentQualifier",
-      "required": "n"
-    },
-    {
-      "fieldname": "herbHybridParentQualifier",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "collectionobjects_herbarium",
-      "xpath": [
-        "herbHybridParentGroupList",
-        "herbHybridParentGroup"
-      ],
-      "data_type": "csrefname",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "herbHybridParentQualifierRefname",
       "required": "n"
     },
     {
@@ -655,28 +576,30 @@
         ]
       },
       "source_type": "authority",
-      "source_name": "concept/labeltext",
+      "source_name": null,
       "namespace": "collectionobjects_herbarium",
       "xpath": [],
       "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "n/a",
       "opt_list_values": [],
-      "datacolumn": "labelHeaderConceptLabeltext",
+      "datacolumn": "labelHeader",
       "required": "n"
     },
     {
       "fieldname": "labelHeader",
       "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
       "namespace": "collectionobjects_herbarium",
       "xpath": [],
-      "data_type": "csrefname",
+      "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "n/a",
-      "opt_list_values": [],
-      "datacolumn": "labelHeaderRefname",
+      "opt_list_values": [
+        "Concept/Labeltext"
+      ],
+      "datacolumn": "labelHeaderAuthorityVocabulary",
       "required": "n"
     },
     {
@@ -688,28 +611,30 @@
         ]
       },
       "source_type": "authority",
-      "source_name": "concept/labeltext",
+      "source_name": null,
       "namespace": "collectionobjects_herbarium",
       "xpath": [],
       "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "n/a",
       "opt_list_values": [],
-      "datacolumn": "labelFooterConceptLabeltext",
+      "datacolumn": "labelFooter",
       "required": "n"
     },
     {
       "fieldname": "labelFooter",
       "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
       "namespace": "collectionobjects_herbarium",
       "xpath": [],
-      "data_type": "csrefname",
+      "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "n/a",
-      "opt_list_values": [],
-      "datacolumn": "labelFooterRefname",
+      "opt_list_values": [
+        "Concept/Labeltext"
+      ],
+      "datacolumn": "labelFooterAuthorityVocabulary",
       "required": "n"
     },
     {
@@ -772,22 +697,6 @@
       "in_repeating_group": "n",
       "opt_list_values": [],
       "datacolumn": "publishTo",
-      "required": "n"
-    },
-    {
-      "fieldname": "publishTo",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "collectionobjects_common",
-      "xpath": [
-        "publishToList"
-      ],
-      "data_type": "csrefname",
-      "repeats": "y",
-      "in_repeating_group": "n",
-      "opt_list_values": [],
-      "datacolumn": "publishToRefname",
       "required": "n"
     },
     {
@@ -867,22 +776,6 @@
       "required": "n"
     },
     {
-      "fieldname": "inventoryStatus",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "collectionobjects_common",
-      "xpath": [
-        "inventoryStatusList"
-      ],
-      "data_type": "csrefname",
-      "repeats": "y",
-      "in_repeating_group": "n",
-      "opt_list_values": [],
-      "datacolumn": "inventoryStatusRefname",
-      "required": "n"
-    },
-    {
       "fieldname": "annotationType",
       "transforms": {
         "vocabulary": "annotationtype"
@@ -899,23 +792,6 @@
       "in_repeating_group": "y",
       "opt_list_values": [],
       "datacolumn": "annotationType",
-      "required": "n"
-    },
-    {
-      "fieldname": "annotationType",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "collectionobjects_annotation",
-      "xpath": [
-        "annotationGroupList",
-        "annotationGroup"
-      ],
-      "data_type": "csrefname",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "annotationTypeRefname",
       "required": "n"
     },
     {
@@ -944,7 +820,7 @@
         ]
       },
       "source_type": "authority",
-      "source_name": "person/local",
+      "source_name": null,
       "namespace": "collectionobjects_annotation",
       "xpath": [
         "annotationGroupList",
@@ -954,24 +830,26 @@
       "repeats": "n",
       "in_repeating_group": "y",
       "opt_list_values": [],
-      "datacolumn": "annotationAuthorPersonLocal",
+      "datacolumn": "annotationAuthor",
       "required": "n"
     },
     {
       "fieldname": "annotationAuthor",
       "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
       "namespace": "collectionobjects_annotation",
       "xpath": [
         "annotationGroupList",
         "annotationGroup"
       ],
-      "data_type": "csrefname",
+      "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "annotationAuthorRefname",
+      "opt_list_values": [
+        "Person/Local"
+      ],
+      "datacolumn": "annotationAuthorAuthorityVocabulary",
       "required": "n"
     },
     {
@@ -1011,23 +889,6 @@
       "required": "n"
     },
     {
-      "fieldname": "herbTypeSpecimenKind",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "collectionobjects_herbarium",
-      "xpath": [
-        "herbTypeSpecimenGroupList",
-        "herbTypeSpecimenGroup"
-      ],
-      "data_type": "csrefname",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "herbTypeSpecimenKindRefname",
-      "required": "n"
-    },
-    {
       "fieldname": "herbTypeSpecimenAssertionBy",
       "transforms": {
         "authority": [
@@ -1036,7 +897,7 @@
         ]
       },
       "source_type": "authority",
-      "source_name": "organization/local",
+      "source_name": null,
       "namespace": "collectionobjects_herbarium",
       "xpath": [
         "herbTypeSpecimenGroupList",
@@ -1046,24 +907,26 @@
       "repeats": "n",
       "in_repeating_group": "y",
       "opt_list_values": [],
-      "datacolumn": "herbTypeSpecimenAssertionByOrganizationLocal",
+      "datacolumn": "herbTypeSpecimenAssertionBy",
       "required": "n"
     },
     {
       "fieldname": "herbTypeSpecimenAssertionBy",
       "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
       "namespace": "collectionobjects_herbarium",
       "xpath": [
         "herbTypeSpecimenGroupList",
         "herbTypeSpecimenGroup"
       ],
-      "data_type": "csrefname",
+      "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "herbTypeSpecimenAssertionByRefname",
+      "opt_list_values": [
+        "Organization/Local"
+      ],
+      "datacolumn": "herbTypeSpecimenAssertionByAuthorityVocabulary",
       "required": "n"
     },
     {
@@ -1109,7 +972,7 @@
         ]
       },
       "source_type": "authority",
-      "source_name": "taxon/local",
+      "source_name": null,
       "namespace": "collectionobjects_herbarium",
       "xpath": [
         "herbTypeSpecimenGroupList",
@@ -1119,46 +982,27 @@
       "repeats": "n",
       "in_repeating_group": "y",
       "opt_list_values": [],
-      "datacolumn": "herbTypeSpecimenBasionymTaxonLocal",
-      "required": "n"
-    },
-    {
-      "fieldname": "herbTypeSpecimenBasionym",
-      "transforms": {
-        "authority": [
-          "taxonomyauthority",
-          "common_ta"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "taxon/common",
-      "namespace": "collectionobjects_herbarium",
-      "xpath": [
-        "herbTypeSpecimenGroupList",
-        "herbTypeSpecimenGroup"
-      ],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "herbTypeSpecimenBasionymTaxonCommon",
+      "datacolumn": "herbTypeSpecimenBasionym",
       "required": "n"
     },
     {
       "fieldname": "herbTypeSpecimenBasionym",
       "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
       "namespace": "collectionobjects_herbarium",
       "xpath": [
         "herbTypeSpecimenGroupList",
         "herbTypeSpecimenGroup"
       ],
-      "data_type": "csrefname",
+      "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "herbTypeSpecimenBasionymRefname",
+      "opt_list_values": [
+        "Taxon/Local",
+        "Taxon/Common"
+      ],
+      "datacolumn": "herbTypeSpecimenBasionymAuthorityVocabulary",
       "required": "n"
     },
     {
@@ -1212,20 +1056,6 @@
       "required": "n"
     },
     {
-      "fieldname": "phase",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "collectionobjects_common",
-      "xpath": [],
-      "data_type": "csrefname",
-      "repeats": "n",
-      "in_repeating_group": "n/a",
-      "opt_list_values": [],
-      "datacolumn": "phaseRefname",
-      "required": "n"
-    },
-    {
       "fieldname": "form",
       "transforms": {
         "vocabulary": "herbariumform"
@@ -1241,22 +1071,6 @@
       "in_repeating_group": "n",
       "opt_list_values": [],
       "datacolumn": "form",
-      "required": "n"
-    },
-    {
-      "fieldname": "form",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "collectionobjects_common",
-      "xpath": [
-        "forms"
-      ],
-      "data_type": "csrefname",
-      "repeats": "y",
-      "in_repeating_group": "n",
-      "opt_list_values": [],
-      "datacolumn": "formRefname",
       "required": "n"
     },
     {
@@ -1403,7 +1217,7 @@
         ]
       },
       "source_type": "authority",
-      "source_name": "concept/associated",
+      "source_name": null,
       "namespace": "collectionobjects_common",
       "xpath": [
         "assocConceptGroupList",
@@ -1413,24 +1227,26 @@
       "repeats": "n",
       "in_repeating_group": "y",
       "opt_list_values": [],
-      "datacolumn": "assocConceptConceptAssociated",
+      "datacolumn": "assocConcept",
       "required": "n"
     },
     {
       "fieldname": "assocConcept",
       "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
       "namespace": "collectionobjects_common",
       "xpath": [
         "assocConceptGroupList",
         "assocConceptGroup"
       ],
-      "data_type": "csrefname",
+      "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "assocConceptRefname",
+      "opt_list_values": [
+        "Concept/Associated"
+      ],
+      "datacolumn": "assocConceptAuthorityVocabulary",
       "required": "n"
     },
     {
@@ -1527,7 +1343,7 @@
         ]
       },
       "source_type": "authority",
-      "source_name": "organization/local",
+      "source_name": null,
       "namespace": "collectionobjects_common",
       "xpath": [
         "assocOrganizationGroupList",
@@ -1537,24 +1353,26 @@
       "repeats": "n",
       "in_repeating_group": "y",
       "opt_list_values": [],
-      "datacolumn": "assocOrganizationOrganizationLocal",
+      "datacolumn": "assocOrganization",
       "required": "n"
     },
     {
       "fieldname": "assocOrganization",
       "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
       "namespace": "collectionobjects_common",
       "xpath": [
         "assocOrganizationGroupList",
         "assocOrganizationGroup"
       ],
-      "data_type": "csrefname",
+      "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "assocOrganizationRefname",
+      "opt_list_values": [
+        "Organization/Local"
+      ],
+      "datacolumn": "assocOrganizationAuthorityVocabulary",
       "required": "n"
     },
     {
@@ -1651,7 +1469,7 @@
         ]
       },
       "source_type": "authority",
-      "source_name": "person/local",
+      "source_name": null,
       "namespace": "collectionobjects_common",
       "xpath": [
         "assocPersonGroupList",
@@ -1661,24 +1479,26 @@
       "repeats": "n",
       "in_repeating_group": "y",
       "opt_list_values": [],
-      "datacolumn": "assocPersonPersonLocal",
+      "datacolumn": "assocPerson",
       "required": "n"
     },
     {
       "fieldname": "assocPerson",
       "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
       "namespace": "collectionobjects_common",
       "xpath": [
         "assocPersonGroupList",
         "assocPersonGroup"
       ],
-      "data_type": "csrefname",
+      "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "assocPersonRefname",
+      "opt_list_values": [
+        "Person/Local"
+      ],
+      "datacolumn": "assocPersonAuthorityVocabulary",
       "required": "n"
     },
     {
@@ -1803,7 +1623,7 @@
         ]
       },
       "source_type": "authority",
-      "source_name": "organization/local",
+      "source_name": null,
       "namespace": "collectionobjects_common",
       "xpath": [
         "assocEventOrganizations"
@@ -1812,23 +1632,25 @@
       "repeats": "y",
       "in_repeating_group": "n",
       "opt_list_values": [],
-      "datacolumn": "assocEventOrganizationOrganizationLocal",
+      "datacolumn": "assocEventOrganization",
       "required": "n"
     },
     {
       "fieldname": "assocEventOrganization",
       "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
       "namespace": "collectionobjects_common",
       "xpath": [
         "assocEventOrganizations"
       ],
-      "data_type": "csrefname",
+      "data_type": "string",
       "repeats": "y",
       "in_repeating_group": "n",
-      "opt_list_values": [],
-      "datacolumn": "assocEventOrganizationRefname",
+      "opt_list_values": [
+        "Organization/Local"
+      ],
+      "datacolumn": "assocEventOrganizationAuthorityVocabulary",
       "required": "n"
     },
     {
@@ -1856,7 +1678,7 @@
         ]
       },
       "source_type": "authority",
-      "source_name": "person/local",
+      "source_name": null,
       "namespace": "collectionobjects_common",
       "xpath": [
         "assocEventPersons"
@@ -1865,23 +1687,25 @@
       "repeats": "y",
       "in_repeating_group": "n",
       "opt_list_values": [],
-      "datacolumn": "assocEventPersonPersonLocal",
+      "datacolumn": "assocEventPerson",
       "required": "n"
     },
     {
       "fieldname": "assocEventPerson",
       "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
       "namespace": "collectionobjects_common",
       "xpath": [
         "assocEventPersons"
       ],
-      "data_type": "csrefname",
+      "data_type": "string",
       "repeats": "y",
       "in_repeating_group": "n",
-      "opt_list_values": [],
-      "datacolumn": "assocEventPersonRefname",
+      "opt_list_values": [
+        "Person/Local"
+      ],
+      "datacolumn": "assocEventPersonAuthorityVocabulary",
       "required": "n"
     },
     {
@@ -2022,7 +1846,7 @@
         ]
       },
       "source_type": "authority",
-      "source_name": "person/local",
+      "source_name": null,
       "namespace": "collectionobjects_common",
       "xpath": [
         "owners"
@@ -2031,44 +1855,26 @@
       "repeats": "y",
       "in_repeating_group": "n",
       "opt_list_values": [],
-      "datacolumn": "ownerPersonLocal",
-      "required": "n"
-    },
-    {
-      "fieldname": "owner",
-      "transforms": {
-        "authority": [
-          "orgauthorities",
-          "organization"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "organization/local",
-      "namespace": "collectionobjects_common",
-      "xpath": [
-        "owners"
-      ],
-      "data_type": "string",
-      "repeats": "y",
-      "in_repeating_group": "n",
-      "opt_list_values": [],
-      "datacolumn": "ownerOrganizationLocal",
+      "datacolumn": "owner",
       "required": "n"
     },
     {
       "fieldname": "owner",
       "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
       "namespace": "collectionobjects_common",
       "xpath": [
         "owners"
       ],
-      "data_type": "csrefname",
+      "data_type": "string",
       "repeats": "y",
       "in_repeating_group": "n",
-      "opt_list_values": [],
-      "datacolumn": "ownerRefname",
+      "opt_list_values": [
+        "Person/Local",
+        "Organization/Local"
+      ],
+      "datacolumn": "ownerAuthorityVocabulary",
       "required": "n"
     },
     {
@@ -2189,20 +1995,6 @@
       "required": "n"
     },
     {
-      "fieldname": "ownershipExchangePriceCurrency",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "collectionobjects_common",
-      "xpath": [],
-      "data_type": "csrefname",
-      "repeats": "n",
-      "in_repeating_group": "n/a",
-      "opt_list_values": [],
-      "datacolumn": "ownershipExchangePriceCurrencyRefname",
-      "required": "n"
-    },
-    {
       "fieldname": "ownershipExchangePriceValue",
       "transforms": {},
       "source_type": "na",
@@ -2225,7 +2017,7 @@
         ]
       },
       "source_type": "authority",
-      "source_name": "citation/local",
+      "source_name": null,
       "namespace": "collectionobjects_common",
       "xpath": [
         "referenceGroupList",
@@ -2235,46 +2027,27 @@
       "repeats": "n",
       "in_repeating_group": "y",
       "opt_list_values": [],
-      "datacolumn": "referenceCitationLocal",
-      "required": "n"
-    },
-    {
-      "fieldname": "reference",
-      "transforms": {
-        "authority": [
-          "citationauthorities",
-          "worldcat"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "citation/worldcat",
-      "namespace": "collectionobjects_common",
-      "xpath": [
-        "referenceGroupList",
-        "referenceGroup"
-      ],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "referenceCitationWorldcat",
+      "datacolumn": "reference",
       "required": "n"
     },
     {
       "fieldname": "reference",
       "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
       "namespace": "collectionobjects_common",
       "xpath": [
         "referenceGroupList",
         "referenceGroup"
       ],
-      "data_type": "csrefname",
+      "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "referenceRefname",
+      "opt_list_values": [
+        "Citation/Local",
+        "Citation/Worldcat"
+      ],
+      "datacolumn": "referenceAuthorityVocabulary",
       "required": "n"
     },
     {
@@ -2351,7 +2124,7 @@
         ]
       },
       "source_type": "authority",
-      "source_name": "person/local",
+      "source_name": null,
       "namespace": "collectionobjects_common",
       "xpath": [
         "fieldCollectors"
@@ -2360,44 +2133,26 @@
       "repeats": "y",
       "in_repeating_group": "n",
       "opt_list_values": [],
-      "datacolumn": "fieldCollectorPersonLocal",
-      "required": "n"
-    },
-    {
-      "fieldname": "fieldCollector",
-      "transforms": {
-        "authority": [
-          "orgauthorities",
-          "organization"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "organization/local",
-      "namespace": "collectionobjects_common",
-      "xpath": [
-        "fieldCollectors"
-      ],
-      "data_type": "string",
-      "repeats": "y",
-      "in_repeating_group": "n",
-      "opt_list_values": [],
-      "datacolumn": "fieldCollectorOrganizationLocal",
+      "datacolumn": "fieldCollector",
       "required": "n"
     },
     {
       "fieldname": "fieldCollector",
       "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
       "namespace": "collectionobjects_common",
       "xpath": [
         "fieldCollectors"
       ],
-      "data_type": "csrefname",
+      "data_type": "string",
       "repeats": "y",
       "in_repeating_group": "n",
-      "opt_list_values": [],
-      "datacolumn": "fieldCollectorRefname",
+      "opt_list_values": [
+        "Person/Local",
+        "Organization/Local"
+      ],
+      "datacolumn": "fieldCollectorAuthorityVocabulary",
       "required": "n"
     },
     {
@@ -2433,22 +2188,6 @@
       "required": "n"
     },
     {
-      "fieldname": "fieldCollectionMethod",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "collectionobjects_common",
-      "xpath": [
-        "fieldCollectionMethods"
-      ],
-      "data_type": "csrefname",
-      "repeats": "y",
-      "in_repeating_group": "n",
-      "opt_list_values": [],
-      "datacolumn": "fieldCollectionMethodRefname",
-      "required": "n"
-    },
-    {
       "fieldname": "habitat",
       "transforms": {},
       "source_type": "na",
@@ -2471,7 +2210,7 @@
         ]
       },
       "source_type": "authority",
-      "source_name": "taxon/local",
+      "source_name": null,
       "namespace": "collectionobjects_herbarium",
       "xpath": [
         "herbAssociatedTaxaGroupList",
@@ -2481,46 +2220,27 @@
       "repeats": "n",
       "in_repeating_group": "y",
       "opt_list_values": [],
-      "datacolumn": "herbAssocTaxonTaxonLocal",
-      "required": "n"
-    },
-    {
-      "fieldname": "herbAssocTaxon",
-      "transforms": {
-        "authority": [
-          "taxonomyauthority",
-          "common_ta"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "taxon/common",
-      "namespace": "collectionobjects_herbarium",
-      "xpath": [
-        "herbAssociatedTaxaGroupList",
-        "herbAassociatedTaxaGroup"
-      ],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "herbAssocTaxonTaxonCommon",
+      "datacolumn": "herbAssocTaxon",
       "required": "n"
     },
     {
       "fieldname": "herbAssocTaxon",
       "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
       "namespace": "collectionobjects_herbarium",
       "xpath": [
         "herbAssociatedTaxaGroupList",
         "herbAassociatedTaxaGroup"
       ],
-      "data_type": "csrefname",
+      "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "herbAssocTaxonRefname",
+      "opt_list_values": [
+        "Taxon/Local",
+        "Taxon/Common"
+      ],
+      "datacolumn": "herbAssocTaxonAuthorityVocabulary",
       "required": "n"
     },
     {
@@ -2560,23 +2280,6 @@
       "required": "n"
     },
     {
-      "fieldname": "herbAssocTaxonInteraction",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "collectionobjects_herbarium",
-      "xpath": [
-        "herbAssociatedTaxaGroupList",
-        "herbAassociatedTaxaGroup"
-      ],
-      "data_type": "csrefname",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "herbAssocTaxonInteractionRefname",
-      "required": "n"
-    },
-    {
       "fieldname": "herbCollectionLocationVerbatim",
       "transforms": {},
       "source_type": "na",
@@ -2602,7 +2305,7 @@
         ]
       },
       "source_type": "authority",
-      "source_name": "place/local",
+      "source_name": null,
       "namespace": "collectionobjects_herbarium",
       "xpath": [
         "herbLocalityGroupList",
@@ -2612,24 +2315,26 @@
       "repeats": "n",
       "in_repeating_group": "y",
       "opt_list_values": [],
-      "datacolumn": "herbCollectionPlacePlaceLocal",
+      "datacolumn": "herbCollectionPlace",
       "required": "n"
     },
     {
       "fieldname": "herbCollectionPlace",
       "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
       "namespace": "collectionobjects_herbarium",
       "xpath": [
         "herbLocalityGroupList",
         "herbLocalityGroup"
       ],
-      "data_type": "csrefname",
+      "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "herbCollectionPlaceRefname",
+      "opt_list_values": [
+        "Place/Local"
+      ],
+      "datacolumn": "herbCollectionPlaceAuthorityVocabulary",
       "required": "n"
     },
     {
@@ -2666,23 +2371,6 @@
       "in_repeating_group": "y",
       "opt_list_values": [],
       "datacolumn": "titleLanguage",
-      "required": "n"
-    },
-    {
-      "fieldname": "titleLanguage",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "collectionobjects_common",
-      "xpath": [
-        "titleGroupList",
-        "titleGroup"
-      ],
-      "data_type": "csrefname",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "titleLanguageRefname",
       "required": "n"
     },
     {
@@ -2747,25 +2435,6 @@
       "in_repeating_group": "y",
       "opt_list_values": [],
       "datacolumn": "titleTranslationLanguage",
-      "required": "n"
-    },
-    {
-      "fieldname": "titleTranslationLanguage",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "collectionobjects_common",
-      "xpath": [
-        "titleGroupList",
-        "titleGroup",
-        "titleTranslationSubGroupList",
-        "titleTranslationSubGroup"
-      ],
-      "data_type": "csrefname",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "titleTranslationLanguageRefname",
       "required": "n"
     },
     {
@@ -2855,7 +2524,7 @@
         ]
       },
       "source_type": "authority",
-      "source_name": "person/local",
+      "source_name": null,
       "namespace": "collectionobjects_common",
       "xpath": [
         "measuredPartGroupList",
@@ -2867,38 +2536,14 @@
       "repeats": "n",
       "in_repeating_group": "y",
       "opt_list_values": [],
-      "datacolumn": "measuredByPersonLocal",
-      "required": "n"
-    },
-    {
-      "fieldname": "measuredBy",
-      "transforms": {
-        "authority": [
-          "orgauthorities",
-          "organization"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "organization/local",
-      "namespace": "collectionobjects_common",
-      "xpath": [
-        "measuredPartGroupList",
-        "measuredPartGroup",
-        "dimensionSubGroupList",
-        "dimensionSubGroup"
-      ],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "measuredByOrganizationLocal",
+      "datacolumn": "measuredBy",
       "required": "n"
     },
     {
       "fieldname": "measuredBy",
       "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
       "namespace": "collectionobjects_common",
       "xpath": [
         "measuredPartGroupList",
@@ -2906,11 +2551,14 @@
         "dimensionSubGroupList",
         "dimensionSubGroup"
       ],
-      "data_type": "csrefname",
+      "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "measuredByRefname",
+      "opt_list_values": [
+        "Person/Local",
+        "Organization/Local"
+      ],
+      "datacolumn": "measuredByAuthorityVocabulary",
       "required": "n"
     },
     {
@@ -3093,7 +2741,7 @@
         ]
       },
       "source_type": "authority",
-      "source_name": "person/local",
+      "source_name": null,
       "namespace": "collectionobjects_common",
       "xpath": [
         "objectProductionPersonGroupList",
@@ -3103,24 +2751,26 @@
       "repeats": "n",
       "in_repeating_group": "y",
       "opt_list_values": [],
-      "datacolumn": "objectProductionPersonPersonLocal",
+      "datacolumn": "objectProductionPerson",
       "required": "n"
     },
     {
       "fieldname": "objectProductionPerson",
       "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
       "namespace": "collectionobjects_common",
       "xpath": [
         "objectProductionPersonGroupList",
         "objectProductionPersonGroup"
       ],
-      "data_type": "csrefname",
+      "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "objectProductionPersonRefname",
+      "opt_list_values": [
+        "Person/Local"
+      ],
+      "datacolumn": "objectProductionPersonAuthorityVocabulary",
       "required": "n"
     },
     {
@@ -3149,7 +2799,7 @@
         ]
       },
       "source_type": "authority",
-      "source_name": "organization/local",
+      "source_name": null,
       "namespace": "collectionobjects_common",
       "xpath": [
         "objectProductionOrganizationGroupList",
@@ -3159,24 +2809,26 @@
       "repeats": "n",
       "in_repeating_group": "y",
       "opt_list_values": [],
-      "datacolumn": "objectProductionOrganizationOrganizationLocal",
+      "datacolumn": "objectProductionOrganization",
       "required": "n"
     },
     {
       "fieldname": "objectProductionOrganization",
       "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
       "namespace": "collectionobjects_common",
       "xpath": [
         "objectProductionOrganizationGroupList",
         "objectProductionOrganizationGroup"
       ],
-      "data_type": "csrefname",
+      "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "objectProductionOrganizationRefname",
+      "opt_list_values": [
+        "Organization/Local"
+      ],
+      "datacolumn": "objectProductionOrganizationAuthorityVocabulary",
       "required": "n"
     },
     {
@@ -3387,22 +3039,6 @@
       "required": "n"
     },
     {
-      "fieldname": "contentLanguage",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "collectionobjects_common",
-      "xpath": [
-        "contentLanguages"
-      ],
-      "data_type": "csrefname",
-      "repeats": "y",
-      "in_repeating_group": "n",
-      "opt_list_values": [],
-      "datacolumn": "contentLanguageRefname",
-      "required": "n"
-    },
-    {
       "fieldname": "contentActivity",
       "transforms": {},
       "source_type": "na",
@@ -3427,7 +3063,7 @@
         ]
       },
       "source_type": "authority",
-      "source_name": "concept/associated",
+      "source_name": null,
       "namespace": "collectionobjects_common",
       "xpath": [
         "contentConcepts"
@@ -3436,44 +3072,26 @@
       "repeats": "y",
       "in_repeating_group": "n",
       "opt_list_values": [],
-      "datacolumn": "contentConceptConceptAssociated",
-      "required": "n"
-    },
-    {
-      "fieldname": "contentConcept",
-      "transforms": {
-        "authority": [
-          "conceptauthorities",
-          "material_ca"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "concept/material",
-      "namespace": "collectionobjects_common",
-      "xpath": [
-        "contentConcepts"
-      ],
-      "data_type": "string",
-      "repeats": "y",
-      "in_repeating_group": "n",
-      "opt_list_values": [],
-      "datacolumn": "contentConceptConceptMaterial",
+      "datacolumn": "contentConcept",
       "required": "n"
     },
     {
       "fieldname": "contentConcept",
       "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
       "namespace": "collectionobjects_common",
       "xpath": [
         "contentConcepts"
       ],
-      "data_type": "csrefname",
+      "data_type": "string",
       "repeats": "y",
       "in_repeating_group": "n",
-      "opt_list_values": [],
-      "datacolumn": "contentConceptRefname",
+      "opt_list_values": [
+        "Concept/Associated",
+        "Concept/Material"
+      ],
+      "datacolumn": "contentConceptAuthorityVocabulary",
       "required": "n"
     },
     {
@@ -3581,7 +3199,7 @@
         ]
       },
       "source_type": "authority",
-      "source_name": "person/local",
+      "source_name": null,
       "namespace": "collectionobjects_common",
       "xpath": [
         "contentPersons"
@@ -3590,44 +3208,26 @@
       "repeats": "y",
       "in_repeating_group": "n",
       "opt_list_values": [],
-      "datacolumn": "contentPersonPersonLocal",
-      "required": "n"
-    },
-    {
-      "fieldname": "contentPerson",
-      "transforms": {
-        "authority": [
-          "personauthorities",
-          "ulan_pa"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "person/ulan",
-      "namespace": "collectionobjects_common",
-      "xpath": [
-        "contentPersons"
-      ],
-      "data_type": "string",
-      "repeats": "y",
-      "in_repeating_group": "n",
-      "opt_list_values": [],
-      "datacolumn": "contentPersonPersonUlan",
+      "datacolumn": "contentPerson",
       "required": "n"
     },
     {
       "fieldname": "contentPerson",
       "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
       "namespace": "collectionobjects_common",
       "xpath": [
         "contentPersons"
       ],
-      "data_type": "csrefname",
+      "data_type": "string",
       "repeats": "y",
       "in_repeating_group": "n",
-      "opt_list_values": [],
-      "datacolumn": "contentPersonRefname",
+      "opt_list_values": [
+        "Person/Local",
+        "Person/Ulan"
+      ],
+      "datacolumn": "contentPersonAuthorityVocabulary",
       "required": "n"
     },
     {
@@ -3679,7 +3279,7 @@
         ]
       },
       "source_type": "authority",
-      "source_name": "organization/local",
+      "source_name": null,
       "namespace": "collectionobjects_common",
       "xpath": [
         "contentOrganizations"
@@ -3688,44 +3288,26 @@
       "repeats": "y",
       "in_repeating_group": "n",
       "opt_list_values": [],
-      "datacolumn": "contentOrganizationOrganizationLocal",
-      "required": "n"
-    },
-    {
-      "fieldname": "contentOrganization",
-      "transforms": {
-        "authority": [
-          "orgauthorities",
-          "ulan_oa"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "organization/ulan",
-      "namespace": "collectionobjects_common",
-      "xpath": [
-        "contentOrganizations"
-      ],
-      "data_type": "string",
-      "repeats": "y",
-      "in_repeating_group": "n",
-      "opt_list_values": [],
-      "datacolumn": "contentOrganizationOrganizationUlan",
+      "datacolumn": "contentOrganization",
       "required": "n"
     },
     {
       "fieldname": "contentOrganization",
       "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
       "namespace": "collectionobjects_common",
       "xpath": [
         "contentOrganizations"
       ],
-      "data_type": "csrefname",
+      "data_type": "string",
       "repeats": "y",
       "in_repeating_group": "n",
-      "opt_list_values": [],
-      "datacolumn": "contentOrganizationRefname",
+      "opt_list_values": [
+        "Organization/Local",
+        "Organization/Ulan"
+      ],
+      "datacolumn": "contentOrganizationAuthorityVocabulary",
       "required": "n"
     },
     {

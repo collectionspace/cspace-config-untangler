@@ -153,23 +153,6 @@
       "required": "n"
     },
     {
-      "fieldname": "termFlag",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "locations_common",
-      "xpath": [
-        "locTermGroupList",
-        "locTermGroup"
-      ],
-      "data_type": "csrefname",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "termFlagRefname",
-      "required": "n"
-    },
-    {
       "fieldname": "termLanguage",
       "transforms": {
         "vocabulary": "languages"
@@ -186,23 +169,6 @@
       "in_repeating_group": "y",
       "opt_list_values": [],
       "datacolumn": "termLanguage",
-      "required": "n"
-    },
-    {
-      "fieldname": "termLanguage",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "locations_common",
-      "xpath": [
-        "locTermGroupList",
-        "locTermGroup"
-      ],
-      "data_type": "csrefname",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "termLanguageRefname",
       "required": "n"
     },
     {
@@ -308,20 +274,6 @@
       "in_repeating_group": "n/a",
       "opt_list_values": [],
       "datacolumn": "locationType",
-      "required": "n"
-    },
-    {
-      "fieldname": "locationType",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "locations_common",
-      "xpath": [],
-      "data_type": "csrefname",
-      "repeats": "n",
-      "in_repeating_group": "n/a",
-      "opt_list_values": [],
-      "datacolumn": "locationTypeRefname",
       "required": "n"
     },
     {

@@ -155,23 +155,6 @@
       "required": "n"
     },
     {
-      "fieldname": "termFlag",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "works_common",
-      "xpath": [
-        "workTermGroupList",
-        "workTermGroup"
-      ],
-      "data_type": "csrefname",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "termFlagRefname",
-      "required": "n"
-    },
-    {
       "fieldname": "termLanguage",
       "transforms": {
         "vocabulary": "languages"
@@ -188,23 +171,6 @@
       "in_repeating_group": "y",
       "opt_list_values": [],
       "datacolumn": "termLanguage",
-      "required": "n"
-    },
-    {
-      "fieldname": "termLanguage",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "works_common",
-      "xpath": [
-        "workTermGroupList",
-        "workTermGroup"
-      ],
-      "data_type": "csrefname",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "termLanguageRefname",
       "required": "n"
     },
     {
@@ -237,7 +203,7 @@
         ]
       },
       "source_type": "authority",
-      "source_name": "citation/local",
+      "source_name": null,
       "namespace": "works_common",
       "xpath": [
         "workTermGroupList",
@@ -247,46 +213,27 @@
       "repeats": "n",
       "in_repeating_group": "y",
       "opt_list_values": [],
-      "datacolumn": "termSourceCitationLocal",
-      "required": "n"
-    },
-    {
-      "fieldname": "termSource",
-      "transforms": {
-        "authority": [
-          "citationauthorities",
-          "worldcat"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "citation/worldcat",
-      "namespace": "works_common",
-      "xpath": [
-        "workTermGroupList",
-        "workTermGroup"
-      ],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "termSourceCitationWorldcat",
+      "datacolumn": "termSource",
       "required": "n"
     },
     {
       "fieldname": "termSource",
       "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
       "namespace": "works_common",
       "xpath": [
         "workTermGroupList",
         "workTermGroup"
       ],
-      "data_type": "csrefname",
+      "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "termSourceRefname",
+      "opt_list_values": [
+        "Citation/Local",
+        "Citation/Worldcat"
+      ],
+      "datacolumn": "termSourceAuthorityVocabulary",
       "required": "n"
     },
     {
@@ -357,20 +304,6 @@
       "required": "n"
     },
     {
-      "fieldname": "workType",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "works_common",
-      "xpath": [],
-      "data_type": "csrefname",
-      "repeats": "n",
-      "in_repeating_group": "n/a",
-      "opt_list_values": [],
-      "datacolumn": "workTypeRefname",
-      "required": "n"
-    },
-    {
       "fieldname": "workDateGroup",
       "transforms": {},
       "source_type": "na",
@@ -409,7 +342,7 @@
         ]
       },
       "source_type": "authority",
-      "source_name": "person/local",
+      "source_name": null,
       "namespace": "works_common",
       "xpath": [
         "creatorGroupList",
@@ -419,46 +352,27 @@
       "repeats": "n",
       "in_repeating_group": "y",
       "opt_list_values": [],
-      "datacolumn": "creatorPersonLocal",
-      "required": "n"
-    },
-    {
-      "fieldname": "creator",
-      "transforms": {
-        "authority": [
-          "orgauthorities",
-          "organization"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "organization/local",
-      "namespace": "works_common",
-      "xpath": [
-        "creatorGroupList",
-        "creatorGroup"
-      ],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "creatorOrganizationLocal",
+      "datacolumn": "creator",
       "required": "n"
     },
     {
       "fieldname": "creator",
       "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
       "namespace": "works_common",
       "xpath": [
         "creatorGroupList",
         "creatorGroup"
       ],
-      "data_type": "csrefname",
+      "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "creatorRefname",
+      "opt_list_values": [
+        "Person/Local",
+        "Organization/Local"
+      ],
+      "datacolumn": "creatorAuthorityVocabulary",
       "required": "n"
     },
     {
@@ -481,23 +395,6 @@
       "required": "n"
     },
     {
-      "fieldname": "creatorType",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "works_common",
-      "xpath": [
-        "creatorGroupList",
-        "creatorGroup"
-      ],
-      "data_type": "csrefname",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "creatorTypeRefname",
-      "required": "n"
-    },
-    {
       "fieldname": "publisher",
       "transforms": {
         "authority": [
@@ -506,7 +403,7 @@
         ]
       },
       "source_type": "authority",
-      "source_name": "person/local",
+      "source_name": null,
       "namespace": "works_common",
       "xpath": [
         "publisherGroupList",
@@ -516,46 +413,27 @@
       "repeats": "n",
       "in_repeating_group": "y",
       "opt_list_values": [],
-      "datacolumn": "publisherPersonLocal",
-      "required": "n"
-    },
-    {
-      "fieldname": "publisher",
-      "transforms": {
-        "authority": [
-          "orgauthorities",
-          "organization"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "organization/local",
-      "namespace": "works_common",
-      "xpath": [
-        "publisherGroupList",
-        "publisherGroup"
-      ],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "publisherOrganizationLocal",
+      "datacolumn": "publisher",
       "required": "n"
     },
     {
       "fieldname": "publisher",
       "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
       "namespace": "works_common",
       "xpath": [
         "publisherGroupList",
         "publisherGroup"
       ],
-      "data_type": "csrefname",
+      "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "publisherRefname",
+      "opt_list_values": [
+        "Person/Local",
+        "Organization/Local"
+      ],
+      "datacolumn": "publisherAuthorityVocabulary",
       "required": "n"
     },
     {
@@ -575,23 +453,6 @@
       "in_repeating_group": "y",
       "opt_list_values": [],
       "datacolumn": "publisherType",
-      "required": "n"
-    },
-    {
-      "fieldname": "publisherType",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "works_common",
-      "xpath": [
-        "publisherGroupList",
-        "publisherGroup"
-      ],
-      "data_type": "csrefname",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "publisherTypeRefname",
       "required": "n"
     },
     {
@@ -637,7 +498,7 @@
         ]
       },
       "source_type": "authority",
-      "source_name": "place/local",
+      "source_name": null,
       "namespace": "works_common",
       "xpath": [
         "addrGroupList",
@@ -647,46 +508,27 @@
       "repeats": "n",
       "in_repeating_group": "y",
       "opt_list_values": [],
-      "datacolumn": "addressMunicipalityPlaceLocal",
-      "required": "n"
-    },
-    {
-      "fieldname": "addressMunicipality",
-      "transforms": {
-        "authority": [
-          "placeauthorities",
-          "tgn_place"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "place/tgn",
-      "namespace": "works_common",
-      "xpath": [
-        "addrGroupList",
-        "addrGroup"
-      ],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "addressMunicipalityPlaceTgn",
+      "datacolumn": "addressMunicipality",
       "required": "n"
     },
     {
       "fieldname": "addressMunicipality",
       "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
       "namespace": "works_common",
       "xpath": [
         "addrGroupList",
         "addrGroup"
       ],
-      "data_type": "csrefname",
+      "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "addressMunicipalityRefname",
+      "opt_list_values": [
+        "Place/Local",
+        "Place/Tgn"
+      ],
+      "datacolumn": "addressMunicipalityAuthorityVocabulary",
       "required": "n"
     },
     {
@@ -698,7 +540,7 @@
         ]
       },
       "source_type": "authority",
-      "source_name": "place/local",
+      "source_name": null,
       "namespace": "works_common",
       "xpath": [
         "addrGroupList",
@@ -708,46 +550,27 @@
       "repeats": "n",
       "in_repeating_group": "y",
       "opt_list_values": [],
-      "datacolumn": "addressStateOrProvincePlaceLocal",
-      "required": "n"
-    },
-    {
-      "fieldname": "addressStateOrProvince",
-      "transforms": {
-        "authority": [
-          "placeauthorities",
-          "tgn_place"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "place/tgn",
-      "namespace": "works_common",
-      "xpath": [
-        "addrGroupList",
-        "addrGroup"
-      ],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "addressStateOrProvincePlaceTgn",
+      "datacolumn": "addressStateOrProvince",
       "required": "n"
     },
     {
       "fieldname": "addressStateOrProvince",
       "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
       "namespace": "works_common",
       "xpath": [
         "addrGroupList",
         "addrGroup"
       ],
-      "data_type": "csrefname",
+      "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "addressStateOrProvinceRefname",
+      "opt_list_values": [
+        "Place/Local",
+        "Place/Tgn"
+      ],
+      "datacolumn": "addressStateOrProvinceAuthorityVocabulary",
       "required": "n"
     },
     {
@@ -776,7 +599,7 @@
         ]
       },
       "source_type": "authority",
-      "source_name": "place/local",
+      "source_name": null,
       "namespace": "works_common",
       "xpath": [
         "addrGroupList",
@@ -786,46 +609,27 @@
       "repeats": "n",
       "in_repeating_group": "y",
       "opt_list_values": [],
-      "datacolumn": "addressCountryPlaceLocal",
-      "required": "n"
-    },
-    {
-      "fieldname": "addressCountry",
-      "transforms": {
-        "authority": [
-          "placeauthorities",
-          "tgn_place"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "place/tgn",
-      "namespace": "works_common",
-      "xpath": [
-        "addrGroupList",
-        "addrGroup"
-      ],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "addressCountryPlaceTgn",
+      "datacolumn": "addressCountry",
       "required": "n"
     },
     {
       "fieldname": "addressCountry",
       "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
       "namespace": "works_common",
       "xpath": [
         "addrGroupList",
         "addrGroup"
       ],
-      "data_type": "csrefname",
+      "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "addressCountryRefname",
+      "opt_list_values": [
+        "Place/Local",
+        "Place/Tgn"
+      ],
+      "datacolumn": "addressCountryAuthorityVocabulary",
       "required": "n"
     },
     {
@@ -845,23 +649,6 @@
       "in_repeating_group": "y",
       "opt_list_values": [],
       "datacolumn": "addressType",
-      "required": "n"
-    },
-    {
-      "fieldname": "addressType",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "works_common",
-      "xpath": [
-        "addrGroupList",
-        "addrGroup"
-      ],
-      "data_type": "csrefname",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "addressTypeRefname",
       "required": "n"
     }
   ]

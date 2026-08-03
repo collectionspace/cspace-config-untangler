@@ -103,22 +103,6 @@
       "required": "n"
     },
     {
-      "fieldname": "responsibleDepartment",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "collectionobjects_common",
-      "xpath": [
-        "responsibleDepartments"
-      ],
-      "data_type": "csrefname",
-      "repeats": "y",
-      "in_repeating_group": "n",
-      "opt_list_values": [],
-      "datacolumn": "responsibleDepartmentRefname",
-      "required": "n"
-    },
-    {
       "fieldname": "publicartCollection",
       "transforms": {
         "authority": [
@@ -127,7 +111,7 @@
         ]
       },
       "source_type": "authority",
-      "source_name": "organization/local",
+      "source_name": null,
       "namespace": "collectionobjects_publicart",
       "xpath": [
         "publicartCollections"
@@ -136,44 +120,26 @@
       "repeats": "y",
       "in_repeating_group": "n",
       "opt_list_values": [],
-      "datacolumn": "publicartCollectionOrganizationLocal",
-      "required": "n"
-    },
-    {
-      "fieldname": "publicartCollection",
-      "transforms": {
-        "authority": [
-          "orgauthorities",
-          "organization_shared"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "organization/shared",
-      "namespace": "collectionobjects_publicart",
-      "xpath": [
-        "publicartCollections"
-      ],
-      "data_type": "string",
-      "repeats": "y",
-      "in_repeating_group": "n",
-      "opt_list_values": [],
-      "datacolumn": "publicartCollectionOrganizationShared",
+      "datacolumn": "publicartCollection",
       "required": "n"
     },
     {
       "fieldname": "publicartCollection",
       "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
       "namespace": "collectionobjects_publicart",
       "xpath": [
         "publicartCollections"
       ],
-      "data_type": "csrefname",
+      "data_type": "string",
       "repeats": "y",
       "in_repeating_group": "n",
-      "opt_list_values": [],
-      "datacolumn": "publicartCollectionRefname",
+      "opt_list_values": [
+        "Organization/Local",
+        "Organization/Shared"
+      ],
+      "datacolumn": "publicartCollectionAuthorityVocabulary",
       "required": "n"
     },
     {
@@ -214,22 +180,6 @@
       "required": "n"
     },
     {
-      "fieldname": "publishTo",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "collectionobjects_common",
-      "xpath": [
-        "publishToList"
-      ],
-      "data_type": "csrefname",
-      "repeats": "y",
-      "in_repeating_group": "n",
-      "opt_list_values": [],
-      "datacolumn": "publishToRefname",
-      "required": "n"
-    },
-    {
       "fieldname": "inventoryStatus",
       "transforms": {
         "vocabulary": "inventorystatus"
@@ -245,22 +195,6 @@
       "in_repeating_group": "n",
       "opt_list_values": [],
       "datacolumn": "inventoryStatus",
-      "required": "n"
-    },
-    {
-      "fieldname": "inventoryStatus",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "collectionobjects_common",
-      "xpath": [
-        "inventoryStatusList"
-      ],
-      "data_type": "csrefname",
-      "repeats": "y",
-      "in_repeating_group": "n",
-      "opt_list_values": [],
-      "datacolumn": "inventoryStatusRefname",
       "required": "n"
     },
     {
@@ -288,7 +222,7 @@
         ]
       },
       "source_type": "authority",
-      "source_name": "concept/associated",
+      "source_name": null,
       "namespace": "collectionobjects_common",
       "xpath": [
         "contentConcepts"
@@ -297,23 +231,25 @@
       "repeats": "y",
       "in_repeating_group": "n",
       "opt_list_values": [],
-      "datacolumn": "contentConceptConceptAssociated",
+      "datacolumn": "contentConcept",
       "required": "n"
     },
     {
       "fieldname": "contentConcept",
       "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
       "namespace": "collectionobjects_common",
       "xpath": [
         "contentConcepts"
       ],
-      "data_type": "csrefname",
+      "data_type": "string",
       "repeats": "y",
       "in_repeating_group": "n",
-      "opt_list_values": [],
-      "datacolumn": "contentConceptRefname",
+      "opt_list_values": [
+        "Concept/Associated"
+      ],
+      "datacolumn": "contentConceptAuthorityVocabulary",
       "required": "n"
     },
     {
@@ -383,23 +319,6 @@
       "required": "n"
     },
     {
-      "fieldname": "titleLanguage",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "collectionobjects_common",
-      "xpath": [
-        "titleGroupList",
-        "titleGroup"
-      ],
-      "data_type": "csrefname",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "titleLanguageRefname",
-      "required": "n"
-    },
-    {
       "fieldname": "titleType",
       "transforms": {},
       "source_type": "optionlist",
@@ -465,25 +384,6 @@
       "required": "n"
     },
     {
-      "fieldname": "titleTranslationLanguage",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "collectionobjects_common",
-      "xpath": [
-        "titleGroupList",
-        "titleGroup",
-        "titleTranslationSubGroupList",
-        "titleTranslationSubGroup"
-      ],
-      "data_type": "csrefname",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "titleTranslationLanguageRefname",
-      "required": "n"
-    },
-    {
       "fieldname": "objectName",
       "transforms": {
         "authority": [
@@ -492,7 +392,7 @@
         ]
       },
       "source_type": "authority",
-      "source_name": "concept/worktype",
+      "source_name": null,
       "namespace": "collectionobjects_common",
       "xpath": [
         "objectNameList",
@@ -502,24 +402,26 @@
       "repeats": "n",
       "in_repeating_group": "y",
       "opt_list_values": [],
-      "datacolumn": "objectNameConceptWorktype",
+      "datacolumn": "objectName",
       "required": "n"
     },
     {
       "fieldname": "objectName",
       "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
       "namespace": "collectionobjects_common",
       "xpath": [
         "objectNameList",
         "objectNameGroup"
       ],
-      "data_type": "csrefname",
+      "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "objectNameRefname",
+      "opt_list_values": [
+        "Concept/Worktype"
+      ],
+      "datacolumn": "objectNameAuthorityVocabulary",
       "required": "n"
     },
     {
@@ -576,23 +478,6 @@
       "required": "n"
     },
     {
-      "fieldname": "objectCountUnit",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "collectionobjects_common",
-      "xpath": [
-        "objectCountGroupList",
-        "objectCountGroup"
-      ],
-      "data_type": "csrefname",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "objectCountUnitRefname",
-      "required": "n"
-    },
-    {
       "fieldname": "objectCountType",
       "transforms": {
         "vocabulary": "objectcounttypes"
@@ -612,23 +497,6 @@
       "required": "n"
     },
     {
-      "fieldname": "objectCountType",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "collectionobjects_common",
-      "xpath": [
-        "objectCountGroupList",
-        "objectCountGroup"
-      ],
-      "data_type": "csrefname",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "objectCountTypeRefname",
-      "required": "n"
-    },
-    {
       "fieldname": "objectCountCountedBy",
       "transforms": {
         "authority": [
@@ -637,7 +505,7 @@
         ]
       },
       "source_type": "authority",
-      "source_name": "person/local",
+      "source_name": null,
       "namespace": "collectionobjects_common",
       "xpath": [
         "objectCountGroupList",
@@ -647,46 +515,27 @@
       "repeats": "n",
       "in_repeating_group": "y",
       "opt_list_values": [],
-      "datacolumn": "objectCountCountedByPersonLocal",
-      "required": "n"
-    },
-    {
-      "fieldname": "objectCountCountedBy",
-      "transforms": {
-        "authority": [
-          "personauthorities",
-          "person_shared"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "person/shared",
-      "namespace": "collectionobjects_common",
-      "xpath": [
-        "objectCountGroupList",
-        "objectCountGroup"
-      ],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "objectCountCountedByPersonShared",
+      "datacolumn": "objectCountCountedBy",
       "required": "n"
     },
     {
       "fieldname": "objectCountCountedBy",
       "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
       "namespace": "collectionobjects_common",
       "xpath": [
         "objectCountGroupList",
         "objectCountGroup"
       ],
-      "data_type": "csrefname",
+      "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "objectCountCountedByRefname",
+      "opt_list_values": [
+        "Person/Local",
+        "Person/Shared"
+      ],
+      "datacolumn": "objectCountCountedByAuthorityVocabulary",
       "required": "n"
     },
     {
@@ -732,7 +581,7 @@
         ]
       },
       "source_type": "authority",
-      "source_name": "person/local",
+      "source_name": null,
       "namespace": "collectionobjects_common",
       "xpath": [
         "owners"
@@ -741,86 +590,28 @@
       "repeats": "y",
       "in_repeating_group": "n",
       "opt_list_values": [],
-      "datacolumn": "ownerPersonLocal",
-      "required": "n"
-    },
-    {
-      "fieldname": "owner",
-      "transforms": {
-        "authority": [
-          "personauthorities",
-          "person_shared"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "person/shared",
-      "namespace": "collectionobjects_common",
-      "xpath": [
-        "owners"
-      ],
-      "data_type": "string",
-      "repeats": "y",
-      "in_repeating_group": "n",
-      "opt_list_values": [],
-      "datacolumn": "ownerPersonShared",
-      "required": "n"
-    },
-    {
-      "fieldname": "owner",
-      "transforms": {
-        "authority": [
-          "orgauthorities",
-          "organization"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "organization/local",
-      "namespace": "collectionobjects_common",
-      "xpath": [
-        "owners"
-      ],
-      "data_type": "string",
-      "repeats": "y",
-      "in_repeating_group": "n",
-      "opt_list_values": [],
-      "datacolumn": "ownerOrganizationLocal",
-      "required": "n"
-    },
-    {
-      "fieldname": "owner",
-      "transforms": {
-        "authority": [
-          "orgauthorities",
-          "organization_shared"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "organization/shared",
-      "namespace": "collectionobjects_common",
-      "xpath": [
-        "owners"
-      ],
-      "data_type": "string",
-      "repeats": "y",
-      "in_repeating_group": "n",
-      "opt_list_values": [],
-      "datacolumn": "ownerOrganizationShared",
+      "datacolumn": "owner",
       "required": "n"
     },
     {
       "fieldname": "owner",
       "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
       "namespace": "collectionobjects_common",
       "xpath": [
         "owners"
       ],
-      "data_type": "csrefname",
+      "data_type": "string",
       "repeats": "y",
       "in_repeating_group": "n",
-      "opt_list_values": [],
-      "datacolumn": "ownerRefname",
+      "opt_list_values": [
+        "Person/Local",
+        "Person/Shared",
+        "Organization/Local",
+        "Organization/Shared"
+      ],
+      "datacolumn": "ownerAuthorityVocabulary",
       "required": "n"
     },
     {
@@ -832,7 +623,7 @@
         ]
       },
       "source_type": "authority",
-      "source_name": "concept/material",
+      "source_name": null,
       "namespace": "collectionobjects_common",
       "xpath": [
         "materialGroupList",
@@ -842,24 +633,26 @@
       "repeats": "n",
       "in_repeating_group": "y",
       "opt_list_values": [],
-      "datacolumn": "materialConceptMaterial",
+      "datacolumn": "material",
       "required": "n"
     },
     {
       "fieldname": "material",
       "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
       "namespace": "collectionobjects_common",
       "xpath": [
         "materialGroupList",
         "materialGroup"
       ],
-      "data_type": "csrefname",
+      "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "materialRefname",
+      "opt_list_values": [
+        "Concept/Material"
+      ],
+      "datacolumn": "materialAuthorityVocabulary",
       "required": "n"
     },
     {
@@ -1043,7 +836,7 @@
         ]
       },
       "source_type": "authority",
-      "source_name": "person/local",
+      "source_name": null,
       "namespace": "collectionobjects_common",
       "xpath": [
         "textualInscriptionGroupList",
@@ -1053,68 +846,28 @@
       "repeats": "n",
       "in_repeating_group": "y",
       "opt_list_values": [],
-      "datacolumn": "inscriptionContentInscriberPersonLocal",
-      "required": "n"
-    },
-    {
-      "fieldname": "inscriptionContentInscriber",
-      "transforms": {
-        "authority": [
-          "orgauthorities",
-          "organization"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "organization/local",
-      "namespace": "collectionobjects_common",
-      "xpath": [
-        "textualInscriptionGroupList",
-        "textualInscriptionGroup"
-      ],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "inscriptionContentInscriberOrganizationLocal",
-      "required": "n"
-    },
-    {
-      "fieldname": "inscriptionContentInscriber",
-      "transforms": {
-        "authority": [
-          "orgauthorities",
-          "organization_shared"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "organization/shared",
-      "namespace": "collectionobjects_common",
-      "xpath": [
-        "textualInscriptionGroupList",
-        "textualInscriptionGroup"
-      ],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "inscriptionContentInscriberOrganizationShared",
+      "datacolumn": "inscriptionContentInscriber",
       "required": "n"
     },
     {
       "fieldname": "inscriptionContentInscriber",
       "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
       "namespace": "collectionobjects_common",
       "xpath": [
         "textualInscriptionGroupList",
         "textualInscriptionGroup"
       ],
-      "data_type": "csrefname",
+      "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "inscriptionContentInscriberRefname",
+      "opt_list_values": [
+        "Person/Local",
+        "Organization/Local",
+        "Organization/Shared"
+      ],
+      "datacolumn": "inscriptionContentInscriberAuthorityVocabulary",
       "required": "n"
     },
     {
@@ -1211,23 +964,6 @@
       "required": "n"
     },
     {
-      "fieldname": "publicartProductionDateType",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "collectionobjects_publicart",
-      "xpath": [
-        "publicartProductionDateGroupList",
-        "publicartProductionDateGroup"
-      ],
-      "data_type": "csrefname",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "publicartProductionDateTypeRefname",
-      "required": "n"
-    },
-    {
       "fieldname": "publicartProductionPerson",
       "transforms": {
         "authority": [
@@ -1236,7 +972,7 @@
         ]
       },
       "source_type": "authority",
-      "source_name": "person/local",
+      "source_name": null,
       "namespace": "collectionobjects_publicart",
       "xpath": [
         "publicartProductionPersonGroupList",
@@ -1246,90 +982,29 @@
       "repeats": "n",
       "in_repeating_group": "y",
       "opt_list_values": [],
-      "datacolumn": "publicartProductionPersonPersonLocal",
-      "required": "n"
-    },
-    {
-      "fieldname": "publicartProductionPerson",
-      "transforms": {
-        "authority": [
-          "personauthorities",
-          "person_shared"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "person/shared",
-      "namespace": "collectionobjects_publicart",
-      "xpath": [
-        "publicartProductionPersonGroupList",
-        "publicartProductionPersonGroup"
-      ],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "publicartProductionPersonPersonShared",
-      "required": "n"
-    },
-    {
-      "fieldname": "publicartProductionPerson",
-      "transforms": {
-        "authority": [
-          "orgauthorities",
-          "organization"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "organization/local",
-      "namespace": "collectionobjects_publicart",
-      "xpath": [
-        "publicartProductionPersonGroupList",
-        "publicartProductionPersonGroup"
-      ],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "publicartProductionPersonOrganizationLocal",
-      "required": "n"
-    },
-    {
-      "fieldname": "publicartProductionPerson",
-      "transforms": {
-        "authority": [
-          "orgauthorities",
-          "organization_shared"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "organization/shared",
-      "namespace": "collectionobjects_publicart",
-      "xpath": [
-        "publicartProductionPersonGroupList",
-        "publicartProductionPersonGroup"
-      ],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "publicartProductionPersonOrganizationShared",
+      "datacolumn": "publicartProductionPerson",
       "required": "n"
     },
     {
       "fieldname": "publicartProductionPerson",
       "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
       "namespace": "collectionobjects_publicart",
       "xpath": [
         "publicartProductionPersonGroupList",
         "publicartProductionPersonGroup"
       ],
-      "data_type": "csrefname",
+      "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "publicartProductionPersonRefname",
+      "opt_list_values": [
+        "Person/Local",
+        "Person/Shared",
+        "Organization/Local",
+        "Organization/Shared"
+      ],
+      "datacolumn": "publicartProductionPersonAuthorityVocabulary",
       "required": "n"
     },
     {
@@ -1349,23 +1024,6 @@
       "in_repeating_group": "y",
       "opt_list_values": [],
       "datacolumn": "publicartProductionPersonRole",
-      "required": "n"
-    },
-    {
-      "fieldname": "publicartProductionPersonRole",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "collectionobjects_publicart",
-      "xpath": [
-        "publicartProductionPersonGroupList",
-        "publicartProductionPersonGroup"
-      ],
-      "data_type": "csrefname",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "publicartProductionPersonRoleRefname",
       "required": "n"
     },
     {
@@ -1423,23 +1081,6 @@
       "required": "n"
     },
     {
-      "fieldname": "annotationType",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "collectionobjects_annotation",
-      "xpath": [
-        "annotationGroupList",
-        "annotationGroup"
-      ],
-      "data_type": "csrefname",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "annotationTypeRefname",
-      "required": "n"
-    },
-    {
       "fieldname": "annotationDate",
       "transforms": {},
       "source_type": "na",
@@ -1465,7 +1106,7 @@
         ]
       },
       "source_type": "authority",
-      "source_name": "person/local",
+      "source_name": null,
       "namespace": "collectionobjects_annotation",
       "xpath": [
         "annotationGroupList",
@@ -1475,46 +1116,27 @@
       "repeats": "n",
       "in_repeating_group": "y",
       "opt_list_values": [],
-      "datacolumn": "annotationAuthorPersonLocal",
-      "required": "n"
-    },
-    {
-      "fieldname": "annotationAuthor",
-      "transforms": {
-        "authority": [
-          "personauthorities",
-          "person_shared"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "person/shared",
-      "namespace": "collectionobjects_annotation",
-      "xpath": [
-        "annotationGroupList",
-        "annotationGroup"
-      ],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "annotationAuthorPersonShared",
+      "datacolumn": "annotationAuthor",
       "required": "n"
     },
     {
       "fieldname": "annotationAuthor",
       "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
       "namespace": "collectionobjects_annotation",
       "xpath": [
         "annotationGroupList",
         "annotationGroup"
       ],
-      "data_type": "csrefname",
+      "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "annotationAuthorRefname",
+      "opt_list_values": [
+        "Person/Local",
+        "Person/Shared"
+      ],
+      "datacolumn": "annotationAuthorAuthorityVocabulary",
       "required": "n"
     },
     {

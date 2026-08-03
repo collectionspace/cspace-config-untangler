@@ -147,23 +147,6 @@
       "required": "n"
     },
     {
-      "fieldname": "termStatus",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "chronologies_common",
-      "xpath": [
-        "chronologyTermGroupList",
-        "chronologyTermGroup"
-      ],
-      "data_type": "csrefname",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "termStatusRefname",
-      "required": "n"
-    },
-    {
       "fieldname": "termType",
       "transforms": {
         "vocabulary": "chronologytermtype"
@@ -180,23 +163,6 @@
       "in_repeating_group": "y",
       "opt_list_values": [],
       "datacolumn": "termType",
-      "required": "n"
-    },
-    {
-      "fieldname": "termType",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "chronologies_common",
-      "xpath": [
-        "chronologyTermGroupList",
-        "chronologyTermGroup"
-      ],
-      "data_type": "csrefname",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "termTypeRefname",
       "required": "n"
     },
     {
@@ -219,23 +185,6 @@
       "required": "n"
     },
     {
-      "fieldname": "termFlag",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "chronologies_common",
-      "xpath": [
-        "chronologyTermGroupList",
-        "chronologyTermGroup"
-      ],
-      "data_type": "csrefname",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "termFlagRefname",
-      "required": "n"
-    },
-    {
       "fieldname": "historicalStatus",
       "transforms": {
         "vocabulary": "chronologyhistoricalstatus"
@@ -255,23 +204,6 @@
       "required": "n"
     },
     {
-      "fieldname": "historicalStatus",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "chronologies_common",
-      "xpath": [
-        "chronologyTermGroupList",
-        "chronologyTermGroup"
-      ],
-      "data_type": "csrefname",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "historicalStatusRefname",
-      "required": "n"
-    },
-    {
       "fieldname": "termLanguage",
       "transforms": {
         "vocabulary": "languages"
@@ -288,23 +220,6 @@
       "in_repeating_group": "y",
       "opt_list_values": [],
       "datacolumn": "termLanguage",
-      "required": "n"
-    },
-    {
-      "fieldname": "termLanguage",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "chronologies_common",
-      "xpath": [
-        "chronologyTermGroupList",
-        "chronologyTermGroup"
-      ],
-      "data_type": "csrefname",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "termLanguageRefname",
       "required": "n"
     },
     {
@@ -337,7 +252,7 @@
         ]
       },
       "source_type": "authority",
-      "source_name": "citation/local",
+      "source_name": null,
       "namespace": "chronologies_common",
       "xpath": [
         "chronologyTermGroupList",
@@ -347,46 +262,27 @@
       "repeats": "n",
       "in_repeating_group": "y",
       "opt_list_values": [],
-      "datacolumn": "termSourceCitationLocal",
-      "required": "n"
-    },
-    {
-      "fieldname": "termSource",
-      "transforms": {
-        "authority": [
-          "citationauthorities",
-          "worldcat"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "citation/worldcat",
-      "namespace": "chronologies_common",
-      "xpath": [
-        "chronologyTermGroupList",
-        "chronologyTermGroup"
-      ],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "termSourceCitationWorldcat",
+      "datacolumn": "termSource",
       "required": "n"
     },
     {
       "fieldname": "termSource",
       "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
       "namespace": "chronologies_common",
       "xpath": [
         "chronologyTermGroupList",
         "chronologyTermGroup"
       ],
-      "data_type": "csrefname",
+      "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "termSourceRefname",
+      "opt_list_values": [
+        "Citation/Local",
+        "Citation/Worldcat"
+      ],
+      "datacolumn": "termSourceAuthorityVocabulary",
       "required": "n"
     },
     {
@@ -471,20 +367,6 @@
       "required": "n"
     },
     {
-      "fieldname": "chronologyType",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "chronologies_common",
-      "xpath": [],
-      "data_type": "csrefname",
-      "repeats": "n",
-      "in_repeating_group": "n/a",
-      "opt_list_values": [],
-      "datacolumn": "chronologyTypeRefname",
-      "required": "n"
-    },
-    {
       "fieldname": "spatialCoverage",
       "transforms": {
         "authority": [
@@ -493,7 +375,7 @@
         ]
       },
       "source_type": "authority",
-      "source_name": "place/local",
+      "source_name": null,
       "namespace": "chronologies_common",
       "xpath": [
         "spatialCoverages"
@@ -502,44 +384,26 @@
       "repeats": "y",
       "in_repeating_group": "n",
       "opt_list_values": [],
-      "datacolumn": "spatialCoveragePlaceLocal",
-      "required": "n"
-    },
-    {
-      "fieldname": "spatialCoverage",
-      "transforms": {
-        "authority": [
-          "placeauthorities",
-          "tgn_place"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "place/tgn",
-      "namespace": "chronologies_common",
-      "xpath": [
-        "spatialCoverages"
-      ],
-      "data_type": "string",
-      "repeats": "y",
-      "in_repeating_group": "n",
-      "opt_list_values": [],
-      "datacolumn": "spatialCoveragePlaceTgn",
+      "datacolumn": "spatialCoverage",
       "required": "n"
     },
     {
       "fieldname": "spatialCoverage",
       "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
       "namespace": "chronologies_common",
       "xpath": [
         "spatialCoverages"
       ],
-      "data_type": "csrefname",
+      "data_type": "string",
       "repeats": "y",
       "in_repeating_group": "n",
-      "opt_list_values": [],
-      "datacolumn": "spatialCoverageRefname",
+      "opt_list_values": [
+        "Place/Local",
+        "Place/Tgn"
+      ],
+      "datacolumn": "spatialCoverageAuthorityVocabulary",
       "required": "n"
     },
     {
@@ -596,7 +460,7 @@
         ]
       },
       "source_type": "authority",
-      "source_name": "citation/local",
+      "source_name": null,
       "namespace": "chronologies_common",
       "xpath": [
         "identifierGroupList",
@@ -606,46 +470,27 @@
       "repeats": "n",
       "in_repeating_group": "y",
       "opt_list_values": [],
-      "datacolumn": "identifierCitationCitationLocal",
-      "required": "n"
-    },
-    {
-      "fieldname": "identifierCitation",
-      "transforms": {
-        "authority": [
-          "citationauthorities",
-          "worldcat"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "citation/worldcat",
-      "namespace": "chronologies_common",
-      "xpath": [
-        "identifierGroupList",
-        "identifierGroup"
-      ],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "identifierCitationCitationWorldcat",
+      "datacolumn": "identifierCitation",
       "required": "n"
     },
     {
       "fieldname": "identifierCitation",
       "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
       "namespace": "chronologies_common",
       "xpath": [
         "identifierGroupList",
         "identifierGroup"
       ],
-      "data_type": "csrefname",
+      "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "identifierCitationRefname",
+      "opt_list_values": [
+        "Citation/Local",
+        "Citation/Worldcat"
+      ],
+      "datacolumn": "identifierCitationAuthorityVocabulary",
       "required": "n"
     },
     {
@@ -691,7 +536,7 @@
         ]
       },
       "source_type": "authority",
-      "source_name": "place/local",
+      "source_name": null,
       "namespace": "chronologies_common",
       "xpath": [
         "altDateGroupList",
@@ -702,48 +547,28 @@
       "repeats": "y",
       "in_repeating_group": "as part of larger repeating group",
       "opt_list_values": [],
-      "datacolumn": "altDateSpatialCoveragePlaceLocal",
-      "required": "n"
-    },
-    {
-      "fieldname": "altDateSpatialCoverage",
-      "transforms": {
-        "authority": [
-          "placeauthorities",
-          "tgn_place"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "place/tgn",
-      "namespace": "chronologies_common",
-      "xpath": [
-        "altDateGroupList",
-        "altDateGroup",
-        "altDateSpatialCoverages"
-      ],
-      "data_type": "string",
-      "repeats": "y",
-      "in_repeating_group": "as part of larger repeating group",
-      "opt_list_values": [],
-      "datacolumn": "altDateSpatialCoveragePlaceTgn",
+      "datacolumn": "altDateSpatialCoverage",
       "required": "n"
     },
     {
       "fieldname": "altDateSpatialCoverage",
       "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
       "namespace": "chronologies_common",
       "xpath": [
         "altDateGroupList",
         "altDateGroup",
         "altDateSpatialCoverages"
       ],
-      "data_type": "csrefname",
+      "data_type": "string",
       "repeats": "y",
       "in_repeating_group": "as part of larger repeating group",
-      "opt_list_values": [],
-      "datacolumn": "altDateSpatialCoverageRefname",
+      "opt_list_values": [
+        "Place/Local",
+        "Place/Tgn"
+      ],
+      "datacolumn": "altDateSpatialCoverageAuthorityVocabulary",
       "required": "n"
     },
     {
@@ -755,7 +580,7 @@
         ]
       },
       "source_type": "authority",
-      "source_name": "citation/local",
+      "source_name": null,
       "namespace": "chronologies_common",
       "xpath": [
         "altDateGroupList",
@@ -766,48 +591,28 @@
       "repeats": "y",
       "in_repeating_group": "as part of larger repeating group",
       "opt_list_values": [],
-      "datacolumn": "altDateCitationCitationLocal",
-      "required": "n"
-    },
-    {
-      "fieldname": "altDateCitation",
-      "transforms": {
-        "authority": [
-          "citationauthorities",
-          "worldcat"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "citation/worldcat",
-      "namespace": "chronologies_common",
-      "xpath": [
-        "altDateGroupList",
-        "altDateGroup",
-        "altDateCitations"
-      ],
-      "data_type": "string",
-      "repeats": "y",
-      "in_repeating_group": "as part of larger repeating group",
-      "opt_list_values": [],
-      "datacolumn": "altDateCitationCitationWorldcat",
+      "datacolumn": "altDateCitation",
       "required": "n"
     },
     {
       "fieldname": "altDateCitation",
       "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
       "namespace": "chronologies_common",
       "xpath": [
         "altDateGroupList",
         "altDateGroup",
         "altDateCitations"
       ],
-      "data_type": "csrefname",
+      "data_type": "string",
       "repeats": "y",
       "in_repeating_group": "as part of larger repeating group",
-      "opt_list_values": [],
-      "datacolumn": "altDateCitationRefname",
+      "opt_list_values": [
+        "Citation/Local",
+        "Citation/Worldcat"
+      ],
+      "datacolumn": "altDateCitationAuthorityVocabulary",
       "required": "n"
     },
     {
@@ -836,7 +641,7 @@
         ]
       },
       "source_type": "authority",
-      "source_name": "person/local",
+      "source_name": null,
       "namespace": "chronologies_common",
       "xpath": [
         "assocPersonAuthGroupList",
@@ -846,46 +651,27 @@
       "repeats": "n",
       "in_repeating_group": "y",
       "opt_list_values": [],
-      "datacolumn": "assocPersonPersonLocal",
-      "required": "n"
-    },
-    {
-      "fieldname": "assocPerson",
-      "transforms": {
-        "authority": [
-          "personauthorities",
-          "ulan_pa"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "person/ulan",
-      "namespace": "chronologies_common",
-      "xpath": [
-        "assocPersonAuthGroupList",
-        "assocPersonAuthGroup"
-      ],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "assocPersonPersonUlan",
+      "datacolumn": "assocPerson",
       "required": "n"
     },
     {
       "fieldname": "assocPerson",
       "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
       "namespace": "chronologies_common",
       "xpath": [
         "assocPersonAuthGroupList",
         "assocPersonAuthGroup"
       ],
-      "data_type": "csrefname",
+      "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "assocPersonRefname",
+      "opt_list_values": [
+        "Person/Local",
+        "Person/Ulan"
+      ],
+      "datacolumn": "assocPersonAuthorityVocabulary",
       "required": "n"
     },
     {
@@ -905,23 +691,6 @@
       "in_repeating_group": "y",
       "opt_list_values": [],
       "datacolumn": "assocPersonType",
-      "required": "n"
-    },
-    {
-      "fieldname": "assocPersonType",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "chronologies_common",
-      "xpath": [
-        "assocPersonAuthGroupList",
-        "assocPersonAuthGroup"
-      ],
-      "data_type": "csrefname",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "assocPersonTypeRefname",
       "required": "n"
     },
     {
@@ -950,7 +719,7 @@
         ]
       },
       "source_type": "authority",
-      "source_name": "citation/local",
+      "source_name": null,
       "namespace": "chronologies_common",
       "xpath": [
         "assocPersonAuthGroupList",
@@ -961,48 +730,28 @@
       "repeats": "y",
       "in_repeating_group": "as part of larger repeating group",
       "opt_list_values": [],
-      "datacolumn": "assocPersonCitationCitationLocal",
-      "required": "n"
-    },
-    {
-      "fieldname": "assocPersonCitation",
-      "transforms": {
-        "authority": [
-          "citationauthorities",
-          "worldcat"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "citation/worldcat",
-      "namespace": "chronologies_common",
-      "xpath": [
-        "assocPersonAuthGroupList",
-        "assocPersonAuthGroup",
-        "assocPersonCitations"
-      ],
-      "data_type": "string",
-      "repeats": "y",
-      "in_repeating_group": "as part of larger repeating group",
-      "opt_list_values": [],
-      "datacolumn": "assocPersonCitationCitationWorldcat",
+      "datacolumn": "assocPersonCitation",
       "required": "n"
     },
     {
       "fieldname": "assocPersonCitation",
       "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
       "namespace": "chronologies_common",
       "xpath": [
         "assocPersonAuthGroupList",
         "assocPersonAuthGroup",
         "assocPersonCitations"
       ],
-      "data_type": "csrefname",
+      "data_type": "string",
       "repeats": "y",
       "in_repeating_group": "as part of larger repeating group",
-      "opt_list_values": [],
-      "datacolumn": "assocPersonCitationRefname",
+      "opt_list_values": [
+        "Citation/Local",
+        "Citation/Worldcat"
+      ],
+      "datacolumn": "assocPersonCitationAuthorityVocabulary",
       "required": "n"
     },
     {
@@ -1031,7 +780,7 @@
         ]
       },
       "source_type": "authority",
-      "source_name": "concept/associated",
+      "source_name": null,
       "namespace": "chronologies_common",
       "xpath": [
         "assocPeopleAuthGroupList",
@@ -1041,24 +790,26 @@
       "repeats": "n",
       "in_repeating_group": "y",
       "opt_list_values": [],
-      "datacolumn": "assocPeopleConceptAssociated",
+      "datacolumn": "assocPeople",
       "required": "n"
     },
     {
       "fieldname": "assocPeople",
       "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
       "namespace": "chronologies_common",
       "xpath": [
         "assocPeopleAuthGroupList",
         "assocPeopleAuthGroup"
       ],
-      "data_type": "csrefname",
+      "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "assocPeopleRefname",
+      "opt_list_values": [
+        "Concept/Associated"
+      ],
+      "datacolumn": "assocPeopleAuthorityVocabulary",
       "required": "n"
     },
     {
@@ -1078,23 +829,6 @@
       "in_repeating_group": "y",
       "opt_list_values": [],
       "datacolumn": "assocPeopleType",
-      "required": "n"
-    },
-    {
-      "fieldname": "assocPeopleType",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "chronologies_common",
-      "xpath": [
-        "assocPeopleAuthGroupList",
-        "assocPeopleAuthGroup"
-      ],
-      "data_type": "csrefname",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "assocPeopleTypeRefname",
       "required": "n"
     },
     {
@@ -1123,7 +857,7 @@
         ]
       },
       "source_type": "authority",
-      "source_name": "citation/local",
+      "source_name": null,
       "namespace": "chronologies_common",
       "xpath": [
         "assocPeopleAuthGroupList",
@@ -1134,48 +868,28 @@
       "repeats": "y",
       "in_repeating_group": "as part of larger repeating group",
       "opt_list_values": [],
-      "datacolumn": "assocPeopleCitationCitationLocal",
-      "required": "n"
-    },
-    {
-      "fieldname": "assocPeopleCitation",
-      "transforms": {
-        "authority": [
-          "citationauthorities",
-          "worldcat"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "citation/worldcat",
-      "namespace": "chronologies_common",
-      "xpath": [
-        "assocPeopleAuthGroupList",
-        "assocPeopleAuthGroup",
-        "assocPeopleCitations"
-      ],
-      "data_type": "string",
-      "repeats": "y",
-      "in_repeating_group": "as part of larger repeating group",
-      "opt_list_values": [],
-      "datacolumn": "assocPeopleCitationCitationWorldcat",
+      "datacolumn": "assocPeopleCitation",
       "required": "n"
     },
     {
       "fieldname": "assocPeopleCitation",
       "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
       "namespace": "chronologies_common",
       "xpath": [
         "assocPeopleAuthGroupList",
         "assocPeopleAuthGroup",
         "assocPeopleCitations"
       ],
-      "data_type": "csrefname",
+      "data_type": "string",
       "repeats": "y",
       "in_repeating_group": "as part of larger repeating group",
-      "opt_list_values": [],
-      "datacolumn": "assocPeopleCitationRefname",
+      "opt_list_values": [
+        "Citation/Local",
+        "Citation/Worldcat"
+      ],
+      "datacolumn": "assocPeopleCitationAuthorityVocabulary",
       "required": "n"
     },
     {
@@ -1204,7 +918,7 @@
         ]
       },
       "source_type": "authority",
-      "source_name": "organization/local",
+      "source_name": null,
       "namespace": "chronologies_common",
       "xpath": [
         "assocOrganizationAuthGroupList",
@@ -1214,46 +928,27 @@
       "repeats": "n",
       "in_repeating_group": "y",
       "opt_list_values": [],
-      "datacolumn": "assocOrganizationOrganizationLocal",
-      "required": "n"
-    },
-    {
-      "fieldname": "assocOrganization",
-      "transforms": {
-        "authority": [
-          "orgauthorities",
-          "ulan_oa"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "organization/ulan",
-      "namespace": "chronologies_common",
-      "xpath": [
-        "assocOrganizationAuthGroupList",
-        "assocOrganizationAuthGroup"
-      ],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "assocOrganizationOrganizationUlan",
+      "datacolumn": "assocOrganization",
       "required": "n"
     },
     {
       "fieldname": "assocOrganization",
       "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
       "namespace": "chronologies_common",
       "xpath": [
         "assocOrganizationAuthGroupList",
         "assocOrganizationAuthGroup"
       ],
-      "data_type": "csrefname",
+      "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "assocOrganizationRefname",
+      "opt_list_values": [
+        "Organization/Local",
+        "Organization/Ulan"
+      ],
+      "datacolumn": "assocOrganizationAuthorityVocabulary",
       "required": "n"
     },
     {
@@ -1273,23 +968,6 @@
       "in_repeating_group": "y",
       "opt_list_values": [],
       "datacolumn": "assocOrganizationType",
-      "required": "n"
-    },
-    {
-      "fieldname": "assocOrganizationType",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "chronologies_common",
-      "xpath": [
-        "assocOrganizationAuthGroupList",
-        "assocOrganizationAuthGroup"
-      ],
-      "data_type": "csrefname",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "assocOrganizationTypeRefname",
       "required": "n"
     },
     {
@@ -1318,7 +996,7 @@
         ]
       },
       "source_type": "authority",
-      "source_name": "citation/local",
+      "source_name": null,
       "namespace": "chronologies_common",
       "xpath": [
         "assocOrganizationAuthGroupList",
@@ -1329,48 +1007,28 @@
       "repeats": "y",
       "in_repeating_group": "as part of larger repeating group",
       "opt_list_values": [],
-      "datacolumn": "assocOrganizationCitationCitationLocal",
-      "required": "n"
-    },
-    {
-      "fieldname": "assocOrganizationCitation",
-      "transforms": {
-        "authority": [
-          "citationauthorities",
-          "worldcat"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "citation/worldcat",
-      "namespace": "chronologies_common",
-      "xpath": [
-        "assocOrganizationAuthGroupList",
-        "assocOrganizationAuthGroup",
-        "assocOrganizationCitations"
-      ],
-      "data_type": "string",
-      "repeats": "y",
-      "in_repeating_group": "as part of larger repeating group",
-      "opt_list_values": [],
-      "datacolumn": "assocOrganizationCitationCitationWorldcat",
+      "datacolumn": "assocOrganizationCitation",
       "required": "n"
     },
     {
       "fieldname": "assocOrganizationCitation",
       "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
       "namespace": "chronologies_common",
       "xpath": [
         "assocOrganizationAuthGroupList",
         "assocOrganizationAuthGroup",
         "assocOrganizationCitations"
       ],
-      "data_type": "csrefname",
+      "data_type": "string",
       "repeats": "y",
       "in_repeating_group": "as part of larger repeating group",
-      "opt_list_values": [],
-      "datacolumn": "assocOrganizationCitationRefname",
+      "opt_list_values": [
+        "Citation/Local",
+        "Citation/Worldcat"
+      ],
+      "datacolumn": "assocOrganizationCitationAuthorityVocabulary",
       "required": "n"
     },
     {
@@ -1399,7 +1057,7 @@
         ]
       },
       "source_type": "authority",
-      "source_name": "concept/activity",
+      "source_name": null,
       "namespace": "chronologies_common",
       "xpath": [
         "assocConceptAuthGroupList",
@@ -1409,112 +1067,30 @@
       "repeats": "n",
       "in_repeating_group": "y",
       "opt_list_values": [],
-      "datacolumn": "assocConceptConceptActivity",
-      "required": "n"
-    },
-    {
-      "fieldname": "assocConcept",
-      "transforms": {
-        "authority": [
-          "conceptauthorities",
-          "concept"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "concept/associated",
-      "namespace": "chronologies_common",
-      "xpath": [
-        "assocConceptAuthGroupList",
-        "assocConceptAuthGroup"
-      ],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "assocConceptConceptAssociated",
-      "required": "n"
-    },
-    {
-      "fieldname": "assocConcept",
-      "transforms": {
-        "authority": [
-          "conceptauthorities",
-          "material_ca"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "concept/material",
-      "namespace": "chronologies_common",
-      "xpath": [
-        "assocConceptAuthGroupList",
-        "assocConceptAuthGroup"
-      ],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "assocConceptConceptMaterial",
-      "required": "n"
-    },
-    {
-      "fieldname": "assocConcept",
-      "transforms": {
-        "authority": [
-          "conceptauthorities",
-          "nomenclature"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "concept/nomenclature",
-      "namespace": "chronologies_common",
-      "xpath": [
-        "assocConceptAuthGroupList",
-        "assocConceptAuthGroup"
-      ],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "assocConceptConceptNomenclature",
-      "required": "n"
-    },
-    {
-      "fieldname": "assocConcept",
-      "transforms": {
-        "authority": [
-          "conceptauthorities",
-          "occasion"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "concept/occasion",
-      "namespace": "chronologies_common",
-      "xpath": [
-        "assocConceptAuthGroupList",
-        "assocConceptAuthGroup"
-      ],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "assocConceptConceptOccasion",
+      "datacolumn": "assocConcept",
       "required": "n"
     },
     {
       "fieldname": "assocConcept",
       "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
       "namespace": "chronologies_common",
       "xpath": [
         "assocConceptAuthGroupList",
         "assocConceptAuthGroup"
       ],
-      "data_type": "csrefname",
+      "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "assocConceptRefname",
+      "opt_list_values": [
+        "Concept/Activity",
+        "Concept/Associated",
+        "Concept/Material",
+        "Concept/Nomenclature",
+        "Concept/Occasion"
+      ],
+      "datacolumn": "assocConceptAuthorityVocabulary",
       "required": "n"
     },
     {
@@ -1534,23 +1110,6 @@
       "in_repeating_group": "y",
       "opt_list_values": [],
       "datacolumn": "assocConceptType",
-      "required": "n"
-    },
-    {
-      "fieldname": "assocConceptType",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "chronologies_common",
-      "xpath": [
-        "assocConceptAuthGroupList",
-        "assocConceptAuthGroup"
-      ],
-      "data_type": "csrefname",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "assocConceptTypeRefname",
       "required": "n"
     },
     {
@@ -1579,7 +1138,7 @@
         ]
       },
       "source_type": "authority",
-      "source_name": "citation/local",
+      "source_name": null,
       "namespace": "chronologies_common",
       "xpath": [
         "assocConceptAuthGroupList",
@@ -1590,48 +1149,28 @@
       "repeats": "y",
       "in_repeating_group": "as part of larger repeating group",
       "opt_list_values": [],
-      "datacolumn": "assocConceptCitationCitationLocal",
-      "required": "n"
-    },
-    {
-      "fieldname": "assocConceptCitation",
-      "transforms": {
-        "authority": [
-          "citationauthorities",
-          "worldcat"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "citation/worldcat",
-      "namespace": "chronologies_common",
-      "xpath": [
-        "assocConceptAuthGroupList",
-        "assocConceptAuthGroup",
-        "assocConceptCitations"
-      ],
-      "data_type": "string",
-      "repeats": "y",
-      "in_repeating_group": "as part of larger repeating group",
-      "opt_list_values": [],
-      "datacolumn": "assocConceptCitationCitationWorldcat",
+      "datacolumn": "assocConceptCitation",
       "required": "n"
     },
     {
       "fieldname": "assocConceptCitation",
       "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
       "namespace": "chronologies_common",
       "xpath": [
         "assocConceptAuthGroupList",
         "assocConceptAuthGroup",
         "assocConceptCitations"
       ],
-      "data_type": "csrefname",
+      "data_type": "string",
       "repeats": "y",
       "in_repeating_group": "as part of larger repeating group",
-      "opt_list_values": [],
-      "datacolumn": "assocConceptCitationRefname",
+      "opt_list_values": [
+        "Citation/Local",
+        "Citation/Worldcat"
+      ],
+      "datacolumn": "assocConceptCitationAuthorityVocabulary",
       "required": "n"
     },
     {
@@ -1660,7 +1199,7 @@
         ]
       },
       "source_type": "authority",
-      "source_name": "place/local",
+      "source_name": null,
       "namespace": "chronologies_common",
       "xpath": [
         "assocPlaceAuthGroupList",
@@ -1670,46 +1209,27 @@
       "repeats": "n",
       "in_repeating_group": "y",
       "opt_list_values": [],
-      "datacolumn": "assocPlacePlaceLocal",
-      "required": "n"
-    },
-    {
-      "fieldname": "assocPlace",
-      "transforms": {
-        "authority": [
-          "placeauthorities",
-          "tgn_place"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "place/tgn",
-      "namespace": "chronologies_common",
-      "xpath": [
-        "assocPlaceAuthGroupList",
-        "assocPlaceAuthGroup"
-      ],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "assocPlacePlaceTgn",
+      "datacolumn": "assocPlace",
       "required": "n"
     },
     {
       "fieldname": "assocPlace",
       "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
       "namespace": "chronologies_common",
       "xpath": [
         "assocPlaceAuthGroupList",
         "assocPlaceAuthGroup"
       ],
-      "data_type": "csrefname",
+      "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "assocPlaceRefname",
+      "opt_list_values": [
+        "Place/Local",
+        "Place/Tgn"
+      ],
+      "datacolumn": "assocPlaceAuthorityVocabulary",
       "required": "n"
     },
     {
@@ -1729,23 +1249,6 @@
       "in_repeating_group": "y",
       "opt_list_values": [],
       "datacolumn": "assocPlaceType",
-      "required": "n"
-    },
-    {
-      "fieldname": "assocPlaceType",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "chronologies_common",
-      "xpath": [
-        "assocPlaceAuthGroupList",
-        "assocPlaceAuthGroup"
-      ],
-      "data_type": "csrefname",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "assocPlaceTypeRefname",
       "required": "n"
     },
     {
@@ -1774,7 +1277,7 @@
         ]
       },
       "source_type": "authority",
-      "source_name": "citation/local",
+      "source_name": null,
       "namespace": "chronologies_common",
       "xpath": [
         "assocPlaceAuthGroupList",
@@ -1785,48 +1288,28 @@
       "repeats": "y",
       "in_repeating_group": "as part of larger repeating group",
       "opt_list_values": [],
-      "datacolumn": "assocPlaceCitationCitationLocal",
-      "required": "n"
-    },
-    {
-      "fieldname": "assocPlaceCitation",
-      "transforms": {
-        "authority": [
-          "citationauthorities",
-          "worldcat"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "citation/worldcat",
-      "namespace": "chronologies_common",
-      "xpath": [
-        "assocPlaceAuthGroupList",
-        "assocPlaceAuthGroup",
-        "assocPlaceCitations"
-      ],
-      "data_type": "string",
-      "repeats": "y",
-      "in_repeating_group": "as part of larger repeating group",
-      "opt_list_values": [],
-      "datacolumn": "assocPlaceCitationCitationWorldcat",
+      "datacolumn": "assocPlaceCitation",
       "required": "n"
     },
     {
       "fieldname": "assocPlaceCitation",
       "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
       "namespace": "chronologies_common",
       "xpath": [
         "assocPlaceAuthGroupList",
         "assocPlaceAuthGroup",
         "assocPlaceCitations"
       ],
-      "data_type": "csrefname",
+      "data_type": "string",
       "repeats": "y",
       "in_repeating_group": "as part of larger repeating group",
-      "opt_list_values": [],
-      "datacolumn": "assocPlaceCitationRefname",
+      "opt_list_values": [
+        "Citation/Local",
+        "Citation/Worldcat"
+      ],
+      "datacolumn": "assocPlaceCitationAuthorityVocabulary",
       "required": "n"
     },
     {
@@ -1855,7 +1338,7 @@
         ]
       },
       "source_type": "authority",
-      "source_name": "chronology/era",
+      "source_name": null,
       "namespace": "chronologies_common",
       "xpath": [
         "assocChronologyAuthGroupList",
@@ -1865,46 +1348,27 @@
       "repeats": "n",
       "in_repeating_group": "y",
       "opt_list_values": [],
-      "datacolumn": "assocChronologyChronologyEra",
-      "required": "n"
-    },
-    {
-      "fieldname": "assocChronology",
-      "transforms": {
-        "authority": [
-          "chronologyauthorities",
-          "event"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "chronology/event",
-      "namespace": "chronologies_common",
-      "xpath": [
-        "assocChronologyAuthGroupList",
-        "assocChronologyAuthGroup"
-      ],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "assocChronologyChronologyEvent",
+      "datacolumn": "assocChronology",
       "required": "n"
     },
     {
       "fieldname": "assocChronology",
       "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
       "namespace": "chronologies_common",
       "xpath": [
         "assocChronologyAuthGroupList",
         "assocChronologyAuthGroup"
       ],
-      "data_type": "csrefname",
+      "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "assocChronologyRefname",
+      "opt_list_values": [
+        "Chronology/Era",
+        "Chronology/Event"
+      ],
+      "datacolumn": "assocChronologyAuthorityVocabulary",
       "required": "n"
     },
     {
@@ -1924,23 +1388,6 @@
       "in_repeating_group": "y",
       "opt_list_values": [],
       "datacolumn": "assocChronologyType",
-      "required": "n"
-    },
-    {
-      "fieldname": "assocChronologyType",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "chronologies_common",
-      "xpath": [
-        "assocChronologyAuthGroupList",
-        "assocChronologyAuthGroup"
-      ],
-      "data_type": "csrefname",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "assocChronologyTypeRefname",
       "required": "n"
     },
     {
@@ -1969,7 +1416,7 @@
         ]
       },
       "source_type": "authority",
-      "source_name": "citation/local",
+      "source_name": null,
       "namespace": "chronologies_common",
       "xpath": [
         "assocChronologyAuthGroupList",
@@ -1980,48 +1427,28 @@
       "repeats": "y",
       "in_repeating_group": "as part of larger repeating group",
       "opt_list_values": [],
-      "datacolumn": "assocChronologyCitationCitationLocal",
-      "required": "n"
-    },
-    {
-      "fieldname": "assocChronologyCitation",
-      "transforms": {
-        "authority": [
-          "citationauthorities",
-          "worldcat"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "citation/worldcat",
-      "namespace": "chronologies_common",
-      "xpath": [
-        "assocChronologyAuthGroupList",
-        "assocChronologyAuthGroup",
-        "assocChronologyCitations"
-      ],
-      "data_type": "string",
-      "repeats": "y",
-      "in_repeating_group": "as part of larger repeating group",
-      "opt_list_values": [],
-      "datacolumn": "assocChronologyCitationCitationWorldcat",
+      "datacolumn": "assocChronologyCitation",
       "required": "n"
     },
     {
       "fieldname": "assocChronologyCitation",
       "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
       "namespace": "chronologies_common",
       "xpath": [
         "assocChronologyAuthGroupList",
         "assocChronologyAuthGroup",
         "assocChronologyCitations"
       ],
-      "data_type": "csrefname",
+      "data_type": "string",
       "repeats": "y",
       "in_repeating_group": "as part of larger repeating group",
-      "opt_list_values": [],
-      "datacolumn": "assocChronologyCitationRefname",
+      "opt_list_values": [
+        "Citation/Local",
+        "Citation/Worldcat"
+      ],
+      "datacolumn": "assocChronologyCitationAuthorityVocabulary",
       "required": "n"
     },
     {

@@ -68,23 +68,6 @@
       "required": "n"
     },
     {
-      "fieldname": "status",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "conservation_common",
-      "xpath": [
-        "conservationStatusGroupList",
-        "conservationStatusGroup"
-      ],
-      "data_type": "csrefname",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "statusRefname",
-      "required": "n"
-    },
-    {
       "fieldname": "statusDate",
       "transforms": {},
       "source_type": "na",
@@ -118,20 +101,6 @@
       "required": "n"
     },
     {
-      "fieldname": "treatmentPurpose",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "conservation_common",
-      "xpath": [],
-      "data_type": "csrefname",
-      "repeats": "n",
-      "in_repeating_group": "n/a",
-      "opt_list_values": [],
-      "datacolumn": "treatmentPurposeRefname",
-      "required": "n"
-    },
-    {
       "fieldname": "conservator",
       "transforms": {
         "authority": [
@@ -140,7 +109,7 @@
         ]
       },
       "source_type": "authority",
-      "source_name": "person/local",
+      "source_name": null,
       "namespace": "conservation_common",
       "xpath": [
         "conservators"
@@ -149,44 +118,26 @@
       "repeats": "y",
       "in_repeating_group": "n",
       "opt_list_values": [],
-      "datacolumn": "conservatorPersonLocal",
-      "required": "n"
-    },
-    {
-      "fieldname": "conservator",
-      "transforms": {
-        "authority": [
-          "orgauthorities",
-          "organization"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "organization/local",
-      "namespace": "conservation_common",
-      "xpath": [
-        "conservators"
-      ],
-      "data_type": "string",
-      "repeats": "y",
-      "in_repeating_group": "n",
-      "opt_list_values": [],
-      "datacolumn": "conservatorOrganizationLocal",
+      "datacolumn": "conservator",
       "required": "n"
     },
     {
       "fieldname": "conservator",
       "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
       "namespace": "conservation_common",
       "xpath": [
         "conservators"
       ],
-      "data_type": "csrefname",
+      "data_type": "string",
       "repeats": "y",
       "in_repeating_group": "n",
-      "opt_list_values": [],
-      "datacolumn": "conservatorRefname",
+      "opt_list_values": [
+        "Person/Local",
+        "Organization/Local"
+      ],
+      "datacolumn": "conservatorAuthorityVocabulary",
       "required": "n"
     },
     {
@@ -198,7 +149,7 @@
         ]
       },
       "source_type": "authority",
-      "source_name": "person/local",
+      "source_name": null,
       "namespace": "conservation_common",
       "xpath": [
         "otherPartyGroupList",
@@ -208,46 +159,27 @@
       "repeats": "n",
       "in_repeating_group": "y",
       "opt_list_values": [],
-      "datacolumn": "otherPartyPersonLocal",
-      "required": "n"
-    },
-    {
-      "fieldname": "otherParty",
-      "transforms": {
-        "authority": [
-          "orgauthorities",
-          "organization"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "organization/local",
-      "namespace": "conservation_common",
-      "xpath": [
-        "otherPartyGroupList",
-        "otherPartyGroup"
-      ],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "otherPartyOrganizationLocal",
+      "datacolumn": "otherParty",
       "required": "n"
     },
     {
       "fieldname": "otherParty",
       "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
       "namespace": "conservation_common",
       "xpath": [
         "otherPartyGroupList",
         "otherPartyGroup"
       ],
-      "data_type": "csrefname",
+      "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "otherPartyRefname",
+      "opt_list_values": [
+        "Person/Local",
+        "Organization/Local"
+      ],
+      "datacolumn": "otherPartyAuthorityVocabulary",
       "required": "n"
     },
     {
@@ -267,23 +199,6 @@
       "in_repeating_group": "y",
       "opt_list_values": [],
       "datacolumn": "otherPartyRole",
-      "required": "n"
-    },
-    {
-      "fieldname": "otherPartyRole",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "conservation_common",
-      "xpath": [
-        "otherPartyGroupList",
-        "otherPartyGroup"
-      ],
-      "data_type": "csrefname",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "otherPartyRoleRefname",
       "required": "n"
     },
     {
@@ -312,7 +227,7 @@
         ]
       },
       "source_type": "authority",
-      "source_name": "person/local",
+      "source_name": null,
       "namespace": "conservation_common",
       "xpath": [
         "examinationGroupList",
@@ -322,24 +237,26 @@
       "repeats": "n",
       "in_repeating_group": "y",
       "opt_list_values": [],
-      "datacolumn": "examinationStaffPersonLocal",
+      "datacolumn": "examinationStaff",
       "required": "n"
     },
     {
       "fieldname": "examinationStaff",
       "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
       "namespace": "conservation_common",
       "xpath": [
         "examinationGroupList",
         "examinationGroup"
       ],
-      "data_type": "csrefname",
+      "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "examinationStaffRefname",
+      "opt_list_values": [
+        "Person/Local"
+      ],
+      "datacolumn": "examinationStaffAuthorityVocabulary",
       "required": "n"
     },
     {
@@ -359,23 +276,6 @@
       "in_repeating_group": "y",
       "opt_list_values": [],
       "datacolumn": "examinationPhase",
-      "required": "n"
-    },
-    {
-      "fieldname": "examinationPhase",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "conservation_common",
-      "xpath": [
-        "examinationGroupList",
-        "examinationGroup"
-      ],
-      "data_type": "csrefname",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "examinationPhaseRefname",
       "required": "n"
     },
     {
@@ -449,28 +349,30 @@
         ]
       },
       "source_type": "authority",
-      "source_name": "person/local",
+      "source_name": null,
       "namespace": "conservation_common",
       "xpath": [],
       "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "n/a",
       "opt_list_values": [],
-      "datacolumn": "approvedByPersonLocal",
+      "datacolumn": "approvedBy",
       "required": "n"
     },
     {
       "fieldname": "approvedBy",
       "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
       "namespace": "conservation_common",
       "xpath": [],
-      "data_type": "csrefname",
+      "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "n/a",
-      "opt_list_values": [],
-      "datacolumn": "approvedByRefname",
+      "opt_list_values": [
+        "Person/Local"
+      ],
+      "datacolumn": "approvedByAuthorityVocabulary",
       "required": "n"
     },
     {
@@ -552,28 +454,30 @@
         ]
       },
       "source_type": "authority",
-      "source_name": "person/local",
+      "source_name": null,
       "namespace": "conservation_common",
       "xpath": [],
       "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "n/a",
       "opt_list_values": [],
-      "datacolumn": "researcherPersonLocal",
+      "datacolumn": "researcher",
       "required": "n"
     },
     {
       "fieldname": "researcher",
       "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
       "namespace": "conservation_common",
       "xpath": [],
-      "data_type": "csrefname",
+      "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "n/a",
-      "opt_list_values": [],
-      "datacolumn": "researcherRefname",
+      "opt_list_values": [
+        "Person/Local"
+      ],
+      "datacolumn": "researcherAuthorityVocabulary",
       "required": "n"
     },
     {
@@ -633,7 +537,7 @@
         ]
       },
       "source_type": "authority",
-      "source_name": "person/local",
+      "source_name": null,
       "namespace": "conservation_common",
       "xpath": [
         "destAnalysisGroupList",
@@ -643,24 +547,26 @@
       "repeats": "n",
       "in_repeating_group": "y",
       "opt_list_values": [],
-      "datacolumn": "sampleByPersonLocal",
+      "datacolumn": "sampleBy",
       "required": "n"
     },
     {
       "fieldname": "sampleBy",
       "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
       "namespace": "conservation_common",
       "xpath": [
         "destAnalysisGroupList",
         "destAnalysisGroup"
       ],
-      "data_type": "csrefname",
+      "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "sampleByRefname",
+      "opt_list_values": [
+        "Person/Local"
+      ],
+      "datacolumn": "sampleByAuthorityVocabulary",
       "required": "n"
     },
     {

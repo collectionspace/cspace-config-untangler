@@ -1,0 +1,8 @@
+"Before importing CSV, delete initial column and rows above the CSVHEADER row","","","","","","","","","","","","",""
+REQUIRED,y,y,y,n,n,n,n,n,n,n,n,n,n
+DATA TYPE,string,string,string,string,string,date,string,string,date,date,string,string,string
+REPEATABLE FIELD?,n,n,n,n,n,n,n,y,n,n,n,n,n
+REPEATING FIELD GROUP,"","","","","","","","","","","","",""
+VALUE SOURCE TYPE,na,authority,authority vocabulary indication,optionlist,na,na,optionlist,optionlist,na,na,authority,authority vocabulary indication,na
+VALUE SOURCE,"",,"","dangerous, suitable, temporary, unsuitable","","","collections-facility-move, conservation, exhibition, inventory, loan, newstoragelocation, photography, repatriation-preparation, research","forklift, handcarried, trolley","","",,"",""
+CSVHEADER,movementReferenceNumber,currentLocation,currentLocationAuthorityVocabulary,currentLocationFitness,currentLocationNote,locationDate,reasonForMove,movementMethod,plannedRemovalDate,removalDate,movementContact,movementContactAuthorityVocabulary,movementNote

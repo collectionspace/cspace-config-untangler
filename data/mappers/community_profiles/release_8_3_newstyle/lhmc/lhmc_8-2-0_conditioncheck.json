@@ -119,47 +119,31 @@
         ]
       },
       "source_type": "authority",
-      "source_name": "person/local",
+      "source_name": null,
       "namespace": "conditionchecks_common",
       "xpath": [],
       "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "n/a",
       "opt_list_values": [],
-      "datacolumn": "conditionCheckerPersonLocal",
-      "required": "n"
-    },
-    {
-      "fieldname": "conditionChecker",
-      "transforms": {
-        "authority": [
-          "orgauthorities",
-          "organization"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "organization/local",
-      "namespace": "conditionchecks_common",
-      "xpath": [],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "n/a",
-      "opt_list_values": [],
-      "datacolumn": "conditionCheckerOrganizationLocal",
+      "datacolumn": "conditionChecker",
       "required": "n"
     },
     {
       "fieldname": "conditionChecker",
       "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
       "namespace": "conditionchecks_common",
       "xpath": [],
-      "data_type": "csrefname",
+      "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "n/a",
-      "opt_list_values": [],
-      "datacolumn": "conditionCheckerRefname",
+      "opt_list_values": [
+        "Person/Local",
+        "Organization/Local"
+      ],
+      "datacolumn": "conditionCheckerAuthorityVocabulary",
       "required": "n"
     },
     {
@@ -389,23 +373,6 @@
       "required": "n"
     },
     {
-      "fieldname": "conditionLHMC",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "conditionchecks_lhmc",
-      "xpath": [
-        "conditionCheckLHMCGroupList",
-        "conditionCheckLHMCGroup"
-      ],
-      "data_type": "csrefname",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "conditionLHMCRefname",
-      "required": "n"
-    },
-    {
       "fieldname": "conditionFacetLHMC",
       "transforms": {
         "vocabulary": "conditionfacet"
@@ -422,23 +389,6 @@
       "in_repeating_group": "y",
       "opt_list_values": [],
       "datacolumn": "conditionFacetLHMC",
-      "required": "n"
-    },
-    {
-      "fieldname": "conditionFacetLHMC",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "conditionchecks_lhmc",
-      "xpath": [
-        "conditionCheckLHMCGroupList",
-        "conditionCheckLHMCGroup"
-      ],
-      "data_type": "csrefname",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "conditionFacetLHMCRefname",
       "required": "n"
     },
     {
@@ -503,20 +453,6 @@
       "in_repeating_group": "n/a",
       "opt_list_values": [],
       "datacolumn": "maintenanceCycle",
-      "required": "n"
-    },
-    {
-      "fieldname": "maintenanceCycle",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "conditionchecks_lhmc",
-      "xpath": [],
-      "data_type": "csrefname",
-      "repeats": "n",
-      "in_repeating_group": "n/a",
-      "opt_list_values": [],
-      "datacolumn": "maintenanceCycleRefname",
       "required": "n"
     },
     {

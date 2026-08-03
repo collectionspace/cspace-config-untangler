@@ -46,85 +46,33 @@
         ]
       },
       "source_type": "authority",
-      "source_name": "location/local",
+      "source_name": null,
       "namespace": "movements_common",
       "xpath": [],
       "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "n/a",
       "opt_list_values": [],
-      "datacolumn": "normalLocationLocationLocal",
-      "required": "n"
-    },
-    {
-      "fieldname": "normalLocation",
-      "transforms": {
-        "authority": [
-          "locationauthorities",
-          "offsite_sla"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "location/offsite",
-      "namespace": "movements_common",
-      "xpath": [],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "n/a",
-      "opt_list_values": [],
-      "datacolumn": "normalLocationLocationOffsite",
-      "required": "n"
-    },
-    {
-      "fieldname": "normalLocation",
-      "transforms": {
-        "authority": [
-          "orgauthorities",
-          "organization"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "organization/local",
-      "namespace": "movements_common",
-      "xpath": [],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "n/a",
-      "opt_list_values": [],
-      "datacolumn": "normalLocationOrganizationLocal",
-      "required": "n"
-    },
-    {
-      "fieldname": "normalLocation",
-      "transforms": {
-        "authority": [
-          "placeauthorities",
-          "place"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "place/local",
-      "namespace": "movements_common",
-      "xpath": [],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "n/a",
-      "opt_list_values": [],
-      "datacolumn": "normalLocationPlaceLocal",
+      "datacolumn": "normalLocation",
       "required": "n"
     },
     {
       "fieldname": "normalLocation",
       "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
       "namespace": "movements_common",
       "xpath": [],
-      "data_type": "csrefname",
+      "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "n/a",
-      "opt_list_values": [],
-      "datacolumn": "normalLocationRefname",
+      "opt_list_values": [
+        "Location/Local",
+        "Location/Offsite",
+        "Organization/Local",
+        "Place/Local"
+      ],
+      "datacolumn": "normalLocationAuthorityVocabulary",
       "required": "n"
     },
     {
@@ -136,85 +84,33 @@
         ]
       },
       "source_type": "authority",
-      "source_name": "location/local",
+      "source_name": null,
       "namespace": "movements_common",
       "xpath": [],
       "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "n/a",
       "opt_list_values": [],
-      "datacolumn": "currentLocationLocationLocal",
-      "required": "y"
-    },
-    {
-      "fieldname": "currentLocation",
-      "transforms": {
-        "authority": [
-          "locationauthorities",
-          "offsite_sla"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "location/offsite",
-      "namespace": "movements_common",
-      "xpath": [],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "n/a",
-      "opt_list_values": [],
-      "datacolumn": "currentLocationLocationOffsite",
-      "required": "y"
-    },
-    {
-      "fieldname": "currentLocation",
-      "transforms": {
-        "authority": [
-          "orgauthorities",
-          "organization"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "organization/local",
-      "namespace": "movements_common",
-      "xpath": [],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "n/a",
-      "opt_list_values": [],
-      "datacolumn": "currentLocationOrganizationLocal",
-      "required": "y"
-    },
-    {
-      "fieldname": "currentLocation",
-      "transforms": {
-        "authority": [
-          "placeauthorities",
-          "place"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "place/local",
-      "namespace": "movements_common",
-      "xpath": [],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "n/a",
-      "opt_list_values": [],
-      "datacolumn": "currentLocationPlaceLocal",
+      "datacolumn": "currentLocation",
       "required": "y"
     },
     {
       "fieldname": "currentLocation",
       "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
       "namespace": "movements_common",
       "xpath": [],
-      "data_type": "csrefname",
+      "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "n/a",
-      "opt_list_values": [],
-      "datacolumn": "currentLocationRefname",
+      "opt_list_values": [
+        "Location/Local",
+        "Location/Offsite",
+        "Organization/Local",
+        "Place/Local"
+      ],
+      "datacolumn": "currentLocationAuthorityVocabulary",
       "required": "y"
     },
     {
@@ -345,28 +241,30 @@
         ]
       },
       "source_type": "authority",
-      "source_name": "person/local",
+      "source_name": null,
       "namespace": "movements_common",
       "xpath": [],
       "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "n/a",
       "opt_list_values": [],
-      "datacolumn": "movementContactPersonLocal",
+      "datacolumn": "movementContact",
       "required": "n"
     },
     {
       "fieldname": "movementContact",
       "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
       "namespace": "movements_common",
       "xpath": [],
-      "data_type": "csrefname",
+      "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "n/a",
-      "opt_list_values": [],
-      "datacolumn": "movementContactRefname",
+      "opt_list_values": [
+        "Person/Local"
+      ],
+      "datacolumn": "movementContactAuthorityVocabulary",
       "required": "n"
     },
     {
@@ -458,7 +356,7 @@
         ]
       },
       "source_type": "authority",
-      "source_name": "person/local",
+      "source_name": null,
       "namespace": "movements_common",
       "xpath": [
         "inventoryContactList"
@@ -467,23 +365,25 @@
       "repeats": "y",
       "in_repeating_group": "n",
       "opt_list_values": [],
-      "datacolumn": "inventoryContactPersonLocal",
+      "datacolumn": "inventoryContact",
       "required": "n"
     },
     {
       "fieldname": "inventoryContact",
       "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
       "namespace": "movements_common",
       "xpath": [
         "inventoryContactList"
       ],
-      "data_type": "csrefname",
+      "data_type": "string",
       "repeats": "y",
       "in_repeating_group": "n",
-      "opt_list_values": [],
-      "datacolumn": "inventoryContactRefname",
+      "opt_list_values": [
+        "Person/Local"
+      ],
+      "datacolumn": "inventoryContactAuthorityVocabulary",
       "required": "n"
     },
     {

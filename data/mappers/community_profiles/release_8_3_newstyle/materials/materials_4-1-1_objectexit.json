@@ -114,85 +114,33 @@
         ]
       },
       "source_type": "authority",
-      "source_name": "person/local",
+      "source_name": null,
       "namespace": "objectexit_common",
       "xpath": [],
       "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "n/a",
       "opt_list_values": [],
-      "datacolumn": "currentOwnerPersonLocal",
-      "required": "n"
-    },
-    {
-      "fieldname": "currentOwner",
-      "transforms": {
-        "authority": [
-          "personauthorities",
-          "person_shared"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "person/shared",
-      "namespace": "objectexit_common",
-      "xpath": [],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "n/a",
-      "opt_list_values": [],
-      "datacolumn": "currentOwnerPersonShared",
-      "required": "n"
-    },
-    {
-      "fieldname": "currentOwner",
-      "transforms": {
-        "authority": [
-          "orgauthorities",
-          "organization"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "organization/local",
-      "namespace": "objectexit_common",
-      "xpath": [],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "n/a",
-      "opt_list_values": [],
-      "datacolumn": "currentOwnerOrganizationLocal",
-      "required": "n"
-    },
-    {
-      "fieldname": "currentOwner",
-      "transforms": {
-        "authority": [
-          "orgauthorities",
-          "organization_shared"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "organization/shared",
-      "namespace": "objectexit_common",
-      "xpath": [],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "n/a",
-      "opt_list_values": [],
-      "datacolumn": "currentOwnerOrganizationShared",
+      "datacolumn": "currentOwner",
       "required": "n"
     },
     {
       "fieldname": "currentOwner",
       "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
       "namespace": "objectexit_common",
       "xpath": [],
-      "data_type": "csrefname",
+      "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "n/a",
-      "opt_list_values": [],
-      "datacolumn": "currentOwnerRefname",
+      "opt_list_values": [
+        "Person/Local",
+        "Person/Shared",
+        "Organization/Local",
+        "Organization/Shared"
+      ],
+      "datacolumn": "currentOwnerAuthorityVocabulary",
       "required": "n"
     },
     {
@@ -204,85 +152,33 @@
         ]
       },
       "source_type": "authority",
-      "source_name": "person/local",
+      "source_name": null,
       "namespace": "objectexit_common",
       "xpath": [],
       "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "n/a",
       "opt_list_values": [],
-      "datacolumn": "depositorPersonLocal",
-      "required": "n"
-    },
-    {
-      "fieldname": "depositor",
-      "transforms": {
-        "authority": [
-          "personauthorities",
-          "person_shared"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "person/shared",
-      "namespace": "objectexit_common",
-      "xpath": [],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "n/a",
-      "opt_list_values": [],
-      "datacolumn": "depositorPersonShared",
-      "required": "n"
-    },
-    {
-      "fieldname": "depositor",
-      "transforms": {
-        "authority": [
-          "orgauthorities",
-          "organization"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "organization/local",
-      "namespace": "objectexit_common",
-      "xpath": [],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "n/a",
-      "opt_list_values": [],
-      "datacolumn": "depositorOrganizationLocal",
-      "required": "n"
-    },
-    {
-      "fieldname": "depositor",
-      "transforms": {
-        "authority": [
-          "orgauthorities",
-          "organization_shared"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "organization/shared",
-      "namespace": "objectexit_common",
-      "xpath": [],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "n/a",
-      "opt_list_values": [],
-      "datacolumn": "depositorOrganizationShared",
+      "datacolumn": "depositor",
       "required": "n"
     },
     {
       "fieldname": "depositor",
       "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
       "namespace": "objectexit_common",
       "xpath": [],
-      "data_type": "csrefname",
+      "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "n/a",
-      "opt_list_values": [],
-      "datacolumn": "depositorRefname",
+      "opt_list_values": [
+        "Person/Local",
+        "Person/Shared",
+        "Organization/Local",
+        "Organization/Shared"
+      ],
+      "datacolumn": "depositorAuthorityVocabulary",
       "required": "n"
     },
     {
@@ -336,28 +232,30 @@
         ]
       },
       "source_type": "authority",
-      "source_name": "person/local",
+      "source_name": null,
       "namespace": "objectexit_common",
       "xpath": [],
       "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "n/a",
       "opt_list_values": [],
-      "datacolumn": "deaccessionAuthorizerPersonLocal",
+      "datacolumn": "deaccessionAuthorizer",
       "required": "n"
     },
     {
       "fieldname": "deaccessionAuthorizer",
       "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
       "namespace": "objectexit_common",
       "xpath": [],
-      "data_type": "csrefname",
+      "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "n/a",
-      "opt_list_values": [],
-      "datacolumn": "deaccessionAuthorizerRefname",
+      "opt_list_values": [
+        "Person/Local"
+      ],
+      "datacolumn": "deaccessionAuthorizerAuthorityVocabulary",
       "required": "n"
     },
     {
@@ -394,23 +292,6 @@
       "required": "n"
     },
     {
-      "fieldname": "deaccessionApprovalGroup",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "objectexit_common",
-      "xpath": [
-        "deacApprovalGroupList",
-        "deacApprovalGroup"
-      ],
-      "data_type": "csrefname",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "deaccessionApprovalGroupRefname",
-      "required": "n"
-    },
-    {
       "fieldname": "deaccessionApprovalIndividual",
       "transforms": {
         "authority": [
@@ -419,7 +300,7 @@
         ]
       },
       "source_type": "authority",
-      "source_name": "person/local",
+      "source_name": null,
       "namespace": "objectexit_common",
       "xpath": [
         "deacApprovalGroupList",
@@ -429,24 +310,26 @@
       "repeats": "n",
       "in_repeating_group": "y",
       "opt_list_values": [],
-      "datacolumn": "deaccessionApprovalIndividualPersonLocal",
+      "datacolumn": "deaccessionApprovalIndividual",
       "required": "n"
     },
     {
       "fieldname": "deaccessionApprovalIndividual",
       "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
       "namespace": "objectexit_common",
       "xpath": [
         "deacApprovalGroupList",
         "deacApprovalGroup"
       ],
-      "data_type": "csrefname",
+      "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "deaccessionApprovalIndividualRefname",
+      "opt_list_values": [
+        "Person/Local"
+      ],
+      "datacolumn": "deaccessionApprovalIndividualAuthorityVocabulary",
       "required": "n"
     },
     {
@@ -466,23 +349,6 @@
       "in_repeating_group": "y",
       "opt_list_values": [],
       "datacolumn": "deaccessionApprovalStatus",
-      "required": "n"
-    },
-    {
-      "fieldname": "deaccessionApprovalStatus",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "objectexit_common",
-      "xpath": [
-        "deacApprovalGroupList",
-        "deacApprovalGroup"
-      ],
-      "data_type": "csrefname",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "deaccessionApprovalStatusRefname",
       "required": "n"
     },
     {
@@ -564,20 +430,6 @@
       "required": "n"
     },
     {
-      "fieldname": "disposalMethod",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "objectexit_common",
-      "xpath": [],
-      "data_type": "csrefname",
-      "repeats": "n",
-      "in_repeating_group": "n/a",
-      "opt_list_values": [],
-      "datacolumn": "disposalMethodRefname",
-      "required": "n"
-    },
-    {
       "fieldname": "displosalReason",
       "transforms": {},
       "source_type": "na",
@@ -600,85 +452,33 @@
         ]
       },
       "source_type": "authority",
-      "source_name": "person/local",
+      "source_name": null,
       "namespace": "objectexit_common",
       "xpath": [],
       "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "n/a",
       "opt_list_values": [],
-      "datacolumn": "disposalProposedRecipientPersonLocal",
-      "required": "n"
-    },
-    {
-      "fieldname": "disposalProposedRecipient",
-      "transforms": {
-        "authority": [
-          "personauthorities",
-          "person_shared"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "person/shared",
-      "namespace": "objectexit_common",
-      "xpath": [],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "n/a",
-      "opt_list_values": [],
-      "datacolumn": "disposalProposedRecipientPersonShared",
-      "required": "n"
-    },
-    {
-      "fieldname": "disposalProposedRecipient",
-      "transforms": {
-        "authority": [
-          "orgauthorities",
-          "organization"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "organization/local",
-      "namespace": "objectexit_common",
-      "xpath": [],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "n/a",
-      "opt_list_values": [],
-      "datacolumn": "disposalProposedRecipientOrganizationLocal",
-      "required": "n"
-    },
-    {
-      "fieldname": "disposalProposedRecipient",
-      "transforms": {
-        "authority": [
-          "orgauthorities",
-          "organization_shared"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "organization/shared",
-      "namespace": "objectexit_common",
-      "xpath": [],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "n/a",
-      "opt_list_values": [],
-      "datacolumn": "disposalProposedRecipientOrganizationShared",
+      "datacolumn": "disposalProposedRecipient",
       "required": "n"
     },
     {
       "fieldname": "disposalProposedRecipient",
       "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
       "namespace": "objectexit_common",
       "xpath": [],
-      "data_type": "csrefname",
+      "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "n/a",
-      "opt_list_values": [],
-      "datacolumn": "disposalProposedRecipientRefname",
+      "opt_list_values": [
+        "Person/Local",
+        "Person/Shared",
+        "Organization/Local",
+        "Organization/Shared"
+      ],
+      "datacolumn": "disposalProposedRecipientAuthorityVocabulary",
       "required": "n"
     },
     {
@@ -690,85 +490,33 @@
         ]
       },
       "source_type": "authority",
-      "source_name": "person/local",
+      "source_name": null,
       "namespace": "objectexit_common",
       "xpath": [],
       "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "n/a",
       "opt_list_values": [],
-      "datacolumn": "disposalRecipientPersonLocal",
-      "required": "n"
-    },
-    {
-      "fieldname": "disposalRecipient",
-      "transforms": {
-        "authority": [
-          "personauthorities",
-          "person_shared"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "person/shared",
-      "namespace": "objectexit_common",
-      "xpath": [],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "n/a",
-      "opt_list_values": [],
-      "datacolumn": "disposalRecipientPersonShared",
-      "required": "n"
-    },
-    {
-      "fieldname": "disposalRecipient",
-      "transforms": {
-        "authority": [
-          "orgauthorities",
-          "organization"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "organization/local",
-      "namespace": "objectexit_common",
-      "xpath": [],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "n/a",
-      "opt_list_values": [],
-      "datacolumn": "disposalRecipientOrganizationLocal",
-      "required": "n"
-    },
-    {
-      "fieldname": "disposalRecipient",
-      "transforms": {
-        "authority": [
-          "orgauthorities",
-          "organization_shared"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "organization/shared",
-      "namespace": "objectexit_common",
-      "xpath": [],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "n/a",
-      "opt_list_values": [],
-      "datacolumn": "disposalRecipientOrganizationShared",
+      "datacolumn": "disposalRecipient",
       "required": "n"
     },
     {
       "fieldname": "disposalRecipient",
       "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
       "namespace": "objectexit_common",
       "xpath": [],
-      "data_type": "csrefname",
+      "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "n/a",
-      "opt_list_values": [],
-      "datacolumn": "disposalRecipientRefname",
+      "opt_list_values": [
+        "Person/Local",
+        "Person/Shared",
+        "Organization/Local",
+        "Organization/Shared"
+      ],
+      "datacolumn": "disposalRecipientAuthorityVocabulary",
       "required": "n"
     },
     {
@@ -785,20 +533,6 @@
       "in_repeating_group": "n/a",
       "opt_list_values": [],
       "datacolumn": "disposalCurrency",
-      "required": "n"
-    },
-    {
-      "fieldname": "disposalCurrency",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "objectexit_common",
-      "xpath": [],
-      "data_type": "csrefname",
-      "repeats": "n",
-      "in_repeating_group": "n/a",
-      "opt_list_values": [],
-      "datacolumn": "disposalCurrencyRefname",
       "required": "n"
     },
     {
@@ -829,20 +563,6 @@
       "in_repeating_group": "n/a",
       "opt_list_values": [],
       "datacolumn": "groupDisposalCurrency",
-      "required": "n"
-    },
-    {
-      "fieldname": "groupDisposalCurrency",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "objectexit_common",
-      "xpath": [],
-      "data_type": "csrefname",
-      "repeats": "n",
-      "in_repeating_group": "n/a",
-      "opt_list_values": [],
-      "datacolumn": "groupDisposalCurrencyRefname",
       "required": "n"
     },
     {

@@ -76,20 +76,6 @@
       "required": "n"
     },
     {
-      "fieldname": "reason",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "exits_common",
-      "xpath": [],
-      "data_type": "csrefname",
-      "repeats": "n",
-      "in_repeating_group": "n/a",
-      "opt_list_values": [],
-      "datacolumn": "reasonRefname",
-      "required": "n"
-    },
-    {
       "fieldname": "method",
       "transforms": {
         "vocabulary": "objexitmethod"
@@ -108,22 +94,6 @@
       "required": "n"
     },
     {
-      "fieldname": "method",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "exits_common",
-      "xpath": [
-        "methods"
-      ],
-      "data_type": "csrefname",
-      "repeats": "y",
-      "in_repeating_group": "n",
-      "opt_list_values": [],
-      "datacolumn": "methodRefname",
-      "required": "n"
-    },
-    {
       "fieldname": "owner",
       "transforms": {
         "authority": [
@@ -132,7 +102,7 @@
         ]
       },
       "source_type": "authority",
-      "source_name": "person/local",
+      "source_name": null,
       "namespace": "exits_common",
       "xpath": [
         "owners"
@@ -141,44 +111,26 @@
       "repeats": "y",
       "in_repeating_group": "n",
       "opt_list_values": [],
-      "datacolumn": "ownerPerson",
-      "required": "n"
-    },
-    {
-      "fieldname": "owner",
-      "transforms": {
-        "authority": [
-          "orgauthorities",
-          "organization"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "organization/local",
-      "namespace": "exits_common",
-      "xpath": [
-        "owners"
-      ],
-      "data_type": "string",
-      "repeats": "y",
-      "in_repeating_group": "n",
-      "opt_list_values": [],
-      "datacolumn": "ownerOrganization",
+      "datacolumn": "owner",
       "required": "n"
     },
     {
       "fieldname": "owner",
       "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
       "namespace": "exits_common",
       "xpath": [
         "owners"
       ],
-      "data_type": "csrefname",
+      "data_type": "string",
       "repeats": "y",
       "in_repeating_group": "n",
-      "opt_list_values": [],
-      "datacolumn": "ownerRefname",
+      "opt_list_values": [
+        "Person/Local",
+        "Organization/Local"
+      ],
+      "datacolumn": "ownerAuthorityVocabulary",
       "required": "n"
     },
     {
@@ -190,7 +142,7 @@
         ]
       },
       "source_type": "authority",
-      "source_name": "person/local",
+      "source_name": null,
       "namespace": "exits_common",
       "xpath": [
         "exitAgentGroupList",
@@ -200,46 +152,27 @@
       "repeats": "n",
       "in_repeating_group": "y",
       "opt_list_values": [],
-      "datacolumn": "agentPerson",
-      "required": "n"
-    },
-    {
-      "fieldname": "agent",
-      "transforms": {
-        "authority": [
-          "orgauthorities",
-          "organization"
-        ]
-      },
-      "source_type": "authority",
-      "source_name": "organization/local",
-      "namespace": "exits_common",
-      "xpath": [
-        "exitAgentGroupList",
-        "exitAgentGroup"
-      ],
-      "data_type": "string",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "agentOrganization",
+      "datacolumn": "agent",
       "required": "n"
     },
     {
       "fieldname": "agent",
       "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
       "namespace": "exits_common",
       "xpath": [
         "exitAgentGroupList",
         "exitAgentGroup"
       ],
-      "data_type": "csrefname",
+      "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "agentRefname",
+      "opt_list_values": [
+        "Person/Local",
+        "Organization/Local"
+      ],
+      "datacolumn": "agentAuthorityVocabulary",
       "required": "n"
     },
     {
@@ -259,23 +192,6 @@
       "in_repeating_group": "y",
       "opt_list_values": [],
       "datacolumn": "role",
-      "required": "n"
-    },
-    {
-      "fieldname": "role",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "exits_common",
-      "xpath": [
-        "exitAgentGroupList",
-        "exitAgentGroup"
-      ],
-      "data_type": "csrefname",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "roleRefname",
       "required": "n"
     },
     {
@@ -326,23 +242,6 @@
       "required": "n"
     },
     {
-      "fieldname": "group",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "exits_common",
-      "xpath": [
-        "approvalStatusGroupList",
-        "approvalStatusGroup"
-      ],
-      "data_type": "csrefname",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "groupRefname",
-      "required": "n"
-    },
-    {
       "fieldname": "individual",
       "transforms": {
         "authority": [
@@ -351,7 +250,7 @@
         ]
       },
       "source_type": "authority",
-      "source_name": "person/local",
+      "source_name": null,
       "namespace": "exits_common",
       "xpath": [
         "approvalStatusGroupList",
@@ -367,18 +266,20 @@
     {
       "fieldname": "individual",
       "transforms": {},
-      "source_type": "refname",
-      "source_name": "authority refname",
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
       "namespace": "exits_common",
       "xpath": [
         "approvalStatusGroupList",
         "approvalStatusGroup"
       ],
-      "data_type": "csrefname",
+      "data_type": "string",
       "repeats": "n",
       "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "individualRefname",
+      "opt_list_values": [
+        "Person/Local"
+      ],
+      "datacolumn": "individualAuthorityVocabulary",
       "required": "n"
     },
     {
@@ -398,23 +299,6 @@
       "in_repeating_group": "y",
       "opt_list_values": [],
       "datacolumn": "status",
-      "required": "n"
-    },
-    {
-      "fieldname": "status",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "exits_common",
-      "xpath": [
-        "approvalStatusGroupList",
-        "approvalStatusGroup"
-      ],
-      "data_type": "csrefname",
-      "repeats": "n",
-      "in_repeating_group": "y",
-      "opt_list_values": [],
-      "datacolumn": "statusRefname",
       "required": "n"
     },
     {
@@ -466,20 +350,6 @@
       "in_repeating_group": "n/a",
       "opt_list_values": [],
       "datacolumn": "saleCurrency",
-      "required": "n"
-    },
-    {
-      "fieldname": "saleCurrency",
-      "transforms": {},
-      "source_type": "refname",
-      "source_name": "vocabulary refname",
-      "namespace": "exits_common",
-      "xpath": [],
-      "data_type": "csrefname",
-      "repeats": "n",
-      "in_repeating_group": "n/a",
-      "opt_list_values": [],
-      "datacolumn": "saleCurrencyRefname",
       "required": "n"
     },
     {
