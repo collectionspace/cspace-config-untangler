@@ -126,9 +126,13 @@ module CspaceConfigUntangler
     default: default_single_authority_plain_last_versions,
     reader: true
   setting :community_supported_profiles,
+    reader: true,
     default: %w[core anthro bonsai botgarden fcart herbarium lhmc materials
       publicart],
-    reader: true
+    constructor: ->(default) do
+      default.delete("botgarden") if release.gt("8_3")
+      default
+    end
   setting :datadir, default: default_datadir, reader: true
   setting :configdir, default: default_configdir, reader: true
   setting :templatedir, default: default_templatedir, reader: true
