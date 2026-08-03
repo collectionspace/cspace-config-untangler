@@ -15,6 +15,8 @@ end
 gem "collectionspace-client", github: "collectionspace/collectionspace-client",
   branch: "main"
 
+gem "dry-configurable", github: "dry-rb/dry-configurable", tag: "v1.4.0"
+
 if lyrasis_staff?
   gem "aws-sdk-dynamodb"
   gem "aws-sdk-ssm"
