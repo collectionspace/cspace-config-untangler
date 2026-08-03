@@ -102,8 +102,22 @@ module CspaceConfigUntangler
 
     # @param format %i[csvimporter datatoolkit]
     # @return [Array<CCU::FieldMap::FieldMapping>]
-    def mappings(format = ingest_format) = @mappings ||=
-                                             derive_mappings(ingest_format)
+    def mappings(format = ingest_format)
+      column_style = if format == :csvimporter
+        profile.column_style
+      elsif format == :datatoolkit
+        :datatoolkit
+      end
+
+      rawmappings = fields.map do |f|
+        FieldMapper.new(
+          field: f,
+          column_style: column_style
+        ).mappings
+      end.flatten
+
+      ensure_unique_datacolumns(rawmappings)
+    end
 
     def nonunique_fields
       h = {}
@@ -130,25 +144,6 @@ module CspaceConfigUntangler
         end
       end
       h.select { |name, paths| paths.length > 1 }
-    end
-
-    # @param format %i[csvimporter datatoolkit]
-    # @return [Array<CCU::FieldMap::FieldMapping>]
-    def derive_mappings(format = :csvimporter)
-      column_style = if format == :csvimporter
-        profile.column_style
-      elsif format == :datatoolkit
-        :datatoolkit
-      end
-
-      rawmappings = fields.map do |f|
-        FieldMapper.new(
-          field: f,
-          column_style: column_style
-        ).mappings
-      end.flatten
-
-      ensure_unique_datacolumns(rawmappings)
     end
 
     def ensure_unique_datacolumns(mappings)
@@ -208,7 +203,7 @@ module CspaceConfigUntangler
     # @param format %i[csvimporter datatoolkit]
     def batch_mappings(context = :mapper, format = ingest_format)
       importable = remove_unimportable_fields_from(
-        derive_mappings(format), context
+        mappings(format), context
       )
       faux_require_profile_specific_mappings(faux_require_mappings(importable))
     end
