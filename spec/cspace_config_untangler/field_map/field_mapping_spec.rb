@@ -56,9 +56,10 @@ RSpec.describe CCU::FieldMap::FieldMapping do
       end
 
       describe ".to_h" do
-        it "gets all attributes" do
+        it "gets all attributes except field" do
           hash = mappings[0].to_h
           expect(hash.key?(:datacolumn)).to be true
+          expect(hash.key?(:field)).to be false
         end
       end
     end
