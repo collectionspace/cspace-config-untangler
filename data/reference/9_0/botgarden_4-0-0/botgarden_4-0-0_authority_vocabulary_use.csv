@@ -1,0 +1,171 @@
+profile,authority,authority_vocab,used_in_profile,controlled_field_ct,controlled_fields
+botgarden_4-0-0,citation,citation/local,y,9,"Citation: Term source name (Source)
+Concept: Term source name (Source)
+Organization: Term source name (Source)
+Person: Term source name (Source)
+Place: Term source name (Source)
+Taxon: Citation
+Taxon: Common name source
+Taxon: Term source name (Source)
+Work: Term source name (Source)"
+botgarden_4-0-0,citation,citation/worldcat,y,8,"Citation: Term source name (Source)
+Concept: Term source name (Source)
+Organization: Term source name (Source)
+Person: Term source name (Source)
+Place: Term source name (Source)
+Taxon: Citation
+Taxon: Term source name (Source)
+Work: Term source name (Source)"
+botgarden_4-0-0,concept,concept/activity,y,1,Citation: Related term
+botgarden_4-0-0,concept,concept/archculture,n,0,""
+botgarden_4-0-0,concept,concept/associated,y,2,"Citation: Related term
+Propagation: Medium (Activities)"
+botgarden_4-0-0,concept,concept/class,y,1,Object: Accession used in
+botgarden_4-0-0,concept,concept/conservation,n,0,""
+botgarden_4-0-0,concept,concept/ethculture,n,0,""
+botgarden_4-0-0,concept,concept/material,y,1,Citation: Related term
+botgarden_4-0-0,concept,concept/nomenclature,n,0,""
+botgarden_4-0-0,concept,concept/occasion,y,1,Use of Collections: Occasion
+botgarden_4-0-0,concept,concept/research,y,1,Object: Accession used in
+botgarden_4-0-0,location,location/local,y,6,"Current Location: Garden location
+Intake: Current location
+Intake: Normal location
+Propagation: Location in nursery (Activities)
+Use of Collections: Location
+Voucher: Garden location"
+botgarden_4-0-0,location,location/offsite,n,0,""
+botgarden_4-0-0,organization,organization/local,y,46,"Citation: Agent name
+Citation: Publisher
+Condition Check: Checker/assessor
+Current Location: Garden location
+Deaccession: Exit recipient
+Deaccession: Parties involved on behalf of
+Distribution: Authorized by
+Distribution: Organization
+Insurance/Indemnity: Insurer/indemnifier
+Insurance/Indemnity: Quote provider
+Intake: Condition check assessor
+Intake: Current owner
+Intake: Depositor name
+Intake: Insurer
+Intake: Valuer
+Media Handling: Contributor
+Media Handling: Creator
+Media Handling: Measured by
+Media Handling: Publisher
+Media Handling: Rights holder
+Object Exit: Exit agent name
+Object Exit: Owner after exit
+Object: Associated event organization (Associations)
+Object: Associated organization (Associations)
+Object: Field collector
+Object: Owner
+Object: Taxonomic identification by (Identification by)
+Object: Taxonomic identification institution (Identification by)
+Place: Georeferenced by
+Place: Owner
+Taxon: Author name
+Transport: Arrival point (Arrival)
+Transport: Courier name
+Transport: Customs broker name (Customs broker)
+Transport: Departure point (Departure)
+Transport: Shipping quote provider
+Transport: Transporter name (Transporter)
+Use of Collections: Authorized by
+Use of Collections: Location
+Use of Collections: Staff name
+Use of Collections: User institution
+Use of Collections: User name
+Valuation Control: Source
+Voucher: Voucher institution
+Work: Creator name
+Work: Publisher name"
+botgarden_4-0-0,organization,organization/ulan,y,2,"Insurance/Indemnity: Insurer/indemnifier
+Insurance/Indemnity: Quote provider"
+botgarden_4-0-0,person,person/local,y,54,"Citation: Agent name
+Condition Check: Checker/assessor
+Current Location: Contact
+Deaccession: Deaccession approval individual (Deaccession approval group)
+Deaccession: Exit recipient
+Deaccession: Parties involved person
+Distribution: Authorized by
+Group: Group owner
+Insurance/Indemnity: Authorizer (Authorization)
+Insurance/Indemnity: Insurer/indemnifier
+Insurance/Indemnity: Quote provider
+Intake: Approval individual (Approval group)
+Intake: Condition check assessor
+Intake: Current owner
+Intake: Depositor name
+Intake: Insurer
+Intake: Valuer
+Media Handling: Contributor
+Media Handling: Creator
+Media Handling: Measured by
+Media Handling: Publisher
+Media Handling: Rights holder
+Object Exit: Approval status individual
+Object Exit: Exit agent name
+Object Exit: Owner after exit
+Object: Annotation author
+Object: Associated event person (Associations)
+Object: Associated person (Associations)
+Object: Field collection number assignor
+Object: Field collector
+Object: Owner
+Object: Requested by
+Object: Taxonomic identification by (Identification by)
+Object: Type specimen asserted by
+Organization: Contact name
+Person: Other information author
+Place: Georeferenced by
+Place: Owner
+Taxon: Author name
+Transport: Courier name
+Transport: Customs broker contact (Customs broker)
+Transport: Customs broker name (Customs broker)
+Transport: Shipping quote provider
+Transport: Transport authorizer (Authorization)
+Transport: Transporter contact (Transporter)
+Transport: Transporter name (Transporter)
+Use of Collections: Authorized by
+Use of Collections: Staff name
+Use of Collections: User name
+Valuation Control: Source
+Voucher: Collector
+Voucher: Reviewed by
+Work: Creator name
+Work: Publisher name"
+botgarden_4-0-0,person,person/ulan,y,4,"Citation: Agent name
+Insurance/Indemnity: Authorizer (Authorization)
+Insurance/Indemnity: Insurer/indemnifier
+Insurance/Indemnity: Quote provider"
+botgarden_4-0-0,place,place/local,y,12,"Citation: Publication place
+Object: Field collection place
+Person: Birth place supplied
+Place: Address country
+Place: Address municipality
+Place: Address state/province
+Transport: Arrival point (Arrival)
+Transport: Departure point (Departure)
+Use of Collections: Location
+Work: Address country
+Work: Address municipality
+Work: Address state/province"
+botgarden_4-0-0,place,place/tgn,y,7,"Citation: Publication place
+Place: Address country
+Place: Address municipality
+Place: Address state/province
+Work: Address country
+Work: Address municipality
+Work: Address state/province"
+botgarden_4-0-0,taxon,taxon/common,n,0,""
+botgarden_4-0-0,taxon,taxon/local,y,7,"Object: Affinity taxon
+Object: Associated taxon name
+Object: Hybrid parent name
+Object: Taxonomic identification scientific name (Taxonomic identification)
+Object: Type specimen verified basionym
+Pot Tag: Family
+Pot Tag: Taxon name"
+botgarden_4-0-0,work,work/cona,n,0,""
+botgarden_4-0-0,work,work/local,y,1,Object: Named collection

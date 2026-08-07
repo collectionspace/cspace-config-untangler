@@ -1,0 +1,180 @@
+profile,authority,authority_vocab,used_in_profile,controlled_field_ct,controlled_fields
+materials_9_0,citation,citation/local,y,9,"Citation: Term source name (Source)
+Concept: Term source name (Source)
+Material: Citation source
+Material: Term source name (Source)
+Organization: Term source name (Source)
+Person: Term source name (Source)
+Place: Term source name (Source)
+Storage Location: Term source name (Source)
+Work: Term source name (Source)"
+materials_9_0,citation,citation/shared,y,8,"Citation: Term source name (Source)
+Concept: Term source name (Source)
+Material: Citation source
+Material: Term source name (Source)
+Person: Term source name (Source)
+Place: Term source name (Source)
+Storage Location: Term source name (Source)
+Work: Term source name (Source)"
+materials_9_0,concept,concept/archculture,n,0,""
+materials_9_0,concept,concept/materialclassification,y,3,"Material: Composition class name
+Material: Composition family name
+Material: Composition generic name"
+materials_9_0,concept,concept/nomenclature,n,0,""
+materials_9_0,concept,concept/occasion,y,1,Use of Collections: Occasion
+materials_9_0,concept,concept/sharedmaterialclassification,y,3,"Material: Composition class name
+Material: Composition family name
+Material: Composition generic name"
+materials_9_0,location,location/local,y,5,"Location/Movement/Inventory: Current location
+Location/Movement/Inventory: Normal location
+Object: Computed current location
+Object: Home location
+Use of Collections: Location"
+materials_9_0,location,location/offsite,y,4,"Location/Movement/Inventory: Current location
+Location/Movement/Inventory: Normal location
+Object: Computed current location
+Object: Home location"
+materials_9_0,material,material/local,y,2,"Media Handling: Coverage
+Object: Material"
+materials_9_0,material,material/shared,y,2,"Media Handling: Coverage
+Object: Material"
+materials_9_0,organization,organization/local,y,34,"Acquisitions: Acquisition source
+Citation: Agent name
+Citation: Publisher
+Deaccession: Exit recipient
+Deaccession: Parties involved on behalf of
+Loan Out: Borrower
+Location/Movement/Inventory: Current location
+Location/Movement/Inventory: Normal location
+Material: Discontinued by (Discontinued)
+Material: Production organization name
+Material: Term creator organization
+Material: Term editor organization
+Media Handling: Contributor
+Media Handling: Creator
+Media Handling: Rights holder
+Object Exit (Legacy): Current owner
+Object Exit (Legacy): Depositor
+Object Exit (Legacy): Disposal proposed recipient
+Object Exit (Legacy): Disposal recipient
+Object Exit: Exit agent name
+Object Exit: Owner after exit
+Object: Computed current location
+Object: Home location
+Object: Production organization
+Place: Georeferenced by
+Place: Owner
+Use of Collections: Authorized by
+Use of Collections: Location
+Use of Collections: Staff name
+Use of Collections: User institution
+Use of Collections: User name
+Valuation Control: Source
+Work: Creator name
+Work: Publisher name"
+materials_9_0,organization,organization/shared,y,28,"Acquisitions: Acquisition source
+Loan Out: Borrower
+Location/Movement/Inventory: Current location
+Location/Movement/Inventory: Normal location
+Material: Discontinued by (Discontinued)
+Material: Production organization name
+Material: Term creator organization
+Material: Term editor organization
+Media Handling: Contributor
+Media Handling: Creator
+Media Handling: Rights holder
+Object Exit (Legacy): Current owner
+Object Exit (Legacy): Depositor
+Object Exit (Legacy): Disposal proposed recipient
+Object Exit (Legacy): Disposal recipient
+Object: Computed current location
+Object: Home location
+Object: Production organization
+Place: Georeferenced by
+Place: Owner
+Use of Collections: Authorized by
+Use of Collections: Location
+Use of Collections: Staff name
+Use of Collections: User institution
+Use of Collections: User name
+Valuation Control: Source
+Work: Creator name
+Work: Publisher name"
+materials_9_0,person,person/local,y,38,"Acquisitions: Acquisition source
+Acquisitions: Authorizer (Authorization)
+Citation: Agent name
+Deaccession: Deaccession approval individual (Deaccession approval group)
+Deaccession: Exit recipient
+Deaccession: Parties involved person
+Group: Group owner
+Loan Out: Borrower
+Loan Out: Lender authorizer
+Loan Out: Loan status individual
+Location/Movement/Inventory: Inventory contact
+Location/Movement/Inventory: Movement contact
+Material: Production person name
+Material: Term creator contributor
+Material: Term editor
+Media Handling: Contributor
+Media Handling: Creator
+Media Handling: Rights holder
+Object Exit (Legacy): Current owner
+Object Exit (Legacy): Deaccession approval individual
+Object Exit (Legacy): Deaccession authorizer
+Object Exit (Legacy): Depositor
+Object Exit (Legacy): Disposal proposed recipient
+Object Exit (Legacy): Disposal recipient
+Object Exit: Approval status individual
+Object Exit: Exit agent name
+Object Exit: Owner after exit
+Object: Annotation author
+Object: Production person
+Organization: Contact name
+Place: Georeferenced by
+Place: Owner
+Use of Collections: Authorized by
+Use of Collections: Staff name
+Use of Collections: User name
+Valuation Control: Source
+Work: Creator name
+Work: Publisher name"
+materials_9_0,person,person/shared,y,26,"Acquisitions: Acquisition source
+Loan Out: Borrower
+Loan Out: Lender authorizer
+Loan Out: Loan status individual
+Location/Movement/Inventory: Inventory contact
+Location/Movement/Inventory: Movement contact
+Material: Production person name
+Material: Term creator contributor
+Material: Term editor
+Media Handling: Contributor
+Media Handling: Creator
+Media Handling: Rights holder
+Object Exit (Legacy): Current owner
+Object Exit (Legacy): Depositor
+Object Exit (Legacy): Disposal proposed recipient
+Object Exit (Legacy): Disposal recipient
+Object: Annotation author
+Object: Production person
+Place: Georeferenced by
+Place: Owner
+Use of Collections: Authorized by
+Use of Collections: Staff name
+Use of Collections: User name
+Valuation Control: Source
+Work: Creator name
+Work: Publisher name"
+materials_9_0,place,place/local,y,7,"Citation: Publication place
+Material: Production place name
+Media Handling: Coverage
+Use of Collections: Location
+Work: Address country
+Work: Address municipality
+Work: Address state/province"
+materials_9_0,place,place/shared,y,2,"Material: Production place name
+Use of Collections: Location"
+materials_9_0,work,work/local,y,3,"Material: Featured application name
+Material: Featured collection name
+Object: Named collection"
+materials_9_0,work,work/shared,y,2,"Material: Featured application name
+Material: Featured collection name"
