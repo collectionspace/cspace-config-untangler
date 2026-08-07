@@ -29,7 +29,7 @@ module CspaceConfigUntangler
           default_opts: {release: release,
                          outmode: :expert})
         @target = File.join(CCU.data_reference_dir, "ui_labels_lookup.csv")
-        @headers = %w[profile id label]
+        @headers = %w[profile id_caps id_lower label]
       end
 
       def call
@@ -48,11 +48,17 @@ module CspaceConfigUntangler
 
       def transform(row)
         id = [row["record_type"], row["xml_field_name"]].join(".")
+        lowercase_id = id.downcase
         label = [row["ui_info_group"], row["ui_path"],
           row["ui_field_label"]].reject { |x| x.blank? }
           .join(" > ")
 
-        {"profile" => row["profile"], "id" => id, "label" => label}
+        {
+          "profile" => row["profile"],
+          "id_caps" => id,
+          "id_lower" => lowercase_id,
+          "label" => label
+        }
       end
     end
   end
