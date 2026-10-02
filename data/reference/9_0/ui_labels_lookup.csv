@@ -6770,6 +6770,812 @@ anthro_9-3,claim.objectsMarkedAsDeaccessioned,claim.objectsmarkedasdeaccessioned
 anthro_9-3,claim.objectsMarkedAsDeaccessionedNote,claim.objectsmarkedasdeaccessionednote,Claim Processing Information > Tasks Completed > Objects marked as deaccessioned note
 anthro_9-3,claim.documentsArchived,claim.documentsarchived,Claim Processing Information > Tasks Completed > Claim documents archived
 anthro_9-3,claim.documentsArchivedNote,claim.documentsarchivednote,Claim Processing Information > Tasks Completed > Claim documents archived note
+botgarden_4-0-0,citation.termDisplayName,citation.termdisplayname,Citation Information > Term display name
+botgarden_4-0-0,citation.termStatus,citation.termstatus,Citation Information > Term status
+botgarden_4-0-0,citation.termType,citation.termtype,Citation Information > Term type
+botgarden_4-0-0,citation.termFlag,citation.termflag,Citation Information > Term flag
+botgarden_4-0-0,citation.termLanguage,citation.termlanguage,Citation Information > Term language
+botgarden_4-0-0,citation.termPrefForLang,citation.termprefforlang,Citation Information > Term preferred for lang
+botgarden_4-0-0,citation.termFullCitation,citation.termfullcitation,Citation Information > Term full citation
+botgarden_4-0-0,citation.termTitle,citation.termtitle,Citation Information > Term title
+botgarden_4-0-0,citation.termSubTitle,citation.termsubtitle,Citation Information > Term subtitle
+botgarden_4-0-0,citation.termSectionTitle,citation.termsectiontitle,Citation Information > Term section title
+botgarden_4-0-0,citation.termVolume,citation.termvolume,Citation Information > Term volume
+botgarden_4-0-0,citation.termIssue,citation.termissue,Citation Information > Term issue
+botgarden_4-0-0,citation.termSource,citation.termsource,Citation Information > Source > Term source name
+botgarden_4-0-0,citation.termSourceDetail,citation.termsourcedetail,Citation Information > Source > Term source detail
+botgarden_4-0-0,citation.termSourceID,citation.termsourceid,Citation Information > Source > Term source ID
+botgarden_4-0-0,citation.termSourceNote,citation.termsourcenote,Citation Information > Source > Term source note
+botgarden_4-0-0,citation.publisher,citation.publisher,Citation Information > Publisher
+botgarden_4-0-0,citation.publicationPlace,citation.publicationplace,Citation Information > Publication place
+botgarden_4-0-0,citation.publicationDate,citation.publicationdate,Citation Information > Publication date
+botgarden_4-0-0,citation.edition,citation.edition,Citation Information > Publication edition
+botgarden_4-0-0,citation.pages,citation.pages,Citation Information > Publication page(s)
+botgarden_4-0-0,citation.agent,citation.agent,Citation Information > Agent name
+botgarden_4-0-0,citation.role,citation.role,Citation Information > Agent role
+botgarden_4-0-0,citation.note,citation.note,Citation Information > Agent note
+botgarden_4-0-0,citation.citationNote,citation.citationnote,Citation Information > Note
+botgarden_4-0-0,citation.resourceIdent,citation.resourceident,Citation Information > Resource identifier
+botgarden_4-0-0,citation.type,citation.type,Citation Information > Resource identifier type
+botgarden_4-0-0,citation.captureDate,citation.capturedate,Citation Information > Resource identifier capture date
+botgarden_4-0-0,citation.relatedTerm,citation.relatedterm,Citation Information > Related term
+botgarden_4-0-0,citation.relationType,citation.relationtype,Citation Information > Related term type
+botgarden_4-0-0,collectionobject.objectNumber,collectionobject.objectnumber,Object Identification Information > Accession number
+botgarden_4-0-0,collectionobject.accessionDate,collectionobject.accessiondate,Object Identification Information > Accession date
+botgarden_4-0-0,collectionobject.deadFlag,collectionobject.deadflag,Object Identification Information > Dead flag
+botgarden_4-0-0,collectionobject.deadDate,collectionobject.deaddate,Object Identification Information > Dead date
+botgarden_4-0-0,collectionobject.numberValue,collectionobject.numbervalue,Object Identification Information > Other number value
+botgarden_4-0-0,collectionobject.numberType,collectionobject.numbertype,Object Identification Information > Other number type
+botgarden_4-0-0,collectionobject.taxon,collectionobject.taxon,Object Identification Information > Taxonomic identification > Taxonomic identification scientific name
+botgarden_4-0-0,collectionobject.qualifier,collectionobject.qualifier,Object Identification Information > Taxonomic identification > Taxonomic identification qualifier
+botgarden_4-0-0,collectionobject.affinityTaxon,collectionobject.affinitytaxon,Object Identification Information > Affinity taxon
+botgarden_4-0-0,collectionobject.hybridFlag,collectionobject.hybridflag,Object Identification Information > Hybrid flag
+botgarden_4-0-0,collectionobject.taxonomicIdentHybridParent,collectionobject.taxonomicidenthybridparent,Object Identification Information > Hybrid parent name
+botgarden_4-0-0,collectionobject.taxonomicIdentHybridParentQualifier,collectionobject.taxonomicidenthybridparentqualifier,Object Identification Information > Hybrid parent qualifier
+botgarden_4-0-0,collectionobject.reference,collectionobject.reference,Object Identification Information > Reference > Taxonomic identification reference source
+botgarden_4-0-0,collectionobject.refPage,collectionobject.refpage,Object Identification Information > Reference > Taxonomic identification reference page
+botgarden_4-0-0,collectionobject.identKind,collectionobject.identkind,Object Identification Information > Taxonomic identification kind
+botgarden_4-0-0,collectionobject.notes,collectionobject.notes,Object Identification Information > Taxonomic identification note
+botgarden_4-0-0,collectionobject.identBy,collectionobject.identby,Object Identification Information > Identification by > Taxonomic identification by
+botgarden_4-0-0,collectionobject.identDateGroup,collectionobject.identdategroup,Object Identification Information > Identification by > Taxonomic identification date
+botgarden_4-0-0,collectionobject.institution,collectionobject.institution,Object Identification Information > Identification by > Taxonomic identification institution
+botgarden_4-0-0,collectionobject.recordStatus,collectionobject.recordstatus,Object Identification Information > Provenance data quality
+botgarden_4-0-0,collectionobject.provenanceType,collectionobject.provenancetype,Object Identification Information > Provenance type
+botgarden_4-0-0,collectionobject.rare,collectionobject.rare,Object Identification Information > Rare
+botgarden_4-0-0,collectionobject.cultivated,collectionobject.cultivated,Object Identification Information > Cultivated
+botgarden_4-0-0,collectionobject.cbdRestriction,collectionobject.cbdrestriction,Object Identification Information > CBD restriction
+botgarden_4-0-0,collectionobject.requestedBy,collectionobject.requestedby,Object Identification Information > Requested by
+botgarden_4-0-0,collectionobject.briefDescription,collectionobject.briefdescription,Object Identification Information > Material type
+botgarden_4-0-0,collectionobject.namedCollection,collectionobject.namedcollection,Object Identification Information > Named collection
+botgarden_4-0-0,collectionobject.source,collectionobject.source,Object Identification Information > Source
+botgarden_4-0-0,collectionobject.comment,collectionobject.comment,Object Identification Information > Accession note
+botgarden_4-0-0,collectionobject.typeSpecimenKind,collectionobject.typespecimenkind,Object Identification Information > Type specimen kind
+botgarden_4-0-0,collectionobject.typeSpecimenAssertionBy,collectionobject.typespecimenassertionby,Object Identification Information > Type specimen asserted by
+botgarden_4-0-0,collectionobject.typeSpecimenReference,collectionobject.typespecimenreference,Object Identification Information > Type specimen reference
+botgarden_4-0-0,collectionobject.typeSpecimenRefPage,collectionobject.typespecimenrefpage,Object Identification Information > Type specimen reference page
+botgarden_4-0-0,collectionobject.typeSpecimenBasionym,collectionobject.typespecimenbasionym,Object Identification Information > Type specimen verified basionym
+botgarden_4-0-0,collectionobject.typeSpecimenNotes,collectionobject.typespecimennotes,Object Identification Information > Type specimen note
+botgarden_4-0-0,collectionobject.fieldLocVerbatim,collectionobject.fieldlocverbatim,Locality Information > Field collection location verbatim
+botgarden_4-0-0,collectionobject.fieldLocPlace,collectionobject.fieldlocplace,Locality Information > Field collection place
+botgarden_4-0-0,collectionobject.taxonomicRange,collectionobject.taxonomicrange,Locality Information > Geographic range of taxon
+botgarden_4-0-0,collectionobject.fieldLocCounty,collectionobject.fieldloccounty,Locality Information > County
+botgarden_4-0-0,collectionobject.fieldLocState,collectionobject.fieldlocstate,Locality Information > State
+botgarden_4-0-0,collectionobject.fieldLocCountry,collectionobject.fieldloccountry,Locality Information > Country
+botgarden_4-0-0,collectionobject.fieldLocHigherGeography,collectionobject.fieldlochighergeography,Locality Information > Higher geography
+botgarden_4-0-0,collectionobject.vLatitude,collectionobject.vlatitude,Locality Information > Verbatim latitude
+botgarden_4-0-0,collectionobject.vLongitude,collectionobject.vlongitude,Locality Information > Verbatim longitude
+botgarden_4-0-0,collectionobject.vCoordinates,collectionobject.vcoordinates,Locality Information > TRS
+botgarden_4-0-0,collectionobject.vOtherCoords,collectionobject.vothercoords,Locality Information > Other coords
+botgarden_4-0-0,collectionobject.vCoordSys,collectionobject.vcoordsys,Locality Information > Other coords system
+botgarden_4-0-0,collectionobject.decimalLatitude,collectionobject.decimallatitude,Locality Information > Decimal latitude
+botgarden_4-0-0,collectionobject.decimalLongitude,collectionobject.decimallongitude,Locality Information > Decimal longitude
+botgarden_4-0-0,collectionobject.geodeticDatum,collectionobject.geodeticdatum,Locality Information > Datum
+botgarden_4-0-0,collectionobject.coordUncertainty,collectionobject.coorduncertainty,Locality Information > Coord uncertainty
+botgarden_4-0-0,collectionobject.coordUncertaintyUnit,collectionobject.coorduncertaintyunit,Locality Information > Coord uncertainty unit
+botgarden_4-0-0,collectionobject.vDepth,collectionobject.vdepth,Locality Information > Depth > Depth verbatim
+botgarden_4-0-0,collectionobject.minDepth,collectionobject.mindepth,Locality Information > Depth > Depth min
+botgarden_4-0-0,collectionobject.maxDepth,collectionobject.maxdepth,Locality Information > Depth > Depth max
+botgarden_4-0-0,collectionobject.depthUnit,collectionobject.depthunit,Locality Information > Depth > Depth unit
+botgarden_4-0-0,collectionobject.vElevation,collectionobject.velevation,Locality Information > Elevation > Elevation verbatim
+botgarden_4-0-0,collectionobject.minElevation,collectionobject.minelevation,Locality Information > Elevation > Elevation min
+botgarden_4-0-0,collectionobject.maxElevation,collectionobject.maxelevation,Locality Information > Elevation > Elevation max
+botgarden_4-0-0,collectionobject.elevationUnit,collectionobject.elevationunit,Locality Information > Elevation > Elevation unit
+botgarden_4-0-0,collectionobject.vDistanceAboveSurface,collectionobject.vdistanceabovesurface,Locality Information > Distance above surface > Distance above surface verbatim
+botgarden_4-0-0,collectionobject.minDistanceAboveSurface,collectionobject.mindistanceabovesurface,Locality Information > Distance above surface > Distance above surface min
+botgarden_4-0-0,collectionobject.maxDistanceAboveSurface,collectionobject.maxdistanceabovesurface,Locality Information > Distance above surface > Distance above surface max
+botgarden_4-0-0,collectionobject.distanceAboveSurfaceUnit,collectionobject.distanceabovesurfaceunit,Locality Information > Distance above surface > Distance above surface unit
+botgarden_4-0-0,collectionobject.localityNote,collectionobject.localitynote,Locality Information > Locality note
+botgarden_4-0-0,collectionobject.localitySource,collectionobject.localitysource,Locality Information > Locality source
+botgarden_4-0-0,collectionobject.localitySourceDetail,collectionobject.localitysourcedetail,Locality Information > Locality source detail
+botgarden_4-0-0,collectionobject.pointRadiusSpatialFit,collectionobject.pointradiusspatialfit,Locality Information > Georeference Detail > Pt. radius sp. fit
+botgarden_4-0-0,collectionobject.footprintWKT,collectionobject.footprintwkt,Locality Information > Georeference Detail > Footprint WKT
+botgarden_4-0-0,collectionobject.footprintSRS,collectionobject.footprintsrs,Locality Information > Georeference Detail > Footprint SRS
+botgarden_4-0-0,collectionobject.footprintSpatialFit,collectionobject.footprintspatialfit,Locality Information > Georeference Detail > Footprint sp. fit
+botgarden_4-0-0,collectionobject.coordPrecision,collectionobject.coordprecision,Locality Information > Georeference Detail > Coord precision
+botgarden_4-0-0,collectionobject.geoRefencedBy,collectionobject.georefencedby,Locality Information > Georeference Detail > Georeference by
+botgarden_4-0-0,collectionobject.geoRefDateGroup,collectionobject.georefdategroup,Locality Information > Georeference Detail > Georeference date
+botgarden_4-0-0,collectionobject.geoRefProtocol,collectionobject.georefprotocol,Locality Information > Georeference Detail > Georeference protocol
+botgarden_4-0-0,collectionobject.geoRefSource,collectionobject.georefsource,Locality Information > Georeference Detail > Georeference source
+botgarden_4-0-0,collectionobject.geoRefVerificationStatus,collectionobject.georefverificationstatus,Locality Information > Georeference Detail > Georeference verification
+botgarden_4-0-0,collectionobject.geoRefRemarks,collectionobject.georefremarks,Locality Information > Georeference Detail > Georeference note
+botgarden_4-0-0,collectionobject.geoRefPlaceName,collectionobject.georefplacename,Locality Information > Georeference Detail > Georeference place name
+botgarden_4-0-0,collectionobject.fieldCollectionDateGroup,collectionobject.fieldcollectiondategroup,Field Collection Information > Field collection date
+botgarden_4-0-0,collectionobject.fieldCollector,collectionobject.fieldcollector,Field Collection Information > Field collector
+botgarden_4-0-0,collectionobject.fieldCollectionNumber,collectionobject.fieldcollectionnumber,Field Collection Information > Field collection number
+botgarden_4-0-0,collectionobject.fieldCollectionNumberAssignor,collectionobject.fieldcollectionnumberassignor,Field Collection Information > Field collection number assignor
+botgarden_4-0-0,collectionobject.vegetationType,collectionobject.vegetationtype,Field Collection Information > Vegetation type
+botgarden_4-0-0,collectionobject.fieldCollectionMethod,collectionobject.fieldcollectionmethod,Field Collection Information > Field collection method
+botgarden_4-0-0,collectionobject.fieldCollectionNote,collectionobject.fieldcollectionnote,Field Collection Information > Habitat information
+botgarden_4-0-0,collectionobject.associatedTaxon,collectionobject.associatedtaxon,Field Collection Information > Associated taxon name
+botgarden_4-0-0,collectionobject.commonName,collectionobject.commonname,Field Collection Information > Associated taxon common name
+botgarden_4-0-0,collectionobject.interaction,collectionobject.interaction,Field Collection Information > Associated taxon interaction
+botgarden_4-0-0,collectionobject.sex,collectionobject.sex,Object Description Information > Sex
+botgarden_4-0-0,collectionobject.form,collectionobject.form,Object Description Information > Form
+botgarden_4-0-0,collectionobject.postToPublic,collectionobject.posttopublic,Object Description Information > Post to public
+botgarden_4-0-0,collectionobject.phase,collectionobject.phase,Object Description Information > Phase
+botgarden_4-0-0,collectionobject.annotationType,collectionobject.annotationtype,Object Description Information > Annotation type
+botgarden_4-0-0,collectionobject.annotationDate,collectionobject.annotationdate,Object Description Information > Annotation date
+botgarden_4-0-0,collectionobject.annotationAuthor,collectionobject.annotationauthor,Object Description Information > Annotation author
+botgarden_4-0-0,collectionobject.annotationNote,collectionobject.annotationnote,Object Description Information > Annotation note
+botgarden_4-0-0,collectionobject.flowerColor,collectionobject.flowercolor,Object Description Information > Accession Attributes > Flower color
+botgarden_4-0-0,collectionobject.fruitColor,collectionobject.fruitcolor,Object Description Information > Accession Attributes > Fruit color
+botgarden_4-0-0,collectionobject.securityRisk,collectionobject.securityrisk,Object Description Information > Accession Attributes > Security risk
+botgarden_4-0-0,collectionobject.propagationHistory,collectionobject.propagationhistory,Object Description Information > Accession Attributes > Propagation history
+botgarden_4-0-0,collectionobject.breedingSystem,collectionobject.breedingsystem,Object Description Information > Accession Attributes > Breeding system
+botgarden_4-0-0,collectionobject.classUse,collectionobject.classuse,Object Description Information > Accession Attributes > Class use
+botgarden_4-0-0,collectionobject.researchUse,collectionobject.researchuse,Object Description Information > Accession Attributes > Research use
+botgarden_4-0-0,collectionobject.distribution,collectionobject.distribution,Object Description Information > Accession Attributes > Distribution
+botgarden_4-0-0,collectionobject.ignoreRedDot,collectionobject.ignorereddot,Object Description Information > Accession Attributes > Ignore red dot
+botgarden_4-0-0,collectionobject.fragrance,collectionobject.fragrance,Object Description Information > Accession Attributes > Fragrance
+botgarden_4-0-0,collectionobject.flowersJan,collectionobject.flowersjan,Object Description Information > Accession Attributes > Flowers > Flowers Jan
+botgarden_4-0-0,collectionobject.flowersFeb,collectionobject.flowersfeb,Object Description Information > Accession Attributes > Flowers > Flowers Feb
+botgarden_4-0-0,collectionobject.flowersMar,collectionobject.flowersmar,Object Description Information > Accession Attributes > Flowers > Flowers Mar
+botgarden_4-0-0,collectionobject.flowersApr,collectionobject.flowersapr,Object Description Information > Accession Attributes > Flowers > Flowers Apr
+botgarden_4-0-0,collectionobject.flowersMay,collectionobject.flowersmay,Object Description Information > Accession Attributes > Flowers > Flowers May
+botgarden_4-0-0,collectionobject.flowersJun,collectionobject.flowersjun,Object Description Information > Accession Attributes > Flowers > Flowers Jun
+botgarden_4-0-0,collectionobject.flowersJul,collectionobject.flowersjul,Object Description Information > Accession Attributes > Flowers > Flowers Jul
+botgarden_4-0-0,collectionobject.flowersAug,collectionobject.flowersaug,Object Description Information > Accession Attributes > Flowers > Flowers Aug
+botgarden_4-0-0,collectionobject.flowersSep,collectionobject.flowerssep,Object Description Information > Accession Attributes > Flowers > Flowers Sep
+botgarden_4-0-0,collectionobject.flowersOct,collectionobject.flowersoct,Object Description Information > Accession Attributes > Flowers > Flowers Oct
+botgarden_4-0-0,collectionobject.flowersNov,collectionobject.flowersnov,Object Description Information > Accession Attributes > Flowers > Flowers Nov
+botgarden_4-0-0,collectionobject.flowersDec,collectionobject.flowersdec,Object Description Information > Accession Attributes > Flowers > Flowers Dec
+botgarden_4-0-0,collectionobject.fruitsJan,collectionobject.fruitsjan,Object Description Information > Accession Attributes > Fruits > Fruits Jan
+botgarden_4-0-0,collectionobject.fruitsFeb,collectionobject.fruitsfeb,Object Description Information > Accession Attributes > Fruits > Fruits Feb
+botgarden_4-0-0,collectionobject.fruitsMar,collectionobject.fruitsmar,Object Description Information > Accession Attributes > Fruits > Fruits Mar
+botgarden_4-0-0,collectionobject.fruitsApr,collectionobject.fruitsapr,Object Description Information > Accession Attributes > Fruits > Fruits Apr
+botgarden_4-0-0,collectionobject.fruitsMay,collectionobject.fruitsmay,Object Description Information > Accession Attributes > Fruits > Fruits May
+botgarden_4-0-0,collectionobject.fruitsJun,collectionobject.fruitsjun,Object Description Information > Accession Attributes > Fruits > Fruits Jun
+botgarden_4-0-0,collectionobject.fruitsJul,collectionobject.fruitsjul,Object Description Information > Accession Attributes > Fruits > Fruits Jul
+botgarden_4-0-0,collectionobject.fruitsAug,collectionobject.fruitsaug,Object Description Information > Accession Attributes > Fruits > Fruits Aug
+botgarden_4-0-0,collectionobject.fruitsSep,collectionobject.fruitssep,Object Description Information > Accession Attributes > Fruits > Fruits Sep
+botgarden_4-0-0,collectionobject.fruitsOct,collectionobject.fruitsoct,Object Description Information > Accession Attributes > Fruits > Fruits Oct
+botgarden_4-0-0,collectionobject.fruitsNov,collectionobject.fruitsnov,Object Description Information > Accession Attributes > Fruits > Fruits Nov
+botgarden_4-0-0,collectionobject.fruitsDec,collectionobject.fruitsdec,Object Description Information > Accession Attributes > Fruits > Fruits Dec
+botgarden_4-0-0,collectionobject.accessionUseType,collectionobject.accessionusetype,Accession Use Information > Accession use type
+botgarden_4-0-0,collectionobject.accessionUsedIn,collectionobject.accessionusedin,Accession Use Information > Accession used in
+botgarden_4-0-0,collectionobject.accessionUseRequestDate,collectionobject.accessionuserequestdate,Accession Use Information > Accession use request date
+botgarden_4-0-0,collectionobject.accessionUseFilledDate,collectionobject.accessionusefilleddate,Accession Use Information > Accession use filled date
+botgarden_4-0-0,collectionobject.accessionUserMaterialType,collectionobject.accessionusermaterialtype,Accession Use Information > Accession use material type
+botgarden_4-0-0,collectionobject.accessionUseNotes,collectionobject.accessionusenotes,Accession Use Information > Accession use note
+botgarden_4-0-0,collectionobject.assocActivity,collectionobject.assocactivity,Object History and Association Information > Associations > Associated activity
+botgarden_4-0-0,collectionobject.assocActivityType,collectionobject.assocactivitytype,Object History and Association Information > Associations > Associated activity type
+botgarden_4-0-0,collectionobject.assocActivityNote,collectionobject.assocactivitynote,Object History and Association Information > Associations > Associated activity note
+botgarden_4-0-0,collectionobject.assocObject,collectionobject.assocobject,Object History and Association Information > Associations > Associated object
+botgarden_4-0-0,collectionobject.assocObjectType,collectionobject.assocobjecttype,Object History and Association Information > Associations > Associated object type
+botgarden_4-0-0,collectionobject.assocObjectNote,collectionobject.assocobjectnote,Object History and Association Information > Associations > Associated object note
+botgarden_4-0-0,collectionobject.assocConcept,collectionobject.assocconcept,Object History and Association Information > Associations > Associated concept
+botgarden_4-0-0,collectionobject.assocConceptType,collectionobject.assocconcepttype,Object History and Association Information > Associations > Associated concept type
+botgarden_4-0-0,collectionobject.assocConceptNote,collectionobject.assocconceptnote,Object History and Association Information > Associations > Associated concept note
+botgarden_4-0-0,collectionobject.assocCulturalContext,collectionobject.assocculturalcontext,Object History and Association Information > Associations > Associated cultural affinity
+botgarden_4-0-0,collectionobject.assocCulturalContextType,collectionobject.assocculturalcontexttype,Object History and Association Information > Associations > Associated cultural affinity type
+botgarden_4-0-0,collectionobject.assocCulturalContextNote,collectionobject.assocculturalcontextnote,Object History and Association Information > Associations > Associated cultural affinity note
+botgarden_4-0-0,collectionobject.assocOrganization,collectionobject.assocorganization,Object History and Association Information > Associations > Associated organization
+botgarden_4-0-0,collectionobject.assocOrganizationType,collectionobject.assocorganizationtype,Object History and Association Information > Associations > Associated organization type
+botgarden_4-0-0,collectionobject.assocOrganizationNote,collectionobject.assocorganizationnote,Object History and Association Information > Associations > Associated organization note
+botgarden_4-0-0,collectionobject.assocPeople,collectionobject.assocpeople,Object History and Association Information > Associations > Associated people
+botgarden_4-0-0,collectionobject.assocPeopleType,collectionobject.assocpeopletype,Object History and Association Information > Associations > Associated people type
+botgarden_4-0-0,collectionobject.assocPeopleNote,collectionobject.assocpeoplenote,Object History and Association Information > Associations > Associated people note
+botgarden_4-0-0,collectionobject.assocPerson,collectionobject.assocperson,Object History and Association Information > Associations > Associated person
+botgarden_4-0-0,collectionobject.assocPersonType,collectionobject.assocpersontype,Object History and Association Information > Associations > Associated person type
+botgarden_4-0-0,collectionobject.assocPersonNote,collectionobject.assocpersonnote,Object History and Association Information > Associations > Associated person note
+botgarden_4-0-0,collectionobject.assocPlace,collectionobject.assocplace,Object History and Association Information > Associations > Associated place
+botgarden_4-0-0,collectionobject.assocPlaceType,collectionobject.assocplacetype,Object History and Association Information > Associations > Associated place type
+botgarden_4-0-0,collectionobject.assocPlaceNote,collectionobject.assocplacenote,Object History and Association Information > Associations > Associated place note
+botgarden_4-0-0,collectionobject.assocEventName,collectionobject.assoceventname,Object History and Association Information > Associations > Associated event > Associated event
+botgarden_4-0-0,collectionobject.assocEventNameType,collectionobject.assoceventnametype,Object History and Association Information > Associations > Associated event > Associated event type
+botgarden_4-0-0,collectionobject.assocEventOrganization,collectionobject.assoceventorganization,Object History and Association Information > Associations > Associated event organization
+botgarden_4-0-0,collectionobject.assocEventPeople,collectionobject.assoceventpeople,Object History and Association Information > Associations > Associated event people
+botgarden_4-0-0,collectionobject.assocEventPerson,collectionobject.assoceventperson,Object History and Association Information > Associations > Associated event person
+botgarden_4-0-0,collectionobject.assocEventPlace,collectionobject.assoceventplace,Object History and Association Information > Associations > Associated event place
+botgarden_4-0-0,collectionobject.assocEventNote,collectionobject.assoceventnote,Object History and Association Information > Associations > Associated event note
+botgarden_4-0-0,collectionobject.assocStructuredDateGroup,collectionobject.assocstructureddategroup,Object History and Association Information > Associations > Associated date value
+botgarden_4-0-0,collectionobject.assocDateType,collectionobject.assocdatetype,Object History and Association Information > Associations > Associated date type
+botgarden_4-0-0,collectionobject.assocDateNote,collectionobject.assocdatenote,Object History and Association Information > Associations > Associated date note
+botgarden_4-0-0,collectionobject.objectHistoryNote,collectionobject.objecthistorynote,Object History and Association Information > Object history note
+botgarden_4-0-0,collectionobject.usage,collectionobject.usage,Object History and Association Information > Usage
+botgarden_4-0-0,collectionobject.usageNote,collectionobject.usagenote,Object History and Association Information > Usage note
+botgarden_4-0-0,collectionobject.owner,collectionobject.owner,Object History and Association Information > Owner
+botgarden_4-0-0,collectionobject.ownershipDateGroup,collectionobject.ownershipdategroup,Object History and Association Information > Ownership date
+botgarden_4-0-0,collectionobject.ownershipAccess,collectionobject.ownershipaccess,Object History and Association Information > Ownership access
+botgarden_4-0-0,collectionobject.ownershipCategory,collectionobject.ownershipcategory,Object History and Association Information > Ownership category
+botgarden_4-0-0,collectionobject.ownershipPlace,collectionobject.ownershipplace,Object History and Association Information > Ownership place
+botgarden_4-0-0,collectionobject.ownershipExchangeMethod,collectionobject.ownershipexchangemethod,Object History and Association Information > Ownership exchange > Ownership exchange method
+botgarden_4-0-0,collectionobject.ownershipExchangeNote,collectionobject.ownershipexchangenote,Object History and Association Information > Ownership exchange > Ownership exchange note
+botgarden_4-0-0,collectionobject.ownershipExchangePriceCurrency,collectionobject.ownershipexchangepricecurrency,Object History and Association Information > Ownership exchange > Ownership exchange price currency
+botgarden_4-0-0,collectionobject.ownershipExchangePriceValue,collectionobject.ownershipexchangepricevalue,Object History and Association Information > Ownership exchange > Ownership exchange price value
+botgarden_4-0-0,collectionobject.reference,collectionobject.reference,Reference Information > Reference
+botgarden_4-0-0,collectionobject.referenceNote,collectionobject.referencenote,Reference Information > Reference note
+botgarden_4-0-0,collectionobject.relatedLink,collectionobject.relatedlink,Reference Information > Published related link url
+botgarden_4-0-0,collectionobject.descriptiveTitle,collectionobject.descriptivetitle,Reference Information > Published related link descriptive title
+botgarden_4-0-0,concept.termDisplayName,concept.termdisplayname,Concept Information > Term display name
+botgarden_4-0-0,concept.termName,concept.termname,Concept Information > Term name
+botgarden_4-0-0,concept.termQualifier,concept.termqualifier,Concept Information > Term qualifier
+botgarden_4-0-0,concept.termStatus,concept.termstatus,Concept Information > Term status
+botgarden_4-0-0,concept.termType,concept.termtype,Concept Information > Term type
+botgarden_4-0-0,concept.termFlag,concept.termflag,Concept Information > Term flag
+botgarden_4-0-0,concept.historicalStatus,concept.historicalstatus,Concept Information > Term historical status
+botgarden_4-0-0,concept.termLanguage,concept.termlanguage,Concept Information > Term language
+botgarden_4-0-0,concept.termPrefForLang,concept.termprefforlang,Concept Information > Term preferred for lang
+botgarden_4-0-0,concept.termSource,concept.termsource,Concept Information > Source > Term source name
+botgarden_4-0-0,concept.termSourceDetail,concept.termsourcedetail,Concept Information > Source > Term source detail
+botgarden_4-0-0,concept.termSourceID,concept.termsourceid,Concept Information > Source > Term source ID
+botgarden_4-0-0,concept.termSourceNote,concept.termsourcenote,Concept Information > Source > Term source note
+botgarden_4-0-0,concept.conceptRecordType,concept.conceptrecordtype,Concept Information > Concept type
+botgarden_4-0-0,concept.scopeNote,concept.scopenote,Concept Information > Scope note > Scope note
+botgarden_4-0-0,concept.scopeNoteSource,concept.scopenotesource,Concept Information > Scope note > Scope note source
+botgarden_4-0-0,concept.scopeNoteSourceDetail,concept.scopenotesourcedetail,Concept Information > Scope note > Scope note source detail
+botgarden_4-0-0,concept.citationSource,concept.citationsource,Concept Information > Citation source
+botgarden_4-0-0,concept.citationSourceDetail,concept.citationsourcedetail,Concept Information > Citation source detail
+botgarden_4-0-0,concept.additionalSource,concept.additionalsource,Concept Information > Additional source
+botgarden_4-0-0,concept.additionalSourceDetail,concept.additionalsourcedetail,Concept Information > Additional source detail
+botgarden_4-0-0,concept.additionalSourceID,concept.additionalsourceid,Concept Information > Additional source ID
+botgarden_4-0-0,concept.additionalSourceNote,concept.additionalsourcenote,Concept Information > Additional source note
+botgarden_4-0-0,conditioncheck.conditionCheckRefNumber,conditioncheck.conditioncheckrefnumber,Condition Check/Technical Assessment Information > Reference number
+botgarden_4-0-0,conditioncheck.conditionCheckAssessmentDate,conditioncheck.conditioncheckassessmentdate,Condition Check/Technical Assessment Information > Check/assessment date
+botgarden_4-0-0,conditioncheck.conditionCheckMethod,conditioncheck.conditioncheckmethod,Condition Check/Technical Assessment Information > Method
+botgarden_4-0-0,conditioncheck.conditionCheckReason,conditioncheck.conditioncheckreason,Condition Check/Technical Assessment Information > Reason
+botgarden_4-0-0,conditioncheck.conditionChecker,conditioncheck.conditionchecker,Condition Check/Technical Assessment Information > Checker/assessor
+botgarden_4-0-0,conditioncheck.conditionCheckNote,conditioncheck.conditionchecknote,Condition Check/Technical Assessment Information > Note
+botgarden_4-0-0,conditioncheck.objectAuditCategory,conditioncheck.objectauditcategory,Object Condition Information > Object audit category
+botgarden_4-0-0,conditioncheck.conservationTreatmentPriority,conditioncheck.conservationtreatmentpriority,Object Condition Information > Conservation treatment priority
+botgarden_4-0-0,conditioncheck.nextConditionCheckDate,conditioncheck.nextconditioncheckdate,Object Condition Information > Next check/assessment date
+botgarden_4-0-0,conditioncheck.completeness,conditioncheck.completeness,Object Condition Information > Completeness description
+botgarden_4-0-0,conditioncheck.completenessDate,conditioncheck.completenessdate,Object Condition Information > Completeness date
+botgarden_4-0-0,conditioncheck.completenessNote,conditioncheck.completenessnote,Object Condition Information > Completeness note
+botgarden_4-0-0,conditioncheck.hazard,conditioncheck.hazard,Object Condition Information > Hazard description
+botgarden_4-0-0,conditioncheck.hazardDate,conditioncheck.hazarddate,Object Condition Information > Hazard date
+botgarden_4-0-0,conditioncheck.hazardNote,conditioncheck.hazardnote,Object Condition Information > Hazard note
+botgarden_4-0-0,conditioncheck.techAssessment,conditioncheck.techassessment,Object Condition Information > Technical assessment description
+botgarden_4-0-0,conditioncheck.techAssessmentDate,conditioncheck.techassessmentdate,Object Condition Information > Technical assessment date
+botgarden_4-0-0,conditioncheck.condition,conditioncheck.condition,Object Condition Information > Condition description
+botgarden_4-0-0,conditioncheck.conditionDate,conditioncheck.conditiondate,Object Condition Information > Condition date
+botgarden_4-0-0,conditioncheck.conditionNote,conditioncheck.conditionnote,Object Condition Information > Condition note
+botgarden_4-0-0,conditioncheck.envConditionNote,conditioncheck.envconditionnote,Object Condition Information > Environmental condition note
+botgarden_4-0-0,conditioncheck.envConditionNoteDate,conditioncheck.envconditionnotedate,Object Condition Information > Environmental condition date
+botgarden_4-0-0,conditioncheck.displayRecommendations,conditioncheck.displayrecommendations,Object Recommendation/Requirement Information > Display recommendation
+botgarden_4-0-0,conditioncheck.handlingRecommendations,conditioncheck.handlingrecommendations,Object Recommendation/Requirement Information > Handling recommendation
+botgarden_4-0-0,conditioncheck.securityRecommendations,conditioncheck.securityrecommendations,Object Recommendation/Requirement Information > Security recommendation
+botgarden_4-0-0,conditioncheck.storageRequirements,conditioncheck.storagerequirements,Object Recommendation/Requirement Information > Storage recommendation
+botgarden_4-0-0,conditioncheck.envRecommendations,conditioncheck.envrecommendations,Object Recommendation/Requirement Information > Environmental recommendation
+botgarden_4-0-0,conditioncheck.packingRecommendations,conditioncheck.packingrecommendations,Object Recommendation/Requirement Information > Packing recommendation
+botgarden_4-0-0,conditioncheck.specialRequirements,conditioncheck.specialrequirements,Object Recommendation/Requirement Information > Special requirement
+botgarden_4-0-0,conditioncheck.legalRequirements,conditioncheck.legalrequirements,Object Recommendation/Requirement Information > Legal requirement
+botgarden_4-0-0,conditioncheck.legalReqsHeld,conditioncheck.legalreqsheld,Object Recommendation/Requirement Information > Legal/license requirement held description
+botgarden_4-0-0,conditioncheck.legalReqsHeldBeginDate,conditioncheck.legalreqsheldbegindate,Object Recommendation/Requirement Information > Legal/license requirement held begin date
+botgarden_4-0-0,conditioncheck.legalReqsHeldEndDate,conditioncheck.legalreqsheldenddate,Object Recommendation/Requirement Information > Legal/license requirement held end date
+botgarden_4-0-0,conditioncheck.legalReqsHeldNumber,conditioncheck.legalreqsheldnumber,Object Recommendation/Requirement Information > Legal/license requirement held number
+botgarden_4-0-0,conditioncheck.legalReqsHeldRenewDate,conditioncheck.legalreqsheldrenewdate,Object Recommendation/Requirement Information > Legal/license requirement held renewal date
+botgarden_4-0-0,conditioncheck.salvagePriorityCode,conditioncheck.salvageprioritycode,Object Recommendation/Requirement Information > Salvage priority code
+botgarden_4-0-0,conditioncheck.salvagePriorityCodeDate,conditioncheck.salvageprioritycodedate,Object Recommendation/Requirement Information > Salvage priority date
+botgarden_4-0-0,deaccession.deaccessionNumber,deaccession.deaccessionnumber,Deaccession Information > Deaccession number
+botgarden_4-0-0,deaccession.deaccessionReason,deaccession.deaccessionreason,Deaccession Information > Deaccession reason
+botgarden_4-0-0,deaccession.deaccessionDate,deaccession.deaccessiondate,Deaccession Information > Deaccession date
+botgarden_4-0-0,deaccession.deaccessionRationale,deaccession.deaccessionrationale,Deaccession Information > Deaccession rationale
+botgarden_4-0-0,deaccession.deaccessionNote,deaccession.deaccessionnote,Deaccession Information > Deaccession note
+botgarden_4-0-0,deaccession.deaccessionApprovalGroup,deaccession.deaccessionapprovalgroup,Deaccession Information > Deaccession approval group > Deaccession approval group
+botgarden_4-0-0,deaccession.deaccessionApprovalIndividual,deaccession.deaccessionapprovalindividual,Deaccession Information > Deaccession approval group > Deaccession approval individual
+botgarden_4-0-0,deaccession.deaccessionApprovalStatus,deaccession.deaccessionapprovalstatus,Deaccession Information > Deaccession approval group > Deaccession approval status
+botgarden_4-0-0,deaccession.deaccessionApprovalDate,deaccession.deaccessionapprovaldate,Deaccession Information > Deaccession approval group > Deaccession approval date
+botgarden_4-0-0,deaccession.deaccessionApprovalNote,deaccession.deaccessionapprovalnote,Deaccession Information > Deaccession approval group > Deaccession approval note
+botgarden_4-0-0,deaccession.involvedParty,deaccession.involvedparty,Deaccession Information > Parties involved person
+botgarden_4-0-0,deaccession.involvedOnBehalfOf,deaccession.involvedonbehalfof,Deaccession Information > Parties involved on behalf of
+botgarden_4-0-0,deaccession.involvedRole,deaccession.involvedrole,Deaccession Information > Parties involved role
+botgarden_4-0-0,deaccession.exitDate,deaccession.exitdate,Proposed Exit Details > Exit date
+botgarden_4-0-0,deaccession.exitRecipient,deaccession.exitrecipient,Proposed Exit Details > Exit recipient
+botgarden_4-0-0,deaccession.exitMethod,deaccession.exitmethod,Proposed Exit Details > Exit method
+botgarden_4-0-0,exit.exitNumber,exit.exitnumber,Object Exit Information > Exit number
+botgarden_4-0-0,exit.exitDate,exit.exitdate,Object Exit Information > Exit date
+botgarden_4-0-0,exit.reason,exit.reason,Object Exit Information > Exit reason
+botgarden_4-0-0,exit.method,exit.method,Object Exit Information > Exit method
+botgarden_4-0-0,exit.owner,exit.owner,Object Exit Information > Owner after exit
+botgarden_4-0-0,exit.agent,exit.agent,Object Exit Information > Exit agent name
+botgarden_4-0-0,exit.role,exit.role,Object Exit Information > Exit agent role
+botgarden_4-0-0,exit.exitCountNote,exit.exitcountnote,Object Exit Information > Exit count note
+botgarden_4-0-0,exit.note,exit.note,Object Exit Information > Note
+botgarden_4-0-0,exit.group,exit.group,Object Exit Information > Approval status group
+botgarden_4-0-0,exit.individual,exit.individual,Object Exit Information > Approval status individual
+botgarden_4-0-0,exit.status,exit.status,Object Exit Information > Approval status
+botgarden_4-0-0,exit.date,exit.date,Object Exit Information > Approval status date
+botgarden_4-0-0,exit.approvalStatusNote,exit.approvalstatusnote,Object Exit Information > Approval status note
+botgarden_4-0-0,exit.saleCurrency,exit.salecurrency,Sale Information > Sale/auction currency
+botgarden_4-0-0,exit.saleValue,exit.salevalue,Sale Information > Sale/auction value
+botgarden_4-0-0,exit.saleDate,exit.saledate,Sale Information > Sale/auction date
+botgarden_4-0-0,exit.saleNumber,exit.salenumber,Sale Information > Sale/auction number
+botgarden_4-0-0,exit.saleLot,exit.salelot,Sale Information > Sale/auction lot
+botgarden_4-0-0,exit.saleNote,exit.salenote,Sale Information > Sale/auction note
+botgarden_4-0-0,group.title,group.title,Group Information > Title
+botgarden_4-0-0,group.owner,group.owner,Group Information > Group owner
+botgarden_4-0-0,group.groupEarliestSingleDate,group.groupearliestsingledate,Group Information > Earliest/single date
+botgarden_4-0-0,group.groupLatestDate,group.grouplatestdate,Group Information > Latest date
+botgarden_4-0-0,group.scopeNote,group.scopenote,Group Information > Scope note
+botgarden_4-0-0,insurance.insuranceIndemnityReferenceNumber,insurance.insuranceindemnityreferencenumber,Insurance and Indemnity Information > Reference number
+botgarden_4-0-0,insurance.insuranceIndemnityType,insurance.insuranceindemnitytype,Insurance and Indemnity Information > Type
+botgarden_4-0-0,insurance.insurerIndemnifier,insurance.insurerindemnifier,Insurance and Indemnity Information > Insurer/indemnifier
+botgarden_4-0-0,insurance.insuranceIndemnityPolicyNumber,insurance.insuranceindemnitypolicynumber,Insurance and Indemnity Information > Policy number
+botgarden_4-0-0,insurance.insuranceIndemnityCurrency,insurance.insuranceindemnitycurrency,Insurance and Indemnity Information > Insurance/indemnity price > Insurance/indemnity price currency
+botgarden_4-0-0,insurance.insuranceIndemnityValue,insurance.insuranceindemnityvalue,Insurance and Indemnity Information > Insurance/indemnity price > Insurance/indemnity price value
+botgarden_4-0-0,insurance.minimumLiabilityCurrency,insurance.minimumliabilitycurrency,Insurance and Indemnity Information > Minimum liability price > Minimum liability price currency
+botgarden_4-0-0,insurance.minimumLiabilityValue,insurance.minimumliabilityvalue,Insurance and Indemnity Information > Minimum liability price > Minimum liability price value
+botgarden_4-0-0,insurance.insuranceIndemnityAuthorizer,insurance.insuranceindemnityauthorizer,Insurance and Indemnity Information > Authorization > Authorizer
+botgarden_4-0-0,insurance.insuranceIndemnityAuthorizationDate,insurance.insuranceindemnityauthorizationdate,Insurance and Indemnity Information > Authorization > Authorization date
+botgarden_4-0-0,insurance.insuranceIndemnityStatus,insurance.insuranceindemnitystatus,Insurance and Indemnity Information > Status type
+botgarden_4-0-0,insurance.insuranceIndemnityStatusDate,insurance.insuranceindemnitystatusdate,Insurance and Indemnity Information > Status date
+botgarden_4-0-0,insurance.insuranceIndemnityStatusNote,insurance.insuranceindemnitystatusnote,Insurance and Indemnity Information > Status note
+botgarden_4-0-0,insurance.insuranceIndemnityNote,insurance.insuranceindemnitynote,Insurance and Indemnity Information > Note
+botgarden_4-0-0,insurance.insuranceIndemnityQuoteProvider,insurance.insuranceindemnityquoteprovider,Insurance and Indemnity Information > Quote provider
+botgarden_4-0-0,insurance.insuranceIndemnityQuoteCurrency,insurance.insuranceindemnityquotecurrency,Insurance and Indemnity Information > Quote currency
+botgarden_4-0-0,insurance.insuranceIndemnityQuoteValue,insurance.insuranceindemnityquotevalue,Insurance and Indemnity Information > Quote value
+botgarden_4-0-0,insurance.insuranceIndemnityQuoteDate,insurance.insuranceindemnityquotedate,Insurance and Indemnity Information > Quote date
+botgarden_4-0-0,intake.entryNumber,intake.entrynumber,Object Entry Information > Entry number
+botgarden_4-0-0,intake.entryDate,intake.entrydate,Object Entry Information > Entry date
+botgarden_4-0-0,intake.entryReason,intake.entryreason,Object Entry Information > Entry reason
+botgarden_4-0-0,intake.entryMethod,intake.entrymethod,Object Entry Information > Entry method
+botgarden_4-0-0,intake.returnDate,intake.returndate,Object Entry Information > Return date
+botgarden_4-0-0,intake.currentOwner,intake.currentowner,Object Entry Information > Current owner
+botgarden_4-0-0,intake.depositor,intake.depositor,Object Entry Information > Depositor name
+botgarden_4-0-0,intake.depositorsRequirements,intake.depositorsrequirements,Object Entry Information > Depositor requirements
+botgarden_4-0-0,intake.approvalGroup,intake.approvalgroup,Object Entry Information > Approval group > Approval group
+botgarden_4-0-0,intake.approvalIndividual,intake.approvalindividual,Object Entry Information > Approval group > Approval individual
+botgarden_4-0-0,intake.approvalStatus,intake.approvalstatus,Object Entry Information > Approval group > Approval status
+botgarden_4-0-0,intake.approvalDate,intake.approvaldate,Object Entry Information > Approval group > Approval status date
+botgarden_4-0-0,intake.approvalNote,intake.approvalnote,Object Entry Information > Approval group > Approval note
+botgarden_4-0-0,intake.entryNote,intake.entrynote,Object Entry Information > Entry note
+botgarden_4-0-0,intake.packingNote,intake.packingnote,Object Entry Information > Packing note
+botgarden_4-0-0,intake.valuer,intake.valuer,Valuation Information > Valuer
+botgarden_4-0-0,intake.valuationReferenceNumber,intake.valuationreferencenumber,Valuation Information > Valuation reference number
+botgarden_4-0-0,intake.insurer,intake.insurer,Insurance Information > Insurer
+botgarden_4-0-0,intake.insurancePolicyNumber,intake.insurancepolicynumber,Insurance Information > Insurance policy number
+botgarden_4-0-0,intake.insuranceRenewalDate,intake.insurancerenewaldate,Insurance Information > Insurance renewal date
+botgarden_4-0-0,intake.insuranceReferenceNumber,intake.insurancereferencenumber,Insurance Information > Insurance reference number
+botgarden_4-0-0,intake.insuranceNote,intake.insurancenote,Insurance Information > Insurance note
+botgarden_4-0-0,intake.currentLocation,intake.currentlocation,Location Information > Current location
+botgarden_4-0-0,intake.currentLocationFitness,intake.currentlocationfitness,Location Information > Current location fitness
+botgarden_4-0-0,intake.currentLocationNote,intake.currentlocationnote,Location Information > Current location note
+botgarden_4-0-0,intake.locationDate,intake.locationdate,Location Information > Location date
+botgarden_4-0-0,intake.normalLocation,intake.normallocation,Location Information > Normal location
+botgarden_4-0-0,intake.conditionCheckMethod,intake.conditioncheckmethod,Condition Check Information > Condition check method
+botgarden_4-0-0,intake.conditionCheckReason,intake.conditioncheckreason,Condition Check Information > Condition check reason
+botgarden_4-0-0,intake.conditionCheckerOrAssessor,intake.conditioncheckerorassessor,Condition Check Information > Condition check assessor
+botgarden_4-0-0,intake.conditionCheckDate,intake.conditioncheckdate,Condition Check Information > Condition check date
+botgarden_4-0-0,intake.conditionCheckReferenceNumber,intake.conditioncheckreferencenumber,Condition Check Information > Condition check reference number
+botgarden_4-0-0,intake.conditionCheckNote,intake.conditionchecknote,Condition Check Information > Condition check note
+botgarden_4-0-0,loanout.collector,loanout.collector,Voucher Information > Collector
+botgarden_4-0-0,loanout.loanOutDate,loanout.loanoutdate,Voucher Information > Voucher date
+botgarden_4-0-0,loanout.loanOutNumber,loanout.loanoutnumber,Voucher Information > Voucher collection number
+botgarden_4-0-0,loanout.sterile,loanout.sterile,Voucher Information > Phenology > Sterile
+botgarden_4-0-0,loanout.fertile,loanout.fertile,Voucher Information > Phenology > Fertile
+botgarden_4-0-0,loanout.flowering,loanout.flowering,Voucher Information > Phenology > Flowering
+botgarden_4-0-0,loanout.fruiting,loanout.fruiting,Voucher Information > Phenology > Fruiting
+botgarden_4-0-0,loanout.inSpore,loanout.inspore,Voucher Information > Phenology > In spore
+botgarden_4-0-0,loanout.hortWild,loanout.hortwild,Voucher Information > Horticultural/wild
+botgarden_4-0-0,loanout.gardenLocation,loanout.gardenlocation,Voucher Information > Garden location
+botgarden_4-0-0,loanout.loanPurpose,loanout.loanpurpose,Voucher Information > Voucher purpose
+botgarden_4-0-0,loanout.loanOutNote,loanout.loanoutnote,Voucher Information > Voucher note
+botgarden_4-0-0,loanout.fieldCollectionNote,loanout.fieldcollectionnote,Voucher Information > Collection note
+botgarden_4-0-0,loanout.annotation,loanout.annotation,Voucher Information > Annotation
+botgarden_4-0-0,loanout.borrower,loanout.borrower,Voucher Information > Voucher institution
+botgarden_4-0-0,loanout.numLent,loanout.numlent,Voucher Information > Number of sheets
+botgarden_4-0-0,loanout.sheetAccessionNumber,loanout.sheetaccessionnumber,Voucher Information > Sheet accession number
+botgarden_4-0-0,loanout.lendersAuthorizer,loanout.lendersauthorizer,Voucher Information > Reviewed by
+botgarden_4-0-0,loanout.reviewComplete,loanout.reviewcomplete,Voucher Information > Review complete
+botgarden_4-0-0,loanout.labelRequested,loanout.labelrequested,Voucher Information > Label requested
+botgarden_4-0-0,location.termDisplayName,location.termdisplayname,Storage Location Information > Term display name
+botgarden_4-0-0,location.termName,location.termname,Storage Location Information > Term name
+botgarden_4-0-0,location.termQualifier,location.termqualifier,Storage Location Information > Term qualifier
+botgarden_4-0-0,location.termStatus,location.termstatus,Storage Location Information > Term status
+botgarden_4-0-0,location.termType,location.termtype,Storage Location Information > Term type
+botgarden_4-0-0,location.termFlag,location.termflag,Storage Location Information > Term flag
+botgarden_4-0-0,location.termLanguage,location.termlanguage,Storage Location Information > Term language
+botgarden_4-0-0,location.termPrefForLang,location.termprefforlang,Storage Location Information > Term preferred for lang
+botgarden_4-0-0,location.termSource,location.termsource,Storage Location Information > Source > Term source name
+botgarden_4-0-0,location.termSourceDetail,location.termsourcedetail,Storage Location Information > Source > Term source detail
+botgarden_4-0-0,location.termSourceID,location.termsourceid,Storage Location Information > Source > Term source ID
+botgarden_4-0-0,location.termSourceNote,location.termsourcenote,Storage Location Information > Source > Term source note
+botgarden_4-0-0,location.locationType,location.locationtype,Storage Location Information > Storage location type
+botgarden_4-0-0,location.securityNote,location.securitynote,Storage Location Information > Security note
+botgarden_4-0-0,location.address,location.address,Storage Location Information > Address
+botgarden_4-0-0,location.accessNote,location.accessnote,Storage Location Information > Access note
+botgarden_4-0-0,location.conditionNote,location.conditionnote,Storage Location Information > Condition note
+botgarden_4-0-0,location.conditionNoteDate,location.conditionnotedate,Storage Location Information > Condition note date
+botgarden_4-0-0,media.identificationNumber,media.identificationnumber,Media Handling Information > Identification number
+botgarden_4-0-0,media.title,media.title,Media Handling Information > Title
+botgarden_4-0-0,media.publishTo,media.publishto,Media Handling Information > Publish to
+botgarden_4-0-0,media.name,media.name,File Information > Name
+botgarden_4-0-0,media.mimeType,media.mimetype,File Information > Type
+botgarden_4-0-0,media.length,media.length,File Information > Size
+botgarden_4-0-0,media.externalUrl,media.externalurl,Media Handling Information > External URL
+botgarden_4-0-0,media.measuredPart,media.measuredpart,Media Handling Information > Measured part
+botgarden_4-0-0,media.dimensionSummary,media.dimensionsummary,Media Handling Information > Dimension summary
+botgarden_4-0-0,media.dimension,media.dimension,Media Handling Information > Measurement dimension
+botgarden_4-0-0,media.measuredBy,media.measuredby,Media Handling Information > Measured by
+botgarden_4-0-0,media.measurementMethod,media.measurementmethod,Media Handling Information > Measurement method
+botgarden_4-0-0,media.value,media.value,Media Handling Information > Measurement value
+botgarden_4-0-0,media.measurementUnit,media.measurementunit,Media Handling Information > Measurement unit
+botgarden_4-0-0,media.valueQualifier,media.valuequalifier,Media Handling Information > Measurement qualifier
+botgarden_4-0-0,media.valueDate,media.valuedate,Media Handling Information > Measurement date
+botgarden_4-0-0,media.measuredPartNote,media.measuredpartnote,Media Handling Information > Dimension note
+botgarden_4-0-0,media.checksumValue,media.checksumvalue,Media Handling Information > Checksum value
+botgarden_4-0-0,media.checksumType,media.checksumtype,Media Handling Information > Checksum type
+botgarden_4-0-0,media.checksumDate,media.checksumdate,Media Handling Information > Checksum date
+botgarden_4-0-0,media.contributor,media.contributor,Media Handling Information > Contributor
+botgarden_4-0-0,media.creator,media.creator,Media Handling Information > Creator
+botgarden_4-0-0,media.language,media.language,Media Handling Information > Language
+botgarden_4-0-0,media.publisher,media.publisher,Media Handling Information > Publisher
+botgarden_4-0-0,media.relation,media.relation,Media Handling Information > Relation
+botgarden_4-0-0,media.copyrightStatement,media.copyrightstatement,Media Handling Information > Copyright statement
+botgarden_4-0-0,media.type,media.type,Media Handling Information > Type
+botgarden_4-0-0,media.coverage,media.coverage,Media Handling Information > Coverage
+botgarden_4-0-0,media.dateGroup,media.dategroup,Media Handling Information > Date
+botgarden_4-0-0,media.source,media.source,Media Handling Information > Source
+botgarden_4-0-0,media.subject,media.subject,Media Handling Information > Subject
+botgarden_4-0-0,media.rightsHolder,media.rightsholder,Media Handling Information > Rights holder
+botgarden_4-0-0,media.description,media.description,Media Handling Information > Description
+botgarden_4-0-0,media.altText,media.alttext,Media Handling Information > Alt text
+botgarden_4-0-0,media.mediaFileURI,media.mediafileuri,""
+botgarden_4-0-0,movement.locationDate,movement.locationdate,Current Location Information > Action date
+botgarden_4-0-0,movement.reasonForMove,movement.reasonformove,Current Location Information > Action code
+botgarden_4-0-0,movement.currentLocation,movement.currentlocation,Current Location Information > Garden location
+botgarden_4-0-0,movement.movementContact,movement.movementcontact,Current Location Information > Contact
+botgarden_4-0-0,movement.movementReferenceNumber,movement.movementreferencenumber,Current Location Information > Reference number
+botgarden_4-0-0,movement.movementNote,movement.movementnote,Current Location Information > Movement note
+botgarden_4-0-0,movement.labelRequested,movement.labelrequested,Label Information > Label requested
+botgarden_4-0-0,movement.labelSize,movement.labelsize,Label Information > Label size
+botgarden_4-0-0,movement.labelStandType,movement.labelstandtype,Label Information > Label stand type
+botgarden_4-0-0,movement.labelCount,movement.labelcount,Label Information > Label count
+botgarden_4-0-0,objectexit.exitNumber,objectexit.exitnumber,Distribution Information > Distribution number
+botgarden_4-0-0,objectexit.exitDateGroup,objectexit.exitdategroup,Distribution Information > Date
+botgarden_4-0-0,objectexit.currentOwner,objectexit.currentowner,Distribution Information > Authorized by
+botgarden_4-0-0,objectexit.exitMethod,objectexit.exitmethod,Distribution Information > Distribution method
+botgarden_4-0-0,objectexit.depositor,objectexit.depositor,Distribution Information > Organization
+botgarden_4-0-0,objectexit.exitReason,objectexit.exitreason,Distribution Information > Distribution reason
+botgarden_4-0-0,objectexit.count,objectexit.count,Distribution Information > Count
+botgarden_4-0-0,objectexit.exitNote,objectexit.exitnote,Distribution Information > Distribution note
+botgarden_4-0-0,objectexit.packingNote,objectexit.packingnote,Distribution Information > Packing note
+botgarden_4-0-0,organization.termDisplayName,organization.termdisplayname,Organization Information > Term display name
+botgarden_4-0-0,organization.termName,organization.termname,Organization Information > Term name
+botgarden_4-0-0,organization.termQualifier,organization.termqualifier,Organization Information > Term qualifier
+botgarden_4-0-0,organization.termStatus,organization.termstatus,Organization Information > Term status
+botgarden_4-0-0,organization.termType,organization.termtype,Organization Information > Term type
+botgarden_4-0-0,organization.termFlag,organization.termflag,Organization Information > Term flag
+botgarden_4-0-0,organization.termLanguage,organization.termlanguage,Organization Information > Term language
+botgarden_4-0-0,organization.termPrefForLang,organization.termprefforlang,Organization Information > Term preferred for lang
+botgarden_4-0-0,organization.mainBodyName,organization.mainbodyname,Organization Information > Name detail > Term main body name
+botgarden_4-0-0,organization.additionsToName,organization.additionstoname,Organization Information > Name detail > Term name addition
+botgarden_4-0-0,organization.termSource,organization.termsource,Organization Information > Source > Term source name
+botgarden_4-0-0,organization.termSourceDetail,organization.termsourcedetail,Organization Information > Source > Term source detail
+botgarden_4-0-0,organization.termSourceID,organization.termsourceid,Organization Information > Source > Term source ID
+botgarden_4-0-0,organization.termSourceNote,organization.termsourcenote,Organization Information > Source > Term source note
+botgarden_4-0-0,organization.organizationRecordType,organization.organizationrecordtype,Organization Information > Organization type
+botgarden_4-0-0,organization.foundingDateGroup,organization.foundingdategroup,Organization Information > Foundation date
+botgarden_4-0-0,organization.foundingPlace,organization.foundingplace,Organization Information > Foundation place
+botgarden_4-0-0,organization.dissolutionDateGroup,organization.dissolutiondategroup,Organization Information > Dissolution date
+botgarden_4-0-0,organization.nameNote,organization.namenote,Organization Information > Name note
+botgarden_4-0-0,organization.group,organization.group,Organization Information > Group
+botgarden_4-0-0,organization.function,organization.function,Organization Information > Function
+botgarden_4-0-0,organization.historyNote,organization.historynote,Organization Information > History
+botgarden_4-0-0,organization.contactName,organization.contactname,Organization Information > Contact name
+botgarden_4-0-0,organization.contactRole,organization.contactrole,Organization Information > Contact role
+botgarden_4-0-0,organization.contactDateGroup,organization.contactdategroup,Organization Information > Contact date
+botgarden_4-0-0,organization.contactEndDateGroup,organization.contactenddategroup,Organization Information > Contact end date
+botgarden_4-0-0,organization.contactStatus,organization.contactstatus,Organization Information > Contact status
+botgarden_4-0-0,organization.email,organization.email,Contact Information > Organization Information > Address
+botgarden_4-0-0,organization.emailType,organization.emailtype,Contact Information > Organization Information > Type
+botgarden_4-0-0,organization.telephoneNumber,organization.telephonenumber,Contact Information > Organization Information > Number
+botgarden_4-0-0,organization.telephoneNumberType,organization.telephonenumbertype,Contact Information > Organization Information > Type
+botgarden_4-0-0,organization.faxNumber,organization.faxnumber,Contact Information > Organization Information > Number
+botgarden_4-0-0,organization.faxNumberType,organization.faxnumbertype,Contact Information > Organization Information > Type
+botgarden_4-0-0,organization.webAddress,organization.webaddress,Contact Information > Organization Information > URL
+botgarden_4-0-0,organization.webAddressType,organization.webaddresstype,Contact Information > Organization Information > Type
+botgarden_4-0-0,organization.addressPlace1,organization.addressplace1,Contact Information > Organization Information > Line 1
+botgarden_4-0-0,organization.addressPlace2,organization.addressplace2,Contact Information > Organization Information > Line 2
+botgarden_4-0-0,organization.addressMunicipality,organization.addressmunicipality,Contact Information > Organization Information > Municipality
+botgarden_4-0-0,organization.addressStateOrProvince,organization.addressstateorprovince,Contact Information > Organization Information > State/province
+botgarden_4-0-0,organization.addressPostCode,organization.addresspostcode,Contact Information > Organization Information > Postal code
+botgarden_4-0-0,organization.addressCountry,organization.addresscountry,Contact Information > Organization Information > Country
+botgarden_4-0-0,organization.addressType,organization.addresstype,Contact Information > Organization Information > Type
+botgarden_4-0-0,person.termDisplayName,person.termdisplayname,Person Information > Term display name
+botgarden_4-0-0,person.termName,person.termname,Person Information > Term name
+botgarden_4-0-0,person.termQualifier,person.termqualifier,Person Information > Term qualifier
+botgarden_4-0-0,person.termStatus,person.termstatus,Person Information > Term status
+botgarden_4-0-0,person.termType,person.termtype,Person Information > Term type
+botgarden_4-0-0,person.termFlag,person.termflag,Person Information > Term flag
+botgarden_4-0-0,person.termLanguage,person.termlanguage,Person Information > Term language
+botgarden_4-0-0,person.termPrefForLang,person.termprefforlang,Person Information > Term preferred for lang
+botgarden_4-0-0,person.salutation,person.salutation,Person Information > Name detail > Term salutation
+botgarden_4-0-0,person.title,person.title,Person Information > Name detail > Term title
+botgarden_4-0-0,person.foreName,person.forename,Person Information > Name detail > Term forename
+botgarden_4-0-0,person.middleName,person.middlename,Person Information > Name detail > Term middle name
+botgarden_4-0-0,person.surName,person.surname,Person Information > Name detail > Term surname
+botgarden_4-0-0,person.nameAdditions,person.nameadditions,Person Information > Name detail > Term name addition
+botgarden_4-0-0,person.initials,person.initials,Person Information > Name detail > Term initials
+botgarden_4-0-0,person.termSource,person.termsource,Person Information > Source > Term source name
+botgarden_4-0-0,person.termSourceDetail,person.termsourcedetail,Person Information > Source > Term source detail
+botgarden_4-0-0,person.termSourceID,person.termsourceid,Person Information > Source > Term source ID
+botgarden_4-0-0,person.termSourceNote,person.termsourcenote,Person Information > Source > Term source note
+botgarden_4-0-0,person.gender,person.gender,Person Information > Gender
+botgarden_4-0-0,person.occupation,person.occupation,Person Information > Occupation
+botgarden_4-0-0,person.schoolOrStyle,person.schoolorstyle,Person Information > School/style
+botgarden_4-0-0,person.group,person.group,Person Information > Group
+botgarden_4-0-0,person.nationality,person.nationality,Person Information > Nationality
+botgarden_4-0-0,person.nameNote,person.namenote,Person Information > Name note
+botgarden_4-0-0,person.birthDateGroup,person.birthdategroup,Person Information > Birth date
+botgarden_4-0-0,person.birthPlace,person.birthplace,Person Information > Place of birth
+botgarden_4-0-0,person.deathDateGroup,person.deathdategroup,Person Information > Death date
+botgarden_4-0-0,person.deathPlace,person.deathplace,Person Information > Place of death
+botgarden_4-0-0,person.bioNote,person.bionote,Person Information > Biographical note
+botgarden_4-0-0,person.email,person.email,Contact Information > Person Information > Address
+botgarden_4-0-0,person.emailType,person.emailtype,Contact Information > Person Information > Type
+botgarden_4-0-0,person.telephoneNumber,person.telephonenumber,Contact Information > Person Information > Number
+botgarden_4-0-0,person.telephoneNumberType,person.telephonenumbertype,Contact Information > Person Information > Type
+botgarden_4-0-0,person.faxNumber,person.faxnumber,Contact Information > Person Information > Number
+botgarden_4-0-0,person.faxNumberType,person.faxnumbertype,Contact Information > Person Information > Type
+botgarden_4-0-0,person.webAddress,person.webaddress,Contact Information > Person Information > URL
+botgarden_4-0-0,person.webAddressType,person.webaddresstype,Contact Information > Person Information > Type
+botgarden_4-0-0,person.addressPlace1,person.addressplace1,Contact Information > Person Information > Line 1
+botgarden_4-0-0,person.addressPlace2,person.addressplace2,Contact Information > Person Information > Line 2
+botgarden_4-0-0,person.addressMunicipality,person.addressmunicipality,Contact Information > Person Information > Municipality
+botgarden_4-0-0,person.addressStateOrProvince,person.addressstateorprovince,Contact Information > Person Information > State/province
+botgarden_4-0-0,person.addressPostCode,person.addresspostcode,Contact Information > Person Information > Postal code
+botgarden_4-0-0,person.addressCountry,person.addresscountry,Contact Information > Person Information > Country
+botgarden_4-0-0,person.addressType,person.addresstype,Contact Information > Person Information > Type
+botgarden_4-0-0,person.declinedToAnswerPronoun,person.declinedtoanswerpronoun,Maker-Supplied Identity Information > Pronoun supplied declined to answer
+botgarden_4-0-0,person.suppliedPronoun,person.suppliedpronoun,Maker-Supplied Identity Information > Pronoun supplied
+botgarden_4-0-0,person.useRestrictionPronoun,person.userestrictionpronoun,Maker-Supplied Identity Information > Pronoun supplied use restriction
+botgarden_4-0-0,person.declinedToAnswerGender,person.declinedtoanswergender,Maker-Supplied Identity Information > Gender supplied declined to answer
+botgarden_4-0-0,person.suppliedGender,person.suppliedgender,Maker-Supplied Identity Information > Gender supplied
+botgarden_4-0-0,person.useRestrictionGender,person.userestrictiongender,Maker-Supplied Identity Information > Gender supplied use restriction
+botgarden_4-0-0,person.declinedToAnswerRace,person.declinedtoanswerrace,Maker-Supplied Identity Information > Race supplied declined to answer
+botgarden_4-0-0,person.suppliedRace,person.suppliedrace,Maker-Supplied Identity Information > Race supplied
+botgarden_4-0-0,person.useRestrictionRace,person.userestrictionrace,Maker-Supplied Identity Information > Race supplied use restriction
+botgarden_4-0-0,person.declinedToAnswerEthnicity,person.declinedtoanswerethnicity,Maker-Supplied Identity Information > Ethnicity supplied declined to answer
+botgarden_4-0-0,person.suppliedEthnicity,person.suppliedethnicity,Maker-Supplied Identity Information > Ethnicity supplied
+botgarden_4-0-0,person.useRestrictionEthnicity,person.userestrictionethnicity,Maker-Supplied Identity Information > Ethnicity supplied use restriction
+botgarden_4-0-0,person.declinedToAnswerSexuality,person.declinedtoanswersexuality,Maker-Supplied Identity Information > Sexuality supplied declined to answer
+botgarden_4-0-0,person.suppliedSexuality,person.suppliedsexuality,Maker-Supplied Identity Information > Sexuality supplied
+botgarden_4-0-0,person.useRestrictionSexuality,person.userestrictionsexuality,Maker-Supplied Identity Information > Sexuality supplied use restriction
+botgarden_4-0-0,person.declinedToAnswerBirthPlace,person.declinedtoanswerbirthplace,Maker-Supplied Identity Information > Birth place supplied declined to answer
+botgarden_4-0-0,person.suppliedBirthPlace,person.suppliedbirthplace,Maker-Supplied Identity Information > Birth place supplied
+botgarden_4-0-0,person.useRestrictionBirthPlace,person.userestrictionbirthplace,Maker-Supplied Identity Information > Birth place supplied use restriction
+botgarden_4-0-0,person.declinedToAnswerBirthDate,person.declinedtoanswerbirthdate,Maker-Supplied Identity Information > Birth date supplied declined to answer
+botgarden_4-0-0,person.suppliedStructuredBirthDateGroup,person.suppliedstructuredbirthdategroup,Maker-Supplied Identity Information > Birth date supplied
+botgarden_4-0-0,person.useRestrictionBirthDate,person.userestrictionbirthdate,Maker-Supplied Identity Information > Birth date supplied use restriction
+botgarden_4-0-0,person.informationAuthor,person.informationauthor,Maker-Supplied Identity Information > Other information author
+botgarden_4-0-0,person.informationDate,person.informationdate,Maker-Supplied Identity Information > Other information date
+botgarden_4-0-0,person.informationUseRestriction,person.informationuserestriction,Maker-Supplied Identity Information > Other information use restriction
+botgarden_4-0-0,person.otherInformation,person.otherinformation,Maker-Supplied Identity Information > Other information note
+botgarden_4-0-0,place.termDisplayName,place.termdisplayname,Place Information > Term display name
+botgarden_4-0-0,place.termName,place.termname,Place Information > Term name
+botgarden_4-0-0,place.termQualifier,place.termqualifier,Place Information > Term qualifier
+botgarden_4-0-0,place.termStatus,place.termstatus,Place Information > Term status
+botgarden_4-0-0,place.termType,place.termtype,Place Information > Term type
+botgarden_4-0-0,place.termFlag,place.termflag,Place Information > Term flag
+botgarden_4-0-0,place.historicalStatus,place.historicalstatus,Place Information > Term historical status
+botgarden_4-0-0,place.termLanguage,place.termlanguage,Place Information > Term language
+botgarden_4-0-0,place.termPrefForLang,place.termprefforlang,Place Information > Term preferred for lang
+botgarden_4-0-0,place.nameAbbrev,place.nameabbrev,Place Information > Term abbreviation
+botgarden_4-0-0,place.nameNote,place.namenote,Place Information > Term note
+botgarden_4-0-0,place.nameDateGroup,place.namedategroup,Place Information > Term date
+botgarden_4-0-0,place.termSource,place.termsource,Place Information > Source > Term source name
+botgarden_4-0-0,place.termSourceDetail,place.termsourcedetail,Place Information > Source > Term source detail
+botgarden_4-0-0,place.termSourceID,place.termsourceid,Place Information > Source > Term source ID
+botgarden_4-0-0,place.termSourceNote,place.termsourcenote,Place Information > Source > Term source note
+botgarden_4-0-0,place.placeType,place.placetype,Place Information > Place type
+botgarden_4-0-0,place.placeSource,place.placesource,Place Information > Place source
+botgarden_4-0-0,place.owner,place.owner,Place Information > Owner
+botgarden_4-0-0,place.ownershipDateGroup,place.ownershipdategroup,Place Information > Ownership date
+botgarden_4-0-0,place.ownershipNote,place.ownershipnote,Place Information > Ownership note
+botgarden_4-0-0,place.placeNote,place.placenote,Place Information > Place note
+botgarden_4-0-0,place.addressPlace1,place.addressplace1,Place Information > Address line 1
+botgarden_4-0-0,place.addressPlace2,place.addressplace2,Place Information > Address line 2
+botgarden_4-0-0,place.addressMunicipality,place.addressmunicipality,Place Information > Address municipality
+botgarden_4-0-0,place.addressStateOrProvince,place.addressstateorprovince,Place Information > Address state/province
+botgarden_4-0-0,place.addressPostCode,place.addresspostcode,Place Information > Address postal code
+botgarden_4-0-0,place.addressCountry,place.addresscountry,Place Information > Address country
+botgarden_4-0-0,place.addressType,place.addresstype,Place Information > Address type
+botgarden_4-0-0,place.vCoordinates,place.vcoordinates,Locality Information > Verbatim coords
+botgarden_4-0-0,place.vLatitude,place.vlatitude,Locality Information > Verbatim latitude
+botgarden_4-0-0,place.vLongitude,place.vlongitude,Locality Information > Verbatim longitude
+botgarden_4-0-0,place.vCoordSys,place.vcoordsys,Locality Information > Coordinate system
+botgarden_4-0-0,place.vSpatialReferenceSystem,place.vspatialreferencesystem,Locality Information > Spatial ref system
+botgarden_4-0-0,place.vElevation,place.velevation,Locality Information > Elevation
+botgarden_4-0-0,place.vDepth,place.vdepth,Locality Information > Depth
+botgarden_4-0-0,place.vDistanceAboveSurface,place.vdistanceabovesurface,Locality Information > Distance above surface
+botgarden_4-0-0,place.vUnitofMeasure,place.vunitofmeasure,Locality Information > Unit of measure
+botgarden_4-0-0,place.minElevationInMeters,place.minelevationinmeters,Locality Information > Min elevation (m)
+botgarden_4-0-0,place.maxElevationInMeters,place.maxelevationinmeters,Locality Information > Max elevation (m)
+botgarden_4-0-0,place.minDepthInMeters,place.mindepthinmeters,Locality Information > Min depth (m)
+botgarden_4-0-0,place.maxDepthInMeters,place.maxdepthinmeters,Locality Information > Max depth (m)
+botgarden_4-0-0,place.minDistanceAboveSurfaceInMeters,place.mindistanceabovesurfaceinmeters,Locality Information > Min distance above surface (m)
+botgarden_4-0-0,place.maxDistanceAboveSurfaceInMeters,place.maxdistanceabovesurfaceinmeters,Locality Information > Max distance above surface (m)
+botgarden_4-0-0,place.vCoordSource,place.vcoordsource,Locality Information > Coordinate source
+botgarden_4-0-0,place.vCoordSourceRefId,place.vcoordsourcerefid,Locality Information > Coordinate source detail
+botgarden_4-0-0,place.decimalLatitude,place.decimallatitude,Georeference Information > Georeference decimal latitude
+botgarden_4-0-0,place.decimalLongitude,place.decimallongitude,Georeference Information > Georeference decimal longitude
+botgarden_4-0-0,place.geodeticDatum,place.geodeticdatum,Georeference Information > Georeference datum
+botgarden_4-0-0,place.coordUncertaintyInMeters,place.coorduncertaintyinmeters,Georeference Information > Georeference uncertainty (m)
+botgarden_4-0-0,place.coordPrecision,place.coordprecision,Georeference Information > Georeference precision
+botgarden_4-0-0,place.pointRadiusSpatialFit,place.pointradiusspatialfit,Georeference Information > Georeference point radius spatial fit
+botgarden_4-0-0,place.footprintWKT,place.footprintwkt,Georeference Information > Georeference footprint WKT
+botgarden_4-0-0,place.footprintSRS,place.footprintsrs,Georeference Information > Georeference footprint SRS
+botgarden_4-0-0,place.footprintSpatialFit,place.footprintspatialfit,Georeference Information > Georeference footprint spatial fit
+botgarden_4-0-0,place.geoReferencedBy,place.georeferencedby,Georeference Information > Georeferenced by
+botgarden_4-0-0,place.geoRefDateGroup,place.georefdategroup,Georeference Information > Georeference date
+botgarden_4-0-0,place.geoRefProtocol,place.georefprotocol,Georeference Information > Georeference protocol
+botgarden_4-0-0,place.geoRefSource,place.georefsource,Georeference Information > Georeference source
+botgarden_4-0-0,place.geoRefVerificationStatus,place.georefverificationstatus,Georeference Information > Georeference verification
+botgarden_4-0-0,place.geoRefRemarks,place.georefremarks,Georeference Information > Georeference remarks
+botgarden_4-0-0,place.geoRefPlaceName,place.georefplacename,Georeference Information > Georeference place name
+botgarden_4-0-0,transport.transportReferenceNumber,transport.transportreferencenumber,Transport Information > Transport reference number
+botgarden_4-0-0,transport.transportMethod,transport.transportmethod,Transport Information > Transport method
+botgarden_4-0-0,transport.numberOfCrates,transport.numberofcrates,Transport Information > Number of crates/objects
+botgarden_4-0-0,transport.transporter,transport.transporter,Transport Information > Transporter > Transporter name
+botgarden_4-0-0,transport.transporterContact,transport.transportercontact,Transport Information > Transporter > Transporter contact
+botgarden_4-0-0,transport.transporterContactNumber,transport.transportercontactnumber,Transport Information > Transporter > Transporter contact number
+botgarden_4-0-0,transport.transportAuthorizer,transport.transportauthorizer,Transport Information > Authorization > Transport authorizer
+botgarden_4-0-0,transport.transportAuthorizationDate,transport.transportauthorizationdate,Transport Information > Authorization > Authorization date
+botgarden_4-0-0,transport.transportTrackingNumber,transport.transporttrackingnumber,Transport Information > Tracking number
+botgarden_4-0-0,transport.transportTrackingNumberNote,transport.transporttrackingnumbernote,Transport Information > Tracking number note
+botgarden_4-0-0,transport.departurePoint,transport.departurepoint,Transport Information > Departure > Departure point
+botgarden_4-0-0,transport.transportDepartureDate,transport.transportdeparturedate,Transport Information > Departure > Departure date
+botgarden_4-0-0,transport.transportDepartureTime,transport.transportdeparturetime,Transport Information > Departure > Departure time
+botgarden_4-0-0,transport.destination,transport.destination,Transport Information > Arrival > Arrival point
+botgarden_4-0-0,transport.transportArrivalDate,transport.transportarrivaldate,Transport Information > Arrival > Arrival date
+botgarden_4-0-0,transport.transportArrivalTime,transport.transportarrivaltime,Transport Information > Arrival > Arrival time
+botgarden_4-0-0,transport.courier,transport.courier,Transport Information > Courier name
+botgarden_4-0-0,transport.courierContactNumber,transport.couriercontactnumber,Transport Information > Courier contact number
+botgarden_4-0-0,transport.transportRemarks,transport.transportremarks,Transport Information > Note
+botgarden_4-0-0,transport.transportCostType,transport.transportcosttype,Cost Information > Transport cost type
+botgarden_4-0-0,transport.transportCostResponsibleParty,transport.transportcostresponsibleparty,Cost Information > Transport cost responsible party
+botgarden_4-0-0,transport.insuranceCostResponsibleParty,transport.insurancecostresponsibleparty,Cost Information > Insurance/indemnity cost responsible party
+botgarden_4-0-0,transport.finalShippingCostCurrency,transport.finalshippingcostcurrency,Cost Information > Final shipping cost > Final shipping cost currency
+botgarden_4-0-0,transport.finalShippingCostValue,transport.finalshippingcostvalue,Cost Information > Final shipping cost > Final shipping cost value
+botgarden_4-0-0,transport.customsBroker,transport.customsbroker,Cost Information > Customs broker > Customs broker name
+botgarden_4-0-0,transport.customsBrokerContact,transport.customsbrokercontact,Cost Information > Customs broker > Customs broker contact
+botgarden_4-0-0,transport.customsDeclaredValueCurrency,transport.customsdeclaredvaluecurrency,Cost Information > Declared value for customs > Declared value for customs currency
+botgarden_4-0-0,transport.customsDeclaredValueAmount,transport.customsdeclaredvalueamount,Cost Information > Declared value for customs > Declared value for customs amount
+botgarden_4-0-0,transport.customsFeeCurrency,transport.customsfeecurrency,Cost Information > Customs fee > Customs fee currency
+botgarden_4-0-0,transport.customsFeeValue,transport.customsfeevalue,Cost Information > Customs fee > Customs fee value
+botgarden_4-0-0,transport.customsFeeNote,transport.customsfeenote,Cost Information > Customs fee > Customs fee note
+botgarden_4-0-0,transport.additionalCostsType,transport.additionalcoststype,Cost Information > Additional cost type
+botgarden_4-0-0,transport.additionalCostsCurrency,transport.additionalcostscurrency,Cost Information > Additional cost currency
+botgarden_4-0-0,transport.additionalCostsValue,transport.additionalcostsvalue,Cost Information > Additional cost value
+botgarden_4-0-0,transport.shippingQuoteProvider,transport.shippingquoteprovider,Cost Information > Shipping quote provider
+botgarden_4-0-0,transport.shippingQuoteCurrency,transport.shippingquotecurrency,Cost Information > Shipping quote currency
+botgarden_4-0-0,transport.shippingQuoteValue,transport.shippingquotevalue,Cost Information > Shipping quote value
+botgarden_4-0-0,transport.shippingQuoteDate,transport.shippingquotedate,Cost Information > Shipping quote date
+botgarden_4-0-0,uoc.referenceNumber,uoc.referencenumber,Use of Collections Information > Reference number
+botgarden_4-0-0,uoc.method,uoc.method,Use of Collections Information > Method
+botgarden_4-0-0,uoc.collectionType,uoc.collectiontype,Use of Collections Information > Collection type
+botgarden_4-0-0,uoc.projectId,uoc.projectid,Use of Collections Information > Project ID
+botgarden_4-0-0,uoc.subcollection,uoc.subcollection,Use of Collections Information > Subcollection
+botgarden_4-0-0,uoc.materialType,uoc.materialtype,Use of Collections Information > Material type
+botgarden_4-0-0,uoc.user,uoc.user,Use of Collections Information > User name
+botgarden_4-0-0,uoc.userUocRole,uoc.useruocrole,Use of Collections Information > User role
+botgarden_4-0-0,uoc.userInstitution,uoc.userinstitution,Use of Collections Information > User institution
+botgarden_4-0-0,uoc.userInstitutionRole,uoc.userinstitutionrole,Use of Collections Information > User institution role
+botgarden_4-0-0,uoc.title,uoc.title,Use of Collections Information > Title
+botgarden_4-0-0,uoc.dateRequested,uoc.daterequested,Use of Collections Information > Date requested
+botgarden_4-0-0,uoc.dateCompleted,uoc.datecompleted,Use of Collections Information > Date completed
+botgarden_4-0-0,uoc.occasion,uoc.occasion,Use of Collections Information > Occasion
+botgarden_4-0-0,uoc.projectDescription,uoc.projectdescription,Use of Collections Information > Project description
+botgarden_4-0-0,uoc.authorizedBy,uoc.authorizedby,Use of Collections Information > Authorized by
+botgarden_4-0-0,uoc.authorizationDate,uoc.authorizationdate,Use of Collections Information > Authorization date
+botgarden_4-0-0,uoc.authorizationStatus,uoc.authorizationstatus,Use of Collections Information > Authorization status
+botgarden_4-0-0,uoc.authorizationNote,uoc.authorizationnote,Use of Collections Information > Authorization note
+botgarden_4-0-0,uoc.useDate,uoc.usedate,Use of Collections Information > Start/ongoing date
+botgarden_4-0-0,uoc.useDateTimeNote,uoc.usedatetimenote,Use of Collections Information > Start/ongoing date time note
+botgarden_4-0-0,uoc.useDateNumberOfVisitors,uoc.usedatenumberofvisitors,Use of Collections Information > Start/ongoing date no. of visitors
+botgarden_4-0-0,uoc.useDateHoursSpent,uoc.usedatehoursspent,Use of Collections Information > Start/ongoing date hours spent
+botgarden_4-0-0,uoc.useDateVisitorNote,uoc.usedatevisitornote,Use of Collections Information > Start/ongoing date visitor note
+botgarden_4-0-0,uoc.endDate,uoc.enddate,Use of Collections Information > End date
+botgarden_4-0-0,uoc.staffName,uoc.staffname,Use of Collections Information > Staff name
+botgarden_4-0-0,uoc.staffRole,uoc.staffrole,Use of Collections Information > Staff role
+botgarden_4-0-0,uoc.staffHours,uoc.staffhours,Use of Collections Information > Staff hours spent
+botgarden_4-0-0,uoc.staffNote,uoc.staffnote,Use of Collections Information > Staff note
+botgarden_4-0-0,uoc.location,uoc.location,Use of Collections Information > Location
+botgarden_4-0-0,uoc.feeCurrency,uoc.feecurrency,Use of Collections Information > Fee currency
+botgarden_4-0-0,uoc.feeValue,uoc.feevalue,Use of Collections Information > Fee value
+botgarden_4-0-0,uoc.feePaid,uoc.feepaid,Use of Collections Information > Fee paid
+botgarden_4-0-0,uoc.feeNote,uoc.feenote,Use of Collections Information > Fee note
+botgarden_4-0-0,uoc.note,uoc.note,Use of Collections Information > Note
+botgarden_4-0-0,uoc.provisos,uoc.provisos,Use of Collections Information > Provisos
+botgarden_4-0-0,uoc.obligationsFulfilled,uoc.obligationsfulfilled,Use of Collections Information > Obligations fulfilled
+botgarden_4-0-0,uoc.result,uoc.result,Use of Collections Information > Result
+botgarden_4-0-0,valuation.valuationcontrolRefNumber,valuation.valuationcontrolrefnumber,Object Valuation Information > Reference number
+botgarden_4-0-0,valuation.valueCurrency,valuation.valuecurrency,Object Valuation Information > Amount currency
+botgarden_4-0-0,valuation.valueAmount,valuation.valueamount,Object Valuation Information > Amount value
+botgarden_4-0-0,valuation.valueDate,valuation.valuedate,Object Valuation Information > Date
+botgarden_4-0-0,valuation.valueRenewalDate,valuation.valuerenewaldate,Object Valuation Information > Renewal date
+botgarden_4-0-0,valuation.valueSource,valuation.valuesource,Object Valuation Information > Source
+botgarden_4-0-0,valuation.valueType,valuation.valuetype,Object Valuation Information > Type
+botgarden_4-0-0,valuation.valueNote,valuation.valuenote,Object Valuation Information > Note
+botgarden_4-0-0,work.termDisplayName,work.termdisplayname,Work Information > Term display name
+botgarden_4-0-0,work.termName,work.termname,Work Information > Term name
+botgarden_4-0-0,work.termQualifier,work.termqualifier,Work Information > Term qualifier
+botgarden_4-0-0,work.termStatus,work.termstatus,Work Information > Term status
+botgarden_4-0-0,work.termType,work.termtype,Work Information > Term type
+botgarden_4-0-0,work.termFlag,work.termflag,Work Information > Term flag
+botgarden_4-0-0,work.termLanguage,work.termlanguage,Work Information > Term language
+botgarden_4-0-0,work.termPrefForLang,work.termprefforlang,Work Information > Term preferred for lang
+botgarden_4-0-0,work.termSource,work.termsource,Work Information > Source > Term source name
+botgarden_4-0-0,work.termSourceDetail,work.termsourcedetail,Work Information > Source > Term source detail
+botgarden_4-0-0,work.termSourceID,work.termsourceid,Work Information > Source > Term source ID
+botgarden_4-0-0,work.termSourceNote,work.termsourcenote,Work Information > Source > Term source note
+botgarden_4-0-0,work.workType,work.worktype,Work Information > Work type
+botgarden_4-0-0,work.workDateGroup,work.workdategroup,Work Information > Work date
+botgarden_4-0-0,work.workHistoryNote,work.workhistorynote,Work Information > History note
+botgarden_4-0-0,work.creator,work.creator,Work Information > Creator name
+botgarden_4-0-0,work.creatorType,work.creatortype,Work Information > Creator type
+botgarden_4-0-0,work.publisher,work.publisher,Work Information > Publisher name
+botgarden_4-0-0,work.publisherType,work.publishertype,Work Information > Publisher type
+botgarden_4-0-0,work.addressPlace1,work.addressplace1,Work Information > Address line 1
+botgarden_4-0-0,work.addressPlace2,work.addressplace2,Work Information > Address line 2
+botgarden_4-0-0,work.addressMunicipality,work.addressmunicipality,Work Information > Address municipality
+botgarden_4-0-0,work.addressStateOrProvince,work.addressstateorprovince,Work Information > Address state/province
+botgarden_4-0-0,work.addressPostCode,work.addresspostcode,Work Information > Address postal code
+botgarden_4-0-0,work.addressCountry,work.addresscountry,Work Information > Address country
+botgarden_4-0-0,work.addressType,work.addresstype,Work Information > Address type
+botgarden_4-0-0,taxon.termDisplayName,taxon.termdisplayname,Taxonomic Name Information > Term display name
+botgarden_4-0-0,taxon.termFormattedDisplayName,taxon.termformatteddisplayname,Taxonomic Name Information > Formatted display name
+botgarden_4-0-0,taxon.termQualifier,taxon.termqualifier,Taxonomic Name Information > Term qualifier
+botgarden_4-0-0,taxon.termStatus,taxon.termstatus,Taxonomic Name Information > Term status
+botgarden_4-0-0,taxon.termType,taxon.termtype,Taxonomic Name Information > Term type
+botgarden_4-0-0,taxon.termFlag,taxon.termflag,Taxonomic Name Information > Term flag
+botgarden_4-0-0,taxon.taxonomicStatus,taxon.taxonomicstatus,Taxonomic Name Information > Taxonomic status
+botgarden_4-0-0,taxon.termLanguage,taxon.termlanguage,Taxonomic Name Information > Term language
+botgarden_4-0-0,taxon.termPrefForLang,taxon.termprefforlang,Taxonomic Name Information > Term preferred for lang
+botgarden_4-0-0,taxon.termSource,taxon.termsource,Taxonomic Name Information > Source > Term source name
+botgarden_4-0-0,taxon.termSourceDetail,taxon.termsourcedetail,Taxonomic Name Information > Source > Term source detail
+botgarden_4-0-0,taxon.termSourceID,taxon.termsourceid,Taxonomic Name Information > Source > Term source ID
+botgarden_4-0-0,taxon.termSourceNote,taxon.termsourcenote,Taxonomic Name Information > Source > Term source note
+botgarden_4-0-0,taxon.taxonRank,taxon.taxonrank,Taxonomic Name Information > Rank
+botgarden_4-0-0,taxon.taxonCurrency,taxon.taxoncurrency,Taxonomic Name Information > Currency
+botgarden_4-0-0,taxon.taxonAuthor,taxon.taxonauthor,Taxonomic Name Information > Author name
+botgarden_4-0-0,taxon.taxonAuthorType,taxon.taxonauthortype,Taxonomic Name Information > Author type
+botgarden_4-0-0,taxon.taxonYear,taxon.taxonyear,Taxonomic Name Information > Year
+botgarden_4-0-0,taxon.taxonIsNamedHybrid,taxon.taxonisnamedhybrid,Taxonomic Name Information > Is named hybrid
+botgarden_4-0-0,taxon.taxonCitation,taxon.taxoncitation,Taxonomic Name Information > Citation
+botgarden_4-0-0,taxon.taxonNote,taxon.taxonnote,Taxonomic Name Information > Note
+botgarden_4-0-0,taxon.commonName,taxon.commonname,Taxonomic Name Information > Common name
+botgarden_4-0-0,taxon.commonNameLanguage,taxon.commonnamelanguage,Taxonomic Name Information > Common name language
+botgarden_4-0-0,taxon.commonNameSource,taxon.commonnamesource,Taxonomic Name Information > Common name source
+botgarden_4-0-0,taxon.commonNameSourceDetail,taxon.commonnamesourcedetail,Taxonomic Name Information > Common name source detail
+botgarden_4-0-0,pottag.potTagNumber,pottag.pottagnumber,Pot Tag Information > Reference number
+botgarden_4-0-0,pottag.family,pottag.family,Pot Tag Information > Family
+botgarden_4-0-0,pottag.commonName,pottag.commonname,Pot Tag Information > Common name
+botgarden_4-0-0,pottag.locale,pottag.locale,Pot Tag Information > Country name/locale
+botgarden_4-0-0,pottag.taxonName,pottag.taxonname,Pot Tag Information > Taxon name
+botgarden_4-0-0,pottag.numberOfLabels,pottag.numberoflabels,Pot Tag Information > Number of labels
+botgarden_4-0-0,pottag.printLabels,pottag.printlabels,Pot Tag Information > Print labels
+botgarden_4-0-0,pottag.labelData,pottag.labeldata,Pot Tag Information > Label data
+botgarden_4-0-0,propagation.propNumber,propagation.propnumber,Propagation Information > Propagation ID
+botgarden_4-0-0,propagation.propType,propagation.proptype,Propagation Information > Propagation type
+botgarden_4-0-0,propagation.numStarted,propagation.numstarted,Propagation Information > Number started
+botgarden_4-0-0,propagation.propDate,propagation.propdate,Propagation Information > Propagation date
+botgarden_4-0-0,propagation.propReason,propagation.propreason,Propagation Information > Reason for propagation
+botgarden_4-0-0,propagation.propComments,propagation.propcomments,Propagation Information > Comment
+botgarden_4-0-0,propagation.scarStrat,propagation.scarstrat,Propagation Information > Seeds > Scarification/stratification type
+botgarden_4-0-0,propagation.duration,propagation.duration,Propagation Information > Seeds > Scarification/stratification duration
+botgarden_4-0-0,propagation.durationUnit,propagation.durationunit,Propagation Information > Seeds > Scarification/stratification duration unit
+botgarden_4-0-0,propagation.extraSeeds,propagation.extraseeds,Propagation Information > Seeds > Extra seeds?
+botgarden_4-0-0,propagation.spores,propagation.spores,Propagation Information > Seeds > Spore
+botgarden_4-0-0,propagation.cuttingType,propagation.cuttingtype,Propagation Information > Cuttings > Cutting type
+botgarden_4-0-0,propagation.hormone,propagation.hormone,Propagation Information > Cuttings > Hormone
+botgarden_4-0-0,propagation.concentration,propagation.concentration,Propagation Information > Cuttings > Hormone concentration
+botgarden_4-0-0,propagation.wounded,propagation.wounded,Propagation Information > Cuttings > Wounded?
+botgarden_4-0-0,propagation.plantType,propagation.planttype,Propagation Information > Living Plant Material > Plant type
+botgarden_4-0-0,propagation.activityDate,propagation.activitydate,Propagation Information > Activities > Activity date
+botgarden_4-0-0,propagation.activityType,propagation.activitytype,Propagation Information > Activities > Activity type
+botgarden_4-0-0,propagation.propCount,propagation.propcount,Propagation Information > Activities > Propagule count
+botgarden_4-0-0,propagation.medium,propagation.medium,Propagation Information > Activities > Medium
+botgarden_4-0-0,propagation.potSize,propagation.potsize,Propagation Information > Activities > Pot size
+botgarden_4-0-0,propagation.nurseryLocation,propagation.nurserylocation,Propagation Information > Activities > Location in nursery
+botgarden_4-0-0,propagation.conditions,propagation.conditions,Propagation Information > Activities > Condition
+botgarden_4-0-0,propagation.chemicalApplied,propagation.chemicalapplied,Propagation Information > Activities > Chemical applied
+botgarden_4-0-0,propagation.activityConcentration,propagation.activityconcentration,Propagation Information > Activities > Chemical concentration
+botgarden_4-0-0,propagation.activityComments,propagation.activitycomments,Propagation Information > Activities > Activity comment
+botgarden_4-0-0,propagation.germinationDate,propagation.germinationdate,Propagation Information > Germination/rooting date
+botgarden_4-0-0,propagation.successRate,propagation.successrate,Propagation Information > Success rate
 fcart_9-0,acquisition.acquisitionReferenceNumber,acquisition.acquisitionreferencenumber,Acquisition Information > Reference number
 fcart_9-0,acquisition.alternativeIdentifier,acquisition.alternativeidentifier,Acquisition Information > Alternative identifier
 fcart_9-0,acquisition.alternativeIdentifierNote,acquisition.alternativeidentifiernote,Acquisition Information > Alternative identifier note
