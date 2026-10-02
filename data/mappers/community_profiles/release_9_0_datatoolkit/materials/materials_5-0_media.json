@@ -1,0 +1,469 @@
+{
+  "config": {
+    "dataConfigType": "record type",
+    "profile_basename": "materials",
+    "version": "5.0",
+    "recordtype": "media",
+    "display_name": "Media Handling",
+    "document_name": "media",
+    "service_name": "Media",
+    "service_path": "media",
+    "service_type": "procedure",
+    "object_name": "Media",
+    "ns_uri": {
+      "media_common": "http://collectionspace.org/services/media",
+      "media_materials": "http://collectionspace.org/services/media/domain/materials"
+    },
+    "identifier_field": "identificationNumber",
+    "search_field": "identificationNumber"
+  },
+  "docstructure": {
+    "media_common": {
+      "checksumGroupList": {
+        "checksumGroup": {}
+      },
+      "relationList": {},
+      "typeList": {},
+      "dateGroupList": {},
+      "subjectList": {}
+    },
+    "media_materials": {
+      "publishToList": {}
+    },
+    "blobs_common": {}
+  },
+  "mappings": [
+    {
+      "fieldname": "identificationNumber",
+      "transforms": {},
+      "source_type": "na",
+      "source_name": "na",
+      "namespace": "media_common",
+      "xpath": [],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [],
+      "datacolumn": "identificationNumber",
+      "required": "y"
+    },
+    {
+      "fieldname": "title",
+      "transforms": {},
+      "source_type": "na",
+      "source_name": "na",
+      "namespace": "media_common",
+      "xpath": [],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [],
+      "datacolumn": "title",
+      "required": "n"
+    },
+    {
+      "fieldname": "publishTo",
+      "transforms": {
+        "vocabulary": "publishto"
+      },
+      "source_type": "vocabulary",
+      "source_name": "publishto",
+      "namespace": "media_materials",
+      "xpath": [
+        "publishToList"
+      ],
+      "data_type": "string",
+      "repeats": "y",
+      "in_repeating_group": "n",
+      "opt_list_values": [],
+      "datacolumn": "publishTo",
+      "required": "n"
+    },
+    {
+      "fieldname": "name",
+      "transforms": {},
+      "source_type": "na",
+      "source_name": "na",
+      "namespace": "blobs_common",
+      "xpath": [],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [],
+      "datacolumn": "name",
+      "required": "n"
+    },
+    {
+      "fieldname": "mimeType",
+      "transforms": {},
+      "source_type": "na",
+      "source_name": "na",
+      "namespace": "blobs_common",
+      "xpath": [],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [],
+      "datacolumn": "mimeType",
+      "required": "n"
+    },
+    {
+      "fieldname": "length",
+      "transforms": {},
+      "source_type": "na",
+      "source_name": "na",
+      "namespace": "blobs_common",
+      "xpath": [],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [],
+      "datacolumn": "length",
+      "required": "n"
+    },
+    {
+      "fieldname": "externalUrl",
+      "transforms": {},
+      "source_type": "na",
+      "source_name": "na",
+      "namespace": "media_common",
+      "xpath": [],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [],
+      "datacolumn": "externalUrl",
+      "required": "n"
+    },
+    {
+      "fieldname": "checksumValue",
+      "transforms": {},
+      "source_type": "na",
+      "source_name": "na",
+      "namespace": "media_common",
+      "xpath": [
+        "checksumGroupList",
+        "checksumGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "checksumValue",
+      "required": "n"
+    },
+    {
+      "fieldname": "checksumType",
+      "transforms": {
+        "vocabulary": "checksumtypes"
+      },
+      "source_type": "vocabulary",
+      "source_name": "checksumtypes",
+      "namespace": "media_common",
+      "xpath": [
+        "checksumGroupList",
+        "checksumGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "checksumType",
+      "required": "n"
+    },
+    {
+      "fieldname": "checksumDate",
+      "transforms": {},
+      "source_type": "na",
+      "source_name": "na",
+      "namespace": "media_common",
+      "xpath": [
+        "checksumGroupList",
+        "checksumGroup"
+      ],
+      "data_type": "date",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [],
+      "datacolumn": "checksumDate",
+      "required": "n"
+    },
+    {
+      "fieldname": "contributor",
+      "transforms": {
+        "authority": [
+          "personauthorities",
+          "person"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": null,
+      "namespace": "media_common",
+      "xpath": [],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [],
+      "datacolumn": "contributor",
+      "required": "n"
+    },
+    {
+      "fieldname": "contributor",
+      "transforms": {},
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
+      "namespace": "media_common",
+      "xpath": [],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+        "Person/Local",
+        "Person/Shared",
+        "Organization/Local",
+        "Organization/Shared"
+      ],
+      "datacolumn": "contributorAuthorityVocabulary",
+      "required": "n"
+    },
+    {
+      "fieldname": "creator",
+      "transforms": {
+        "authority": [
+          "personauthorities",
+          "person"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": null,
+      "namespace": "media_common",
+      "xpath": [],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [],
+      "datacolumn": "creator",
+      "required": "n"
+    },
+    {
+      "fieldname": "creator",
+      "transforms": {},
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
+      "namespace": "media_common",
+      "xpath": [],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+        "Person/Local",
+        "Person/Shared",
+        "Organization/Local",
+        "Organization/Shared"
+      ],
+      "datacolumn": "creatorAuthorityVocabulary",
+      "required": "n"
+    },
+    {
+      "fieldname": "relation",
+      "transforms": {},
+      "source_type": "na",
+      "source_name": "na",
+      "namespace": "media_common",
+      "xpath": [
+        "relationList"
+      ],
+      "data_type": "string",
+      "repeats": "y",
+      "in_repeating_group": "n",
+      "opt_list_values": [],
+      "datacolumn": "relation",
+      "required": "n"
+    },
+    {
+      "fieldname": "type",
+      "transforms": {},
+      "source_type": "optionlist",
+      "source_name": "mediaTypes",
+      "namespace": "media_common",
+      "xpath": [
+        "typeList"
+      ],
+      "data_type": "string",
+      "repeats": "y",
+      "in_repeating_group": "n",
+      "opt_list_values": [
+        "dataset",
+        "document",
+        "moving_image",
+        "sound",
+        "still_image"
+      ],
+      "datacolumn": "type",
+      "required": "n"
+    },
+    {
+      "fieldname": "coverage",
+      "transforms": {
+        "authority": [
+          "materialauthorities",
+          "material"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": null,
+      "namespace": "media_common",
+      "xpath": [],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [],
+      "datacolumn": "coverage",
+      "required": "n"
+    },
+    {
+      "fieldname": "coverage",
+      "transforms": {},
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
+      "namespace": "media_common",
+      "xpath": [],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+        "Material/Local",
+        "Material/Shared",
+        "Place/Local"
+      ],
+      "datacolumn": "coverageAuthorityVocabulary",
+      "required": "n"
+    },
+    {
+      "fieldname": "dateGroup",
+      "transforms": {},
+      "source_type": "na",
+      "source_name": "na",
+      "namespace": "media_common",
+      "xpath": [
+        "dateGroupList"
+      ],
+      "data_type": "structured date group",
+      "repeats": "y",
+      "in_repeating_group": "n",
+      "opt_list_values": [],
+      "datacolumn": "dateGroup",
+      "required": "n"
+    },
+    {
+      "fieldname": "source",
+      "transforms": {},
+      "source_type": "na",
+      "source_name": "na",
+      "namespace": "media_common",
+      "xpath": [],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [],
+      "datacolumn": "source",
+      "required": "n"
+    },
+    {
+      "fieldname": "subject",
+      "transforms": {},
+      "source_type": "na",
+      "source_name": "na",
+      "namespace": "media_common",
+      "xpath": [
+        "subjectList"
+      ],
+      "data_type": "string",
+      "repeats": "y",
+      "in_repeating_group": "n",
+      "opt_list_values": [],
+      "datacolumn": "subject",
+      "required": "n"
+    },
+    {
+      "fieldname": "copyrightStatement",
+      "transforms": {},
+      "source_type": "na",
+      "source_name": "na",
+      "namespace": "media_common",
+      "xpath": [],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [],
+      "datacolumn": "copyrightStatement",
+      "required": "n"
+    },
+    {
+      "fieldname": "rightsHolder",
+      "transforms": {
+        "authority": [
+          "personauthorities",
+          "person"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": null,
+      "namespace": "media_common",
+      "xpath": [],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [],
+      "datacolumn": "rightsHolder",
+      "required": "n"
+    },
+    {
+      "fieldname": "rightsHolder",
+      "transforms": {},
+      "source_type": "authority vocabulary indication",
+      "source_name": null,
+      "namespace": "media_common",
+      "xpath": [],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+        "Person/Local",
+        "Person/Shared",
+        "Organization/Local",
+        "Organization/Shared"
+      ],
+      "datacolumn": "rightsHolderAuthorityVocabulary",
+      "required": "n"
+    },
+    {
+      "fieldname": "description",
+      "transforms": {},
+      "source_type": "na",
+      "source_name": "na",
+      "namespace": "media_common",
+      "xpath": [],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [],
+      "datacolumn": "description",
+      "required": "n"
+    },
+    {
+      "fieldname": "altText",
+      "transforms": {},
+      "source_type": "na",
+      "source_name": "na",
+      "namespace": "media_common",
+      "xpath": [],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [],
+      "datacolumn": "altText",
+      "required": "n"
+    }
+  ]
+}
