@@ -67383,6 +67383,44 @@
                                     "key": null,
                                     "ref": null,
                                     "props": {
+                                      "name": "homeLocationGroupList",
+                                      "children": {
+                                        "type": "Field",
+                                        "key": null,
+                                        "ref": null,
+                                        "props": {
+                                          "name": "homeLocationGroup",
+                                          "children": [
+                                            {
+                                              "type": "Field",
+                                              "key": null,
+                                              "ref": null,
+                                              "props": {
+                                                "name": "homeLocation"
+                                              },
+                                              "_owner": null
+                                            },
+                                            {
+                                              "type": "Field",
+                                              "key": null,
+                                              "ref": null,
+                                              "props": {
+                                                "name": "homeLocationNote"
+                                              },
+                                              "_owner": null
+                                            }
+                                          ]
+                                        },
+                                        "_owner": null
+                                      }
+                                    },
+                                    "_owner": null
+                                  },
+                                  {
+                                    "type": "Field",
+                                    "key": null,
+                                    "ref": null,
+                                    "props": {
                                       "name": "ethnoFileCodes",
                                       "subpath": "ns2:collectionobjects_anthro",
                                       "children": {
@@ -79807,6 +79845,44 @@
                                       "name": "computedCurrentLocation"
                                     },
                                     "_owner": null
+                                  },
+                                  {
+                                    "type": "Field",
+                                    "key": null,
+                                    "ref": null,
+                                    "props": {
+                                      "name": "homeLocationGroupList",
+                                      "children": {
+                                        "type": "Field",
+                                        "key": null,
+                                        "ref": null,
+                                        "props": {
+                                          "name": "homeLocationGroup",
+                                          "children": [
+                                            {
+                                              "type": "Field",
+                                              "key": null,
+                                              "ref": null,
+                                              "props": {
+                                                "name": "homeLocation"
+                                              },
+                                              "_owner": null
+                                            },
+                                            {
+                                              "type": "Field",
+                                              "key": null,
+                                              "ref": null,
+                                              "props": {
+                                                "name": "homeLocationNote"
+                                              },
+                                              "_owner": null
+                                            }
+                                          ]
+                                        },
+                                        "_owner": null
+                                      }
+                                    },
+                                    "_owner": null
                                   }
                                 ]
                               },
@@ -80907,6 +80983,44 @@
                                     "ref": null,
                                     "props": {
                                       "name": "computedCurrentLocation"
+                                    },
+                                    "_owner": null
+                                  },
+                                  {
+                                    "type": "Field",
+                                    "key": null,
+                                    "ref": null,
+                                    "props": {
+                                      "name": "homeLocationGroupList",
+                                      "children": {
+                                        "type": "Field",
+                                        "key": null,
+                                        "ref": null,
+                                        "props": {
+                                          "name": "homeLocationGroup",
+                                          "children": [
+                                            {
+                                              "type": "Field",
+                                              "key": null,
+                                              "ref": null,
+                                              "props": {
+                                                "name": "homeLocation"
+                                              },
+                                              "_owner": null
+                                            },
+                                            {
+                                              "type": "Field",
+                                              "key": null,
+                                              "ref": null,
+                                              "props": {
+                                                "name": "homeLocationNote"
+                                              },
+                                              "_owner": null
+                                            }
+                                          ]
+                                        },
+                                        "_owner": null
+                                      }
                                     },
                                     "_owner": null
                                   },
@@ -165925,10 +166039,10 @@
         }
       },
       "packageName": "cspace-ui-plugin-profile-anthro",
-      "packageVersion": "9.2.0",
-      "buildNum": "9f06482",
+      "packageVersion": "9.3.0",
+      "buildNum": "e7be4d7",
       "repositoryUrl": "https://github.com/collectionspace/cspace-ui-plugin-profile-anthro.js",
-      "version": "9.2.0"
+      "version": "9.3.0"
     }
   }
 }

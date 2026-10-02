@@ -37788,6 +37788,44 @@
                                       "name": "computedCurrentLocation"
                                     },
                                     "_owner": null
+                                  },
+                                  {
+                                    "type": "Field",
+                                    "key": null,
+                                    "ref": null,
+                                    "props": {
+                                      "name": "homeLocationGroupList",
+                                      "children": {
+                                        "type": "Field",
+                                        "key": null,
+                                        "ref": null,
+                                        "props": {
+                                          "name": "homeLocationGroup",
+                                          "children": [
+                                            {
+                                              "type": "Field",
+                                              "key": null,
+                                              "ref": null,
+                                              "props": {
+                                                "name": "homeLocation"
+                                              },
+                                              "_owner": null
+                                            },
+                                            {
+                                              "type": "Field",
+                                              "key": null,
+                                              "ref": null,
+                                              "props": {
+                                                "name": "homeLocationNote"
+                                              },
+                                              "_owner": null
+                                            }
+                                          ]
+                                        },
+                                        "_owner": null
+                                      }
+                                    },
+                                    "_owner": null
                                   }
                                 ]
                               },
@@ -107143,10 +107181,10 @@
         }
       },
       "packageName": "cspace-ui-plugin-profile-bonsai",
-      "packageVersion": "7.1.0",
-      "buildNum": "dd54cff",
+      "packageVersion": "8.0.0",
+      "buildNum": "e870087",
       "repositoryUrl": "https://github.com/collectionspace/cspace-ui-plugin-profile-bonsai.js",
-      "version": "7.1.0"
+      "version": "8.0.0"
     }
   }
 }
