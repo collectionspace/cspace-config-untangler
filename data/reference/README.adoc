@@ -1,0 +1,71 @@
+:toc:
+:toc-placement!:
+:toclevels: 4
+
+ifdef::env-github[]
+:tip-caption: :bulb:
+:note-caption: :information_source:
+:important-caption: :heavy_exclamation_mark:
+:caution-caption: :fire:
+:warning-caption: :warning:
+endif::[]
+
+= CollectionSpace data model reference documents
+
+The files here are organized by CollectionSpace release.
+
+Within the folder for a release, you will find:
+
+top-level files:: These provide cross-profile information for analyzing the CollectionSpace data model as a whole.
+This information is most useful for people working on CollectionSpace and its comprehensive data model.
+profile directories:: These contain profile-specific files.
+These are most useful for clients using a specific profile, or anyone providing migration services or other support for a specific CollectionSpace instance using a specific profile.
+
+toc::[]
+
+== Top-level files description
+[NOTE]
+====
+`dates_collapsed` means each structured date field is listed as one field in these spreadsheets.
+The XML field name given is actually the name of the XML node that contains the actual structured date fields as children.
+
+`dates_expanded` means each structured date field is listed separately.
+For instance, there are a whole bunch of `dateDisplayDate` and `dateEarliestSingleYear` fields listed.
+You need to look at the path for the field to see which structure date in which record the field is for.
+====
+
+
+all_fields_{release}_dates_collapsed.csv:: All fields in all profiles.
+Intended to be filtered, sorted, and pivot-tabled to answer most questions about the overall data model.
+Includes technical information for working with data under the hood (ids, namespaces, etc) _and_ UI labels for fields.
+all_fields_{release}_dates_collapsed_friendly.csv:: As above, but the technical information is removed or deprioritized in the sheet.
+UI labels for record types and the CSV Importer template headers for each field are added.
+all_fields_{release}_dates_expanded.csv:: Just like the first file listed, but with structured date detail fields listed separately
+authority_vocabulary_usage.csv:: One row per authority vocabulary configured for a profile.
+Indicates whether each is (a) actually used in the profile; (b) how many fields it is used to control; and (c) the fields it is used to control
+changed_fields_{release}.csv:: Report of fields that were changed in the release
+deleted_fields_{release}.csv:: Report of fields deleted (or removed from display/use) in the release.
+
+[NOTE]
+====
+Because of how these files get generated, if we stop treating a profile as a "community supported" profile, all its fields will show up as deleted in the next release's deleted_fields CSV.
+
+If a record type is removed from a profile, all the fields from that record type will show up in the next release's deleted_fields CSV.
+====
+
+multi_auth_repeatable_fields.csv:: The list of all fields affected by the "Repeatable fields populated by multiple authorities - order of terms from different authorities" CSV Importer limitation/issue.
+nonunique_field_names.csv:: Fields in the same record that have the same underlying field name.
+These work in CollectionSpace because the fields are in different namespaces, but we don't use
+namespaces in CSV Importer templates, or when we are talking about fields.
+Adding a Data QA process to new releases has prevented any new instances of this issue, but it is important to know these guys exist and be clear about which one you mean if you are talking about any of them.
+structured_date_fields.csv:: Subset of rows from `all_fields_{release}_dates_collapsed_friendly.csv` that are for structured date fields.
+Can be used to guide date parsing check searches in UI or queries in database.
+ui_labels_lookup.csv:: Primarily for migration specialists to use as a lookup table in migration mapping spreadsheets, to translate our mappings to UI path + field values for clients.
+unused_authority_vocabs.csv:: The subset of `authority_vocabulary_usage.csv` where `used_in_profile` = `n`
+
+== Profile directory files
+
+{profile}_{profile_ui_config_version}_authority_vocabulary_use.csv:: Subset of top-level `authority_vocabulary_usage.csv`, for this profile only
+{profile}_{profile_ui_config_version}_fields.csv:: Subset of top-level `all_fields_{release}_dates_collapsed_friendly.csv`, for this profile only
+{profile}_{profile_ui_config_version}_multi_auth_fields.csv:: Subset of top-level `multi_auth_repeatable_fields.csv`, for this profile only
+{profile}_{profile_ui_config_version}_structured_date_fields.csv:: Subset of top-level `structured_date_fields.csv`, for this profile only
