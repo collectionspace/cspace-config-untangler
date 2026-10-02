@@ -1,0 +1,8 @@
+"Before importing CSV, delete initial column and rows above the CSVHEADER row","","","","","","","","","","","","","","","","","","","","","","","","","",""
+REQUIRED,y,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n
+DATA TYPE,string,string,string,string,string,string,string,string,string,string,string,string,string,string,string,string,string,structured date group,string,string,string,string,string,string,string,string
+REPEATABLE FIELD?,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,y,y,y,n,y,y,y,y,n,n,n
+REPEATING FIELD GROUP,"","","","","","","","","","","","","","","","","","","","","","","","","",""
+VALUE SOURCE TYPE,na,na,na,na,na,na,authority,authority,authority,authority,authority,authority,authority,authority,na,optionlist,vocabulary,na,na,authority,authority,authority,authority,na,na,na
+VALUE SOURCE,"","","","","","",person/local,person/shared,organization/local,organization/shared,person/local,person/shared,organization/local,organization/shared,"","dataset, document, moving_image, sound, still_image",publishto,"","",person/local,person/shared,organization/local,organization/shared,"","",""
+CSVHEADER,identificationNumber,title,name,mimeType,length,externalUrl,contributorPersonLocal,contributorPersonShared,contributorOrganizationLocal,contributorOrganizationShared,creatorPersonLocal,creatorPersonShared,creatorOrganizationLocal,creatorOrganizationShared,copyrightStatement,type,publishTo,dateGroup,source,publicartRightsHolderPersonLocal,publicartRightsHolderPersonShared,publicartRightsHolderOrganizationLocal,publicartRightsHolderOrganizationShared,description,altText,mediaFileURI

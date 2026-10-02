@@ -1,0 +1,8 @@
+"Before importing CSV, delete initial column and rows above the CSVHEADER row","","","","","",""
+REQUIRED,y,n,n,n,n,n
+DATA TYPE,string,string,string,date,date,string
+REPEATABLE FIELD?,n,n,n,n,n,n
+REPEATING FIELD GROUP,"","","","","",""
+VALUE SOURCE TYPE,na,optionlist,authority,na,na,na
+VALUE SOURCE,"","antiquities, architecture-design, decorative-arts, ethnography, herpetology, media-performance-art, paintings-sculpture, paleobotany, photographs, prints-drawings",person/local,"","",""
+CSVHEADER,title,responsibleDepartment,owner,groupEarliestSingleDate,groupLatestDate,scopeNote
