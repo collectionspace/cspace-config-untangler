@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require_relative "../namespaceable"
+require_relative "../ohcable"
 require_relative "../ucbable"
 
 module CspaceConfigUntangler
@@ -11,6 +12,7 @@ module CspaceConfigUntangler
     # we can work with them
     class Props
       include Namespaceable
+      include Ohcable
       include Ucbable
 
       # name values that are not appended to ui/xml path
@@ -92,7 +94,8 @@ module CspaceConfigUntangler
           keys == %w[name showDetachButton] ||
           core? ||
           pre_7_publicart_work_addressCounty? ||
-          ucb_skippable_form_field?(self)
+          ucb_skippable_form_field?(self) ||
+          ohc_skippable_form_field?(self)
 
         false
       end
