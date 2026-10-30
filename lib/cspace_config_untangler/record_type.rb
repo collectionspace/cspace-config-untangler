@@ -103,10 +103,10 @@ module CspaceConfigUntangler
     # @param format %i[csvimporter tkinit datatoolkit]
     # @return [Array<CCU::FieldMap::FieldMapping>]
     def mappings(format = ingest_format)
-      column_style = if format == :csvimporter
-        profile.column_style
-      elsif format == :datatoolkit
+      column_style = if format == :datatoolkit
         :datatoolkit
+      else
+        profile.column_style
       end
 
       rawmappings = fields.map do |f|

@@ -9,7 +9,7 @@ module CspaceConfigUntangler
       # @param profile [CCU::Profile]
       # @param rectype [CCU::RecordType]
       # @param type %w[displayname refname]
-      # @param format %i[csvimporter datatoolkit]
+      # @param format %i[csvimporter tkinit datatoolkit]
       def initialize(profile:, rectype:, type:, format: :csvimporter)
         @profile = profile
         @rectype = rectype
@@ -36,7 +36,12 @@ module CspaceConfigUntangler
       end
 
       def filename
-        stubname = "#{@profile.name}_#{@rectype.name}"
+        rt_name = if @format == :csvimporter
+          @rectype.name
+        else
+          @rectype.label.gsub(/\W/, "-")
+        end
+        stubname = "#{@profile.name}_#{rt_name}"
         return "#{stubname}-refnames-template.csv" if @type == "refname"
 
         "#{stubname}-template.csv"

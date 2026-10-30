@@ -20,7 +20,31 @@ RSpec.describe CCU::Template::CsvTemplate do
     let(:profilename) { "anthro" }
 
     context "object record type" do
-      describe ".csvdata" do
+      describe "#filename" do
+        let(:result) { template.filename }
+
+        it "returns rectype name-based filename" do
+          expect(result).to eq("anthro_9-2-0_collectionobject-template.csv")
+        end
+
+        context "with tkinit format" do
+          let(:format) { :tkinit }
+
+          it "returns rectype label-based filename" do
+            expect(result).to eq("anthro_9-2-0_Object-template.csv")
+          end
+        end
+
+        context "with datatoolkit format" do
+          let(:format) { :datatoolkit }
+
+          it "returns rectype label-based filename" do
+            expect(result).to eq("anthro_9-2-0_Object-template.csv")
+          end
+        end
+      end
+
+      describe "#csvdata" do
         it "does not output computedCurrentLocation field" do
           headers = template.csvdata[7]
           result = headers.select do |h|
@@ -53,7 +77,35 @@ RSpec.describe CCU::Template::CsvTemplate do
     context "movement record type" do
       let(:rectypes) { %w[movement] }
 
-      describe ".csvdata" do
+      describe "#filename" do
+        let(:result) { template.filename }
+
+        it "returns rectype name-based filename" do
+          expect(result).to eq("anthro_9-2-0_movement-template.csv")
+        end
+
+        context "with tkinit format" do
+          let(:format) { :tkinit }
+
+          it "returns rectype label-based filename" do
+            expect(result).to eq(
+              "anthro_9-2-0_Location-Movement-Inventory-template.csv"
+            )
+          end
+        end
+
+        context "with datatoolkit format" do
+          let(:format) { :datatoolkit }
+
+          it "returns rectype label-based filename" do
+            expect(result).to eq(
+              "anthro_9-2-0_Location-Movement-Inventory-template.csv"
+            )
+          end
+        end
+      end
+
+      describe "#csvdata" do
         it "correctly reports faux-requiredness" do
           headers = template.csvdata[7]
           req = template.csvdata[1]
@@ -66,7 +118,7 @@ RSpec.describe CCU::Template::CsvTemplate do
     context "media record type" do
       let(:rectypes) { %w[media] }
 
-      describe ".csvdata" do
+      describe "#csvdata" do
         it "mediaFileURI column added" do
           headers = template.csvdata[7]
           expect(headers).to include("mediaFileURI")
@@ -78,7 +130,7 @@ RSpec.describe CCU::Template::CsvTemplate do
       let(:release) { "8_2" }
       let(:rectypes) { %w[restrictedmedia] }
 
-      describe ".csvdata" do
+      describe "#csvdata" do
         it "mediaFileURI column added" do
           headers = template.csvdata[7]
           expect(headers).to include("mediaFileURI")
