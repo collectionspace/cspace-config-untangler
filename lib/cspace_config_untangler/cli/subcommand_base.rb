@@ -34,14 +34,6 @@ module CspaceConfigUntangler
               aliases: "-i",
               required: true
             },
-            ingest_data_format: {
-              desc: "Indicate template/mapper format for the artifacts that "\
-                "will be written",
-              enum: %w[csvimporter datatoolkit],
-              type: :string,
-              default: "csvimporter",
-              aliases: "-idf"
-            },
             output_mode: {
               desc: "Output mode in which to run command",
               enum: %w[csv stdout],
@@ -86,7 +78,7 @@ module CspaceConfigUntangler
               desc: "Ingest format style",
               type: :string,
               default: "csvimporter",
-              enum: %w[csvimporter datatoolkit]
+              enum: %w[csvimporter tkinit datatoolkit]
             },
             subdirs: {
               desc: "Whether to organize into subdirectories within given "\

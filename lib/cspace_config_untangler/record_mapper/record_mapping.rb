@@ -12,7 +12,7 @@ module CspaceConfigUntangler
       # @param rectype [CCU::RecordType]
       # @param subtype [NilValue, Hash] like
       #   `{name: "Local", subtype: "person"}`
-      # @param style %i[csvimporter datatoolkit]
+      # @param style %i[csvimporter tkinit datatoolkit]
       # @param path [String]
       def initialize(profile:, rectype:, subtype: nil, style: :csvimporter,
         path: nil)
@@ -49,11 +49,11 @@ module CspaceConfigUntangler
       def build_hash
         h = {}
         h[:config] = {}
-        h[:config][:dataConfigType] = "record type" if style == :datatoolkit
+        h[:config][:dataConfigType] = "record type" unless style == :csvimporter
         h[:config][:profile_basename] = profile.basename
         h[:config][:version] = profile.readable_version
         h[:config][:recordtype] = rectype.name
-        add_display_name(h) if style == :datatoolkit
+        add_display_name(h) unless style == :csvimporter
         h[:config][:document_name] =
           config.dig("recordTypes", rectype.name, "serviceConfig",
             "documentName")

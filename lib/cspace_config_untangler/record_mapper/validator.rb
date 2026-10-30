@@ -6,7 +6,7 @@ module CspaceConfigUntangler
       attr_reader :path, :style, :valid, :errors, :validated
 
       # @param path [String] to mapper to validate
-      # @param style %i[csvimporter datatoolkit] style of mapper
+      # @param style %i[csvimporter tkinit datatoolkit] style of mapper
       def initialize(path, style = :csvimporter)
         @path = path
         @style = style
@@ -35,7 +35,7 @@ module CspaceConfigUntangler
           term_source_types_ok,
           has_service_path
         ]
-        results << valid_datatoolkit_style if style == :datatoolkit
+        results << valid_datatoolkit_style unless style == :csvimporter
         @valid = true if results.uniq == [true]
       end
 
