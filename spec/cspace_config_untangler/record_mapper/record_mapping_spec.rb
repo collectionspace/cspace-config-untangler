@@ -72,6 +72,26 @@ RSpec.describe CCU::RecordMapper::RecordMapping do
           expect(res).to eq(exp)
         end
 
+        context "when style == :tkinit" do
+          let(:style) { :tkinit }
+
+          it "has display_name" do
+            expect(config[:display_name]).to eq("Location/Movement/Inventory")
+          end
+          it "has dataConfigType" do
+            expect(config[:dataConfigType]).to eq("record type")
+          end
+          it "generates multi-columns for authority controlled field" do
+            res = mappings.select { |m| m[:fieldname] == "currentLocation" }
+              .map { |m| m[:datacolumn] }
+              .sort
+            exp = %w[currentLocationLocationLocal currentLocationLocationOffsite
+              currentLocationOrganizationLocal currentLocationPlaceLocal
+              currentLocationRefname].sort
+            expect(res).to eq(exp)
+          end
+        end
+
         context "when style == :datatoolkit" do
           let(:style) { :datatoolkit }
 

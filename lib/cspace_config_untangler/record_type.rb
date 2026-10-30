@@ -100,7 +100,7 @@ module CspaceConfigUntangler
 
     def ingest_format = profile.ingest_format
 
-    # @param format %i[csvimporter datatoolkit]
+    # @param format %i[csvimporter tkinit datatoolkit]
     # @return [Array<CCU::FieldMap::FieldMapping>]
     def mappings(format = ingest_format)
       column_style = if format == :csvimporter
@@ -200,7 +200,7 @@ module CspaceConfigUntangler
     end
 
     # @param context %i[mapper template]
-    # @param format %i[csvimporter datatoolkit]
+    # @param format %i[csvimporter tkinit datatoolkit]
     def batch_mappings(context = :mapper, format = ingest_format)
       importable = remove_unimportable_fields_from(
         mappings(format), context
