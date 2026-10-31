@@ -171,10 +171,20 @@ module CspaceConfigUntangler
       end
 
       def has_data_config_type?
-        @mapper.dig("config", "dataConfigType") == "record type"
+        result = @mapper.dig("config", "dataConfigType") == "record type"
+        return true if result
+
+        @errors << "No dataConfigType specified"
+        false
       end
 
-      def has_display_name? = @mapper["config"].key?("display_name")
+      def has_display_name?
+        result = @mapper["config"].key?("display_name")
+        return result if result
+
+        @errors << "No display_name config value"
+        false
+      end
     end
   end
 end
