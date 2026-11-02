@@ -39,7 +39,7 @@ module CspaceConfigUntangler
         rt_name = if @format == :csvimporter
           @rectype.name
         else
-          @rectype.label.gsub(/\W/, "-")
+          @rectype.display_name.gsub(/\W/, "-")
         end
         stubname = "#{@profile.name}_#{rt_name}"
         return "#{stubname}-refnames-template.csv" if @type == "refname"

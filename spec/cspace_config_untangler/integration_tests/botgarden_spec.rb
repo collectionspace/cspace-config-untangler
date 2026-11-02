@@ -18,7 +18,7 @@ RSpec.describe CCU::Profile do
 
       it "return as expected", :aggregate_failures do
         loan = generator.rectype("loanout")
-        expect(loan.label).to eq("Voucher")
+        expect(loan.display_name).to eq("Voucher")
       end
     end
 
@@ -27,7 +27,7 @@ RSpec.describe CCU::Profile do
 
       it "return as expected", :aggregate_failures do
         mov = generator.rectype("movement")
-        expect(mov.label).to eq("Current Location")
+        expect(mov.display_name).to eq("Current Location")
       end
     end
   end
