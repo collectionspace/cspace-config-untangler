@@ -25,14 +25,7 @@ These changes are merged into the `main` branch, but have not been released. Aft
 
 === Breaking
 
-* The Botanical Garden domain profile is no longer supported as a community profile, starting with CollectionSpace 9.0.0
-
-=== Added
-
-* Data Toolkit-style ingest format mappers and templates (PR#221)
-
 === Changed
-
 
 === Bugfixes
 
@@ -44,6 +37,33 @@ These changes are merged into the `main` branch, but have not been released. Aft
 
 
 == Releases
+
+=== 3.2.0 - 2026-11-02
+
+==== Non-technically breaking
+
+* The Botanical Garden domain profile is no longer supported as a community profile, starting with CollectionSpace 9.0.0 (PR#223)
+
+==== Added
+
+* Mappers and templates for `:datatoolkit` style (PR#222)
+* Mappers and templates for `:tkinit` style (PR#233)
+==== Bugfixes
+
+* Fix exploded structured dates extraction (PR#213)
+* Authority usage output fix (PR#216)
+* Fix `ccu configs switch_release` command (PR#233)
+
+==== Deleted
+
+* Optionlist override-related code (PR#233)
+* Redundant `ccu profiles switch_release` command  (PR#233)
+
+==== Dev
+
+* Use Ruby 4.0.5 (PR#233)
+* Conditionally include CHIA in Gemfile rather than weird force clone/include in base module (PR#233)
+* Changes required to use new ECS-based CHIA  (PR#233)
 
 === 3.1.3 - 2026-02-27
 
