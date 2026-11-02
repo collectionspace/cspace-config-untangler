@@ -107,6 +107,19 @@ For details on usage of a specific command (using the profiles compare command a
 
 There are detailed instructions for some common tasks in the `doc` directory.
 
+== Data ingest format/Style
+
+csvimporter:: Legacy format used by CSV Importer.
+For authority-controlled fields, one data column is output for each authority vocabulary that is used to control the field.
+Template files are named using record type machine name.
+tkinit:: Initial format used for Data Toolkit.
+For authority-controlled fields, one data column is output for each authority vocabulary that is used to control the field.
+Mappers include `dataConfigType` and `display_name` in `config` section.
+Template files are named using record type display name.
+datatoolkit:: Eventual format planned for Data Toolkit.
+For authority-controlled fields, two data columns are output: one has the name of the field; the other is named `#{fieldname}AuthorityVocabulary`.
+Mappers include `dataConfigType` and `display_name` in `config` section.
+Template files are named using record type display name.
 
 == Known limitations/issues
 
