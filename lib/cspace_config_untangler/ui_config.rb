@@ -15,15 +15,6 @@ module CspaceConfigUntangler
       end
     end
 
-    def fetch_hosted(tenants)
-      return unless CCU.lyrasis_staff
-
-      to_fetch = tenants || CHIA.tenant_names
-      to_fetch.each do |tenant|
-        CCU::ConfigFetcher.call(tenant, CCU.oo_config_dir)
-      end
-    end
-
     # @param path [String] to JSON config
     def reformat(path)
       json = JSON.parse(File.read(path))

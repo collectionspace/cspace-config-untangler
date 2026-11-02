@@ -56,8 +56,6 @@ module CspaceConfigUntangler
       case data_config_type
       when "record type"
         data_config_json.dig("config", "profile_basename")
-      when "optlist overrides"
-        data_config_json.dig("config", "tenant_basename")
       end
     end
 
@@ -65,8 +63,6 @@ module CspaceConfigUntangler
       case data_config_type
       when "record type"
         (mode == :old) ? get_recordtype_old : get_recordtype_new
-      when "optlist overrides"
-        nil
       end
     end
 
@@ -75,9 +71,6 @@ module CspaceConfigUntangler
       when "record type"
         @path.delete_prefix(CCU.mapperdir)
           .sub(/^\/+/, "")
-      when "optlist overrides"
-        @path.to_s.delete_prefix(CCU.oo_data_config_path)
-          .sub(/^\/+/, "")
       end
     end
 
@@ -85,8 +78,6 @@ module CspaceConfigUntangler
       case data_config_type
       when "record type"
         "#{CCU.mapper_uri_base}/#{subpath}"
-      when "optlist overrides"
-        "#{CCU.optlist_override_uri_base}/#{subpath}"
       end
     end
 
@@ -107,8 +98,6 @@ module CspaceConfigUntangler
     def get_recordtype_new = data_config_json.dig("config", "display_name")
 
     def valid?
-      return true if data_config_type == "optlist overrides"
-
       v = RecordMapper::Validator.new(@path)
       v.validate
       v.valid
