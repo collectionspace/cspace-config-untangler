@@ -107,14 +107,6 @@ module CspaceConfigUntangler
       def main
         say(CCU.main_profile)
       end
-
-      desc "switch_release", "Deletes configs and copies community profile "\
-        "configs from specified release as current configs"
-      shared_options :release
-      def switch_release
-        CCU.config.release = options[:release]
-        puts CCU::Cli::Helpers::ProfileGetter.call("all")
-      end
     end
   end
 end
