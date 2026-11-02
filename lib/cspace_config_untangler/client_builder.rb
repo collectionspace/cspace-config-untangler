@@ -12,7 +12,6 @@ module CspaceConfigUntangler
     #   off
     def initialize(profile_basename)
       @name = profile_basename
-      @ssm = community_supported? ? nil : CHIA
       @config = CCU.client_connection_config&.dig(name)
     end
 
@@ -31,7 +30,7 @@ module CspaceConfigUntangler
 
     private
 
-    attr_reader :name, :ssm, :config
+    attr_reader :name, :config
 
     def clientable?
       return false if CCU.disable_api_checks
@@ -92,7 +91,6 @@ module CspaceConfigUntangler
     def ssm_params = @ssm_params ||= get_ssm_params
 
     def get_ssm_params
-      return unless ssm
       return unless CCU.lyrasis_staff
 
       site = CHIA.site_for(name)
