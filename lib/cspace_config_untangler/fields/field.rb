@@ -176,7 +176,7 @@ module CspaceConfigUntangler
       def friendly_csv_row
         row = {
           profile: @profile.name,
-          record_type: @rectype.label,
+          record_type: @rectype.display_name,
           record_type_machine_name: @rectype.name,
           record_section: panel&.message,
           path_to_field: formatted_ui_path,

@@ -60,7 +60,7 @@ module CspaceConfigUntangler
       end
 
       def build_output(field)
-        base = "#{field.rectype.label}: #{field.label}"
+        base = "#{field.rectype.display_name}: #{field.label}"
         return base if field.ui_path.blank?
 
         "#{base} (#{field.ui_path.map(&:message).join(">")})"

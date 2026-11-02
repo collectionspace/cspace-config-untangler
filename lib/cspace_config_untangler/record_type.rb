@@ -52,14 +52,7 @@ module CspaceConfigUntangler
       @vocabularies = get_vocabularies
     end
 
-    def display_name
-      msg = messages.find do |m|
-        m.element_type == :record && m.message_type == :name
-      end
-      return unless msg
-
-      msg.message
-    end
+    def display_name = @display_name ||= get_display_name
 
     # @return [Array<CCU::Forms::Form>]
     def forms = @forms ||= get_forms
@@ -68,10 +61,6 @@ module CspaceConfigUntangler
 
     # @return [Array<String>]
     def panels = @panels ||= get_panels
-
-    def label
-      @label ||= get_label
-    end
 
     def object_name
       service_config.object_name
@@ -283,20 +272,19 @@ module CspaceConfigUntangler
         .each { |k, v| @messages.override(convert_to_config(k, v)) }
     end
 
+    def get_display_name
+      msg = messages.find do |m|
+        m.element_type == :record && m.message_type == :name
+      end
+      return unless msg
+
+      msg.message
+    end
+
     def get_input_tables
       return [] unless input_table_config
 
       input_table_config.keys
-    end
-
-    def get_label
-      rectype_message = messages.find do |m|
-        m.element_type == :record &&
-          m.element_name == name
-      end
-      return unless rectype_message
-
-      rectype_message.message
     end
 
     def input_table_config

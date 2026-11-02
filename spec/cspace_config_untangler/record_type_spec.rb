@@ -277,8 +277,8 @@ RSpec.describe CCU::RecordType do
     end
   end
 
-  describe "#label" do
-    let(:result) { rectype.label }
+  describe "#display_name" do
+    let(:result) { rectype.display_name }
 
     context "with anthro claim" do
       let(:release) { "8_2" }
