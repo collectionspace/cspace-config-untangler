@@ -161,10 +161,6 @@ module CspaceConfigUntangler
   setting :mapper_uri_base,
     default: default_mapper_uri_base,
     reader: true
-  setting :optlist_override_uri_base,
-    default: "https://raw.githubusercontent.com/collectionspace/"\
-    "cspace-config-untangler/main/data/optlist_overrides",
-    reader: true
 
   File.delete(logpath) if File.exist?(logpath)
 
@@ -266,28 +262,6 @@ module CspaceConfigUntangler
   def safe_copy(hash)
     Marshal.load(Marshal.dump(hash))
   end
-
-  # The following section is relevant only to Lyrasis staff with access to the
-  #   dts-hosting Github organization
-
-  # @return [String] path to local directory for dts-hosting/deployments
-  #   Github repository
-  setting :oo_instance_repo_path,
-    default: File.expand_path("~/code/lyr/deployments"),
-    reader: true
-
-  setting :oo_site_config_path,
-    default: File.join(oo_instance_repo_path, "sites", "collectionspace",
-      "config"),
-    reader: true
-
-  setting :oo_config_dir,
-    default: File.join(Bundler.root, "data", "config_holder", "temp"),
-    reader: true
-
-  setting :oo_data_config_path,
-    default: File.join(datadir, "optlist_overrides"),
-    reader: true
 
   gem_agnostic_dir = $LOAD_PATH.select do |dir|
     dir["untangler"]
