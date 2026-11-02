@@ -20,9 +20,10 @@ gem "collectionspace-client", github: "collectionspace/collectionspace-client",
 gem "dry-configurable", github: "dry-rb/dry-configurable", tag: "v1.4.0"
 
 if lyrasis_staff?
-  gem "aws-sdk-dynamodb"
-  gem "aws-sdk-ssm"
-  gem "openssl", "3.3.1"
+  gem "cspace_hosted_instance_access",
+    github: "dts-hosting/cspace_hosted_instance_access",
+    branch: "main",
+    group: [:lyrasis]
 end
 
 group :development do

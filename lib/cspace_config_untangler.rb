@@ -278,22 +278,5 @@ module CspaceConfigUntangler
       require req_file
     end
 
-  if lyrasis_staff
-    chia_path = File.join(Bundler.root, "vendor",
-      "cspace_hosted_instance_access")
-    unless Dir.exist?(chia_path)
-      FileUtils.cd(File.join(Bundler.root, "vendor")) do
-        `gh repo clone dts-hosting/cspace_hosted_instance_access`
-      end
-    end
-
-    FileUtils.cd(chia_path) do
-      unless `git status`.match?("branch is up to date")
-        `git pull`
-        `bundle install`
-      end
-    end
-
-    require File.join(chia_path, "lib", "cspace_hosted_instance_access")
-  end
+  require "chia" if lyrasis_staff
 end
