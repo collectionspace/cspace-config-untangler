@@ -49,6 +49,18 @@ module CspaceConfigUntangler
       shared_options :release
       def switch_release
         CCU.config.release = options[:release]
+        dir = CCU.configdir
+        Dir.children(dir).each do |f|
+          filename = File.join(dir, f)
+          FileUtils.rm(filename) if File.extname(filename) == ".json"
+        end
+
+        Dir.children(CCU.release_configs_dir).each do |cfg|
+          FileUtils.cp(
+            File.join(CCU.release_configs_dir, cfg),
+            File.join(dir, cfg)
+          )
+        end
         puts CCU::Cli::Helpers::ProfileGetter.call("all")
       end
     end
