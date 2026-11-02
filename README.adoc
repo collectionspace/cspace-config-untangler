@@ -27,17 +27,17 @@ For a given profile, matches each form_field to its corresponding field_def and 
 
 _Note: there may be field_defs in a profile which do not match any form_fields. Field objects are not created/reported for these, because if a field has not been made available for viewing/editing in a form, it is not considered included in the profile._
 
+== Requirements
+
+* Ruby 4.0.5
+
 == Setup
 
-* Tested with Ruby 3.4. Use of earlier Ruby versions is not recommended
-* REQUIRED IF USING AS INTERNAL LYRASIS STAFF: Github CLI must be installed and your user authorized in that tool
-* Do `bundle --version`
-** If the version of Bundler is lower than 2.2.29, do `gem update bundler`
-** Bundler should come standard with Ruby 2.7.0, but may be an older version. If you get an error that you don't have Bundler installed when you try to check the version, do `gem install bundler`
 * Clone this repo
 * `cd` into cloned directory
+* *IF USING AS INTERNAL LYRASIS STAFF WHO NEEDS TO USE THIS ON HOSTED CLIENT SITES*: Github CLI must be installed and your user authorized in that tool before you do the next command
 * `bundle/install`
-* Download your configs into the appropriate `data/configs` directory or directories
+* Download your configs into appropriate permanent storage locations, and copy the ones you want to work with immediately into `data/configs` directory
 * Configure your settings https://github.com/collectionspace/cspace-config-untangler/blob/master/lib/cspace_config_untangler.rb[in `lib/cspace_config_untangler.rb`].
 
 === Optional: add the `exe` directory to your PATH
@@ -230,3 +230,9 @@ If you do not configure this for your profile, the consistent column naming styl
 
 If you are on 6.1 and configure this correctly, you will get fancy column headers. You may still have to fix some column names for import (the pre-processing step of the import will warn you about them). You would have to fix a lot more column names if you are exporting from 6.1 (fancy export column names), but using the consistent headers in your CSV import data.
 ====
+
+== Contributing
+
+If you are Lyrasis staff, do `gh auth logout` before generating any `Gemfile.lock` that will pushed up as part of the codebase.
+
+We don't want CHIA to be included in the main `Gemfile.lock` under version control.
